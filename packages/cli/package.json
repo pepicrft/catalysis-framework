@@ -1,0 +1,9 @@
+{
+  "name": "@gestaltjs/gestalt",
+  "version": "0.1.0",
+  "description": "A CLI tool for building Gestalt web app",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}
