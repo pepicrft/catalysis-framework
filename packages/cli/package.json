@@ -3,6 +3,7 @@
   "version": "0.5.0",
   "description": "A CLI tool for building Gestalt web app",
   "license": "MIT",
+  "private": false,
   "bin": {
     "gestalt": "./bin/gestalt.js"
   },
