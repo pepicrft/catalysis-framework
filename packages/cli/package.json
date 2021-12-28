@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "description": "A CLI tool for building Gestalt web app",
   "license": "MIT",
+  "bin": {
+    "gestalt": "./bin/gestalt.js"
+  },
   "dependencies": {
     "yargs": "^17.3.1"
-  }
+  },
+  "files": [
+    "bin",
+    "src"
+  ]
 }
