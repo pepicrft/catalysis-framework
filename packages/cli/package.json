@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/gestalt",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "A CLI tool for building Gestalt web app",
   "license": "MIT",
   "bin": {
@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "version:minor": "pnpm version minor",
-    "postversion": "git push && git push --tags && pnpm run release",
+    "postversion": "git add package.json && git push && git push --tags && pnpm run release",
     "release": "pnpm publish"
   }
 }
