@@ -1,27 +1,22 @@
 {
-    "compilerOptions": {
-      "target": "esnext",
-      "moduleResolution": "node",
-      "module": "esnext",
-      "declarationMap": true,
-      "emitDeclarationOnly": true,
-      "sourceMap": true,
-      "composite": true,
-      "strict": true,
-      "esModuleInterop": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
-      "jsx": "preserve",
-      "skipLibCheck": true,
-      "resolveJsonModule": true
-    },
-    "exclude": [
-      "dist",
-      "node_modules",
-      "**/__tests__",
-      "**/__mocks__",
-      "**/*.test.*"
-    ]
-  }
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "inlineSourceMap": true,
+    "paths": {
+    }
+  },
+  "exclude": [
+    "**/dist/**",
+  ]
+}
