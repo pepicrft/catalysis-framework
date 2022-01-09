@@ -11,14 +11,12 @@
   "private": false,
   "scripts": {
     "build": "rimraf dist && rollup -c",
-    "dev": "rollup -c --watch --watch.include=src/**"
+    "dev": "rollup -c --watch --watch.include=src/**",
+    "gestalt": "rollup -c --plugin @rollup/plugin-run"
   },
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "bin": {
-    "gestalt": "./bin/gestalt.js"
+    "gestalt": "./bin/gestalt.mjs"
   },
   "dependencies": {
     "yargs": "^17.3.1"
