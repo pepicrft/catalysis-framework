@@ -10,8 +10,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
     "build": "rimraf dist && rollup -c",
-    "dev": "rollup -c --watch --watch.include=src/**",
+    "build:watch": "rollup -c --watch --watch.include=src/**",
     "gestalt": "rollup -c --plugin @rollup/plugin-run"
   },
   "type": "module",

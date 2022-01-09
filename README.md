@@ -4,7 +4,17 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 
 ## Development
 
+### Set up
+
+- Clone the repository: `https://github.com/gestaltjs/gestalt.git`.
+- Install dependencies: `pnpm install`.
+
 ### System dependencies
 
 - [pnpm](https://pnpm.io/)
 - [shadowenv](https://shopify.github.io/shadowenv/)
+
+
+## References
+
+- [Vitest](https://vitest.dev)
