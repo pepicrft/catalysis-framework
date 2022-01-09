@@ -14,7 +14,9 @@
     "test:watch": "vitest",
     "build": "rimraf dist && rollup -c",
     "build:watch": "rollup -c --watch --watch.include=src/**",
-    "gestalt": "rollup -c --plugin @rollup/plugin-run"
+    "gestalt": "rollup -c --plugin @rollup/plugin-run",
+    "lint": "prettier -c src/** && eslint src/**",
+    "lint:fix": "prettier src/** && eslint src/** --fix"
   },
   "type": "module",
   "bin": {
