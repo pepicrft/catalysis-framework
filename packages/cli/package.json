@@ -16,7 +16,8 @@
     "build:watch": "rollup -c --watch --watch.include=src/**",
     "gestalt": "rollup -c --plugin @rollup/plugin-run",
     "lint": "prettier -c src/** && eslint src/**",
-    "lint:fix": "prettier src/** && eslint src/** --fix"
+    "lint:fix": "prettier src/** && eslint src/** --fix",
+    "tsc": "tsc --noEmit"
   },
   "type": "module",
   "bin": {
