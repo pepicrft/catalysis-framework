@@ -1,0 +1,32 @@
+name: cli
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+concurrency:
+  group: cli-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: CLI build - Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '12', '14', '16' ]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - name: Install dependencies
+        working-directory: packages/cli
+        run: pnpm install
+      - name: Build
+        run: pnpm run build
