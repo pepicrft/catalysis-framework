@@ -2,21 +2,36 @@
   "name": "@gestaltjs/gestalt",
   "version": "0.5.0",
   "description": "A CLI tool for building Gestalt web app",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "rimraf dist && rollup -c",
+    "build:watch": "rollup -c --watch --watch.include=src/**",
+    "gestalt": "rollup -c --plugin @rollup/plugin-run",
+    "lint": "prettier -c src/** && eslint src/**",
+    "lint:fix": "prettier src/** && eslint src/** --fix",
+    "tsc": "tsc --noEmit"
+  },
+  "type": "module",
   "bin": {
-    "gestalt": "./bin/gestalt.js"
+    "gestalt": "./bin/gestalt.mjs"
   },
   "dependencies": {
     "yargs": "^17.3.1"
   },
+  "devDependencies": {},
+  "peerDependencies": {},
   "files": [
+    "dist",
     "bin",
-    "src"
-  ],
-  "scripts": {
-    "version:minor": "pnpm version minor",
-    "postversion": "git add package.json && git push && git push --tags && pnpm run release",
-    "release": "pnpm publish"
-  }
+    "*.d.ts",
+    "*.mjs"
+  ]
 }
