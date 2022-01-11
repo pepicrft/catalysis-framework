@@ -4,8 +4,8 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 
 ## Projects
 
-| Project | Description | CI |
-| --- | --- | --- |
+| Project              | Description     | CI                                                                                                                                                 |
+| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [cli](/packages/cli) | The Gestalt CLI | [![cli](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml) |
 
 ## Development
@@ -13,14 +13,17 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 ### Set up
 
 - Clone the repository: `https://github.com/gestaltjs/gestalt.git`.
+- Install System dependencies: `npm install -g pnpm`
 - Install dependencies: `pnpm install`.
 
 ### System dependencies
 
 - [pnpm](https://pnpm.io/)
 - [shadowenv](https://shopify.github.io/shadowenv/)
-
+- [Prettier](https://prettier.io/)
+- [ESlint](https://eslint.org/)
 
 ## References
 
 - [Vitest](https://vitest.dev)
+- [rollup.js](https://rollupjs.org)

@@ -1,6 +1,7 @@
 {
     "recommendations": [
-        "esbenp.prettier-vscode"
-        
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "wix.vscode-import-cost"
     ]
 }
