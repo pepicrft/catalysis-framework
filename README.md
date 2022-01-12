@@ -4,10 +4,10 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 
 ## Projects
 
-| Project              | Description     | CI                                                                                                                                                 |
-| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [cli](/packages/cli) | The Gestalt CLI | [![cli](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml) |
-| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml) |
+| Project              | Description     | CI                                                                                                                                                 | Deploy |
+| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| [cli](/packages/cli) | The Gestalt CLI | [![cli](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml) | |
+| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml) | [![Netlify Status](https://api.netlify.com/api/v1/badges/59663ddf-1542-4900-bd41-252c0263703f/deploy-status)](https://app.netlify.com/sites/gestalt-docs/deploys) |
 ## Development
 
 ### Set up
