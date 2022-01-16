@@ -1,4 +1,3 @@
-node_modules
-*.md
-bin
 dist
+node_modules
+bin

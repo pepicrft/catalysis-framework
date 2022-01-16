@@ -1,6 +1,7 @@
 {
   "name": "@gestaltjs/gestalt",
-  "version": "0.5.0",
+  "version": "0.1.0",
+  "private": false,
   "description": "A CLI tool for building Gestalt web app",
   "keywords": [
     "gestalt",
@@ -8,30 +9,62 @@
     "web"
   ],
   "license": "MIT",
-  "private": false,
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gestalt": "./bin/gestalt-run"
+  },
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "build": "rimraf dist && rollup -c",
-    "build:watch": "rollup -c --watch --watch.include=src/**",
-    "gestalt": "rollup -c --plugin @rollup/plugin-run",
+    "build": "shx rm -rf dist && tsc -b",
+    "build:watch": "tsc -b --watch",
     "lint": "prettier -c src/** && eslint src/**",
     "lint:fix": "prettier src/** && eslint src/** --fix",
-    "tsc": "tsc --noEmit"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc": "tsc -b --noEmit"
   },
-  "type": "module",
-  "bin": {
-    "gestalt": "./bin/gestalt.mjs"
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
   },
   "dependencies": {
-    "yargs": "^17.3.1"
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.0.1"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
-  "files": [
-    "dist",
-    "bin",
-    "*.d.ts",
-    "*.mjs"
-  ]
+  "devDependencies": {
+    "@oclif/test": "^2"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^12 || ^14 || ^16"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "oclif": {
+    "bin": "gestalt",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  }
 }

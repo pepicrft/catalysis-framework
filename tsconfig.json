@@ -1,6 +1,8 @@
 {
-    "references": [
-      { "path": "packages/cli" }
-    ],
-    "files": []
-  }
+  "extends": "./configurations/tsconfig.json",
+  "references": [
+    {
+      "path": "./packages/cli"
+    }
+  ]
+}
