@@ -92,6 +92,21 @@ importers:
   packages/cli-support:
     specifiers: {}
 
+  packages/create-app:
+    specifiers:
+      '@gestaltjs/cli-support': 0.1.0
+      '@oclif/core': ^1
+      '@oclif/plugin-help': ^5
+      '@oclif/plugin-plugins': ^2.0.1
+      '@oclif/test': ^2
+    dependencies:
+      '@gestaltjs/cli-support': link:../cli-support
+      '@oclif/core': 1.1.2
+      '@oclif/plugin-help': 5.1.10
+      '@oclif/plugin-plugins': 2.0.12
+    devDependencies:
+      '@oclif/test': 2.0.3
+
   packages/docs:
     specifiers:
       '@algolia/client-search': ^4.12.0

@@ -1,0 +1,71 @@
+{
+  "name": "@gestaltjs/create-app",
+  "version": "0.1.0",
+  "private": false,
+  "description": "An executable to create a new Gestalt app",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gestalt": "./bin/run"
+  },
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "build:watch": "tsc -b --watch",
+    "lint": "prettier -c src/** && eslint src/**",
+    "lint:fix": "prettier src/** && eslint src/** --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc": "tsc -b --incremental"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "dependencies": {
+    "@gestaltjs/cli-support": "0.1.0",
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.0.1"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^12 || ^14 || ^16"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "oclif": {
+    "bin": "create-app",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  }
+}

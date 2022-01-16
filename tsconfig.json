@@ -2,6 +2,9 @@
   "extends": "./configurations/tsconfig.json",
   "references": [
     {
+      "path": "./packages/create-app"
+    },
+    {
       "path": "./packages/cli"
     },
     {

@@ -1,0 +1,12 @@
+{
+  "extends": "../../configurations/tsconfig.json",
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./dist", "**/*.test.ts"],
+  "references": [{"path": "../cli-support"}],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "composite": true
+  }
+}

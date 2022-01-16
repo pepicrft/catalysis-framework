@@ -9,6 +9,16 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 | [cli](/packages/cli) | The Gestalt CLI | [![cli](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/cli.yml) | | |
 | [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml) | [![Netlify Status](https://api.netlify.com/api/v1/badges/59663ddf-1542-4900-bd41-252c0263703f/deploy-status)](https://app.netlify.com/sites/gestalt-docs/deploys) | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
 
+## Usage
+
+You can create a new Gestalt app by running any of the following commands:
+
+```bash
+npx @gestaltjs/create-app@latest
+yarn create @gestaltjs/app
+npm init @gestaltjs/app
+```
+
 ## Development
 
 ### Set up
