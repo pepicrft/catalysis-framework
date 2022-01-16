@@ -68,18 +68,26 @@ importers:
 
   packages/cli:
     specifiers:
+      '@gestaltjs/cli-core': 0.1.0
       '@gestaltjs/cli-support': 0.1.0
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
       '@oclif/test': ^2
     dependencies:
+      '@gestaltjs/cli-core': link:../cli-core
       '@gestaltjs/cli-support': link:../cli-support
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
     devDependencies:
       '@oclif/test': 2.0.3
+
+  packages/cli-core:
+    specifiers:
+      '@gestaltjs/cli-support': 0.1.0
+    dependencies:
+      '@gestaltjs/cli-support': link:../cli-support
 
   packages/cli-support:
     specifiers: {}
