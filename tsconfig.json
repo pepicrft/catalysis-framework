@@ -12,6 +12,9 @@
     },
     {
       "path": "./packages/cli-support"
+    },
+    {
+      "path": "./packages/prisma"
     }
   ]
 }

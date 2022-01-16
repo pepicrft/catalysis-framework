@@ -9,6 +9,7 @@ importers:
       '@shopify/prettier-config': ^1.1.2
       '@shopify/typescript-configs': ^5.1.0
       '@types/cucumber': ^7.0.0
+      '@types/node': ^17.0.8
       '@types/rimraf': ^3.0.2
       '@types/tmp': ^0.2.3
       '@typescript-eslint/eslint-plugin': ^5.9.0
@@ -36,10 +37,11 @@ importers:
       vitest: ^0.0.139
     devDependencies:
       '@cucumber/cucumber': 8.0.0-rc.2
-      '@shopify/eslint-plugin': 41.0.1_766453c47335cbed2174775e7834db5c
+      '@shopify/eslint-plugin': 41.0.1_73c5a623a371b3c7db332f2b62767b55
       '@shopify/prettier-config': 1.1.2
       '@shopify/typescript-configs': 5.1.0
       '@types/cucumber': 7.0.0
+      '@types/node': 17.0.8
       '@types/rimraf': 3.0.2
       '@types/tmp': 0.2.3
       '@typescript-eslint/eslint-plugin': 5.9.0_bd2fd93dbcc607ad2f21b784bccfe0c8
@@ -62,7 +64,7 @@ importers:
       rimraf: 3.0.2
       shx: 0.3.4
       tmp: 0.2.1
-      ts-node: 10.4.0_typescript@4.5.4
+      ts-node: 10.4.0_faf01e1d5a40372a98081522dcafc186
       typescript: 4.5.4
       vitest: 0.0.139
 
@@ -131,6 +133,12 @@ importers:
       '@algolia/client-search': 4.12.0
       '@types/react': 17.0.38
       webpack: 5.66.0_esbuild@0.14.11
+
+  packages/prisma:
+    specifiers:
+      prisma: ^3.8.1
+    devDependencies:
+      prisma: 3.8.1
 
 packages:
 
@@ -2489,7 +2497,7 @@ packages:
       value-or-promise: 1.0.6
     dev: true
 
-  /@graphql-tools/url-loader/6.10.1:
+  /@graphql-tools/url-loader/6.10.1_@types+node@17.0.8:
     resolution: {integrity: sha512-DSDrbhQIv7fheQ60pfDpGD256ixUQIR6Hhf9Z5bRjVkXOCvO5XrkwoWLiU7iHL81GB1r0Ba31bf+sl+D4nyyfw==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
@@ -2507,7 +2515,7 @@ packages:
       is-promise: 4.0.0
       isomorphic-ws: 4.0.1_ws@7.4.5
       lodash: 4.17.21
-      meros: 1.1.4
+      meros: 1.1.4_@types+node@17.0.8
       subscriptions-transport-ws: 0.9.19
       sync-fetch: 0.3.0
       tslib: 2.2.0
@@ -2764,7 +2772,12 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: false
 
-  /@shopify/eslint-plugin/41.0.1_766453c47335cbed2174775e7834db5c:
+  /@prisma/engines/3.8.0-43.34df67547cf5598f5a6cd3eb45f14ee70c3fb86f:
+    resolution: {integrity: sha512-bHYubuItSN/DGYo36aDu7xJiJmK52JOSHs4MK+KbceAtwS20BCWadRgtpQ3iZ2EXfN/B1T0iCXlNraaNwnpU2w==}
+    requiresBuild: true
+    dev: true
+
+  /@shopify/eslint-plugin/41.0.1_73c5a623a371b3c7db332f2b62767b55:
     resolution: {integrity: sha512-LpjAfKPxZCvCNSGrODOn+BqsA2YCQR1XkRhxtMKDlpu0A9GR2rorE5yolb0eekHpi2ZpNWccWOXd9oACsOXosQ==}
     peerDependencies:
       eslint: ^8.3.0
@@ -2779,7 +2792,7 @@ packages:
       eslint-config-prettier: 8.3.0_eslint@8.6.0
       eslint-module-utils: 2.7.2
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
-      eslint-plugin-graphql: 4.0.0_typescript@4.5.4
+      eslint-plugin-graphql: 4.0.0_faf01e1d5a40372a98081522dcafc186
       eslint-plugin-import: 2.25.4_eslint@8.6.0
       eslint-plugin-jest: 25.7.0_50718c277c711d46fdc0916b9b606e5d
       eslint-plugin-jest-formatting: 3.1.0_eslint@8.6.0
@@ -5699,14 +5712,14 @@ packages:
       ignore: 5.2.0
     dev: true
 
-  /eslint-plugin-graphql/4.0.0_typescript@4.5.4:
+  /eslint-plugin-graphql/4.0.0_faf01e1d5a40372a98081522dcafc186:
     resolution: {integrity: sha512-d5tQm24YkVvCEk29ZR5ScsgXqAGCjKlMS8lx3mS7FS/EKsWbkvXQImpvic03EpMIvNTBW5e+2xnHzXB/VHNZJw==}
     engines: {node: '>=10.0'}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
       '@babel/runtime': 7.16.7
-      graphql-config: 3.4.1_typescript@4.5.4
+      graphql-config: 3.4.1_faf01e1d5a40372a98081522dcafc186
       lodash.flatten: 4.4.0
       lodash.without: 4.4.0
     transitivePeerDependencies:
@@ -6602,7 +6615,7 @@ packages:
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
 
-  /graphql-config/3.4.1_typescript@4.5.4:
+  /graphql-config/3.4.1_faf01e1d5a40372a98081522dcafc186:
     resolution: {integrity: sha512-g9WyK4JZl1Ko++FSyE5Ir2g66njfxGzrDDhBOwnkoWf/t3TnnZG6BBkWP+pkqVJ5pqMJGPKHNrbew8jRxStjhw==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -6613,7 +6626,7 @@ packages:
       '@graphql-tools/json-file-loader': 6.2.6
       '@graphql-tools/load': 6.2.8
       '@graphql-tools/merge': 6.2.14
-      '@graphql-tools/url-loader': 6.10.1
+      '@graphql-tools/url-loader': 6.10.1_@types+node@17.0.8
       '@graphql-tools/utils': 7.10.0
       cosmiconfig: 7.0.0
       cosmiconfig-toml-loader: 1.0.0
@@ -7798,7 +7811,7 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /meros/1.1.4:
+  /meros/1.1.4_@types+node@17.0.8:
     resolution: {integrity: sha512-E9ZXfK9iQfG9s73ars9qvvvbSIkJZF5yOo9j4tcwM5tN8mUKfj/EKN5PzOr3ZH0y5wL7dLAHw3RVEfpQV9Q7VQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -7806,6 +7819,8 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
+    dependencies:
+      '@types/node': 17.0.8
     dev: true
 
   /methods/1.1.2:
@@ -8907,6 +8922,15 @@ packages:
     dependencies:
       react: 17.0.2
     dev: false
+
+  /prisma/3.8.1:
+    resolution: {integrity: sha512-Q8zHwS9m70TaD7qI8u+8hTAmiTpK+IpvRYF3Rgb/OeWGQJOMgZCFFvNCiSfoLEQ95wilK7ctW3KOpc9AuYnRUA==}
+    engines: {node: '>=12.6'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 3.8.0-43.34df67547cf5598f5a6cd3eb45f14ee70c3fb86f
+    dev: true
 
   /prismjs/1.26.0:
     resolution: {integrity: sha512-HUoH9C5Z3jKkl3UunCyiD5jwk0+Hz0fIgQ2nbwU2Oo/ceuTAQAg+pPVnfdt2TJWRVLcxKh9iuoYDUSc8clb5UQ==}
@@ -10354,7 +10378,7 @@ packages:
     resolution: {integrity: sha512-rvuRbTarPXmMb79SmzEp8aqXNKcK+y0XaB298IXueQ8I2PsrATcPBCSPyK/dDNa2iWOhKlfNnOjdAOTBU/nkFA==}
     dev: false
 
-  /ts-node/10.4.0_typescript@4.5.4:
+  /ts-node/10.4.0_faf01e1d5a40372a98081522dcafc186:
     resolution: {integrity: sha512-g0FlPvvCXSIO1JDF6S232P5jPYqBkRL9qly81ZgAOSU7rwI0stphCgd2kLiCrU9DjQCrJMWEqcNSjQL02s6d8A==}
     hasBin: true
     peerDependencies:
@@ -10373,6 +10397,7 @@ packages:
       '@tsconfig/node12': 1.0.9
       '@tsconfig/node14': 1.0.1
       '@tsconfig/node16': 1.0.2
+      '@types/node': 17.0.8
       acorn: 8.7.0
       acorn-walk: 8.2.0
       arg: 4.1.3
