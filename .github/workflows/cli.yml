@@ -12,16 +12,18 @@ concurrency:
 
 jobs:
   build:
-    name: Build with Node ${{ matrix.node }}
-    runs-on: ubuntu-latest
+    name: Build ${{ matrix.package }} with Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node: ['12', '14', '16']
+        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+        os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v1
-      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.10.0
+          version: latest
       - name: Set Node.js
         uses: actions/setup-node@master
         with:
@@ -29,22 +31,23 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
-        working-directory: packages/cli
         run: pnpm install
       - name: Build
-        working-directory: packages/cli
+        working-directory: packages/${{ matrix.package }}
         run: pnpm run build
   test:
-    name: Test with Node ${{ matrix.node }}
-    runs-on: ubuntu-latest
+    name: Test ${{ matrix.package }} with Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node: ['12', '14', '16']
+        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+        os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v1
-      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.10.0
+          version: latest
       - name: Set Node.js
         uses: actions/setup-node@master
         with:
@@ -52,19 +55,43 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
-        working-directory: packages/cli
         run: pnpm install
       - name: Test
-        working-directory: packages/cli
+        working-directory: packages/${{ matrix.package }}
         run: pnpm run test
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
+  features:
+    name: Features with Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: ['12', '14', '16']
+        os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v1
-      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.10.0
+          version: latest
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Features
+        run: pnpm run features
+  lint:
+    name: Lint ${{ matrix.package }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+    steps:
+      - uses: actions/checkout@v1
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: latest
       - name: Set Node.js
         uses: actions/setup-node@master
         with:
@@ -72,19 +99,22 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
-        working-directory: packages/cli
+        working-directory: packages/${{ matrix.package }}
         run: pnpm install
       - name: Lint
-        working-directory: packages/cli
+        working-directory: packages/${{ matrix.package }}
         run: pnpm run lint
   type-check:
-    name: Type-check
+    name: Type-check ${{ matrix.package }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ['create-app', 'cli', 'cli-core', 'cli-support']
     steps:
       - uses: actions/checkout@v1
-      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.10.0
+          version: latest
       - name: Set Node.js
         uses: actions/setup-node@master
         with:
@@ -92,8 +122,8 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
-        working-directory: packages/cli
+        working-directory: packages/${{ matrix.package }}
         run: pnpm install
       - name: Type-check
-        working-directory: packages/cli
+        working-directory: packages/${{ matrix.package }}
         run: pnpm run tsc

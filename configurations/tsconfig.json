@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "ES2019"
+    ],
+    "module": "commonjs",
+    "target": "ES2019",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -10,14 +12,12 @@
     "resolveJsonModule": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "outDir": "./dist",
     "declaration": true,
     "inlineSourceMap": true,
-    "paths": {
-    }
+    "composite": true
   },
   "exclude": [
     "**/dist/**",
-    "node_modules",
+    "node_modules"
   ]
 }
