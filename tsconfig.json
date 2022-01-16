@@ -3,6 +3,9 @@
   "references": [
     {
       "path": "./packages/cli"
+    },
+    {
+      "path": "./packages/cli-support"
     }
   ]
 }
