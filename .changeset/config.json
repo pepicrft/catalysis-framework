@@ -2,9 +2,9 @@
   "$schema": "https://unpkg.com/@changesets/config@1.6.3/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "linked": [],
+  "linked": [["@gestaltjs/cli*"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [["cli-*"]]
+  "ignore": ["@gestaltjs/docs"]
 }
