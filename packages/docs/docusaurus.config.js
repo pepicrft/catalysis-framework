@@ -6,9 +6,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'GestaltJS',
+  tagline:
+    'A batteries-included opinionated framework for building web, desktop, and mobile apps with Javascript',
+  url: 'https://docs.gestaltjs.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,7 +44,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Gestalt',
+        title: 'GestaltJS',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -57,7 +58,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'contributors/release',
             position: 'left',
             label: 'Contributors',
           },
