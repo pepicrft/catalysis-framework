@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/cli-support",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": false,
   "description": "Set of Getalt-agnostic tools",
   "keywords": [
@@ -19,6 +19,7 @@
     "access": "public"
   },
   "scripts": {
+    "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
     "lint": "prettier -c src/** && eslint src/**",

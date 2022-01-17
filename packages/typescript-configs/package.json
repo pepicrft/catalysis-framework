@@ -1,0 +1,37 @@
+{
+  "name": "@gestaltjs/typescript-configs",
+  "version": "0.3.0",
+  "private": false,
+  "description": "Shared Typescript configuration for Gestalt apps",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "echo 'noop'",
+    "lint": "echo 'noop'",
+    "test": "echo 'noop'",
+    "tsc": "echo 'noop'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engine-strict": true,
+  "engines": {
+    "node": "^12 || ^14 || ^16"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}

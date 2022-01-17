@@ -1,25 +1,26 @@
 {
-    "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "javascript.validate.enable": false,
-    "css.validate": false,
-    "scss.validate": false,
-    "typescript.tsdk": "./node_modules/typescript/lib",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/.DS_Store": true,
-        "*.log": true,
-        ".dev": true,
-        ".history/**": true,
-        ".vscode/symbols.json": true,
-        "node_modules": true
-    },
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "search.exclude": {
-        "**/node_modules": true
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "javascript.validate.enable": false,
+  "css.validate": false,
+  "scss.validate": false,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.exclude": {
+    ".dev": true,
+    ".history/**": true,
+    ".vscode/symbols.json": true,
+    "*.log": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/node_modules/**": true,
+    "node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
