@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/create-app",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "An executable to create a new Gestalt app",
   "keywords": [
@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/cli-support": "0.2.0",
+    "@gestaltjs/cli-support": "0.3.0",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1"

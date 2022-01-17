@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "version:add": "changeset add",
-    "version:persist": "changset version",
+    "version:persist": "changeset version",
     "version:publish": "changeset publish",
     "features": "cucumber-js",
     "preinstall": "npx only-allow pnpm"

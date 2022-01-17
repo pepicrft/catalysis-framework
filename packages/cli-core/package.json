@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/cli-core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "Set of Getalt tools and models that are shared across all the features",
   "keywords": [
@@ -34,7 +34,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/cli-support": "0.2.0"
+    "@gestaltjs/cli-support": "0.3.0"
   },
   "devDependencies": {},
   "engine-strict": true,
