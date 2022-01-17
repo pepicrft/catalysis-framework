@@ -5,7 +5,7 @@
   "linked": [
     [
       "@gestaltjs/gestalt",
-      "@gestaltjs/browserlist-config",
+      "@gestaltjs/browserslist-config",
       "@gestaltjs/cli-core",
       "@gestaltjs/cli-support",
       "@gestaltjs/create-app",

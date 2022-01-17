@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/eslint-config",
+  "name": "@gestaltjs/eslint-plugin",
   "version": "0.2.0",
   "private": false,
   "description": "Shared ESLint plugin",
