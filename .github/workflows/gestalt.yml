@@ -1,4 +1,4 @@
-name: cli
+name: Gestalt
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request: {}
 
 concurrency:
-  group: cli-${{ github.head_ref }}
+  group: gestalt-${{ github.head_ref }}
   cancel-in-progress: true
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
         package:
           [
             'create-app',
-            'cli',
+            'gestalt',
             'cli-core',
             'cli-support',
             'prettier-config',
@@ -54,7 +54,7 @@ jobs:
         package:
           [
             'create-app',
-            'cli',
+            'gestalt',
             'cli-core',
             'cli-support',
             'prettier-config',
@@ -109,7 +109,7 @@ jobs:
         package:
           [
             'create-app',
-            'cli',
+            'gestalt',
             'cli-core',
             'cli-support',
             'prettier-config',
@@ -142,7 +142,7 @@ jobs:
         package:
           [
             'create-app',
-            'cli',
+            'gestalt',
             'cli-core',
             'cli-support',
             'prettier-config',

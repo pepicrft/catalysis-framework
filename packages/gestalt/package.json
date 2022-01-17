@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/cli",
+  "name": "@gestaltjs/gestalt",
   "version": "0.2.0",
   "private": false,
-  "description": "A CLI tool for building Gestalt web app",
+  "description": "A tool for building Gestalt web app",
   "keywords": [
     "gestalt",
     "gestaltjs",
