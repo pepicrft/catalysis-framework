@@ -1,1 +1,1 @@
-(env/prepend-to-pathlist "PATH" (expand-path "./packages/cli/bin"))
+(env/prepend-to-pathlist "PATH" (expand-path "./packages/gestalt/bin"))
