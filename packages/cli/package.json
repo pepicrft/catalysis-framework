@@ -23,6 +23,7 @@
     "access": "public"
   },
   "scripts": {
+    "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
     "lint": "prettier -c src/** && eslint src/**",
