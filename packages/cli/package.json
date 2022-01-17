@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "A CLI tool for building Gestalt web app",
   "keywords": [
@@ -38,8 +38,8 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/cli-core": "0.1.0",
-    "@gestaltjs/cli-support": "0.1.0",
+    "@gestaltjs/cli-core": "0.2.0",
+    "@gestaltjs/cli-support": "0.2.0",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1"
