@@ -70,8 +70,8 @@ importers:
 
   packages/cli:
     specifiers:
-      '@gestaltjs/cli-core': 0.1.0
-      '@gestaltjs/cli-support': 0.1.0
+      '@gestaltjs/cli-core': 0.2.0
+      '@gestaltjs/cli-support': 0.2.0
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -87,7 +87,7 @@ importers:
 
   packages/cli-core:
     specifiers:
-      '@gestaltjs/cli-support': 0.1.0
+      '@gestaltjs/cli-support': 0.2.0
     dependencies:
       '@gestaltjs/cli-support': link:../cli-support
 
@@ -96,7 +96,7 @@ importers:
 
   packages/create-app:
     specifiers:
-      '@gestaltjs/cli-support': 0.1.0
+      '@gestaltjs/cli-support': 0.2.0
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1

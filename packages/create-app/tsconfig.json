@@ -6,7 +6,11 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
+    "composite": true,
     "baseUrl": ".",
-    "composite": true
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "paths": {
+      "src/*": ["./src/*"]
+    }
   }
 }

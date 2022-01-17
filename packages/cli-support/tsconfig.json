@@ -1,17 +1,16 @@
 {
   "extends": "../../configurations/tsconfig.json",
-  "include": [
-    "./src/**/*.ts"
-  ],
-  "exclude": [
-    "./dist",
-    "**/*.test.ts"
-  ],
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./dist", "**/*.test.ts"],
   "references": [],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
+    "composite": true,
     "baseUrl": ".",
-    "composite": true
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "paths": {
+      "src/*": ["./src/*"]
+    }
   }
 }
