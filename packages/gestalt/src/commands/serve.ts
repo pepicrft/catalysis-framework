@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 import express from 'express';
-import { createServer } from 'vite';
-import { Command } from '@oclif/core';
+import {createServer} from 'vite';
+import {Command} from '@oclif/core';
 
 export default class Serve extends Command {
   static description = 'Serve your Gestalt application';
@@ -24,7 +24,7 @@ export default class Serve extends Command {
   ];
 
   async run(): Promise<void> {
-    const { args } = await this.parse(Serve);
+    const {args} = await this.parse(Serve);
     const directory = path.resolve(args.path);
     process.cwd();
 
@@ -33,11 +33,7 @@ export default class Serve extends Command {
     const port = 3000;
 
     app.all('*', async (req, res) => {
-      const routePath = path.join(
-        directory,
-        'src/routes',
-        `${req.path}.ts`,
-      );
+      const routePath = path.join(directory, 'src/routes', `${req.path}.ts`);
       if (fs.existsSync(routePath)) {
         const route = await vite.ssrLoadModule(routePath);
         route.get(req, res);
