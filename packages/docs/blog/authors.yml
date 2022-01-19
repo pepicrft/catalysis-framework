@@ -1,17 +1,23 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+ascen:
+  name: Ascen Salmerón
+  title: Maintainer of GestaltJS
+  url: https://github.com/lascenify
+  image_url: https://avatars.githubusercontent.com/u/18697610
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+raquel:
+  name: Raquel Barbadillo
+  title: Maintainer of GestaltJS
+  url: https://github.com/rbarbadillo
+  image_url: https://avatars.githubusercontent.com/u/38496681
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+pedro:
+  name: Pedro Piñera
+  title: Maintainer of GestaltJS
+  url: https://github.com/pepicrft
+  image_url: https://avatars.githubusercontent.com/u/663605
+
+josema:
+  name: Josema Sar
+  title: Maintainer of GestaltJS
+  url: https://github.com/josemasar
+  image_url: https://avatars.githubusercontent.com/u/65446320
