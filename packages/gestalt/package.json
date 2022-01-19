@@ -42,7 +42,9 @@
     "@gestaltjs/cli-support": "0.3.0",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1"
+    "@oclif/plugin-plugins": "^2.0.1",
+    "express": "^4.17.2",
+    "vite": "^2.7.12"
   },
   "devDependencies": {
     "@oclif/test": "^2"
@@ -65,8 +67,8 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
+      "serve": {
+        "description": "Serve the Application"
       }
     }
   }

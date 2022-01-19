@@ -134,12 +134,16 @@ importers:
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
       '@oclif/test': ^2
+      express: ^4.17.2
+      vite: ^2.7.12
     dependencies:
       '@gestaltjs/cli-core': link:../cli-core
       '@gestaltjs/cli-support': link:../cli-support
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
+      express: 4.17.2
+      vite: 2.7.12
     devDependencies:
       '@oclif/test': 2.0.3
 
