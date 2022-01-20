@@ -2,6 +2,7 @@
     "recommendations": [
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
-        "wix.vscode-import-cost"
+        "wix.vscode-import-cost",
+        "blodwynn.featurehighlight"
     ]
 }
