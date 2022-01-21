@@ -6,7 +6,7 @@ on:
       - main
 
 concurrency:
-  group: changeset-${{ github.head_ref }}
+  group: release-${{ github.head_ref }}
   cancel-in-progress: true
 
 jobs:
