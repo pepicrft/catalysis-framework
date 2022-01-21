@@ -1,4 +1,4 @@
-name: changeset
+name: Release
 
 on:
   pull_request: {}
@@ -8,8 +8,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Changeset
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -28,3 +28,7 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm changeset status --since=main
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
