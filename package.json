@@ -4,6 +4,7 @@
     "version:add": "changeset add",
     "version:persist": "changeset version",
     "version:publish": "changeset publish",
+    "release": "changeset publish",
     "features": "cucumber-js -p default",
     "preinstall": "npx only-allow pnpm"
   },
