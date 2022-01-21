@@ -44,10 +44,12 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
     "express": "^4.17.2",
+    "shelljs": "^0.8.5",
     "vite": "^2.7.12"
   },
   "devDependencies": {
-    "@oclif/test": "^2"
+    "@oclif/test": "^2",
+    "@types/shelljs": "^0.8.11"
   },
   "engine-strict": true,
   "engines": {
