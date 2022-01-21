@@ -35,12 +35,11 @@ and therefore,
  we shouldn’t limit that.
 
 We’ll build this batteries-included development experience as an **open-source framework that’s community-driven and free of business interests.**
-Capitalism is turning the open-source economy into a capitalist activity where people only do it if there’s a financial component.
 We strongly believe in it as a beautiful altruistic activity and a space for people to share their ideas with others and build a foundation for other ideas to be built upon.
 We know that this might naturally lead to a less attractively marketed solution, but that is rooted in values that will make it last.
+We are also fostering a mentorship-oriented environment for people to grow and get inspired.
 
-What shape the abstractions and workflows will take is yet to be defined. We’ll take inspiration from the pool of fantastic community web frameworks and share how ideas and opinions take shape and evolve with you.
+What shape the abstractions and workflows will take is yet to be defined. We’ll **take inspiration from the pool of fantastic community web frameworks** and share how ideas and opinions take shape and evolve with you.
 
 If this sounds interesting and you would like to get involved and/or stay up to date,
 you can follow us on [Twitter](https://twitter.com/gestaltjs) and join our [Discord server](https://discord.gg/7gvRstAKTU).
-
