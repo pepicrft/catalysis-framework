@@ -29,7 +29,6 @@ importers:
       picocolors: ^1.0.0
       prettier: ^2.5.1
       rimraf: ^3.0.2
-      shell-escape-tag: ^2.0.2
       shelljs: ^0.8.5
       shx: ^0.3.4
       tmp: ^0.2.1
@@ -62,7 +61,6 @@ importers:
       picocolors: 1.0.0
       prettier: 2.5.1
       rimraf: 3.0.2
-      shell-escape-tag: 2.0.2
       shelljs: 0.8.5
       shx: 0.3.4
       tmp: 0.2.1
@@ -3578,10 +3576,6 @@ packages:
     resolution: {integrity: sha1-q8av7tzqUugJzcA3au0845Y10X8=}
     dev: true
 
-  /any-shell-escape/0.1.1:
-    resolution: {integrity: sha1-1Vq5ciRMcaml4asIefML8RCAaVk=}
-    dev: true
-
   /anymatch/3.1.2:
     resolution: {integrity: sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg==}
     engines: {node: '>= 8'}
@@ -6859,10 +6853,6 @@ packages:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
-  /inspect-custom-symbol/1.1.1:
-    resolution: {integrity: sha512-GOucsp9EcdlLdhPUyOTvQDnbFJtp2WBWZV1Jqe+mVnkJQBL3w96+fB84C+JL+EKXOspMdB0eMDQPDp5w9fkfZA==}
-    dev: true
-
   /install/0.13.0:
     resolution: {integrity: sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==}
     engines: {node: '>= 0.10'}
@@ -7304,14 +7294,6 @@ packages:
     dependencies:
       array-includes: 3.1.4
       object.assign: 4.1.2
-    dev: true
-
-  /just-flatten-it/2.2.1:
-    resolution: {integrity: sha512-VwvlzikphspzZL38LiZpoBsFGQy6MnmXYekBeZA8lSNwgSC87zA3a93bCZKkDuOM+djMZhfjd3lXAZyxficKCg==}
-    dev: true
-
-  /just-zip-it/2.3.1:
-    resolution: {integrity: sha512-h8Y3DAVTZRP3Weq7btWYfkYHQGhxiuKzfOO7Ec+x8XaDcBvbOsC2jIdezC6tEzbt+A4fTJTREnj3gF5DyMkFfw==}
     dev: true
 
   /keyv/3.1.0:
@@ -9734,15 +9716,6 @@ packages:
   /shebang-regex/3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-
-  /shell-escape-tag/2.0.2:
-    resolution: {integrity: sha512-kqmtJG6VzTahZl8Y3384ldskA9rzoEMdXLoMEBAq9334/UDdmfWl3OtmrGJPlVcyXvcSy3poDKka57gMxskMPw==}
-    dependencies:
-      any-shell-escape: 0.1.1
-      inspect-custom-symbol: 1.1.1
-      just-flatten-it: 2.2.1
-      just-zip-it: 2.3.1
-    dev: true
 
   /shell-quote/1.7.3:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
