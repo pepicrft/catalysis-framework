@@ -13,5 +13,8 @@
     {
       "path": "./packages/cli-support"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "typeRoots": ["./features/types", "node_modules/@types"]
+  }
 }

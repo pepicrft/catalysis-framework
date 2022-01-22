@@ -1,8 +1,9 @@
 {
-    "recommendations": [
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint",
-        "wix.vscode-import-cost",
-        "blodwynn.featurehighlight"
-    ]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "wix.vscode-import-cost",
+    "blodwynn.featurehighlight",
+    "alexkrechik.cucumberautocomplete"
+  ]
 }
