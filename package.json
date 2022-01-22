@@ -6,7 +6,12 @@
     "version:publish": "changeset publish",
     "release": "changeset publish",
     "features": "cucumber-js -p default",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm run lint -r",
+    "lint:fix": "pnpm run lint:fix -r",
+    "build": "pnpm run build -r",
+    "test": "pnpm run test -r",
+    "tsc": "pnpm run tsc -r"
   },
   "devDependencies": {
     "@changesets/cli": "^2.19.0",

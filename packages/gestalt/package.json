@@ -26,8 +26,8 @@
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
-    "lint": "prettier -c src/** && eslint src/**",
-    "lint:fix": "prettier src/** && eslint src/** --fix",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
