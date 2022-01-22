@@ -4,7 +4,7 @@ import {isDebug} from './environment';
 
 /**
  * It provides a promise-based interface for running system processes.
- * The implementation sanitizes the command, and forwards the standard
+ * The implementation forwards the standard
  * output and error if the variable DEBUG=1 is set when running acceptance
  * tests.
  * @param command The command to be executed.
