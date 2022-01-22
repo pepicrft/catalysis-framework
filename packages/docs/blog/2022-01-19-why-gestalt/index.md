@@ -35,7 +35,7 @@ and therefore,
  we shouldn’t limit that.
 
 We’ll build this batteries-included development experience as an **open-source framework that’s community-driven and free of business interests.**
-We strongly believe in it as a beautiful altruistic activity and a space for people to share their ideas with others and build a foundation for other ideas to be built upon.
+We strongly believe in it as a beautiful altruistic activity, a space for people to share their ideas with others and create a foundation for other ideas to be built upon.
 We know that this might naturally lead to a less attractively marketed solution, but that is rooted in values that will make it last.
 We are also fostering a mentorship-oriented environment for people to grow and get inspired.
 
