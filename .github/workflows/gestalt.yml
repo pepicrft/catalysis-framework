@@ -21,6 +21,7 @@ jobs:
           [
             'create-app',
             'gestalt',
+            'loader',
             'core',
             'support',
             'prettier-config',
@@ -55,6 +56,7 @@ jobs:
           [
             'create-app',
             'gestalt',
+            'loader',
             'core',
             'support',
             'prettier-config',
@@ -110,6 +112,7 @@ jobs:
           [
             'create-app',
             'gestalt',
+            'loader',
             'core',
             'support',
             'prettier-config',
@@ -143,6 +146,7 @@ jobs:
           [
             'create-app',
             'gestalt',
+            'loader',
             'core',
             'support',
             'prettier-config',

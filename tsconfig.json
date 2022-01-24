@@ -8,6 +8,9 @@
       "path": "./packages/gestalt"
     },
     {
+      "path": "./packages/loader"
+    },
+    {
       "path": "./packages/core"
     },
     {
