@@ -1,0 +1,48 @@
+{
+  "name": "@gestaltjs/eslint-plugin",
+  "version": "0.3.0",
+  "private": false,
+  "description": "Shared ESLint plugin",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web",
+    "eslint",
+    "eslint-config",
+    "eslint-plugin"
+  ],
+  "license": "MIT",
+  "main": "index.json",
+  "files": [
+    "index.json",
+    "/npm-shrinkwrap.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "echo 'noop'",
+    "lint": "echo 'noop'",
+    "test": "echo 'noop'",
+    "tsc": "echo 'noop'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "eslint": "^8.3.0"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 12"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}

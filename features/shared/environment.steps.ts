@@ -1,4 +1,4 @@
-import {Given, After} from '@cucumber/cucumber';
+import {Given, After} from 'cucumber';
 import tmp from 'tmp';
 import rimraf from 'rimraf';
 
@@ -7,5 +7,7 @@ Given('I have a working directory', function () {
 });
 
 After(async function () {
-  rimraf.sync(this.temporaryDirectory);
+  if (this.temporaryDirectory) {
+    rimraf.sync(this.temporaryDirectory);
+  }
 });

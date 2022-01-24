@@ -1,0 +1,42 @@
+{
+  "name": "@gestaltjs/prettier-config",
+  "version": "0.3.0",
+  "private": false,
+  "description": "Shared prettier configuration for Gestalt apps",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
+  "license": "MIT",
+  "main": "index.json",
+  "files": [
+    "index.json",
+    "/npm-shrinkwrap.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "echo 'noop'",
+    "lint": "echo 'noop'",
+    "test": "echo 'noop'",
+    "tsc": "echo 'noop'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 12"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}

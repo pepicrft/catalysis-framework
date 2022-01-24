@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/cli",
-  "version": "0.1.0",
+  "name": "@gestaltjs/gestalt",
+  "version": "0.3.0",
   "private": false,
-  "description": "A CLI tool for building Gestalt web app",
+  "description": "A tool for building Gestalt web app",
   "keywords": [
     "gestalt",
     "gestaltjs",
@@ -23,6 +23,7 @@
     "access": "public"
   },
   "scripts": {
+    "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
     "lint": "prettier -c src/** && eslint src/**",
@@ -37,18 +38,20 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/cli-core": "0.1.0",
-    "@gestaltjs/cli-support": "0.1.0",
+    "@gestaltjs/cli-core": "0.3.0",
+    "@gestaltjs/cli-support": "0.3.0",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1"
+    "@oclif/plugin-plugins": "^2.0.1",
+    "express": "^4.17.2",
+    "vite": "^2.7.12"
   },
   "devDependencies": {
     "@oclif/test": "^2"
   },
   "engine-strict": true,
   "engines": {
-    "node": "^12 || ^14 || ^16"
+    "node": ">= 12"
   },
   "os": [
     "darwin",
@@ -64,8 +67,8 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
+      "serve": {
+        "description": "Serve the Application"
       }
     }
   }

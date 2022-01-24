@@ -1,0 +1,22 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.6.3/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "linked": [
+    [
+      "@gestaltjs/gestalt",
+      "@gestaltjs/browserslist-config",
+      "@gestaltjs/cli-core",
+      "@gestaltjs/cli-support",
+      "@gestaltjs/create-app",
+      "@gestaltjs/docs",
+      "@gestaltjs/eslint-plugin",
+      "@gestaltjs/prettier-config",
+      "@gestaltjs/typescript-configs"
+    ]
+  ],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": ["@gestaltjs/docs"]
+}

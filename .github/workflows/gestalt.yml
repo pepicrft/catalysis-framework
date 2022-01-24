@@ -1,4 +1,4 @@
-name: cli
+name: Gestalt
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request: {}
 
 concurrency:
-  group: cli-${{ github.head_ref }}
+  group: gestalt-${{ github.head_ref }}
   cancel-in-progress: true
 
 jobs:
@@ -17,7 +17,17 @@ jobs:
     strategy:
       matrix:
         node: ['12', '14', '16']
-        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+        package:
+          [
+            'create-app',
+            'gestalt',
+            'cli-core',
+            'cli-support',
+            'prettier-config',
+            'typescript-configs',
+            'browserslist-config',
+            'eslint-plugin',
+          ]
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v1
@@ -41,7 +51,17 @@ jobs:
     strategy:
       matrix:
         node: ['12', '14', '16']
-        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+        package:
+          [
+            'create-app',
+            'gestalt',
+            'cli-core',
+            'cli-support',
+            'prettier-config',
+            'typescript-configs',
+            'browserslist-config',
+            'eslint-plugin',
+          ]
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v1
@@ -86,7 +106,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+        package:
+          [
+            'create-app',
+            'gestalt',
+            'cli-core',
+            'cli-support',
+            'prettier-config',
+            'typescript-configs',
+            'browserslist-config',
+            'eslint-plugin',
+          ]
     steps:
       - uses: actions/checkout@v1
       - uses: pnpm/action-setup@v2.0.1
@@ -109,7 +139,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: ['create-app', 'cli', 'cli-core', 'cli-support']
+        package:
+          [
+            'create-app',
+            'gestalt',
+            'cli-core',
+            'cli-support',
+            'prettier-config',
+            'typescript-configs',
+            'browserslist-config',
+            'eslint-plugin',
+          ]
     steps:
       - uses: actions/checkout@v1
       - uses: pnpm/action-setup@v2.0.1

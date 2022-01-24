@@ -5,7 +5,7 @@
       "path": "./packages/create-app"
     },
     {
-      "path": "./packages/cli"
+      "path": "./packages/gestalt"
     },
     {
       "path": "./packages/cli-core"

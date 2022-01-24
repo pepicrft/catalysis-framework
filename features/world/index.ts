@@ -1,4 +1,4 @@
-import {setWorldConstructor} from '@cucumber/cucumber';
+import {setWorldConstructor} from 'cucumber';
 
 export interface WorldConstructorParams {
   temporaryDirectory: string;
