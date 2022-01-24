@@ -26,8 +26,8 @@
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
-    "lint": "prettier -c src/** && eslint src/**",
-    "lint:fix": "prettier src/** && eslint src/** --fix",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
@@ -44,10 +44,12 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
     "express": "^4.17.2",
+    "shelljs": "^0.8.5",
     "vite": "^2.7.12"
   },
   "devDependencies": {
-    "@oclif/test": "^2"
+    "@oclif/test": "^2",
+    "@types/shelljs": "^0.8.11"
   },
   "engine-strict": true,
   "engines": {

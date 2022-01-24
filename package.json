@@ -6,16 +6,19 @@
     "version:publish": "changeset publish",
     "release": "changeset publish",
     "features": "cucumber-js -p default",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm run lint -r",
+    "lint:fix": "pnpm run lint:fix -r",
+    "build": "pnpm run build -r",
+    "test": "pnpm run test -r",
+    "tsc": "pnpm run tsc -r"
   },
   "devDependencies": {
     "@changesets/cli": "^2.19.0",
-    "@shopify/eslint-plugin": "^41.0.1",
-    "@shopify/prettier-config": "^1.1.2",
-    "@shopify/typescript-configs": "^5.1.0",
     "@types/cucumber": "^6.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/rimraf": "^3.0.2",
+    "@types/shelljs": "^0.8.11",
     "@types/tmp": "^0.2.3",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
@@ -25,18 +28,18 @@
     "esbuild": "^0.14.11",
     "eslint": "^8.6.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "fast-glob": "^3.2.10",
     "fs-extra": "^10.0.0",
+    "install": "^0.13.0",
     "pathe": "^0.2.0",
     "picocolors": "^1.0.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
+    "shelljs": "^0.8.5",
     "shx": "^0.3.4",
     "tmp": "^0.2.1",
     "ts-node": "^10.4.0",
@@ -44,26 +47,24 @@
     "vitest": "^0.0.139"
   },
   "eslintConfig": {
+    "root": true,
     "parser": "@typescript-eslint/parser",
-    "extends": [
-      "plugin:@shopify/typescript",
-      "plugin:@shopify/prettier",
-      "plugin:@shopify/node"
+    "plugins": [
+      "@typescript-eslint"
     ],
-    "rules": {
-      "prettier/prettier": [
-        "error"
-      ],
-      "@typescript-eslint/no-namespace": "off",
-      "@typescript-eslint/no-var-requires": "off",
-      "import/no-cycle": "off",
-      "callback-return": "off",
-      "no-undefined": "off",
-      "no-console": "off",
-      "require-await": "off",
-      "node/no-deprecated-api": "off",
-      "import/no-extraneous-dependencies": "off"
-    }
-  },
-  "prettier": "@shopify/prettier-config"
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "env": {
+      "node": true,
+      "commonjs": true
+    },
+    "ignorePatterns": [
+      "dist",
+      "node_modules",
+      "bin"
+    ]
+  }
 }

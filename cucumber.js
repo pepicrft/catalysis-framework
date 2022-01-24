@@ -1,10 +1,12 @@
 const isCI = process.env.NODE_ENV === 'ci';
 const featureToRun = process.env.FEATURE;
 
+console.log(process.cwd());
+
 const common = [
   '--require-module ts-node/register',
   '--require features/world/**/*.ts',
-  '--require features/step-definitions/**/*.ts',
+  '--require features/steps/**/*.ts',
   '--require features/shared/**/*.ts',
   '--format-options \'{"colorsEnabled": true}\'',
   '--format progress',
