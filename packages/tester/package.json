@@ -1,0 +1,49 @@
+{
+  "name": "@gestaltjs/tester",
+  "version": "0.3.0",
+  "private": false,
+  "description": "A set of utilities responsible for testing Gestalt apps",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "builder"
+  ],
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm run build",
+    "build": "shx rm -rf dist && tsc -b",
+    "build:watch": "tsc -b --watch",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc": "tsc -b --incremental"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "dependencies": {
+    "@gestaltjs/support": "0.3.0"
+  },
+  "devDependencies": {},
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 12"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
