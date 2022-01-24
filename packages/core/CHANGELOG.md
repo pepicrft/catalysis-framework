@@ -1,4 +1,4 @@
-# @gestaltjs/cli-core
+# @gestaltjs/core
 
 ## 0.3.0
 
@@ -11,7 +11,7 @@
 
 - Updated dependencies [c200c4f]
 - Updated dependencies [4c68516]
-  - @gestaltjs/cli-support@0.3.0
+  - @gestaltjs/support@0.3.0
 
 ## 0.2.0
 
@@ -22,4 +22,4 @@
 ### Patch Changes
 
 - Updated dependencies [4b77d2b]
-  - @gestaltjs/cli-support@0.2.0
+  - @gestaltjs/support@0.2.0

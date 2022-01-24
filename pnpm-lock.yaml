@@ -74,24 +74,24 @@ importers:
     devDependencies:
       browserslist: 4.19.1
 
-  packages/cli-core:
+  packages/core:
     specifiers:
-      '@gestaltjs/cli-support': 0.3.0
+      '@gestaltjs/support': 0.3.0
     dependencies:
-      '@gestaltjs/cli-support': link:../cli-support
+      '@gestaltjs/support': link:../support
 
-  packages/cli-support:
+  packages/support:
     specifiers: {}
 
   packages/create-app:
     specifiers:
-      '@gestaltjs/cli-support': 0.3.0
+      '@gestaltjs/support': 0.3.0
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
       '@oclif/test': ^2
     dependencies:
-      '@gestaltjs/cli-support': link:../cli-support
+      '@gestaltjs/support': link:../support
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
@@ -128,8 +128,8 @@ importers:
 
   packages/gestalt:
     specifiers:
-      '@gestaltjs/cli-core': 0.3.0
-      '@gestaltjs/cli-support': 0.3.0
+      '@gestaltjs/core': 0.3.0
+      '@gestaltjs/support': 0.3.0
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -139,8 +139,8 @@ importers:
       shelljs: ^0.8.5
       vite: ^2.7.12
     dependencies:
-      '@gestaltjs/cli-core': link:../cli-core
-      '@gestaltjs/cli-support': link:../cli-support
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12

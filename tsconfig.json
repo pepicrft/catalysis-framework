@@ -8,10 +8,10 @@
       "path": "./packages/gestalt"
     },
     {
-      "path": "./packages/cli-core"
+      "path": "./packages/core"
     },
     {
-      "path": "./packages/cli-support"
+      "path": "./packages/support"
     }
   ],
   "compilerOptions": {

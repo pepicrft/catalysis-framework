@@ -6,8 +6,8 @@
     [
       "@gestaltjs/gestalt",
       "@gestaltjs/browserslist-config",
-      "@gestaltjs/cli-core",
-      "@gestaltjs/cli-support",
+      "@gestaltjs/core",
+      "@gestaltjs/support",
       "@gestaltjs/create-app",
       "@gestaltjs/docs",
       "@gestaltjs/eslint-plugin",

@@ -1,4 +1,4 @@
-import {something as anotherThing} from '@gestaltjs/cli-support';
+import {something as anotherThing} from '@gestaltjs/support';
 
 export function something(): string {
   anotherThing();

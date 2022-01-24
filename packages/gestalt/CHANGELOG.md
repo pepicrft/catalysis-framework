@@ -11,4 +11,4 @@
 - Updated dependencies [c200c4f]
 - Updated dependencies [4c68516]
   - @gestaltjs/cli-core@0.3.0
-  - @gestaltjs/cli-support@0.3.0
+  - @gestaltjs/support@0.3.0

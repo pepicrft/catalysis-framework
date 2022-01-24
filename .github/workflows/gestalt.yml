@@ -21,8 +21,8 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'cli-core',
-            'cli-support',
+            'core',
+            'support',
             'prettier-config',
             'typescript-configs',
             'browserslist-config',
@@ -55,8 +55,8 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'cli-core',
-            'cli-support',
+            'core',
+            'support',
             'prettier-config',
             'typescript-configs',
             'browserslist-config',
@@ -110,8 +110,8 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'cli-core',
-            'cli-support',
+            'core',
+            'support',
             'prettier-config',
             'typescript-configs',
             'browserslist-config',
@@ -143,8 +143,8 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'cli-core',
-            'cli-support',
+            'core',
+            'support',
             'prettier-config',
             'typescript-configs',
             'browserslist-config',

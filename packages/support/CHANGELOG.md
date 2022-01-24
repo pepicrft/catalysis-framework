@@ -1,4 +1,4 @@
-# @gestaltjs/cli-support
+# @gestaltjs/support
 
 ## 0.3.0
 
