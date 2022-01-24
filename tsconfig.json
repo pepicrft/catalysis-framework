@@ -11,6 +11,9 @@
       "path": "./packages/loader"
     },
     {
+      "path": "./packages/builder"
+    },
+    {
       "path": "./packages/core"
     },
     {
