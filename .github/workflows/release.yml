@@ -1,15 +1,17 @@
-name: changeset
+name: Release
 
 on:
-  pull_request: {}
+  push:
+    branches:
+      - main
 
 concurrency:
-  group: changeset-${{ github.head_ref }}
+  group: release-${{ github.head_ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Changeset
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -26,5 +28,11 @@ jobs:
           cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
         run: pnpm install
-      - name: Build
-        run: pnpm changeset status --since=main
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        with:
+          version: pnpm run version:persist
+          publish: pnpm run version:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
