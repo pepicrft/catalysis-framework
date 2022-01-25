@@ -3,10 +3,10 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "linked": [
-    ["@gestaltjs/gestalt", "@gestaltjs/core"],
-    ["@gestaltjs/gestalt", "@gestaltjs/support"],
     [
       "@gestaltjs/gestalt",
+      "@gestaltjs/core",
+      "@gestaltjs/support",
       "@gestaltjs/load",
       "@gestaltjs/build",
       "@gestaltjs/test",
