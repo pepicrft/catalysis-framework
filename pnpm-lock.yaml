@@ -70,8 +70,8 @@ importers:
 
   packages/build:
     specifiers:
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
     devDependencies:
@@ -82,13 +82,13 @@ importers:
 
   packages/core:
     specifiers:
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/support': 0.3.2
     devDependencies:
       '@gestaltjs/support': link:../support
 
   packages/create-app:
     specifiers:
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -128,14 +128,14 @@ importers:
 
   packages/gestalt:
     specifiers:
-      '@gestaltjs/build': 0.3.1
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/lint': 0.3.1
-      '@gestaltjs/load': 0.3.1
-      '@gestaltjs/serve': 0.3.1
-      '@gestaltjs/support': 0.3.1
-      '@gestaltjs/test': 0.3.1
-      '@gestaltjs/type-check': 0.3.1
+      '@gestaltjs/build': 0.3.2
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/lint': 0.3.2
+      '@gestaltjs/load': 0.3.2
+      '@gestaltjs/serve': 0.3.2
+      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/test': 0.3.2
+      '@gestaltjs/type-check': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -165,8 +165,8 @@ importers:
 
   packages/lint:
     specifiers:
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
     devDependencies:
@@ -177,16 +177,16 @@ importers:
 
   packages/load:
     specifiers:
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/support': link:../support
 
   packages/serve:
     specifiers:
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
     devDependencies:
@@ -200,8 +200,8 @@ importers:
 
   packages/test:
     specifiers:
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
     devDependencies:
@@ -212,8 +212,8 @@ importers:
 
   packages/type-check:
     specifiers:
-      '@gestaltjs/core': 0.3.1
-      '@gestaltjs/support': 0.3.1
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
     devDependencies:
