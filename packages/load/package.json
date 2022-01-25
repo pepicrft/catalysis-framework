@@ -38,7 +38,10 @@
     "@gestaltjs/core": "0.3.1",
     "@gestaltjs/support": "0.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@gestaltjs/core": "0.3.1",
+    "@gestaltjs/support": "0.3.1"
+  },
   "engine-strict": true,
   "engines": {
     "node": ">= 12"

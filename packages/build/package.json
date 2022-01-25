@@ -32,14 +32,19 @@
       "../../package.json"
     ]
   },
-  "dependencies": {
-    "@gestaltjs/support": "0.3.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5"
+    "@oclif/plugin-help": "^5",
+    "@gestaltjs/support": "0.3.1",
+    "@gestaltjs/core": "0.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@gestaltjs/support": "0.3.1",
+    "@gestaltjs/core": "0.3.1"
+  },
   "engine-strict": true,
   "engines": {
     "node": ">= 12"
