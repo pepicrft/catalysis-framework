@@ -101,6 +101,18 @@ importers:
     devDependencies:
       '@oclif/test': 2.0.3
 
+  packages/db:
+    specifiers:
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
+      '@oclif/core': ^1
+      '@oclif/plugin-help': ^5
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
+      '@oclif/core': 1.1.2
+      '@oclif/plugin-help': 5.1.10
+
   packages/docs:
     specifiers:
       '@algolia/client-search': ^4.12.0
@@ -130,6 +142,7 @@ importers:
     specifiers:
       '@gestaltjs/build': 0.3.2
       '@gestaltjs/core': 0.3.2
+      '@gestaltjs/db': 0.3.2
       '@gestaltjs/lint': 0.3.2
       '@gestaltjs/load': 0.3.2
       '@gestaltjs/serve': 0.3.2
@@ -147,6 +160,7 @@ importers:
     dependencies:
       '@gestaltjs/build': link:../build
       '@gestaltjs/core': link:../core
+      '@gestaltjs/db': link:../db
       '@gestaltjs/lint': link:../lint
       '@gestaltjs/load': link:../load
       '@gestaltjs/serve': link:../serve

@@ -12,6 +12,7 @@
       "@gestaltjs/test",
       "@gestaltjs/lint",
       "@gestaltjs/type-check",
+      "@gestaltjs/db",
       "@gestaltjs/serve"
     ]
   ],

@@ -1,20 +1,15 @@
 {
-  "name": "@gestaltjs/gestalt",
+  "name": "@gestaltjs/db",
   "version": "0.3.2",
   "private": false,
-  "description": "A tool for building Gestalt web app",
+  "description": "A set of utilities for managing and interacting with databases",
   "keywords": [
     "gestalt",
-    "gestaltjs",
-    "web"
+    "gestaltjs"
   ],
   "license": "MIT",
   "types": "dist/index.d.ts",
-  "bin": {
-    "gestalt": "./bin/gestalt-run"
-  },
   "files": [
-    "/bin",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
@@ -37,26 +32,18 @@
       "../../package.json"
     ]
   },
-  "dependencies": {
-    "@gestaltjs/load": "0.3.2",
-    "@gestaltjs/type-check": "0.3.2",
-    "@gestaltjs/build": "0.3.2",
-    "@gestaltjs/serve": "0.3.2",
-    "@gestaltjs/db": "0.3.2",
-    "@gestaltjs/test": "0.3.2",
-    "@gestaltjs/lint": "0.3.2",
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/support": "0.3.2",
+  "dependencies": {},
+  "peerDependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1",
-    "express": "^4.17.2",
-    "shelljs": "^0.8.5",
-    "vite": "^2.7.12"
+    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/support": "0.3.2"
   },
   "devDependencies": {
-    "@oclif/test": "^2",
-    "@types/shelljs": "^0.8.11"
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/support": "0.3.2"
   },
   "engine-strict": true,
   "engines": {
@@ -68,17 +55,9 @@
     "win32"
   ],
   "oclif": {
-    "bin": "gestalt",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-      "serve": {
-        "description": "Serve the Application"
-      }
-    }
+      "@oclif/plugin-help"
+    ]
   }
 }
