@@ -1,12 +1,11 @@
 {
-  "name": "@gestaltjs/tester",
+  "name": "@gestaltjs/lint",
   "version": "0.3.0",
   "private": false,
-  "description": "A set of utilities responsible for testing Gestalt apps",
+  "description": "A set of utilities responsible linting Gestalt apps",
   "keywords": [
     "gestalt",
-    "gestaltjs",
-    "builder"
+    "gestaltjs"
   ],
   "license": "MIT",
   "types": "dist/index.d.ts",

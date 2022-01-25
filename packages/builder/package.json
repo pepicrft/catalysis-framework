@@ -5,8 +5,7 @@
   "description": "A set of utilities responsible for building the app",
   "keywords": [
     "gestalt",
-    "gestaltjs",
-    "builder"
+    "gestaltjs"
   ],
   "license": "MIT",
   "types": "dist/index.d.ts",

@@ -8,19 +8,19 @@
       "path": "./packages/gestalt"
     },
     {
-      "path": "./packages/loader"
+      "path": "./packages/load"
     },
     {
-      "path": "./packages/builder"
+      "path": "./packages/build"
     },
     {
-      "path": "./packages/linter"
+      "path": "./packages/lint"
     },
     {
-      "path": "./packages/server"
+      "path": "./packages/serve"
     },
     {
-      "path": "./packages/tester"
+      "path": "./packages/test"
     },
     {
       "path": "./packages/core"

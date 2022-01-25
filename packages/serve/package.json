@@ -1,12 +1,11 @@
 {
-  "name": "@gestaltjs/server",
+  "name": "@gestaltjs/serve",
   "version": "0.3.0",
   "private": false,
   "description": "A set of utilities responsible for serving the app",
   "keywords": [
     "gestalt",
-    "gestaltjs",
-    "builder"
+    "gestaltjs"
   ],
   "license": "MIT",
   "types": "dist/index.d.ts",

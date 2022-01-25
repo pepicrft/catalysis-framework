@@ -1,12 +1,11 @@
 {
-  "name": "@gestaltjs/loader",
+  "name": "@gestaltjs/test",
   "version": "0.3.0",
   "private": false,
-  "description": "A set of utilities responsible for loading the app in memory and watching changes.",
+  "description": "A set of utilities responsible for testing Gestalt apps",
   "keywords": [
     "gestalt",
-    "gestaltjs",
-    "web"
+    "gestaltjs"
   ],
   "license": "MIT",
   "types": "dist/index.d.ts",
