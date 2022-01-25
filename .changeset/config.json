@@ -3,6 +3,8 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "linked": [
+    ["@gestaltjs/gestalt", "@gestaltjs/core"],
+    ["@gestaltjs/gestalt", "@gestaltjs/support"],
     [
       "@gestaltjs/gestalt",
       "@gestaltjs/load",
@@ -10,11 +12,7 @@
       "@gestaltjs/test",
       "@gestaltjs/lint",
       "@gestaltjs/type-check",
-      "@gestaltjs/serve",
-      "@gestaltjs/core",
-      "@gestaltjs/support",
-      "@gestaltjs/create-app",
-      "@gestaltjs/docs"
+      "@gestaltjs/serve"
     ]
   ],
   "access": "public",
