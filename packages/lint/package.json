@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/lint",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": false,
   "description": "A set of utilities responsible linting Gestalt apps",
   "keywords": [
@@ -36,14 +36,14 @@
   "peerDependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@gestaltjs/core": "0.3.1",
-    "@gestaltjs/support": "0.3.1"
+    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/support": "0.3.2"
   },
   "devDependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@gestaltjs/core": "0.3.1",
-    "@gestaltjs/support": "0.3.1"
+    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/support": "0.3.2"
   },
   "engine-strict": true,
   "engines": {

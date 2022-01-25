@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/support",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": false,
   "description": "Set of Getalt-agnostic tools",
   "keywords": [

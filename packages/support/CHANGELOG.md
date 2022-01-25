@@ -1,5 +1,11 @@
 # @gestaltjs/support
 
+## 0.3.2
+
+### Patch Changes
+
+- Fix an issue that caused the building of the dependencies to fail
+
 ## 0.3.1
 
 ### Patch Changes
