@@ -53,7 +53,10 @@
     ],
     "rules": {
       "prettier/prettier": [
-        "error"
+        "error",
+        {
+          "endOfLine": "auto"
+        }
       ],
       "@typescript-eslint/no-namespace": "off",
       "@typescript-eslint/no-var-requires": "off",
