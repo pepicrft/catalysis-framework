@@ -65,3 +65,5 @@ test("testing my code", (t) => {
 });
 ```
 The runtime API should be declared in `src/index.ts`, whose Javascript counterpart, `dist/index.js` is the `main` attribute in the package's `package.json`.
+
+Some packages like `@gestalt/linter` might also export configuration like an ESLint configuration that projects can extend from to stick to the framework's defaults.

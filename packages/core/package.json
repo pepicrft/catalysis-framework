@@ -33,7 +33,8 @@
       "../../package.json"
     ]
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "@gestaltjs/support": "0.3.0"
   },
   "devDependencies": {},

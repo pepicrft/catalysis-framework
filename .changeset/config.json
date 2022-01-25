@@ -5,7 +5,12 @@
   "linked": [
     [
       "@gestaltjs/gestalt",
-      "@gestaltjs/browserslist-config",
+      "@gestaltjs/load",
+      "@gestaltjs/build",
+      "@gestaltjs/test",
+      "@gestaltjs/lint",
+      "@gestaltjs/type-check",
+      "@gestaltjs/serve",
       "@gestaltjs/core",
       "@gestaltjs/support",
       "@gestaltjs/create-app",

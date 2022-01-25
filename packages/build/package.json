@@ -35,6 +35,10 @@
   "dependencies": {
     "@gestaltjs/support": "0.3.0"
   },
+  "peerDependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5"
+  },
   "devDependencies": {},
   "engine-strict": true,
   "engines": {
@@ -44,5 +48,11 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "oclif": {
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  }
 }

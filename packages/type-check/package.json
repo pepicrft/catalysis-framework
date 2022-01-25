@@ -1,12 +1,11 @@
 {
-  "name": "@gestaltjs/load",
+  "name": "@gestaltjs/type-check",
   "version": "0.3.0",
   "private": false,
-  "description": "A set of utilities responsible for loading the app in memory and watching changes.",
+  "description": "A set of utilities responsible type-checking Gestalt apps",
   "keywords": [
     "gestalt",
-    "gestaltjs",
-    "web"
+    "gestaltjs"
   ],
   "license": "MIT",
   "types": "dist/index.d.ts",
@@ -35,6 +34,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
     "@gestaltjs/core": "0.3.0",
     "@gestaltjs/support": "0.3.0"
   },
@@ -47,5 +48,11 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "oclif": {
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  }
 }

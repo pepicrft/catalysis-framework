@@ -32,7 +32,11 @@
       "../../package.json"
     ]
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@gestaltjs/core": "0.3.0",
     "@gestaltjs/support": "0.3.0"
   },
   "devDependencies": {},
@@ -44,5 +48,11 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "oclif": {
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  }
 }

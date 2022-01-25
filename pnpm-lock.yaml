@@ -75,10 +75,7 @@ importers:
       '@gestaltjs/support': link:../support
 
   packages/core:
-    specifiers:
-      '@gestaltjs/support': 0.3.0
-    dependencies:
-      '@gestaltjs/support': link:../support
+    specifiers: {}
 
   packages/create-app:
     specifiers:
@@ -122,8 +119,14 @@ importers:
 
   packages/gestalt:
     specifiers:
+      '@gestaltjs/build': 0.3.0
       '@gestaltjs/core': 0.3.0
+      '@gestaltjs/lint': 0.3.0
+      '@gestaltjs/load': 0.3.0
+      '@gestaltjs/serve': 0.3.0
       '@gestaltjs/support': 0.3.0
+      '@gestaltjs/test': 0.3.0
+      '@gestaltjs/type-check': 0.3.0
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -133,8 +136,14 @@ importers:
       shelljs: ^0.8.5
       vite: ^2.7.12
     dependencies:
+      '@gestaltjs/build': link:../build
       '@gestaltjs/core': link:../core
+      '@gestaltjs/lint': link:../lint
+      '@gestaltjs/load': link:../load
+      '@gestaltjs/serve': link:../serve
       '@gestaltjs/support': link:../support
+      '@gestaltjs/test': link:../test
+      '@gestaltjs/type-check': link:../type-check
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
@@ -146,31 +155,22 @@ importers:
       '@types/shelljs': 0.8.11
 
   packages/lint:
-    specifiers:
-      '@gestaltjs/support': 0.3.0
-    dependencies:
-      '@gestaltjs/support': link:../support
+    specifiers: {}
 
   packages/load:
-    specifiers:
-      '@gestaltjs/support': 0.3.0
-    dependencies:
-      '@gestaltjs/support': link:../support
+    specifiers: {}
 
   packages/serve:
-    specifiers:
-      '@gestaltjs/support': 0.3.0
-    dependencies:
-      '@gestaltjs/support': link:../support
+    specifiers: {}
 
   packages/support:
     specifiers: {}
 
   packages/test:
-    specifiers:
-      '@gestaltjs/support': 0.3.0
-    dependencies:
-      '@gestaltjs/support': link:../support
+    specifiers: {}
+
+  packages/type-check:
+    specifiers: {}
 
 packages:
 

@@ -38,6 +38,12 @@
     ]
   },
   "dependencies": {
+    "@gestaltjs/load": "0.3.0",
+    "@gestaltjs/type-check": "0.3.0",
+    "@gestaltjs/build": "0.3.0",
+    "@gestaltjs/serve": "0.3.0",
+    "@gestaltjs/test": "0.3.0",
+    "@gestaltjs/lint": "0.3.0",
     "@gestaltjs/core": "0.3.0",
     "@gestaltjs/support": "0.3.0",
     "@oclif/core": "^1",
