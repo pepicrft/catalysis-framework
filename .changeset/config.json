@@ -9,10 +9,7 @@
       "@gestaltjs/core",
       "@gestaltjs/support",
       "@gestaltjs/create-app",
-      "@gestaltjs/docs",
-      "@gestaltjs/eslint-plugin",
-      "@gestaltjs/prettier-config",
-      "@gestaltjs/typescript-configs"
+      "@gestaltjs/docs"
     ]
   ],
   "access": "public",

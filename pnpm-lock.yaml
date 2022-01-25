@@ -68,20 +68,17 @@ importers:
       typescript: 4.5.4
       vitest: 0.0.139
 
-  packages/browserslist-config:
+  packages/build:
     specifiers:
-      browserslist: ^4.3.4
-    devDependencies:
-      browserslist: 4.19.1
+      '@gestaltjs/support': 0.3.0
+    dependencies:
+      '@gestaltjs/support': link:../support
 
   packages/core:
     specifiers:
       '@gestaltjs/support': 0.3.0
     dependencies:
       '@gestaltjs/support': link:../support
-
-  packages/support:
-    specifiers: {}
 
   packages/create-app:
     specifiers:
@@ -123,9 +120,6 @@ importers:
       '@types/react': 17.0.38
       webpack: 5.66.0_esbuild@0.14.11
 
-  packages/eslint-plugin:
-    specifiers: {}
-
   packages/gestalt:
     specifiers:
       '@gestaltjs/core': 0.3.0
@@ -151,11 +145,32 @@ importers:
       '@oclif/test': 2.0.3
       '@types/shelljs': 0.8.11
 
-  packages/prettier-config:
+  packages/lint:
+    specifiers:
+      '@gestaltjs/support': 0.3.0
+    dependencies:
+      '@gestaltjs/support': link:../support
+
+  packages/load:
+    specifiers:
+      '@gestaltjs/support': 0.3.0
+    dependencies:
+      '@gestaltjs/support': link:../support
+
+  packages/serve:
+    specifiers:
+      '@gestaltjs/support': 0.3.0
+    dependencies:
+      '@gestaltjs/support': link:../support
+
+  packages/support:
     specifiers: {}
 
-  packages/typescript-configs:
-    specifiers: {}
+  packages/test:
+    specifiers:
+      '@gestaltjs/support': 0.3.0
+    dependencies:
+      '@gestaltjs/support': link:../support
 
 packages:
 

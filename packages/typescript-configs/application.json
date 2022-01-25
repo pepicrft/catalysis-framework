@@ -1,6 +1,0 @@
-{
-  "extends": "./dom.json",
-  "compilerOptions": {
-    "noEmit": true
-  }
-}
