@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/build",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "A set of utilities responsible for building the app",
   "keywords": [
@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/support": "0.3.0"
+    "@gestaltjs/support": "0.3.1"
   },
   "peerDependencies": {
     "@oclif/core": "^1",

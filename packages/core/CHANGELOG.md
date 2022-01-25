@@ -1,5 +1,13 @@
 # @gestaltjs/core
 
+## 0.3.1
+
+### Patch Changes
+
+- Revisit the architecture
+- Updated dependencies
+  - @gestaltjs/support@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/core",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "Set of Getalt tools and models that are shared across all the features",
   "keywords": [
@@ -35,7 +35,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@gestaltjs/support": "0.3.0"
+    "@gestaltjs/support": "0.3.1"
   },
   "devDependencies": {},
   "engine-strict": true,
