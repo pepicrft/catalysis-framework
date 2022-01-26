@@ -33,8 +33,13 @@
       "../../package.json"
     ]
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "find-up": "^5.0.0",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.11"
+  },
   "engine-strict": true,
   "engines": {
     "node": ">= 12"

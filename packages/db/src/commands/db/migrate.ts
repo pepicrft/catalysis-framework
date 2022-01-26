@@ -2,6 +2,8 @@ import {execSync} from 'child_process';
 
 import {Command} from '@oclif/core';
 import path from 'pathe';
+import { exec } from '@gestaltjs/support';
+import { prismaExecutablePath } from 'src/utils/paths';
 
 export default class Migrate extends Command {
   static description = 'Migrate the data in your database';
@@ -22,8 +24,12 @@ export default class Migrate extends Command {
   ];
 
   async run(): Promise<void> {
-    const {args} = await this.parse(Migrate);
+    const { args } = await this.parse(Migrate);
     const directory = path.resolve(args.path);
-    execSync('prisma migrate dev', {stdio: 'inherit', cwd: directory});
+    const prismaPath = prismaExecutablePath();
+    await exec(`${prismaPath} migrate dev`, {
+      cwd: directory,
+      silent: false
+    })
   }
 }
