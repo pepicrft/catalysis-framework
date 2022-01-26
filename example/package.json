@@ -1,0 +1,18 @@
+{
+  "name": "Example Gestalt Project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^3.8.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.8.1"
+  }
+}
