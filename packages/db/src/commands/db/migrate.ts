@@ -1,5 +1,3 @@
-import {execSync} from 'child_process';
-
 import {Command} from '@oclif/core';
 import path from 'pathe';
 import { exec } from '@gestaltjs/support';

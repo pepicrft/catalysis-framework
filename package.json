@@ -17,6 +17,7 @@
     "@changesets/cli": "^2.19.0",
     "@types/cucumber": "^6.0.1",
     "@types/fs-extra": "^9.0.13",
+    "@types/node": "^17.0.12",
     "@types/rimraf": "^3.0.2",
     "@types/shelljs": "^0.8.11",
     "@types/tmp": "^0.2.3",
@@ -32,7 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "fast-glob": "^3.2.10",
+    "fast-glob": "^3.2.11",
     "fs-extra": "^10.0.0",
     "install": "^0.13.0",
     "pathe": "^0.2.0",
@@ -44,6 +45,7 @@
     "tmp": "^0.2.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4",
+    "vite": "^2.7.12",
     "vitest": "^0.0.139"
   },
   "eslintConfig": {
