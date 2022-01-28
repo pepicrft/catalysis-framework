@@ -9,6 +9,7 @@
     "web"
   ],
   "license": "MIT",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist",
@@ -33,7 +34,9 @@
       "../../package.json"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "zod": "^3.11.6"
+  },
   "peerDependencies": {
     "@gestaltjs/support": "0.3.2"
   },

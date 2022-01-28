@@ -83,6 +83,9 @@ importers:
   packages/core:
     specifiers:
       '@gestaltjs/support': 0.3.2
+      zod: ^3.11.6
+    dependencies:
+      zod: 3.11.6
     devDependencies:
       '@gestaltjs/support': link:../support
 
@@ -193,6 +196,9 @@ importers:
     specifiers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
+      zod: ^3.11.6
+    dependencies:
+      zod: 3.11.6
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/support': link:../support
@@ -11320,6 +11326,10 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  /zod/3.11.6:
+    resolution: {integrity: sha512-daZ80A81I3/9lIydI44motWe6n59kRBfNzTuS2bfzVh1nAXi667TOTWWtatxyG+fwgNUiagSj/CWZwRRbevJIg==}
+    dev: false
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}

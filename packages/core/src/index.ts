@@ -1,6 +1,2 @@
-import {something as anotherThing} from '@gestaltjs/support';
-
-export function something(): string {
-  anotherThing();
-  return 'string';
-}
+export type { App, Configuration, Route } from "./app";
+export { ConfigurationSchema } from "./app"

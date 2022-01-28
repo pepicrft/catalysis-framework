@@ -33,7 +33,9 @@
       "../../package.json"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "zod": "^3.11.6"
+  },
   "peerDependencies": {
     "@gestaltjs/core": "0.3.2",
     "@gestaltjs/support": "0.3.2"
