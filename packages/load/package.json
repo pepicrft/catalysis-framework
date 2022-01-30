@@ -1,18 +1,11 @@
 {
   "name": "@gestaltjs/load",
-  "version": "0.3.2",
-  "private": false,
+  "private": true,
   "description": "A set of utilities responsible for loading the app in memory and watching changes.",
-  "keywords": [
-    "gestalt",
-    "gestaltjs",
-    "web"
-  ],
-  "license": "MIT",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "files": [
-    "/dist",
+    "/src",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
@@ -20,6 +13,7 @@
     "access": "public"
   },
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
@@ -34,22 +28,8 @@
       "../../package.json"
     ]
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/support": "0.3.2"
-  },
   "devDependencies": {
     "@gestaltjs/core": "0.3.2",
     "@gestaltjs/support": "0.3.2"
-  },
-  "engine-strict": true,
-  "engines": {
-    "node": ">= 12"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ]
+  }
 }

@@ -22,6 +22,7 @@
     "access": "public"
   },
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
