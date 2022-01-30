@@ -48,10 +48,7 @@
     "@gestaltjs/support": "0.3.2",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1",
-    "express": "^4.17.2",
-    "shelljs": "^0.8.5",
-    "vite": "^2.7.12"
+    "@oclif/plugin-plugins": "^2.0.1"
   },
   "devDependencies": {
     "@oclif/test": "^2",
