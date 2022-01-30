@@ -9,7 +9,8 @@
     "web"
   ],
   "license": "MIT",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "files": [
     "/dist",
     "/npm-shrinkwrap.json",

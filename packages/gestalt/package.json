@@ -9,7 +9,6 @@
     "web"
   ],
   "license": "MIT",
-  "types": "dist/index.d.ts",
   "bin": {
     "gestalt": "./bin/gestalt-run"
   },
