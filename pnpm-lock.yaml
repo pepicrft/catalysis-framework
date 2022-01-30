@@ -96,14 +96,14 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
   packages/core:
     specifiers:
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/support': link:../support
 
   packages/create-app:
     specifiers:
@@ -113,7 +113,7 @@ importers:
       '@oclif/plugin-plugins': ^2.0.1
       '@oclif/test': ^2
     dependencies:
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/support': link:../support
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
@@ -125,8 +125,8 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
   packages/docs:
     specifiers:
@@ -164,8 +164,8 @@ importers:
       '@types/shelljs': ^0.8.11
       vitest: ^0.1.23
     devDependencies:
-      '@gestaltjs/core': 0.3.2
-      '@gestaltjs/load': 0.3.2_@gestaltjs+core@0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/load': link:../load
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
@@ -178,16 +178,16 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
   packages/load:
     specifiers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
   packages/serve:
     specifiers:
@@ -199,8 +199,8 @@ importers:
       express: 4.17.2
       vite: 2.7.13
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
   packages/support:
     specifiers: {}
@@ -210,16 +210,16 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
   packages/type-check:
     specifiers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/support': 0.3.2
     devDependencies:
-      '@gestaltjs/core': 0.3.2_@gestaltjs+support@0.3.2
-      '@gestaltjs/support': 0.3.2
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': link:../support
 
 packages:
 
@@ -2511,40 +2511,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@gestaltjs/core/0.3.2:
-    resolution: {integrity: sha512-Twkew4AXkHWM+eesTJT/D++jNHtuoClAfYHAo0l1LVKibvPrno/YvhXV1f+KMEfEft2hDMJHeoy+YYSwHvjCeg==}
-    engines: {node: '>= 12'}
-    os: [darwin, linux, win32]
-    peerDependencies:
-      '@gestaltjs/support': 0.3.2
-    dev: true
-
-  /@gestaltjs/core/0.3.2_@gestaltjs+support@0.3.2:
-    resolution: {integrity: sha512-Twkew4AXkHWM+eesTJT/D++jNHtuoClAfYHAo0l1LVKibvPrno/YvhXV1f+KMEfEft2hDMJHeoy+YYSwHvjCeg==}
-    engines: {node: '>= 12'}
-    os: [darwin, linux, win32]
-    peerDependencies:
-      '@gestaltjs/support': 0.3.2
-    dependencies:
-      '@gestaltjs/support': 0.3.2
-    dev: true
-
-  /@gestaltjs/load/0.3.2_@gestaltjs+core@0.3.2:
-    resolution: {integrity: sha512-9AvvrtBbDIjf+iTMa2gU9G7Ml/quDV5LNPgzXr3lSpRYHonfYrCDygbPw1Rm37Yr0ROERHQWcI5pkA59c358hw==}
-    engines: {node: '>= 12'}
-    os: [darwin, linux, win32]
-    peerDependencies:
-      '@gestaltjs/core': 0.3.2
-      '@gestaltjs/support': 0.3.2
-    dependencies:
-      '@gestaltjs/core': 0.3.2
-    dev: true
-
-  /@gestaltjs/support/0.3.2:
-    resolution: {integrity: sha512-MYfMNaW4Uula+Pa45Ry9lGi+uJH1SmlzzroJrcU0XndtTnUjI+7l2mysywCVvZn31fVfIMbhnzGxSduuqf/Veg==}
-    engines: {node: '>= 12'}
-    os: [darwin, linux, win32]
 
   /@hapi/hoek/9.2.1:
     resolution: {integrity: sha512-gfta+H8aziZsm8pZa0vj04KO6biEiisppNgA1kbJvFrrWu9Vm7eaUEy76DIxsuTaWvti5fkJVhllWc6ZTE+Mdw==}

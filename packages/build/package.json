@@ -1,5 +1,6 @@
 {
   "name": "@gestaltjs/build",
+  "version": "0.3.2",
   "private": true,
   "description": "A set of utilities responsible for building the app",
   "main": "src/index.ts",

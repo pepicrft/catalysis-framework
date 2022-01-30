@@ -1,5 +1,6 @@
 {
   "name": "@gestaltjs/support",
+  "version": "0.3.2",
   "private": true,
   "description": "Set of Getalt-agnostic tools",
   "main": "src/index.ts",

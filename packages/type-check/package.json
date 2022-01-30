@@ -1,5 +1,6 @@
 {
   "name": "@gestaltjs/type-check",
+  "version": "0.3.2",
   "private": true,
   "description": "A set of utilities responsible type-checking Gestalt apps",
   "main": "src/index.ts",

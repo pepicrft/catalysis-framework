@@ -1,5 +1,6 @@
 {
   "name": "@gestaltjs/load",
+  "version": "0.3.2",
   "private": true,
   "description": "A set of utilities responsible for loading the app in memory and watching changes.",
   "main": "src/index.ts",

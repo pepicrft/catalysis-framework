@@ -1,5 +1,6 @@
 {
   "name": "@gestaltjs/lint",
+  "version": "0.3.2",
   "private": true,
   "description": "A set of utilities responsible linting Gestalt apps",
   "main": "src/index.ts",

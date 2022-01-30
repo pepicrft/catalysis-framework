@@ -1,5 +1,6 @@
 {
   "name": "@gestaltjs/serve",
+  "version": "0.3.2",
   "private": true,
   "description": "A set of utilities responsible for serving the app",
   "main": "src/index.ts",
