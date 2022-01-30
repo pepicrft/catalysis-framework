@@ -1,7 +1,7 @@
-import {assert, describe, expect, it, test, beforeEach, afterEach} from 'vitest';
+import {expect, test, beforeEach, afterEach, vi} from 'vitest';
 import { load } from '.';
-import path from 'pathe'
-import tmp, { tmpdir } from "tmp";
+import path from 'pathe';
+import tmp from "tmp";
 import type { DirResult } from "tmp";
 import fs from "fs";
 
@@ -27,15 +27,32 @@ test("loads App config file", async () => {
   //Given
   const configContent = `
   module.exports = {
-    name: "asdgas"
+    "name": "asdgas"
   };
   `
   const configPath = path.join(tmpDir.name, "gestalt.config.cjs")
   fs.writeFileSync(configPath, configContent);
 
   // When
-  await load(tmpDir.name)
+  await expect(load(configPath)).toBeDefined();
 
   // Then
+
+})
+
+test("function load returns an object containing the property name", async () => {
+
+  //Given
+  const directory = tmpDir.name;
+
+  //When/Then
+
+  const spyLoad = vi.fn(load);
+
+  const result = spyLoad(directory);
+
+  await expect(result).toHaveProperty("name");
+
+  //Test failing: AssertionError: expected {} to have deep nested property ''
 
 })
