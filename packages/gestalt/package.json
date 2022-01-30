@@ -73,7 +73,13 @@
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-plugins",
+      "@gestaltjs/build",
+      "@gestaltjs/db",
+      "@gestaltjs/lint",
+      "@gestaltjs/serve",
+      "@gestaltjs/test",
+      "@gestaltjs/type-check"
     ],
     "topicSeparator": " ",
     "topics": {
