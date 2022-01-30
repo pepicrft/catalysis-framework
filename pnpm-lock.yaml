@@ -207,6 +207,11 @@ importers:
       '@gestaltjs/support': 0.3.2
       '@oclif/core': ^1
       '@oclif/plugin-help': ^5
+      express: ^4.17.2
+      vite: ^2.7.13
+    dependencies:
+      express: 4.17.2
+      vite: 2.7.13
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/support': link:../support
