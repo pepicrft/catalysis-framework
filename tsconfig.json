@@ -8,10 +8,34 @@
       "path": "./packages/gestalt"
     },
     {
-      "path": "./packages/cli-core"
+      "path": "./packages/load"
     },
     {
-      "path": "./packages/cli-support"
+      "path": "./packages/build"
+    },
+    {
+      "path": "./packages/lint"
+    },
+    {
+      "path": "./packages/serve"
+    },
+    {
+      "path": "./packages/test"
+    },
+    {
+      "path": "./packages/type-check"
+    },
+    {
+      "path": "./packages/db"
+    },
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/support"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "typeRoots": ["./features/types", "node_modules/@types"]
+  }
 }

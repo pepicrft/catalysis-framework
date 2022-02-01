@@ -5,14 +5,15 @@
   "linked": [
     [
       "@gestaltjs/gestalt",
-      "@gestaltjs/browserslist-config",
-      "@gestaltjs/cli-core",
-      "@gestaltjs/cli-support",
-      "@gestaltjs/create-app",
-      "@gestaltjs/docs",
-      "@gestaltjs/eslint-plugin",
-      "@gestaltjs/prettier-config",
-      "@gestaltjs/typescript-configs"
+      "@gestaltjs/core",
+      "@gestaltjs/support",
+      "@gestaltjs/load",
+      "@gestaltjs/build",
+      "@gestaltjs/test",
+      "@gestaltjs/lint",
+      "@gestaltjs/type-check",
+      "@gestaltjs/db",
+      "@gestaltjs/serve"
     ]
   ],
   "access": "public",

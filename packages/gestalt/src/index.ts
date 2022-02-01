@@ -1,4 +1,4 @@
-import {something} from '@gestaltjs/cli-support';
+import {something} from '@gestaltjs/support';
 
 something();
 export {run} from '@oclif/core';

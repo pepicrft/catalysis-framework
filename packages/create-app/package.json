@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/create-app",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "private": false,
   "description": "An executable to create a new Gestalt app",
   "keywords": [
@@ -26,8 +26,8 @@
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
-    "lint": "prettier -c src/** && eslint src/**",
-    "lint:fix": "prettier src/** && eslint src/** --fix",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/cli-support": "0.3.0",
+    "@gestaltjs/support": "0.3.2",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1"

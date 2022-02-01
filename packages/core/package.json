@@ -1,0 +1,52 @@
+{
+  "name": "@gestaltjs/core",
+  "version": "0.3.2",
+  "private": false,
+  "description": "Set of Getalt tools and models that are shared across all the features",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm run build",
+    "build": "shx rm -rf dist && tsc -b",
+    "build:watch": "tsc -b --watch",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc": "tsc -b --incremental"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@gestaltjs/support": "0.3.2"
+  },
+  "devDependencies": {
+    "@gestaltjs/support": "0.3.2"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 12"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
