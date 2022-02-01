@@ -10351,13 +10351,6 @@ packages:
       upper-case: 1.1.3
     dev: true
 
-  /title-case/2.1.1:
-    resolution: {integrity: sha1-PhJyFtpY0rxb7PE3q5Ha46fNj6o=}
-    dependencies:
-      no-case: 2.3.2
-      upper-case: 1.1.3
-    dev: true
-
   /tmp/0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
