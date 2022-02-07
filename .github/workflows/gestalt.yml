@@ -21,7 +21,6 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'load',
             'type-check',
             'db',
             'build',
@@ -29,7 +28,7 @@ jobs:
             'test',
             'lint',
             'core',
-            'support'
+            'e2e'
           ]
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
@@ -58,7 +57,6 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'load',
             'type-check',
             'db',
             'build',
@@ -66,7 +64,7 @@ jobs:
             'test',
             'lint',
             'core',
-            'support'
+            'e2e'
           ]
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
@@ -85,28 +83,6 @@ jobs:
       - name: Test
         working-directory: packages/${{ matrix.package }}
         run: pnpm run test
-  features:
-    name: Features with Node ${{ matrix.node }} on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: ['12', '14', '16']
-        os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
-    steps:
-      - uses: actions/checkout@v1
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: latest
-      - name: Set Node.js
-        uses: actions/setup-node@master
-        with:
-          node-version: ${{ matrix.node }}
-          cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml'
-      - name: Install dependencies
-        run: pnpm install
-      - name: Features
-        run: pnpm run features
   lint:
     name: Lint ${{ matrix.package }}
     runs-on: ubuntu-latest
@@ -116,7 +92,6 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'load',
             'type-check',
             'db',
             'build',
@@ -124,7 +99,7 @@ jobs:
             'test',
             'lint',
             'core',
-            'support'
+            'e2e'
           ]
     steps:
       - uses: actions/checkout@v1
@@ -152,7 +127,6 @@ jobs:
           [
             'create-app',
             'gestalt',
-            'load',
             'type-check',
             'db',
             'build',
@@ -160,7 +134,7 @@ jobs:
             'test',
             'lint',
             'core',
-            'support'
+            'e2e'
           ]
     steps:
       - uses: actions/checkout@v1

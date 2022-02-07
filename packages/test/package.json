@@ -1,7 +1,6 @@
 {
   "name": "@gestaltjs/test",
   "version": "0.3.2",
-  "version": "0.3.2",
   "private": true,
   "description": "A set of utilities responsible for testing Gestalt apps",
   "main": "src/index.ts",
@@ -15,7 +14,6 @@
     "clean": "shx rm -rf dist",
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
-    "build:watch": "tsc -b --watch",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
@@ -27,9 +25,9 @@
       "../../package.json"
     ]
   },
-  "devDependencies": {
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/support": "0.3.2"
+  "peerDependencies": {
+    "@oclif/core": "0.5.10",
+    "@gestaltjs/core": "0.3.2"
   },
   "oclif": {
     "commands": "./dist/commands",

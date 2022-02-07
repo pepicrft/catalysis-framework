@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/gestalt",
+  "name": "gestaltjs",
   "version": "0.3.2",
   "private": false,
   "description": "A tool for building Gestalt web app",
@@ -9,8 +9,10 @@
     "web"
   ],
   "license": "MIT",
+  "type": "module",
+  "exports": {},
   "bin": {
-    "gestalt": "./bin/gestalt-run"
+    "gestalt": "./bin/gestalt.js"
   },
   "files": [
     "/bin",
@@ -22,10 +24,9 @@
     "access": "public"
   },
   "scripts": {
-    "clean": "shx rm -rf dist",
-    "prepublishOnly": "pnpm run build",
+    "gestalt": "pnpm run build --dir ../core && pnpm run build && cross-env DEBUG=1 node bin/gestalt.js",
+    "prepublishOnly": "cross-env NODE_ENV=production pnpm run build",
     "build": "shx rm -rf dist && rollup -c",
-    "build:watch": "tsc -b --watch",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
@@ -37,19 +38,23 @@
       "../../package.json"
     ]
   },
-  "devDependencies": {
-    "@gestaltjs/load": "0.3.2",
-    "@gestaltjs/core": "0.3.2",
-    "@oclif/core": "^1",
+  "dependencies": {
+    "@oclif/core": "0.5.10",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "@oclif/test": "^2",
-    "@types/shelljs": "^0.8.11",
-    "vitest": "^0.1.23"
+    "@gestaltjs/core": "0.3.2"
+  },
+  "devDependencies": {
+    "@gestaltjs/type-check": "0.3.2",
+    "@gestaltjs/build": "0.3.2",
+    "@gestaltjs/serve": "0.3.2",
+    "@gestaltjs/db": "0.3.2",
+    "@gestaltjs/test": "0.3.2",
+    "@gestaltjs/lint": "0.3.2"
   },
   "engine-strict": true,
   "engines": {
-    "node": ">= 12"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "os": [
     "darwin",
@@ -61,19 +66,7 @@
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
-      "@oclif/plugin-plugins",
-      "@gestaltjs/build",
-      "@gestaltjs/db",
-      "@gestaltjs/lint",
-      "@gestaltjs/serve",
-      "@gestaltjs/test",
-      "@gestaltjs/type-check"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-      "serve": {
-        "description": "Serve the Application"
-      }
-    }
+      "@oclif/plugin-plugins"
+    ]
   }
 }

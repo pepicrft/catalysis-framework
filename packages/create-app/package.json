@@ -2,7 +2,8 @@
   "name": "@gestaltjs/create-app",
   "version": "0.3.2",
   "private": false,
-  "description": "An executable to create a new Gestalt app",
+  "description": "Create a new Gestalt app",
+  "type": "module",
   "keywords": [
     "gestalt",
     "gestaltjs",
@@ -10,7 +11,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "gestalt": "./bin/run"
+    "gestalt": "./bin/create-app.js"
   },
   "files": [
     "/bin",
@@ -22,15 +23,14 @@
     "access": "public"
   },
   "scripts": {
-    "clean": "shx rm -rf dist",
-    "prepublishOnly": "pnpm run build",
-    "build": "shx rm -rf dist && tsc -b",
-    "build:watch": "tsc -b --watch",
+    "create-app": "pnpm run build && cross-env DEBUG=1 node bin/create-app.js",
+    "prepublishOnly": "cross-env NODE_ENV=production pnpm run build",
+    "build": "shx rm -rf dist && rollup -c",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tsc": "tsc -b --incremental"
+    "tsc": "tsc -b"
   },
   "eslintConfig": {
     "extends": [
@@ -38,17 +38,14 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/support": "0.3.2",
-    "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1"
+    "@oclif/core": "0.5.10"
   },
   "devDependencies": {
-    "@oclif/test": "^2"
+    "@gestaltjs/core": "0.3.2"
   },
   "engine-strict": true,
   "engines": {
-    "node": ">= 12"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "os": [
     "darwin",
@@ -57,16 +54,6 @@
   ],
   "oclif": {
     "bin": "create-app",
-    "commands": "./dist/commands",
-    "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
+    "commands": "./dist/commands"
   }
 }
