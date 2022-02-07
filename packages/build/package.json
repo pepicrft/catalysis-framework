@@ -14,8 +14,8 @@
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
-    "lint": "eslint src/**",
-    "lint:fix": "eslint src/** --fix",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
