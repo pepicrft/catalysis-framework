@@ -1,28 +1,22 @@
 {
   "name": "@gestaltjs/type-check",
   "version": "0.3.2",
-  "private": false,
+  "private": true,
   "description": "A set of utilities responsible type-checking Gestalt apps",
-  "keywords": [
-    "gestalt",
-    "gestaltjs"
-  ],
-  "license": "MIT",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "files": [
-    "/dist",
+    "/src",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "build:watch": "tsc -b --watch",
-    "lint": "eslint src/**",
-    "lint:fix": "eslint src/** --fix",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
@@ -32,32 +26,12 @@
       "../../package.json"
     ]
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5",
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/support": "0.3.2"
-  },
   "devDependencies": {
-    "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5",
     "@gestaltjs/core": "0.3.2",
     "@gestaltjs/support": "0.3.2"
   },
-  "engine-strict": true,
-  "engines": {
-    "node": ">= 12"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
   "oclif": {
     "commands": "./dist/commands",
-    "plugins": [
-      "@oclif/plugin-help"
-    ]
+    "plugins": []
   }
 }

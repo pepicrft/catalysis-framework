@@ -9,7 +9,6 @@
     "web"
   ],
   "license": "MIT",
-  "types": "dist/index.d.ts",
   "bin": {
     "gestalt": "./bin/gestalt-run"
   },
@@ -23,11 +22,12 @@
     "access": "public"
   },
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepublishOnly": "pnpm run build",
-    "build": "shx rm -rf dist && tsc -b",
+    "build": "shx rm -rf dist && rollup -c",
     "build:watch": "tsc -b --watch",
-    "lint": "eslint src/**",
-    "lint:fix": "eslint src/** --fix",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
@@ -37,25 +37,12 @@
       "../../package.json"
     ]
   },
-  "dependencies": {
+  "devDependencies": {
     "@gestaltjs/load": "0.3.2",
-    "@gestaltjs/type-check": "0.3.2",
-    "@gestaltjs/build": "0.3.2",
-    "@gestaltjs/serve": "0.3.2",
-    "@gestaltjs/db": "0.3.2",
-    "@gestaltjs/test": "0.3.2",
-    "@gestaltjs/lint": "0.3.2",
     "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/support": "0.3.2",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "express": "^4.17.2",
-    "shelljs": "^0.8.5",
-    "vite": "^2.7.12",
-    "vitest": "^0.1.23"
-  },
-  "devDependencies": {
     "@oclif/test": "^2",
     "@types/shelljs": "^0.8.11",
     "vitest": "^0.1.23"
@@ -74,7 +61,13 @@
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-plugins",
+      "@gestaltjs/build",
+      "@gestaltjs/db",
+      "@gestaltjs/lint",
+      "@gestaltjs/serve",
+      "@gestaltjs/test",
+      "@gestaltjs/type-check"
     ],
     "topicSeparator": " ",
     "topics": {
