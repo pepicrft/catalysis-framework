@@ -1,8 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "create-app": "packages/create-app/bin/dev",
-    "gestalt": "packages/gestalt/bin/dev",
     "version:add": "changeset add",
     "version:persist": "changeset version",
     "version:publish": "changeset publish",
