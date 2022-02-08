@@ -2,4 +2,4 @@
 set -e
 
 DIRECTORY=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-$DIRECTORY/../packages/create-app/bin/dev
+$DIRECTORY/../packages/create-app/bin/dev $@
