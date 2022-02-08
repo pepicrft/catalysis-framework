@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "create-app": "pnpm run create-app --dir packages/create-app",
-    "gestalt": "pnpm run gestalt --dir packages/gestalt",
+    "create-app": "packages/create-app/bin/dev",
+    "gestalt": "packages/gestalt/bin/dev",
     "version:add": "changeset add",
     "version:persist": "changeset version",
     "version:publish": "changeset publish",

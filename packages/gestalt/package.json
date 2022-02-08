@@ -24,7 +24,6 @@
     "access": "public"
   },
   "scripts": {
-    "gestalt": "pnpm run build --dir ../core && pnpm run build && cross-env DEBUG=1 node bin/gestalt.js",
     "prepublishOnly": "cross-env NODE_ENV=production pnpm run build",
     "build": "shx rm -rf dist && rollup -c",
     "lint": "eslint src/**/*.ts",
