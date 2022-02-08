@@ -1,9 +1,9 @@
-import {findUp} from '@gestaltjs/support';
+import {path} from "@gestaltjs/core/cli"
 
 export async function prismaExecutablePath() {
-  const path = await findUp('node_modules/.bin/prisma', 'file');
-  if (path) {
-    return path;
+  const prismaPath = await path.findUp('node_modules/.bin/prisma', { type: 'file' });
+  if (prismaPath) {
+    return prismaPath;
   } else {
     throw Error('Path not found');
   }

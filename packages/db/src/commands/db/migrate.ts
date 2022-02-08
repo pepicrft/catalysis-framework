@@ -1,6 +1,6 @@
 import {Command} from '@oclif/core';
 import path from 'pathe';
-import { exec } from '@gestaltjs/support';
+import { system } from '@gestaltjs/core/cli';
 import { prismaExecutablePath } from 'src/utils/paths';
 
 export default class Migrate extends Command {
@@ -25,7 +25,7 @@ export default class Migrate extends Command {
     const { args } = await this.parse(Migrate);
     const directory = path.resolve(args.path);
     const prismaPath = prismaExecutablePath();
-    await exec(`${prismaPath} migrate dev`, {
+    await system.exec(`${prismaPath} migrate dev`, {
       cwd: directory,
       silent: false
     })
