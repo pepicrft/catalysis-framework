@@ -14,7 +14,6 @@
     "clean": "shx rm -rf dist",
     "prepublishOnly": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
-    "build:watch": "tsc -b --watch",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
@@ -26,13 +25,9 @@
       "../../package.json"
     ]
   },
-  "dependencies": {
-    "express": "^4.17.2",
-    "vite": "^2.7.13"
-  },
-  "devDependencies": {
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/support": "0.3.2"
+  "peerDependencies": {
+    "@oclif/core": "0.5.10",
+    "@gestaltjs/core": "0.3.2"
   },
   "oclif": {
     "commands": "./dist/commands",

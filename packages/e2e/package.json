@@ -1,0 +1,24 @@
+{
+  "name": "@gestaltjs/e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "e2e tests implemented with Cucumber",
+  "scripts": {
+    "build": "true",
+    "lint": "eslint **/*.ts",
+    "lint:fix": "eslint **/*.ts --fix",
+    "test": "cucumber-js -p default",
+    "tsc": "tsc -b --incremental"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "devDependencies": {
+    "@types/cucumber": "^6.0.1",
+    "cucumber": "^6.0.5",
+    "cucumber-junit-formatter": "^0.2.2",
+    "cucumber-pretty": "^6.0.1"
+  }
+}
