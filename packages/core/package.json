@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/core",
   "version": "0.3.2",
-  "private": false,
+  "private": true,
   "description": "Set of Getalt tools and models that are shared across all the features",
   "keywords": [
     "gestalt",
@@ -9,21 +9,25 @@
     "web"
   ],
   "license": "MIT",
-  "types": "dist/index.d.ts",
-  "files": [
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
-  "publishConfig": {
-    "access": "public"
+  "type": "module",
+  "exports": {
+    "./cli": {
+      "import": "./dist/cli/index.js",
+      "types": "./dist/cli/index.d.ts"
+    },
+    "./framework": {
+      "import": "./dist/framework/index.js",
+      "types": "./dist/framework/index.d.ts"
+    }
   },
+  "files": [
+    "/src"
+  ],
   "scripts": {
-    "prepublishOnly": "pnpm run build",
-    "build": "shx rm -rf dist && tsc -b",
-    "build:watch": "tsc -b --watch",
-    "lint": "eslint src/**",
-    "lint:fix": "eslint src/** --fix",
+    "prepublishOnly": "cross-env NODE_ENV=production pnpm run build",
+    "build": "shx rm -rf dist && rollup -c",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
@@ -33,12 +37,10 @@
       "../../package.json"
     ]
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "@gestaltjs/support": "0.3.2"
-  },
   "devDependencies": {
-    "@gestaltjs/support": "0.3.2"
+    "@types/shelljs": "^0.8.11",
+    "find-up": "^6.2.0",
+    "shelljs": "^0.8.5"
   },
   "engine-strict": true,
   "engines": {

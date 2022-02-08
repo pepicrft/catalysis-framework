@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "lib": [
-      "ES2019"
+      "ES2020"
     ],
-    "module": "commonjs",
-    "target": "ES2019",
+    "module": "ES2020",
+    "target": "ES2020",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "declaration": true,
     "inlineSourceMap": true,
-    "composite": true
+    "composite": true,
+    "paths": {
+      "@gestaltjs/core/framework": ["../core/src/framework"],
+      "@gestaltjs/core/cli": ["../core/src/cli"]
+    }
   },
   "exclude": [
     "**/dist/**",

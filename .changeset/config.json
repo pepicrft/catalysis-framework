@@ -6,8 +6,6 @@
     [
       "@gestaltjs/gestalt",
       "@gestaltjs/core",
-      "@gestaltjs/support",
-      "@gestaltjs/load",
       "@gestaltjs/build",
       "@gestaltjs/test",
       "@gestaltjs/lint",

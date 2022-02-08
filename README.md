@@ -1,5 +1,7 @@
 # Gestalt 🌈
 
+[![Tuple](https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8)](https://tuple.app)
+
 Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.org/en/) web framework. It's designed to spark joy through convenient abstractions and workflows that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) the intricacies of building web apps.
 
 ## Projects
@@ -15,8 +17,6 @@ You can create a new Gestalt app by running any of the following commands:
 
 ```bash
 npx @gestaltjs/create-app@latest
-yarn create @gestaltjs/app
-npm init @gestaltjs/app
 ```
 
 ## Development

@@ -1,41 +1,6 @@
 {
   "extends": "./configurations/tsconfig.json",
-  "references": [
-    {
-      "path": "./packages/create-app"
-    },
-    {
-      "path": "./packages/gestalt"
-    },
-    {
-      "path": "./packages/load"
-    },
-    {
-      "path": "./packages/build"
-    },
-    {
-      "path": "./packages/lint"
-    },
-    {
-      "path": "./packages/serve"
-    },
-    {
-      "path": "./packages/test"
-    },
-    {
-      "path": "./packages/type-check"
-    },
-    {
-      "path": "./packages/db"
-    },
-    {
-      "path": "./packages/core"
-    },
-    {
-      "path": "./packages/support"
-    }
-  ],
   "compilerOptions": {
-    "typeRoots": ["./features/types", "node_modules/@types"]
+    "types": ["vitest/globals"]
   }
 }

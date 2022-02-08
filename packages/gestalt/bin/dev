@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+DIRECTORY=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+echo "Building..."
+pnpm build --dir $DIRECTORY/../../core &> /dev/null
+pnpm build --dir $DIRECTORY/.. &> /dev/null
+
+$DIRECTORY/gestalt.js $@

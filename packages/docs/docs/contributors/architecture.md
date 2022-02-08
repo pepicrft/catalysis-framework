@@ -18,14 +18,12 @@ and contribute to an area of the project without having to familiarize ourselves
 | Package/s | Responsibilities | Examples |
 | --- | --- | ---- |
 | `@gestaltjs/gestalt` | It represents the CLI and the public interface to the frameworks. Users should only import code from here | oclif CLI configuration, public `index.ts` |
-| `@gestaltjs/load` | It contains utilities to load an app into memory and watch for changes | `Loader` class |
 | `@gestaltjs/build` | It contains utilities for building an app | `Builder` class |
 | `@gestaltjs/test` | It contains utilities for testing the app code | `Tester` class |
 | `@gestaltjs/lint` | It contains utilities for linting the app code | `Linter` class |
 | `@gestaltjs/type-check` | It contains utilities for type-checking the code | `TypeChecker` class |
 | `@gestaltjs/serve` | It contains utilities for serving the app locally and in production | `Server` class |
 | `@gestaltjs/core` | It contains utilities and models that are shared across all the features above it | `App` model |
-| `@gestaltjs/support` | It contains utilities and models that are Gestalt-agnostic. | Extensions for the standard library APIs, IO utilities |
 
 ### Feature packages
 
@@ -40,7 +38,7 @@ feature packages need the following configuration and dependencies in their `pac
 // package.json
 {
     "dependencies": {
-        "@oclif/core": "^1",
+        "@oclif/core": "0.5.10",
         "@oclif/plugin-help": "^5"
     },
     "oclif": {

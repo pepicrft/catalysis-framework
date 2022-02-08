@@ -1,16 +1,13 @@
 {
   "extends": "../../configurations/tsconfig.json",
   "include": ["./src/**/*.ts", "../db/src/commands/migrate.ts", "../db/src/commands/index.ts"],
-  "exclude": ["./dist", "**/*.test.ts"],
-  "references": [{"path": "../load"}, {"path": "../build"}, {"path": "../db"}, {"path": "../serve"}, {"path": "../test"}, {"path": "../lint"}, {"path": "../type-check"}, {"path": "../core"}, {"path": "../support"}],
+  "exclude": ["./dist"],
+  "references": [{"path": "../build"}, {"path": "../db"}, {"path": "../serve"}, {"path": "../test"}, {"path": "../lint"}, {"path": "../type-check"}, {"path": "../core"}],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
     "composite": true,
     "baseUrl": ".",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
-    "paths": {
-      "src/*": ["./src/*"]
-    }
+    "tsBuildInfoFile": ".build/tsconfig.tsbuildinfo",
   }
 }
