@@ -28,7 +28,6 @@ export const plugins = (packageDir) => {
       sourceMap: true,
       target: 'ES2020',
       tsconfig: path.join(packageDir, 'tsconfig.json'),
-      minify: process.env.NODE_ENV === 'production',
     }),
     json()
   ];

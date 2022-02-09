@@ -24,7 +24,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "cross-env NODE_ENV=production pnpm run build",
+    "prepack": "cross-env NODE_ENV=production pnpm run build",
     "build": "shx rm -rf dist && rollup -c",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
