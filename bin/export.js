@@ -29,7 +29,11 @@ async function aggregatedDependencies() {
         return JSON.parse(await fs.promises.readFile(packageJsonPath, 'utf-8'))
     }))
     const dependencies = Object.fromEntries(packageJsons.flatMap((packageJson) => {
-        return Object.entries(packageJson.dependencies ?? {});
+        let packageDependencies = packageJson.dependencies
+        if (!packageDependencies) {
+            packageDependencies = {}
+        }
+        return Object.entries(packageDependencies);
     }))
     delete dependencies["@gestaltjs/core"]
     return dependencies;
