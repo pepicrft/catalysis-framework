@@ -130,9 +130,8 @@ export async function exportCLIs(outputDirectory) {
 
 if (isExecuted) {
     if (process.argv.length !== 3) {
-        abort("Missing output directory: export.js ~/output", errorCodes.missingOutputArgument);
-        process.exit(1)
+        await exportCLIs(tempy.directory());
+    } else {
+        await exportCLIs(process.argv[2]);
     }
-    const outputDirectory = process.argv[2];
-    await exportCLIs(outputDirectory);
 }
