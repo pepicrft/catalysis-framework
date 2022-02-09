@@ -7,4 +7,4 @@ echo "Building..."
 pnpm build --dir $DIRECTORY/../../core &> /dev/null
 pnpm build --dir $DIRECTORY/.. &> /dev/null
 
-$DIRECTORY/gestalt.js $@
+$DIRECTORY/run.js $@

@@ -12,10 +12,11 @@
   "type": "module",
   "exports": {},
   "bin": {
-    "gestalt": "./bin/gestalt.js"
+    "gestalt": "./bin/run.js"
   },
   "files": [
-    "/bin",
+    "/bin/run.js",
+    "/bin/run.cmd",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"

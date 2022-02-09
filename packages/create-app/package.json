@@ -11,10 +11,11 @@
   ],
   "license": "MIT",
   "bin": {
-    "gestalt": "./bin/create-app.js"
+    "gestalt": "./bin/run.js"
   },
   "files": [
-    "/bin",
+    "/bin/run.js",
+    "/bin/run.cmd",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
