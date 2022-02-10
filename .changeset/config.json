@@ -4,7 +4,7 @@
   "commit": false,
   "linked": [
     [
-      "@gestaltjs/gestalt",
+      "gestaltjs",
       "@gestaltjs/core",
       "@gestaltjs/build",
       "@gestaltjs/test",

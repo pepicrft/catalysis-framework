@@ -8,39 +8,36 @@ const gestaltPlugins = [
   ...plugins(__dirname),
 ]
 const gestaltFeatures = ['build', 'db', 'lint', 'serve', 'test', 'type-check'];
+const gestaltCommands = gestaltFeatures.flatMap((feature) => {
+  return fg.sync([
+    path.join(__dirname, `../${feature}/src/cli/commands/**/*.ts`),
+    `!${path.join(__dirname, `../${feature}/src/cli/commands/**/*.test.ts`)}`,
+  ]);
+})
 
 const configuration = () => [
   {
-    input: path.join(__dirname, 'src/index.ts'),
+    input: [path.join(__dirname, 'src/index.ts'), ...gestaltCommands],
     output: [
       {
-        file: path.join(distDir(__dirname), 'index.js'),
+        dir: distDir(__dirname),
         format: 'esm',
-        exports: 'auto',
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.facadeModuleId.includes('src/cli/commands')) {
+            // Preserves the commands/... path
+            return `commands/${chunkInfo.facadeModuleId
+              .split('src/cli/commands')
+              .slice(-1)[0]
+              .replace('ts', 'js')}`;
+          } else {
+            return '[name].js';
+          }
+        },
       },
     ],
     plugins: gestaltPlugins,
     external: gestaltExternal,
-  },
-  ...gestaltFeatures.flatMap((feature) => {
-    const commands = fg.sync([
-      path.join(__dirname, `../${feature}/src/cli/commands/**/*.ts`),
-      `!${path.join(__dirname, `../${feature}/src/cli/commands/**/*.test.ts`)}`,
-    ]);
-    return commands.map((commandPath) => {
-      const outputPath = path.join(
-        distDir(__dirname),
-        'commands',
-        commandPath.split('src/cli/commands')[1].replace('.ts', '.js'),
-      );
-      return {
-        input: commandPath,
-        output: [{file: outputPath, format: 'esm', exports: 'default'}],
-        plugins: plugins(__dirname),
-        external: [...external, ...gestaltExternal],
-      };
-    });
-  }),
+  }
 ];
 
 export default configuration;
