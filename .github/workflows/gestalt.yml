@@ -16,7 +16,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['12', '14', '16']
+        node: ['14', '16', '17']
         package:
           [
             'create-app',
@@ -52,7 +52,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['12', '14', '16']
+        node: ['14', '16', '17']
         package:
           [
             'create-app',
@@ -158,7 +158,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['12', '14', '16']
+        node: ['14', '16', '17']
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v1
