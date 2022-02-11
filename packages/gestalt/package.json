@@ -10,7 +10,6 @@
   ],
   "license": "MIT",
   "type": "module",
-  "exports": {},
   "bin": {
     "gestalt": "./bin/run.js"
   },
@@ -25,7 +24,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "cross-env NODE_ENV=production pnpm run build",
+    "prepack": "cross-env NODE_ENV=production pnpm run build",
     "build": "shx rm -rf dist && rollup -c",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
@@ -54,7 +53,7 @@
   },
   "engine-strict": true,
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
   },
   "os": [
     "darwin",

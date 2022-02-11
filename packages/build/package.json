@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "clean": "shx rm -rf dist",
-    "prepublishOnly": "pnpm run build",
+    "prepack": "pnpm run build",
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
