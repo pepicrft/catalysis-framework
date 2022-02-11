@@ -17,7 +17,7 @@ and contribute to an area of the project without having to familiarize ourselves
 
 | Package/s | Responsibilities | Examples |
 | --- | --- | ---- |
-| `@gestaltjs/gestalt` | It represents the CLI and the public interface to the frameworks. Users should only import code from here | oclif CLI configuration, public `index.ts` |
+| `gestaltjs` | It represents the CLI and the public interface to the frameworks. Users should only import code from here | oclif CLI configuration, public `index.ts` |
 | `@gestaltjs/build` | It contains utilities for building an app | `Builder` class |
 | `@gestaltjs/test` | It contains utilities for testing the app code | `Tester` class |
 | `@gestaltjs/lint` | It contains utilities for linting the app code | `Linter` class |
