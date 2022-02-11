@@ -40,6 +40,7 @@
   "devDependencies": {
     "@types/shelljs": "^0.8.11",
     "find-up": "^6.2.0",
+    "fs-extra": "^10.0.0",
     "shelljs": "^0.8.5"
   },
   "engine-strict": true,

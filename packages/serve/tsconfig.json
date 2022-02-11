@@ -9,5 +9,8 @@
     "composite": true,
     "baseUrl": ".",
     "tsBuildInfoFile": ".build/tsconfig.tsbuildinfo",
+    "paths": {
+      "@gestaltjs/core/cli": ["../core/src/cli"]
+    }
   }
 }
