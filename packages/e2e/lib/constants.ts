@@ -1,1 +1,1 @@
-import path from 'pathe';
+import path from 'pathe'
