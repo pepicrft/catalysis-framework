@@ -103,7 +103,7 @@ importers:
   packages/core:
     specifiers:
       '@types/shelljs': ^0.8.11
-      find-up: ^6.2.0
+      find-up: ^6.3.0
       shelljs: ^0.8.5
     devDependencies:
       '@types/shelljs': 0.8.11
@@ -191,6 +191,9 @@ importers:
     specifiers: {}
 
   packages/test:
+    specifiers: {}
+
+  packages/testing:
     specifiers: {}
 
   packages/type-check:
