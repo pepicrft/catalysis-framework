@@ -13,7 +13,7 @@
   <a href="https://tuple.app"><img src="https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8"></a>
 </div>
 
-Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.org/en/) web framework. It's designed to spark joy through convenient abstractions and workflows that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) the intricacies of building web apps.
+Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.org/en/) web framework. It's designed to spark joy through convenient abstractions and workflows that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) the intricacies of building apps.
 
 ## Projects
 
