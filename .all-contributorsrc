@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "rbarbadillo",
+      "name": "Raquel Barbadillo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38496681?v=4",
+      "profile": "https://rbarbadillo.github.io/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "gestalt",
+  "projectOwner": "gestaltjs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
