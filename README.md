@@ -1,9 +1,15 @@
-# Gestalt 🌈
-
-[![Tuple](https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8)](https://tuple.app)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<div align="center">
+  <img src="https://github.com/gestaltjs/gestalt/workflows/Gestalt/badge.svg" alt="Gestalt">
+  <img src="https://img.shields.io/github/forks/gestaltjs/gestalt?style=flat-square" alt="GitHub forks">
+  <img src="https://img.shields.io/github/stars/gestaltjs/gestalt?style=flat-square" alt="GitHub stars">
+  <img src="https://img.shields.io/github/commit-activity/w/gestaltjs/gestalt?style=flat-square" alt="Commit Activity">
+  <img src="https://img.shields.io/github/contributors/gestaltjs/gestalt?style=flat-square" alt="Contributors">
+  <img src="https://img.shields.io/github/commits-since/gestaltjs/gestalt/latest?style=flat-square" alt="Latest Commits">
+  <a href="http://twitter.com/gestaltjs"><img src="https://img.shields.io/twitter/follow/gestaltjs?style=flat-square" alt="Twitter Followers"></a>
+  <img src="https://img.shields.io/github/license/gestaltjs/gestalt?style=flat-square" alt="License">
+  <a href="#contributors-"><img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square" alt="Contributors"></a>
+  <a href="https://tuple.app"><img src="https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8"></a>
+</div>
 
 Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.org/en/) web framework. It's designed to spark joy through convenient abstractions and workflows that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) the intricacies of building web apps.
 
