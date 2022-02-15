@@ -1,4 +1,6 @@
 <div align="center">
+  <img src="assets/header.png" width="200"/>
+  <br/>
   <img src="https://github.com/gestaltjs/gestalt/workflows/Gestalt/badge.svg" alt="Gestalt">
   <img src="https://img.shields.io/github/forks/gestaltjs/gestalt?style=flat-square" alt="GitHub forks">
   <img src="https://img.shields.io/github/stars/gestaltjs/gestalt?style=flat-square" alt="GitHub stars">
