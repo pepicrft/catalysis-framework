@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-DIRECTORY=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-$DIRECTORY/../packages/gestalt/bin/dev $@
