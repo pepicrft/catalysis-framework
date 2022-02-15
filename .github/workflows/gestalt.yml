@@ -26,13 +26,17 @@ jobs:
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: latest
       - name: Set Node.js
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node }}
-          cache: 'yarn'
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
-        run: yarn install --ignore-engines
+        run: pnpm install
       - name: Build
         run: npx nx affected --target=build --parallel=3
       - name: Test
@@ -56,13 +60,17 @@ jobs:
           fetch-depth: 0
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: latest
       - name: Set Node.js
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node }}
-          cache: 'yarn'
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
-        run: yarn install --ignore-engines
+        run: pnpm install
       - name: Build
         run: npx nx affected --target=build --parallel=3
       - name: Test
