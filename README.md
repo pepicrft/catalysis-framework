@@ -37,6 +37,8 @@ npx @gestaltjs/create-app@latest
 - Clone the repository: `https://github.com/gestaltjs/gestalt.git`.
 - Install System dependencies: `npm install -g pnpm`
 - Install dependencies: `pnpm install`.
+- Run Gestalt: `pnpm gestalt`.
+- Run create-app: `pnpm create-app`.
 
 ### System dependencies
 
