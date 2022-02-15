@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "josemasar",
+      "name": "Josema Sar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65446320?v=4",
+      "profile": "http://josemasar.vercel.app",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "gestalt",
+  "projectOwner": "gestaltjs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
