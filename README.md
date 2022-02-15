@@ -1,6 +1,6 @@
 # Gestalt 🌈
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Tuple](https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8)](https://tuple.app)
@@ -54,6 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://rbarbadillo.github.io/"><img src="https://avatars.githubusercontent.com/u/38496681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raquel Barbadillo</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=rbarbadillo" title="Code">💻</a></td>
     <td align="center"><a href="http://craftweg.com"><img src="https://avatars.githubusercontent.com/u/663605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pedro Piñera Buendía</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=pepicrft" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/lascenify"><img src="https://avatars.githubusercontent.com/u/18697610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ascen Salmerón Ibáñez</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=lascenify" title="Code">💻</a></td>
+    <td align="center"><a href="http://josemasar.vercel.app"><img src="https://avatars.githubusercontent.com/u/65446320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josema Sar</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=josemasar" title="Code">💻</a></td>
   </tr>
 </table>
 
