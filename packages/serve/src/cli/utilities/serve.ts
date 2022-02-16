@@ -8,11 +8,11 @@ async function serve(app: app.App) {
     const port = 3000;
 
     server.get('/', (req,res) => {
-        res.send(`Hello world from ${app.name}`);
+        res.send(`Hello world from ${app.configuration.name}`);
     })
 
     server.listen(port, () => {
-        console.log(`${app.name} being served on port ${port}`)
+        console.log(`${app.configuration.name} being served on port ${port}`)
       })
 }
 
