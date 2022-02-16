@@ -115,6 +115,9 @@ importers:
       find-up: ^6.2.0
       fs-extra: ^10.0.0
       shelljs: ^0.8.5
+      zod: ^3.11.6
+    dependencies:
+      zod: 3.11.6
     devDependencies:
       '@types/shelljs': 0.8.11
       find-up: 6.3.0
@@ -207,6 +210,17 @@ importers:
       '@gestaltjs/testing': 0.1.0
     devDependencies:
       '@gestaltjs/testing': link:../testing
+
+  packages/load:
+    specifiers:
+      '@gestaltjs/core': 0.3.2
+      '@gestaltjs/support': 0.3.2
+      zod: ^3.11.6
+    dependencies:
+      zod: 3.11.6
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@gestaltjs/support': 0.3.2
 
   packages/serve:
     specifiers:
@@ -2507,6 +2521,12 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@gestaltjs/support/0.3.2:
+    resolution: {integrity: sha512-MYfMNaW4Uula+Pa45Ry9lGi+uJH1SmlzzroJrcU0XndtTnUjI+7l2mysywCVvZn31fVfIMbhnzGxSduuqf/Veg==}
+    engines: {node: '>= 12'}
+    os: [darwin, linux, win32]
     dev: true
 
   /@hapi/hoek/9.2.1:
@@ -13257,6 +13277,10 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+  /zod/3.11.6:
+    resolution: {integrity: sha512-daZ80A81I3/9lIydI44motWe6n59kRBfNzTuS2bfzVh1nAXi667TOTWWtatxyG+fwgNUiagSj/CWZwRRbevJIg==}
+    dev: false
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}

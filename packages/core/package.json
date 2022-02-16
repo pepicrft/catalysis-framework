@@ -37,6 +37,12 @@
       "../../package.json"
     ]
   },
+  "dependencies": {
+    "zod": "^3.11.6"
+  },
+  "peerDependencies": {
+    "@gestaltjs/support": "0.3.2"
+  },
   "devDependencies": {
     "@types/shelljs": "^0.8.11",
     "find-up": "^6.2.0",
