@@ -1,9 +1,12 @@
 export type ExecOptions = {
-  cwd?: string;
-  silent?: boolean;
+  cwd?: string
+  silent?: boolean
 }
 
-export async function exec(command: string, options?: ExecOptions): Promise<void> {
+export async function exec(
+  command: string,
+  options?: ExecOptions
+): Promise<void> {
   // TODO
   // return new Promise((resolve, reject) => {
   //   const child = shell.exec(command, {async:true, silent: true, cwd: options?.cwd});

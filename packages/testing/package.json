@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/core",
-  "version": "0.3.2",
+  "name": "@gestaltjs/testing",
+  "version": "0.1.0",
   "private": true,
-  "description": "Set of Getalt tools and models that are shared across all the features",
+  "description": "Set of internal utilities for testing",
   "keywords": [
     "gestalt",
     "gestaltjs",
@@ -11,21 +11,18 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./cli": {
-      "import": "./dist/cli/index.js",
-      "types": "./dist/cli/index.d.ts"
-    },
-    "./framework": {
-      "import": "./dist/framework/index.js",
-      "types": "./dist/framework/index.d.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
     "/dist"
   ],
   "scripts": {
-    "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "rollup -c",
+    "clean": "shx rm -rf dist",
+    "prepack": "pnpm run build",
+    "build": "tsc -b",
     "lint": "prettier -c src/** && eslint src/**/*.ts",
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
@@ -37,12 +34,7 @@
       "../../package.json"
     ]
   },
-  "devDependencies": {
-    "@types/shelljs": "^0.8.11",
-    "find-up": "^6.2.0",
-    "fs-extra": "^10.0.0",
-    "shelljs": "^0.8.5"
-  },
+  "devDependencies": {},
   "engine-strict": true,
   "engines": {
     "node": "^14.13.1 || >=16.0.0 || >=17.0.0"

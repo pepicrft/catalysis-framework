@@ -1,4 +1,4 @@
-# @gestaltjs/gestalt
+# gestaltjs
 
 ## 0.3.2
 

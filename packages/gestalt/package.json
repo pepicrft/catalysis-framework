@@ -25,9 +25,9 @@
   },
   "scripts": {
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "shx rm -rf dist && rollup -c",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
+    "build": "rollup -c",
+    "lint": "prettier -c src/** && eslint src/**/*.ts",
+    "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "tsc": "tsc -b --incremental"
@@ -49,7 +49,8 @@
     "@gestaltjs/serve": "0.3.2",
     "@gestaltjs/db": "0.3.2",
     "@gestaltjs/test": "0.3.2",
-    "@gestaltjs/lint": "0.3.2"
+    "@gestaltjs/lint": "0.3.2",
+    "@gestaltjs/testing": "0.1.0"
   },
   "engine-strict": true,
   "engines": {

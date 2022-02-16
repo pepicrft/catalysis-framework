@@ -17,7 +17,8 @@
     "composite": true,
     "paths": {
       "@gestaltjs/core/framework": ["../core/src/framework"],
-      "@gestaltjs/core/cli": ["../core/src/cli"]
+      "@gestaltjs/core/cli": ["../core/src/cli"],
+      "@gestaltjs/testing": ["../testing/src"]
     }
   },
   "exclude": [

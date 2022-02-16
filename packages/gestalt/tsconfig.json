@@ -2,12 +2,17 @@
   "extends": "../../configurations/tsconfig.json",
   "include": ["./src/**/*.ts"],
   "exclude": ["./dist"],
-  "references": [{"path": "../build"}, {"path": "../db"}, {"path": "../serve"}, {"path": "../test"}, {"path": "../lint"}, {"path": "../type-check"}, {"path": "../core"}],
+  "references": [{"path": "../build"}, {"path": "../db"}, {"path": "../serve"}, {"path": "../test"}, {"path": "../lint"}, {"path": "../type-check"}, {"path": "../core"}, {"path": "../testing"}],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
     "composite": true,
     "baseUrl": ".",
     "tsBuildInfoFile": ".build/tsconfig.tsbuildinfo",
+    "paths": {
+      "@gestaltjs/core/cli": ["../core/src/cli"],
+      "@gestaltjs/core/framework":[ "../core/src/framework"],
+      "@gestaltjs/testing": ["../testing/src"]
+    }
   }
 }

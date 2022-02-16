@@ -2,7 +2,7 @@
   "extends": "../../configurations/tsconfig.json",
   "include": ["./src/**/*.ts"],
   "exclude": ["./dist"],
-  "references": [{"path": "../core"}],
+  "references": [{"path": "../core"}, {"path": "../testing"}],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
@@ -10,7 +10,9 @@
     "baseUrl": ".",
     "tsBuildInfoFile": ".build/tsconfig.tsbuildinfo",
     "paths": {
-      "@gestaltjs/core/cli": ["../core/src/cli"]
+      "@gestaltjs/core/cli": ["../core/src/cli"],
+      "@gestaltjs/core/framework":[ "../core/src/framework"],
+      "@gestaltjs/testing": ["../testing/src"]
     }
   }
 }
