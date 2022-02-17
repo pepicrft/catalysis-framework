@@ -14,12 +14,12 @@
     "skipLibCheck": true,
     "declaration": true,
     "inlineSourceMap": true,
-    "composite": true,
     "paths": {
-      "@gestaltjs/core/framework": ["../core/src/framework"],
-      "@gestaltjs/core/cli": ["../core/src/cli"],
-      "@gestaltjs/testing": ["../testing/src"]
-    }
+      "@gestaltjs/core/framework": ["../../core/src/framework/index.ts"],
+      "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
+      "@gestaltjs/testing": ["../../testing/src/index.ts"]
+    },
+    "types": ["vitest/globals"]
   },
   "exclude": [
     "**/dist/**",
