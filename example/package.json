@@ -1,0 +1,15 @@
+{
+	"name": "example-app",
+	"version": "1.0.0",
+	"description": "Example app for testing",
+	"main": "index.jsx",
+	"scripts": {
+		"test": "test"
+	},
+	"author": "",
+	"dependencies": {
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-router-dom": "^6.2.1"
+	}
+}
