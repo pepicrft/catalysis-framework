@@ -8,7 +8,7 @@ export * as fs from "./fs";
 
 
 
-// import { path} from "@gestaltj/core"
-// import { app } from "@gestaltjs/core"
+// import { path } from '@gestaltj/core/cli'
+// import { app } from '@gestaltjs/core/cli'
 
 // const app = app.watch();
