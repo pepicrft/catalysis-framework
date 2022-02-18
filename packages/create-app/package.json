@@ -25,12 +25,12 @@
   },
   "scripts": {
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "shx rm -rf dist && rollup -c",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
+    "build": "rollup -c",
+    "lint": "prettier -c src/** && eslint src/**/*.ts",
+    "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tsc": "tsc -b"
+    "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +41,8 @@
     "@oclif/core": "0.5.10"
   },
   "devDependencies": {
-    "@gestaltjs/core": "0.3.2"
+    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/testing": "0.1.0"
   },
   "engine-strict": true,
   "engines": {

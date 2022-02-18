@@ -1,6 +1,6 @@
-import shell from 'shelljs';
+import shell from 'shelljs'
 
-import {isDebug} from './environment';
+import { isDebug } from './environment'
 
 /**
  * It provides a promise-based interface for running system processes.
@@ -11,26 +11,26 @@ import {isDebug} from './environment';
  * @returns A promise that resolves or rejects when the command execution finishes.
  */
 export const exec = async (command: string) => {
-  return new Promise<void>((resolve, reject) => {
-    const childProcess = shell.exec(command, {async: true, silent: true});
-    let errorOutput = '';
-    childProcess.stdout?.on('data', (stdout) => {
-      if (isDebug) {
-        console.log(stdout);
-      }
-    });
-    childProcess.stderr?.on('data', (stderr) => {
-      if (isDebug) {
-        console.error(stderr);
-      }
-      errorOutput = errorOutput.concat(stderr);
-    });
-    childProcess.on('exit', (exitCode) => {
-      if (exitCode === 0) {
-        resolve();
-      } else {
-        reject(new Error(errorOutput));
-      }
-    });
-  });
-};
+    return new Promise<void>((resolve, reject) => {
+        const childProcess = shell.exec(command, { async: true, silent: true })
+        let errorOutput = ''
+        childProcess.stdout?.on('data', (stdout) => {
+            if (isDebug) {
+                console.log(stdout)
+            }
+        })
+        childProcess.stderr?.on('data', (stderr) => {
+            if (isDebug) {
+                console.error(stderr)
+            }
+            errorOutput = errorOutput.concat(stderr)
+        })
+        childProcess.on('exit', (exitCode) => {
+            if (exitCode === 0) {
+                resolve()
+            } else {
+                reject(new Error(errorOutput))
+            }
+        })
+    })
+}

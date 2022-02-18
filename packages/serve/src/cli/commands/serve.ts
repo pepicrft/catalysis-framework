@@ -1,9 +1,8 @@
-import {Command, Flags} from '@oclif/core';
-import { app } from "@gestaltjs/core/cli";
-import serve from '../utilities/serve';
+import { Command, Flags } from '@oclif/core'
+import serve from '../utilities/serve'
 
 export default class Serve extends Command {
-  static description = 'Serve your Gestalt application';
+  static description = 'Serve your Gestalt application'
 
   static flags = {
     path: Flags.string({
@@ -12,7 +11,7 @@ export default class Serve extends Command {
       env: 'PATH',
       default: process.cwd(),
       required: false,
-    })
+    }),
   }
 
   async run(): Promise<void> {
@@ -26,13 +25,12 @@ export default class Serve extends Command {
      *.  package.json
      *.  src/
      *.     routes/
-    *.         home/
+     *.         home/
      *.            <------ gestalt serve
      *
      */
-    const {flags} = await this.parse(Serve)
+    const { flags } = await this.parse(Serve)
     const loadedApp = await app.load(flags.path)
     await serve(loadedApp)
   }
 }
-
