@@ -24,30 +24,25 @@ async function serve(app: app.App): Promise<void> {
         const url = req.originalUrl
 
         try {
-            // 1. Read index.html
-            // Here I´m trying to find the index.html in ./example
-            const pathToIndex: string | undefined = await findUp('index.html')
+            let template = `
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Vite React App</title>
+              </head>
+              <body>
+                <div id="app"><!--ssr-outlet--></div>
+              </body>
+            </html>
+            `
+            // <script type="module" src="/src/entry-client.jsx"></script>
 
-            let template = fs.readFileSync(
-                path.join(pathToIndex, 'index.html'),
-              'utf-8'
-            )
-
-            // 2. Apply Vite HTML transforms.
             template = await vite.transformIndexHtml(url, template)
-
-            // 3. Load the server entry.
-            const { render } = await vite.ssrLoadModule('/src/entry-server.js')
-
-            // 4. render the app HTML. This assumes entry-server.js's exported `render`
-            //    function calls appropriate framework SSR APIs,
-            //    e.g. ReactDOMServer.renderToString()
-            const appHtml = await render(url)
-
-            // 5. Inject the app-rendered HTML into the template.
+            const { render } = await vite.ssrLoadModule('./serve/ssr.ts')
+            const appHtml: string = await render(url)
             const html = template.replace(`<!--ssr-outlet-->`, appHtml)
-
-            // 6. Send the rendered HTML back.
             res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
           } catch (e) {
             // If an error is caught, let Vite fix the stracktrace so it maps back to
