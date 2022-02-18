@@ -1,5 +1,6 @@
 import { Command, Flags } from '@oclif/core'
 import serve from '../utilities/serve'
+import { app } from '@gestaltjs/core/cli'
 
 export default class Serve extends Command {
   static description = 'Serve your Gestalt application'
