@@ -1,10 +1,10 @@
 import { Command } from '@oclif/core'
-import { logger } from '@gestaltjs/core/cli'
+import logger from '../logger'
 
 export default class Build extends Command {
   static description = 'Build your Gestalt application'
 
   async run(): Promise<void> {
-    logger.core.success('Built')
+    logger.success('Built')
   }
 }

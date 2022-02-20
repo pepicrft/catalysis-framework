@@ -4,10 +4,15 @@ import { gestalt as gestaltEnvironment, isRunningTests } from './environment'
 
 export type LogLevel = pino.LevelWithSilent
 
-class Logger {
+export class Logger {
   pinoLogger: pino.Logger
+
   constructor(pinoLogger: pino.Logger) {
     this.pinoLogger = pinoLogger
+  }
+
+  child(module: string): Logger {
+    return new Logger(this.pinoLogger.child({ module: module }))
   }
 
   success(message: string, level: LogLevel = 'info') {
@@ -43,7 +48,7 @@ class Logger {
 
 const development = gestaltEnvironment() === 'development'
 
-export const core = new Logger(
+export const gestalt = new Logger(
   pino({
     name: 'gestalt',
     level: runningInVerbose() ? 'debug' : 'info',
@@ -55,3 +60,4 @@ export const core = new Logger(
         : undefined,
   })
 )
+export const core = gestalt.child('core')
