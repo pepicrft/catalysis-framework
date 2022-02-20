@@ -24,6 +24,7 @@
     "/dist"
   ],
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepack": "cross-env NODE_ENV=production pnpm run build",
     "build": "rollup -c",
     "lint": "prettier -c src/** && eslint src/**/*.ts",
@@ -52,5 +53,9 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "dependencies": {
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
+  }
 }
