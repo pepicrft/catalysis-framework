@@ -1,6 +1,8 @@
 <div align="center">
   <img src="assets/header.png" width="200"/>
   <br/>
+  <a href="https://gitpod.io/#https://github.com/gestaltjs/gestalt" alt="Open in Gitpod"><img src="https://gitpod.io/button/open-in-gitpod.svg"/></a>
+  <br/>
   <img src="https://github.com/gestaltjs/gestalt/workflows/Gestalt/badge.svg" alt="Gestalt">
   <img src="https://img.shields.io/github/forks/gestaltjs/gestalt?style=flat-square" alt="GitHub forks">
   <img src="https://img.shields.io/github/stars/gestaltjs/gestalt?style=flat-square" alt="GitHub stars">
@@ -17,10 +19,10 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 
 ## Projects
 
-| Project              | Description     | CI                                                                                                                                                 | Deploy | URL |
-| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -- |
-| [gestalt](/packages/gestalt) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | | |
-| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml) | [![Netlify Status](https://api.netlify.com/api/v1/badges/59663ddf-1542-4900-bd41-252c0263703f/deploy-status)](https://app.netlify.com/sites/gestalt-docs/deploys) | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
+| Project              | Description     | CI                                                                                                                                                  | URL |
+| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---  |
+| [gestalt](/packages/gestalt) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | |
+| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml)  | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
 
 ## Usage
 
