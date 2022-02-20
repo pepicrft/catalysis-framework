@@ -1,6 +1,6 @@
 import pino from 'pino'
 import { runningInVerbose } from './cli'
-import { gestalt as gestaltEnvironment } from './environment'
+import { gestalt as gestaltEnvironment, isRunningTests } from './environment'
 
 export type LogLevel = pino.LevelWithSilent
 
@@ -41,16 +41,19 @@ class Logger {
   }
 }
 
-const production = gestaltEnvironment() === 'production'
+const development = gestaltEnvironment() === 'development'
+
+process.stdout.write(JSON.stringify(process.env))
 
 export const core = new Logger(
   pino({
     name: 'gestalt',
     level: runningInVerbose() ? 'debug' : 'info',
-    transport: production
-      ? undefined
-      : {
-          target: './pino/development-transport.mjs',
-        },
+    transport:
+      development && !isRunningTests()
+        ? {
+            target: './pino/development-transport.mjs',
+          }
+        : undefined,
   })
 )
