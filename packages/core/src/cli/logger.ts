@@ -43,8 +43,6 @@ class Logger {
 
 const development = gestaltEnvironment() === 'development'
 
-process.stdout.write(JSON.stringify(process.env))
-
 export const core = new Logger(
   pino({
     name: 'gestalt',
