@@ -91,7 +91,9 @@
       "plugin:@typescript-eslint/recommended",
       "prettier"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "error"
+    },
     "env": {
       "node": true,
       "commonjs": true
