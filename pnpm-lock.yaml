@@ -37,7 +37,6 @@ importers:
       install: ^0.13.0
       pathe: ^0.2.0
       picocolors: ^1.0.0
-      pnpm: ^6.31.0
       prettier: ^2.5.1
       rimraf: ^3.0.2
       rollup: ^2.66.1
@@ -57,7 +56,6 @@ importers:
       '@oclif/core': 1.1.2
       '@oclif/plugin-help': 5.1.10
       execa: 6.0.0
-      pnpm: 6.31.0
       tempy: 2.0.0
     devDependencies:
       '@changesets/cli': 2.19.0
@@ -10066,12 +10064,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 3.0.0
-    dev: false
-
-  /pnpm/6.31.0:
-    resolution: {integrity: sha512-YUCyLI2J2wQsHWgcRYR8wUrTWsE0E8GX46XKtdXcUiE0GJJYi5saRy2Y8BMfLtlDHshHLs2U/KO1e5gsftJTFA==}
-    engines: {node: '>=12.17'}
-    hasBin: true
     dev: false
 
   /portfinder/1.0.28:
