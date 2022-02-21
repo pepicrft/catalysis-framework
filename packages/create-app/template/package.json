@@ -1,0 +1,16 @@
+{
+    "name": "{{ name }}",
+    "version": "0.0.1",
+    "description": "A GestaltJS web app",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo 'building {{ name }}'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {},
+    "dependencies": {
+        "@gestaltjs/gestalt": "{{version}}"
+    }
+}

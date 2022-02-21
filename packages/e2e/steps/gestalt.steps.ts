@@ -8,7 +8,7 @@ Then('I should be able to see the Gestalt help menu', function () {
 })
 
 When(/I create an app named (.+) in the working directory/, function (name) {
-  exec(`${createAppDevPath} --name=${name} --path=${this.temporaryDirectory}`)
+  exec(`${createAppDevPath} ${name} --path=${this.temporaryDirectory}`)
 })
 
 Then(/I should be able to (.+) the (.+) app/, function (command, name) {

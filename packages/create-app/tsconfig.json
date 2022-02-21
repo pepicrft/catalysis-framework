@@ -4,6 +4,13 @@
   "exclude": ["./dist"],
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "src",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "tsBuildInfoFile": ".build/tsconfig.tsbuildinfo",
+    "paths": {
+      "@gestaltjs/core/cli": ["../core/src/cli"],
+      "@gestaltjs/core/framework":[ "../core/src/framework"],
+      "plop": ["../../src/plop.d.ts"]
+    }
   },
 }

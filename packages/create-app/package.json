@@ -1,60 +1,65 @@
 {
-  "name": "@gestaltjs/create-app",
-  "version": "0.3.2",
-  "private": false,
-  "description": "Create a new Gestalt app",
-  "type": "module",
-  "keywords": [
-    "gestalt",
-    "gestaltjs",
-    "web"
-  ],
-  "license": "MIT",
-  "bin": {
-    "gestalt": "./bin/run.js"
-  },
-  "files": [
-    "/bin/run.js",
-    "/bin/run.cmd",
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "rollup -c",
-    "lint": "prettier -c src/** && eslint src/**/*.ts",
-    "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "tsc": "tsc --noEmit"
-  },
-  "eslintConfig": {
-    "extends": [
-      "../../package.json"
-    ]
-  },
-  "dependencies": {
-    "@oclif/core": "0.5.10"
-  },
-  "devDependencies": {
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/testing": "0.1.0"
-  },
-  "engine-strict": true,
-  "engines": {
-    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
-  "oclif": {
-    "bin": "create-app",
-    "commands": "./dist/commands"
-  }
+    "name": "@gestaltjs/create-app",
+    "version": "0.3.2",
+    "private": false,
+    "description": "Create a new Gestalt app",
+    "type": "module",
+    "keywords": [
+        "gestalt",
+        "gestaltjs",
+        "web"
+    ],
+    "license": "MIT",
+    "bin": {
+        "gestalt": "./bin/run.js"
+    },
+    "files": [
+        "/bin/run.js",
+        "/bin/run.cmd",
+        "/dist",
+        "/npm-shrinkwrap.json",
+        "/oclif.manifest.json",
+        "/template"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "prepack": "cross-env NODE_ENV=production pnpm run build",
+        "build": "rollup -c",
+        "lint": "prettier -c src/** && eslint src/**/*.ts",
+        "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "tsc": "tsc --noEmit",
+        "plop": "plop"
+    },
+    "eslintConfig": {
+        "extends": [
+            "../../package.json"
+        ]
+    },
+    "dependencies": {
+        "@oclif/core": "0.5.10",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4",
+        "plop": "^3.0.5"
+    },
+    "devDependencies": {
+        "@gestaltjs/core": "0.3.2",
+        "@gestaltjs/testing": "0.1.0"
+    },
+    "engine-strict": true,
+    "engines": {
+        "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+    },
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
+    ],
+    "oclif": {
+        "bin": "create-app",
+        "commands": "./dist/commands"
+    }
 }
