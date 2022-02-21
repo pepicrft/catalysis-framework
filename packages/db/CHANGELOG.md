@@ -1,5 +1,11 @@
 # @gestaltjs/lint
 
+## 0.4.0
+
+### Minor Changes
+
+- dbbd224: Add a new @gestaltjs/db for the DB-related APIs and commands
+
 ## 0.3.2
 
 ### Patch Changes
