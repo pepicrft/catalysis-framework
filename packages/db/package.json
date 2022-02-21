@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/db",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "private": true,
   "description": "A set of utilities for managing and interacting with databases",
   "main": "src/index.ts",

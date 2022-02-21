@@ -1,6 +1,6 @@
 {
   "name": "gestaltjs",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "private": false,
   "description": "A tool for building Gestalt web app",
   "keywords": [
@@ -47,7 +47,7 @@
     "@gestaltjs/type-check": "0.3.2",
     "@gestaltjs/build": "0.3.2",
     "@gestaltjs/serve": "0.3.2",
-    "@gestaltjs/db": "0.3.2",
+    "@gestaltjs/db": "0.4.0",
     "@gestaltjs/test": "0.3.2",
     "@gestaltjs/lint": "0.3.2",
     "@gestaltjs/testing": "0.1.0"
