@@ -31,7 +31,7 @@ export class Logger {
   }
 
   success(message: string, level: LogLevel = 'info') {
-    this.log(`🎉${message}`, level)
+    this.log(`🎉 ${message}`, level)
   }
 
   log(message: string, level: LogLevel) {
@@ -68,6 +68,11 @@ export function setupGestaltLogger(transport: TransportMultiOptions) {
   _gestalt = new Logger(
     pino({
       name: 'gestalt',
+      formatters: {
+        level(label, number) {
+          return { level: number, levelLabel: label }
+        },
+      },
       level: runningInVerbose() ? 'debug' : 'info',
       transport: development
         ? {
@@ -87,6 +92,11 @@ export function core(): Logger {
   _core = new Logger(
     pino({
       name: 'gestalt',
+      formatters: {
+        level(label, number) {
+          return { level: number, levelLabel: label }
+        },
+      },
       level: runningInVerbose() ? 'debug' : 'info',
       transport: {
         targets: [

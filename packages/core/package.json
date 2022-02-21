@@ -43,9 +43,12 @@
     ]
   },
   "devDependencies": {
+    "@types/pino": "^7.0.5",
     "@types/shelljs": "^0.8.11",
+    "case-anything": "^2.1.10",
     "fastify": "^3.27.2",
     "find-up": "^6.3.0",
+    "picocolors": "^1.0.0",
     "shelljs": "^0.8.5",
     "vite": "^2.8.4"
   },

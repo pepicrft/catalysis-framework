@@ -1,25 +1,46 @@
 import pinoPretty from 'pino-pretty'
 import pino from 'pino'
+import {
+  formatGray,
+  formatRed,
+  formatMagenta,
+  formatGreen,
+  formatYellow,
+  formatCyan,
+} from '../terminal'
+import { pascalCase } from '../string'
+
+function formatLevel(level: string): string {
+  let outputLevel = pascalCase(level)
+  if (level === 'fatal' || level === 'error') {
+    outputLevel = formatRed(outputLevel)
+  } else if (level === 'silent') {
+    outputLevel = formatGray(outputLevel)
+  } else if (level === 'trace') {
+    outputLevel = formatMagenta(outputLevel)
+  } else if (level === 'debug') {
+    outputLevel = formatCyan(outputLevel)
+  } else if (level === 'info') {
+    outputLevel = formatGreen(outputLevel)
+  } else if (level === 'warn') {
+    outputLevel = formatYellow(outputLevel)
+  }
+  return outputLevel
+}
+function formatModule(module: string): string {
+  return formatGray(`[@gestaltjs/${module}]`)
+}
 
 export default async (options: pino.TransportBaseOptions) => {
   return pinoPretty({
     ...options,
-    messageFormat: (log, messageKey) => `hello ${log[messageKey]}`,
-    customPrettifiers: {
-      // The argument for this function will be the same
-      // string that's at the start of the log-line by default:
-      time: (timestamp) => `🕰 ${timestamp}`,
-
-      // The argument for the level-prettifier may vary depending
-      // on if the levelKey option is used or not.
-      // By default this will be the same numerics as the Pino default:
-      level: (logLevel) => `LEVEL: ${logLevel}`,
-
-      // other prettifiers can be used for the other keys if needed, for example
-      hostname: (hostname) => `${hostname}`,
-      pid: (pid) => `${pid}`,
-      name: (name) => `${name}yoooo`,
-      caller: (caller) => `${caller}`,
+    colorize: false,
+    messageFormat: (log, messageKey) => {
+      const levelLabel = formatLevel(`${log['levelLabel']}`)
+      const module = formatModule(`${log['module']}`)
+      return `${levelLabel} ${module} ${log[messageKey]}`
     },
+    ignore: 'module,hostname,pid,time,name,level,levelLabel',
+    singleLine: true,
   })
 }
