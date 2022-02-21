@@ -20,6 +20,7 @@ async function serve(app: app.App): Promise<void> {
 
   server.use('*', async (req, res, next) => {
     //res.send(`Hello world from ${app.name}`)
+
     const url = req.originalUrl
 
     try {
@@ -33,17 +34,18 @@ async function serve(app: app.App): Promise<void> {
               </head>
               <body>
                 <div id="app"><!--ssr-outlet--></div>
+                <script type="module" src="/serve/entry-client.js"></script>
               </body>
             </html>
             `
-      // <script type="module" src="/src/entry-client.jsx"></script>
 
       template = await vite.transformIndexHtml(url, template)
       const { render } = await vite.ssrLoadModule(
-        path.join(__dirname, '../utilities/ssr.js')
+        path.join(__dirname, '../utilities/entry-server.js')
       )
-      const appHtml: string = await render(url)
-      const html = template.replace(`<!--ssr-outlet-->`, appHtml)
+      const context = {}
+      const appHtml: string = await render(url, context)
+      const html = template.replace(`<!--app-html-->`, appHtml)
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
     } catch (e) {
       // If an error is caught, let Vite fix the stracktrace so it maps back to

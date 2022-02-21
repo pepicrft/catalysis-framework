@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const react = require('@vitejs/plugin-react')
+import { react } from '@vitejs/plugin-react'
 
 /**
  * @type {import('vite').UserConfig}
@@ -7,6 +6,6 @@ const react = require('@vitejs/plugin-react')
 module.exports = {
   plugins: [react()],
   build: {
-    minify: false
-  }
+    minify: false,
+  },
 }
