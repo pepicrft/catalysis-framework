@@ -41,7 +41,9 @@
     "@oclif/core": "0.5.10",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "@gestaltjs/core": "0.3.2"
+    "@gestaltjs/core": "0.3.2",
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
   },
   "devDependencies": {
     "@gestaltjs/check": "0.3.2",

@@ -54,7 +54,7 @@
     "linux",
     "win32"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "pino": "^7.8.0",
     "pino-pretty": "^7.5.1"
   }

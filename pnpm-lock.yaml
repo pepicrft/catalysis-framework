@@ -106,31 +106,30 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/testing': 0.1.0
       '@oclif/core': 0.5.10
+      pino-pretty: ^7.5.1
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/testing': link:../testing
       '@oclif/core': 0.5.10
+      pino-pretty: 7.5.1
 
   packages/check:
     specifiers:
       '@gestaltjs/core': 0.3.2
       '@oclif/core': 0.5.10
+      pino-pretty: ^7.5.1
     devDependencies:
       '@gestaltjs/core': link:../core
       '@oclif/core': 0.5.10
+      pino-pretty: 7.5.1
 
   packages/core:
     specifiers:
       '@types/shelljs': ^0.8.11
       fastify: ^3.27.2
       find-up: ^6.3.0
-      pino: ^7.8.0
-      pino-pretty: ^7.5.1
       shelljs: ^0.8.5
       vite: ^2.8.4
-    dependencies:
-      pino: 7.8.0
-      pino-pretty: 7.5.1
     devDependencies:
       '@types/shelljs': 0.8.11
       fastify: 3.27.2
@@ -154,10 +153,12 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/testing': 0.1.0
       '@oclif/core': 0.5.10
+      pino-pretty: ^7.5.1
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/testing': link:../testing
       '@oclif/core': 0.5.10
+      pino-pretty: 7.5.1
 
   packages/docs:
     specifiers:
@@ -225,11 +226,15 @@ importers:
       '@oclif/core': 0.5.10
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
+      pino: ^7.8.0
+      pino-pretty: ^7.5.1
     dependencies:
       '@gestaltjs/core': link:../core
       '@oclif/core': 0.5.10
       '@oclif/plugin-help': 5.1.10
       '@oclif/plugin-plugins': 2.0.12
+      pino: 7.8.0
+      pino-pretty: 7.5.1
     devDependencies:
       '@gestaltjs/build': link:../build
       '@gestaltjs/check': link:../check
@@ -244,30 +249,36 @@ importers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/testing': 0.1.0
       '@oclif/core': 0.5.10
+      pino-pretty: ^7.5.1
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/testing': link:../testing
       '@oclif/core': 0.5.10
+      pino-pretty: 7.5.1
 
   packages/serve:
     specifiers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/testing': 0.1.0
       '@oclif/core': 0.5.10
+      pino-pretty: ^7.5.1
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/testing': link:../testing
       '@oclif/core': 0.5.10
+      pino-pretty: 7.5.1
 
   packages/test:
     specifiers:
       '@gestaltjs/core': 0.3.2
       '@gestaltjs/testing': 0.1.0
       '@oclif/core': 0.5.10
+      pino-pretty: ^7.5.1
     devDependencies:
       '@gestaltjs/core': link:../core
       '@gestaltjs/testing': link:../testing
       '@oclif/core': 0.5.10
+      pino-pretty: 7.5.1
 
   packages/testing:
     specifiers: {}
@@ -4317,7 +4328,6 @@ packages:
       chalk: 2.4.2
       leven: 2.1.0
       mri: 1.1.4
-    dev: false
 
   /aria-query/4.2.2:
     resolution: {integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==}
@@ -4836,7 +4846,6 @@ packages:
   /camelcase/5.0.0:
     resolution: {integrity: sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==}
     engines: {node: '>=6'}
-    dev: false
 
   /camelcase/5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
@@ -5187,7 +5196,6 @@ packages:
 
   /colorette/2.0.16:
     resolution: {integrity: sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==}
-    dev: false
 
   /colors/1.4.0:
     resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
@@ -5742,7 +5750,6 @@ packages:
 
   /dateformat/4.6.3:
     resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
-    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -6081,7 +6088,6 @@ packages:
       inherits: 2.0.4
       readable-stream: 3.6.0
       stream-shift: 1.0.1
-    dev: false
 
   /duration/0.2.2:
     resolution: {integrity: sha512-06kgtea+bGreF5eKYgI/36A6pLXggY7oR4p1pq4SmdFBn1ReOL5D8RhG64VrqfTTKNucqqtBAwEj8aB88mcqrg==}
@@ -6134,7 +6140,6 @@ packages:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
     dependencies:
       once: 1.4.0
-    dev: false
 
   /enhanced-resolve/5.8.3:
     resolution: {integrity: sha512-EGAbGvH7j7Xt2nc0E7D99La1OiEs8LnyimkRgwExpUMScN6O+3x9tIWs7PLQZVNx4YD+00skHXPXi1yQHpAmZA==}
@@ -9294,7 +9299,6 @@ packages:
   /leven/2.1.0:
     resolution: {integrity: sha1-wuep93IJTe6dNCAq6KzORoeHVYA=}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /leven/3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -9780,7 +9784,6 @@ packages:
   /mri/1.1.4:
     resolution: {integrity: sha512-6y7IjGPm8AzlvoUrwAaw1tLnUBudaS3752vcd8JtrpGGQn+rXIe63LFVHm/YMwtqAuh+LJPCFdlLYPWM1nYn6w==}
     engines: {node: '>=4'}
-    dev: false
 
   /mrmime/1.0.0:
     resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
@@ -10393,7 +10396,6 @@ packages:
     dependencies:
       duplexify: 4.1.2
       split2: 4.1.0
-    dev: false
 
   /pino-pretty/7.5.1:
     resolution: {integrity: sha512-xEOUJiokdBGcZ9d0v7OY6SqEp+rrVH2drE3bHOUsK8elw44eh9V83InZqeL1dFwgD1IDnd6crUoec3hIXxfdBQ==}
@@ -10411,7 +10413,6 @@ packages:
       secure-json-parse: 2.4.0
       sonic-boom: 2.6.0
       strip-json-comments: 3.1.1
-    dev: false
 
   /pino-std-serializers/3.2.0:
     resolution: {integrity: sha512-EqX4pwDPrt3MuOAAUBMU0Tk5kR/YcCM5fNPEzgCO2zJ5HfX0vbiH9HbJglnyeQsN96Kznae6MWD47pZB5avTrg==}
@@ -11032,7 +11033,6 @@ packages:
     dependencies:
       end-of-stream: 1.4.4
       once: 1.4.0
-    dev: false
 
   /punycode/1.3.2:
     resolution: {integrity: sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=}
@@ -11354,7 +11354,6 @@ packages:
       inherits: 2.0.4
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
-    dev: false
 
   /readdirp/3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -12111,7 +12110,6 @@ packages:
     resolution: {integrity: sha512-6xYZFRmDEtxGqfOKcDQ4cPLrNa0SPEDI+wlzDAHowXE6YV42NeXqg9mP2KkiM8JVu3lHfZ2iQKYlGOz+kTpphg==}
     dependencies:
       atomic-sleep: 1.0.0
-    dev: false
 
   /sort-css-media-queries/2.0.4:
     resolution: {integrity: sha512-PAIsEK/XupCQwitjv7XxoMvYhT7EAfyzI3hsy/MyDgTvc+Ft55ctdkctJLOy6cQejaIC+zjpUL4djFVm2ivOOw==}
@@ -12219,7 +12217,6 @@ packages:
   /split2/4.1.0:
     resolution: {integrity: sha512-VBiJxFkxiXRlUIeyMQi8s4hgvKCSjtknJv/LVYbrgALPwf5zSKmEwV9Lst25AkvMDnvxODugjdl6KZgwKM1WYQ==}
     engines: {node: '>= 10.x'}
-    dev: false
 
   /sprintf-js/1.0.3:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
@@ -12279,7 +12276,6 @@ packages:
 
   /stream-shift/1.0.1:
     resolution: {integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==}
-    dev: false
 
   /stream-transform/2.1.3:
     resolution: {integrity: sha512-9GHUiM5hMiCi6Y03jD2ARC1ettBXkQBoQAe7nJsPknnI0ow10aXjTnew8QtYQmLjzn974BnmWEAJgCY6ZP1DeQ==}
@@ -12357,7 +12353,6 @@ packages:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
     dependencies:
       safe-buffer: 5.2.1
-    dev: false
 
   /stringify-object/3.3.0:
     resolution: {integrity: sha512-rHqiFh1elqCQ9WPLIC8I0Q/g/wj5J1eMkyoiD6eoQApWHP0FtlK7rqnhmabL5VUY9JQCcqwwvlOaSuutekgyrw==}
@@ -13188,7 +13183,6 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
-    dev: false
 
   /utila/0.4.0:
     resolution: {integrity: sha1-ihagXURWV6Oupe7MWxKk+lN5dyw=}

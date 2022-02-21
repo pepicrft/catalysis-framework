@@ -26,13 +26,10 @@ const configuration = () => [
     external: coreExternal,
   },
   {
-    input: path.join(__dirname, 'src/cli/pino/development-transport.ts'),
+    input: path.join(__dirname, 'src/cli/logger/base-transport.ts'),
     output: [
       {
-        file: path.join(
-          distDir(__dirname),
-          'cli/pino/development-transport.mjs'
-        ),
+        file: path.join(distDir(__dirname), 'cli/logger/base-transport.mjs'),
         format: 'esm',
         exports: 'auto',
       },

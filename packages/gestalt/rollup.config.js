@@ -1,7 +1,12 @@
 import path from 'pathe'
 import fg from 'fast-glob'
 
-import { external, plugins, distDir } from '../../configurations/rollup.config'
+import {
+  external,
+  plugins,
+  distDir,
+  features,
+} from '../../configurations/rollup.config'
 
 const gestaltExternal = [
   ...external,
@@ -10,8 +15,7 @@ const gestaltExternal = [
   '@gestaltjs/core/framework',
 ]
 const gestaltPlugins = [...plugins(__dirname)]
-const gestaltFeatures = ['build', 'db', 'lint', 'serve', 'test', 'check']
-const gestaltCommands = gestaltFeatures.flatMap((feature) => {
+const gestaltCommands = features.flatMap((feature) => {
   return fg.sync([
     path.join(__dirname, `../${feature}/src/cli/commands/**/*.ts`),
     `!${path.join(__dirname, `../${feature}/src/cli/commands/**/*.test.ts`)}`,

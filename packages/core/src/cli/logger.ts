@@ -55,7 +55,7 @@ export const gestalt = new Logger(
     transport:
       development && !isRunningTests()
         ? {
-            target: './pino/development-transport.mjs',
+            target: './logger/base-transport.mjs',
           }
         : undefined,
   })
