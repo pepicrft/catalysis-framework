@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/type-check",
+  "name": "@gestaltjs/check",
   "version": "0.3.2",
   "private": true,
-  "description": "A set of utilities responsible type-checking Gestalt apps",
+  "description": "A set of utilities responsible checking Gestalt apps",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "files": [

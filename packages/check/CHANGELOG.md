@@ -1,4 +1,4 @@
-# @gestaltjs/type-check
+# @gestaltjs/check
 
 ## 0.3.2
 

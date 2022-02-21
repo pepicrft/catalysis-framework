@@ -111,6 +111,14 @@ importers:
       '@gestaltjs/testing': link:../testing
       '@oclif/core': 0.5.10
 
+  packages/check:
+    specifiers:
+      '@gestaltjs/core': 0.3.2
+      '@oclif/core': 0.5.10
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@oclif/core': 0.5.10
+
   packages/core:
     specifiers:
       '@types/shelljs': ^0.8.11
@@ -174,26 +182,26 @@ importers:
   packages/e2e:
     specifiers:
       '@gestaltjs/build': 0.3.2
+      '@gestaltjs/check': 0.3.2
       '@gestaltjs/core': 0.3.2
-      '@gestaltjs/db': 0.3.2
+      '@gestaltjs/db': 0.4.0
       '@gestaltjs/lint': 0.3.2
       '@gestaltjs/serve': 0.3.2
       '@gestaltjs/test': 0.3.2
       '@gestaltjs/testing': 0.1.0
-      '@gestaltjs/type-check': 0.3.2
       '@types/cucumber': ^6.0.1
       cucumber: ^6.0.5
       cucumber-junit-formatter: ^0.2.2
       cucumber-pretty: ^6.0.1
     devDependencies:
       '@gestaltjs/build': link:../build
+      '@gestaltjs/check': link:../check
       '@gestaltjs/core': link:../core
       '@gestaltjs/db': link:../db
       '@gestaltjs/lint': link:../lint
       '@gestaltjs/serve': link:../serve
       '@gestaltjs/test': link:../test
       '@gestaltjs/testing': link:../testing
-      '@gestaltjs/type-check': link:../type-check
       '@types/cucumber': 6.0.1
       cucumber: 6.0.5
       cucumber-junit-formatter: 0.2.2_cucumber@6.0.5
@@ -202,13 +210,13 @@ importers:
   packages/gestalt:
     specifiers:
       '@gestaltjs/build': 0.3.2
+      '@gestaltjs/check': 0.3.2
       '@gestaltjs/core': 0.3.2
-      '@gestaltjs/db': 0.3.2
+      '@gestaltjs/db': 0.4.0
       '@gestaltjs/lint': 0.3.2
       '@gestaltjs/serve': 0.3.2
       '@gestaltjs/test': 0.3.2
       '@gestaltjs/testing': 0.1.0
-      '@gestaltjs/type-check': 0.3.2
       '@oclif/core': 0.5.10
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -219,12 +227,12 @@ importers:
       '@oclif/plugin-plugins': 2.0.12
     devDependencies:
       '@gestaltjs/build': link:../build
+      '@gestaltjs/check': link:../check
       '@gestaltjs/db': link:../db
       '@gestaltjs/lint': link:../lint
       '@gestaltjs/serve': link:../serve
       '@gestaltjs/test': link:../test
       '@gestaltjs/testing': link:../testing
-      '@gestaltjs/type-check': link:../type-check
 
   packages/lint:
     specifiers:
@@ -258,14 +266,6 @@ importers:
 
   packages/testing:
     specifiers: {}
-
-  packages/type-check:
-    specifiers:
-      '@gestaltjs/core': 0.3.2
-      '@oclif/core': 0.5.10
-    devDependencies:
-      '@gestaltjs/core': link:../core
-      '@oclif/core': 0.5.10
 
 packages:
 

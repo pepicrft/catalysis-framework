@@ -21,7 +21,7 @@
   - @gestaltjs/serve@0.3.2
   - @gestaltjs/support@0.3.2
   - @gestaltjs/test@0.3.2
-  - @gestaltjs/type-check@0.3.2
+  - @gestaltjs/check@0.3.2
 
 ## 0.3.1
 
@@ -36,7 +36,7 @@
   - @gestaltjs/serve@0.3.1
   - @gestaltjs/support@0.3.1
   - @gestaltjs/test@0.3.1
-  - @gestaltjs/type-check@0.3.1
+  - @gestaltjs/check@0.3.1
 
 ## 0.3.0
 

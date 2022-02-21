@@ -44,7 +44,7 @@
     "@gestaltjs/core": "0.3.2"
   },
   "devDependencies": {
-    "@gestaltjs/type-check": "0.3.2",
+    "@gestaltjs/check": "0.3.2",
     "@gestaltjs/build": "0.3.2",
     "@gestaltjs/serve": "0.3.2",
     "@gestaltjs/db": "0.4.0",
