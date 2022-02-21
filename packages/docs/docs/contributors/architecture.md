@@ -38,7 +38,7 @@ feature packages need the following configuration and dependencies in their `pac
 // package.json
 {
     "dependencies": {
-        "@oclif/core": "0.5.10",
+        "@oclif/core": "1.3.4",
         "@oclif/plugin-help": "^5"
     },
     "oclif": {

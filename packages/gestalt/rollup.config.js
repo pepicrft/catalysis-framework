@@ -10,7 +10,7 @@ const gestaltExternal = [
   '@gestaltjs/core/framework',
 ]
 const gestaltPlugins = [...plugins(__dirname)]
-const gestaltFeatures = ['build', 'db', 'lint', 'serve', 'test', 'check']
+const gestaltFeatures = ['build', 'db', 'lint', 'serve', 'test', 'check', 'env']
 const gestaltCommands = gestaltFeatures.flatMap((feature) => {
   return fg.sync([
     path.join(__dirname, `../${feature}/src/cli/commands/**/*.ts`),

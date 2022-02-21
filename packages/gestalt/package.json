@@ -38,13 +38,14 @@
     ]
   },
   "dependencies": {
-    "@oclif/core": "0.5.10",
+    "@oclif/core": "1.3.4",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
     "@gestaltjs/core": "0.3.2"
   },
   "devDependencies": {
     "@gestaltjs/check": "0.3.2",
+    "@gestaltjs/env": "0.3.2",
     "@gestaltjs/build": "0.3.2",
     "@gestaltjs/serve": "0.3.2",
     "@gestaltjs/db": "0.4.0",
