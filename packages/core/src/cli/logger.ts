@@ -1,8 +1,16 @@
 import pino from 'pino'
+import type { TransportMultiOptions } from 'pino'
+import { gestalt as gestaltEnvironment } from './environment'
 import { runningInVerbose } from './cli'
-import { gestalt as gestaltEnvironment, isRunningTests } from './environment'
 
+import { Bug } from './error'
 export type LogLevel = pino.LevelWithSilent
+
+/**
+ * We cache the loggers to ensure we only have an
+ * instance per module and thus use the memory efficiently.
+ */
+const cachedLoggers: { [key: string]: Logger } = {}
 
 export class Logger {
   pinoLogger: pino.Logger
@@ -12,7 +20,14 @@ export class Logger {
   }
 
   child(module: string): Logger {
-    return new Logger(this.pinoLogger.child({ module: module }))
+    const cachedLogger = cachedLoggers[module]
+    if (cachedLogger) {
+      return cachedLogger
+    }
+
+    const logger = new Logger(this.pinoLogger.child({ module: module }))
+    cachedLoggers[module] = logger
+    return logger
   }
 
   success(message: string, level: LogLevel = 'info') {
@@ -46,18 +61,53 @@ export class Logger {
   }
 }
 
-const development = gestaltEnvironment() === 'development'
+let _gestalt: Logger | undefined
 
-export const gestalt = new Logger(
-  pino({
-    name: 'gestalt',
-    level: runningInVerbose() ? 'debug' : 'info',
-    transport:
-      development && !isRunningTests()
+export function setupGestaltLogger(transport: TransportMultiOptions) {
+  const development = gestaltEnvironment() === 'development'
+  _gestalt = new Logger(
+    pino({
+      name: 'gestalt',
+      level: runningInVerbose() ? 'debug' : 'info',
+      transport: development
         ? {
-            target: './logger/base-transport.mjs',
+            targets: [...transport.targets],
           }
         : undefined,
-  })
-)
-export const core = gestalt.child('core')
+    })
+  )
+}
+
+let _core: Logger | undefined
+
+export function core(): Logger {
+  if (_core) {
+    return _core
+  }
+  _core = new Logger(
+    pino({
+      name: 'gestalt',
+      level: runningInVerbose() ? 'debug' : 'info',
+      transport: {
+        targets: [
+          {
+            target: `./logger/transport.js`,
+            options: {},
+            level: 'debug',
+          },
+        ],
+      },
+    })
+  )
+  return _core
+}
+
+export function gestalt(): Logger {
+  if (!_gestalt) {
+    throw new Bug(
+      'Gestalt is running without having initialized the default logger.',
+      ''
+    )
+  }
+  return _gestalt
+}

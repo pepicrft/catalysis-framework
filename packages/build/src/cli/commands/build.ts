@@ -5,6 +5,6 @@ export default class Build extends Command {
   static description = 'Build your Gestalt application'
 
   async run(): Promise<void> {
-    logger.success('Built')
+    logger().success('Built')
   }
 }

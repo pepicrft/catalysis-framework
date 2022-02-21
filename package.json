@@ -6,7 +6,7 @@
     "version:publish": "changeset publish",
     "release": "changeset publish",
     "preinstall": "npx only-allow pnpm",
-    "clean": "nx run-many --target=clean --all --skip-nx-cache",
+    "clean": "nx run-many --target=clean --all --skip-nx-cache && nx reset",
     "lint": "nx run-many --target=lint --all --skip-nx-cache",
     "lint:affected": "nx affected --target=lint --all",
     "lint:fix": "nx run-many --target=lint:fix --all --skip-nx-cache",

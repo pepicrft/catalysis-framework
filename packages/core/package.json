@@ -11,6 +11,10 @@
   "license": "MIT",
   "type": "module",
   "exports": {
+    "./cli/logger/transport": {
+      "import": "./dist/cli/logger/transport.js",
+      "types": "./dist/cli/logger/transport.d.ts"
+    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
@@ -26,7 +30,7 @@
   "scripts": {
     "clean": "shx rm -rf dist",
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "rollup -c",
+    "build": "pnpm clean && rollup -c",
     "lint": "prettier -c src/** && eslint src/**/*.ts",
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",

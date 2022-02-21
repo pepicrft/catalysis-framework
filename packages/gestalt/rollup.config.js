@@ -21,10 +21,17 @@ const gestaltCommands = features.flatMap((feature) => {
     `!${path.join(__dirname, `../${feature}/src/cli/commands/**/*.test.ts`)}`,
   ])
 })
+const featuresLoggerTransport = features.flatMap((feature) => {
+  return path.join(__dirname, `../${feature}/src/cli/logger/transport.ts`)
+})
 
 const configuration = () => [
   {
-    input: [path.join(__dirname, 'src/index.ts'), ...gestaltCommands],
+    input: [
+      path.join(__dirname, 'src/index.ts'),
+      ...gestaltCommands,
+      ...featuresLoggerTransport,
+    ],
     output: [
       {
         dir: distDir(__dirname),
@@ -32,9 +39,20 @@ const configuration = () => [
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.facadeModuleId.includes('src/cli/commands')) {
             // Preserves the commands/... path
-            return `commands/${chunkInfo.facadeModuleId
+            return `cli/commands/${chunkInfo.facadeModuleId
               .split('src/cli/commands')
               .slice(-1)[0]
+              .replace('ts', 'js')}`
+          } else if (chunkInfo.facadeModuleId.includes('src/cli/logger')) {
+            return `cli/logger/transports/${chunkInfo.facadeModuleId
+              .split('src/cli/logger')
+              .slice(-1)[0]
+              .replace(
+                'transport',
+                path.basename(
+                  chunkInfo.facadeModuleId.split('src/cli/logger')[0]
+                )
+              )
               .replace('ts', 'js')}`
           } else {
             return '[name].js'

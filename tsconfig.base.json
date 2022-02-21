@@ -17,6 +17,7 @@
     "paths": {
       "@gestaltjs/core/framework": ["../../core/src/framework/index.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
+      "@gestaltjs/core/cli/logger/transport": ["../../core/src/cli/logger/transport.ts"],
       "@gestaltjs/testing": ["../../testing/src/index.ts"]
     },
     "types": ["vitest/globals"]

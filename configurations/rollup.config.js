@@ -30,4 +30,11 @@ export const plugins = (packageDir) => {
   ]
 }
 
-export const external = ['readable-stream', 'glob']
+/**
+ * "piano" and "piano-pretty" use NodeJS thread workers would require custom
+ * bundling logic to respect some of their modules' structure and instruct
+ * the runtime on where the bundled modules live.
+ * To keep things simple, we are treating those as external dependencies that
+ * are installed as transitive dependency of @gestaltjs/core
+ */
+export const external = ['readable-stream', 'glob', 'pino', 'pino-pretty']

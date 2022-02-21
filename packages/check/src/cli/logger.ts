@@ -1,4 +1,7 @@
-import { logger as coreLogger } from '@gestaltjs/core/cli'
+import { logger } from '@gestaltjs/core/cli'
 
-const typecheckLogger = coreLogger.gestalt.child('check')
-export default typecheckLogger
+const checkLogger = () => {
+  return logger.gestalt().child('type-check')
+}
+
+export default checkLogger

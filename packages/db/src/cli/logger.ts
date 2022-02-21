@@ -1,4 +1,7 @@
-import { logger as coreLogger } from '@gestaltjs/core/cli'
+import { logger } from '@gestaltjs/core/cli'
 
-const dbLogger = coreLogger.gestalt.child('db')
+const dbLogger = () => {
+  return logger.gestalt().child('db')
+}
+
 export default dbLogger

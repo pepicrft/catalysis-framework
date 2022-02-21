@@ -3,14 +3,7 @@ import dts from 'rollup-plugin-dts'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
-/**
- * "piano" and "piano-pretty" use NodeJS thread workers would require custom
- * bundling logic to respect some of their modules' structure and instruct
- * the runtime on where the bundled modules live.
- * To keep things simple, we are treating those as external dependencies that
- * are installed as transitive dependency of @gestaltjs/core
- */
-const coreExternal = [...external, 'pino', 'pino-pretty']
+const coreExternal = [...external]
 
 const configuration = () => [
   {
@@ -26,10 +19,10 @@ const configuration = () => [
     external: coreExternal,
   },
   {
-    input: path.join(__dirname, 'src/cli/logger/base-transport.ts'),
+    input: path.join(__dirname, 'src/cli/logger/transport.ts'),
     output: [
       {
-        file: path.join(distDir(__dirname), 'cli/logger/base-transport.mjs'),
+        file: path.join(distDir(__dirname), 'cli/logger/transport.js'),
         format: 'esm',
         exports: 'auto',
       },
