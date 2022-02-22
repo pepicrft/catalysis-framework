@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["./src/**/*.ts", "src/cli/utilities/serve/entry-client.js", "src/cli/utilities/serve/entry-server.js"],
+  "include": ["./src/**/*.ts", "src/cli/utilities/client/entry-client.js", "src/cli/utilities/client/entry-server.js"],
   "exclude": ["./dist"],
   "compilerOptions": {
     "outDir": "dist",

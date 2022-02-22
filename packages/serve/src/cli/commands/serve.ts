@@ -1,5 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import serve from '../utilities/serve'
+import serve from '../utilities/server'
 import { app } from '@gestaltjs/core/cli'
 
 export default class Serve extends Command {
