@@ -9,6 +9,8 @@ import {
   formatCyan,
 } from '../terminal'
 import { pascalCase } from '../string'
+import build from 'pino-abstract-transport'
+import { Transform } from 'node:stream'
 
 function formatLevel(level: string): string {
   let outputLevel = pascalCase(level)
@@ -29,6 +31,31 @@ function formatLevel(level: string): string {
 }
 function formatModule(module: string): string {
   return formatGray(`[@gestaltjs/${module}]`)
+}
+
+/**
+ * Returns a transport that filters log events based on module name.
+ * Only the logs that have the same module name as the given one will be passed
+ * through the given transporter
+ *
+ * @param module {string} Name of the module where the transporter will be used.
+ * @param transport {Transform} Transporter to pass through if the logs are for the given module.
+ * @returns {Promise<Transform>} A promise that resolves with the Transform
+ */
+export async function moduleTransport(
+  module: string,
+  transport: Transform
+): Promise<Transform> {
+  return build(function (source) {
+    source.on('data', function (obj) {
+      if (obj.module === module) {
+        transport.emit('data', obj)
+      }
+    })
+    source.on('close', () => {
+      transport.emit('close')
+    })
+  })
 }
 
 export default async (options: pino.TransportBaseOptions) => {

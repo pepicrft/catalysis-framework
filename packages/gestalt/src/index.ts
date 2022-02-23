@@ -1,4 +1,4 @@
-import { error, cli, environment, logger } from '@gestaltjs/core/cli'
+import { error } from '@gestaltjs/core/cli'
 import { run, flush, settings, Errors } from '@oclif/core'
 import { setup as setupLogger } from './logger'
 

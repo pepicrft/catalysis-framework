@@ -39,20 +39,20 @@
     ]
   },
   "dependencies": {
+    "@gestaltjs/core": "0.3.2",
     "@oclif/core": "0.5.10",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "@gestaltjs/core": "0.3.2",
     "pino": "^7.8.0",
     "pino-pretty": "^7.5.1"
   },
   "devDependencies": {
-    "@gestaltjs/check": "0.3.2",
     "@gestaltjs/build": "0.3.2",
-    "@gestaltjs/serve": "0.3.2",
+    "@gestaltjs/check": "0.3.2",
     "@gestaltjs/db": "0.4.0",
-    "@gestaltjs/test": "0.3.2",
     "@gestaltjs/lint": "0.3.2",
+    "@gestaltjs/serve": "0.3.2",
+    "@gestaltjs/test": "0.3.2",
     "@gestaltjs/testing": "0.1.0"
   },
   "engine-strict": true,
@@ -67,6 +67,7 @@
   "oclif": {
     "bin": "gestalt",
     "commands": "./dist/cli/commands",
+    "topicSeparator": " ",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"

@@ -130,7 +130,9 @@ importers:
       case-anything: ^2.1.10
       fastify: ^3.27.2
       find-up: ^6.3.0
+      noop-stream: ^1.0.0
       picocolors: ^1.0.0
+      pino-abstract-transport: ^0.5.0
       shelljs: ^0.8.5
       vite: ^2.8.4
     devDependencies:
@@ -139,7 +141,9 @@ importers:
       case-anything: 2.1.10
       fastify: 3.27.2
       find-up: 6.3.0
+      noop-stream: 1.0.0
       picocolors: 1.0.0
+      pino-abstract-transport: 0.5.0
       shelljs: 0.8.5
       vite: 2.8.4
 
@@ -9908,6 +9912,11 @@ packages:
 
   /node-releases/2.0.1:
     resolution: {integrity: sha512-CqyzN6z7Q6aMeF/ktcMVTzhAHCEpf8SOarwpzpf8pNBY2k5/oM34UHldUwp8VKI7uxct2HxSRdJjBaZeESzcxA==}
+
+  /noop-stream/1.0.0:
+    resolution: {integrity: sha512-EHpIatM09Pg7dZOsowDwqqdacYpogTBb1BNSMIy8g/J+MGpaxy0k+qmrbYrjLNRPXtW3fqf+Q3b2Q0yFRnQdIw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
 
   /normalize-package-data/2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}

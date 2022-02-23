@@ -2,7 +2,6 @@ import pino from 'pino'
 import type { TransportMultiOptions } from 'pino'
 import { gestalt as gestaltEnvironment } from './environment'
 import { runningInVerbose } from './cli'
-
 import { Bug } from './error'
 export type LogLevel = pino.LevelWithSilent
 
