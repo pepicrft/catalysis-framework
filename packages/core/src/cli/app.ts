@@ -74,6 +74,5 @@ export async function load(directory: string): Promise<App> {
   return {
     configuration: configFile,
     directory: path.dirname(configPath),
-    routes: [],
   }
 }
