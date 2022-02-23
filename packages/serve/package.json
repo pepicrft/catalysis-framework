@@ -25,6 +25,10 @@
       "../../package.json"
     ]
   },
+  "peerDependencies": {
+    "@gestaltjs/core": "0.3.2",
+    "@oclif/core": "0.5.10"
+  },
   "devDependencies": {
     "@oclif/core": "0.5.10",
     "@gestaltjs/core": "0.3.2",
@@ -34,5 +38,8 @@
   "oclif": {
     "commands": "./dist/commands",
     "plugins": []
+  },
+  "devDependencies": {
+    "express": "^4.17.2"
   }
 }

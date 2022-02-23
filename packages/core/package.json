@@ -42,17 +42,30 @@
       "../../package.json"
     ]
   },
+  "dependencies": {
+    "zod": "^3.11.6"
+  },
+  "peerDependencies": {
+    "@gestaltjs/support": "0.3.2",
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
+  },
   "devDependencies": {
+    "@iarna/toml": "^2.2.5",
     "@types/pino": "^7.0.5",
     "@types/shelljs": "^0.8.11",
     "case-anything": "^2.1.10",
     "fastify": "^3.27.2",
-    "find-up": "^6.3.0",
+    "find-up": "^6.2.0",
+    "fs-extra": "^10.0.0",
+    "pathe": "^0.2.0",
     "noop-stream": "^1.0.0",
     "picocolors": "^1.0.0",
     "pino-abstract-transport": "^0.5.0",
     "shelljs": "^0.8.5",
-    "vite": "^2.8.4"
+    "tempy": "^2.0.0",
+    "vite": "^2.8.4",
+    "zod": "^3.11.6"
   },
   "engine-strict": true,
   "engines": {
@@ -62,9 +75,5 @@
     "darwin",
     "linux",
     "win32"
-  ],
-  "peerDependencies": {
-    "pino": "^7.8.0",
-    "pino-pretty": "^7.5.1"
-  }
+  ]
 }
