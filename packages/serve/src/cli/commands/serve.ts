@@ -8,4 +8,3 @@ export default class Serve extends Command {
     logger().success('Served')
   }
 }
-

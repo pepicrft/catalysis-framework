@@ -28,12 +28,9 @@ interface SlugComponent {
   type: SlugType
   value: string
 }
-interface Route {
-}
 export interface App {
   directory: string
   configuration: Configuration
-  routes: Route[]
 }
 
 const ConfigurationSchema = z.object({
