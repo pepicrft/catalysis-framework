@@ -27,7 +27,8 @@
   },
   "devDependencies": {
     "@oclif/core": "0.5.10",
-    "@gestaltjs/core": "0.3.2"
+    "@gestaltjs/core": "0.3.2",
+    "pino-pretty": "^7.5.1"
   },
   "oclif": {
     "commands": "./dist/commands",

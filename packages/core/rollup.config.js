@@ -1,7 +1,9 @@
-import path from 'pathe';
-import dts from "rollup-plugin-dts";
+import path from 'pathe'
+import dts from 'rollup-plugin-dts'
 
-import {external, plugins, distDir} from '../../configurations/rollup.config';
+import { external, plugins, distDir } from '../../configurations/rollup.config'
+
+const coreExternal = [...external]
 
 const configuration = () => [
   {
@@ -14,7 +16,19 @@ const configuration = () => [
       },
     ],
     plugins: plugins(__dirname),
-    external: [...external],
+    external: coreExternal,
+  },
+  {
+    input: path.join(__dirname, 'src/cli/logger/transport.ts'),
+    output: [
+      {
+        file: path.join(distDir(__dirname), 'cli/logger/transport.js'),
+        format: 'esm',
+        exports: 'auto',
+      },
+    ],
+    plugins: plugins(__dirname),
+    external: coreExternal,
   },
   {
     input: path.join(__dirname, 'src/framework/index.ts'),
@@ -26,8 +40,8 @@ const configuration = () => [
       },
     ],
     plugins: plugins(__dirname),
-    external: [...external],
-  }
-];
+    external: coreExternal,
+  },
+]
 
-export default configuration;
+export default configuration
