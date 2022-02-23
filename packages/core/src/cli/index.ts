@@ -7,5 +7,5 @@ export * as cli from './cli'
 export * as environment from './environment'
 export * as stream from './stream'
 export { default as constants } from './constants'
-export * as app from "./app";
-export * as fs from "./fs";
+export * as app from './app'
+export * as fs from './fs'

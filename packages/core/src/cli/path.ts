@@ -1,3 +1,2 @@
-
-export {findUp} from 'find-up';
-export * from "pathe";
+export { findUp } from 'find-up'
+export * from 'pathe'
