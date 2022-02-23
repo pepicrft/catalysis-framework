@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2020"
+    ],
+    "module": "ES2020",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "inlineSourceMap": true,
+    "paths": {
+      "@gestaltjs/core/framework": ["../../core/src/framework/index.ts"],
+      "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
+      "@gestaltjs/core/cli/logger/transport": ["../../core/src/cli/logger/transport.ts"],
+      "@gestaltjs/testing": ["../../testing/src/index.ts"]
+    },
+    "types": ["vitest/globals"]
+  },
+  "exclude": [
+    "**/dist/**",
+    "node_modules"
+  ]
+}

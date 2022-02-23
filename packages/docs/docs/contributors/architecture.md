@@ -21,7 +21,7 @@ and contribute to an area of the project without having to familiarize ourselves
 | `@gestaltjs/build` | It contains utilities for building an app | `Builder` class |
 | `@gestaltjs/test` | It contains utilities for testing the app code | `Tester` class |
 | `@gestaltjs/lint` | It contains utilities for linting the app code | `Linter` class |
-| `@gestaltjs/type-check` | It contains utilities for type-checking the code | `TypeChecker` class |
+| `@gestaltjs/check` | It contains utilities for checking the code | `TypeChecker` class |
 | `@gestaltjs/serve` | It contains utilities for serving the app locally and in production | `Server` class |
 | `@gestaltjs/core` | It contains utilities and models that are shared across all the features above it | `App` model |
 

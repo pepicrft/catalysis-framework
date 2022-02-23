@@ -1,5 +1,13 @@
 # gestaltjs
 
+## 0.4.0
+
+### Minor Changes
+
+- af15e32: Optimize the bundled Javascript code to share code across all the commands
+- dbbd224: Add a new @gestaltjs/db for the DB-related APIs and commands
+- 2ad9113: Setting up fixtures and test feature
+
 ## 0.3.2
 
 ### Patch Changes
@@ -13,7 +21,7 @@
   - @gestaltjs/serve@0.3.2
   - @gestaltjs/support@0.3.2
   - @gestaltjs/test@0.3.2
-  - @gestaltjs/type-check@0.3.2
+  - @gestaltjs/check@0.3.2
 
 ## 0.3.1
 
@@ -28,7 +36,7 @@
   - @gestaltjs/serve@0.3.1
   - @gestaltjs/support@0.3.1
   - @gestaltjs/test@0.3.1
-  - @gestaltjs/type-check@0.3.1
+  - @gestaltjs/check@0.3.1
 
 ## 0.3.0
 

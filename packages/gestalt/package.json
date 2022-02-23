@@ -1,6 +1,6 @@
 {
   "name": "gestaltjs",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "private": false,
   "description": "A tool for building Gestalt web app",
   "keywords": [
@@ -24,13 +24,14 @@
     "access": "public"
   },
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "rollup -c",
+    "build": "pnpm clean && rollup -c",
     "lint": "prettier -c src/** && eslint src/**/*.ts",
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tsc": "tsc -b --incremental"
+    "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
@@ -38,18 +39,20 @@
     ]
   },
   "dependencies": {
+    "@gestaltjs/core": "0.3.2",
     "@oclif/core": "0.5.10",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "@gestaltjs/core": "0.3.2"
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
   },
   "devDependencies": {
-    "@gestaltjs/type-check": "0.3.2",
     "@gestaltjs/build": "0.3.2",
-    "@gestaltjs/serve": "0.3.2",
-    "@gestaltjs/db": "0.3.2",
-    "@gestaltjs/test": "0.3.2",
+    "@gestaltjs/check": "0.3.2",
+    "@gestaltjs/db": "0.4.0",
     "@gestaltjs/lint": "0.3.2",
+    "@gestaltjs/serve": "0.3.2",
+    "@gestaltjs/test": "0.3.2",
     "@gestaltjs/testing": "0.1.0"
   },
   "engine-strict": true,
@@ -63,7 +66,8 @@
   ],
   "oclif": {
     "bin": "gestalt",
-    "commands": "./dist/commands",
+    "commands": "./dist/cli/commands",
+    "topicSeparator": " ",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"

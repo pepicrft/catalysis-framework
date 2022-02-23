@@ -9,7 +9,7 @@
       "@gestaltjs/build",
       "@gestaltjs/test",
       "@gestaltjs/lint",
-      "@gestaltjs/type-check",
+      "@gestaltjs/check",
       "@gestaltjs/db",
       "@gestaltjs/serve"
     ]

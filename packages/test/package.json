@@ -13,24 +13,23 @@
   "scripts": {
     "clean": "shx rm -rf dist",
     "prepack": "pnpm run build",
-    "build": "tsc -b",
+    "build": "true",
     "lint": "prettier -c src/** && eslint src/**/*.ts",
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tsc": "tsc -b --incremental"
+    "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
       "../../package.json"
     ]
   },
-  "peerDependencies": {
-    "@oclif/core": "0.5.10",
-    "@gestaltjs/core": "0.3.2"
-  },
   "devDependencies": {
-    "@gestaltjs/testing": "0.1.0"
+    "@oclif/core": "0.5.10",
+    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/testing": "0.1.0",
+    "pino-pretty": "^7.5.1"
   },
   "oclif": {
     "commands": "./dist/commands",

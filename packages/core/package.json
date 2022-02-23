@@ -11,6 +11,10 @@
   "license": "MIT",
   "type": "module",
   "exports": {
+    "./cli/logger/transport": {
+      "import": "./dist/cli/logger/transport.js",
+      "types": "./dist/cli/logger/transport.d.ts"
+    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
@@ -24,13 +28,14 @@
     "/dist"
   ],
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "rollup -c",
+    "build": "pnpm clean && rollup -c",
     "lint": "prettier -c src/** && eslint src/**/*.ts",
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tsc": "tsc -b --incremental"
+    "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
@@ -45,12 +50,19 @@
   },
   "devDependencies": {
     "@iarna/toml": "^2.2.5",
+    "@types/pino": "^7.0.5",
     "@types/shelljs": "^0.8.11",
+    "case-anything": "^2.1.10",
+    "fastify": "^3.27.2",
     "find-up": "^6.2.0",
     "fs-extra": "^10.0.0",
     "pathe": "^0.2.0",
+    "noop-stream": "^1.0.0",
+    "picocolors": "^1.0.0",
+    "pino-abstract-transport": "^0.5.0",
     "shelljs": "^0.8.5",
     "tempy": "^2.0.0",
+    "vite": "^2.8.4",
     "zod": "^3.11.6"
   },
   "engine-strict": true,
@@ -61,5 +73,9 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "peerDependencies": {
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
+  }
 }
