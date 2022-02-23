@@ -6,4 +6,22 @@ export type ExecOptions = {
 export async function exec(
   command: string,
   options?: ExecOptions
-): Promise<void> {}
+): Promise<void> {
+  // TODO
+  // return new Promise((resolve, reject) => {
+  //   const child = shell.exec(command, {async:true, silent: true, cwd: options?.cwd});
+  //   child.stdout?.on('data', function (data) {
+  //     if (!options?.silent) {
+  //       console.log(data);
+  //     }
+  //   });
+  //   child.stderr?.on('data', function (data) {
+  //     if (!options?.silent) {
+  //       console.error(data);
+  //     }
+  //   });
+  //   child.on('exit', (exitCode) => {
+  //     exitCode === 0 ? resolve() : reject();
+  //   })
+  // });
+}
