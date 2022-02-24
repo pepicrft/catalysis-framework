@@ -64,6 +64,11 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
+            href: 'https://matrix.to/#/#gestaltjs:matrix.org',
+            label: 'Matrix',
+            position: 'right',
+          },
+          {
             href: 'https://discord.gg/7gvRstAKTU',
             label: 'Discord',
             position: 'right',
