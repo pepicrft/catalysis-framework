@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "moduleResolution": "node",
+    "jsx": "preserve"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
