@@ -34,6 +34,9 @@
       "../../package.json"
     ]
   },
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  },
   "engine-strict": true,
   "engines": {
     "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
