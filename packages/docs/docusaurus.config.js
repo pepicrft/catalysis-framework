@@ -100,6 +100,10 @@ const config = {
                 href: 'https://discord.gg/7gvRstAKTU',
               },
               {
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/gestaltjs/',
+              },
+              {
                 label: 'Twitter',
                 href: 'https://twitter.com/gestaltjs',
               },
