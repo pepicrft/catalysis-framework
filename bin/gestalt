@@ -4,5 +4,5 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 pushd $SCRIPT_DIR/..
 $SCRIPT_DIR/../node_modules/.bin/nx build gestaltjs --baseHref $SCRIPT_DIR/..
-$SCRIPT_DIR/../packages/gestalt/bin/dev.js $@
+$SCRIPT_DIR/../packages/gestaltjs/bin/dev.js $@
 popd

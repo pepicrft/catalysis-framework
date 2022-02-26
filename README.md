@@ -21,7 +21,7 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 
 | Project              | Description     | CI                                                                                                                                                  | URL |
 | -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---  |
-| [gestalt](/packages/gestalt) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | |
+| [gestalt](/packages/gestaltjs) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | |
 | [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml)  | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
 
 ## Usage
