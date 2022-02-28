@@ -6,10 +6,10 @@ Because of that,
 we design the project and the documentation to ease contributions.
 
 A contribution can come in many shapes:
-[GitHub issues](https://github.com/gestaltjs/gestalt/issues) reporting bugs or sharing ideas,
-community support,
-framework evangelization,
-or code contributions as [pull requests](https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests).
+1. [GitHub issues](https://github.com/gestaltjs/gestalt/issues) reporting bugs or sharing ideas.
+2. Community support.
+3. Framework evangelization.
+4. Code contributions as [pull requests](https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests).
 
 The pages in "contributors" provide all the context and tools necessary to nail your contributions. Because for most contributions, you'll need to have the project locally, let's dive right into how to set up your local environment to run and debug the project locally.
 
