@@ -52,7 +52,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'tutorial/intro',
             position: 'left',
             label: 'Tutorial',
           },
@@ -88,7 +88,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/tutorial/intro',
               },
             ],
           },
@@ -98,6 +98,10 @@ const config = {
               {
                 label: 'Discord',
                 href: 'https://discord.gg/7gvRstAKTU',
+              },
+              {
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/gestaltjs/',
               },
               {
                 label: 'Twitter',
