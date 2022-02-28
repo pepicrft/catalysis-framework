@@ -5,7 +5,17 @@ import {
   gray as pcgray,
   magenta as pcmagenta,
   cyan as pccyan,
+  bold as pcBold,
+  italic as pcItalic,
 } from 'picocolors'
+
+export function formatBold(input: string): string {
+  return pcBold(input)
+}
+
+export function formatItalic(input: string): string {
+  return pcItalic(input)
+}
 
 export function formatGreen(input: string): string {
   return pcgreen(input)
