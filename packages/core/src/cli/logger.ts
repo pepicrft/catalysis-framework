@@ -6,6 +6,10 @@ import { Bug } from './error'
 export type LogLevel = pino.LevelWithSilent
 import { formatYellow, formatItalic, formatBold } from './terminal'
 import terminalLink from 'terminal-link'
+import { fileURLToPath } from 'url'
+import { dirname as pathDirname, join as pathJoin } from './path'
+
+const __dirname = pathDirname(fileURLToPath(import.meta.url))
 
 /**
  * We cache the loggers to ensure we only have an
@@ -49,6 +53,16 @@ class LoggerContentToken {
   }
 }
 
+export type ErrorLogType = 'bug' | 'abort' | 'unhandled'
+
+/**
+ * It defines the type of an error log.
+ */
+export type ErrorLog = {
+  type: ErrorLogType
+  message: string
+}
+
 /**
  * It represents a string that's been generated from a tokenized string.
  */
@@ -86,6 +100,14 @@ export class Logger {
    */
   success(message: LoggerMessage, level: LogLevel = 'info') {
     this.log(`🎉 ${this.stringify(message)}`, level)
+  }
+
+  /**
+   * Logs an error.
+   * @param log {ErrorLog} Error log
+   */
+  error(log: ErrorLog) {
+    this.pinoLogger.error(log, log.message)
   }
 
   /**

@@ -83,6 +83,6 @@ export default async (options: pino.TransportBaseOptions) => {
       }
     },
     ignore: 'module,hostname,pid,time,name,level,levelLabel',
-    singleLine: true,
+    hideObject: true,
   })
 }
