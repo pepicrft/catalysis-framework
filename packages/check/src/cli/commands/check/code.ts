@@ -1,9 +1,8 @@
 import { Command, Flags } from '@oclif/core'
-import logger from '../../logger'
-import { tsc, app} from '@gestaltjs/core/cli'
-
-export default class Types extends Command {
-  static description = 'Check types using Typescript'
+import { app } from '@gestaltjs/core/cli'
+import checkCodeService from '../../services/code'
+export default class Code extends Command {
+  static description = 'Check code using Typescript'
 
   static flags = {
     path: Flags.string({
@@ -17,11 +16,9 @@ export default class Types extends Command {
     }),
   }
   async run(): Promise<void> {
-
-    const { flags } = await this.parse(Types)
+    const { flags } = await this.parse(Code)
     const loadedApp = await app.load(flags.path)
 
-    await tsc.run(["--noEmit"], loadedApp.directory)
-    logger().success('Types checked')
+    await checkCodeService(loadedApp.directory)
   }
 }

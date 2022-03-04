@@ -4,7 +4,5 @@
     "moduleResolution": "node",
     "jsx": "preserve"
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["./src/**/*"]
 }
