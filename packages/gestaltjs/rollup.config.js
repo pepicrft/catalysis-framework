@@ -8,12 +8,7 @@ import {
   features,
 } from '../../configurations/rollup.config'
 
-const gestaltExternal = [
-  ...external,
-  '@oclif/core',
-  '@gestaltjs/core/cli',
-  '@gestaltjs/core/framework',
-]
+const gestaltExternal = [...external, '@oclif/core', /@gestaltjs\/core/]
 const gestaltPlugins = [...plugins(__dirname)]
 const gestaltCommands = features.flatMap((feature) => {
   return fg.sync([
