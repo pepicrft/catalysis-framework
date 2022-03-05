@@ -39,21 +39,51 @@ export class Bug extends Error {
     this.options = options
   }
 }
-export class Abort extends Error {}
+
+type AbortOptions = ErrorOptions & { next: string }
+
+export class Abort extends Error {
+  /**
+   * Bug options
+   */
+  options: AbortOptions
+
+  /**
+   * Initializes an error of type Bug
+   * @param message {string} Error messages
+   * @param options {BugOptions} Error options
+   */
+  constructor(message: string, options: AbortOptions) {
+    super(message)
+    this.options = options
+  }
+}
 
 export const handler = (error: Error): Promise<Error> => {
-  let errorLog: ErrorLog
   let errorType: ErrorLogType
   let message = formatBold(formatRed('Error'))
+  let cause: string | undefined
 
   if (error instanceof Bug) {
     errorType = 'bug'
+    cause = error?.options?.cause
   } else if (error instanceof Abort) {
     errorType = 'abort'
+    cause = error?.options?.cause
   } else {
     errorType = 'unhandled'
   }
-  message = `${message}\n${error.message}`
+  message = `${message}\n${error.message}\n`
+
+  if (cause) {
+    message = `${message}\n${formatBold(formatRed('Cause'))}\n`
+    message = `${message}${cause}\n`
+  }
+
+  if (error.stack) {
+    message = `${message}\n${formatBold(formatRed('Stack trace'))}\n`
+    message = `${message}${error.stack}`
+  }
 
   coreLogger().error({
     type: errorType,
