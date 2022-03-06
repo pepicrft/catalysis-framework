@@ -1,14 +1,8 @@
 import React from 'react'
-import { Redirect, useLocation } from 'react-router-dom'
+import { Redirect } from '@docusaurus/router'
 
 function Home() {
-  const location = useLocation()
-  const defaultUrl = [
-    location.pathname.replace(/\/$/, ''),
-    'docs/tutorial/intro',
-  ].join('/')
-
-  return <Redirect to={defaultUrl} />
+  return <Redirect to="/docs/tutorial/intro" />
 }
 
 export default Home
