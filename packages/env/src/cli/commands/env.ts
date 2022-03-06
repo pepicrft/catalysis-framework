@@ -1,10 +1,11 @@
 import { Command } from '@oclif/core'
-import logger from '../logger'
+import envService from '../services/env'
 
 export default class Env extends Command {
   static description = 'Output environment information'
 
   async run(): Promise<void> {
-    logger().success('Env')
+    // How to parse flags with OCLIF - gestalt env --json
+    await envService()
   }
 }
