@@ -40,8 +40,24 @@ export class Bug extends Error {
   }
 }
 
+/**
+ * An error that represents a bug but that doesn't
+ * get presented to the user.
+ */
+export class BugSilent extends Error {}
+
 type AbortOptions = ErrorOptions & { next: string }
 
+/**
+ * An error that aborts the execution of the program
+ * and that is not presented to the user by the
+ * error handler.
+ */
+export class AbortSilent extends Error {}
+
+/**
+ * An error that aborts the execution of the program.
+ */
 export class Abort extends Error {
   /**
    * Bug options
