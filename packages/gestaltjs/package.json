@@ -53,7 +53,8 @@
     "@gestaltjs/lint": "0.3.2",
     "@gestaltjs/serve": "0.3.2",
     "@gestaltjs/test": "0.3.2",
-    "@gestaltjs/testing": "0.1.0"
+    "@gestaltjs/testing": "0.1.0",
+    "@gestaltjs/env": "0.3.2"
   },
   "engine-strict": true,
   "engines": {

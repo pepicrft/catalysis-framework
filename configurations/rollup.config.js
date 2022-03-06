@@ -5,7 +5,7 @@ import path from 'pathe'
 import stripShebang from 'rollup-plugin-strip-shebang'
 import commonjs from '@rollup/plugin-commonjs'
 
-export const features = ['build', 'db', 'lint', 'serve', 'test', 'check']
+export const features = ['build', 'db', 'lint', 'serve', 'test', 'check', 'env']
 
 export const distDir = (packageDir) => {
   return process.env.GESTALT_DIST_DIR || path.join(packageDir, 'dist')
