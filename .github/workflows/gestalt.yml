@@ -38,13 +38,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: npx nx affected --target=build --parallel=3
+        run: npx nx --target=build --parallel=3
       - name: Test
-        run: npx nx affected --target=test --parallel=3
+        run: npx nx --target=test --parallel=3
       - name: Lint
-        run: npx nx affected --target=lint --parallel=3
+        run: npx nx --target=lint --parallel=3
       - name: Type-check
-        run: npx nx affected --target=tsc --parallel=3
+        run: npx nx --target=tsc --parallel=3
   main:
     name: Node ${{ matrix.node }} in ${{ matrix.os }}
     runs-on: ubuntu-latest
@@ -72,10 +72,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: npx nx affected --target=build --parallel=3
+        run: npx nx --target=build --parallel=3
       - name: Test
-        run: npx nx affected --target=test --parallel=3
+        run: npx nx --target=test --parallel=3
       - name: Lint
-        run: npx nx affected --target=lint --parallel=3
+        run: npx nx --target=lint --parallel=3
       - name: Type-check
-        run: npx nx affected --target=tsc --parallel=3
+        run: npx nx --target=tsc --parallel=3
