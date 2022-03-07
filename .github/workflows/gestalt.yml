@@ -38,11 +38,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: npx nx --target=build --parallel=3
+        run: npx nx run-many --target=build --all --parallel=3
       - name: Test
-        run: npx nx --target=test:ci --parallel=3
+        run: npx nx run-many --target=test:ci --all --parallel=3
       - name: Lint
-        run: npx nx --target=lint --parallel=3
+        run: npx nx run-many --target=lint --all --parallel=3
       - name: Type-check
         run: npx nx --target=tsc --parallel=3
       - uses: codecov/codecov-action@v2
@@ -78,11 +78,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: npx nx --target=build --parallel=3
+        run: npx nx run-many --target=build --all --parallel=3
       - name: Test
-        run: npx nx --target=test:ci --parallel=3
+        run: npx nx run-many --target=test:ci --all --all --parallel=3
       - name: Lint
-        run: npx nx --target=lint --parallel=3
+        run: npx nx run-many --target=lint --all --parallel=3
       - name: Type-check
         run: npx nx --target=tsc --parallel=3
       - uses: codecov/codecov-action@v2
