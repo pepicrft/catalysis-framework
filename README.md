@@ -6,6 +6,9 @@
   <img src="https://github.com/gestaltjs/gestalt/workflows/Gestalt/badge.svg" alt="Gestalt">
   <img src="https://img.shields.io/github/forks/gestaltjs/gestalt?style=flat-square" alt="GitHub forks">
   <img src="https://img.shields.io/github/stars/gestaltjs/gestalt?style=flat-square" alt="GitHub stars">
+  <a href="https://codecov.io/gh/gestaltjs/gestalt">
+    <img src="https://codecov.io/gh/gestaltjs/gestalt/branch/main/graph/badge.svg?token=7L99SA0SLV"/>
+  </a>
   <img src="https://img.shields.io/github/commit-activity/w/gestaltjs/gestalt?style=flat-square" alt="Commit Activity">
   <img src="https://img.shields.io/github/contributors/gestaltjs/gestalt?style=flat-square" alt="Contributors">
   <img src="https://img.shields.io/github/commits-since/gestaltjs/gestalt/latest?style=flat-square" alt="Latest Commits">
