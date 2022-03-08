@@ -9,7 +9,6 @@
       "@gestaltjs/build",
       "@gestaltjs/check",
       "@gestaltjs/db",
-      "@gestaltjs/eslint-plugin",
       "@gestaltjs/lint",
       "@gestaltjs/serve",
       "@gestaltjs/test",
