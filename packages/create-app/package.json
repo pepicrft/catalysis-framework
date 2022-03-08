@@ -41,10 +41,7 @@
   "dependencies": {
     "@oclif/core": "1.3.4"
   },
-  "devDependencies": {
-    "@gestaltjs/core": "0.4.0",
-    "@gestaltjs/testing": "0.1.0"
-  },
+  "devDependencies": {},
   "engine-strict": true,
   "engines": {
     "node": "^14.13.1 || >=16.0.0 || >=17.0.0"

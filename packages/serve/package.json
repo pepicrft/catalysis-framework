@@ -25,21 +25,11 @@
       "../../package.json"
     ]
   },
-  "peerDependencies": {
-    "@gestaltjs/core": "0.4.0",
-    "@oclif/core": "1.3.4"
-  },
   "devDependencies": {
-    "@oclif/core": "1.3.4",
-    "@gestaltjs/core": "0.4.0",
-    "@gestaltjs/testing": "0.1.0",
-    "pino-pretty": "^7.5.1"
+    "express": "^4.17.2"
   },
   "oclif": {
     "commands": "./dist/commands",
     "plugins": []
-  },
-  "devDependencies": {
-    "express": "^4.17.2"
   }
 }
