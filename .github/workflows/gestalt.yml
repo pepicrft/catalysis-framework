@@ -46,6 +46,7 @@ jobs:
       - name: Type-check
         run: npx nx run-many --target=tsc --all --parallel=3
       - uses: codecov/codecov-action@v2
+        if: ${{ matrix.node == '17' && matrix.os == 'ubuntu-latest' }} # Only run the upload once
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: packages/*/junit-*.xml
@@ -86,6 +87,7 @@ jobs:
       - name: Type-check
         run: npx nx run-many --target=tsc --all --parallel=3
       - uses: codecov/codecov-action@v2
+        if: ${{ matrix.node == '17' && matrix.os == 'ubuntu-latest' }} # Only run the upload once
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: packages/*/junit-*.xml
