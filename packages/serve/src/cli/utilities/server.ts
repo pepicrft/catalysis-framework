@@ -1,22 +1,24 @@
-import { app, path, fs } from '@gestaltjs/core/cli'
-import express, { Express } from 'express'
+import { path } from '@gestaltjs/core/cli'
+import fs from 'fs-extra'
+import express, { Express, Request, Response } from 'express'
 import { createServer as createViteServer } from 'vite'
-import { fileURLToPath } from 'url'
 
-async function serve(app: app.App): Promise<void> {
-  const __dirname = path.dirname(fileURLToPath(import.meta.url))
+//Vite Docs: https://vitejs.dev/guide/ssr.html#example-projects
+
+async function createServer(root = __dirname): Promise<void> {
+  const resolve = (p: string) => path.resolve(__dirname, p)
 
   //Express server
-  const server: Express = express()
-  const port = 3000
+  const app: Express = express()
+  const requestHandler = express.static(resolve('assets'))
+  app.use(requestHandler)
+  app.use('/assets', requestHandler)
 
-  //Vite's connect instance as middleware
-  const root = process.cwd()
   const vite = await createViteServer({
     root,
     logLevel: 'info',
     server: {
-      middlewareMode: true,
+      middlewareMode: 'ssr',
       watch: {
         usePolling: true,
         interval: 100,
@@ -24,38 +26,40 @@ async function serve(app: app.App): Promise<void> {
     },
   })
 
-  server.use(vite.middlewares)
+  //Use vite's connect instance as middleware
+  app.use(vite.middlewares)
 
-  server.use('*', async ({ originalUrl }, next) => {
-    const url = originalUrl
-
+  app.use('*', async (req: Request, res: Response) => {
     try {
-      const template = fs.readFile(
-        path.resolve(__dirname, 'index.html'),
-        'utf-8'
-      )
+      const url = req.originalUrl
+      let template
+      template = fs.readFileSync(resolve('index.html'), 'utf-8')
+      template = await vite.transformIndexHtml(url, template)
+      const render = (await vite.ssrLoadModule('/client/entry-server.tsx'))
+        .render
 
-      const templateVite = await vite.transformIndexHtml(url, template)
-      const { render } = (
-        await vite.ssrLoadModule('/src/client/entry-server.tsx')
-      ).render
+      const context = {}
+      const appHtml = render(url, context)
 
-      const appHtml: string = await render(url, context)
-      const html = templateVite.replace(`<!--app-html-->`, appHtml)
+      const html = template.replace(`<!--app-html-->`, appHtml)
+
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
     } catch (e) {
       // If an error is caught, let Vite fix the stracktrace so it maps back to
       // your actual source code.
-      vite.ssrFixStacktrace(e)
-      next(e)
+      vite.ssrFixStacktrace(e as Error)
+      console.log((e as Error).stack)
+
+      res.status(500).end((e as Error).stack)
     }
   })
 
-  server.listen(port, () => {
-    console.log(`${app.name} being served on port ${port}`)
-  })
+  return { app, vite }
 }
 
-export default serve
-
-//Vite Docs: https://vitejs.dev/guide/ssr.html#example-projects
+createServer().then(({ app }) => {
+  const port = process.env.PORT || 7456
+  app.listen(Number(port), '0.0.0.0', () => {
+    console.log(`App is listening on http://localhost:${port}`)
+  })
+})
