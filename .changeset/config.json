@@ -12,7 +12,6 @@
     "@gestaltjs/lint",
     "@gestaltjs/serve",
     "@gestaltjs/test",
-    "@gestaltjs/core",
-    "@gestaljs/testing"
+    "@gestaltjs/testing"
   ]
 }
