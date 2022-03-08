@@ -39,21 +39,12 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/core": "0.3.2",
+    "@gestaltjs/core": "0.4.0",
     "@oclif/core": "1.3.4",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
     "pino": "^7.8.0",
     "pino-pretty": "^7.5.1"
-  },
-  "devDependencies": {
-    "@gestaltjs/build": "0.3.2",
-    "@gestaltjs/check": "0.3.2",
-    "@gestaltjs/db": "0.4.0",
-    "@gestaltjs/lint": "0.3.2",
-    "@gestaltjs/serve": "0.3.2",
-    "@gestaltjs/test": "0.3.2",
-    "@gestaltjs/testing": "0.1.0"
   },
   "engine-strict": true,
   "engines": {
