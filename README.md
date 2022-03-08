@@ -1,6 +1,8 @@
 <div align="center">
   <img src="assets/header.png" width="200"/>
   <br/>
+  <a href="https://gitpod.io/#https://github.com/gestaltjs/gestalt" alt="Open in Gitpod"><img src="https://gitpod.io/button/open-in-gitpod.svg"/></a>
+  <br/>
   <img src="https://github.com/gestaltjs/gestalt/workflows/Gestalt/badge.svg" alt="Gestalt">
   <img src="https://img.shields.io/github/forks/gestaltjs/gestalt?style=flat-square" alt="GitHub forks">
   <img src="https://img.shields.io/github/stars/gestaltjs/gestalt?style=flat-square" alt="GitHub stars">
@@ -13,14 +15,14 @@
   <a href="https://tuple.app"><img src="https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8"></a>
 </div>
 
-Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.org/en/) web framework. It's designed to spark joy through convenient abstractions and workflows that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) the intricacies of building apps.
+Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.org/en/) framework for building web sites and apps. It's designed to spark joy through convenient abstractions and workflows that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) the intricacies of building apps.
 
 ## Projects
 
-| Project              | Description     | CI                                                                                                                                                 | Deploy | URL |
-| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -- |
-| [gestalt](/packages/gestalt) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | | |
-| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml) | [![Netlify Status](https://api.netlify.com/api/v1/badges/59663ddf-1542-4900-bd41-252c0263703f/deploy-status)](https://app.netlify.com/sites/gestalt-docs/deploys) | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
+| Project              | Description     | CI                                                                                                                                                  | URL |
+| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---  |
+| [gestalt](/packages/gestalt) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | |
+| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml)  | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
 
 ## Usage
 
@@ -65,6 +67,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://craftweg.com"><img src="https://avatars.githubusercontent.com/u/663605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pedro Piñera Buendía</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=pepicrft" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/lascenify"><img src="https://avatars.githubusercontent.com/u/18697610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ascen Salmerón Ibáñez</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=lascenify" title="Code">💻</a></td>
     <td align="center"><a href="http://josemasar.vercel.app"><img src="https://avatars.githubusercontent.com/u/65446320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josema Sar</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=josemasar" title="Code">💻</a></td>
+    <td align="center"><a href="http://LNSD.es"><img src="https://avatars.githubusercontent.com/u/3949095?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lorenzo Delgado</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=LNSD" title="Code">💻</a></td>
   </tr>
 </table>
 
