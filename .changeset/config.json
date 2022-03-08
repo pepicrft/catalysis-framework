@@ -2,22 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@1.6.3/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "linked": [
-    [
-      "gestaltjs",
-      "@gestaltjs/core",
-      "@gestaltjs/build",
-      "@gestaltjs/test",
-      "@gestaltjs/lint",
-      "@gestaltjs/check",
-      "@gestaltjs/db",
-      "@gestaltjs/serve",
-      "@gestaltjs/create-app",
-      "@gestaltjs/testing"
-    ]
-  ],
+  "fixed": [["gestaltjs", "@gestaltjs/core", "@gestaltjs/create-app"]],
   "access": "public",
-  "baseBranch": "main",
-  "updateInternalDependencies": "patch",
-  "ignore": ["@gestaltjs/docs"]
+  "baseBranch": "main"
 }
