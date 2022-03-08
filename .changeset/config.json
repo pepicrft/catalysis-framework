@@ -11,7 +11,9 @@
       "@gestaltjs/lint",
       "@gestaltjs/check",
       "@gestaltjs/db",
-      "@gestaltjs/serve"
+      "@gestaltjs/serve",
+      "@gestaltjs/create-app",
+      "@gestaltjs/testing"
     ]
   ],
   "access": "public",
