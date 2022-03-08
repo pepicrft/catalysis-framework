@@ -1,5 +1,16 @@
 # gestaltjs
 
+## 0.5.0
+
+### Minor Changes
+
+- Create a new version
+
+### Patch Changes
+
+- Updated dependencies
+  - @gestaltjs/core@0.5.0
+
 ## 0.4.0
 
 ### Minor Changes
