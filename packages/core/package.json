@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/core",
   "version": "0.5.0",
-  "private": true,
+  "private": false,
   "description": "Set of Getalt tools and models that are shared across all the features",
   "keywords": [
     "gestalt",
