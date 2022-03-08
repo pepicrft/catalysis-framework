@@ -2,7 +2,20 @@
   "$schema": "https://unpkg.com/@changesets/config@1.6.3/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "fixed": [["gestaltjs", "@gestaltjs/core", "@gestaltjs/create-app"]],
+  "fixed": [
+    [
+      "gestaltjs",
+      "@gestaltjs/create-app",
+      "@gestaltjs/build",
+      "@gestaltjs/check",
+      "@gestaltjs/db",
+      "@gestaltjs/eslint-plugin",
+      "@gestaltjs/lint",
+      "@gestaltjs/serve",
+      "@gestaltjs/test",
+      "@gestaltjs/core"
+    ]
+  ],
   "access": "public",
   "baseBranch": "main"
 }
