@@ -67,8 +67,10 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2",
     "vitest": "^0.2.8",
-    "vite": "^2.8.4"
-
+    "vite": "^2.8.4",
+    "@nrwl/cli": "latest",
+    "@nrwl/tao": "latest",
+    "@nrwl/workspace": "latest"
   },
   "prettier": {
     "trailingComma": "es5",
