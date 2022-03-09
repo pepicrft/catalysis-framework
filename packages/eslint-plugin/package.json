@@ -8,14 +8,8 @@
     "gestaltjs",
     "eslint"
   ],
+  "main": "dist/index.js",
   "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "files": [
     "/dist"
   ],
@@ -35,6 +29,8 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "eslint": "^8.6.0"
   },
   "engine-strict": true,

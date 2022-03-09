@@ -1,5 +1,4 @@
 import path from 'pathe'
-import dts from 'rollup-plugin-dts'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
@@ -11,7 +10,7 @@ const configuration = () => [
     output: [
       {
         file: path.join(distDir(__dirname), 'index.js'),
-        format: 'esm',
+        format: 'cjs',
         exports: 'auto',
       },
     ],
