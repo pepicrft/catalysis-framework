@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/app-with-passing-tests",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "description": "App with passing tests Gestalt Fixture",
   "keywords": [
     "gestalt",

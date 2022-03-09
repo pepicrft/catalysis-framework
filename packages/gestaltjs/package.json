@@ -64,5 +64,10 @@
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"
     ]
+  },
+  "nx": {
+    "implicitDependencies": [
+      "@gestaltjs/eslint-plugin-gestaltjs"
+    ]
   }
 }
