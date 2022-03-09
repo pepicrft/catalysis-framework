@@ -103,10 +103,16 @@ importers:
       vitest: 0.2.8
 
   packages/build:
-    specifiers: {}
+    specifiers:
+      pino: ^7.8.0
+    devDependencies:
+      pino: 7.8.0
 
   packages/check:
-    specifiers: {}
+    specifiers:
+      pino: ^7.8.0
+    devDependencies:
+      pino: 7.8.0
 
   packages/core:
     specifiers:
@@ -120,6 +126,7 @@ importers:
       noop-stream: ^1.0.0
       pathe: ^0.2.0
       picocolors: ^1.0.0
+      pino: ^7.8.0
       pino-abstract-transport: ^0.5.0
       shelljs: ^0.8.5
       tempy: ^2.0.0
@@ -139,6 +146,7 @@ importers:
       noop-stream: 1.0.0
       pathe: 0.2.0
       picocolors: 1.0.0
+      pino: 7.8.0
       pino-abstract-transport: 0.5.0
       shelljs: 0.8.5
       tempy: 2.0.0
@@ -152,7 +160,10 @@ importers:
       '@oclif/core': 1.3.4
 
   packages/db:
-    specifiers: {}
+    specifiers:
+      pino: ^7.8.0
+    devDependencies:
+      pino: 7.8.0
 
   packages/docs:
     specifiers:
@@ -210,16 +221,24 @@ importers:
       pino-pretty: 7.5.1
 
   packages/lint:
-    specifiers: {}
+    specifiers:
+      pino: ^7.8.0
+    devDependencies:
+      pino: 7.8.0
 
   packages/serve:
     specifiers:
       express: ^4.17.2
+      pino: ^7.8.0
     devDependencies:
       express: 4.17.3
+      pino: 7.8.0
 
   packages/test:
-    specifiers: {}
+    specifiers:
+      pino: ^7.8.0
+    devDependencies:
+      pino: 7.8.0
 
   packages/testing:
     specifiers: {}
@@ -2639,7 +2658,7 @@ packages:
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 27.5.1
-      '@jest/test-result': 27.2.2
+      '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
       chalk: 4.1.2
@@ -2653,8 +2672,8 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.4
       jest-haste-map: 27.5.1
-      jest-resolve: 27.2.2
-      jest-util: 27.2.0
+      jest-resolve: 27.5.1
+      jest-util: 27.5.1
       jest-worker: 27.5.1
       slash: 3.0.0
       source-map: 0.6.1
@@ -8629,9 +8648,9 @@ packages:
       jest-get-type: 27.5.1
       jest-jasmine2: 27.5.1
       jest-regex-util: 27.5.1
-      jest-resolve: 27.2.2
+      jest-resolve: 27.5.1
       jest-runner: 27.5.1
-      jest-util: 27.2.0
+      jest-util: 27.5.1
       jest-validate: 27.5.1
       micromatch: 4.0.4
       pretty-format: 27.5.1
@@ -8831,7 +8850,7 @@ packages:
       graceful-fs: 4.2.9
       jest-haste-map: 27.5.1
       jest-pnp-resolver: 1.2.2_jest-resolve@27.2.2
-      jest-util: 27.2.0
+      jest-util: 27.5.1
       jest-validate: 27.5.1
       resolve: 1.22.0
       slash: 3.0.0

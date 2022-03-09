@@ -26,6 +26,9 @@
       "../../package.json"
     ]
   },
+  "devDependencies": {
+    "pino": "^7.8.0"
+  },
   "oclif": {
     "commands": "./dist/commands",
     "plugins": []

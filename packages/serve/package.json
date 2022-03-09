@@ -27,7 +27,8 @@
     ]
   },
   "devDependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "pino": "^7.8.0"
   },
   "oclif": {
     "commands": "./dist/commands",
