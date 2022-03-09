@@ -105,14 +105,18 @@ importers:
   packages/build:
     specifiers:
       pino: ^7.8.0
+      pino-pretty: ^7.5.1
     devDependencies:
       pino: 7.8.0
+      pino-pretty: 7.5.1
 
   packages/check:
     specifiers:
       pino: ^7.8.0
+      pino-pretty: ^7.5.1
     devDependencies:
       pino: 7.8.0
+      pino-pretty: 7.5.1
 
   packages/core:
     specifiers:
@@ -128,6 +132,7 @@ importers:
       picocolors: ^1.0.0
       pino: ^7.8.0
       pino-abstract-transport: ^0.5.0
+      pino-pretty: ^7.5.1
       shelljs: ^0.8.5
       tempy: ^2.0.0
       terminal-link: ^3.0.0
@@ -148,6 +153,7 @@ importers:
       picocolors: 1.0.0
       pino: 7.8.0
       pino-abstract-transport: 0.5.0
+      pino-pretty: 7.5.1
       shelljs: 0.8.5
       tempy: 2.0.0
       terminal-link: 3.0.0
@@ -162,8 +168,10 @@ importers:
   packages/db:
     specifiers:
       pino: ^7.8.0
+      pino-pretty: ^7.5.1
     devDependencies:
       pino: 7.8.0
+      pino-pretty: 7.5.1
 
   packages/docs:
     specifiers:
@@ -223,22 +231,28 @@ importers:
   packages/lint:
     specifiers:
       pino: ^7.8.0
+      pino-pretty: ^7.5.1
     devDependencies:
       pino: 7.8.0
+      pino-pretty: 7.5.1
 
   packages/serve:
     specifiers:
       express: ^4.17.2
       pino: ^7.8.0
+      pino-pretty: ^7.5.1
     devDependencies:
       express: 4.17.3
       pino: 7.8.0
+      pino-pretty: 7.5.1
 
   packages/test:
     specifiers:
       pino: ^7.8.0
+      pino-pretty: ^7.5.1
     devDependencies:
       pino: 7.8.0
+      pino-pretty: 7.5.1
 
   packages/testing:
     specifiers: {}
@@ -4416,7 +4430,6 @@ packages:
       chalk: 2.4.2
       leven: 2.1.0
       mri: 1.1.4
-    dev: false
 
   /aria-query/4.2.2:
     resolution: {integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==}
@@ -4920,7 +4933,6 @@ packages:
   /camelcase/5.0.0:
     resolution: {integrity: sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==}
     engines: {node: '>=6'}
-    dev: false
 
   /camelcase/5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
@@ -5234,7 +5246,6 @@ packages:
 
   /colorette/2.0.16:
     resolution: {integrity: sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==}
-    dev: false
 
   /colors/1.4.0:
     resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
@@ -5787,7 +5798,6 @@ packages:
 
   /dateformat/4.6.3:
     resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
-    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -9201,7 +9211,6 @@ packages:
   /leven/2.1.0:
     resolution: {integrity: sha1-wuep93IJTe6dNCAq6KzORoeHVYA=}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /leven/3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -9690,7 +9699,6 @@ packages:
   /mri/1.1.4:
     resolution: {integrity: sha512-6y7IjGPm8AzlvoUrwAaw1tLnUBudaS3752vcd8JtrpGGQn+rXIe63LFVHm/YMwtqAuh+LJPCFdlLYPWM1nYn6w==}
     engines: {node: '>=4'}
-    dev: false
 
   /mrmime/1.0.0:
     resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
@@ -10312,7 +10320,6 @@ packages:
       secure-json-parse: 2.4.0
       sonic-boom: 2.6.0
       strip-json-comments: 3.1.1
-    dev: false
 
   /pino-std-serializers/3.2.0:
     resolution: {integrity: sha512-EqX4pwDPrt3MuOAAUBMU0Tk5kR/YcCM5fNPEzgCO2zJ5HfX0vbiH9HbJglnyeQsN96Kznae6MWD47pZB5avTrg==}
@@ -10928,7 +10935,6 @@ packages:
     dependencies:
       end-of-stream: 1.4.4
       once: 1.4.0
-    dev: false
 
   /punycode/1.3.2:
     resolution: {integrity: sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=}
