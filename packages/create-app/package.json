@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/create-app",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": false,
   "description": "Create a new Gestalt app",
   "type": "module",
