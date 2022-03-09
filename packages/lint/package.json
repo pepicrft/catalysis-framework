@@ -18,6 +18,7 @@
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-lint.xml",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
