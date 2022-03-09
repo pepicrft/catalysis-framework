@@ -26,6 +26,10 @@
       "../../package.json"
     ]
   },
+  "devDependencies": {
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
+  },
   "oclif": {
     "commands": "./dist/commands",
     "plugins": []
