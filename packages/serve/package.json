@@ -26,10 +26,8 @@
       "../../package.json"
     ]
   },
-  "devDependencies": {
-    "express": "^4.17.2",
-    "pino": "^7.8.0",
-    "pino-pretty": "^7.5.1"
+  "dependencies": {
+    "express": "^4.17.2"
   },
   "oclif": {
     "commands": "./dist/commands",
