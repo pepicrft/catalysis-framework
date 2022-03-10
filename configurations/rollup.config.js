@@ -38,8 +38,6 @@ export const plugins = (packageDir) => {
 export const external = async (packageDir) => {
   const packageJson = await import(path.join(packageDir, 'package.json'))
   return [
-    'readable-stream',
-    'glob',
     /@gestaltjs\/core/,
     ...Object.keys(packageJson.dependencies ?? {}),
     ...Object.keys(packageJson.peerDependencies ?? {}),
