@@ -1,7 +1,7 @@
 import { logger } from '@gestaltjs/core/cli'
 
 const checkLogger = () => {
-  return logger.gestalt().child('check')
+  return logger.core().child('check')
 }
 
 export default checkLogger

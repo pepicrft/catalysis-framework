@@ -196,28 +196,6 @@ export class Logger {
   }
 }
 
-let _gestalt: Logger | undefined
-
-export function setupGestaltLogger(transport: TransportMultiOptions) {
-  const development = gestaltEnvironment() === 'development'
-  _gestalt = new Logger(
-    pino({
-      name: 'gestalt',
-      formatters: {
-        level(label, number) {
-          return { level: number, levelLabel: label }
-        },
-      },
-      level: runningInVerbose() ? 'debug' : 'info',
-      transport: development
-        ? {
-            targets: [...transport.targets],
-          }
-        : undefined,
-    })
-  )
-}
-
 let _core: Logger | undefined
 
 export function core(): Logger {
@@ -245,14 +223,4 @@ export function core(): Logger {
     })
   )
   return _core
-}
-
-export function gestalt(): Logger {
-  if (!_gestalt) {
-    throw new Bug(
-      'Gestalt is running without having initialized the default logger.',
-      ''
-    )
-  }
-  return _gestalt
 }
