@@ -11,10 +11,6 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./cli/logger/transport": {
-      "import": "./dist/cli/logger/transport.js",
-      "types": "./dist/cli/logger/transport.d.ts"
-    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"

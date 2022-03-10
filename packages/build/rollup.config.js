@@ -24,17 +24,6 @@ const configuration = async () => {
       ],
       ...options,
     },
-    {
-      input: path.join(__dirname, 'src/cli/logger/transport.ts'),
-      output: [
-        {
-          dir: path.join(distDir(__dirname), 'cli/logger/transport.js'),
-          format: 'esm',
-          exports: 'auto',
-        },
-      ],
-      ...options,
-    },
   ]
 }
 
