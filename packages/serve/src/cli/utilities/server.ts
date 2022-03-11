@@ -2,10 +2,12 @@ import { path } from '@gestaltjs/core/cli'
 import fs from 'fs-extra'
 import express, { Express, Request, Response } from 'express'
 import { createServer as createViteServer } from 'vite'
+import { fileURLToPath } from 'url'
 
 //Vite Docs: https://vitejs.dev/guide/ssr.html#example-projects
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-async function createServer(root = __dirname): Promise<void> {
+async function createServer(root = __dirname) {
   const resolve = (p: string) => path.resolve(__dirname, p)
 
   //Express server
@@ -54,12 +56,15 @@ async function createServer(root = __dirname): Promise<void> {
     }
   })
 
-  return { app, vite }
+  return app
 }
 
-createServer().then(({ app }) => {
+async function startServer() {
+  const server = await createServer()
   const port = process.env.PORT || 7456
-  app.listen(Number(port), '0.0.0.0', () => {
+  server.listen(Number(port), '0.0.0.0', () => {
     console.log(`App is listening on http://localhost:${port}`)
   })
-})
+}
+
+export default startServer

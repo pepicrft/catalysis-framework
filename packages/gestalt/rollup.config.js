@@ -42,14 +42,6 @@ const configuration = () => [
     plugins: gestaltPlugins,
     external: gestaltExternal,
   },
-  {
-    input: path.join(__dirname, `../serve/src/cli/utilities/serve/ssr.ts`),
-    output: {
-      file: path.join(__dirname, `./dist/utilities/ssr.js`),
-      format: 'esm',
-    },
-    plugins: gestaltPlugins,
-  },
 ]
 
 export default configuration

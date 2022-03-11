@@ -1,6 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import serve from '../utilities/server'
-import { app } from '@gestaltjs/core/cli'
+import startServer from '../utilities/server'
 
 export default class Serve extends Command {
   static description = 'Serve your Gestalt application'
@@ -30,8 +29,8 @@ export default class Serve extends Command {
      *.            <------ gestalt serve
      *
      */
-    const { flags } = await this.parse(Serve)
-    const loadedApp = await app.load(flags.path)
-    await serve(loadedApp)
+    // const { flags } = await this.parse(Serve)
+    // const loadedApp = await app.load(flags.path)
+    await startServer()
   }
 }
