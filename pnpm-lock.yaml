@@ -166,7 +166,12 @@ importers:
       '@oclif/core': 1.3.4
 
   packages/db:
-    specifiers: {}
+    specifiers:
+      '@gestaltjs/core': 0.7.0
+      '@oclif/core': 1.3.4
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@oclif/core': 1.3.4
 
   packages/docs:
     specifiers:
@@ -222,6 +227,7 @@ importers:
       '@gestaltjs/build': 0.7.0
       '@gestaltjs/check': 0.7.0
       '@gestaltjs/core': 0.7.0
+      '@gestaltjs/db': 0.7.0
       '@oclif/core': ^1.3.4
       '@oclif/plugin-help': ^5
       '@oclif/plugin-plugins': ^2.0.1
@@ -229,6 +235,7 @@ importers:
       '@gestaltjs/build': link:../build
       '@gestaltjs/check': link:../check
       '@gestaltjs/core': link:../core
+      '@gestaltjs/db': link:../db
       '@oclif/core': 1.5.2
       '@oclif/plugin-help': 5.1.11
       '@oclif/plugin-plugins': 2.1.0
