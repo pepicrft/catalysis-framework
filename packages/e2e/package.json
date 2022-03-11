@@ -19,14 +19,6 @@
     "@types/cucumber": "^6.0.1",
     "cucumber": "^6.0.5",
     "cucumber-junit-formatter": "^0.2.2",
-    "cucumber-pretty": "^6.0.1",
-    "@gestaltjs/type-check": "0.3.2",
-    "@gestaltjs/build": "0.3.2",
-    "@gestaltjs/serve": "0.3.2",
-    "@gestaltjs/db": "0.3.2",
-    "@gestaltjs/test": "0.3.2",
-    "@gestaltjs/lint": "0.3.2",
-    "@gestaltjs/testing": "0.1.0",
-    "@gestaltjs/core": "0.3.2"
+    "cucumber-pretty": "^6.0.1"
   }
 }

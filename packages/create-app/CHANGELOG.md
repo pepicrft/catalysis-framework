@@ -1,5 +1,13 @@
 # @gestaltjs/create-app
 
+## 0.7.0
+
+## 0.5.0
+
+### Minor Changes
+
+- Create a new version
+
 ## 0.3.2
 
 ### Patch Changes

@@ -1,40 +1,78 @@
-import { fs } from './index'
+import { fs, path, error } from './index'
+import toml from '@iarna/toml'
+import { z } from 'zod'
 
-export interface App {
-  name: string
+export const errors = {
+  directoryNotFound: (directory: string) => {
+    return new error.Abort(`App does not exist in directory ${directory}`)
+  },
+  configFileNotFound: () => {
+    return new error.Abort(
+      'The config file could not be found',
+      'Make sure the directory or any of its ascendants contains a gestalt.config.toml that identifies the app.'
+    )
+  },
+  validation: () => {
+    return new error.Abort('Thre was a validation error')
+  },
+  routesNotFound: () => {
+    return new error.Abort('The app does not contain a routes folder')
+  },
 }
+
+type RenderingType = 'client' | 'server' | 'static'
+type UIFramework = 'react' | 'vue' | 'svelte'
+
+type SlugType = 'dynamic' | 'static'
+interface SlugComponent {
+  type: SlugType
+  value: string
+}
+export interface App {
+  directory: string
+  configuration: Configuration
+}
+
+const ConfigurationSchema = z.object({
+  name: z.string(),
+})
+
+export type Configuration = z.infer<typeof ConfigurationSchema>
 
 export async function load(directory: string): Promise<App> {
-  // if (!await fs.exists(directory)) {
-  //     throw new Error(`App does not exist in directory ${directory}`)
-  // }
-
-  return {
-    name: 'My app',
+  if (!(await fs.exists(directory))) {
+    throw errors.directoryNotFound(directory)
   }
 
-  //   const configPath = ["cjs", "mjs"]
-  //     .map((extension) => path.join(directory, `gestalt.config.${extension}`))
-  //     .find((configPath) => fs.existsSync(configPath))
+  const configPath = await path.findUp('gestalt.config.toml', {
+    type: 'file',
+    cwd: directory,
+  })
+  if (!configPath) {
+    throw errors.configFileNotFound()
+  }
 
-  //   if(configPath){
-  //     const configurationContent = await import(configPath)
-  //     const configuration: Configuration = await ConfigurationSchema.parseAsync(configurationContent)
-  //   } else {
-  //     throw new Error(`Config file does not exist in ${directory}`)
-  //   }
+  const configFileString = await fs.readFile(configPath)
+  const configFileObject = toml.parse(configFileString)
 
-  //   // directory / gestalt.config.js
+  let configFile
+  try {
+    configFile = await ConfigurationSchema.parseAsync(configFileObject)
+  } catch (zodError: any) {
+    throw errors.validation()
+  }
 
-  //   // gestalt.config.js
+  const routes = []
+  const routesPath = await path.findUp('routes', {
+    type: 'directory',
+    cwd: directory,
+  })
+  if (!routesPath) {
+    throw errors.routesNotFound()
+  }
 
-  //   return {
-  //     directory: directory,
-  //     routes: [],
-  //     configuration: {
-  //       name: "name"
-  //     }
-  //   };
+  return {
+    configuration: configFile,
+    directory: path.dirname(configPath),
+  }
 }
-
-export async function watch() {}

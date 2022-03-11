@@ -1,0 +1,48 @@
+{
+  "name": "@gestaltjs/eslint-plugin",
+  "version": "0.7.0",
+  "private": false,
+  "description": "A plugin that provides an ESLint configuration for projects to extend from and custom Gestalt-specific rules",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "eslint"
+  ],
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "prepack": "cross-env NODE_ENV=production pnpm run build",
+    "build": "pnpm clean && rollup -c",
+    "lint": "prettier -c src/** && eslint src/**/*.ts",
+    "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../package.json"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.6.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
