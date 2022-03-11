@@ -63,7 +63,6 @@
     "shelljs": "^0.8.5",
     "tempy": "^2.0.0",
     "terminal-link": "^3.0.0",
-    "vite": "^2.8.4",
     "zod": "^3.11.6"
   },
   "engine-strict": true,

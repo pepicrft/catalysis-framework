@@ -45,7 +45,8 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
     "pino": "^7.8.0",
-    "pino-pretty": "^7.5.1"
+    "pino-pretty": "^7.5.1",
+    "vite": "^2.8.4"
   },
   "engine-strict": true,
   "engines": {
