@@ -8,17 +8,15 @@
       "@gestaltjs/create-app",
       "@gestaltjs/eslint-plugin",
       "@gestaltjs/build",
+      "@gestaltjs/check",
+      "@gestaltjs/db",
+      "@gestaltjs/lint",
+      "@gestaltjs/serve",
+      "@gestaltjs/test",
       "@gestaltjs/core"
     ]
   ],
   "access": "public",
   "baseBranch": "main",
-  "ignore": [
-    "@gestaltjs/check",
-    "@gestaltjs/db",
-    "@gestaltjs/lint",
-    "@gestaltjs/serve",
-    "@gestaltjs/test",
-    "@gestaltjs/testing"
-  ]
+  "ignore": ["@gestaltjs/testing"]
 }
