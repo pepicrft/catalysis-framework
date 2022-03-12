@@ -10144,7 +10144,7 @@ packages:
     resolution: {integrity: sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=}
     dev: true
 
- /node-plop/0.30.0:
+  /node-plop/0.30.0:
     resolution: {integrity: sha512-5w9+jWoy9OtMm3qRmHgL2z/3L5VL3RhEegKkKC4tA1IIjG3aXf8Ee/8wdgU9qXyt1yDfPWI9Tan1rHpXAp0ZnA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
