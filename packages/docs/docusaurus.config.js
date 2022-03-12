@@ -52,7 +52,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'tutorial/intro',
             position: 'left',
             label: 'Tutorial',
           },
@@ -64,8 +64,8 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://discord.gg/7gvRstAKTU',
-            label: 'Discord',
+            href: 'https://join.slack.com/t/gestaltjs/shared_invite/zt-14azp22s4-sAWlH63i4K7_3DWfbxGvXw',
+            label: 'Slack',
             position: 'right',
           },
           {
@@ -88,7 +88,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/tutorial/intro',
               },
             ],
           },
@@ -98,6 +98,10 @@ const config = {
               {
                 label: 'Discord',
                 href: 'https://discord.gg/7gvRstAKTU',
+              },
+              {
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/gestaltjs/',
               },
               {
                 label: 'Twitter',

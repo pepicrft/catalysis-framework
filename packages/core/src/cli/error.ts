@@ -1,8 +1,8 @@
 class Fatal extends Error {
   message: string
-  next: string
+  next?: string
 
-  constructor(message: string, next: string) {
+  constructor(message: string, next?: string) {
     super(message)
     this.message = message
     this.next = next

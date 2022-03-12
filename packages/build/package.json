@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/build",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "private": true,
   "description": "A set of utilities responsible for building the app",
   "main": "src/index.ts",
@@ -17,6 +17,7 @@
     "lint:fix": "prettier -w src/** && eslint src/**/*.ts --fix",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-build.xml",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {
@@ -25,9 +26,8 @@
     ]
   },
   "devDependencies": {
-    "@oclif/core": "0.5.10",
-    "@gestaltjs/core": "0.3.2",
-    "@gestaltjs/testing": "0.1.0"
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1"
   },
   "oclif": {
     "commands": "./dist/commands"

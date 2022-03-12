@@ -170,3 +170,5 @@ package-lock.json
 TODO.md
 
 vite.config.ts.js
+
+junit-*.xml
