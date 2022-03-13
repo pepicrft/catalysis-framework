@@ -1,9 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "version:add": "changeset add",
-    "version:persist": "changeset version",
-    "version:publish": "changeset publish",
     "release": "changeset publish",
     "preinstall": "npx only-allow pnpm",
     "clean": "nx run-many --target=clean --all --skip-nx-cache && nx reset",
