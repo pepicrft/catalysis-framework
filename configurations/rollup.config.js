@@ -5,8 +5,6 @@ import path from 'pathe'
 import stripShebang from 'rollup-plugin-strip-shebang'
 import commonjs from '@rollup/plugin-commonjs'
 
-export const features = ['build', 'db', 'lint', 'serve', 'test', 'check']
-
 export const distDir = (packageDir) => {
   return process.env.GESTALT_DIST_DIR || path.join(packageDir, 'dist')
 }
@@ -37,4 +35,11 @@ export const plugins = (packageDir) => {
  * To keep things simple, we are treating those as external dependencies that
  * are installed as transitive dependency of @gestaltjs/core
  */
-export const external = ['readable-stream', 'glob', 'pino', 'pino-pretty']
+export const external = async (packageDir) => {
+  const packageJson = await import(path.join(packageDir, 'package.json'))
+  return [
+    /@gestaltjs\/core/,
+    ...Object.keys(packageJson.dependencies ?? {}),
+    ...Object.keys(packageJson.peerDependencies ?? {}),
+  ]
+}

@@ -3,7 +3,6 @@ import alias from '@rollup/plugin-alias'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
-const createAppExternal = [...external, '@oclif/core']
 const createAppPlugins = [
   alias({
     entries: [
@@ -20,31 +19,35 @@ const createAppPlugins = [
   ...plugins(__dirname),
 ]
 
-const configuration = () => [
-  {
-    input: path.join(__dirname, 'src/commands/init.ts'),
-    output: [
-      {
-        file: path.join(distDir(__dirname), 'commands/init.js'),
-        format: 'esm',
-        exports: 'auto',
-      },
-    ],
-    plugins: createAppPlugins,
-    external: createAppExternal,
-  },
-  {
-    input: path.join(__dirname, 'src/index.ts'),
-    output: [
-      {
-        file: path.join(distDir(__dirname), 'index.js'),
-        format: 'esm',
-        exports: 'auto',
-      },
-    ],
-    plugins: createAppPlugins,
-    external: createAppExternal,
-  },
-]
+const configuration = async () => {
+  const createAppExternal = [...(await external(__dirname))]
+
+  return [
+    {
+      input: path.join(__dirname, 'src/commands/init.ts'),
+      output: [
+        {
+          file: path.join(distDir(__dirname), 'commands/init.js'),
+          format: 'esm',
+          exports: 'auto',
+        },
+      ],
+      plugins: createAppPlugins,
+      external: createAppExternal,
+    },
+    {
+      input: path.join(__dirname, 'src/index.ts'),
+      output: [
+        {
+          file: path.join(distDir(__dirname), 'index.js'),
+          format: 'esm',
+          exports: 'auto',
+        },
+      ],
+      plugins: createAppPlugins,
+      external: createAppExternal,
+    },
+  ]
+}
 
 export default configuration
