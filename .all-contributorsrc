@@ -49,6 +49,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "android10",
+      "name": "Fernando Cejas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1360604?v=4",
+      "profile": "http://www.fernandocejas.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
