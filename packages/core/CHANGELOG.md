@@ -1,5 +1,11 @@
 # @gestaltjs/core
 
+## 0.7.1
+
+### Patch Changes
+
+- Version 0.7.1
+
 ## 0.7.0
 
 ## 0.5.0

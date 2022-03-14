@@ -1,9 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "version:add": "changeset add",
-    "version:persist": "changeset version",
-    "version:publish": "changeset publish",
     "release": "changeset publish",
     "preinstall": "npx only-allow pnpm",
     "clean": "nx run-many --target=clean --all --skip-nx-cache && nx reset",
@@ -68,9 +65,9 @@
     "typescript": "^4.6.2",
     "vitest": "^0.2.8",
     "vite": "^2.8.4",
-    "@nrwl/cli": "latest",
-    "@nrwl/tao": "latest",
-    "@nrwl/workspace": "latest"
+    "@nrwl/cli": "13.8.5",
+    "@nrwl/tao": "13.8.5",
+    "@nrwl/workspace": "13.8.5"
   },
   "prettier": {
     "trailingComma": "es5",

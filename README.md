@@ -25,7 +25,7 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 | Project              | Description     | CI                                                                                                                                                  | URL |
 | -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---  |
 | [gestalt](/packages/gestaltjs) | The Gestalt CLI | [![Gestalt](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/gestalt.yml) | |
-| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml)  | [docs.gestaltjs.com](https://docs.gestaltjs.com) |
+| [docs](/packages/docs) | The Gestalt Docs | [![docs](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml/badge.svg)](https://github.com/gestaltjs/gestalt/actions/workflows/docs.yml)  | [docs.gestaltjs.org](https://docs.gestaltjs.org) |
 
 ## Usage
 
@@ -57,11 +57,8 @@ npx @gestaltjs/create-app@latest
 - [Vitest](https://vitest.dev)
 - [rollup.js](https://rollupjs.org)
 
-## Contributors ✨
+## Core team ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
@@ -71,12 +68,18 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/lascenify"><img src="https://avatars.githubusercontent.com/u/18697610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ascen Salmerón Ibáñez</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=lascenify" title="Code">💻</a></td>
     <td align="center"><a href="http://josemasar.vercel.app"><img src="https://avatars.githubusercontent.com/u/65446320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josema Sar</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=josemasar" title="Code">💻</a></td>
     <td align="center"><a href="http://LNSD.es"><img src="https://avatars.githubusercontent.com/u/3949095?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lorenzo Delgado</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=LNSD" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.fernandocejas.com/"><img src="https://avatars.githubusercontent.com/u/1360604?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fernando Cejas</b></sub></a><br /><a href="https://github.com/gestaltjs/gestalt/commits?author=android10" title="Code">💻</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
