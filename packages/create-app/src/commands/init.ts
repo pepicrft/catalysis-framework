@@ -21,7 +21,7 @@ export default class Init extends Command {
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Init)
     const projectPath = flags.path ? path.resolve(flags.path) : process.cwd()
-    const plopfilePath = path.resolve('dist') // absolute path to dist?
+    const plopfilePath = path.resolve(path.dirname(''), 'dist/template')
     this.log(`Creating ${args.name} app at path ${projectPath}`)
     execSync(
       `cd ${plopfilePath} && plop -- --name ${args.name} --path ${projectPath} --version ${gestaltPackage.version}`

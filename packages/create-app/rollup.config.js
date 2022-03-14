@@ -1,7 +1,8 @@
 import path from 'pathe'
 import alias from '@rollup/plugin-alias'
+import copy from 'rollup-plugin-copy'
 
-import { external, plugins, distDir } from '../../configurations/rollup.config';
+import { external, plugins, distDir } from '../../configurations/rollup.config'
 
 const createAppExternal = [...external, '@oclif/core']
 const createAppPlugins = [
@@ -13,10 +14,16 @@ const createAppPlugins = [
             {
                 find: '@gestaltjs/core/cli',
                 replacement: path.join(__dirname, '../core/src/cli/index.ts'),
-            }
+            },
         ],
     }),
     ...plugins(__dirname),
+]
+
+const copyTemplatePlugins = [
+    copy({
+        targets: [{ src: 'src/template', dest: 'dist' }],
+    }),
 ]
 
 const configuration = () => [{
@@ -46,9 +53,9 @@ const configuration = () => [{
             format: 'esm',
             exports: 'auto',
         }, ],
-        plugins: createAppPlugins,
+        plugins: createAppPlugins.concat(copyTemplatePlugins),
         external: createAppExternal,
     },
-];
+]
 
-export default configuration;
+export default configuration

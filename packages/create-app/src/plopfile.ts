@@ -1,5 +1,4 @@
-
-import {NodePlopAPI} from 'plop';
+import { NodePlopAPI } from 'plop'
 
 export default function (plop: NodePlopAPI) {
   plop.setGenerator('gestalt-project', {
@@ -24,9 +23,9 @@ export default function (plop: NodePlopAPI) {
       {
         type: 'addMany',
         destination: '{{path}}/{{name}}',
-        templateFiles: '../template',
-        base: '../template',
+        templateFiles: './template',
+        base: './template',
       },
     ],
-  });
+  })
 }

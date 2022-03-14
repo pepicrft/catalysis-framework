@@ -10,7 +10,5 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {},
-    "dependencies": {
-        "@gestaltjs/gestalt": "{{version}}"
-    }
+    "dependencies": {}
 }

@@ -51,7 +51,8 @@
         "@gestaltjs/core": "0.7.0",
         "@gestaltjs/testing": "0.1.0",
         "pino": "^7.8.0",
-        "pino-pretty": "^7.5.1"
+        "pino-pretty": "^7.5.1",
+        "rollup-plugin-copy": "^3.4.0"
     },
     "engine-strict": true,
     "engines": {
