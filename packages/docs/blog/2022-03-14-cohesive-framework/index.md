@@ -37,7 +37,7 @@ the various instrumentalists won't play in harmony.
 Or they'll start sounding in harmony,
 but after new members join the orchesta,
 things start to get hairy.
-**Rails is a conductor framework.**
+**Rails is a conductor framework and we want GestaltJS to be a conductor too.**
 
 Due to historical reasons,
 many frameworks in Javascript design for flexibility.
