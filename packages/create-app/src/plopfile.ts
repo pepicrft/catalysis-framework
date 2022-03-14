@@ -23,8 +23,9 @@ export default function (plop: NodePlopAPI) {
       {
         type: 'addMany',
         destination: '{{path}}/{{name}}',
-        templateFiles: './template',
-        base: './template',
+        templateFiles: 'template',
+        base: 'template',
+        globOptions: { dot: true },
       },
     ],
   })
