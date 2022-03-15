@@ -80,4 +80,4 @@ Thanks to that we can run [acceptance tests](https://en.wikipedia.org/wiki/Accep
 and therefore minimize the chances of developers coming across the need for *deleting `node_modules`*.
 Another solution would be changing the ecosystem's mindset around dependencies and testing, but that's a much more significant undertaking. We'll plant our seed there through evangelizing excellent testing practices and building fewer but larger packages.
 
-**GestaltJS development will be a joy.**
+**GestaltJS development will feel cohesive and spark joy.**
