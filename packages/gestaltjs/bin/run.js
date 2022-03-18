@@ -2,6 +2,6 @@
 
 process.removeAllListeners('warning');
 
-import runGestalt from "../dist/index.js"
+import runGestalt from "../dist/cli/index.js"
 
 runGestalt();

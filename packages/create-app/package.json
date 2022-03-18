@@ -16,9 +16,7 @@
   "files": [
     "/bin/run.js",
     "/bin/run.cmd",
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/dist"
   ],
   "publishConfig": {
     "access": "public"

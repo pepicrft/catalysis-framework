@@ -16,12 +16,16 @@
   "files": [
     "/bin/run.js",
     "/bin/run.cmd",
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/dist"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "exports": {
+    "./support": {
+      "import": "./dist/framework/support.js",
+      "types": "./dist/framework/support.d.ts"
+    }
   },
   "scripts": {
     "clean": "shx rm -rf dist",
