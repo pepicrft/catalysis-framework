@@ -205,11 +205,11 @@ export function core(): Logger {
   _core = new Logger(
     pino({
       name: 'gestalt',
-      formatters: {
-        level(label, number) {
-          return { level: number, levelLabel: label }
-        },
-      },
+      // formatters: {
+      //   level(label, number) {
+      //     return { level: number, levelLabel: label }
+      //   },
+      // },
       level: runningInVerbose() ? 'debug' : 'info',
       transport: {
         targets: [
