@@ -179,6 +179,7 @@ importers:
       '@docsearch/react': ^3.0.0
       '@docusaurus/core': 2.0.0-beta.17
       '@docusaurus/module-type-aliases': 2.0.0-beta.17
+      '@docusaurus/plugin-sitemap': 2.0.0-beta.17
       '@docusaurus/preset-classic': 2.0.0-beta.17
       '@mdx-js/react': ^1.6.22
       '@tsconfig/docusaurus': ^1.0.4
@@ -193,6 +194,7 @@ importers:
       '@algolia/autocomplete-preset-algolia': 1.5.3
       '@docsearch/react': 3.0.0_f456dfc349ace84b0ea11d9e6e4ef3ab
       '@docusaurus/core': 2.0.0-beta.17_b3fce3eb9adca152320144b9ee034ae9
+      '@docusaurus/plugin-sitemap': 2.0.0-beta.17_b3fce3eb9adca152320144b9ee034ae9
       '@docusaurus/preset-classic': 2.0.0-beta.17_7a0b65ca1e5f0b54a5d6bc3ef2c8a1e6
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@types/react': 17.0.40

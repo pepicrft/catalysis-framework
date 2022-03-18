@@ -17,7 +17,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'gestaltjs',
   projectName: 'gestalt',
-
   presets: [
     [
       'classic',
