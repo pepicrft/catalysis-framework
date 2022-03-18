@@ -9,7 +9,6 @@
   - @gestaltjs/build@0.7.3
   - @gestaltjs/check@0.7.3
   - @gestaltjs/db@0.7.3
-  - @gestaltjs/lint@0.7.3
   - @gestaltjs/serve@0.7.3
   - @gestaltjs/test@0.7.3
 
@@ -23,7 +22,6 @@
   - @gestaltjs/check@0.7.2
   - @gestaltjs/core@0.7.2
   - @gestaltjs/db@0.7.2
-  - @gestaltjs/lint@0.7.2
   - @gestaltjs/serve@0.7.2
   - @gestaltjs/test@0.7.2
 
@@ -37,7 +35,6 @@
   - @gestaltjs/check@0.7.1
   - @gestaltjs/core@0.7.1
   - @gestaltjs/db@0.7.1
-  - @gestaltjs/lint@0.7.1
   - @gestaltjs/serve@0.7.1
   - @gestaltjs/test@0.7.1
 
@@ -74,7 +71,6 @@
 - Updated dependencies
   - @gestaltjs/build@0.3.2
   - @gestaltjs/core@0.3.2
-  - @gestaltjs/lint@0.3.2
   - @gestaltjs/load@0.3.2
   - @gestaltjs/serve@0.3.2
   - @gestaltjs/support@0.3.2
@@ -89,7 +85,6 @@
 - Updated dependencies
   - @gestaltjs/build@0.3.1
   - @gestaltjs/core@0.3.1
-  - @gestaltjs/lint@0.3.1
   - @gestaltjs/load@0.3.1
   - @gestaltjs/serve@0.3.1
   - @gestaltjs/support@0.3.1
