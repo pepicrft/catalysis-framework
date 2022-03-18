@@ -44,6 +44,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{ name: 'twitter:card', content: 'summary' }],
       navbar: {
         title: 'GestaltJS',
         logo: {
