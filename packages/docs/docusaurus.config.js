@@ -80,6 +80,7 @@ const config = {
           },
         ],
       },
+      image: 'img/ogimage.png',
       footer: {
         style: 'dark',
         links: [
