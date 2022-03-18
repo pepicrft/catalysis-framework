@@ -11,6 +11,7 @@ const config = {
     'A batteries-included opinionated framework for building web, desktop, and mobile apps with Javascript',
   url: 'https://docs.gestaltjs.com',
   baseUrl: '/',
+  staticDirectories: ['static'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
