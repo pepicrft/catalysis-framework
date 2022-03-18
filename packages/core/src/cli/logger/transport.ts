@@ -58,14 +58,29 @@ export async function moduleTransport(
   })
 }
 
+const pinoLogLevels: { [key: number]: string } = {
+  10: 'trace',
+  20: 'debug',
+  30: 'info',
+  40: 'warn',
+  50: 'error',
+  60: 'fatal',
+}
+
 export default async (options: pino.TransportBaseOptions) => {
   return pinoPretty({
     ...options,
     colorize: false,
     messageFormat: (log, messageKey) => {
-      const levelLabel = formatLevel(`${log['levelLabel']}`)
       const module = formatModule(`${log['module']}`)
-      return `${levelLabel} ${module} ${log[messageKey]}`
+      const level = pinoLogLevels[log.level as number]
+
+      if (level) {
+        const levelLabel = formatLevel(`${level}`)
+        return `${levelLabel} ${module} ${log[messageKey]}`
+      } else {
+        return `${module} ${log[messageKey]}`
+      }
     },
     ignore: 'module,hostname,pid,time,name,level,levelLabel',
     singleLine: true,

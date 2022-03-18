@@ -1,5 +1,18 @@
 # gestaltjs
 
+## 0.7.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @gestaltjs/core@0.7.3
+  - @gestaltjs/build@0.7.3
+  - @gestaltjs/check@0.7.3
+  - @gestaltjs/db@0.7.3
+  - @gestaltjs/lint@0.7.3
+  - @gestaltjs/serve@0.7.3
+  - @gestaltjs/test@0.7.3
+
 ## 0.7.2
 
 ### Patch Changes

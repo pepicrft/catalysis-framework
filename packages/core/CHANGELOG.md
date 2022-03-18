@@ -1,5 +1,11 @@
 # @gestaltjs/core
 
+## 0.7.3
+
+### Patch Changes
+
+- Fix log levels not being print
+
 ## 0.7.2
 
 ### Patch Changes
