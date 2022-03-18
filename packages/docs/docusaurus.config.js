@@ -9,7 +9,7 @@ const config = {
   title: 'GestaltJS',
   tagline:
     'A batteries-included opinionated framework for building web, desktop, and mobile apps with Javascript',
-  url: 'https://docs.gestaltjs.com',
+  url: 'https://docs.gestaltjs.org',
   baseUrl: '/',
   staticDirectories: ['static'],
   onBrokenLinks: 'throw',
