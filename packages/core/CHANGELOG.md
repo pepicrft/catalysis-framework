@@ -1,5 +1,11 @@
 # @gestaltjs/core
 
+## 0.7.2
+
+### Patch Changes
+
+- Disable custom level formatters
+
 ## 0.7.1
 
 ### Patch Changes

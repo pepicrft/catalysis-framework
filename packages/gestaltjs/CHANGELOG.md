@@ -1,5 +1,19 @@
 # gestaltjs
 
+## 0.7.2
+
+### Patch Changes
+
+- Disable custom level formatters
+- Updated dependencies
+  - @gestaltjs/build@0.7.2
+  - @gestaltjs/check@0.7.2
+  - @gestaltjs/core@0.7.2
+  - @gestaltjs/db@0.7.2
+  - @gestaltjs/lint@0.7.2
+  - @gestaltjs/serve@0.7.2
+  - @gestaltjs/test@0.7.2
+
 ## 0.7.1
 
 ### Patch Changes
