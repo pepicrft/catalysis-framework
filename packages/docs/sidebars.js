@@ -18,6 +18,7 @@ const sidebars = {
   contributorsSidebar: [
     'contributors/get-started',
     'contributors/architecture',
+    'contributors/errors',
     'contributors/logging',
     'contributors/release',
     'contributors/core-team',
