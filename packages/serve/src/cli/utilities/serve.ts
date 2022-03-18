@@ -1,4 +1,5 @@
 import { app } from '@gestaltjs/core/cli'
+import logger from '../logger'
 import express from 'express'
 
 async function serve(app: app.App) {
@@ -12,7 +13,7 @@ async function serve(app: app.App) {
   })
 
   server.listen(port, () => {
-    console.log(`${app.configuration.name} being served on port ${port}`)
+    logger().log(`${app.configuration.name} being served on port ${port}`)
   })
 }
 
