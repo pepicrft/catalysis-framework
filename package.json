@@ -88,7 +88,8 @@
       "prettier"
     ],
     "rules": {
-      "no-console": "error"
+      "no-console": "error",
+      "no-useless-catch": "error"
     },
     "env": {
       "node": true,

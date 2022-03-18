@@ -8,7 +8,7 @@ const runCreateApp = () => {
   run(void 0, import.meta.url)
     .then(flush)
     .catch((thrownError) => {
-      return error.handler(thrownError).then(Errors.handle)
+      return error.handler(thrownError)
     })
 }
 
