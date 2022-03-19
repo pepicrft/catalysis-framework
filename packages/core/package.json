@@ -18,6 +18,10 @@
     "./framework": {
       "import": "./dist/framework/index.js",
       "types": "./dist/framework/index.d.ts"
+    },
+    "./shared": {
+      "import": "./dist/shared/index.js",
+      "types": "./dist/shared/index.d.ts"
     }
   },
   "files": [

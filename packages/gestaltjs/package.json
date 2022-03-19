@@ -25,6 +25,10 @@
     "./support": {
       "import": "./dist/framework/support.js",
       "types": "./dist/framework/support.d.ts"
+    },
+    "./configuration": {
+      "import": "./dist/framework/configuration.js",
+      "types": "./dist/framework/configuration.d.ts"
     }
   },
   "scripts": {

@@ -8,6 +8,14 @@ export default defineConfig({
         __dirname,
         'packages/core/src/cli/index.ts'
       ),
+      '@gestaltjs/core/framework': path.join(
+        __dirname,
+        'packages/core/src/framework/index.ts'
+      ),
+      '@gestaltjs/core/shared': path.join(
+        __dirname,
+        'packages/core/src/shared/index.ts'
+      ),
     },
   },
 })

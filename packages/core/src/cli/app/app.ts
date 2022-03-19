@@ -1,4 +1,4 @@
-import type { Configuration } from './configuration'
+import type Configuration from '../../shared/configuration'
 
 /** The UI framework to use for a given route. */
 export type UIFramework = 'react' | 'svelte' | 'vue'

@@ -38,6 +38,28 @@ const configuration = async () => {
       plugins: [dts()],
       external: [...(await external(__dirname))],
     },
+    {
+      input: [path.join(__dirname, 'src/framework/configuration.ts')],
+      output: [
+        {
+          dir: path.join(distDir(__dirname), 'framework'),
+          format: 'esm',
+        },
+      ],
+      plugins: [...plugins(__dirname)],
+      external: [...(await external(__dirname))],
+    },
+    {
+      input: [path.join(__dirname, 'src/framework/configuration.ts')],
+      output: [
+        {
+          dir: path.join(distDir(__dirname), 'framework'),
+          format: 'esm',
+        },
+      ],
+      plugins: [dts()],
+      external: [...(await external(__dirname))],
+    },
   ]
 }
 

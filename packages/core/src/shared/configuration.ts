@@ -9,4 +9,5 @@ export const Schema = z.object({
 })
 
 /** Type that represents a gestalt.config.toml file */
-export type Configuration = z.infer<typeof Schema>
+type Configuration = z.infer<typeof Schema>
+export default Configuration

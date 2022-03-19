@@ -4,8 +4,8 @@ import { Abort } from '../error'
 import constants from '../constants'
 import { exists as fileExists, readFile } from '../fs'
 import { findUp as findPathUp, dirname, join as pathJoin } from '../path'
-import type { Configuration } from './configuration'
-import { Schema as ConfigurationSchema } from './configuration'
+import type Configuration from '../../shared/configuration'
+import { Schema as ConfigurationSchema } from '../../shared/configuration'
 
 export const DirectoryNotFoundError = (directory: string) => {
   return new Abort(`The following directory was not found ${directory}`, {

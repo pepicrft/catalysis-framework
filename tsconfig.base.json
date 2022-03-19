@@ -15,6 +15,7 @@
     "declaration": true,
     "inlineSourceMap": true,
     "paths": {
+      "@gestaltjs/core/shared": ["../../core/src/shared/index.ts"],
       "@gestaltjs/core/framework": ["../../core/src/framework/index.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
       "@gestaltjs/testing": ["../../testing/src/index.ts"]
