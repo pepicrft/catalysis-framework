@@ -5,80 +5,51 @@ import { external, plugins, distDir } from '../../configurations/rollup.config'
 
 const configuration = async () => {
   const coreExternal = [...(await external(__dirname))]
+  const publicFiles = ['src/framework/index.ts', 'src/shared/index.ts']
+
+  const cliFiles = [
+    'src/cli/index.ts',
+    'src/cli/logger/transport.ts',
+    ...publicFiles,
+  ]
 
   return [
-    {
-      input: path.join(__dirname, 'src/cli/index.ts'),
-      output: [
+    ...cliFiles.map((filePath) => {
+      return {
+        input: path.join(__dirname, filePath),
+        output: [
+          {
+            file: path.join(
+              distDir(__dirname),
+              filePath.replace('src/', '').replace('.ts', '.js')
+            ),
+            format: 'esm',
+            exports: 'auto',
+          },
+        ],
+        plugins: plugins(__dirname),
+        external: coreExternal,
+      }
+    }),
+    ...publicFiles.flatMap((filePath) => {
+      return [
         {
-          file: path.join(distDir(__dirname), 'cli/index.js'),
-          format: 'esm',
-          exports: 'auto',
+          input: path.join(__dirname, filePath),
+          output: [
+            {
+              file: path.join(
+                distDir(__dirname),
+                filePath.replace('src/', '').replace('.ts', 'd.ts')
+              ),
+              format: 'esm',
+              exports: 'auto',
+            },
+          ],
+          plugins: [dts()],
+          external: coreExternal,
         },
-      ],
-      plugins: plugins(__dirname),
-      external: coreExternal,
-    },
-    {
-      input: path.join(__dirname, 'src/cli/logger/transport.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'cli/logger/transport.js'),
-          format: 'esm',
-          exports: 'auto',
-        },
-      ],
-      plugins: plugins(__dirname),
-      external: coreExternal,
-    },
-    {
-      input: path.join(__dirname, 'src/framework/index.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'framework/index.js'),
-          format: 'esm',
-          exports: 'auto',
-        },
-      ],
-      plugins: plugins(__dirname),
-      external: coreExternal,
-    },
-    {
-      input: path.join(__dirname, 'src/framework/index.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'framework/index.d.ts'),
-          format: 'esm',
-          exports: 'auto',
-        },
-      ],
-      plugins: [dts()],
-      external: coreExternal,
-    },
-    {
-      input: path.join(__dirname, 'src/shared/index.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'shared/index.js'),
-          format: 'esm',
-          exports: 'auto',
-        },
-      ],
-      plugins: plugins(__dirname),
-      external: coreExternal,
-    },
-    {
-      input: path.join(__dirname, 'src/shared/index.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'shared/index.d.ts'),
-          format: 'esm',
-          exports: 'auto',
-        },
-      ],
-      plugins: [dts()],
-      external: coreExternal,
-    },
+      ]
+    }),
   ]
 }
 
