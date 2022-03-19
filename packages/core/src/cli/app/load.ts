@@ -31,6 +31,7 @@ export default async function load(from: string): Promise<App> {
   return {
     configuration,
     directory,
+    routes: [],
   }
 }
 
@@ -63,7 +64,7 @@ async function locateAppDirectory(from: string): Promise<string> {
     cwd: from,
   })
   if (!configPath) {
-    throw ConfigFileNotFoundError
+    throw ConfigFileNotFoundError()
   }
   return dirname(configPath)
 }
