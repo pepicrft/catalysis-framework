@@ -13,8 +13,6 @@ Similarly, the module that knows how to lint the app doesn't know how to build i
 Thanks to organizing the features horizontally we can add new features without disrupting others,
 and contribute to an area of the project without having to familiarize ourselves with the rest.
 
-![](./images/architecture-stack.png)
-
 | Package/s | Responsibilities | Examples |
 | --- | --- | ---- |
 | `gestaltjs` | It represents the CLI and the public interface to the frameworks. Users should only import code from here | oclif CLI configuration, public `index.ts` |
