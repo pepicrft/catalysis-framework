@@ -20,7 +20,7 @@ export default defineConfig({
       },
       {
         text: 'Blog',
-        link: '/blog/',
+        link: '/blog/2022-03-14-cohesive-framework',
         activeMatch: '^/blog/',
       },
       {
@@ -39,6 +39,7 @@ export default defineConfig({
 
     sidebar: {
       '/contributors/': getContributorsSidebar(),
+      '/blog/': getBlogSidebar(),
       // '/config/': getConfigSidebar(),
       // '/': getGuideSidebar()
     },
@@ -54,6 +55,21 @@ function getContributorsSidebar() {
         { text: 'Architecture', link: '/contributors/architecture' },
         { text: 'Error handling', link: '/contributors/errors' },
         { text: 'Logging', link: '/contributors/logging' },
+      ],
+    },
+  ]
+}
+
+function getBlogSidebar() {
+  return [
+    {
+      text: 'Posts',
+      children: [
+        {
+          text: 'Building a cohesive framework experience that sparks joy',
+          link: '/blog/2022-03-14-cohesive-framework',
+        },
+        { text: 'Why GestaltJS', link: '/blog/2022-01-19-why-gestalt' },
       ],
     },
   ]
