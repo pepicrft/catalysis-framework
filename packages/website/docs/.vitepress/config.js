@@ -38,6 +38,11 @@ export default defineConfig({
         activeMatch: '/guide/',
       },
       {
+        text: 'Reference',
+        link: '/reference/commands/build',
+        activeMatch: '^/reference/',
+      },
+      {
         text: 'Contributors',
         link: '/contributors/get-started',
         activeMatch: '^/contributors/',
@@ -71,6 +76,7 @@ export default defineConfig({
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
       '/catalysis/': getCatalysisSidebar(),
+      '/reference/': getReferenceSidebar(),
     },
   },
 })
@@ -124,6 +130,20 @@ function getCatalysisSidebar() {
         {
           text: 'Introduction',
           link: '/catalysis/introduction',
+        },
+      ],
+    },
+  ]
+}
+
+function getReferenceSidebar() {
+  return [
+    {
+      text: 'Commands',
+      children: [
+        {
+          text: 'gestalt build',
+          link: '/reference/commands/build',
         },
       ],
     },
