@@ -17,5 +17,5 @@
   ],
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@gestaltjs/testing"]
+  "ignore": ["@gestaltjs/testing", "@gestaltjs/website"]
 }
