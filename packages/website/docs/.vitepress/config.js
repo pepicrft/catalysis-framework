@@ -32,11 +32,20 @@ export default defineConfig({
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
     nav: [
-      { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
+      {
+        text: 'Guide',
+        link: '/guide/why-gestaltjs',
+        activeMatch: '^/$|^/guide/',
+      },
       {
         text: 'Contributors',
         link: '/contributors/get-started',
         activeMatch: '^/contributors/',
+      },
+      {
+        text: 'Catalysis',
+        link: '/catalysis/introduction',
+        activeMatch: '^/catalysis/',
       },
       {
         text: 'Blog',
@@ -61,6 +70,7 @@ export default defineConfig({
       '/guide/': getGuideSidebar(),
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
+      '/catalysis/': getCatalysisSidebar(),
     },
   },
 })
@@ -101,6 +111,20 @@ function getBlogSidebar() {
           link: '/blog/2022-03-14-cohesive-framework',
         },
         { text: 'Why GestaltJS', link: '/blog/2022-01-19-why-gestalt' },
+      ],
+    },
+  ]
+}
+
+function getCatalysisSidebar() {
+  return [
+    {
+      text: 'Catalysis',
+      children: [
+        {
+          text: 'Introduction',
+          link: '/catalysis/introduction',
+        },
       ],
     },
   ]

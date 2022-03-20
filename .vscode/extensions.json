@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "wix.vscode-import-cost",
     "blodwynn.featurehighlight",
-    "alexkrechik.cucumberautocomplete"
+    "alexkrechik.cucumberautocomplete",
+    "octref.vetur"
   ]
 }
