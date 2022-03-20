@@ -35,7 +35,7 @@ export default defineConfig({
       {
         text: 'Guide',
         link: '/guide/why-gestaltjs',
-        activeMatch: '^/$|^/guide/',
+        activeMatch: '/guide/',
       },
       {
         text: 'Contributors',
