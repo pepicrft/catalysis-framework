@@ -6,7 +6,14 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "clean": "shx rm -rf .vitepress/dist",
+    "lint": "true",
+    "lint:fix": "true",
+    "test": "true",
+    "test:watch": "true",
+    "test:ci": "true",
+    "tsc": "true"
   },
   "devDependencies": {
     "vitepress": "^0.22.3"
