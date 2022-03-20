@@ -20,9 +20,10 @@ You are the creators;
 we are the plumbers.
 
 
-Moreover,
-we are a framework that **builds for the long term.**
+**We are a framework that builds for the long term.**
+
 In a fast-paced world,
 where more frameworks favor short-term and somewhat clickbait-like and investors-backed experiences,
 it's becoming impossible for crafters to settle on a technology stack that can sustain their ideas over time.
-We are a slow-paced framework because **ideas need time to emerge and click**.
+**We slow down** to let ideas arise and click to form a long-term vision we can execute on. Shortcuts have no space in the project, and every new building block or idea is well architected and tested before being integrated with the rest of the framework.
+
