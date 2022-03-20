@@ -13,5 +13,5 @@ features:
     details: We provide defaults for projects' common needs to get off your way in decision-making. Focus on building not plumbing.
   - title: Built for the long-term
     details: We are designed to last through a well architected and tested foundation and a healthy community that drives the project forward.
-footer: MIT Licensed | Copyright © 2021-present Craftweg
+footer: MIT Licensed | Copyright © 2021-present GestaltJS
 ---
