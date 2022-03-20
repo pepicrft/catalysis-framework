@@ -5,7 +5,7 @@ heroAlt: Logo image
 heroText: GestaltJS
 tagline: A framework for creators
 actionText: Get Started
-actionLink: /guide/
+actionLink: /guide/why-gestaltjs
 features:
   - title: Opinionated
     details: Through opinions we ensure consistency in projects and provide an beautifully integrated development experience.

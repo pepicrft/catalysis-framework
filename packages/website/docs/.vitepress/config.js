@@ -38,13 +38,24 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/guide/': getGuideSidebar(),
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
-      // '/config/': getConfigSidebar(),
-      // '/': getGuideSidebar()
     },
   },
 })
+
+function getGuideSidebar() {
+  return [
+    {
+      text: 'Introduction',
+      children: [
+        { text: 'Why GestaltJS?', link: '/guide/why-gestaltjs' },
+        { text: 'Get started', link: '/guide/get-started' },
+      ],
+    },
+  ]
+}
 
 function getContributorsSidebar() {
   return [
