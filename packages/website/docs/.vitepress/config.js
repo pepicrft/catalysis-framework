@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'GestaltJS',
   description:
-    'An opinionted and batteriees-included Javascript framework for building web and desktop apps.',
+    'An opinionted and batteries-included Javascript framework for building web and desktop apps.',
   head: [
     ['meta', { name: 'twitter:site', content: '@gestaltjs' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
