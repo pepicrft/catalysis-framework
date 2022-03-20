@@ -5,7 +5,7 @@ It's become the foundation for new forms of value exchange to emerge,
 leading to further innovation through new technologies and tools.
 Layers of abstractions aimed to ease the process of building,
 which paradoxically made it more overwhelming due to the number of options available.
-Crafters often spend more time figuring out the right tools for the job and setting them up to have an integrated experience.
+Crafters often spend most of their time figuring out the right tools for the job and setting them up to have an integrated experience.
 They struggle to gain **creative momentum**,
 and that's necessary for great ideas to flourish.
 
