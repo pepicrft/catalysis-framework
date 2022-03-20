@@ -11,6 +11,26 @@ export default defineConfig({
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
+    head: [
+      ['meta', { name: 'twitter:site', content: '@gestaltjs' }],
+      ['meta', { name: 'twitter:card', content: 'summary' }],
+      [
+        'meta',
+        {
+          name: 'twitter:image',
+          content:
+            'https://raw.githubusercontent.com/gestaltjs/gestalt/main/packages/website/docs/public/logo.png',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+      ],
+    ],
     nav: [
       { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
       {
