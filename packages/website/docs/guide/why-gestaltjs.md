@@ -11,7 +11,7 @@ and that's necessary for great ideas to flourish.
 
 **GestaltJS builds upon simplicity to create a space for crafters to gain building momentum.**
 We are a framework for building desktop and web apps and sites with web technologies.
-We [make simple things simple, and complex things possible](goodreads.com/quotes/8636264-simple-things-should-be-simple-complex-things-should-be-possible),
+We [make simple things simple, and complex things possible](https://goodreads.com/quotes/8636264-simple-things-should-be-simple-complex-things-should-be-possible),
 and we achieve so through a set of conventions and abstractions that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) intricacies.
 You'll experience the same throughout our documentation.
 We refrain from using terminology and concepts that might make you feel like you don't know enough.
