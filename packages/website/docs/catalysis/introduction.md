@@ -19,5 +19,5 @@ Mentees are a great source of ideas and energy that are key to building a divers
 
 :::info Gestalt and Catalysis
 
-[Gestalt](https://www.verywellmind.com/what-is-gestalt-psychology-2795808) is a German word that roughly means *"configuration"* or the way things are put together to form a whole object. It captures the GestaltJS' idea of grouping smaller pieces to form an integrated development experience. [Catalysis](https://en.wikipedia.org/wiki/Catalysis), which increases the rate of a chemical reaction by adding a substance known as a catalyst, makes the Gestalt blocks react to form a ready-to-use and distributable piece of software.
+[Gestalt](https://www.verywellmind.com/what-is-gestalt-psychology-2795808) is a German word that roughly means *"configuration"* or the way things are put together to form a whole object. It captures the GestaltJS' idea of grouping smaller pieces to form an integrated development experience. [Catalysis](https://en.wikipedia.org/wiki/Catalysis), a process that increases the rate of a chemical reaction by adding a substance known as a catalyst, makes the Gestalt blocks react to form a ready-to-use and distributable piece of software.
 :::
