@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'GestaltJS',
+  title: 'Gestalt',
   description:
     'An opinionted and batteries-included Javascript framework for building web and desktop apps.',
   head: [
@@ -86,7 +86,7 @@ function getGuideSidebar() {
     {
       text: 'Introduction',
       children: [
-        { text: 'Why GestaltJS?', link: '/guide/why-gestaltjs' },
+        { text: 'Why Gestalt?', link: '/guide/why-gestaltjs' },
         { text: 'Get started', link: '/guide/get-started' },
       ],
     },
@@ -116,7 +116,7 @@ function getBlogSidebar() {
           text: 'Building a cohesive framework experience that sparks joy',
           link: '/blog/2022-03-14-cohesive-framework',
         },
-        { text: 'Why GestaltJS', link: '/blog/2022-01-19-why-gestalt' },
+        { text: 'Why Gestalt', link: '/blog/2022-01-19-why-gestalt' },
       ],
     },
   ]

@@ -2,7 +2,7 @@
   "name": "@gestaltjs/website",
   "version": "0.1.0",
   "private": true,
-  "description": "GestaltJS' website",
+  "description": "Gestalt' website",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",

@@ -2,7 +2,7 @@
   "name": "@gestaltjs/catalysis",
   "version": "0.1.0",
   "private": true,
-  "description": "An open-source tool for distributing GestaltJS apps",
+  "description": "An open-source tool for distributing Gestalt apps",
   "scripts": {
     "dev": "true",
     "build": "true",
