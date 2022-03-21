@@ -160,5 +160,14 @@ function getReferenceSidebar() {
         },
       ],
     },
+    {
+      text: 'Configuration',
+      children: [
+        {
+          text: 'gestalt.config.js',
+          link: '/reference/configuration/gestalt',
+        },
+      ],
+    },
   ]
 }
