@@ -41,12 +41,12 @@ And last but not least,
 we should be **consistent** in communicating.
 Otherwise, using Gestalt will feel like talking to different people who use different tones, words, and styles.
 
-### Logging in GestaltJS
+### Logging in Gestalt
 
 To help provide the above logging experience,
 `@gestaltjs/core` includes a [`logger`](https://github.com/gestaltjs/gestalt/blob/main/packages/core/src/cli/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
 The main reason for choosing Pino is its performance thanks to the usage of [Node Worker Threads](https://nodejs.org/api/worker_threads.html).
-When GestaltJS are running in production,
+When Gestalt are running in production,
 it's vital that logging doesn't make the processing of requests slower.
 
 Logged messages can include a **log level**.

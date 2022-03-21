@@ -30,7 +30,7 @@ but it's insufficient.
 Chances are that without a conductor,
 the various instrumentalists won't play in harmony.
 Or they'll start sounding in harmony, but things start to get hairy after new members join the orchestra.
-**Rails is a conductor framework, and we want GestaltJS to be a conductor.**
+**Rails is a conductor framework, and we want Gestalt to be a conductor.**
 
 The above can be illustrated with the following diagram.
 Rails development is closer to building complex structures with [LEGO](https://www.lego.com).
@@ -54,13 +54,13 @@ As a consequence, users find themselves *deleting `node_modules`* because it's t
 So on top of having to make many decisions,
 **you have to deal with the frustration of working with a brittle setup that falls apart frequently.**
 
-GestaltJS will start by combining and shimming dependencies like many frameworks do.
+Gestalt will start by combining and shimming dependencies like many frameworks do.
 Still, some subtle differences will make a massive difference in the experience developers will get.
 
 First, the framework will come with [**strong opinions loosely held**](https://feld.com/archives/2019/05/bad-entrepreneurial-cliches-strong-opinions-loosely-held).
 Developers already have to make many decisions when building apps,
 and we don't want to add more to the list.
-If what you are trying to do is shared across web apps, GestaltJS will have an opinion.
+If what you are trying to do is shared across web apps, Gestalt will have an opinion.
 
 Second, we'll **abstract away the framework's internals**.
 If we use [Vitest](https://vitest.dev/) for running unit tests,
@@ -72,8 +72,8 @@ And breaking projects is not fun for users.
 We don't want to be a framework that requires you to manually migrate things.
 
 And last, we'll **flatten the dependency graph** by vendoring dependencies with a bundling tool like [Rollup](https://rollupjs.org/guide/en/).
-Thanks to that we can run [acceptance tests](https://en.wikipedia.org/wiki/Acceptance_testing) with the exact same code that users will get when installing GestaltJS,
+Thanks to that we can run [acceptance tests](https://en.wikipedia.org/wiki/Acceptance_testing) with the exact same code that users will get when installing Gestalt,
 and therefore minimize the chances of developers coming across the need for *deleting `node_modules`*.
 Another solution would be changing the ecosystem's mindset around dependencies and testing, but that's a much more significant undertaking. We'll plant our seed there through evangelizing excellent testing practices and building fewer but larger packages.
 
-**GestaltJS development will feel cohesive and spark joy.**
+**Gestalt development will feel cohesive and spark joy.**

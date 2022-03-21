@@ -14,13 +14,13 @@ The chance is that we didn't think about that,
 and users will get a non-actionable stack trace.
 **Bad errors ruin the developer experience.**
 But what makes great errors?
-Let's dive into a set of principles that GestaltJS errors must embrace.
+Let's dive into a set of principles that Gestalt errors must embrace.
 
 
 ## Designing great errors
 
 - **Clear:** It should answer a straightforward question: *What happened?* We need to make an effort to understand errors to explain them to users in plain words. If errors are coming from third-party dependencies, the errors that we get from them are not self-descriptive. Translate them into the users' language.
-- **Actionable:** When users get an error, they want to know what to do next. In scenarios where we know what to do next, for example, when they are trying to run a CLI command outside of a GestaltJS project, we should provide a set of next steps that they can follow. If we leave users with no actions, the action that they'll most likely take will be opening GitHub issues, which increases our support load.
+- **Actionable:** When users get an error, they want to know what to do next. In scenarios where we know what to do next, for example, when they are trying to run a CLI command outside of a Gestalt project, we should provide a set of next steps that they can follow. If we leave users with no actions, the action that they'll most likely take will be opening GitHub issues, which increases our support load.
 
 ## Error module
 
@@ -45,7 +45,7 @@ const DirectoryNotFoundError = new error.Abort("The directory app/ was not found
 // Bug error
 
 const TestFailedError = new error.Bug("The test execution failed unexpectedly", {
-    cause: "There might be a bug in the logic in the contract between GestaltJS and the testing framework",
+    cause: "There might be a bug in the logic in the contract between Gestalt and the testing framework",
 })
 ```
 

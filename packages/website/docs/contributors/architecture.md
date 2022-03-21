@@ -1,6 +1,6 @@
 # Architecture
 
-GestaltJS follows a **modular architecture** to make the code easier to maintain and contribute to.
+Gestalt follows a **modular architecture** to make the code easier to maintain and contribute to.
 Modules,
 which we represent and distribute as NPM packages,
 have well-defined responsibilities and clear boundaries (APIs) that abstract away implementation details.

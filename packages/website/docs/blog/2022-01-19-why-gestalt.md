@@ -1,4 +1,4 @@
-# Why GestaltJS
+# Why Gestalt
 
 Web development has gone through a lot of innovation recently.
 UI abstractions made it easy to build componentized websites built upon community-built building blocks (e.g., [React](https://reactjs.org/), [Vue](https://vuejs.org/), and [Svelte](https://svelte.dev/)).
