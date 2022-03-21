@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest'
 import tempy from 'tempy'
 import toml from '@iarna/toml'
-import { join as pathJoin } from '../path'
-import { writeFile } from '../fs'
-import load, { DirectoryNotFoundError, ConfigFileNotFoundError } from './load'
+import { join as pathJoin } from '../../path'
+import { writeFile } from '../../fs'
+import load, { DirectoryNotFoundError, ConfigFileNotFoundError } from './app'
 
 describe('load', () => {
   it('throws an error when the directory does not exist', async () => {
