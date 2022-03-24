@@ -29,9 +29,9 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.14.0",
-    "@typescript-eslint/parser": "^5.14.0",
-    "eslint": "^8.6.0"
+    "@typescript-eslint/eslint-plugin": "5.16.0",
+    "@typescript-eslint/parser": "5.16.0",
+    "eslint": "8.11.0"
   },
   "peerDependencies": {
     "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0"

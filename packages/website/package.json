@@ -16,6 +16,6 @@
     "tsc": "true"
   },
   "devDependencies": {
-    "vitepress": "^0.22.3"
+    "vitepress": "0.22.3"
   }
 }
