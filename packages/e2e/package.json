@@ -16,9 +16,9 @@
     ]
   },
   "devDependencies": {
-    "@types/cucumber": "^6.0.1",
-    "cucumber": "^6.0.5",
-    "cucumber-junit-formatter": "^0.2.2",
-    "cucumber-pretty": "^6.0.1"
+    "@types/cucumber": "6.0.1",
+    "cucumber": "6.0.5",
+    "cucumber-junit-formatter": "0.2.2",
+    "cucumber-pretty": "6.0.1"
   }
 }
