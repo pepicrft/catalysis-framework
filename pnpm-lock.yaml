@@ -51,7 +51,7 @@ importers:
       ts-node: 10.7.0
       typescript: 4.6.3
       vite: 2.8.6
-      vitest: 0.2.8
+      vitest: 0.7.11
     devDependencies:
       '@changesets/cli': 2.21.1
       '@nrwl/cli': 13.8.5
@@ -100,7 +100,7 @@ importers:
       ts-node: 10.7.0_ee885bc7281b682b6adbed6ae09ee090
       typescript: 4.6.3
       vite: 2.8.6
-      vitest: 0.2.8
+      vitest: 0.7.11
 
   packages/build:
     specifiers:
@@ -7184,8 +7184,8 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
-  /tinyspy/0.2.10:
-    resolution: {integrity: sha512-Qij6rGWCDjWIejxCXXVi6bNgvrYBp3PbqC4cBP/0fD6WHDOHCw09Zd13CsxrDqSR5PFq01WeqDws8t5lz5sH0A==}
+  /tinyspy/0.3.0:
+    resolution: {integrity: sha512-c5uFHqtUp74R2DJE3/Efg0mH5xicmgziaQXMm/LvuuZn3RdpADH32aEGDRyCzObXT1DNfwDMqRQ/Drh1MlO12g==}
     engines: {node: '>=14.0.0'}
     dev: true
 
@@ -7547,9 +7547,9 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.2.8:
-    resolution: {integrity: sha512-shzN00EkvUNzP8cSykhrOCwB7MlGxcwJNjOtHhbayvexGnqX6oLOfEp3OQixWdDJpEaqNiE3Lcie0WsOnoQ3Og==}
-    engines: {node: '>=14.14.0'}
+  /vitest/0.7.11:
+    resolution: {integrity: sha512-xCEUBCpqiIVhUFIMCKKXDZ/bcPLk2EhPmTFA9qw+Kf+B2d/gm3ZBdUAMa3jIZNZ/d3esji5H6XZPNAk//9K4Kw==}
+    engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
       '@vitest/ui': '*'
@@ -7571,7 +7571,7 @@ packages:
       chai: 4.3.6
       local-pkg: 0.4.1
       tinypool: 0.1.2
-      tinyspy: 0.2.10
+      tinyspy: 0.3.0
       vite: 2.8.6
     transitivePeerDependencies:
       - less
