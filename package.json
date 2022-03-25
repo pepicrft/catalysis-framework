@@ -51,7 +51,7 @@
     "install": "0.13.0",
     "pathe": "0.2.0",
     "picocolors": "1.0.0",
-    "prettier": "2.6.0",
+    "prettier": "2.6.1",
     "rimraf": "3.0.2",
     "rollup": "2.70.1",
     "rollup-plugin-dts": "4.2.0",
@@ -62,12 +62,12 @@
     "shx": "0.3.4",
     "tmp": "0.2.1",
     "ts-node": "10.7.0",
-    "typescript": "4.6.2",
-    "vitest": "0.2.8",
+    "typescript": "4.6.3",
+    "vitest": "0.7.11",
     "vite": "2.8.6",
-    "@nrwl/cli": "13.8.5",
-    "@nrwl/tao": "13.8.5",
-    "@nrwl/workspace": "13.8.5"
+    "@nrwl/cli": "13.9.4",
+    "@nrwl/tao": "13.9.4",
+    "@nrwl/workspace": "13.9.4"
   },
   "prettier": {
     "trailingComma": "es5",
