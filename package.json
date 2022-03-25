@@ -51,7 +51,7 @@
     "install": "0.13.0",
     "pathe": "0.2.0",
     "picocolors": "1.0.0",
-    "prettier": "2.6.0",
+    "prettier": "2.6.1",
     "rimraf": "3.0.2",
     "rollup": "2.70.1",
     "rollup-plugin-dts": "4.2.0",
