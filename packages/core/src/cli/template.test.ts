@@ -40,7 +40,7 @@ describe('scaffold handlebar file', () => {
       const handlebarData = {
         name: 'my-cool-project',
       }
-      const sourceFileName = 'hello-{{name}}.txt.hbs'
+      const sourceFileName = '{{name}}.txt.hbs'
       const sourceFile = joinPath(sourceDirectory, sourceFileName)
       const sourceContent = '{{name}}'
       mkDir(sourceDirectory)
@@ -51,15 +51,16 @@ describe('scaffold handlebar file', () => {
         data: handlebarData,
       }
       // When
-      scaffold(scaffoldOptions)
-      // Then
-      expect(exists(targetDirectory))
-      const expectedFile = 'hello-my-cool-project.txt'
-      const targetFile = joinPath(targetDirectory, expectedFile)
-      expect(exists(targetFile))
-      const expectedContent = 'my-cool-project'
-      const targetContent = readFile(targetFile)
-      expect(targetContent).toEqual(expectedContent)
+      scaffold(scaffoldOptions).then(() => {
+        // Then
+        expect(exists(targetDirectory))
+        const expectedFile = joinPath(targetDirectory, 'my-cool-project.txt')
+        expect(exists(expectedFile))
+        const expectedContent = 'my-cool-project'
+        readFile(expectedFile).then((content) => {
+          expect(content).toEqual(expectedContent)
+        })
+      })
     })
   })
 })

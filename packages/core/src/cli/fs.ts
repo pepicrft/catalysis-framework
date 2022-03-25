@@ -4,6 +4,10 @@ export async function readFile(path: string): Promise<string> {
   return fs.readFile(path, 'utf-8')
 }
 
+export function readFileSync(path: string): string {
+  return fs.readFileSync(path, 'utf-8')
+}
+
 export async function writeFile(path: string, data: string): Promise<void> {
   return fs.writeFile(path, data)
 }

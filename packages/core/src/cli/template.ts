@@ -1,6 +1,6 @@
 import fg from 'fast-glob'
 import { join as joinPath, relative, dirname } from './path'
-import { copyFile, mkDir, readFile, writeFile } from './fs'
+import { copyFile, mkDir, writeFile, readFileSync } from './fs'
 
 export type ScaffoldOptions = {
   sourceDirectory: string
@@ -8,6 +8,11 @@ export type ScaffoldOptions = {
   data: { [key: string]: string }
 }
 
+/**
+ * Scaffolds files from templates substituting handlebars by desired values.
+ * @param scaffoldOptions {{ScaffoldOptions}} Object containing source and target
+ * directories as well has handlebar data.
+ */
 export async function scaffold(scaffoldOptions: ScaffoldOptions) {
   const entries = await fg(
     [joinPath(scaffoldOptions.sourceDirectory, '**/*')],
@@ -17,26 +22,23 @@ export async function scaffold(scaffoldOptions: ScaffoldOptions) {
     }
   )
   for (let i = 0; i < entries.length; i++) {
-    const relativePath = relative(scaffoldOptions.sourceDirectory, entries[i])
+    const sourceFile = entries[i]
+    const relativePath = relative(scaffoldOptions.sourceDirectory, sourceFile)
     let targetFile = joinPath(scaffoldOptions.targetDirectory, relativePath)
     const targetFileDirectory = dirname(targetFile)
     mkDir(targetFileDirectory)
     if (targetFile.endsWith('.hbs')) {
-      const templateContent = readFile(targetFile)
-      let targetData = ''
+      let fileContent = readFileSync(sourceFile)
       for (let handlebar in scaffoldOptions.data) {
         const value = scaffoldOptions.data[handlebar]
         handlebar = ['{{', handlebar, '}}'].join('')
-        templateContent.then((content) => {
-          targetData = content.replace(handlebar, value)
-          // make this more robust, what if there are spaces?
-        })
-        targetFile.replace(handlebar, value)
+        fileContent = fileContent.replace(handlebar, value)
+        targetFile = targetFile.replace(handlebar, value)
       }
       targetFile = targetFile.replace('.hbs', '')
-      writeFile(targetFile, targetData)
+      writeFile(targetFile, fileContent)
     } else {
-      await copyFile(entries[i], targetFile)
+      await copyFile(sourceFile, targetFile)
     }
   }
 }
