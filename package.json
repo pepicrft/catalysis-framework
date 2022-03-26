@@ -37,7 +37,7 @@
     "@typescript-eslint/eslint-plugin": "5.16.0",
     "@typescript-eslint/parser": "5.16.0",
     "cross-env": "7.0.3",
-    "esbuild": "0.14.27",
+    "esbuild": "0.14.28",
     "eslint": "8.11.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
