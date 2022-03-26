@@ -64,7 +64,7 @@
     "tempy": "2.0.0",
     "terminal-link": "3.0.0",
     "vite": "2.8.6",
-    "zod": "3.14.2"
+    "zod": "3.14.3"
   },
   "engine-strict": true,
   "engines": {
