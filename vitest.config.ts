@@ -16,6 +16,10 @@ export default defineConfig({
         __dirname,
         'packages/core/src/shared/index.ts'
       ),
+      '@gestaltjs/testing': path.join(
+        __dirname,
+        'packages/testing/src/index.ts'
+      ),
     },
   },
 })

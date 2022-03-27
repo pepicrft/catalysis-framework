@@ -1,48 +1,50 @@
 {
-  "name": "@gestaltjs/testing",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Set of internal utilities for testing",
-  "keywords": [
-    "gestalt",
-    "gestaltjs",
-    "web"
-  ],
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": [
-    "/dist"
-  ],
-  "scripts": {
-    "clean": "shx rm -rf dist",
-    "prepack": "pnpm run build",
-    "build": "true",
-    "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
-    "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-testing.xml",
-    "tsc": "tsc --noEmit"
-  },
-  "eslintConfig": {
-    "extends": [
-      "../../package.json"
+    "name": "@gestaltjs/testing",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Set of internal utilities for testing",
+    "keywords": [
+        "gestalt",
+        "gestaltjs",
+        "web"
+    ],
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "clean": "shx rm -rf dist",
+        "prepack": "pnpm run build",
+        "build": "true",
+        "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
+        "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-testing.xml",
+        "tsc": "tsc --noEmit"
+    },
+    "eslintConfig": {
+        "extends": [
+            "../../package.json"
+        ]
+    },
+    "devDependencies": {
+        "tempy": "^2.0.0"
+    },
+    "engine-strict": true,
+    "engines": {
+        "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+    },
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
     ]
-  },
-  "devDependencies": {},
-  "engine-strict": true,
-  "engines": {
-    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ]
 }
