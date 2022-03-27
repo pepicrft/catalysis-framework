@@ -20,7 +20,7 @@ You are the creators;
 we are the plumbers.
 
 
-**We are a framework that builds for the long term.**
+Furthermore, **we are a framework that builds for the long term.**
 
 In a fast-paced world,
 where more frameworks favor short-term and somewhat clickbait-like and investors-backed experiences,
