@@ -6,7 +6,7 @@ import { writeFile, exists, readFile, mkDir } from './fs'
 
 describe('scaffold basic file', () => {
   it('scaffold template', async () => {
-    await temporary.directory((tmpDir) => {
+    await temporary.directory(async (tmpDir) => {
       // Given
       const sourceDirectory = joinPath(tmpDir, 'source')
       const targetDirectory = joinPath(tmpDir, 'target')
@@ -15,7 +15,7 @@ describe('scaffold basic file', () => {
       }
       const fileName = 'hello-world.txt'
       const sourceFile = joinPath(sourceDirectory, fileName)
-      mkDir(sourceDirectory)
+      await mkDir(sourceDirectory)
       writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
@@ -23,7 +23,7 @@ describe('scaffold basic file', () => {
         data: handlebarData,
       }
       // When
-      scaffold(scaffoldOptions)
+      await scaffold(scaffoldOptions)
       // Then
       const targetFile = joinPath(targetDirectory, fileName)
       expect(exists(targetFile))
@@ -33,7 +33,7 @@ describe('scaffold basic file', () => {
 
 describe('scaffold handlebar file', () => {
   it('scaffold template', async () => {
-    await temporary.directory((tmpDir) => {
+    await temporary.directory(async (tmpDir) => {
       // Given
       const sourceDirectory = joinPath(tmpDir, 'source')
       const targetDirectory = joinPath(tmpDir, 'target')
@@ -43,7 +43,7 @@ describe('scaffold handlebar file', () => {
       const sourceFileName = '{{name}}.txt.hbs'
       const sourceFile = joinPath(sourceDirectory, sourceFileName)
       const sourceContent = '{{name}}'
-      mkDir(sourceDirectory)
+      await mkDir(sourceDirectory)
       writeFile(sourceFile, sourceContent)
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
@@ -51,16 +51,14 @@ describe('scaffold handlebar file', () => {
         data: handlebarData,
       }
       // When
-      scaffold(scaffoldOptions).then(() => {
-        // Then
-        expect(exists(targetDirectory))
-        const expectedFile = joinPath(targetDirectory, 'my-cool-project.txt')
-        expect(exists(expectedFile))
-        const expectedContent = 'my-cool-project'
-        readFile(expectedFile).then((content) => {
-          expect(content).toEqual(expectedContent)
-        })
-      })
+      await scaffold(scaffoldOptions)
+      // Then
+      expect(exists(targetDirectory))
+      const expectedFile = joinPath(targetDirectory, 'my-cool-project.txt')
+      expect(exists(expectedFile))
+      const expectedContent = 'my-cool-project'
+      const targetContent = await readFile(expectedFile)
+      expect(targetContent).toEqual(expectedContent)
     })
   })
 })
