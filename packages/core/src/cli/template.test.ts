@@ -36,7 +36,7 @@ describe('scaffold handlebar file', () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const sourceDirectory = joinPath(tmpDir, 'source')
-      const targetDirectory = joinPath(tmpDir, 'target')
+      const targetDirectory = joinPath(tmpDir, '{{name}}')
       const handlebarData = {
         name: 'my-cool-project',
       }
@@ -54,7 +54,10 @@ describe('scaffold handlebar file', () => {
       await scaffold(scaffoldOptions)
       // Then
       expect(exists(targetDirectory))
-      const expectedFile = joinPath(targetDirectory, 'my-cool-project.txt')
+      const expectedFile = joinPath(
+        tmpDir,
+        'my-cool-project/my-cool-project.txt'
+      )
       expect(exists(expectedFile))
       const expectedContent = 'my-cool-project'
       const targetContent = await readFile(expectedFile)
