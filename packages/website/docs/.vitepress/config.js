@@ -32,7 +32,7 @@ export default defineConfig({
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
     algolia: {
-      apiKey: 'd1be651e2aa2a456406755d4983dad22',
+      apiKey: '77c0d7b65508f8626260896fcb575ed5',
       indexName: 'gestaltjs',
     },
     nav: [
