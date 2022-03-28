@@ -238,6 +238,6 @@ export function core(): Logger {
         ],
       },
     })
-  ).child("core")
+  ).child('core')
   return _core
 }
