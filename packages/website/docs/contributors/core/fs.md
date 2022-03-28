@@ -1,7 +1,7 @@
 # fs
 
 `fs` is a module that provides utilities for filesystem [I/O operations](https://en.wikipedia.org/wiki/Input/output).
-We abstract away the dependency with the runtime's (e.g. Node) to ensure compatibility across OSs and versions of Node, and support additional runtimes in the future.
+We abstract away the dependency with the runtime (e.g. Node) to ensure compatibility across OSs and versions of Node, and support additional runtimes in the future.
 
 ```ts
 import {fs} from "@gestaltjs/core"
