@@ -74,7 +74,6 @@ export default async (options: pino.TransportBaseOptions) => {
     messageFormat: (log, messageKey) => {
       const module = formatModule(`${log['module']}`)
       const level = pinoLogLevels[log.level as number]
-
       if (level) {
         const levelLabel = formatLevel(`${level}`)
         return `${levelLabel} ${module} ${log[messageKey]}`
