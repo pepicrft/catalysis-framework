@@ -108,6 +108,9 @@ function getContributorsSidebar() {
         { text: 'Error handling', link: '/contributors/errors' },
         { text: 'Logging', link: '/contributors/logging' },
         { text: 'Fixtures', link: '/contributors/fixtures' },
+        { text: "Core modules", children: [
+          { text: "fs", link: "contributors/core/fs"}
+        ]}
       ],
     },
   ]
