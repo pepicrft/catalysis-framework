@@ -107,6 +107,7 @@ function getContributorsSidebar() {
         { text: 'Architecture', link: '/contributors/architecture' },
         { text: 'Error handling', link: '/contributors/errors' },
         { text: 'Logging', link: '/contributors/logging' },
+        { text: 'Fixtures', link: '/contributors/fixtures' },
       ],
     },
   ]
