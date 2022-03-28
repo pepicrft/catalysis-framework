@@ -51,7 +51,7 @@
     "fast-glob": "3.2.11",
     "fs-extra": "10.0.1",
     "install": "0.13.0",
-    "nx": "^13.9.5",
+    "nx": "13.9.5",
     "pathe": "0.2.0",
     "picocolors": "1.0.0",
     "prettier": "2.6.1",
