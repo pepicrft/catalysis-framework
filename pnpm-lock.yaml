@@ -245,7 +245,7 @@ importers:
 
   packages/testing:
     specifiers:
-      tempy: ^2.0.0
+      tempy: 2.0.0
     devDependencies:
       tempy: 2.0.0
 
