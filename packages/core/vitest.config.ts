@@ -1,5 +1,3 @@
-import baseConfig from "../../vitest.config"
+import config from '../../configurations/vitest.config'
 
-export default {
-    ...baseConfig
-};
+export default config(__dirname)
