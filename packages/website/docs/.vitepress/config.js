@@ -105,12 +105,14 @@ function getContributorsSidebar() {
       children: [
         { text: 'Get started', link: '/contributors/get-started' },
         { text: 'Architecture', link: '/contributors/architecture' },
+        { text: 'Principles', link: '/contributors/principles' },
         { text: 'Error handling', link: '/contributors/errors' },
         { text: 'Logging', link: '/contributors/logging' },
         { text: 'Fixtures', link: '/contributors/fixtures' },
-        { text: "Core modules", children: [
-          { text: "fs", link: "contributors/core/fs"}
-        ]}
+        {
+          text: 'Core modules',
+          children: [{ text: 'fs', link: 'contributors/core/fs' }],
+        },
       ],
     },
   ]
