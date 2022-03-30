@@ -9,6 +9,34 @@ export const distDir = (packageDir) => {
   return process.env.GESTALT_DIST_DIR || path.join(packageDir, 'dist')
 }
 
+export const aliases = (packageDir) => {
+  return [
+    {
+      find: '@gestaltjs/core/cli',
+      replacement: path.join(__dirname, '../packages/core/src/cli/index.ts'),
+    },
+    {
+      find: '@gestaltjs/core/framework',
+      replacement: path.join(
+        __dirname,
+        '../packages/core/src/framework/index.ts'
+      ),
+    },
+    {
+      find: '@gestaltjs/core/shared',
+      replacement: path.join(__dirname, '../packages/core/src/shared/index.ts'),
+    },
+    {
+      find: '@gestaltjs/testing',
+      replacement: path.join(__dirname, '../packages/testing/src/index.ts'),
+    },
+    {
+      find: new RegExp('^\\$(.*)$'),
+      replacement: path.join(packageDir, './src/$1.ts'),
+    },
+  ]
+}
+
 export const plugins = (packageDir) => {
   return [
     stripShebang(),
