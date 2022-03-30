@@ -2,7 +2,7 @@ import { app } from '@gestaltjs/core/cli'
 import logger from '../logger'
 import express from 'express'
 
-async function serve(app: app.App) {
+async function dev(app: app.App) {
   //console.log(`Serving app: ${app.name}`)
 
   const server = express()
@@ -17,4 +17,4 @@ async function serve(app: app.App) {
   })
 }
 
-export default serve
+export default dev

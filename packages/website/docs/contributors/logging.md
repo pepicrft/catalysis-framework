@@ -63,7 +63,7 @@ Moreover, they can extend the formatting through [Pino Transports](https://githu
 By default, all loggers apply the same formatting.
 But a particular package,
 for example,
-`@gestaltjs/serve` might want to accommodate the formatting for communicating the requests processed by the HTTP server.
+`@gestaltjs/dev` might want to accommodate the formatting for communicating the requests processed by the HTTP server.
 
 ```ts
 import logger from './logger'

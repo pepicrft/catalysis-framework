@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/serve",
+  "name": "@gestaltjs/dev",
   "version": "0.7.3",
   "description": "A set of utilities responsible for serving the app",
   "type": "module",

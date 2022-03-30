@@ -186,6 +186,19 @@ importers:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.6.3
 
+  packages/dev:
+    specifiers:
+      '@gestaltjs/core': 0.7.3
+      '@oclif/core': 1.6.3
+      '@types/express': 4.17.13
+      express: 4.17.3
+    dependencies:
+      express: 4.17.3
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@oclif/core': 1.6.3
+      '@types/express': 4.17.13
+
   packages/e2e:
     specifiers:
       '@types/cucumber': 6.0.1
@@ -214,7 +227,7 @@ importers:
       '@gestaltjs/check': 0.7.3
       '@gestaltjs/core': 0.7.3
       '@gestaltjs/db': 0.7.3
-      '@gestaltjs/serve': 0.7.3
+      '@gestaltjs/dev': 0.7.3
       '@gestaltjs/test': 0.7.3
       '@oclif/core': ^1.3.4
       '@oclif/plugin-help': ^5
@@ -224,24 +237,11 @@ importers:
       '@gestaltjs/check': link:../check
       '@gestaltjs/core': link:../core
       '@gestaltjs/db': link:../db
-      '@gestaltjs/serve': link:../serve
+      '@gestaltjs/dev': link:../dev
       '@gestaltjs/test': link:../test
       '@oclif/core': 1.5.2
       '@oclif/plugin-help': 5.1.11
       '@oclif/plugin-plugins': 2.1.0
-
-  packages/serve:
-    specifiers:
-      '@gestaltjs/core': 0.7.3
-      '@oclif/core': 1.6.3
-      '@types/express': 4.17.13
-      express: 4.17.3
-    dependencies:
-      express: 4.17.3
-    devDependencies:
-      '@gestaltjs/core': link:../core
-      '@oclif/core': 1.6.3
-      '@types/express': 4.17.13
 
   packages/test:
     specifiers:

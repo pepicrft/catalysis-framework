@@ -1,4 +1,4 @@
-# @gestaltjs/serve
+# @gestaltjs/dev
 
 ## 0.7.3
 
