@@ -47,6 +47,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.4.0",
+    "eslint-plugin-rulesdir": "^0.2.1",
     "execa": "6.1.0",
     "fast-glob": "3.2.11",
     "fs-extra": "10.0.1",
@@ -75,31 +76,5 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
-  },
-  "eslintConfig": {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "prettier"
-    ],
-    "rules": {
-      "no-console": "error",
-      "no-useless-catch": "error"
-    },
-    "env": {
-      "node": true,
-      "commonjs": true
-    },
-    "ignorePatterns": [
-      "dist",
-      "node_modules",
-      "bin"
-    ]
   }
 }

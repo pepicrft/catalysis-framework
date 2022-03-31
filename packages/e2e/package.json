@@ -12,7 +12,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "../../package.json"
+      "../../.eslintrc.cjs"
     ]
   },
   "devDependencies": {
