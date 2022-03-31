@@ -42,6 +42,7 @@ export const plugins = (packageDir) => {
     stripShebang(),
     resolve({
       preferBuiltins: true,
+      aliases: aliases
     }),
     commonjs({
       include: /node_modules/,
