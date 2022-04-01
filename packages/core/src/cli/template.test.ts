@@ -16,7 +16,7 @@ describe('scaffold basic file', () => {
       const fileName = 'hello-world.txt'
       const sourceFile = joinPath(sourceDirectory, fileName)
       await mkDir(sourceDirectory)
-      writeFile(sourceFile, '')
+      await writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
         targetDirectory: targetDirectory,
@@ -44,7 +44,7 @@ describe('scaffold handlebar file', () => {
       const sourceFile = joinPath(sourceDirectory, sourceFileName)
       const sourceContent = '{{name}}'
       await mkDir(sourceDirectory)
-      writeFile(sourceFile, sourceContent)
+      await writeFile(sourceFile, sourceContent)
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
         targetDirectory: targetDirectory,
