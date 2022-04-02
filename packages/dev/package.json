@@ -27,11 +27,11 @@
   },
   "peerDependencies": {
     "@gestaltjs/core": "0.7.3",
-    "@oclif/core": "1.6.3"
+    "@oclif/core": "1.6.4"
   },
   "devDependencies": {
     "@gestaltjs/core": "0.7.3",
-    "@oclif/core": "1.6.3",
+    "@oclif/core": "1.6.4",
     "@types/express": "4.17.13"
   },
   "oclif": {

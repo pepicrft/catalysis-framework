@@ -8,7 +8,7 @@ importers:
       '@nrwl/cli': 13.9.6
       '@nrwl/tao': 13.9.6
       '@nrwl/workspace': 13.9.6
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
       '@oclif/plugin-help': 5.1.12
       '@rollup/plugin-alias': 3.1.9
       '@rollup/plugin-commonjs': 21.0.3
@@ -59,7 +59,7 @@ importers:
       '@nrwl/cli': 13.9.6
       '@nrwl/tao': 13.9.6
       '@nrwl/workspace': 13.9.6_7ab46ae143ee65b19f29150ffabeb0c3
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
       '@oclif/plugin-help': 5.1.12
       '@rollup/plugin-alias': 3.1.9_rollup@2.70.1
       '@rollup/plugin-commonjs': 21.0.3_rollup@2.70.1
@@ -115,10 +115,10 @@ importers:
   packages/build:
     specifiers:
       '@gestaltjs/core': 0.7.3
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
 
   packages/catalysis:
     specifiers: {}
@@ -126,10 +126,10 @@ importers:
   packages/check:
     specifiers:
       '@gestaltjs/core': 0.7.3
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
 
   packages/core:
     specifiers:
@@ -176,29 +176,29 @@ importers:
 
   packages/create-app:
     specifiers:
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
     dependencies:
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
 
   packages/db:
     specifiers:
       '@gestaltjs/core': 0.7.3
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
 
   packages/dev:
     specifiers:
       '@gestaltjs/core': 0.7.3
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
       '@types/express': 4.17.13
       express: 4.17.3
     dependencies:
       express: 4.17.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
       '@types/express': 4.17.13
 
   packages/e2e:
@@ -1435,8 +1435,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: false
 
-  /@oclif/core/1.6.3:
-    resolution: {integrity: sha512-a3DrPNlOYemwnzxuJ3tINjqpMVIYe56Mg+XaQo0nGsqGSk69wF5Q/hD8plsWrtwdkeIxwxhgl7T699EJypAUwg==}
+  /@oclif/core/1.6.4:
+    resolution: {integrity: sha512-eUnh03MWxs3PHQUdZbo43ceLqmeOgGegsfimeqd6xfhcKwSv8dqarRyAoMCjg7P6Qm5qCjaNFZ6eS4ao349xvQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@oclif/linewrap': 1.0.0
@@ -1483,7 +1483,7 @@ packages:
     resolution: {integrity: sha512-HvH/RubJxqCinP0vUWQLTOboT+SfjfL8h40s+PymkWaldIcXlpoRaJX50vz+SjZIs7uewZwEk8fzLqpF/BWXlg==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 1.6.3
+      '@oclif/core': 1.6.4
     dev: true
 
   /@oclif/plugin-plugins/2.1.0:
