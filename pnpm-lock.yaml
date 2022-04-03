@@ -53,7 +53,7 @@ importers:
       ts-node: 10.7.0
       typescript: 4.6.3
       vite: 2.9.1
-      vitest: 0.8.3
+      vitest: 0.8.4
     devDependencies:
       '@changesets/cli': 2.22.0
       '@nrwl/cli': 13.9.6
@@ -104,7 +104,7 @@ importers:
       ts-node: 10.7.0_ee885bc7281b682b6adbed6ae09ee090
       typescript: 4.6.3
       vite: 2.9.1
-      vitest: 0.8.3
+      vitest: 0.8.4
 
   fixtures/app:
     specifiers:
@@ -7917,8 +7917,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.8.3:
-    resolution: {integrity: sha512-lVSgbza87qVaeo373lBRxem0kJ06iW4ia/LCVWbchF1Dqd5pd/M6a8iexJL9EBDyuoGiymVY6NRajtRkhVB/7A==}
+  /vitest/0.8.4:
+    resolution: {integrity: sha512-1OoAG1+VYkzp4WLCVQFRJX/OKk70rsMIM5H23crfc1wSEnJvHlxgQBS1HPpV/VYmjC8bIInKWhnB4Gaw32MnyQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
