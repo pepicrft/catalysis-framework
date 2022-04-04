@@ -12,7 +12,8 @@
       "@gestaltjs/db",
       "@gestaltjs/dev",
       "@gestaltjs/test",
-      "@gestaltjs/core"
+      "@gestaltjs/core",
+      "@gestaltjs/renderer"
     ]
   ],
   "access": "public",

@@ -12,7 +12,7 @@ For example, `@gestaltjs/react-gestalt-renderer` in the case of React.
 If a project has a renderer as a dependency, Gestalt will use it by default.
 
 The NPM package has to be pure [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), and the main module has to export a default object representing the renderer.
-The example below shows how to use `type` and `exports` attributes in the `package.json` to indicate Node that the package is ESM and what are its exported modules:
+The example below shows how to use `type` and `exports` attributes in the `package.json` to indicate tos Node that the package is ESM and what are its exported modules:
 
 ```json
 // package.json

@@ -133,6 +133,7 @@ importers:
 
   packages/core:
     specifiers:
+      '@gestaltjs/renderer': 0.7.3
       '@iarna/toml': 2.2.5
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
@@ -153,6 +154,7 @@ importers:
       vite: 2.9.1
       zod: ^3.11.6
     dependencies:
+      '@gestaltjs/renderer': link:../renderer
       pino: 7.8.0
       pino-abstract-transport: 0.5.0
       pino-pretty: 7.5.1
@@ -244,6 +246,16 @@ importers:
       '@oclif/core': 1.5.2
       '@oclif/plugin-help': 5.1.11
       '@oclif/plugin-plugins': 2.1.0
+
+  packages/renderer:
+    specifiers:
+      pino: ^7.8.0
+      pino-abstract-transport: ^0.5.0
+      pino-pretty: ^7.5.1
+    dependencies:
+      pino: 7.8.0
+      pino-abstract-transport: 0.5.0
+      pino-pretty: 7.5.1
 
   packages/test:
     specifiers:
