@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/renderer",
+  "name": "@gestaltjs/vue-gestalt-renderer",
   "version": "0.7.3",
   "private": false,
-  "description": "Models and convenient utilities for defining Gestalr renderers",
+  "description": "Gestalt's default Vue renderer",
   "keywords": [
     "gestalt",
     "gestaltjs",
@@ -36,7 +36,9 @@
     ]
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@gestaltjs/renderer": "0.7.3"
+  },
   "engine-strict": true,
   "engines": {
     "node": "^14.13.1 || >=16.0.0 || >=17.0.0"

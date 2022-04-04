@@ -248,14 +248,7 @@ importers:
       '@oclif/plugin-plugins': 2.1.0
 
   packages/renderer:
-    specifiers:
-      pino: ^7.8.0
-      pino-abstract-transport: ^0.5.0
-      pino-pretty: ^7.5.1
-    dependencies:
-      pino: 7.8.0
-      pino-abstract-transport: 0.5.0
-      pino-pretty: 7.5.1
+    specifiers: {}
 
   packages/test:
     specifiers:
@@ -270,6 +263,12 @@ importers:
       tempy: 2.0.0
     devDependencies:
       tempy: 2.0.0
+
+  packages/vue-renderer:
+    specifiers:
+      '@gestaltjs/renderer': 0.7.3
+    devDependencies:
+      '@gestaltjs/renderer': link:../renderer
 
   packages/website:
     specifiers:

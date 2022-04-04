@@ -13,7 +13,8 @@
       "@gestaltjs/dev",
       "@gestaltjs/test",
       "@gestaltjs/core",
-      "@gestaltjs/renderer"
+      "@gestaltjs/renderer",
+      "@gestaltjs/vue-gestalt-renderer"
     ]
   ],
   "access": "public",
