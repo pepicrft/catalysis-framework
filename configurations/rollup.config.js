@@ -31,6 +31,10 @@ export const aliases = (packageDir) => {
       replacement: path.join(__dirname, '../packages/testing/src/index.ts'),
     },
     {
+      find: '@gestaltjs/renderer',
+      replacement: path.join(__dirname, '../packages/renderer/src/index.ts'),
+    },
+    {
       find: new RegExp('^\\$(.*)$'),
       replacement: path.join(packageDir, './src/$1.ts'),
     },
@@ -42,7 +46,7 @@ export const plugins = (packageDir) => {
     stripShebang(),
     resolve({
       preferBuiltins: true,
-      aliases: aliases
+      aliases: aliases,
     }),
     commonjs({
       include: /node_modules/,

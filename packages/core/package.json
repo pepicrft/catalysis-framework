@@ -1,80 +1,81 @@
 {
-    "name": "@gestaltjs/core",
-    "version": "0.7.3",
-    "private": false,
-    "description": "Set of Getalt tools and models that are shared across all the features",
-    "keywords": [
-        "gestalt",
-        "gestaltjs",
-        "web"
-    ],
-    "license": "MIT",
-    "type": "module",
-    "exports": {
-        "./cli": {
-            "import": "./dist/cli/index.js",
-            "types": "./dist/cli/index.d.ts"
-        },
-        "./framework": {
-            "import": "./dist/framework/index.js",
-            "types": "./dist/framework/index.d.ts"
-        },
-        "./shared": {
-            "import": "./dist/shared/index.js",
-            "types": "./dist/shared/index.d.ts"
-        }
+  "name": "@gestaltjs/core",
+  "version": "0.7.3",
+  "private": false,
+  "description": "Set of Getalt tools and models that are shared across all the features",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./cli": {
+      "import": "./dist/cli/index.js",
+      "types": "./dist/cli/index.d.ts"
     },
-    "files": [
-        "/dist"
-    ],
-    "scripts": {
-        "clean": "shx rm -rf dist",
-        "prepack": "cross-env NODE_ENV=production pnpm run build",
-        "build": "pnpm clean && rollup -c",
-        "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
-        "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
-        "test": "vitest run",
-        "test:watch": "vitest",
-        "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-core.xml",
-        "tsc": "tsc --noEmit"
+    "./framework": {
+      "import": "./dist/framework/index.js",
+      "types": "./dist/framework/index.d.ts"
     },
-    "eslintConfig": {
-        "extends": [
-            "../../.eslintrc.cjs"
-        ]
-    },
-    "dependencies": {
-        "zod": "^3.11.6",
-        "pino": "^7.8.0",
-        "pino-pretty": "^7.5.1",
-        "pino-abstract-transport": "^0.5.0",
-        "@gestaltjs/renderer": "0.7.3"
-    },
-    "devDependencies": {
-        "@iarna/toml": "2.2.5",
-        "@types/pino": "7.0.5",
-        "@types/shelljs": "0.8.11",
-        "case-anything": "2.1.10",
-        "fastify": "3.27.4",
-        "find-up": "6.3.0",
-        "fs-extra": "10.0.1",
-        "noop-stream": "1.0.0",
-        "pathe": "0.2.0",
-        "picocolors": "1.0.0",
-        "shelljs": "0.8.5",
-        "tempy": "2.0.0",
-        "terminal-link": "3.0.0",
-        "vite": "2.9.1",
-        "zod": "3.14.4",
-        "handlebars": "4.7.7"
-    },
-    "engine-strict": true,
-    "engines": {
-        "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
-    },
-    "os": [
-        "darwin",
-        "linux",
-        "win32"
+    "./shared": {
+      "import": "./dist/shared/index.js",
+      "types": "./dist/shared/index.d.ts"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "prepack": "cross-env NODE_ENV=production pnpm run build",
+    "build": "pnpm clean && rollup -c",
+    "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
+    "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-core.xml",
+    "tsc": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../.eslintrc.cjs"
     ]
+  },
+  "dependencies": {
+    "zod": "^3.11.6",
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1",
+    "pino-abstract-transport": "^0.5.0",
+    "@gestaltjs/vue-gestalt-renderer": "0.7.3",
+    "@gestaltjs/renderer": "0.7.3"
+  },
+  "devDependencies": {
+    "@iarna/toml": "2.2.5",
+    "@types/pino": "7.0.5",
+    "@types/shelljs": "0.8.11",
+    "case-anything": "2.1.10",
+    "fastify": "3.27.4",
+    "find-up": "6.3.0",
+    "fs-extra": "10.0.1",
+    "noop-stream": "1.0.0",
+    "pathe": "0.2.0",
+    "picocolors": "1.0.0",
+    "shelljs": "0.8.5",
+    "tempy": "2.0.0",
+    "terminal-link": "3.0.0",
+    "vite": "2.9.1",
+    "zod": "3.14.3",
+    "handlebars": "4.7.7"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
 }
