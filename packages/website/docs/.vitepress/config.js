@@ -106,6 +106,7 @@ function getContributorsSidebar() {
         { text: 'Get started', link: '/contributors/get-started' },
         { text: 'Architecture', link: '/contributors/architecture' },
         { text: 'Principles', link: '/contributors/principles' },
+        { text: 'Renderers', link: '/contributors/renderers' },
         { text: 'ESLint rules', link: '/contributors/eslint-rules' },
         { text: 'Error handling', link: '/contributors/errors' },
         { text: 'Logging', link: '/contributors/logging' },
