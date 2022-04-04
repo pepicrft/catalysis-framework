@@ -2,7 +2,7 @@ import type { Renderer } from './renderer'
 
 export { Renderer }
 
-type RendererArg = Renderer | (() => Promise<Renderer>) | (() => Renderer)
+type RendererExport = Renderer | (() => Promise<Renderer>) | (() => Renderer)
 
 /**
  * A utility function to define new renderers. Since the function has its argument and
@@ -17,10 +17,6 @@ type RendererArg = Renderer | (() => Promise<Renderer>) | (() => Renderer)
  * @param renderer {Renderer | () => Promise<Renderer> | () => Renderer} Define a new renderer.
  * @returns A promise that resolves with the renderer.
  */
-export async function defineRenderer(renderer: RendererArg): Promise<Renderer> {
-  if (typeof renderer === 'function') {
-    return await renderer
-  } else {
-    return renderer
-  }
+export function defineRenderer(renderer: RendererExport): RendererExport {
+  return renderer
 }
