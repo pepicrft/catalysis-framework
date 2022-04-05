@@ -1,13 +1,13 @@
 // https://eslint.org/docs/developer-guide/working-with-rules
 module.exports = {
-    meta: {
-      type: 'problem',
-      docs: {
-        description: 'noop',
-      },
-      schema: [],
+  meta: {
+    type: 'problem',
+    docs: {
+      description: 'noop',
     },
-    create(context) {
-        return {}
-    },
-  }
+    schema: [],
+  },
+  create(context) {
+    return {}
+  },
+}

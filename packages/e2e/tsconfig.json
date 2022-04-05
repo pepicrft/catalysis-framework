@@ -1,14 +1,12 @@
 {
-    "extends": "../../tsconfig.base.json",
-    "include": ["./**/*.ts"],
-    "exclude": ["./dist"],
-    "compilerOptions": {
-      "lib": [
-        "ES2019"
-      ],
-      "module": "commonjs",
-      "target": "ES2019",
-      "outDir": "dist",
-      "baseUrl": ".",
-    }
+  "extends": "../../tsconfig.base.json",
+  "include": ["./**/*.ts"],
+  "exclude": ["./dist"],
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "module": "commonjs",
+    "target": "ES2019",
+    "outDir": "dist",
+    "baseUrl": "."
   }
+}

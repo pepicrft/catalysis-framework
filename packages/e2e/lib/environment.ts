@@ -4,10 +4,10 @@
  * @returns True if the variable represents a truthy value.
  */
 function isTruthy(value: string | undefined): boolean {
-    if (!value) {
-        return false
-    }
-    return ['TRUE', 'true', 'YES', 'yes', '1'].includes(value)
+  if (!value) {
+    return false
+  }
+  return ['TRUE', 'true', 'YES', 'yes', '1'].includes(value)
 }
 
 /** Returns true if acceptance tests are run with DEBUG=1 */

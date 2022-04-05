@@ -7,17 +7,17 @@ const configuration = async () => {
   const rendererExternal = [...(await external(__dirname))]
   return [
     {
-      input: path.join(__dirname, "src/index.ts"),
+      input: path.join(__dirname, 'src/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname),"index.js"),
+          file: path.join(distDir(__dirname), 'index.js'),
           format: 'esm',
           exports: 'auto',
         },
       ],
       plugins: plugins(__dirname),
       external: rendererExternal,
-    }
+    },
   ]
 }
 
