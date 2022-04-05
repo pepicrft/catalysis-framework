@@ -26,7 +26,7 @@ describe('scaffold basic file', () => {
       await scaffold(scaffoldOptions)
       // Then
       const targetFile = joinPath(targetDirectory, fileName)
-      expect(exists(targetFile))
+      await expect(exists(targetFile))
     })
   })
 })
@@ -53,15 +53,15 @@ describe('scaffold handlebar file', () => {
       // When
       await scaffold(scaffoldOptions)
       // Then
-      expect(exists(targetDirectory))
+      await expect(exists(targetDirectory))
       const expectedFile = joinPath(
         tmpDir,
         'my-cool-project/my-cool-project.txt'
       )
-      expect(exists(expectedFile))
+      await expect(exists(expectedFile))
       const expectedContent = 'my-cool-project'
       const targetContent = await readFile(expectedFile)
-      expect(targetContent).toEqual(expectedContent)
+      await expect(targetContent).toEqual(expectedContent)
     })
   })
 })
