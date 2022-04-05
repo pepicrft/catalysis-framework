@@ -139,7 +139,7 @@ importers:
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
-      fastify: 3.27.4
+      fastify: 3.28.0
       find-up: 6.3.0
       fs-extra: 10.0.1
       handlebars: 4.7.7
@@ -166,7 +166,7 @@ importers:
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
-      fastify: 3.27.4
+      fastify: 3.28.0
       find-up: 6.3.0
       fs-extra: 10.0.1
       handlebars: 4.7.7
@@ -4397,8 +4397,8 @@ packages:
     resolution: {integrity: sha512-oCfpcsDndgnDVgiI7bwFKAun2dO+4h84vBlkWsWnz/OUK9Reff5UFoFl241xTiLeHWX/vU9zkDVXqYUxjOwHcQ==}
     dev: true
 
-  /fastify/3.27.4:
-    resolution: {integrity: sha512-SOfnHBxG9zxCSIvt6aHoR/cao8QBddWmGP/mb5KQKRc+KI1kB7b79M2hCDOTSyHdLAF2OX+oI6X3weeLc+MqKg==}
+  /fastify/3.28.0:
+    resolution: {integrity: sha512-LAQtGllpkRe8L6Tpf3zdbvXzXFOrgaWV3Tbvp3xMv9ngcr9zht9U2/mo5zq9qp9kplSiBJ0w43aVAMqv6PBMbw==}
     dependencies:
       '@fastify/ajv-compiler': 1.1.0
       abstract-logging: 2.0.1
