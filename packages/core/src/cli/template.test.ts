@@ -16,7 +16,7 @@ describe('scaffold basic file', () => {
       const fileName = 'hello-world.txt'
       const sourceFile = joinPath(sourceDirectory, fileName)
       await mkDir(sourceDirectory)
-      writeFile(sourceFile, '')
+      await writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
         targetDirectory: targetDirectory,
@@ -26,7 +26,7 @@ describe('scaffold basic file', () => {
       await scaffold(scaffoldOptions)
       // Then
       const targetFile = joinPath(targetDirectory, fileName)
-      expect(exists(targetFile))
+      await expect(exists(targetFile))
     })
   })
 })
@@ -44,7 +44,7 @@ describe('scaffold handlebar file', () => {
       const sourceFile = joinPath(sourceDirectory, sourceFileName)
       const sourceContent = '{{name}}'
       await mkDir(sourceDirectory)
-      writeFile(sourceFile, sourceContent)
+      await writeFile(sourceFile, sourceContent)
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
         targetDirectory: targetDirectory,
@@ -53,15 +53,15 @@ describe('scaffold handlebar file', () => {
       // When
       await scaffold(scaffoldOptions)
       // Then
-      expect(exists(targetDirectory))
+      await expect(exists(targetDirectory))
       const expectedFile = joinPath(
         tmpDir,
         'my-cool-project/my-cool-project.txt'
       )
-      expect(exists(expectedFile))
+      await expect(exists(expectedFile))
       const expectedContent = 'my-cool-project'
       const targetContent = await readFile(expectedFile)
-      expect(targetContent).toEqual(expectedContent)
+      await expect(targetContent).toEqual(expectedContent)
     })
   })
 })
