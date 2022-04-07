@@ -3,10 +3,17 @@ import { configurationFileName } from '$cli/constants'
 import { findUp as findPathUp } from '$cli/path'
 import Configuration from '$shared/configuration'
 
+/** An interface that describes the options that can be passed for loading */
 export type LoadOptions = {
   alias?: { find: string; replacement: string }[]
 }
 
+/**
+ * This function transpiles, loads, and returns a Gestalt project configuration.
+ * @param configurationPath {string} The path to the configuration file to be loaded. For example, /path/to/project/gestalt.config.ts
+ * @param options {LoadOptions} Additional options to customize the loading of the configuration.
+ * @returns A promise that resolves with the Configuration.
+ */
 export async function load(
   configurationPath: string,
   options: LoadOptions = {}
@@ -19,6 +26,37 @@ export async function load(
     optimizeDeps: {
       entries: [],
     },
+  })
+  const module = await vite.ssrLoadModule(configurationPath)
+  return module.default as Configuration
+}
+
+/**
+ * This function transpiles, loads, and returns a Gestalt project configuration.
+ * @param configurationPath {string} The path to the configuration file to be loaded. For example, /path/to/project/gestalt.config.ts
+ * @param options {LoadOptions} Additional options to customize the loading of the configuration.
+ * @returns A promise that resolves with the Configuration.
+ */
+export async function watch(
+  configurationPath: string,
+  options: LoadOptions = {}
+): Promise<Configuration> {
+  const vite = await createServer({
+    server: { middlewareMode: 'ssr' },
+    resolve: {
+      alias: options?.alias ?? [],
+    },
+    optimizeDeps: {
+      entries: [],
+    },
+    plugins: [
+      {
+        name: 'watch-config',
+        handleHotUpdate: (context) => {
+          return []
+        },
+      },
+    ],
   })
   const module = await vite.ssrLoadModule(configurationPath)
   return module.default as Configuration
