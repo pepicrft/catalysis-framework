@@ -68,4 +68,38 @@ describe('loadConfig', () => {
       expect(got.name).toEqual('Test')
     })
   })
+
+  it('loads the configuration when the configuration is a valid .js configuration', async () => {
+    await temporary.directory(async (tmpDir) => {
+      // Given
+      const fileName = `${configurationFileName}.js`
+      const filePath = pathJoin(tmpDir, fileName)
+      const { configuration: configurationModule } =
+        workspace.gestaltjsPackageModules()
+
+      await writeFile(
+        filePath,
+        `
+      import {defineConfiguration} from "gestaltjs/configuration"
+
+      export default defineConfiguration({
+        name: "Test"
+      })
+      `
+      )
+
+      // When
+      const got = await loadConfig(filePath, {
+        alias: [
+          {
+            find: configurationModule.name,
+            replacement: configurationModule.path,
+          },
+        ],
+      })
+
+      // Then
+      expect(got.name).toEqual('Test')
+    })
+  })
 })
