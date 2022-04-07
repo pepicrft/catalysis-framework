@@ -1,15 +1,27 @@
 import { createServer } from 'vite'
-import { configurationFileName } from '../../constants'
-import { join as pathJoin } from '../../path'
-import { exists as fileExists } from '../../fs'
+import { configurationFileName } from '$cli/constants'
+import { findUp as findPathUp } from '$cli/path'
+import Configuration from '$shared/configuration'
 
-export default async function loadConfig(directory: string) {
+export type LoadOptions = {
+  alias?: { find: string; replacement: string }[]
+}
+
+export async function load(
+  configurationPath: string,
+  options: LoadOptions = {}
+): Promise<Configuration> {
   const vite = await createServer({
     server: { middlewareMode: 'ssr' },
+    resolve: {
+      alias: options?.alias ?? [],
+    },
+    optimizeDeps: {
+      entries: [],
+    },
   })
-  // const configurationFilePath = locateConfiguration(directory) as string
-
-  const { render } = await vite.ssrLoadModule('configurationFilePath')
+  const module = await vite.ssrLoadModule(configurationPath)
+  return module.default as Configuration
 }
 
 /**
@@ -18,16 +30,11 @@ export default async function loadConfig(directory: string) {
  * @param directory {string} Directory where to locate the configuration file.
  * @returns A promise that resolves with the path if the file could be located.
  */
-export async function locateConfiguration(
-  directory: string
+export async function lookupConfigurationPathTraversing(
+  fromDirectory: string
 ): Promise<string | undefined> {
-  const extensions = ['ts', 'js']
-  const configurationFilePaths = extensions.map((extension) =>
-    pathJoin(directory, `${configurationFileName}.${extension}`)
+  return await findPathUp(
+    [`${configurationFileName}.ts`, `${configurationFileName}.js`],
+    { type: 'file', cwd: fromDirectory }
   )
-  for (const configurationPath in configurationFilePaths) {
-    if (await fileExists(configurationPath)) {
-      return configurationPath
-    }
-  }
 }

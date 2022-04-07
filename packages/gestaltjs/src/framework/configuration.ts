@@ -1,14 +1,27 @@
 import { Configuration } from '@gestaltjs/core/shared'
 
+export { Configuration }
+
+type ConfigurationExport =
+  | Configuration
+  | (() => Promise<Configuration>)
+  | (() => Configuration)
+
 /**
- * defineConfiguration is a function that takes a configuration and returns it.
- * Thanks to importing and using it IDEs are able to provide validation, auto-completion,
- * and inline documentation.
- * @param configuration {Configuration} The configuration object.
- * @returns The passed configuration.
+ * A utility function to define the configuration. Since the function has its argument and
+ * return value typed, when using it from the configuration default module, editors will
+ * offer a better editing experience with syntax highlighting, validation, documentation,
+ * and auto-completion.
+ *
+ * Alternatively, Configurations can use the '@type' annotation:
+ *   @type {import('gestaltjs').Configuration}
+ *   const config = {...}
+ *
+ * @param Configuration {Configuration | () => Promise<Configuration> | () => Configuration} Define a new configuration.
+ * @returns A promise that resolves with the configuration.
  */
-export async function defineConfiguration(
-  configuration: Configuration
-): Promise<Configuration> {
-  return configuration
+export function defineConfiguration(
+  Configuration: ConfigurationExport
+): ConfigurationExport {
+  return Configuration
 }

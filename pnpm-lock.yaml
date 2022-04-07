@@ -262,8 +262,10 @@ importers:
 
   packages/testing:
     specifiers:
+      pathe: 0.2.0
       tempy: 2.0.0
     devDependencies:
+      pathe: 0.2.0
       tempy: 2.0.0
 
   packages/vue-renderer:
