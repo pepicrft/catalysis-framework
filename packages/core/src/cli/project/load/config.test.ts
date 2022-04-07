@@ -58,7 +58,7 @@ describe('loadConfig', () => {
       const got = await loadConfig(filePath, {
         alias: [
           {
-            find: configurationModule.name,
+            find: configurationModule.identifier,
             replacement: configurationModule.path,
           },
         ],
@@ -92,7 +92,7 @@ describe('loadConfig', () => {
       const got = await loadConfig(filePath, {
         alias: [
           {
-            find: configurationModule.name,
+            find: configurationModule.identifier,
             replacement: configurationModule.path,
           },
         ],

@@ -1,4 +1,4 @@
-import constants from './constants'
+import { environmentVariables } from './constants'
 
 type Environment = 'production' | 'development'
 
@@ -8,9 +8,9 @@ type Environment = 'production' | 'development'
  * @returns The environment the app should run in.
  */
 export function gestalt(env = process.env): Environment {
-  if (env[constants.environmentVariables.environment] === 'development') {
+  if (env[environmentVariables.environment] === 'development') {
     return 'development'
-  } else if (env[constants.environmentVariables.environment] === 'production') {
+  } else if (env[environmentVariables.environment] === 'production') {
     return 'production'
   } else {
     return 'development'

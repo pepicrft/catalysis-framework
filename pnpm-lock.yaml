@@ -135,7 +135,6 @@ importers:
     specifiers:
       '@gestaltjs/renderer': 0.7.3
       '@gestaltjs/vue-gestalt-renderer': 0.7.3
-      '@iarna/toml': 2.2.5
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
@@ -162,7 +161,6 @@ importers:
       pino-pretty: 7.5.1
       zod: 3.12.0
     devDependencies:
-      '@iarna/toml': 2.2.5
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
@@ -998,10 +996,6 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
-    dev: true
-
-  /@iarna/toml/2.2.5:
-    resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
 
   /@istanbuljs/load-nyc-config/1.1.0:
