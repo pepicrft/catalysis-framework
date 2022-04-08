@@ -1,1 +1,27 @@
-export type { Configuration as default } from '@gestaltjs/core/shared'
+import { Configuration } from '@gestaltjs/core/shared'
+
+export { Configuration }
+
+type ConfigurationExport =
+  | Configuration
+  | (() => Promise<Configuration>)
+  | (() => Configuration)
+
+/**
+ * A utility function to define the configuration. Since the function has its argument and
+ * return value typed, when using it from the configuration default module, editors will
+ * offer a better editing experience with syntax highlighting, validation, documentation,
+ * and auto-completion.
+ *
+ * Alternatively, Configurations can use the '@type' annotation:
+ *   @type {import('gestaltjs').Configuration}
+ *   const config = {...}
+ *
+ * @param Configuration {Configuration | () => Promise<Configuration> | () => Configuration} Define a new configuration.
+ * @returns A promise that resolves with the configuration.
+ */
+export function defineConfiguration(
+  Configuration: ConfigurationExport
+): ConfigurationExport {
+  return Configuration
+}

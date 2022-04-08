@@ -1,4 +1,4 @@
-import type Configuration from '../../shared/configuration'
+import type Configuration from '../../../shared/configuration'
 
 /** The UI framework to use for a given route. */
 export type UIFramework = 'react' | 'svelte' | 'vue'
@@ -45,15 +45,15 @@ export interface Route {
 }
 
 /**
- * Interface that represents a Gestalt application.
+ * Interface that represents a Gestalt project.
  */
-export default interface App {
-  /** Directory where the app lives */
+export default interface Project {
+  /** Directory where the project lives */
   directory: string
 
-  /** App configuration */
+  /** Project configuration */
   configuration: Configuration
 
-  /** Application routes */
+  /** Project routes */
   routes: Route[]
 }
