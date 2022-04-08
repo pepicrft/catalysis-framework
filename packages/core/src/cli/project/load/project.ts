@@ -1,6 +1,6 @@
 import Project from '../models/project'
-import { Abort } from '$cli/error'
-import { dirname } from '$cli/path'
+import { Abort } from '../../error'
+import { dirname } from '../../path'
 
 import {
   lookupConfigurationPathTraversing,

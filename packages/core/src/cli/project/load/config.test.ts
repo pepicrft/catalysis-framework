@@ -6,7 +6,7 @@ import {
   watch as watchConfig,
 } from './config'
 import { configurationFileName } from '../../constants'
-import Configuration from '$shared/configuration'
+import Configuration from '../../../shared/configuration'
 
 import { join as pathJoin } from '../../path'
 import { writeFile, readFile } from '../../fs'

@@ -1,19 +1,19 @@
-import { app } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
 import logger from '../logger'
 import express from 'express'
 
-async function dev(app: app.App) {
+async function dev(project: project.Project) {
   //console.log(`Serving app: ${app.name}`)
 
   const server = express()
   const port = 3000
 
   server.get('/', (req, res) => {
-    res.send(`Hello world from ${app.configuration.name}`)
+    res.send(`Hello world from ${project.configuration.name}`)
   })
 
   server.listen(port, () => {
-    logger().log(`${app.configuration.name} being served on port ${port}`)
+    logger().log(`${project.configuration.name} being served on port ${port}`)
   })
 }
 
