@@ -36,8 +36,10 @@
     ]
   },
   "devDependencies": {
-    "tempy": "2.0.0",
-    "pathe": "0.2.0"
+    "@types/rimraf": "^3.0.2",
+    "pathe": "0.2.0",
+    "rimraf": "^3.0.2",
+    "tempy": "2.0.0"
   },
   "engine-strict": true,
   "engines": {

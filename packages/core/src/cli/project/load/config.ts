@@ -1,27 +1,34 @@
-import { createServer } from 'vite'
+import { createServer, ViteDevServer } from 'vite'
 import { configurationFileName } from '$cli/constants'
-import { findUp as findPathUp } from '$cli/path'
+import { findUp as findPathUp, dirname, basename } from '$cli/path'
 import Configuration from '$shared/configuration'
 
 /** An interface that describes the options that can be passed for loading */
-export type LoadOptions = {
+export type ViteOptions = {
   alias?: { find: string; replacement: string }[]
 }
 
 /**
  * This function transpiles, loads, and returns a Gestalt project configuration.
  * @param configurationPath {string} The path to the configuration file to be loaded. For example, /path/to/project/gestalt.config.ts
- * @param options {LoadOptions} Additional options to customize the loading of the configuration.
+ * @param viteOptions {ViteOptions} Options to configure Vite, which is used internally to transpile the configuration.
  * @returns A promise that resolves with the Configuration.
  */
 export async function load(
   configurationPath: string,
-  options: LoadOptions = {}
+  viteOptions: ViteOptions = {}
 ): Promise<Configuration> {
   const vite = await createServer({
-    server: { middlewareMode: 'ssr' },
+    server: {
+      middlewareMode: 'ssr',
+      watch: {
+        ignored: ['*', `!${basename(configurationPath)}`],
+      },
+    },
+    clearScreen: false,
+    logLevel: 'silent',
     resolve: {
-      alias: options?.alias ?? [],
+      alias: viteOptions?.alias ?? [],
     },
     optimizeDeps: {
       entries: [],
@@ -32,34 +39,74 @@ export async function load(
 }
 
 /**
+ * Options to initialize the configuration watcher.
+ */
+type ConfigWatcherOptions = {
+  /**
+   * Vite server that's used to watch and transpile changes in the configuration object.
+   */
+  vite: ViteDevServer
+}
+/**
+ * When watching configuration changes, we need to keep an instance of the internal server
+ * that's subscribed to the changes. We do so by returning a watcher object that contains
+ * a reference to the Vite server.
+ */
+export class ConfigWatcher {
+  options: ConfigWatcherOptions
+
+  constructor(options: ConfigWatcherOptions) {
+    this.options = options
+  }
+}
+
+/**
  * This function transpiles, loads, and returns a Gestalt project configuration.
  * @param configurationPath {string} The path to the configuration file to be loaded. For example, /path/to/project/gestalt.config.ts
- * @param options {LoadOptions} Additional options to customize the loading of the configuration.
+ * @param viteOptions {ViteOptions} Options to configure Vite, which is used internally to transpile the configuration.
  * @returns A promise that resolves with the Configuration.
  */
 export async function watch(
   configurationPath: string,
-  options: LoadOptions = {}
-): Promise<Configuration> {
+  viteOptions: ViteOptions = {},
+  onChange: (configuration: Configuration) => Promise<void>
+): Promise<ConfigWatcher> {
   const vite = await createServer({
-    server: { middlewareMode: 'ssr' },
+    root: dirname(configurationPath),
+    server: {
+      middlewareMode: 'ssr',
+      watch: {
+        ignored: ['*', `!${basename(configurationPath)}`],
+      },
+    },
+    clearScreen: false,
+    logLevel: 'silent',
     resolve: {
-      alias: options?.alias ?? [],
+      alias: viteOptions?.alias ?? [],
     },
     optimizeDeps: {
       entries: [],
     },
     plugins: [
       {
-        name: 'watch-config',
-        handleHotUpdate: (context) => {
-          return []
+        name: 'config-watch',
+        handleHotUpdate: async (context) => {
+          if (context.file === configurationPath) {
+            await onChange(
+              (
+                await vite.ssrLoadModule(configurationPath)
+              ).default as Configuration
+            )
+          }
+          return context.modules
         },
       },
     ],
   })
-  const module = await vite.ssrLoadModule(configurationPath)
-  return module.default as Configuration
+  onChange(
+    (await vite.ssrLoadModule(configurationPath)).default as Configuration
+  )
+  return new ConfigWatcher({ vite })
 }
 
 /**
