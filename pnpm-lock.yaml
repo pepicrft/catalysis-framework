@@ -131,7 +131,7 @@ importers:
   packages/core:
     specifiers:
       '@gestaltjs/plugins': 0.7.3
-      '@gestaltjs/vue-gestalt-renderer': 0.7.3
+      '@gestaltjs/vue-gestalt-plugin': 0.7.3
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
@@ -152,7 +152,7 @@ importers:
       zod: ^3.11.6
     dependencies:
       '@gestaltjs/plugins': link:../plugins
-      '@gestaltjs/vue-gestalt-renderer': link:../vue-renderer
+      '@gestaltjs/vue-gestalt-plugin': link:../vue-plugin
       pino: 7.8.0
       pino-abstract-transport: 0.5.0
       pino-pretty: 7.5.1
@@ -267,7 +267,7 @@ importers:
       rimraf: 3.0.2
       tempy: 2.0.0
 
-  packages/vue-renderer:
+  packages/vue-plugin:
     specifiers:
       '@gestaltjs/plugins': 0.7.3
     devDependencies:

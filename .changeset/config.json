@@ -14,7 +14,7 @@
       "@gestaltjs/test",
       "@gestaltjs/core",
       "@gestaltjs/plugins",
-      "@gestaltjs/vue-gestalt-renderer"
+      "@gestaltjs/vue-gestalt-plugin"
     ]
   ],
   "access": "public",

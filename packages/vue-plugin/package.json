@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/vue-gestalt-renderer",
+  "name": "@gestaltjs/vue-gestalt-plugin",
   "version": "0.7.3",
   "private": false,
   "description": "Gestalt's default Vue renderer",
