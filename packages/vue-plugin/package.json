@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/vue-gestalt-plugin",
+  "name": "@gestaltjs/gestalt-plugin-vue",
   "version": "0.7.3",
   "private": false,
-  "description": "Gestalt's default Vue renderer",
+  "description": "Gestalt's plugin that makes Vue the default rendering engine for Gestalt projects",
   "keywords": [
     "gestalt",
     "gestaltjs",

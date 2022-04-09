@@ -100,11 +100,17 @@ function getContributorsSidebar() {
         { text: 'Get started', link: '/contributors/get-started' },
         { text: 'Architecture', link: '/contributors/architecture' },
         { text: 'Principles', link: '/contributors/principles' },
-        { text: 'Renderers', link: '/contributors/renderers' },
         { text: 'ESLint rules', link: '/contributors/eslint-rules' },
         { text: 'Error handling', link: '/contributors/errors' },
         { text: 'Logging', link: '/contributors/logging' },
         { text: 'Fixtures', link: '/contributors/fixtures' },
+        {
+          text: 'Plugins',
+          link: '/contributors/plugins',
+          children: [
+            { text: 'Renderer', link: 'contributors/plugins/renderer' },
+          ],
+        },
         {
           text: 'Core modules',
           children: [{ text: 'fs', link: 'contributors/core/fs' }],

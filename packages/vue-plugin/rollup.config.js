@@ -4,7 +4,7 @@ import dts from 'rollup-plugin-dts'
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
 const configuration = async () => {
-  const rendererExternal = [...(await external(__dirname))]
+  const vuePluginExternal = [...(await external(__dirname))]
   return [
     {
       input: path.join(__dirname, 'src/index.ts'),
@@ -16,7 +16,7 @@ const configuration = async () => {
         },
       ],
       plugins: plugins(__dirname),
-      external: rendererExternal,
+      external: vuePluginExternal,
     },
   ]
 }
