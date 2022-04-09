@@ -44,6 +44,9 @@ export default definePlugin({
 })
 ```
 
-### Plugin types
+### Plugin options
 
+Plugins can be initialized with any of the following options that represent different shapes of extensibility:
+
+- [**Renderer:**](/contributors/plugins/renderer) A renderer integrates a UI paradigm into Gestalt. Developers can use it to replace Gestalt's default UI paradimn, Vue, with others like React, Svelte, or Solid.
 
