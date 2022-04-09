@@ -13,7 +13,7 @@
       "@gestaltjs/dev",
       "@gestaltjs/test",
       "@gestaltjs/core",
-      "@gestaltjs/renderer",
+      "@gestaltjs/plugins",
       "@gestaltjs/vue-gestalt-renderer"
     ]
   ],

@@ -50,7 +50,7 @@
     "vite": "2.9.1",
     "pino-abstract-transport": "^0.5.0",
     "@gestaltjs/vue-gestalt-renderer": "0.7.3",
-    "@gestaltjs/renderer": "0.7.3"
+    "@gestaltjs/plugins": "0.7.3"
   },
   "devDependencies": {
     "@types/pino": "7.0.5",

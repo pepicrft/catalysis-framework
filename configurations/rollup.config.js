@@ -31,8 +31,8 @@ export const aliases = (packageDir) => {
       replacement: path.join(__dirname, '../packages/testing/src/index.ts'),
     },
     {
-      find: '@gestaltjs/renderer',
-      replacement: path.join(__dirname, '../packages/renderer/src/index.ts'),
+      find: '@gestaltjs/plugins',
+      replacement: path.join(__dirname, '../packages/plugins/src/index.ts'),
     },
     {
       find: new RegExp('^\\$(.*)$'),

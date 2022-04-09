@@ -21,4 +21,4 @@ and contribute to an area of the project without having to familiarize ourselves
 | `@gestaltjs/check` | It contains utilities for checking the code | `TypeChecker` class |
 | `@gestaltjs/dev` | It contains utilities for serving the app locally and in production | `Server` class |
 | `@gestaltjs/core` | It contains utilities and models that are shared across all the features above it | `App` model |
-| `@gestaltjs/renderer` | It contains models and utilities to create new renderers | `Renderer` model and `defineRenderer` function |
+| `@gestaltjs/plugins` | It contains models and utilities to create new plugins | `Plugin` model and `definePlugin` function |

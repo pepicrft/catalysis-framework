@@ -1,8 +1,8 @@
 {
-  "name": "@gestaltjs/renderer",
+  "name": "@gestaltjs/plugins",
   "version": "0.7.3",
   "private": false,
-  "description": "Models and convenient utilities for defining Gestalr renderers",
+  "description": "Models and convenient utilities for implementing Gestalt plugins",
   "keywords": [
     "gestalt",
     "gestaltjs",

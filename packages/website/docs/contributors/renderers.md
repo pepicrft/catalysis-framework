@@ -25,7 +25,7 @@ The example below shows how to use `type` and `exports` attributes in the `packa
         },
     },
     "devDependency": {
-        "@gestaltjs/renderer": "..."
+        "@gestaltjs/plugins": "..."
     }
 }
 ```
@@ -35,7 +35,7 @@ Gestalt expects a default export with the object representing the renderer:
 ```ts
 // @gestaltjs/react-gestalt-renderer
 // src/index.ts
-import { defineRenderer } from "@gestaltjs/renderer"
+import { defineRenderer } from "@gestaltjs/plugins"
 import clientRender from "./client"
 import serverRender from "./server"
 import react from '@vitejs/plugin-react'

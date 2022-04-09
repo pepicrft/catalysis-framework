@@ -37,7 +37,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@gestaltjs/renderer": "0.7.3"
+    "@gestaltjs/plugins": "0.7.3"
   },
   "engine-strict": true,
   "engines": {

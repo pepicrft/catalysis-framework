@@ -1,4 +1,4 @@
-import { defineRenderer } from '@gestaltjs/renderer'
+import { defineRenderer } from '@gestaltjs/plugins'
 
 export default defineRenderer({
   dependencies: {
