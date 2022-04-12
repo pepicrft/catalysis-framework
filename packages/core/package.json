@@ -44,29 +44,29 @@
     ]
   },
   "dependencies": {
-    "zod": "^3.11.6",
-    "pino": "^7.8.0",
-    "pino-pretty": "^7.5.1",
-    "vite": "2.9.3",
-    "pino-abstract-transport": "^0.5.0",
     "@gestaltjs/gestalt-plugin-vue": "0.7.3",
-    "@gestaltjs/plugins": "0.7.3"
+    "@gestaltjs/plugins": "0.7.3",
+    "pino": "^7.8.0",
+    "pino-abstract-transport": "^0.5.0",
+    "pino-pretty": "^7.5.1",
+    "vite": "2.9.3"
   },
   "devDependencies": {
     "@types/pino": "7.0.5",
     "@types/shelljs": "0.8.11",
     "case-anything": "2.1.10",
+    "fast-glob": "^3.2.11",
     "fastify": "3.28.0",
     "find-up": "6.3.0",
     "fs-extra": "10.0.1",
+    "handlebars": "4.7.7",
     "noop-stream": "1.0.0",
     "pathe": "0.2.0",
     "picocolors": "1.0.0",
     "shelljs": "0.8.5",
     "tempy": "2.0.0",
     "terminal-link": "3.0.0",
-    "zod": "3.14.3",
-    "handlebars": "4.7.7"
+    "zod": "3.14.3"
   },
   "engine-strict": true,
   "engines": {

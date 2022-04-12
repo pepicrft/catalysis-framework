@@ -1,13 +1,10 @@
 import pino from 'pino'
-import type { TransportMultiOptions } from 'pino'
-import { gestalt as gestaltEnvironment } from './environment'
 import { runningInVerbose } from './cli'
-import { Bug } from './error'
 export type LogLevel = pino.LevelWithSilent
 import { formatYellow, formatItalic, formatBold } from './terminal'
 import terminalLink from 'terminal-link'
 import { fileURLToPath } from 'url'
-import { dirname as pathDirname, join as pathJoin } from './path'
+import { dirname as pathDirname } from './path'
 
 const __dirname = pathDirname(fileURLToPath(import.meta.url))
 

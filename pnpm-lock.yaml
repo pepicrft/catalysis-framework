@@ -135,6 +135,7 @@ importers:
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
+      fast-glob: ^3.2.11
       fastify: 3.28.0
       find-up: 6.3.0
       fs-extra: 10.0.1
@@ -162,6 +163,7 @@ importers:
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
+      fast-glob: 3.2.11
       fastify: 3.28.0
       find-up: 6.3.0
       fs-extra: 10.0.1
