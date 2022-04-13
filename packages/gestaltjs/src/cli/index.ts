@@ -1,5 +1,5 @@
 import { error } from '@gestaltjs/core/cli'
-import { run, flush, settings, Errors } from '@oclif/core'
+import { run, flush, settings } from '@oclif/core'
 
 const isDebug = process.env.DEBUG === '1'
 settings.debug = isDebug

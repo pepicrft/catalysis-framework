@@ -1,10 +1,38 @@
-import { Command } from '@oclif/core'
-import code from './code'
-import styles from './styles'
-export default class Check extends Command {
-  static description = 'Check code types and style'
+import { Command, Flags } from '@oclif/core'
+import { project } from '@gestaltjs/core/cli'
+import checkCodeService from '../../services/code'
+import checkStylesService from '../../services/styles'
+
+export default class All extends Command {
+  static description = 'Check code and style.'
+
+  static flags = {
+    path: Flags.string({
+      char: 'p',
+      description:
+        'The path to the directory containing the Gestalt project. Defaults to current working directory.',
+      hidden: false,
+      multiple: false,
+      env: 'GESTALT_PATH',
+      default: process.cwd(),
+      required: false,
+    }),
+    fix: Flags.boolean({
+      char: 'f',
+      description: 'When passed, it fixes the fixable style issues.',
+      default: false,
+      required: false,
+      env: 'GESTALT_FIX',
+    }),
+  }
   async run(): Promise<void> {
-    await code.run()
-    await styles.run()
+    const { flags } = await this.parse(All)
+    const loadedProject = await project.load(flags.path)
+
+    await checkCodeService(loadedProject.directory)
+    await checkStylesService({
+      fix: flags.fix,
+      project: loadedProject,
+    })
   }
 }

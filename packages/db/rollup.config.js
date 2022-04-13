@@ -18,7 +18,7 @@ const configuration = async () => {
           dir: path.join(distDir(__dirname), 'cli/commands/db'),
           format: 'esm',
           exports: 'auto',
-          sourcemap: 'inline',
+          sourcemap: true,
         },
       ],
       ...options,

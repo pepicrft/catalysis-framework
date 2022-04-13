@@ -13,7 +13,7 @@ const configuration = async () => {
           file: path.join(distDir(__dirname), 'index.js'),
           format: 'cjs',
           exports: 'auto',
-          sourcemap: 'inline',
+          sourcemap: true,
         },
       ],
       plugins: plugins(__dirname),
