@@ -77,7 +77,7 @@ export class Abort extends Error {
 
 export const handler = (error: Error): Promise<Error> => {
   let errorType: ErrorLogType
-  let message = formatBold(formatRed('Error'))
+  let message = formatBold(formatRed('What happened 🤨'))
   let cause: string | undefined
 
   if (error instanceof Bug) {
@@ -89,15 +89,15 @@ export const handler = (error: Error): Promise<Error> => {
   } else {
     errorType = 'unhandled'
   }
-  message = `${message}\n${error.message}\n`
+  message = `\n${message}\n${error.message}\n`
 
   if (cause) {
-    message = `${message}\n${formatBold(formatRed('Cause'))}\n`
+    message = `${message}\n${formatBold(formatRed('Cause 🔍'))}\n`
     message = `${message}${cause}\n`
   }
 
   if (error.stack) {
-    message = `${message}\n${formatBold(formatRed('Stack trace'))}\n`
+    message = `${message}\n${formatBold(formatRed('Stack trace 🐛'))}\n`
     message = `${message}${error.stack}`
   }
 
