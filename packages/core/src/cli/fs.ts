@@ -30,3 +30,7 @@ export async function copyFile(
 export async function mkDir(directoryPath: string): Promise<void> {
   await fs.promises.mkdir(directoryPath, { recursive: true })
 }
+
+export async function rmDir(path: string): Promise<void> {
+  return fs.promises.rmdir(path, { recursive: true })
+}

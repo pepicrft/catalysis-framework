@@ -56,4 +56,7 @@ export default interface Project {
 
   /** Project routes */
   routes: Route[]
+
+  /** Application sources glob */
+  sourcesGlob: string
 }

@@ -15,7 +15,7 @@ const configuration = async () => {
       }),
       output: [
         {
-          dir: path.join(distDir(__dirname), 'cli/commands'),
+          dir: path.join(distDir(__dirname), 'cli/commands/check'),
           format: 'esm',
           exports: 'auto',
         },
