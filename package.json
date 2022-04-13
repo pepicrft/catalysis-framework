@@ -21,9 +21,9 @@
   "type": "module",
   "devDependencies": {
     "@changesets/cli": "2.22.0",
-    "@nrwl/cli": "13.10.1",
-    "@nrwl/tao": "13.10.1",
-    "@nrwl/workspace": "13.10.1",
+    "@nrwl/cli": "13.10.2",
+    "@nrwl/tao": "13.10.2",
+    "@nrwl/workspace": "13.10.2",
     "@oclif/core": "1.7.0",
     "@oclif/plugin-help": "5.1.12",
     "@rollup/plugin-alias": "3.1.9",
