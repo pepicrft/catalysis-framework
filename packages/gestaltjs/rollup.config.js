@@ -11,6 +11,7 @@ const configuration = async () => {
         {
           dir: path.join(distDir(__dirname), 'cli'),
           format: 'esm',
+          sourcemap: 'inline',
         },
       ],
       plugins: [...plugins(__dirname)],
@@ -22,6 +23,7 @@ const configuration = async () => {
         {
           dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
+          sourcemap: 'inline',
         },
       ],
       plugins: [...plugins(__dirname)],
@@ -33,6 +35,7 @@ const configuration = async () => {
         {
           dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
+          sourcemap: 'inline',
         },
       ],
       plugins: [dts()],
@@ -44,6 +47,7 @@ const configuration = async () => {
         {
           dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
+          sourcemap: 'inline',
         },
       ],
       plugins: [...plugins(__dirname)],
@@ -55,6 +59,7 @@ const configuration = async () => {
         {
           dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
+          sourcemap: 'inline',
         },
       ],
       plugins: [dts()],

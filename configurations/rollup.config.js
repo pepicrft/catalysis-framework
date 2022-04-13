@@ -53,7 +53,7 @@ export const plugins = (packageDir) => {
       transformMixedEsModules: true,
     }),
     esbuild({
-      sourceMap: true,
+      sourcemap: 'inline',
       target: 'ES2020',
       tsconfig: path.join(packageDir, 'tsconfig.json'),
     }),

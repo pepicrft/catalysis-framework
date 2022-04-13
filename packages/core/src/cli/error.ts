@@ -1,6 +1,7 @@
 import { core as coreLogger } from './logger'
-import type { ErrorLog, ErrorLogType } from './logger'
+import type { ErrorLogType } from './logger'
 import { formatBold, formatRed } from './terminal'
+import StackTracey from 'stacktracey'
 
 type ErrorOptions = {
   /**
@@ -75,7 +76,7 @@ export class Abort extends Error {
   }
 }
 
-export const handler = (error: Error): Promise<Error> => {
+export const handler = async (error: Error): Promise<Error> => {
   let errorType: ErrorLogType
   let message = formatBold(formatRed('What happened 🤨'))
   let cause: string | undefined
@@ -97,8 +98,10 @@ export const handler = (error: Error): Promise<Error> => {
   }
 
   if (error.stack) {
+    const stack = await new StackTracey(error).withSourcesAsync()
+    const stackString = stack.asTable({})
     message = `${message}\n${formatBold(formatRed('Stack trace 🐛'))}\n`
-    message = `${message}${error.stack}`
+    message = `${message}${stackString}`
   }
 
   coreLogger().error({
