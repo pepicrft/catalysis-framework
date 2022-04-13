@@ -33,7 +33,7 @@ type GestaltJSPackageModules = {
 export function gestaltjsPackageModules(): GestaltJSPackageModules {
   const frameworkDirectory = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    '../../gestaltjs/src/framework'
+    '../../gestaltjs/src/runtime'
   )
   return {
     support: {

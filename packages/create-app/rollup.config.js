@@ -7,8 +7,8 @@ const createAppPlugins = [
   alias({
     entries: [
       {
-        find: '@gestaltjs/core/framework',
-        replacement: path.join(__dirname, '../core/src/framework/index.ts'),
+        find: '@gestaltjs/core/runtime',
+        replacement: path.join(__dirname, '../core/src/runtime/index.ts'),
       },
       {
         find: '@gestaltjs/core/cli',

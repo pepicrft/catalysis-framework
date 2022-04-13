@@ -15,9 +15,9 @@
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
     },
-    "./framework": {
-      "import": "./dist/framework/index.js",
-      "types": "./dist/framework/index.d.ts"
+    "./runtime": {
+      "import": "./dist/runtime/index.js",
+      "types": "./dist/runtime/index.d.ts"
     },
     "./shared": {
       "import": "./dist/shared/index.js",

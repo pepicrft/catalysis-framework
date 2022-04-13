@@ -17,10 +17,10 @@ const configuration = async () => {
       external: [...(await external(__dirname))],
     },
     {
-      input: [path.join(__dirname, 'src/framework/support.ts')],
+      input: [path.join(__dirname, 'src/runtime/support.ts')],
       output: [
         {
-          dir: path.join(distDir(__dirname), 'framework'),
+          dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
         },
       ],
@@ -28,10 +28,10 @@ const configuration = async () => {
       external: [...(await external(__dirname))],
     },
     {
-      input: [path.join(__dirname, 'src/framework/support.ts')],
+      input: [path.join(__dirname, 'src/runtime/support.ts')],
       output: [
         {
-          dir: path.join(distDir(__dirname), 'framework'),
+          dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
         },
       ],
@@ -39,10 +39,10 @@ const configuration = async () => {
       external: [...(await external(__dirname))],
     },
     {
-      input: [path.join(__dirname, 'src/framework/configuration.ts')],
+      input: [path.join(__dirname, 'src/runtime/configuration.ts')],
       output: [
         {
-          dir: path.join(distDir(__dirname), 'framework'),
+          dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
         },
       ],
@@ -50,10 +50,10 @@ const configuration = async () => {
       external: [...(await external(__dirname))],
     },
     {
-      input: [path.join(__dirname, 'src/framework/configuration.ts')],
+      input: [path.join(__dirname, 'src/runtime/configuration.ts')],
       output: [
         {
-          dir: path.join(distDir(__dirname), 'framework'),
+          dir: path.join(distDir(__dirname), 'runtime'),
           format: 'esm',
         },
       ],

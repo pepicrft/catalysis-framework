@@ -16,10 +16,10 @@ export const aliases = (packageDir) => {
       replacement: path.join(__dirname, '../packages/core/src/cli/index.ts'),
     },
     {
-      find: '@gestaltjs/core/framework',
+      find: '@gestaltjs/core/runtime',
       replacement: path.join(
         __dirname,
-        '../packages/core/src/framework/index.ts'
+        '../packages/core/src/runtime/index.ts'
       ),
     },
     {
