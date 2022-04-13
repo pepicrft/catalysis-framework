@@ -6,6 +6,5 @@ export default class Serve extends Command {
 
   async run(): Promise<void> {
     logger().success('Served')
-    throw new Error('asdgasgsa')
   }
 }
