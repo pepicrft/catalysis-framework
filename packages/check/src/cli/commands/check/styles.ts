@@ -1,5 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import { app } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
 import checkStylesService from '../../services/styles'
 export default class Styles extends Command {
   static description = 'Check styles using ESLint'
@@ -7,7 +7,8 @@ export default class Styles extends Command {
   static flags = {
     path: Flags.string({
       char: 'p',
-      description: 'path to the directory from where check will be executed',
+      description:
+        'The path to the directory containing the Gestalt project. Defaults to current working directory.',
       hidden: false,
       multiple: false,
       env: 'GESTALT_PATH',
@@ -16,7 +17,7 @@ export default class Styles extends Command {
     }),
     fix: Flags.boolean({
       char: 'f',
-      description: 'option to fix style conflicts',
+      description: 'When passed, it fixes the fixable style issues.',
       default: false,
       required: false,
       env: 'GESTALT_FIX',
@@ -24,11 +25,11 @@ export default class Styles extends Command {
   }
   async run(): Promise<void> {
     const { flags } = await this.parse(Styles)
-    const loadedApp = await app.load(flags.path)
+    const loadedProject = await project.load(flags.path)
 
     await checkStylesService({
       fix: flags.fix,
-      app: loadedApp,
+      project: loadedProject,
     })
   }
 }

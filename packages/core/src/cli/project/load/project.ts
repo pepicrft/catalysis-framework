@@ -34,5 +34,6 @@ export default async function load(from: string): Promise<Project> {
     configuration,
     directory,
     routes: [],
+    sourcesGlob: `${directory}/src/**/*.{ts,js}`,
   }
 }
