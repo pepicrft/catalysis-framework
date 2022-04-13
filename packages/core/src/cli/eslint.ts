@@ -3,9 +3,11 @@ import { exec } from './system'
 import { findUp, dirname } from './path'
 import { fileURLToPath } from 'url'
 
-export const ESLintNotFoundError = new Abort('Could not locate ESLint', {
-  next: '',
-})
+export const ESLintNotFoundError = () => {
+  return new Abort('Could not locate ESLint', {
+    next: '',
+  })
+}
 
 export async function run(args: string[], cwd: string) {
   const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -13,7 +15,7 @@ export async function run(args: string[], cwd: string) {
     cwd: __dirname,
   })
   if (!eslintPath) {
-    throw ESLintNotFoundError
+    throw ESLintNotFoundError()
   }
   await exec(eslintPath, args, { stdio: 'inherit', cwd })
 }

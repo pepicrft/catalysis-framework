@@ -35,6 +35,6 @@ describe('run', () => {
     const cwd = '/project'
 
     // When
-    await expect(run(args, cwd)).rejects.toEqual(TSCNotFoundError)
+    await expect(run(args, cwd)).rejects.toEqual(TSCNotFoundError())
   })
 })

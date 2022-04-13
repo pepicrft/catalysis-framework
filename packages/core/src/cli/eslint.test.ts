@@ -38,6 +38,6 @@ describe('run', () => {
     const cwd = '/project'
 
     // When
-    await expect(run(args, cwd)).rejects.toEqual(ESLintNotFoundError)
+    await expect(run(args, cwd)).rejects.toEqual(ESLintNotFoundError())
   })
 })
