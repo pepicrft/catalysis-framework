@@ -70,9 +70,11 @@ export const plugins = (packageDir) => {
  */
 export const external = async (packageDir) => {
   const packageJson = await import(path.join(packageDir, 'package.json'))
-  return [
+  const entries = [
     /@gestaltjs\/core/,
+    /source-map-support/,
     ...Object.keys(packageJson.dependencies ?? {}),
     ...Object.keys(packageJson.peerDependencies ?? {}),
   ]
+  return entries
 }

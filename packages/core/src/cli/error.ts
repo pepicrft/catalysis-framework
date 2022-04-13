@@ -1,7 +1,12 @@
 import { core as coreLogger } from './logger'
 import type { ErrorLogType } from './logger'
-import { formatBold, formatRed } from './terminal'
+import { formatYellow, formatItalic, formatRed, formatBold } from './terminal'
 import StackTracey from 'stacktracey'
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import sourceMapSupport from 'source-map-support'
+sourceMapSupport.install()
 
 type ErrorOptions = {
   /**
@@ -98,10 +103,20 @@ export const handler = async (error: Error): Promise<Error> => {
   }
 
   if (error.stack) {
-    const stack = await new StackTracey(error).withSourcesAsync()
-    const stackString = stack.asTable({})
-    message = `${message}\n${formatBold(formatRed('Stack trace 🐛'))}\n`
-    message = `${message}${stackString}`
+    let stack = await new StackTracey(error).withSourcesAsync()
+    stack = stack
+      .filter((entry) => {
+        return !entry.file.includes('@oclif/core')
+      })
+      .map((item) => {
+        item.calleeShort = formatYellow(item.calleeShort)
+        return item
+      })
+    if (stack.items.length !== 0) {
+      const stackString = stack.asTable({})
+      message = `${message}\n${formatBold(formatRed('Stack trace 🐛'))}\n`
+      message = `${message}${stackString}`
+    }
   }
 
   coreLogger().error({

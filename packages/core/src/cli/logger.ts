@@ -3,10 +3,6 @@ import { runningInVerbose } from './cli'
 export type LogLevel = pino.LevelWithSilent
 import { formatYellow, formatItalic, formatBold } from './terminal'
 import terminalLink from 'terminal-link'
-import { fileURLToPath } from 'url'
-import { dirname as pathDirname } from './path'
-
-const __dirname = pathDirname(fileURLToPath(import.meta.url))
 
 /**
  * We cache the loggers to ensure we only have an
