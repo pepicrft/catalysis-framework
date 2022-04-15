@@ -11,7 +11,7 @@ importers:
       '@oclif/core': 1.7.0
       '@oclif/plugin-help': 5.1.12
       '@rollup/plugin-alias': 3.1.9
-      '@rollup/plugin-commonjs': 21.0.3
+      '@rollup/plugin-commonjs': 21.1.0
       '@rollup/plugin-json': 4.1.0
       '@rollup/plugin-node-resolve': 13.2.0
       '@types/fs-extra': 9.0.13
@@ -62,7 +62,7 @@ importers:
       '@oclif/core': 1.7.0
       '@oclif/plugin-help': 5.1.12
       '@rollup/plugin-alias': 3.1.9_rollup@2.70.2
-      '@rollup/plugin-commonjs': 21.0.3_rollup@2.70.2
+      '@rollup/plugin-commonjs': 21.1.0_rollup@2.70.2
       '@rollup/plugin-json': 4.1.0_rollup@2.70.2
       '@rollup/plugin-node-resolve': 13.2.0_rollup@2.70.2
       '@types/fs-extra': 9.0.13
@@ -1510,8 +1510,8 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /@rollup/plugin-commonjs/21.0.3_rollup@2.70.2:
-    resolution: {integrity: sha512-ThGfwyvcLc6cfP/MWxA5ACF+LZCvsuhUq7V5134Az1oQWsiC7lNpLT4mJI86WQunK7BYmpUiHmMk2Op6OAHs0g==}
+  /@rollup/plugin-commonjs/21.1.0_rollup@2.70.2:
+    resolution: {integrity: sha512-6ZtHx3VHIp2ReNNDxHjuUml6ur+WcQ28N1yHgCQwsbNkQg2suhxGMDQGJOn/KuDxKtd1xuZP5xSTwBA4GQ8hbA==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       rollup: ^2.38.3
