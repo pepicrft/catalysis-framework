@@ -157,7 +157,7 @@ importers:
       vite: 2.9.5
       zod: 3.14.3
     dependencies:
-      '@gestaltjs/gestalt-plugin-vue': link:../vue-plugin
+      '@gestaltjs/gestalt-plugin-vue': link:../plugin-vue
       '@gestaltjs/plugins': link:../plugins
       pino: 7.10.0
       pino-abstract-transport: 0.5.0
@@ -253,6 +253,18 @@ importers:
       '@oclif/plugin-help': 5.1.12
       '@oclif/plugin-plugins': 2.1.0
 
+  packages/plugin-react:
+    specifiers:
+      '@gestaltjs/plugins': 0.7.3
+    devDependencies:
+      '@gestaltjs/plugins': link:../plugins
+
+  packages/plugin-vue:
+    specifiers:
+      '@gestaltjs/plugins': 0.7.3
+    devDependencies:
+      '@gestaltjs/plugins': link:../plugins
+
   packages/plugins:
     specifiers: {}
 
@@ -275,12 +287,6 @@ importers:
       pathe: 0.2.0
       rimraf: 3.0.2
       tempy: 2.0.0
-
-  packages/vue-plugin:
-    specifiers:
-      '@gestaltjs/plugins': 0.7.3
-    devDependencies:
-      '@gestaltjs/plugins': link:../plugins
 
   packages/website:
     specifiers:
