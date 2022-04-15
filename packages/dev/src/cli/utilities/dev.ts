@@ -3,8 +3,6 @@ import logger from '../logger'
 import express from 'express'
 
 async function dev(project: project.Project) {
-  //console.log(`Serving app: ${app.name}`)
-
   const server = express()
   const port = 3000
 
@@ -13,7 +11,7 @@ async function dev(project: project.Project) {
   })
 
   server.listen(port, () => {
-    logger().log(`${project.configuration.name} being served on port ${port}`)
+    logger().info(`${project.configuration.name} being served on port ${port}`)
   })
 }
 

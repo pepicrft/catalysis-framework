@@ -1,5 +1,6 @@
 import { Plugin } from '@gestaltjs/plugins'
-import { path, constants } from '@gestaltjs/core/cli'
+import { pluginFileName } from '../../constants'
+import { glob } from '../../path'
 import { createServer, ViteDevServer } from 'vite'
 import { core as coreLogger } from '../../logger'
 /**
@@ -14,13 +15,13 @@ export async function loadPlugins(directories: string[]): Promise<Plugin[]> {
     await Promise.all(
       directories.flatMap(async (directory) => {
         const manifestFileNames = [`js`, `ts`].map(
-          (extension) => `${constants.pluginFileName}.${extension}`
+          (extension) => `${pluginFileName}.${extension}`
         )
         const globPatterns = manifestFileNames.flatMap((filename) => [
           `node_modules/*/*/${filename}`,
           `node_modules/*/${filename}`,
         ])
-        const pluginManifestFiles = await path.glob(globPatterns, {
+        const pluginManifestFiles = await glob(globPatterns, {
           onlyFiles: true,
           cwd: directory,
         })
@@ -65,7 +66,7 @@ async function loadPlugin(
     const module = await options.viteServer.ssrLoadModule(manifestPath)
     return module as Plugin
   } catch (error: any) {
-    coreLogger().log(`${error}`, 'error')
+    coreLogger().error(error)
     return undefined
   }
 }
