@@ -1,0 +1,19 @@
+{
+  "name": "@gestaltjs/catalysis",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open-source tool for distributing Gestalt apps",
+  "scripts": {
+    "dev": "true",
+    "build": "true",
+    "serve": "true",
+    "clean": "shx rm -rf dist/",
+    "lint": "true",
+    "lint:fix": "true",
+    "test": "true",
+    "test:watch": "true",
+    "test:ci": "true",
+    "tsc": "true"
+  },
+  "devDependencies": {}
+}

@@ -120,6 +120,9 @@ importers:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.7.0
 
+  packages/catalysis:
+    specifiers: {}
+
   packages/check:
     specifiers:
       '@gestaltjs/core': 0.7.3
