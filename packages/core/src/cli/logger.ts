@@ -104,11 +104,35 @@ export class Logger {
   }
 
   /**
+   * Logs a debug messages.
+   * @param message {LoggerMessage} Message to be logged.
+   */
+  debug(message: LoggerMessage) {
+    this.log(message, 'debug')
+  }
+
+  /**
+   * Logs info messages.
+   * @param message {LoggerMessage} Message to be logged.
+   */
+  info(message: LoggerMessage) {
+    this.log(message, 'info')
+  }
+
+  /**
+   * Logs warn messages.
+   * @param message {LoggerMessage} Message to be logged.
+   */
+  warn(message: LoggerMessage) {
+    this.log(message, 'warn')
+  }
+
+  /**
    * Outputs the given message to the user.
    * @param message {LoggerMessage} The message to output.
    * @param level {LogLevel} The log level of the message.
    */
-  log(message: LoggerMessage, level: LogLevel = 'info') {
+  private log(message: LoggerMessage, level: LogLevel = 'info') {
     switch (level) {
       case 'debug':
         this.pinoLogger.debug({}, this.stringify(message))

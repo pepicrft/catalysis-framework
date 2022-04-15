@@ -79,7 +79,10 @@ there are functions for types of messages that are very common in the context of
 
 | API | When to use it |
 | --- | --- |
-| `logger.success` | To present messages that represent the success of an operation |
+| `logger.debug` | To log messages that are useful for debugging purposes and that are visible if the user opts into seeing them. |
+| `logger.info` | To share information with the users. This is the default logging method. |
+| `logger.warn` | To share warnings with the users. We format the messages to convey the warning connotation. |
+| `logger.success` | To share success messages with the users. We format the messages to convey the success connotation. |
 
 ### Tokens
 
