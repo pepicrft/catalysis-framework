@@ -3,6 +3,7 @@ import { runningInVerbose } from './cli'
 export type LogLevel = pino.LevelWithSilent
 import { formatYellow, formatItalic, formatBold } from './terminal'
 import terminalLink from 'terminal-link'
+import { isRunningTests } from './environment'
 
 /**
  * We cache the loggers to ensure we only have an
@@ -133,6 +134,9 @@ export class Logger {
    * @param level {LogLevel} The log level of the message.
    */
   private log(message: LoggerMessage, level: LogLevel = 'info') {
+    if (isRunningTests()) {
+      return
+    }
     switch (level) {
       case 'debug':
         this.pinoLogger.debug({}, this.stringify(message))
