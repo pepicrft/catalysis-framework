@@ -58,7 +58,7 @@ type LoadPluginOptions = {
  * @param options {LoadPluginOptions} Options like the Vite dev server to load and transpile the plugin.
  * @returns A promise that resolves with the plugin or undefined if the plugin fails to load.
  */
-async function loadPlugin(
+export async function loadPlugin(
   manifestPath: string,
   options: LoadPluginOptions
 ): Promise<Plugin | undefined> {

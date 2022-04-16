@@ -1,9 +1,13 @@
-import { Command } from '@oclif/core'
 import logger from '../logger'
-import { error } from '@gestaltjs/core/cli'
+import { error, Command } from '@gestaltjs/core/cli'
+import { Interfaces } from '@oclif/core'
 
 export default class Build extends Command {
   static description = 'Build your Gestalt project'
+
+  static flags: Interfaces.FlagInput<any> = {
+    ...Command.flags,
+  }
 
   async run(): Promise<void> {
     throw new error.Bug('Message', {

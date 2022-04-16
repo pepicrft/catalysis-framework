@@ -8,8 +8,6 @@ importers:
       '@nrwl/cli': 13.10.2
       '@nrwl/tao': 13.10.2
       '@nrwl/workspace': 13.10.2
-      '@oclif/core': 1.7.0
-      '@oclif/plugin-help': 5.1.12
       '@rollup/plugin-alias': 3.1.9
       '@rollup/plugin-commonjs': 21.1.0
       '@rollup/plugin-json': 4.1.0
@@ -59,8 +57,6 @@ importers:
       '@nrwl/cli': 13.10.2
       '@nrwl/tao': 13.10.2
       '@nrwl/workspace': 13.10.2_e48593d9f20ab372093db8325578147d
-      '@oclif/core': 1.7.0
-      '@oclif/plugin-help': 5.1.12
       '@rollup/plugin-alias': 3.1.9_rollup@2.70.2
       '@rollup/plugin-commonjs': 21.1.0_rollup@2.70.2
       '@rollup/plugin-json': 4.1.0_rollup@2.70.2
@@ -135,6 +131,7 @@ importers:
     specifiers:
       '@gestaltjs/gestalt-plugin-vue': 0.7.3
       '@gestaltjs/plugins': 0.7.3
+      '@oclif/core': ^1.3.4
       '@types/pino': 7.0.5
       '@types/shelljs': 0.8.11
       case-anything: 2.1.10
@@ -159,6 +156,7 @@ importers:
     dependencies:
       '@gestaltjs/gestalt-plugin-vue': link:../plugin-vue
       '@gestaltjs/plugins': link:../plugins
+      '@oclif/core': 1.7.0
       pino: 7.10.0
       pino-abstract-transport: 0.5.0
       pino-pretty: 7.6.1
@@ -1458,6 +1456,7 @@ packages:
     engines: {node: '>=12.0.0'}
     dependencies:
       '@oclif/core': 1.7.0
+    dev: false
 
   /@oclif/plugin-plugins/2.1.0:
     resolution: {integrity: sha512-Bgt+QpTlX7+Q0HkVgtbUGYQlo/hyzNBAaXH5l16ou9Ji5wfi5T+niV5AzQ14R7JF8ZDOTbUOU/NRBJ2bzLCaZQ==}

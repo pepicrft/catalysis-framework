@@ -1,12 +1,15 @@
-import { Command } from '@oclif/core'
-import { path } from '@gestaltjs/core/cli'
+import { Interfaces } from '@oclif/core'
+import { Command } from '@gestaltjs/core/cli'
+import logger from '../logger'
 
 export default class Init extends Command {
   static description = 'Create a Gestalt project'
 
+  static flags: Interfaces.FlagInput<any> = {
+    ...Command.flags,
+  }
+
   async run(): Promise<void> {
-    const directory = await path.findUp('node_modules', {
-      type: 'directory',
-    })
+    logger().info('Initialized')
   }
 }
