@@ -1,6 +1,6 @@
-import { Interfaces } from '@oclif/core'
-import { Command } from '@gestaltjs/core/cli'
 import logger from '../logger'
+import { Command } from '@gestaltjs/core/cli'
+import { Interfaces } from '@oclif/core'
 
 export default class Test extends Command {
   static description = 'Test your Gestalt project'

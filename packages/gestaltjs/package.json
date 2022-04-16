@@ -54,7 +54,7 @@
     "@gestaltjs/dev": "0.7.3",
     "@gestaltjs/test": "0.7.3",
     "@gestaltjs/core": "0.7.3",
-    "@oclif/core": "^1.3.4",
+    "@oclif/core": "^1.7.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1"
   },
