@@ -1,13 +1,13 @@
-import { runningInVerbose } from './cli'
+import { isRunningInVerbose } from './cli'
 import { test, expect, describe } from 'vitest'
 
-describe('runningInVerbose', () => {
+describe('isRunningInVerbose', () => {
   test('returns true when --verbose is passed', () => {
     // Given
     const argv = ['gestalt', 'build', '--verbose']
 
     // When
-    const got = runningInVerbose(argv)
+    const got = isRunningInVerbose(argv)
 
     // Then
     expect(got).toBe(true)
@@ -18,7 +18,7 @@ describe('runningInVerbose', () => {
     const argv = ['gestalt', 'build', '-v']
 
     // When
-    const got = runningInVerbose(argv)
+    const got = isRunningInVerbose(argv)
 
     // Then
     expect(got).toBe(true)
@@ -29,7 +29,7 @@ describe('runningInVerbose', () => {
     const argv = ['gestalt', 'build']
 
     // When
-    const got = runningInVerbose(argv)
+    const got = isRunningInVerbose(argv)
 
     // Then
     expect(got).toBe(false)

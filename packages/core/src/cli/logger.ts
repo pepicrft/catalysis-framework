@@ -1,6 +1,6 @@
 import pino from 'pino'
-import { runningInVerbose } from './cli'
-export type LogLevel = pino.LevelWithSilent
+import { isRunningInVerbose } from './cli'
+export type LogLevel = Omit<pino.Level, 'trace' | 'fatal'>
 import { formatYellow, formatItalic, formatBold } from './terminal'
 import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment'
@@ -11,6 +11,9 @@ import { isRunningTests } from './environment'
  */
 const cachedLoggers: { [key: string]: Logger } = {}
 
+/**
+ * It's used as a key to identify the token in a templated log.
+ */
 enum LoggerContentType {
   Command,
   Path,
@@ -69,11 +72,46 @@ class LoggerTokenizedString {
 
 type LoggerMessage = string | LoggerTokenizedString
 
-export class Logger {
-  pinoLogger: pino.Logger
+/**
+ * A logger target abstracts away the destination of the logs.
+ * This is useful for unit tests where we don't want to log through
+ * the Pino stack.
+ */
+interface LoggerTarget {
+  child(options: { module: string }): LoggerTarget
+  error(object: any, message: string): any
+  debug(object: any, message: string): any
+  info(object: any, message: string): any
+  warn(object: any, message: string): any
+}
 
-  constructor(pinoLogger: pino.Logger) {
-    this.pinoLogger = pinoLogger
+/**
+ * A logger target that does nothing with the logs.
+ */
+class NoopLoggerTarget implements LoggerTarget {
+  child(options: { module: string }): LoggerTarget {
+    return this
+  }
+
+  error(object: any, message: string): any {
+    // noop
+  }
+  debug(object: any, message: string): any {
+    // noop
+  }
+  info(object: any, message: string): any {
+    // noop
+  }
+  warn(object: any, message: string): any {
+    // noop
+  }
+}
+
+export class Logger {
+  target: LoggerTarget
+
+  constructor(target: LoggerTarget) {
+    this.target = target
   }
 
   child(module: string): Logger {
@@ -82,7 +120,7 @@ export class Logger {
       return cachedLogger
     }
 
-    const logger = new Logger(this.pinoLogger.child({ module: module }))
+    const logger = new Logger(this.target.child({ module: module }))
     cachedLoggers[module] = logger
     return logger
   }
@@ -101,7 +139,10 @@ export class Logger {
    * @param log {ErrorLog} Error log
    */
   error(log: ErrorLog) {
-    this.pinoLogger.error(log, log.message)
+    if (isRunningTests()) {
+      return
+    }
+    this.target.error(log, log.message)
   }
 
   /**
@@ -139,25 +180,16 @@ export class Logger {
     }
     switch (level) {
       case 'debug':
-        this.pinoLogger.debug({}, this.stringify(message))
+        this.target.debug({}, this.stringify(message))
         break
       case 'error':
-        this.pinoLogger.error({}, this.stringify(message))
-        break
-      case 'fatal':
-        this.pinoLogger.fatal({}, this.stringify(message))
+        this.target.error({}, this.stringify(message))
         break
       case 'info':
-        this.pinoLogger.info({}, this.stringify(message))
-        break
-      case 'silent':
-        this.pinoLogger.silent({}, this.stringify(message))
-        break
-      case 'trace':
-        this.pinoLogger.trace({}, this.stringify(message))
+        this.target.info({}, this.stringify(message))
         break
       case 'warn':
-        this.pinoLogger.warn({}, this.stringify(message))
+        this.target.warn({}, this.stringify(message))
         break
     }
   }
@@ -245,10 +277,14 @@ export function core(): Logger {
   if (_core) {
     return _core
   }
-  _core = new Logger(
-    pino({
+  // NoopLoggerTarget
+  let target: LoggerTarget
+  if (isRunningTests()) {
+    target = new NoopLoggerTarget()
+  } else {
+    target = pino({
       name: 'gestalt',
-      level: runningInVerbose() ? 'debug' : 'info',
+      level: isRunningInVerbose() ? 'debug' : 'info',
       transport: {
         targets: [
           {
@@ -259,6 +295,7 @@ export function core(): Logger {
         ],
       },
     })
-  ).child('core')
+  }
+  _core = new Logger(target).child('core')
   return _core
 }
