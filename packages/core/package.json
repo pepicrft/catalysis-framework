@@ -60,7 +60,7 @@
     "fast-glob": "^3.2.11",
     "fastify": "3.28.0",
     "find-up": "6.3.0",
-    "fs-extra": "10.0.1",
+    "fs-extra": "10.1.0",
     "handlebars": "4.7.7",
     "noop-stream": "1.0.0",
     "pathe": "0.2.0",
