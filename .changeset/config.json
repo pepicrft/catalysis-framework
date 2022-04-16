@@ -5,7 +5,7 @@
   "fixed": [
     [
       "gestaltjs",
-      "@gestaltjs/create-app",
+      "@gestaltjs/create-project",
       "@gestaltjs/eslint-plugin",
       "@gestaltjs/build",
       "@gestaltjs/check",
@@ -14,7 +14,8 @@
       "@gestaltjs/test",
       "@gestaltjs/core",
       "@gestaltjs/plugins",
-      "@gestaltjs/gestalt-plugin-vue"
+      "@gestaltjs/gestalt-plugin-vue",
+      "@gestaltjs/gestalt-plugin-react"
     ]
   ],
   "access": "public",

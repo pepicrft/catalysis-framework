@@ -1,4 +1,4 @@
-# @gestaltjs/create-app
+# @gestaltjs/create-project
 
 ## 0.7.3
 

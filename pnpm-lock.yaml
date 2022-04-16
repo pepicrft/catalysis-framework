@@ -180,7 +180,7 @@ importers:
       terminal-link: 3.0.0
       zod: 3.14.3
 
-  packages/create-app:
+  packages/create-project:
     specifiers:
       '@oclif/core': 1.7.0
     dependencies:
