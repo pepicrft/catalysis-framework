@@ -4,51 +4,14 @@ export type LogLevel = Omit<pino.Level, 'trace' | 'fatal'>
 import { formatYellow, formatItalic, formatBold } from './terminal'
 import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment'
+import { LoggerContentToken, LoggerContentType } from './logger/content'
+import { LoggerTarget, NoopLoggerTarget } from './logger/target'
 
 /**
  * We cache the loggers to ensure we only have an
  * instance per module and thus use the memory efficiently.
  */
 const cachedLoggers: { [key: string]: Logger } = {}
-
-/**
- * It's used as a key to identify the token in a templated log.
- */
-enum LoggerContentType {
-  Command,
-  Path,
-  Url,
-}
-
-/**
- * It represents metadata that's attached to the token unit.
- */
-interface LoggerContentMetadata {
-  url?: string
-}
-
-/**
- * It represents a semantic unit within a log.
- * The semantic meaning is used to vary the formatting.
- */
-class LoggerContentToken {
-  /** Token type */
-  type: LoggerContentType
-  /** String value */
-  value: string
-  /** Metadata attached to the token. */
-  metadata: LoggerContentMetadata
-
-  constructor(
-    value: string,
-    metadata: LoggerContentMetadata = {},
-    type: LoggerContentType
-  ) {
-    this.type = type
-    this.value = value
-    this.metadata = metadata
-  }
-}
 
 export type ErrorLogType = 'bug' | 'abort' | 'unhandled'
 
@@ -71,41 +34,6 @@ class LoggerTokenizedString {
 }
 
 type LoggerMessage = string | LoggerTokenizedString
-
-/**
- * A logger target abstracts away the destination of the logs.
- * This is useful for unit tests where we don't want to log through
- * the Pino stack.
- */
-interface LoggerTarget {
-  child(options: { module: string }): LoggerTarget
-  error(object: any, message: string): any
-  debug(object: any, message: string): any
-  info(object: any, message: string): any
-  warn(object: any, message: string): any
-}
-
-/**
- * A logger target that does nothing with the logs.
- */
-class NoopLoggerTarget implements LoggerTarget {
-  child(options: { module: string }): LoggerTarget {
-    return this
-  }
-
-  error(object: any, message: string): any {
-    // noop
-  }
-  debug(object: any, message: string): any {
-    // noop
-  }
-  info(object: any, message: string): any {
-    // noop
-  }
-  warn(object: any, message: string): any {
-    // noop
-  }
-}
 
 export class Logger {
   target: LoggerTarget
