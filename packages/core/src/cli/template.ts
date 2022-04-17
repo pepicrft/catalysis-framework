@@ -22,24 +22,25 @@ export async function scaffold(scaffoldOptions: ScaffoldOptions) {
       onlyFiles: true,
     }
   )
-  for (let i = 0; i < entries.length; i++) {
-    const sourceFile = entries[i]
-    const relativePath = relative(scaffoldOptions.sourceDirectory, sourceFile)
-    let targetFile = joinPath(scaffoldOptions.targetDirectory, relativePath)
-    if (targetFile.endsWith('.hbs')) {
-      const sourceContent = await readFile(sourceFile)
-      const contentTemplate = Handlebars.compile(sourceContent)
-      const targetContent = contentTemplate(scaffoldOptions.data)
-      const fileNameTemplate = Handlebars.compile(targetFile)
-      targetFile = fileNameTemplate(scaffoldOptions.data)
-      targetFile = targetFile.replace('.hbs', '')
-      const targetFileDirectory = dirname(targetFile)
-      await mkDir(targetFileDirectory)
-      writeFile(targetFile, targetContent)
-    } else {
-      const targetFileDirectory = dirname(targetFile)
-      await mkDir(targetFileDirectory)
-      await copyFile(sourceFile, targetFile)
-    }
-  }
+  await Promise.all(
+    entries.map(async (sourceFile) => {
+      const relativePath = relative(scaffoldOptions.sourceDirectory, sourceFile)
+      let targetFile = joinPath(scaffoldOptions.targetDirectory, relativePath)
+      if (targetFile.endsWith('.hbs')) {
+        const sourceContent = await readFile(sourceFile)
+        const contentTemplate = Handlebars.compile(sourceContent)
+        const targetContent = contentTemplate(scaffoldOptions.data)
+        const fileNameTemplate = Handlebars.compile(targetFile)
+        targetFile = fileNameTemplate(scaffoldOptions.data)
+        targetFile = targetFile.replace('.hbs', '')
+        const targetFileDirectory = dirname(targetFile)
+        await mkDir(targetFileDirectory)
+        writeFile(targetFile, targetContent)
+      } else {
+        const targetFileDirectory = dirname(targetFile)
+        await mkDir(targetFileDirectory)
+        await copyFile(sourceFile, targetFile)
+      }
+    })
+  )
 }
