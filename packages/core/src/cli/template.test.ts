@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { ScaffoldOptions, scaffold } from './template'
 import { join as joinPath } from './path'
-import { writeFile, exists, readFile, mkDir } from './fs'
+import { writeFile, pathExists, readFile, mkDir } from './fs'
 
 describe('scaffold basic file', () => {
   it('scaffold template', async () => {
@@ -26,7 +26,7 @@ describe('scaffold basic file', () => {
       await scaffold(scaffoldOptions)
       // Then
       const targetFile = joinPath(targetDirectory, fileName)
-      await expect(exists(targetFile))
+      await expect(pathExists(targetFile))
     })
   })
 })
@@ -53,12 +53,12 @@ describe('scaffold handlebar file', () => {
       // When
       await scaffold(scaffoldOptions)
       // Then
-      await expect(exists(targetDirectory))
+      await expect(pathExists(targetDirectory))
       const expectedFile = joinPath(
         tmpDir,
         'my-cool-project/my-cool-project.txt'
       )
-      await expect(exists(expectedFile))
+      await expect(pathExists(expectedFile))
       const expectedContent = 'my-cool-project'
       const targetContent = await readFile(expectedFile)
       await expect(targetContent).toEqual(expectedContent)

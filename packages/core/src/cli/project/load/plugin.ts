@@ -3,7 +3,7 @@ import { pluginFileName } from '../../constants'
 import { glob, join as joinPath, dirname } from '../../path'
 import { createServer, ViteDevServer } from 'vite'
 import { Abort } from '../../error'
-import { exists as fileExists, readFile } from '../../fs'
+import { pathExists, readFile } from '../../fs'
 import { content, pathToken, fileToken } from '../../logger'
 
 type PluginWithName = Plugin & { name: string }
@@ -124,7 +124,7 @@ export async function loadPlugin(
 ): Promise<PluginWithName | undefined> {
   const pluginDirectory = dirname(manifestPath)
   const packageJsonPath = joinPath(pluginDirectory, 'package.json')
-  if (!(await fileExists(packageJsonPath))) {
+  if (!(await pathExists(packageJsonPath))) {
     throw PackageJsonNotFoundError(pluginDirectory)
   }
   const packageJsonString = await readFile(packageJsonPath)

@@ -10,7 +10,7 @@ import { relative as relativePath } from 'pathe'
 import commondir from 'commondir'
 
 /**
- * Given an absolute file-system path, it makes it relative to
+ * Given an absolute filesystem path, it makes it relative to
  * the current working directory. This is useful when logging paths
  * to allow the users to click on the file and let the OS open it
  * in the editor of choice.
