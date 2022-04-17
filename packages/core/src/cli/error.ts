@@ -129,6 +129,11 @@ export const handler = async (error: Error): Promise<Error> => {
   coreLogger().error({
     type: errorType,
     message: message,
+    error: {
+      message: error.message,
+      cause,
+      next,
+    },
   })
 
   return Promise.resolve(error)

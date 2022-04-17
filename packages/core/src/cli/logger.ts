@@ -22,6 +22,7 @@ export type ErrorLogType = 'bug' | 'abort' | 'unhandled'
 export type ErrorLog = {
   type: ErrorLogType
   message: string
+  error: object
 }
 
 /**
@@ -58,9 +59,14 @@ export class Logger {
    * Outputs a success message to the user.
    * @param message {LoggerMessage} The successful message.
    * @param level {LogLevel} The log level of the message.
+   * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
    */
-  success(message: LoggerMessage, level: LogLevel = 'info') {
-    this.log(`🎉 ${stringify(message)}`, level)
+  success(
+    message: LoggerMessage,
+    level: LogLevel = 'info',
+    object: object = {}
+  ) {
+    this.log(object, `🎉 ${stringify(message)}`, level)
   }
 
   /**
@@ -71,31 +77,34 @@ export class Logger {
     if (isRunningTests()) {
       return
     }
-    this.target.error(log, log.message)
+    this.target.error(log.error, log.message)
   }
 
   /**
    * Logs a debug messages.
    * @param message {LoggerMessage} Message to be logged.
+   * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
    */
-  debug(message: LoggerMessage) {
-    this.log(message, 'debug')
+  debug(message: LoggerMessage, object: object = {}) {
+    this.log(object, message, 'debug')
   }
 
   /**
    * Logs info messages.
    * @param message {LoggerMessage} Message to be logged.
+   * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
    */
-  info(message: LoggerMessage) {
-    this.log(message, 'info')
+  info(message: LoggerMessage, object: object = {}) {
+    this.log(object, message, 'info')
   }
 
   /**
    * Logs warn messages.
    * @param message {LoggerMessage} Message to be logged.
+   * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
    */
-  warn(message: LoggerMessage) {
-    this.log(message, 'warn')
+  warn(message: LoggerMessage, object: object = {}) {
+    this.log(object, message, 'warn')
   }
 
   /**
@@ -103,22 +112,26 @@ export class Logger {
    * @param message {LoggerMessage} The message to output.
    * @param level {LogLevel} The log level of the message.
    */
-  private log(message: LoggerMessage, level: LogLevel = 'info') {
+  private log(
+    object: object,
+    message: LoggerMessage,
+    level: LogLevel = 'info'
+  ) {
     if (isRunningTests()) {
       return
     }
     switch (level) {
       case 'debug':
-        this.target.debug({}, stringify(message))
+        this.target.debug(object, stringify(message))
         break
       case 'error':
-        this.target.error({}, stringify(message))
+        this.target.error(object, stringify(message))
         break
       case 'info':
-        this.target.info({}, stringify(message))
+        this.target.info(object, stringify(message))
         break
       case 'warn':
-        this.target.warn({}, stringify(message))
+        this.target.warn(object, stringify(message))
         break
     }
   }
