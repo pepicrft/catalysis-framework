@@ -72,8 +72,8 @@ export async function loadPlugins(
           (extension) => `${pluginFileName}.${extension}`
         )
         const globPatterns = manifestFileNames.flatMap((filename) => [
-          `node_modules/*/*/${filename}`,
-          `node_modules/*/${filename}`,
+          `node_modules/*/gestalt-plugin-*/${filename}`,
+          `node_modules/gestalt-plugin-*/${filename}`,
         ])
         const pluginManifestFiles = await glob(globPatterns, {
           onlyFiles: true,
@@ -135,7 +135,7 @@ export async function loadPlugin(
   const module = await options.viteServer.ssrLoadModule(manifestPath)
   return {
     ...(module as Plugin),
-    name: packageJson.name,
+    name: packageJson.name.replace('gestalt-plugin-', ''),
   }
 }
 

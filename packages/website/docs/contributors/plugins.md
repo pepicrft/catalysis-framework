@@ -5,7 +5,7 @@ However, we understand that this might be limiting for developers and organizati
 Therefore,
 we hold our opinions weakly and allow developers to bring theirs through **plugins**.
 
-Plugins are NPM packages that replace, extend, or augment Gestalt functionality.
+**Plugins are NPM packages that replace, extend, or augment Gestalt functionality.**
 They can also add new functionality and integrate it with the rest of the framework.
 
 ### Implementing a new plugin
@@ -13,40 +13,26 @@ They can also add new functionality and integrate it with the rest of the framew
 Plugins are distributed as NPM packages that follow the naming convention `gestalt-plugin-{name}` or `@{org}/gestalt-plugin-{name}`.
 For example, `@gestaltjs/gestalt-plugin-react` adds support for using React to declare UI.
 
-The NPM package has to be pure [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), and the main module has to export a default object representing the plugin.
-The example below shows how to use `type` and `exports` attributes in the `package.json` to indicate to Node that the package is ESM and what are its exported modules:
+The NPM package has to be pure [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules),
+and have `@gestaltjs/plugins` as a dependency:
 
 ```json
 // package.json
 {
     "type": "module",
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
-        },
-    },
-    "devDependency": {
-        "@gestaltjs/plugins": "..."
+    "dependency": {
+      "@gestaltjs/plugins": "..."
     }
 }
 ```
 
-Gestalt expects a default export with the object representing the plugin:
+Gestalt expects a `gestalt.config.{ts,js}` file at the root with the declaration of the plugin.
 
 ```ts
-// @gestaltjs/gestalt-plugin-react
-// src/index.ts
+// gestalt.config.js
 import { definePlugin } from "@gestaltjs/plugins"
 
 export default definePlugin({
-  renderer: { /** ... **/ }
+  /** plugin definition **/
 })
 ```
-
-### Plugin options
-
-Plugins can be initialized with any of the following options that represent different shapes of extensibility:
-
-- [**Renderer:**](/contributors/plugins/renderer) A renderer integrates a UI paradigm into Gestalt. Developers can use it to replace Gestalt's default UI paradimn, Vue, with others like React, Svelte, or Solid.
-

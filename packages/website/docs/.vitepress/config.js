@@ -113,9 +113,6 @@ function getContributorsSidebar() {
         {
           text: 'Plugins',
           link: '/contributors/plugins',
-          children: [
-            { text: 'Renderer', link: 'contributors/plugins/renderer' },
-          ],
         },
         {
           text: 'Core modules',

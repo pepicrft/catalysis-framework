@@ -15,8 +15,14 @@ describe('loadPlugins', () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const nodeModulesDirectory = joinPath(tmpDir, 'node_modules')
-      const pluginADirectory = joinPath(nodeModulesDirectory, 'A')
-      const pluginBDirectory = joinPath(nodeModulesDirectory, 'B')
+      const pluginADirectory = joinPath(
+        nodeModulesDirectory,
+        'gestalt-plugin-a'
+      )
+      const pluginBDirectory = joinPath(
+        nodeModulesDirectory,
+        'gestalt-plugin-b'
+      )
       const pluginAFilePath = joinPath(pluginADirectory, `${pluginFileName}.ts`)
       const pluginAPackageJsonPath = joinPath(pluginADirectory, `package.json`)
       const pluginBFilePath = joinPath(pluginBDirectory, `${pluginFileName}.js`)
@@ -39,8 +45,14 @@ describe('loadPlugins', () => {
       await mkDir(dirname(pluginBFilePath))
       await writeFile(pluginAFilePath, pluginContent)
       await writeFile(pluginBFilePath, pluginContent)
-      await writeFile(pluginAPackageJsonPath, JSON.stringify({ name: 'A' }))
-      await writeFile(pluginBPackageJsonPath, JSON.stringify({ name: 'B' }))
+      await writeFile(
+        pluginAPackageJsonPath,
+        JSON.stringify({ name: 'gestalt-plugin-a' })
+      )
+      await writeFile(
+        pluginBPackageJsonPath,
+        JSON.stringify({ name: 'gestalt-plugin-b' })
+      )
 
       // When
       const got = (
@@ -56,8 +68,8 @@ describe('loadPlugins', () => {
 
       // Then
       expect(got.length).toEqual(2)
-      expect(got[0].name).toEqual('A')
-      expect(got[1].name).toEqual('B')
+      expect(got[0].name).toEqual('a')
+      expect(got[1].name).toEqual('b')
     })
   })
 
@@ -65,7 +77,10 @@ describe('loadPlugins', () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const nodeModulesDirectory = joinPath(tmpDir, 'node_modules')
-      const pluginDirectory = joinPath(nodeModulesDirectory, 'Plugin')
+      const pluginDirectory = joinPath(
+        nodeModulesDirectory,
+        'gestalt-plugin-test'
+      )
       const pluginFilePath = joinPath(pluginDirectory, `${pluginFileName}.ts`)
 
       const pluginContent = `
@@ -102,7 +117,10 @@ describe('loadPlugins', () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const nodeModulesDirectory = joinPath(tmpDir, 'node_modules')
-      const pluginDirectory = joinPath(nodeModulesDirectory, 'Plugin')
+      const pluginDirectory = joinPath(
+        nodeModulesDirectory,
+        'gestalt-plugin-test'
+      )
       const pluginFilePath = joinPath(pluginDirectory, `${pluginFileName}.ts`)
       const pluginPackageJsonPath = joinPath(pluginDirectory, `package.json`)
 
