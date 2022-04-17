@@ -85,6 +85,7 @@ export const handler = async (error: Error): Promise<Error> => {
   let errorType: ErrorLogType
   let message = formatBold(formatRed('What happened 🤨'))
   let cause: string | undefined
+  let next: string | undefined
 
   if (error instanceof Bug) {
     errorType = 'bug'
@@ -92,6 +93,7 @@ export const handler = async (error: Error): Promise<Error> => {
   } else if (error instanceof Abort) {
     errorType = 'abort'
     cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
+    next = error?.options?.next ? stringify(error?.options?.next) : undefined
   } else {
     errorType = 'unhandled'
   }
@@ -100,6 +102,11 @@ export const handler = async (error: Error): Promise<Error> => {
   if (cause) {
     message = `${message}\n${formatBold(formatRed('Cause 🔍'))}\n`
     message = `${message}${cause}\n`
+  }
+
+  if (next) {
+    message = `${message}\n${formatBold(formatRed('Next 🌱'))}\n`
+    message = `${message}${next}\n`
   }
 
   if (error.stack) {

@@ -10,8 +10,9 @@ export default class Build extends Command {
   }
 
   async run(): Promise<void> {
-    throw new error.Bug('Message', {
+    throw new error.Abort('Message', {
       cause: "We couldn't generate whatever",
+      next: 'Do x',
     })
     logger().success('Built')
   }
