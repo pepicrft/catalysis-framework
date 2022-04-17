@@ -9,7 +9,7 @@ import { configurationFileName } from '../../constants'
 import Configuration from '../../../shared/configuration'
 
 import { join as pathJoin } from '../../path'
-import { writeFile, readFile } from '../../fs'
+import { writeFile } from '../../fs'
 import { workspace } from '@gestaltjs/testing'
 
 describe('lookupConfigurationPathTraversing', () => {

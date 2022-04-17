@@ -1,6 +1,6 @@
-import { core as coreLogger } from './logger'
-import type { ErrorLogType } from './logger'
-import { formatYellow, formatItalic, formatRed, formatBold } from './terminal'
+import { core as coreLogger, stringify } from './logger'
+import type { ErrorLogType, LoggerMessage } from './logger'
+import { formatYellow, formatRed, formatBold } from './terminal'
 import StackTracey from 'stacktracey'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -17,7 +17,7 @@ type ErrorOptions = {
    * a cause with the aim of iterating on it once we have
    * additional context from the bug report.
    */
-  cause?: string
+  cause?: LoggerMessage
 }
 /**
  * It defines the interface of the options
@@ -40,8 +40,8 @@ export class Bug extends Error {
    * @param message {string} Error messages
    * @param options {BugOptions} Error options
    */
-  constructor(message: string, options: BugOptions) {
-    super(message)
+  constructor(message: LoggerMessage, options: BugOptions) {
+    super(stringify(message))
     this.options = options
   }
 }
@@ -52,7 +52,7 @@ export class Bug extends Error {
  */
 export class BugSilent extends Error {}
 
-type AbortOptions = ErrorOptions & { next: string }
+type AbortOptions = ErrorOptions & { next: LoggerMessage }
 
 /**
  * An error that aborts the execution of the program
@@ -75,8 +75,8 @@ export class Abort extends Error {
    * @param message {string} Error messages
    * @param options {BugOptions} Error options
    */
-  constructor(message: string, options: AbortOptions) {
-    super(message)
+  constructor(message: LoggerMessage, options: AbortOptions) {
+    super(stringify(message))
     this.options = options
   }
 }
@@ -88,10 +88,10 @@ export const handler = async (error: Error): Promise<Error> => {
 
   if (error instanceof Bug) {
     errorType = 'bug'
-    cause = error?.options?.cause
+    cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
   } else if (error instanceof Abort) {
     errorType = 'abort'
-    cause = error?.options?.cause
+    cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
   } else {
     errorType = 'unhandled'
   }

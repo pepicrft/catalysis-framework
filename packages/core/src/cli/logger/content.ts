@@ -4,6 +4,7 @@
 export enum LoggerContentType {
   Command,
   Path,
+  File,
   Url,
 }
 

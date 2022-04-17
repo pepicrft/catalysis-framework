@@ -22,6 +22,8 @@ type GestaltJSPackageModules = {
 
   /** Represents the configuration module which exports the defineConfiguration module for defining a configuration. */
   configuration: ESModule
+
+  plugins: ESModule
 }
 
 /**
@@ -31,18 +33,26 @@ type GestaltJSPackageModules = {
  * @returns {GestaltJSPackageModules} An object representing the Node modules that are exported by the "gestaltjs" NPM package.
  */
 export function gestaltjsPackageModules(): GestaltJSPackageModules {
-  const frameworkDirectory = path.resolve(
+  const gestaltjsPackageRuntimeDirectory = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
     '../../gestaltjs/src/runtime'
+  )
+  const pluginsSourceDirectory = path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    '../../plugins/src'
   )
   return {
     support: {
       identifier: 'gestaltjs/support',
-      path: path.join(frameworkDirectory, 'support.ts'),
+      path: path.join(gestaltjsPackageRuntimeDirectory, 'support.ts'),
     },
     configuration: {
       identifier: 'gestaltjs/configuration',
-      path: path.join(frameworkDirectory, 'configuration.ts'),
+      path: path.join(gestaltjsPackageRuntimeDirectory, 'configuration.ts'),
+    },
+    plugins: {
+      identifier: '@gestaltjs/plugins',
+      path: path.join(pluginsSourceDirectory, 'index.ts'),
     },
   }
 }
