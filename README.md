@@ -49,13 +49,6 @@ npx @gestaltjs/create-project@latest
 
 - [pnpm](https://pnpm.io/)
 - [shadowenv](https://shopify.github.io/shadowenv/)
-- [Prettier](https://prettier.io/)
-- [ESlint](https://eslint.org/)
-
-## References
-
-- [Vitest](https://vitest.dev)
-- [rollup.js](https://rollupjs.org)
 
 ## Core team ✨
 
