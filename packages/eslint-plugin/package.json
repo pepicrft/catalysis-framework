@@ -30,8 +30,8 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.19.0",
-    "@typescript-eslint/parser": "5.19.0",
+    "@typescript-eslint/eslint-plugin": "5.20.0",
+    "@typescript-eslint/parser": "5.20.0",
     "eslint": "8.13.0"
   },
   "peerDependencies": {
