@@ -1,4 +1,4 @@
-import tempy from 'tempy'
+import {temporaryDirectoryTask, temporaryDirectory} from 'tempy'
 import rimraf from 'rimraf'
 
 /**
@@ -8,7 +8,7 @@ import rimraf from 'rimraf'
 export async function directory<T>(
   callback: (temporaryDirectory: string) => T
 ) {
-  return tempy.directory.task(callback)
+  return temporaryDirectoryTask(callback)
 }
 
 /**
@@ -18,7 +18,7 @@ export async function directory<T>(
 export async function deletableDirectory<T>(
   callback: (temporaryDirectory: string, deleteDir: () => Promise<void>) => T
 ) {
-  const directory = tempy.directory()
+  const directory = temporaryDirectory()
   const value = callback(directory, async () => {
     await new Promise((resolve, reject) => {
       rimraf(directory, {}, resolve)
