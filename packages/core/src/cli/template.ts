@@ -1,6 +1,6 @@
 import fg from 'fast-glob'
 import { join as joinPath, relative, dirname } from './path'
-import { copyFile, mkDir, writeFile, readFile } from './fs'
+import { copyFile, makeDirectory, writeFile, readFile } from './fs'
 import Handlebars from 'handlebars'
 
 export type ScaffoldOptions = {
@@ -34,11 +34,11 @@ export async function scaffold(scaffoldOptions: ScaffoldOptions) {
         targetFile = fileNameTemplate(scaffoldOptions.data)
         targetFile = targetFile.replace('.hbs', '')
         const targetFileDirectory = dirname(targetFile)
-        await mkDir(targetFileDirectory)
+        await makeDirectory(targetFileDirectory)
         writeFile(targetFile, targetContent)
       } else {
         const targetFileDirectory = dirname(targetFile)
-        await mkDir(targetFileDirectory)
+        await makeDirectory(targetFileDirectory)
         await copyFile(sourceFile, targetFile)
       }
     })

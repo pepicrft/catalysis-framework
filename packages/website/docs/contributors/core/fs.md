@@ -4,7 +4,7 @@
 We abstract away the dependency with the runtime (e.g. Node) to ensure compatibility across OSs and Javascript runtimes:
 
 ```ts
-import {fs} from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core"
 ```
 
 ### `readFile`
@@ -70,3 +70,64 @@ const exists = await fs.pathExists("path/to/.env")
 
 A promise that resolves with true if the file or directory exists.
 It rejects with an error otherwise.
+
+### `makeDirectory`
+
+Creates a new directory. If the parent directories don't exist they also get created.
+
+```ts
+import { fs } from "@gestaltjs/core"
+
+await fs.makeDirectory("path/to/directory")
+```
+
+#### Arguments
+
+| Name | Description | Type | Required | Default |
+| --- | ------ | ---- | --- | ---- |
+| `path` | The location where the directory will be created | `string` | Yes | |
+
+#### Returns
+
+A promise that resolves with on successful creation, and rejects if the creation fails.
+
+### `removeDirectory`
+
+Creates an existing directory.
+
+```ts
+import { fs } from "@gestaltjs/core"
+
+await fs.removeDirectory("path/to/directory")
+```
+
+#### Arguments
+
+| Name | Description | Type | Required | Default |
+| --- | ------ | ---- | --- | ---- |
+| `path` | The location of the directory to remove | `string` | Yes | |
+
+#### Returns
+
+A promise that resolves with on successful removal, and rejects if the creation fails.
+
+### `copyFile`
+
+Copies a file from a source to a target location.
+
+```ts
+import { fs } from "@gestaltjs/core"
+
+await fs.copyFile("/from/file.txt", "/to/file.txt")
+```
+
+#### Arguments
+
+| Name | Description | Type | Required | Default |
+| --- | ------ | ---- | --- | ---- |
+| `sourcePath` | The location of the file to copy | `string` | Yes | |
+| `targetPath` | The destination location | `string` | Yes | |
+
+#### Returns
+
+A promise that resolves with on successful removal, and rejects if the creation fails.

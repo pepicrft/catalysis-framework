@@ -28,25 +28,33 @@ export async function pathExists(path: string): Promise<boolean> {
   return fs.pathExists(path)
 }
 
-export async function writeDirectory(path: string): Promise<void> {
-  return fs.mkdir(path)
+/**
+ * It creates a new directory in the system.
+ * @param path {string} Path where the directory should be created.
+ * @returns {Promise<void>} A promise that resolves successfully if the directory gets created.
+ */
+export async function makeDirectory(path: string): Promise<void> {
+  await fs.promises.mkdir(path, { recursive: true })
 }
 
-export async function emptyDir(path: string): Promise<void> {
-  return fs.emptyDir(path)
-}
-
-export async function copyFile(
-  sourceFile: string,
-  targetFile: string
-): Promise<void> {
-  return fs.promises.copyFile(sourceFile, targetFile)
-}
-
-export async function mkDir(directoryPath: string): Promise<void> {
-  await fs.promises.mkdir(directoryPath, { recursive: true })
-}
-
-export async function rmDir(path: string): Promise<void> {
+/**
+ * It removes the directory at the given location.
+ * @param path {string} Path to the directory that will get removed.
+ * @returns {Promise<void>} A promise that resolves if the directory gets removed successfully.
+ */
+export async function removeDirectory(path: string): Promise<void> {
   return fs.promises.rmdir(path, { recursive: true })
+}
+
+/**
+ * Copies a file from a source to a target location.
+ * @param sourcePath {string} Path to the source file that will be copied.
+ * @param targetPath {string} Path to the target location.
+ * @returns {Promise<void>} A promise that resolves if the file is copied successfully.
+ */
+export async function copyFile(
+  sourcePath: string,
+  targetPath: string
+): Promise<void> {
+  return fs.promises.copyFile(sourcePath, targetPath)
 }

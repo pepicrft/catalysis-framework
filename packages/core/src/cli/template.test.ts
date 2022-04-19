@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { ScaffoldOptions, scaffold } from './template'
 import { join as joinPath } from './path'
-import { writeFile, pathExists, readFile, mkDir } from './fs'
+import { writeFile, pathExists, readFile, makeDirectory } from './fs'
 
 describe('scaffold basic file', () => {
   it('scaffold template', async () => {
@@ -15,7 +15,7 @@ describe('scaffold basic file', () => {
       }
       const fileName = 'hello-world.txt'
       const sourceFile = joinPath(sourceDirectory, fileName)
-      await mkDir(sourceDirectory)
+      await makeDirectory(sourceDirectory)
       await writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,
@@ -43,7 +43,7 @@ describe('scaffold handlebar file', () => {
       const sourceFileName = '{{name}}.txt.hbs'
       const sourceFile = joinPath(sourceDirectory, sourceFileName)
       const sourceContent = '{{name}}'
-      await mkDir(sourceDirectory)
+      await makeDirectory(sourceDirectory)
       await writeFile(sourceFile, sourceContent)
       const scaffoldOptions: ScaffoldOptions = {
         sourceDirectory: sourceDirectory,

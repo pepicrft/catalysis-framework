@@ -1,7 +1,7 @@
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { join as joinPath, dirname } from '../../path'
-import { mkDir, writeFile } from '../../fs'
+import { makeDirectory, writeFile } from '../../fs'
 import { pluginFileName } from '../../constants'
 import {
   loadPlugins,
@@ -41,8 +41,8 @@ describe('loadPlugins', () => {
       `
       const { plugins: pluginsModule } = workspace.gestaltjsPackageModules()
 
-      await mkDir(dirname(pluginAFilePath))
-      await mkDir(dirname(pluginBFilePath))
+      await makeDirectory(dirname(pluginAFilePath))
+      await makeDirectory(dirname(pluginBFilePath))
       await writeFile(pluginAFilePath, pluginContent)
       await writeFile(pluginBFilePath, pluginContent)
       await writeFile(
@@ -96,7 +96,7 @@ describe('loadPlugins', () => {
       `
       const { plugins: pluginsModule } = workspace.gestaltjsPackageModules()
 
-      await mkDir(dirname(pluginFilePath))
+      await makeDirectory(dirname(pluginFilePath))
       await writeFile(pluginFilePath, pluginContent)
 
       // When
@@ -137,7 +137,7 @@ describe('loadPlugins', () => {
       `
       const { plugins: pluginsModule } = workspace.gestaltjsPackageModules()
 
-      await mkDir(dirname(pluginFilePath))
+      await makeDirectory(dirname(pluginFilePath))
       await writeFile(pluginFilePath, pluginContent)
       await writeFile(
         pluginPackageJsonPath,
