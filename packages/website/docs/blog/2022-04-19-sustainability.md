@@ -14,4 +14,4 @@ This idea will span every corner of Gestalt, including [Catalyst](https://gestal
 
 The above is possible thanks partly to having a well-paid job at [Shopify](https://shopify.com) where I do what I love the most, building tools for developers, and that inspires me to positively impact the world.
 
-**Open-source is our way of giving to the world without expecting anything in return. It's beautiful.**
+**Open-source is our way of giving to the world without expecting anything in return. We love it.**
