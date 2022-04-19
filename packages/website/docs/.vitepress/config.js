@@ -123,6 +123,10 @@ function getBlogSidebar() {
       text: 'Posts',
       children: [
         {
+          text: 'Open-source sustainability through empowerment',
+          link: '/blog/2022-04-19-sustainability',
+        }
+        {
           text: 'Building a cohesive framework experience that sparks joy',
           link: '/blog/2022-03-14-cohesive-framework',
         },
