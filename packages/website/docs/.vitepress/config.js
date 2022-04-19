@@ -54,7 +54,7 @@ export default defineConfig({
       },
       {
         text: 'Blog',
-        link: '/blog/2022-03-14-cohesive-framework',
+        link: '/blog/2022-04-19-sustainability',
         activeMatch: '^/blog/',
       },
       {
