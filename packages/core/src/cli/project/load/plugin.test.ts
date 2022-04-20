@@ -1,5 +1,5 @@
 import { describe, test, expect, vi } from 'vitest'
-import { temporary } from '@gestaltjs/testing'
+import { temporary, workspace } from '@gestaltjs/testing'
 import { join as joinPath, dirname } from '../../path'
 import { makeDirectory, writeFile } from '../../fs'
 import { pluginFileName } from '../../constants'
@@ -9,7 +9,6 @@ import {
   PackageJsonNotFoundError,
   NoNameInPackageJsonError,
 } from './plugin'
-import { workspace } from '@gestaltjs/testing'
 
 describe('loadVuePlugin', () => {
   test('loads the plugin successfully', async () => {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-nodejs-modules
 import { execSync } from 'child_process'
 
 import { Given, After, Then } from 'cucumber'

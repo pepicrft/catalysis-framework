@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { temporary } from '@gestaltjs/testing'
+import { temporary, workspace } from '@gestaltjs/testing'
 import {
   lookupConfigurationPathTraversing,
   loadConfig,
@@ -10,7 +10,6 @@ import Configuration from '../../../shared/configuration'
 
 import { join as pathJoin } from '../../path'
 import { writeFile } from '../../fs'
-import { workspace } from '@gestaltjs/testing'
 
 describe('lookupConfigurationPathTraversing', () => {
   it('returns undefined if the file could not be located', async () => {

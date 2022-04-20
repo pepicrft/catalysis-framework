@@ -1,11 +1,8 @@
 import Project from '../models/project'
 import { Abort } from '../../error'
 import { dirname } from '../../path'
-import {
-  lookupConfigurationPathTraversing,
-  loadConfig,
-} from './config'
-import type { ViteOptions } from "./config"
+import { lookupConfigurationPathTraversing, loadConfig } from './config'
+import type { ViteOptions } from './config'
 
 /**
  * Error thrown when we can't find a directory containing a Gestalt configuration file.
@@ -26,8 +23,13 @@ export const ConfigFileNotFoundError = () => {
  * @param viteOptions {ViteOptions} Options to configure the Vite instance used for loading the configuration.
  * @returns
  */
-export async function loadProject(fromDirectory: string, viteOptions: ViteOptions = {}): Promise<Project> {
-  const configurationPath = await lookupConfigurationPathTraversing(fromDirectory)
+export async function loadProject(
+  fromDirectory: string,
+  viteOptions: ViteOptions = {}
+): Promise<Project> {
+  const configurationPath = await lookupConfigurationPathTraversing(
+    fromDirectory
+  )
   if (!configurationPath) {
     throw ConfigFileNotFoundError()
   }

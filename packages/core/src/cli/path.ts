@@ -4,6 +4,7 @@ export * from 'pathe'
 import process from 'node:process'
 export { pathEqual } from 'path-equal'
 import { relative as relativePath } from 'pathe'
+import { fileURLToPath } from 'url'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -24,4 +25,14 @@ export function relativize(path: string): string {
   } else {
     return path
   }
+}
+
+/**
+ * This function ensures the correct decodings of percent-encoded characters as
+ * well as ensuring a cross-platform valid absolute path string.
+ * @param url {URL} URL to obtain the path from.
+ * @returns {string} The string representing the path.
+ */
+export function fromURL(url: string | URL): string {
+  return fileURLToPath(url)
 }

@@ -41,7 +41,12 @@
   "eslintConfig": {
     "extends": [
       "../../.eslintrc.cjs"
-    ]
+    ],
+    "rules": {
+      "import/no-nodejs-modules": [
+        "off"
+      ]
+    }
   },
   "dependencies": {
     "@oclif/core": "^1.7.0",

@@ -1,5 +1,6 @@
 import path from 'pathe'
-import { fileURLToPath } from 'url'
+// eslint-disable-next-line import/no-nodejs-modules
+import { fileURLToPath } from 'node:url'
 
 export function packagesDirectory(): string {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
