@@ -17,11 +17,11 @@ type ConfigurationExport =
  *   @type {import('gestaltjs').Configuration}
  *   const config = {...}
  *
- * @param Configuration {Configuration | () => Promise<Configuration> | () => Configuration} Define a new configuration.
+ * @param configuration {Configuration | () => Promise<Configuration> | () => Configuration} Define a new configuration.
  * @returns A promise that resolves with the configuration.
  */
 export function defineConfiguration(
-  Configuration: ConfigurationExport
+  configuration: ConfigurationExport
 ): ConfigurationExport {
-  return Configuration
+  return configuration
 }

@@ -29,6 +29,10 @@
     "./configuration": {
       "import": "./dist/runtime/configuration.js",
       "types": "./dist/runtime/configuration.d.ts"
+    },
+    "./target": {
+      "import": "./dist/runtime/target.js",
+      "types": "./dist/runtime/target.d.ts"
     }
   },
   "scripts": {
