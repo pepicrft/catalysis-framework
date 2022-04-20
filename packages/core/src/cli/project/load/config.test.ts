@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import {
   lookupConfigurationPathTraversing,
-  load as loadConfig,
-  watch as watchConfig,
+  loadConfig,
+  watchConfig,
 } from './config'
 import { configurationFileName } from '../../constants'
 import Configuration from '../../../shared/configuration'

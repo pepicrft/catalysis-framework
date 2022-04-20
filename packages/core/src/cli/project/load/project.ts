@@ -1,20 +1,16 @@
 import Project from '../models/project'
 import { Abort } from '../../error'
 import { dirname } from '../../path'
-
 import {
   lookupConfigurationPathTraversing,
-  load as loadConfiguration,
+  loadConfig,
 } from './config'
+import type { ViteOptions } from "./config"
 
-export const DirectoryNotFoundError = (directory: string) => {
-  return new Abort(`The following directory was not found ${directory}`, {
-    cause:
-      'You might be running the command against a directory that does not exist in the system',
-    next: 'Run the command targeting a directory with a GestaltJS project',
-  })
-}
-
+/**
+ * Error thrown when we can't find a directory containing a Gestalt configuration file.
+ * @returns {Abort} An abort error.
+ */
 export const ConfigFileNotFoundError = () => {
   return new Abort('The config file could not be found', {
     cause:
@@ -23,17 +19,23 @@ export const ConfigFileNotFoundError = () => {
   })
 }
 
-export default async function load(from: string): Promise<Project> {
-  const configurationPath = await lookupConfigurationPathTraversing(from)
+/**
+ * It traverses up the directory hiearchy looking up a Gestalt project.
+ * It it finds one it returns it.
+ * @param fromDirectory {string} Directory from where we traverse up the directory hierarchy lookin up a Getalt project.
+ * @param viteOptions {ViteOptions} Options to configure the Vite instance used for loading the configuration.
+ * @returns
+ */
+export async function loadProject(fromDirectory: string, viteOptions: ViteOptions = {}): Promise<Project> {
+  const configurationPath = await lookupConfigurationPathTraversing(fromDirectory)
   if (!configurationPath) {
     throw ConfigFileNotFoundError()
   }
   const directory = dirname(configurationPath)
-  const configuration = await loadConfiguration(configurationPath)
+  const configuration = await loadConfig(configurationPath, viteOptions)
   return {
     configuration,
     directory,
-    routes: [],
     sourcesGlob: `${directory}/src/**/*.{ts,js}`,
   }
 }

@@ -14,7 +14,7 @@ export type ViteOptions = {
  * @param viteOptions {ViteOptions} Options to configure Vite, which is used internally to transpile the configuration.
  * @returns A promise that resolves with the Configuration.
  */
-export async function load(
+export async function loadConfig(
   configurationPath: string,
   viteOptions: ViteOptions = {}
 ): Promise<Configuration> {
@@ -76,7 +76,7 @@ export class ConfigWatcher {
  * @param viteOptions {ViteOptions} Options to configure Vite, which is used internally to transpile the configuration.
  * @returns A promise that resolves with the Configuration.
  */
-export async function watch(
+export async function watchConfig(
   configurationPath: string,
   viteOptions: ViteOptions = {},
   onChange: (configuration: Configuration) => Promise<void>
