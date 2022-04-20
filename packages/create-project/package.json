@@ -41,6 +41,10 @@
     "@oclif/core": "1.7.0"
   },
   "devDependencies": {},
+  "oclif": {
+    "bin": "create-project",
+    "commands": "./dist/commands"
+  },
   "engine-strict": true,
   "engines": {
     "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
@@ -49,9 +53,5 @@
     "darwin",
     "linux",
     "win32"
-  ],
-  "oclif": {
-    "bin": "create-project",
-    "commands": "./dist/commands"
-  }
+  ]
 }

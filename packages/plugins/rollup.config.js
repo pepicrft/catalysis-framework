@@ -1,24 +1,41 @@
 import path from 'pathe'
 import dts from 'rollup-plugin-dts'
+import fg from 'fast-glob'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
 const configuration = async () => {
-  const pluginsExternal = [...(await external(__dirname))]
+  const options = {
+    plugins: plugins(__dirname),
+    external: [...(await external(__dirname))],
+  }
   return [
     {
-      input: path.join(__dirname, 'src/index.ts'),
+      input: path.join(__dirname, 'src/cli/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'index.js'),
+          file: path.join(distDir(__dirname), 'cli/index.js'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
         },
       ],
-      plugins: plugins(__dirname),
-      external: pluginsExternal,
+      ...options
     },
+    {
+      input: await fg(path.join(__dirname, 'src/cli/commands/**/*.ts'), {
+        ignore: path.join(__dirname, 'src/cli/commands/**/*.test.ts'),
+      }),
+      output: [
+        {
+          dir: path.join(distDir(__dirname), 'cli/commands/plugins'),
+          format: 'esm',
+          exports: 'auto',
+          sourcemap: true,
+        },
+      ],
+      ...options,
+    }
   ]
 }
 

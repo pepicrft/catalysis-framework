@@ -54,9 +54,9 @@
     "@gestaltjs/dev": "0.7.3",
     "@gestaltjs/test": "0.7.3",
     "@gestaltjs/core": "0.7.3",
+    "@gestaltjs/plugins": "0.7.3",
     "@oclif/core": "^1.7.0",
-    "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1"
+    "@oclif/plugin-help": "^5"
   },
   "engine-strict": true,
   "engines": {
@@ -76,8 +76,8 @@
       "@gestaltjs/db",
       "@gestaltjs/dev",
       "@gestaltjs/test",
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@gestaltjs/plugins",
+      "@oclif/plugin-help"
     ]
   },
   "nx": {

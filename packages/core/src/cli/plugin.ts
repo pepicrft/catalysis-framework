@@ -1,4 +1,4 @@
-import { Renderer } from './renderer'
+import { Renderer } from './plugin/renderer'
 
 /**
  * The interface represents a Gestalt plugin. Plugins extend, augment, or replace Gestalt's

@@ -31,6 +31,18 @@
     "@oclif/core": "1.7.0"
   },
   "oclif": {
-    "commands": "./dist/cli/commands"
-  }
+    "commands": "./dist/cli/commands",
+    "topics": {
+      "db": { "description": "Create and manage databases" }
+    }
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
 }

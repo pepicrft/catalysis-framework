@@ -1,11 +1,14 @@
-import type { Plugin } from './plugin'
+import { plugin } from '@gestaltjs/core/cli'
 
-export { Plugin }
+export type Plugin = plugin.Plugin
 
 /**
  * Interface of the arguemnt and return type of definePlugin.
  */
-type PluginExport = Plugin | (() => Promise<Plugin>) | (() => Plugin)
+type PluginExport =
+  | plugin.Plugin
+  | (() => Promise<plugin.Plugin>)
+  | (() => plugin.Plugin)
 
 /**
  * A utility function to define new plugins. Since the function has its argument and
