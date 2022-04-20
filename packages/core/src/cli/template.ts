@@ -35,7 +35,7 @@ export async function scaffold(scaffoldOptions: ScaffoldOptions) {
         targetFile = targetFile.replace('.hbs', '')
         const targetFileDirectory = dirname(targetFile)
         await makeDirectory(targetFileDirectory)
-        writeFile(targetFile, targetContent)
+        await writeFile(targetFile, targetContent)
       } else {
         const targetFileDirectory = dirname(targetFile)
         await makeDirectory(targetFileDirectory)

@@ -150,6 +150,7 @@ describe('watch', () => {
           } else {
             expect(config.name).toEqual('Second')
             await deleteTmpDir()
+            await watcher.close()
             done()
           }
           configurations.push(config)

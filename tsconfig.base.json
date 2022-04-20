@@ -19,7 +19,7 @@
       "@gestaltjs/core/runtime": ["../../core/src/runtime/index.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
       "@gestaltjs/testing": ["../../testing/src/index.ts"],
-      "@gestaltjs/plugins": ["../../plugins/src/index.ts"],
+      "@gestaltjs/plugins": ["../../plugins/src/cli/index.ts"],
       "$*": ["./*"]
     },
     "types": ["vitest/globals"]

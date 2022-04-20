@@ -5,11 +5,30 @@ import { makeDirectory, writeFile } from '../../fs'
 import { pluginFileName } from '../../constants'
 import {
   loadPlugins,
+  loadVuePlugin,
   PackageJsonNotFoundError,
   NoNameInPackageJsonError,
 } from './plugin'
 import { workspace } from '@gestaltjs/testing'
 
+describe('loadVuePlugin', () => {
+  test('loads the plugin successfully', async () => {
+    // Given
+    const { plugins: pluginsModule } = workspace.gestaltjsPackageModules()
+
+    // When
+    const got = await loadVuePlugin({
+      alias: [
+        {
+          find: pluginsModule.identifier,
+          replacement: pluginsModule.path,
+        },
+      ],
+    })
+    // Then
+    expect(got).not.toBeUndefined()
+  })
+})
 describe('loadPlugins', () => {
   test('loads the plugins when the manifest is Javascript and Typescript', async () => {
     await temporary.directory(async (tmpDir) => {

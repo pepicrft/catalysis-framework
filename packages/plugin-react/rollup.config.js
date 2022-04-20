@@ -7,10 +7,10 @@ const configuration = async () => {
   const reactPluginExternal = [...(await external(__dirname))]
   return [
     {
-      input: path.join(__dirname, 'src/index.ts'),
+      input: path.join(__dirname, 'src/cli/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'index.js'),
+          file: path.join(distDir(__dirname), 'cli/index.js'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,

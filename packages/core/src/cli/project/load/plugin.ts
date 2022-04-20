@@ -1,10 +1,11 @@
-import { Plugin } from '@gestaltjs/plugins'
+import { Plugin } from '../../plugin'
 import { pluginFileName } from '../../constants'
-import { glob, join as joinPath, dirname } from '../../path'
+import { glob, join as joinPath, dirname, findUp } from '../../path'
 import { createServer, ViteDevServer } from 'vite'
 import { Abort } from '../../error'
 import { pathExists, readFile } from '../../fs'
 import { content, pathToken, fileToken } from '../../logger'
+import { fileURLToPath } from 'url'
 
 type PluginWithName = Plugin & { name: string }
 
@@ -27,6 +28,16 @@ export const PackageJsonNotFoundError = (pluginDirectory: string) => {
       )} file`,
     }
   )
+}
+
+/**
+ * A function that returns an error to throw when the Vue plugin cant't be found.
+ * @returns {Bug} A bug error.
+ */
+export const VuePluginNotFound = () => {
+  return new Abort(content`Couldn't find the default Vue plugin`, {
+    cause: content`The package @gestaltjs/gestalt-plugin-vue might be missing under the project's node_modules directory.`,
+  })
 }
 
 /**
@@ -93,7 +104,9 @@ export async function loadPlugins(
           dirname(manifestPath),
           viteOptions
         )
-        return await loadPlugin(manifestPath, { viteServer })
+        const plugin = await loadPlugin(manifestPath, { viteServer })
+        await viteServer.close()
+        return plugin
       })
     )
   ).filter(
@@ -113,6 +126,34 @@ type LoadPluginOptions = {
 }
 
 /**
+ * It loads the Vue plugin and returns it.
+ * @param viteOptions {ViteOptions} Options to configure the Vite server used for loading the plugin.
+ * @returns {Promise<PluginWithName>} A promise that resolves with the plugin.
+ */
+export async function loadVuePlugin(
+  viteOptions: ViteOptions = {}
+): Promise<PluginWithName> {
+  const cwd = dirname(fileURLToPath(import.meta.url))
+  const vuePluginManifestPath = await findUp(
+    [
+      `@gestaltjs/gestalt-plugin-vue/${pluginFileName}.ts`,
+      `plugin-vue/${pluginFileName}.ts`,
+    ],
+    { type: 'file', cwd }
+  )
+  if (!vuePluginManifestPath) {
+    throw VuePluginNotFound()
+  }
+  const viteServer = await getViteServer(
+    dirname(vuePluginManifestPath),
+    viteOptions
+  )
+  const got = await loadPlugin(vuePluginManifestPath, { viteServer })
+  await viteServer.close()
+  return got
+}
+
+/**
  * Given a path to a manifest and a Vite server, it loads and returns a plugin.
  * @param manifestPath {string} Path to the plugin manifest. For example /path/to/gestalt.plugin.ts
  * @param options {LoadPluginOptions} Options like the Vite dev server to load and transpile the plugin.
@@ -121,7 +162,7 @@ type LoadPluginOptions = {
 export async function loadPlugin(
   manifestPath: string,
   options: LoadPluginOptions
-): Promise<PluginWithName | undefined> {
+): Promise<PluginWithName> {
   const pluginDirectory = dirname(manifestPath)
   const packageJsonPath = joinPath(pluginDirectory, 'package.json')
   if (!(await pathExists(packageJsonPath))) {
@@ -134,7 +175,7 @@ export async function loadPlugin(
   }
   const module = await options.viteServer.ssrLoadModule(manifestPath)
   return {
-    ...(module as Plugin),
+    ...(module.default as Plugin),
     name: packageJson.name.replace('gestalt-plugin-', ''),
   }
 }
@@ -152,10 +193,8 @@ async function getViteServer(
   return await createServer({
     root: root,
     server: {
+      hmr: false,
       middlewareMode: 'ssr',
-      watch: {
-        ignored: ['*'],
-      },
     },
     clearScreen: false,
     logLevel: 'silent',

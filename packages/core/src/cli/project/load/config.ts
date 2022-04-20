@@ -21,12 +21,13 @@ export async function load(
   const vite = await createServer({
     server: {
       middlewareMode: 'ssr',
+      hmr: false,
       watch: {
         ignored: ['*', `!${basename(configurationPath)}`],
       },
     },
     clearScreen: false,
-    logLevel: 'silent',
+    logLevel: 'info',
     resolve: {
       alias: viteOptions?.alias ?? [],
     },
@@ -35,7 +36,9 @@ export async function load(
     },
   })
   const module = await vite.ssrLoadModule(configurationPath)
-  return module.default as Configuration
+  const configuration = module.default as Configuration
+  await vite.close()
+  return configuration
 }
 
 /**
@@ -57,6 +60,13 @@ export class ConfigWatcher {
 
   constructor(options: ConfigWatcherOptions) {
     this.options = options
+  }
+
+  /**
+   * Closes the internal Vite server.
+   */
+  async close() {
+    await this.options.vite.close()
   }
 }
 

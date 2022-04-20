@@ -52,7 +52,7 @@ export class Bug extends Error {
  */
 export class BugSilent extends Error {}
 
-type AbortOptions = ErrorOptions & { next: LoggerMessage }
+type AbortOptions = ErrorOptions & { next?: LoggerMessage }
 
 /**
  * An error that aborts the execution of the program
