@@ -55,6 +55,7 @@
     "@gestaltjs/test": "0.7.3",
     "@gestaltjs/core": "0.7.3",
     "@gestaltjs/plugins": "0.7.3",
+    "@gestaltjs/gestalt-plugin-vue": "0.7.3",
     "@oclif/core": "^1.7.0",
     "@oclif/plugin-help": "^5"
   },

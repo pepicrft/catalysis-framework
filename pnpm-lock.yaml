@@ -233,6 +233,7 @@ importers:
       '@gestaltjs/core': 0.7.3
       '@gestaltjs/db': 0.7.3
       '@gestaltjs/dev': 0.7.3
+      '@gestaltjs/gestalt-plugin-vue': 0.7.3
       '@gestaltjs/plugins': 0.7.3
       '@gestaltjs/test': 0.7.3
       '@oclif/core': ^1.7.0
@@ -243,6 +244,7 @@ importers:
       '@gestaltjs/core': link:../core
       '@gestaltjs/db': link:../db
       '@gestaltjs/dev': link:../dev
+      '@gestaltjs/gestalt-plugin-vue': link:../plugin-vue
       '@gestaltjs/plugins': link:../plugins
       '@gestaltjs/test': link:../test
       '@oclif/core': 1.7.0
