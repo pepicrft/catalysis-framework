@@ -207,14 +207,14 @@ importers:
   packages/e2e:
     specifiers:
       '@types/cucumber': 6.0.1
-      cucumber: 6.0.5
+      cucumber: 6.0.7
       cucumber-junit-formatter: 0.2.2
       cucumber-pretty: 6.0.1
     devDependencies:
       '@types/cucumber': 6.0.1
-      cucumber: 6.0.5
-      cucumber-junit-formatter: 0.2.2_cucumber@6.0.5
-      cucumber-pretty: 6.0.1_cucumber@6.0.5
+      cucumber: 6.0.7
+      cucumber-junit-formatter: 0.2.2_cucumber@6.0.7
+      cucumber-pretty: 6.0.1_cucumber@6.0.7
 
   packages/eslint-plugin:
     specifiers:
@@ -3031,24 +3031,24 @@ packages:
       xregexp: 4.4.1
     dev: true
 
-  /cucumber-junit-formatter/0.2.2_cucumber@6.0.5:
+  /cucumber-junit-formatter/0.2.2_cucumber@6.0.7:
     resolution: {integrity: sha512-zq8oPfMbyGL3H7vCP8oNqgcIVMhLznWsMDTidTk7BgfgL5kG118GEoEp4ORj6FO7jS0fMJEUuarA0I8xQPzSgw==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
       cucumber: '>=3.0.0'
     dependencies:
-      cucumber: 6.0.5
+      cucumber: 6.0.7
       xml: 1.0.1
     dev: true
 
-  /cucumber-pretty/6.0.1_cucumber@6.0.5:
+  /cucumber-pretty/6.0.1_cucumber@6.0.7:
     resolution: {integrity: sha512-9uOIZ8x3lgCPROqYc7kqe2e7UrH5TZPZCdj5fVPze1XViG9yv8/8MnFsAnVINDYWVhiql8DJHb3UrZfIPHYH/A==}
     peerDependencies:
       cucumber: '>=6.0.0 <7.0.0'
     dependencies:
       cli-table3: 0.6.1
       colors: 1.4.0
-      cucumber: 6.0.5
+      cucumber: 6.0.7
       figures: 3.2.0
     dev: true
 
@@ -3056,10 +3056,10 @@ packages:
     resolution: {integrity: sha512-+x5j1IfZrBtbvYHuoUX0rl4nUGxaey6Do9sM0CABmZfDCcWXuuRm1fQeCaklIYQgOFHQ6xOHvDSdkMHHpni6tQ==}
     dev: true
 
-  /cucumber/6.0.5:
-    resolution: {integrity: sha512-x+W9Fwk6TvcapQsYMxwFU5AsQJDOIJVGrPKmH15OC7jzb9/Dk7Hb0ZAyw4WcpaDcUDRc8bi2k2yJejDp5eTRlg==}
+  /cucumber/6.0.7:
+    resolution: {integrity: sha512-pN3AgWxHx8rOi+wOlqjASNETOjf3TgeyqhMNLQam7nSTXgQzju1oAmXkleRQRcXvpVvejcDHiZBLFSfBkqbYpA==}
     engines: {node: '>=8'}
-    deprecated: The npm package has moved to @cucumber/cucumber
+    deprecated: Cucumber is publishing new releases under @cucumber/cucumber
     hasBin: true
     dependencies:
       assertion-error-formatter: 3.0.0
