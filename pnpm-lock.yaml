@@ -102,6 +102,18 @@ importers:
       vite: 2.9.5
       vitest: 0.9.4
 
+  e2e:
+    specifiers:
+      '@types/cucumber': 6.0.1
+      cucumber: 6.0.7
+      cucumber-junit-formatter: 0.2.2
+      cucumber-pretty: 6.0.1
+    devDependencies:
+      '@types/cucumber': 6.0.1
+      cucumber: 6.0.7
+      cucumber-junit-formatter: 0.2.2_cucumber@6.0.7
+      cucumber-pretty: 6.0.1_cucumber@6.0.7
+
   fixtures/app:
     specifiers:
       gestaltjs: 0.7.3
@@ -203,18 +215,6 @@ importers:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.7.0
       '@types/express': 4.17.13
-
-  packages/e2e:
-    specifiers:
-      '@types/cucumber': 6.0.1
-      cucumber: 6.0.7
-      cucumber-junit-formatter: 0.2.2
-      cucumber-pretty: 6.0.1
-    devDependencies:
-      '@types/cucumber': 6.0.1
-      cucumber: 6.0.7
-      cucumber-junit-formatter: 0.2.2_cucumber@6.0.7
-      cucumber-pretty: 6.0.1_cucumber@6.0.7
 
   packages/eslint-plugin:
     specifiers:
