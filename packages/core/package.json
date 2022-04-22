@@ -73,8 +73,7 @@
     "picocolors": "1.0.0",
     "shelljs": "0.8.5",
     "tempy": "2.0.0",
-    "terminal-link": "3.0.0",
-    "zod": "3.14.3"
+    "terminal-link": "3.0.0"
   },
   "engine-strict": true,
   "engines": {
