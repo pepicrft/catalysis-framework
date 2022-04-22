@@ -1,7 +1,8 @@
 import { Flags, Interfaces } from '@oclif/core'
 import { project, Command } from '@gestaltjs/core/cli'
-import checkCodeService from '../../services/code'
+import { checkCode } from '../../services/code'
 
+// eslint-disable-next-line import/no-default-export
 export default class Code extends Command {
   static description = 'Check code using Typescript'
 
@@ -22,6 +23,6 @@ export default class Code extends Command {
     const { flags } = await this.parse(Code)
     const loadedProject = await project.load(flags.path)
 
-    await checkCodeService(loadedProject.directory)
+    await checkCode(loadedProject.directory)
   }
 }

@@ -1,4 +1,4 @@
-import Project from '../models/project'
+import { Project } from '../models/project'
 import { Abort } from '../../error'
 import { dirname } from '../../path'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'

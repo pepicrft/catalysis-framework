@@ -1,5 +1,6 @@
-import gestaltRules from './rules/gestalt'
+import { gestaltRules } from './rules/gestalt'
 
+// eslint-disable-next-line import/no-default-export
 export default {
   parser: '@typescript-eslint/parser',
   parserOptions: {

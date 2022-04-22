@@ -1,5 +1,3 @@
-type Target = {
+export type Target = {
   name?: string
 }
-
-export default Target

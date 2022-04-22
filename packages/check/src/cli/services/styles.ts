@@ -3,7 +3,7 @@ type LintOptions = {
   fix: boolean
   project: project.Project
 }
-export default async function styles(options: LintOptions) {
+export async function checkStyle(options: LintOptions) {
   const args = []
   if (options.fix) {
     args.push('--fix')

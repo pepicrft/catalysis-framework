@@ -1,7 +1,8 @@
-import logger from '../../logger'
-import { error, Command } from '@gestaltjs/core/cli'
+import { pluginsLogger } from '../../logger'
+import { Command } from '@gestaltjs/core/cli'
 import { Interfaces } from '@oclif/core'
 
+// eslint-disable-next-line import/no-default-export
 export default class Build extends Command {
   static description = 'Build the plugin'
 
@@ -10,6 +11,6 @@ export default class Build extends Command {
   }
 
   async run(): Promise<void> {
-    logger().success('Built')
+    pluginsLogger().success('Built')
   }
 }

@@ -1,7 +1,5 @@
 import { logger } from '@gestaltjs/core/cli'
 
-const serveLogger = () => {
+export const devLogger = () => {
   return logger.core().child('dev')
 }
-
-export default serveLogger

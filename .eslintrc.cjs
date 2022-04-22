@@ -20,6 +20,7 @@ module.exports = {
     'no-useless-catch': 'error',
     'rulesdir/noop': 'error',
     'import/no-nodejs-modules': 'error',
+    'import/no-default-export': 'error',
     'no-implicit-globals': 'error',
   },
   env: {

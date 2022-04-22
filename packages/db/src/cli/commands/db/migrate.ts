@@ -1,7 +1,8 @@
 import { Interfaces } from '@oclif/core'
 import { Command } from '@gestaltjs/core/cli'
-import logger from '../../logger'
+import { dbLogger } from '../../logger'
 
+// eslint-disable-next-line import/no-default-export
 export default class Migrate extends Command {
   static description = 'Build your Gestalt project'
 
@@ -10,6 +11,6 @@ export default class Migrate extends Command {
   }
 
   async run(): Promise<void> {
-    logger().success('Migrated')
+    dbLogger().success('Migrated')
   }
 }

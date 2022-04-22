@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { tsc } from '@gestaltjs/core/cli'
-import code from './code'
+import { checkCode } from './code'
+
 vi.mock('@gestaltjs/core/cli')
 describe('run', () => {
   it('runs tsc cli command', async () => {
@@ -10,7 +11,7 @@ describe('run', () => {
     const expectedArgs = ['--noEmit']
 
     // When
-    await code(appDirectory)
+    await checkCode(appDirectory)
 
     // Then
     expect(tsc.run).toHaveBeenCalledWith(expectedArgs, appDirectory)

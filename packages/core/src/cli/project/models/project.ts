@@ -1,9 +1,9 @@
-import type Configuration from '../../../shared/configuration'
+import type { Configuration } from '../../../shared/configuration'
 
 /**
  * Interface that represents a Gestalt project.
  */
-export default interface Project {
+export interface Project {
   /** Directory where the project lives */
   directory: string
 

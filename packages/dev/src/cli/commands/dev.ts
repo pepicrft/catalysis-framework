@@ -1,7 +1,8 @@
 import { Interfaces } from '@oclif/core'
 import { Command } from '@gestaltjs/core/cli'
-import logger from '../logger'
+import { devLogger } from '../logger'
 
+// eslint-disable-next-line import/no-default-export
 export default class Serve extends Command {
   static description = 'Serve your Gestalt project'
 
@@ -10,6 +11,6 @@ export default class Serve extends Command {
   }
 
   async run(): Promise<void> {
-    logger().success('Served')
+    devLogger().success('Served')
   }
 }

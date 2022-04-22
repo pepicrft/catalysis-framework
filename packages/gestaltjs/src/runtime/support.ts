@@ -1,3 +1,3 @@
-export default function whatever(): string {
+export function whatever(): string {
   return 'gestalt'
 }

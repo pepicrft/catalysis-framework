@@ -1,7 +1,5 @@
 import { logger } from '@gestaltjs/core/cli'
 
-const dbLogger = () => {
+export const pluginsLogger = () => {
   return logger.core().child('plugins')
 }
-
-export default dbLogger

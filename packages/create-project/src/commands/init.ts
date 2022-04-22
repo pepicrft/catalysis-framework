@@ -1,7 +1,8 @@
 import { Interfaces } from '@oclif/core'
 import { Command } from '@gestaltjs/core/cli'
-import logger from '../logger'
+import { createProjectLogger } from '../logger'
 
+// eslint-disable-next-line import/no-default-export
 export default class Init extends Command {
   static description = 'Create a Gestalt project'
 
@@ -10,6 +11,6 @@ export default class Init extends Command {
   }
 
   async run(): Promise<void> {
-    logger().info('Initialized')
+    createProjectLogger().info('Initialized')
   }
 }

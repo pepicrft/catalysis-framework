@@ -1,8 +1,8 @@
 import { project } from '@gestaltjs/core/cli'
-import logger from '../logger'
+import { devLogger } from '../logger'
 import express from 'express'
 
-async function dev(project: project.Project) {
+export async function devProject(project: project.Project) {
   const server = express()
   const port = 3000
 
@@ -11,8 +11,8 @@ async function dev(project: project.Project) {
   })
 
   server.listen(port, () => {
-    logger().info(`${project.configuration.name} being served on port ${port}`)
+    devLogger().info(
+      `${project.configuration.name} being served on port ${port}`
+    )
   })
 }
-
-export default dev

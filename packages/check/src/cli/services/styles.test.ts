@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { eslint } from '@gestaltjs/core/cli'
-import styles from './styles'
+import { checkStyle } from './styles'
 
 vi.mock('@gestaltjs/core/cli')
 
@@ -12,7 +12,7 @@ describe('run', () => {
     const expectedArgs = [options.project.sourcesGlob]
 
     // When
-    await styles(options)
+    await checkStyle(options)
 
     // Then
     expect(eslint.run).toHaveBeenCalledWith(
@@ -27,7 +27,7 @@ describe('run', () => {
     const expectedArgs = ['--fix', options.project.sourcesGlob]
 
     // When
-    await styles(options)
+    await checkStyle(options)
 
     // Then
     expect(eslint.run).toHaveBeenCalledWith(

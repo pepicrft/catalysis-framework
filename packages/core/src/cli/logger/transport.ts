@@ -67,7 +67,7 @@ const pinoLogLevels: { [key: number]: string } = {
   60: 'fatal',
 }
 
-export default async (options: pino.TransportBaseOptions) => {
+export const baseTransport = async (options: pino.TransportBaseOptions) => {
   return pinoPretty({
     ...options,
     colorize: false,
