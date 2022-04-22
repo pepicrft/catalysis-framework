@@ -53,8 +53,13 @@ export default defineConfig({
         activeMatch: '^/contributors/',
       },
       {
+        text: 'Catalysis',
+        link: '/catalysis/introduction',
+        activeMatch: '^/catalysis/',
+      },
+      {
         text: 'Blog',
-        link: '/blog/2022-04-19-sustainability',
+        link: '/blog/2022-03-14-cohesive-framework',
         activeMatch: '^/blog/',
       },
       {
@@ -75,6 +80,7 @@ export default defineConfig({
       '/guide/': getGuideSidebar(),
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
+      '/catalysis/': getCatalysisSidebar(),
       '/reference/': getReferenceSidebar(),
     },
   },
@@ -107,13 +113,13 @@ function getContributorsSidebar() {
         {
           text: 'Plugins',
           link: '/contributors/plugins',
+          children: [
+            { text: 'Renderer', link: 'contributors/plugins/renderer' },
+          ],
         },
         {
           text: 'Core modules',
-          children: [
-            { text: 'fs', link: 'contributors/core/fs' },
-            { text: 'path', link: 'contributors/core/path' },
-          ],
+          children: [{ text: 'fs', link: 'contributors/core/fs' }],
         },
       ],
     },
@@ -126,14 +132,24 @@ function getBlogSidebar() {
       text: 'Posts',
       children: [
         {
-          text: 'Open-source sustainability through empowerment',
-          link: '/blog/2022-04-19-sustainability',
-        },
-        {
           text: 'Building a cohesive framework experience that sparks joy',
           link: '/blog/2022-03-14-cohesive-framework',
         },
         { text: 'Why Gestalt', link: '/blog/2022-01-19-why-gestalt' },
+      ],
+    },
+  ]
+}
+
+function getCatalysisSidebar() {
+  return [
+    {
+      text: 'Catalysis',
+      children: [
+        {
+          text: 'Introduction',
+          link: '/catalysis/introduction',
+        },
       ],
     },
   ]
