@@ -14,7 +14,7 @@ type ConfigurationExport =
  * and auto-completion.
  *
  * Alternatively, Configurations can use the '@type' annotation:
- *   @type {import('gestaltjs').Configuration}
+ *   @type {import('gestaltjs/configuration').Configuration}
  *   const config = {...}
  *
  * @param configuration {Configuration | () => Promise<Configuration> | () => Configuration} Define a new configuration.
