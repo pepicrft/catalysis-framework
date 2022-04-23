@@ -12,8 +12,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/cli/index.js",
-      "types": "./dist/cli/index.d.ts"
+      "import": "./dist/runtime/index.js",
+      "types": "./dist/runtime/index.d.ts"
     }
   },
   "files": [
@@ -46,7 +46,9 @@
   "oclif": {
     "commands": "./dist/cli/commands",
     "topics": {
-      "plugins": { "description": "Create and build Gestalt plugins" }
+      "plugins": {
+        "description": "Create and build Gestalt plugins"
+      }
     }
   },
   "engine-strict": true,

@@ -11,16 +11,16 @@ const configuration = async () => {
   }
   return [
     {
-      input: path.join(__dirname, 'src/cli/index.ts'),
+      input: path.join(__dirname, 'src/runtime/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'cli/index.js'),
+          file: path.join(distDir(__dirname), 'runtime/index.js'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
         },
       ],
-      ...options
+      ...options,
     },
     {
       input: await fg(path.join(__dirname, 'src/cli/commands/**/*.ts'), {
@@ -35,7 +35,7 @@ const configuration = async () => {
         },
       ],
       ...options,
-    }
+    },
   ]
 }
 

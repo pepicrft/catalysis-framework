@@ -1,4 +1,4 @@
-import { Plugin } from '../../plugin'
+import { Plugin } from '../../plugin/models/plugin'
 import { pluginFileName } from '../../constants'
 import { glob, join as joinPath, dirname, findUp } from '../../path'
 import { createServer, ViteDevServer } from 'vite'
@@ -6,8 +6,6 @@ import { Abort } from '../../error'
 import { pathExists, readFile } from '../../fs'
 import { content, pathToken, fileToken } from '../../logger'
 import { fileURLToPath } from 'url'
-
-type PluginWithName = Plugin & { name: string }
 
 /**
  * Returns an error to throw when the plugin doesn't have a package.json in its directory.
@@ -75,7 +73,7 @@ export type ViteOptions = {
 export async function loadPlugins(
   directories: string[],
   viteOptions: ViteOptions = {}
-): Promise<PluginWithName[]> {
+): Promise<Plugin[]> {
   const pluginManifests = (
     await Promise.all(
       directories.flatMap(async (directory) => {
@@ -112,7 +110,7 @@ export async function loadPlugins(
   ).filter(
     // Eliminates undefined from the array
     (plugin) => plugin
-  ) as PluginWithName[]
+  ) as Plugin[]
 }
 
 /**
@@ -128,11 +126,11 @@ type LoadPluginOptions = {
 /**
  * It loads the Vue plugin and returns it.
  * @param viteOptions {ViteOptions} Options to configure the Vite server used for loading the plugin.
- * @returns {Promise<PluginWithName>} A promise that resolves with the plugin.
+ * @returns {Promise<Plugin>} A promise that resolves with the plugin.
  */
 export async function loadVuePlugin(
   viteOptions: ViteOptions = {}
-): Promise<PluginWithName> {
+): Promise<Plugin> {
   const cwd = dirname(fileURLToPath(import.meta.url))
   const vuePluginManifestPath = await findUp(
     [
@@ -162,7 +160,7 @@ export async function loadVuePlugin(
 export async function loadPlugin(
   manifestPath: string,
   options: LoadPluginOptions
-): Promise<PluginWithName> {
+): Promise<Plugin> {
   const pluginDirectory = dirname(manifestPath)
   const packageJsonPath = joinPath(pluginDirectory, 'package.json')
   if (!(await pathExists(packageJsonPath))) {

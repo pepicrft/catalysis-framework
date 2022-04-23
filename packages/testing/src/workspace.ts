@@ -40,7 +40,7 @@ export function gestaltjsPackageModules(): GestaltJSPackageModules {
   )
   const pluginsSourceDirectory = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    '../../plugins/src/cli'
+    '../../plugins/src/runtime'
   )
   return {
     support: {
