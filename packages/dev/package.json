@@ -32,7 +32,9 @@
   "devDependencies": {
     "@gestaltjs/core": "0.7.3",
     "@oclif/core": "1.7.0",
-    "@types/express": "4.17.13"
+    "@types/express": "4.17.13",
+    "h3": "^0.7.4",
+    "listhen": "^0.2.10"
   },
   "oclif": {
     "commands": "./dist/cli/commands"

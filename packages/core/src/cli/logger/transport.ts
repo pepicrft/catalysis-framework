@@ -43,9 +43,10 @@ const pinoLogLevels: { [key: number]: string } = {
 }
 
 // eslint-disable-next-line import/no-default-export
-const baseTransport = async (options: pino.TransportBaseOptions) => {
+const baseTransport = (options: pino.TransportBaseOptions) => {
   return pinoPretty({
     ...options,
+    sync: true,
     colorize: false,
     messageFormat: (log, messageKey) => {
       const module = formatModule(`${log['module']}`)
