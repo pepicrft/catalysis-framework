@@ -1,14 +1,12 @@
-import { plugin } from '@gestaltjs/core/cli'
-
-export type Plugin = plugin.Plugin
+import { UserPlugin } from '@gestaltjs/core/shared'
 
 /**
  * Interface of the arguemnt and return type of definePlugin.
  */
 type PluginExport =
-  | plugin.Plugin
-  | (() => Promise<plugin.Plugin>)
-  | (() => plugin.Plugin)
+  | UserPlugin
+  | (() => Promise<UserPlugin>)
+  | (() => UserPlugin)
 
 /**
  * A utility function to define new plugins. Since the function has its argument and
@@ -17,7 +15,7 @@ type PluginExport =
  * and auto-completion.
  *
  * Alternatively, plugins can use the '@type' annotation:
- *   @type {import('@gestaltjs/plugins').Plugin}
+ *   @type {import('@gestaltjs/plugins').UserPlugin}
  *   const config = {...}
  *
  * @param plugin {Plugin | () => Promise<Plugin> | () => Plugin} Define a new plugin.

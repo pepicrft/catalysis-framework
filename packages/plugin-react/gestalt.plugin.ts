@@ -1,7 +1,10 @@
-import { definePlugin } from "@gestaltjs/plugins"
+import { definePlugin } from '@gestaltjs/plugins'
 
+// eslint-disable-next-line import/no-default-export
 export default definePlugin({
-    renderer: {
-        dependencies: {}
-    }
+  renderer: {
+    fileExtensions: ['jsx', 'tsx'],
+    requiredProjectDependencies: ['react'],
+    vitePlugins: [],
+  },
 })

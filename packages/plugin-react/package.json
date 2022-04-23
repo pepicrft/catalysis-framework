@@ -35,7 +35,9 @@
       "../../.eslintrc.cjs"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-dom": "^18.0.0"
+  },
   "devDependencies": {
     "@gestaltjs/plugins": "0.7.3"
   },
