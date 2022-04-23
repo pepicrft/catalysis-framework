@@ -33,31 +33,6 @@ function formatModule(module: string): string {
   return formatGray(`[@gestaltjs/${module}]`)
 }
 
-/**
- * Returns a transport that filters log events based on module name.
- * Only the logs that have the same module name as the given one will be passed
- * through the given transporter
- *
- * @param module {string} Name of the module where the transporter will be used.
- * @param transport {Transform} Transporter to pass through if the logs are for the given module.
- * @returns {Promise<Transform>} A promise that resolves with the Transform
- */
-export async function moduleTransport(
-  module: string,
-  transport: Transform
-): Promise<Transform> {
-  return build(function (source) {
-    source.on('data', function (obj) {
-      if (obj.module === module) {
-        transport.emit('data', obj)
-      }
-    })
-    source.on('close', () => {
-      transport.emit('close')
-    })
-  })
-}
-
 const pinoLogLevels: { [key: number]: string } = {
   10: 'trace',
   20: 'debug',
@@ -67,7 +42,8 @@ const pinoLogLevels: { [key: number]: string } = {
   60: 'fatal',
 }
 
-export const baseTransport = async (options: pino.TransportBaseOptions) => {
+// eslint-disable-next-line import/no-default-export
+const baseTransport = async (options: pino.TransportBaseOptions) => {
   return pinoPretty({
     ...options,
     colorize: false,
@@ -85,3 +61,6 @@ export const baseTransport = async (options: pino.TransportBaseOptions) => {
     hideObject: true,
   })
 }
+
+// eslint-disable-next-line import/no-default-export
+export default baseTransport
