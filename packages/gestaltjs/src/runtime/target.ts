@@ -1,16 +1,16 @@
-import { MainTarget, SharedTarget } from '@gestaltjs/core/shared'
+import { UserMainTarget, UserSharedTarget } from '@gestaltjs/core/shared'
 
-export { MainTarget, SharedTarget }
+export { UserMainTarget, UserSharedTarget }
 
-type MainTargetExport =
-  | MainTarget
-  | (() => Promise<MainTarget>)
-  | (() => MainTarget)
+type UserMainTargetExport =
+  | UserMainTarget
+  | (() => Promise<UserMainTarget>)
+  | (() => UserMainTarget)
 
-type SharedTargetExport =
-  | SharedTarget
-  | (() => Promise<SharedTarget>)
-  | (() => SharedTarget)
+type UserSharedTargetExport =
+  | UserSharedTarget
+  | (() => Promise<UserSharedTarget>)
+  | (() => UserSharedTarget)
 
 /**
  * A utility function to define a main target target. Since the function has its argument and
@@ -19,13 +19,15 @@ type SharedTargetExport =
  * and auto-completion.
  *
  * Alternatively, targets can use the '@type' annotation:
- *   @type {import('gestaltjs/target').MainTarget}
+ *   @type {import('gestaltjs/target').UserMainTarget}
  *   const target = {...}
  *
- * @param target {Target | () => Promise<MainTarget> | () => MainTarget} Define a new target.
+ * @param target {Target | () => Promise<UserMainTarget> | () => UserMainTarget} Define a new target.
  * @returns A promise that resolves with the target.
  */
-export function defineMainTarget(target: MainTargetExport): MainTargetExport {
+export function defineUserMainTarget(
+  target: UserMainTargetExport
+): UserMainTargetExport {
   return target
 }
 
@@ -36,14 +38,14 @@ export function defineMainTarget(target: MainTargetExport): MainTargetExport {
  * and auto-completion.
  *
  * Alternatively, targets can use the '@type' annotation:
- *   @type {import('gestaltjs/target').SharedTarget}
+ *   @type {import('gestaltjs/target').UserSharedTarget}
  *   const target = {...}
  *
- * @param target {Target | () => Promise<SharedTarget> | () => SharedTarget} Define a new target.
+ * @param target {Target | () => Promise<UserSharedTarget> | () => UserSharedTarget} Define a new target.
  * @returns A promise that resolves with the target.
  */
-export function defineSharedTarget(
-  target: SharedTargetExport
-): SharedTargetExport {
+export function defineUserSharedTarget(
+  target: UserSharedTargetExport
+): UserSharedTargetExport {
   return target
 }

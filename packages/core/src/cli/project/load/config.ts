@@ -1,7 +1,7 @@
 import { createServer, ViteDevServer } from 'vite'
 import { configurationFileName } from '../../constants'
 import { findUp as findPathUp, dirname, basename } from '../../path'
-import { Configuration } from '../../../shared/configuration'
+import { Configuration } from '../models/configuration'
 
 /** An interface that describes the options that can be passed for loading */
 export type ViteOptions = {

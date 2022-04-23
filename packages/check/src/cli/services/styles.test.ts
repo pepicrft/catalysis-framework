@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
-import { eslint } from '@gestaltjs/core/cli'
+import { eslint, project } from '@gestaltjs/core/cli'
 import { checkStyle } from './styles'
+import type { LintOptions } from './styles'
 
 vi.mock('@gestaltjs/core/cli')
 
@@ -37,16 +38,20 @@ describe('run', () => {
   })
 })
 
-function getOptions({ fix }: { fix: boolean }) {
+function getOptions({ fix }: { fix: boolean }): LintOptions {
   return {
     fix,
     project: {
       directory: '/project',
       configuration: {
         name: 'project',
+        manifestPath: '/project/gestalt.config.js',
       },
-      routes: [],
       sourcesGlob: '/project/src/**/*.{ts,js}',
+      targetsGraph: new project.TargetsGraph({
+        main: {},
+        shared: {},
+      }),
     },
   }
 }

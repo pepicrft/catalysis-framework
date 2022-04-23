@@ -1,8 +1,10 @@
 import { eslint, project, error } from '@gestaltjs/core/cli'
-type LintOptions = {
+
+export type LintOptions = {
   fix: boolean
   project: project.Project
 }
+
 export async function checkStyle(options: LintOptions) {
   const args = []
   if (options.fix) {

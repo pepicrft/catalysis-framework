@@ -1,2 +1,2 @@
-export type { Configuration } from './configuration'
-export type { Target, MainTarget, SharedTarget } from './target'
+export type { UserConfiguration } from './configuration'
+export type { UserMainTarget, UserSharedTarget } from './target'

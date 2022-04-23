@@ -1,6 +1,7 @@
 import { Project } from '../models/project'
 import { Abort } from '../../error'
 import { dirname } from '../../path'
+import { loadTargetsGraph } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import type { ViteOptions } from './config'
 
@@ -35,9 +36,11 @@ export async function loadProject(
   }
   const directory = dirname(configurationPath)
   const configuration = await loadConfig(configurationPath, viteOptions)
+  const targetsGraph = await loadTargetsGraph(directory)
   return {
     configuration,
     directory,
     sourcesGlob: `${directory}/src/**/*.{ts,js}`,
+    targetsGraph,
   }
 }
