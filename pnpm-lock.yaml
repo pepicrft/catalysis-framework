@@ -114,12 +114,6 @@ importers:
       cucumber-junit-formatter: 0.2.2_cucumber@6.0.7
       cucumber-pretty: 6.0.1_cucumber@6.0.7
 
-  fixtures/app:
-    specifiers:
-      gestaltjs: 0.7.3
-    dependencies:
-      gestaltjs: link:../../packages/gestaltjs
-
   packages/build:
     specifiers:
       '@gestaltjs/core': 0.7.3

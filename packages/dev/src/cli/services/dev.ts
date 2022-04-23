@@ -13,14 +13,15 @@ export async function devProject(
   const app = createApp()
   app.use('/', () => 'Hello world!')
 
-  devLogger().info('Starting the server...')
+  devLogger().info('Starting the project...')
   const listener = await listen(app, { autoClose: true, showURL: false })
   devLogger().info(
-    logger.content`The server is now at: ${logger.urlToken(
+    logger.content`The project is now available at: ${logger.urlToken(
       listener.url,
       listener.url
     )}`
   )
+  devLogger().info(logger.content`You can press CTRL+C to open the project.`)
 
   return {
     onChange: (changedProject) => {
