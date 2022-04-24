@@ -86,7 +86,7 @@ export class Logger {
    * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
    */
   debug(message: LoggerMessage, object: object = {}) {
-    this.log(object, message, 'debug')
+    this.log(object, formatGray(stringify(message)), 'debug')
   }
 
   /**

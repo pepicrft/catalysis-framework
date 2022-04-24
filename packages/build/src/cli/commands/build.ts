@@ -1,5 +1,5 @@
 import { buildLogger } from '../logger'
-import { error, Command } from '@gestaltjs/core/cli'
+import { Command } from '@gestaltjs/core/cli'
 import { Interfaces } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export

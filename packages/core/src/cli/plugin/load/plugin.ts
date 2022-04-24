@@ -1,10 +1,10 @@
 import { Plugin } from '../../plugin/models/plugin'
 import { pluginFileName } from '../../constants'
-import { glob, join as joinPath, dirname, findUp } from '../../path'
+import { glob, join as joinPath, dirname, basename } from '../../path'
 import { createServer, ViteDevServer } from 'vite'
 import { Abort } from '../../error'
 import { pathExists, readFile } from '../../fs'
-import { content, pathToken, fileToken } from '../../logger'
+import { content, pathToken, fileToken, coreLogger } from '../../logger'
 
 /**
  * Returns an error to throw when the plugin doesn't have a package.json in its directory.
@@ -63,6 +63,7 @@ export async function loadPlugins(
   directories: string[],
   viteOptions: ViteOptions = {}
 ): Promise<Plugin[]> {
+  coreLogger().debug(`Looking up plugins...`)
   const pluginManifests = (
     await Promise.all(
       directories.flatMap(async (directory) => {
@@ -84,15 +85,24 @@ export async function loadPlugins(
     )
   ).flat()
 
+  coreLogger().debug(
+    `We found the following plugins: ${pluginManifests
+      .map((pluginManifest) => basename(dirname(pluginManifest)))
+      .join(',')}`
+  )
+
   return (
     await Promise.all(
       pluginManifests.map(async (manifestPath) => {
+        const pluginName = basename(dirname(manifestPath))
+        coreLogger().debug(`Loading plugin ${pluginName}`)
         const viteServer = await getViteServer(
           dirname(manifestPath),
           viteOptions
         )
         const plugin = await loadPlugin(manifestPath, { viteServer })
         await viteServer.close()
+        coreLogger().debug(`Plugin ${pluginName} loaded`)
         return plugin
       })
     )
