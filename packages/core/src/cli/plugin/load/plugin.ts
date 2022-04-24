@@ -5,7 +5,6 @@ import { createServer, ViteDevServer } from 'vite'
 import { Abort } from '../../error'
 import { pathExists, readFile } from '../../fs'
 import { content, pathToken, fileToken } from '../../logger'
-import { fileURLToPath } from 'url'
 
 /**
  * Returns an error to throw when the plugin doesn't have a package.json in its directory.

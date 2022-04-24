@@ -229,7 +229,7 @@ export function content(
 
 let _core: Logger | undefined
 
-export function core(): Logger {
+export function coreLogger(): Logger {
   if (_core) {
     return _core
   }

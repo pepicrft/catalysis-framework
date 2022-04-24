@@ -1,4 +1,4 @@
-import { core as coreLogger, stringify } from './logger'
+import { coreLogger, stringify } from './logger'
 import type { ErrorLogType, LoggerMessage } from './logger'
 import { formatYellow, formatRed, formatBold } from './terminal'
 import StackTracey from 'stacktracey'

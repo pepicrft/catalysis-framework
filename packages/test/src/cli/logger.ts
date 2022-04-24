@@ -1,5 +1,5 @@
 import { logger } from '@gestaltjs/core/cli'
 
 export const testLogger = () => {
-  return logger.core().child('test')
+  return logger.coreLogger().child('test')
 }
