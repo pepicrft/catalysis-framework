@@ -29,16 +29,6 @@ export const PackageJsonNotFoundError = (pluginDirectory: string) => {
 }
 
 /**
- * A function that returns an error to throw when the Vue plugin cant't be found.
- * @returns {Bug} A bug error.
- */
-export const VuePluginNotFound = () => {
-  return new Abort(content`Couldn't find the default Vue plugin`, {
-    cause: content`The package @gestaltjs/gestalt-plugin-vue might be missing under the project's node_modules directory.`,
-  })
-}
-
-/**
  * Returns an error to throw when the plugin's package.json lacks the name attribute.
  * @param pluginDirectory {string} Path to the directory containing the plugin.
  * @returns {Abort} An abort error.
@@ -121,34 +111,6 @@ type LoadPluginOptions = {
    * An instance of a ViteDevServer to use to load and transpile the plugin.
    */
   viteServer: ViteDevServer
-}
-
-/**
- * It loads the Vue plugin and returns it.
- * @param viteOptions {ViteOptions} Options to configure the Vite server used for loading the plugin.
- * @returns {Promise<Plugin>} A promise that resolves with the plugin.
- */
-export async function loadVuePlugin(
-  viteOptions: ViteOptions = {}
-): Promise<Plugin> {
-  const cwd = dirname(fileURLToPath(import.meta.url))
-  const vuePluginManifestPath = await findUp(
-    [
-      `@gestaltjs/gestalt-plugin-vue/${pluginFileName}.ts`,
-      `plugin-vue/${pluginFileName}.ts`,
-    ],
-    { type: 'file', cwd }
-  )
-  if (!vuePluginManifestPath) {
-    throw VuePluginNotFound()
-  }
-  const viteServer = await getViteServer(
-    dirname(vuePluginManifestPath),
-    viteOptions
-  )
-  const got = await loadPlugin(vuePluginManifestPath, { viteServer })
-  await viteServer.close()
-  return got
 }
 
 /**
