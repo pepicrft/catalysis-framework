@@ -1,4 +1,10 @@
 import { Plugin } from '../../plugin/models/plugin'
+import { Renderer } from '../../plugin/models/renderer'
+import {
+  UserServerRenderer,
+  UserClientRenderer,
+} from '../../../shared/renderer'
+import { UserPlugin } from '../../../shared/plugin'
 import { pluginFileName } from '../../constants'
 import { glob, join as joinPath, dirname, basename } from '../../path'
 import { createServer, ViteDevServer } from 'vite'
@@ -142,10 +148,45 @@ export async function loadPlugin(
   if (!packageJson.name) {
     throw NoNameInPackageJsonError(pluginDirectory)
   }
-  const module = await options.viteServer.ssrLoadModule(manifestPath)
+  const plugin = (await options.viteServer.ssrLoadModule(manifestPath))
+    .default as UserPlugin
+  const renderer = await loadRenderer(plugin, { directory: pluginDirectory })
+
   return {
-    ...(module.default as Plugin),
+    ...plugin,
+    renderer: renderer,
+    directory: pluginDirectory,
     name: packageJson.name.replace('gestalt-plugin-', ''),
+  }
+}
+
+async function loadRenderer(
+  plugin: UserPlugin,
+  options: { directory: string }
+): Promise<Renderer | undefined> {
+  if (!plugin.renderer) {
+    return undefined
+  }
+  const clientRendererModulePath = joinPath(
+    options.directory,
+    'dist/renderer/client.js'
+  )
+  const serverRendererModulePath = joinPath(
+    options.directory,
+    'dist/renderer/server.js'
+  )
+  let clientRenderer: UserClientRenderer | undefined
+  if (await pathExists(clientRendererModulePath)) {
+    clientRenderer = (await import(clientRendererModulePath)).default
+  }
+  let serverRenderer: UserServerRenderer | undefined
+  if (await pathExists(serverRendererModulePath)) {
+    serverRenderer = (await import(serverRendererModulePath)).default
+  }
+  return {
+    ...plugin.renderer,
+    client: clientRenderer,
+    server: serverRenderer,
   }
 }
 
