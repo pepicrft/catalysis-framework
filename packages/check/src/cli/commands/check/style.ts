@@ -4,7 +4,7 @@ import { project, Command } from '@gestaltjs/core/cli'
 import { checkStyle } from '../../services/style'
 
 // eslint-disable-next-line import/no-default-export
-export default class Styles extends Command {
+export default class Style extends Command {
   static description = 'Check the code style using ESLint.'
 
   static flags: Interfaces.FlagInput<any> = {
