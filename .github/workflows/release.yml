@@ -28,7 +28,7 @@ jobs:
           cache-dependency-path: '**/pnpm-lock.yaml'
       - name: Install dependencies
         run: pnpm install
-      - name: Create Release Pull Request
+      - name: Changeset
         uses: changesets/action@v1
         with:
           version: pnpm exec changeset version && pnpm install

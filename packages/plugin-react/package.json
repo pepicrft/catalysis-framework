@@ -41,7 +41,8 @@
   },
   "devDependencies": {
     "@gestaltjs/plugins": "0.7.4",
-    "@types/react-dom": "^18.0.2"
+    "@types/react-dom": "^18.0.2",
+    "react": "^18.0.0"
   },
   "engine-strict": true,
   "engines": {
