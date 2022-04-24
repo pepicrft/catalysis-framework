@@ -1,6 +1,6 @@
 {
   "name": "gestaltjs",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "private": false,
   "description": "A tool for building Gestalt web app",
   "keywords": [
@@ -52,14 +52,14 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/build": "0.7.3",
-    "@gestaltjs/check": "0.7.3",
-    "@gestaltjs/db": "0.7.3",
-    "@gestaltjs/dev": "0.7.3",
-    "@gestaltjs/test": "0.7.3",
-    "@gestaltjs/core": "0.7.3",
-    "@gestaltjs/plugins": "0.7.3",
-    "@gestaltjs/gestalt-plugin-vue": "0.7.3",
+    "@gestaltjs/build": "0.7.4",
+    "@gestaltjs/check": "0.7.4",
+    "@gestaltjs/db": "0.7.4",
+    "@gestaltjs/dev": "0.7.4",
+    "@gestaltjs/test": "0.7.4",
+    "@gestaltjs/core": "0.7.4",
+    "@gestaltjs/plugins": "0.7.4",
+    "@gestaltjs/gestalt-plugin-vue": "0.7.4",
     "@oclif/core": "^1.7.0",
     "@oclif/plugin-help": "^5"
   },

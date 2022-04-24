@@ -1,5 +1,20 @@
 # gestaltjs
 
+## 0.7.4
+
+### Patch Changes
+
+- New version
+- Updated dependencies
+  - @gestaltjs/build@0.7.4
+  - @gestaltjs/check@0.7.4
+  - @gestaltjs/core@0.7.4
+  - @gestaltjs/db@0.7.4
+  - @gestaltjs/dev@0.7.4
+  - @gestaltjs/gestalt-plugin-vue@0.7.4
+  - @gestaltjs/plugins@0.7.4
+  - @gestaltjs/test@0.7.4
+
 ## 0.7.3
 
 ### Patch Changes
