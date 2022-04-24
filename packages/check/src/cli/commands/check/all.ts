@@ -1,7 +1,7 @@
 import { Flags, Interfaces } from '@oclif/core'
 import { project, Command } from '@gestaltjs/core/cli'
 import { checkCode } from '../../services/code'
-import { checkStyle } from '../../services/styles'
+import { checkStyle } from '../../services/style'
 
 // eslint-disable-next-line import/no-default-export
 export default class All extends Command {

@@ -1,11 +1,11 @@
 import { Flags, Interfaces } from '@oclif/core'
 import { project, Command } from '@gestaltjs/core/cli'
 
-import { checkStyle } from '../../services/styles'
+import { checkStyle } from '../../services/style'
 
 // eslint-disable-next-line import/no-default-export
 export default class Styles extends Command {
-  static description = 'Check styles using ESLint'
+  static description = 'Check the code style using ESLint.'
 
   static flags: Interfaces.FlagInput<any> = {
     ...Command.flags,
