@@ -10,8 +10,6 @@ It's common to solve the sustainability problem by adding a new variable to the 
 
 We want to take a radically different approach with Gestalt. We believe that human energy is crucial to sustaining the project, so **we'll empower users and contributors to the project**. We'll create an environment that puts **extrinsic motivators** front and center and trusts its maintainers and contributors to steer the boat in the right direction. We'll make ourselves dispensable through excellent documentation and code architecture, a solid test suite, and a diverse community of people keen to help each other and contribute to making Gestalt better every day.
 
-This idea will span every corner of Gestalt, including [Catalyst](https://gestaltjs.org/catalysis/introduction.html), a web app for getting your projects in the hands of users. We'll design it to minimize the running costs, and any income generated through it will be geared towards growing Gestalt's community and inspiring more people to contribute to the project. New contributors mean new ideas, which leads to a more diverse tool.
-
 The above is possible thanks partly to having a well-paid job at [Shopify](https://shopify.com) where I do what I love the most, building tools for developers, and that inspires me to positively impact the world.
 
 **Open-source is our way of giving to the world without expecting anything in return. We love it.**
