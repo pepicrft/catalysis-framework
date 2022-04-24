@@ -28,7 +28,7 @@ export default class Style extends Command {
     }),
   }
   async run(): Promise<void> {
-    const { flags } = await this.parse(Styles)
+    const { flags } = await this.parse(Style)
     const loadedProject = await project.load(flags.path)
 
     await checkStyle({
