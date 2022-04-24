@@ -35,8 +35,9 @@
       "../../.eslintrc.cjs"
     ]
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "vue": "^3.2.33"
   },
   "engine-strict": true,
   "engines": {

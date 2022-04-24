@@ -2,15 +2,18 @@ import path from 'pathe'
 import dts from 'rollup-plugin-dts'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
+import fg from 'fast-glob'
 
 const configuration = async () => {
   const vuePluginExternal = [...(await external(__dirname))]
   return [
     {
-      input: path.join(__dirname, 'src/index.ts'),
+      input: await fg(path.join(__dirname, 'src/renderer/**/*.ts'), {
+        ignore: path.join(__dirname, 'src/renderer/**/*.test.ts'),
+      }),
       output: [
         {
-          file: path.join(distDir(__dirname), 'index.js'),
+          dir: path.join(distDir(__dirname), 'renderer'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
@@ -22,4 +25,5 @@ const configuration = async () => {
   ]
 }
 
+// eslint-disable-next-line import/no-default-export
 export default configuration

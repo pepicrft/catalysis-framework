@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
 
-test('works', () => {
+test('it works', () => {
   expect(true).toEqual(true)
 })

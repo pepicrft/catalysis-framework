@@ -1,9 +1,10 @@
 import { defineClientRenderer } from '@gestaltjs/plugins'
-import ReactDOM from 'react-dom'
+import { createSSRApp } from 'vue'
 
 // eslint-disable-next-line import/no-default-export
 export default defineClientRenderer({
   hydrate: async function (component, domElement) {
-    ReactDOM.hydrate(component, domElement)
+    const app = createSSRApp(component)
+    app.mount(domElement)
   },
 })

@@ -15,7 +15,7 @@ type PluginExport =
  * and auto-completion.
  *
  * Alternatively, plugins can use the '@type' annotation:
- *   @type {import('@gestaltjs/plugins').UserPlugin}
+ *   @type {import('@gestaltjs/plugins').Plugin}
  *   const config = {...}
  *
  * @param plugin {Plugin | () => Promise<Plugin> | () => Plugin} Define a new plugin.
