@@ -54,7 +54,7 @@
   "dependencies": {
     "@gestaltjs/build": "0.7.4",
     "@gestaltjs/check": "0.7.4",
-    "@gestaltjs/db": "0.7.4",
+    "@gestaltjs/db": "0.7.3",
     "@gestaltjs/dev": "0.7.4",
     "@gestaltjs/test": "0.7.4",
     "@gestaltjs/core": "0.7.4",
