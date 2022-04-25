@@ -30,6 +30,7 @@ describe('load', () => {
     }
     const plugin: Plugin = {
       name: 'react',
+      directory: '/test/react-plugin',
     }
     vi.mocked(loadProject).mockResolvedValue(project)
     vi.mocked(loadPlugins).mockResolvedValue([plugin])
