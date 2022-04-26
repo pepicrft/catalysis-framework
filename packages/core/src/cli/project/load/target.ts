@@ -44,7 +44,7 @@ async function loadMainTarget(manifestPath: string): Promise<MainTarget> {
     manifestPath,
     name: basename(manifestPath),
     directory: dirname(manifestPath),
-    product: 'desktop',
+    platforms: ['desktop'],
   }
 }
 
