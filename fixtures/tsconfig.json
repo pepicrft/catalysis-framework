@@ -1,0 +1,17 @@
+{
+    "extends": "../tsconfig.base.json",
+    "include": ["./targets/**/*.ts", "gestalt.config.ts"],
+    "exclude": ["./dist"],
+    "compilerOptions": {
+      "outDir": "dist",
+      "baseUrl": ".",
+      "paths": {
+        "gestaltjs/configuration": ["../../packages/gestaltjs/src/runtime/configuration.ts"],
+        "gestaltjs/target": ["../../packages/gestaltjs/src/runtime/target.ts"],
+        "gestaltjs/support": ["../../packages/gestaltjs/src/runtime/support.ts"],
+        "@gestaltjs/core/shared": ["../../packages/core/src/shared/index.ts"],
+        "@gestaltjs/core/runtime": ["../../packages/core/src/runtime/index.ts"],
+        "@gestaltjs/core/cli": ["../../packages/core/src/cli/index.ts"],
+      }
+    }
+}

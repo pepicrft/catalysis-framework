@@ -19,8 +19,7 @@
       "@gestaltjs/core/runtime": ["../../core/src/runtime/index.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
       "@gestaltjs/testing": ["../../testing/src/index.ts"],
-      "@gestaltjs/plugins": ["../../plugins/src/runtime/index.ts"],
-      "$*": ["./*"]
+      "@gestaltjs/plugins": ["../../plugins/src/runtime/index.ts"]
     }
   },
   "exclude": ["**/dist/**", "node_modules"]
