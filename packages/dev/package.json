@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "express": "4.17.3"
+    "express": "4.18.0"
   },
   "peerDependencies": {
     "@gestaltjs/core": "0.7.4",
