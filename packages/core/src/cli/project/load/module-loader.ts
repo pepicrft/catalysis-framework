@@ -7,6 +7,10 @@ type ModuleLoader = {
    */
   load: <T>(modulePath: string) => Promise<T>
 
+  /**
+   * Subscribes to changes in modules whose path's prefix
+   * matches the passed prefix.
+   */
   watch: (
     pathPrefix: string,
     onChange: (modulePath: string) => void | Promise<void>
