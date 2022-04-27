@@ -3,7 +3,7 @@ import { Abort } from '../../error'
 import { dirname } from '../../path'
 import { loadTargetsGraph } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
-import type { ViteOptions } from './config'
+import { getModuleLoader } from './module-loader'
 
 /**
  * Error thrown when we can't find a directory containing a Gestalt configuration file.
@@ -21,13 +21,9 @@ export const ConfigFileNotFoundError = () => {
  * It traverses up the directory hiearchy looking up a Gestalt project.
  * It it finds one it returns it.
  * @param fromDirectory {string} Directory from where we traverse up the directory hierarchy lookin up a Getalt project.
- * @param viteOptions {ViteOptions} Options to configure the Vite instance used for loading the configuration.
  * @returns
  */
-export async function loadProject(
-  fromDirectory: string,
-  viteOptions: ViteOptions = {}
-): Promise<Project> {
+export async function loadProject(fromDirectory: string): Promise<Project> {
   const configurationPath = await lookupConfigurationPathTraversing(
     fromDirectory
   )
@@ -35,7 +31,8 @@ export async function loadProject(
     throw ConfigFileNotFoundError()
   }
   const directory = dirname(configurationPath)
-  const configuration = await loadConfig(configurationPath, viteOptions)
+  const moduleLoader = await getModuleLoader(directory)
+  const configuration = await loadConfig(configurationPath, moduleLoader)
   const targetsGraph = await loadTargetsGraph(directory)
   return {
     configuration,

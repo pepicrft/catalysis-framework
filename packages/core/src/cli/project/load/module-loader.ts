@@ -1,7 +1,7 @@
 import { createServer } from 'vite'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-type ModuleLoader = {
+export type ModuleLoader = {
   /**
    * This function transpiles, loads, and returns the module at the given path.
    */
@@ -54,7 +54,7 @@ export async function getModuleLoader(
           if (!watcherKey) {
             return context.modules
           }
-          watchers[watcherKey](context.file)
+          await watchers[watcherKey](context.file)
           return context.modules
         },
       },
