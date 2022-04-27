@@ -19,6 +19,8 @@ export async function loadConfig(
   viteOptions: ViteOptions = {}
 ): Promise<Configuration> {
   const vite = await createServer({
+    root: dirname(configurationPath),
+    cacheDir: undefined,
     server: {
       middlewareMode: 'ssr',
       hmr: false,
@@ -83,6 +85,7 @@ export async function watchConfig(
 ): Promise<ConfigWatcher> {
   const vite = await createServer({
     root: dirname(configurationPath),
+    cacheDir: undefined,
     server: {
       middlewareMode: 'ssr',
       watch: {

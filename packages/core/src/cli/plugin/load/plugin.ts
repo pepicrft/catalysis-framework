@@ -202,6 +202,7 @@ async function getViteServer(
 ): Promise<ViteDevServer> {
   return await createServer({
     root: root,
+    cacheDir: undefined,
     server: {
       hmr: false,
       middlewareMode: 'ssr',
