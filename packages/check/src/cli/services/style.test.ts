@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import { eslint, project } from '@gestaltjs/core/cli'
 import { checkStyle } from './style'
 import type { LintOptions } from './style'
@@ -6,7 +6,7 @@ import type { LintOptions } from './style'
 vi.mock('@gestaltjs/core/cli')
 
 describe('run', () => {
-  it('runs eslint cli command', async () => {
+  test('runs eslint cli command', async () => {
     // Given
     const options = getOptions({ fix: false })
 
@@ -22,7 +22,7 @@ describe('run', () => {
     )
   })
 
-  it('runs eslint cli command with fix option', async () => {
+  test('runs eslint cli command with fix option', async () => {
     // Given
     const options = getOptions({ fix: true })
     const expectedArgs = ['--fix', options.project.sourcesGlob]

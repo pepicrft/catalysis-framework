@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
 import { findUp, dirname } from './path'
 import { run, TSCNotFoundError } from './tsc'
@@ -7,7 +7,7 @@ vi.mock('./system')
 vi.mock('./path')
 
 describe('run', () => {
-  it('runs tsc', async () => {
+  test('runs tsc', async () => {
     // Given
     const tscPath = '/test/tsc'
     const dirnamePath = '/gestalt/tsc'
@@ -26,7 +26,7 @@ describe('run', () => {
     expect(exec).toHaveBeenCalledWith(tscPath, args, { stdio: 'inherit', cwd })
   })
 
-  it('aborts when typescript compiler cannot be found', async () => {
+  test('aborts when typescript compiler cannot be found', async () => {
     // Given
     const eslintTSDirectory = '/gestalt/tsc'
     vi.mocked(findUp).mockResolvedValue(undefined)

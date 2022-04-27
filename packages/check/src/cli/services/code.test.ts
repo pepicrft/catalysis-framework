@@ -1,10 +1,10 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import { tsc } from '@gestaltjs/core/cli'
 import { checkCode } from './code'
 
 vi.mock('@gestaltjs/core/cli')
 describe('run', () => {
-  it('runs tsc cli command', async () => {
+  test('runs tsc cli command', async () => {
     // Given
     const appDirectory = '/app'
 

@@ -8,7 +8,7 @@ rulesDirPlugin.RULES_DIR = path.join(__dirname, 'eslint-rules')
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'rulesdir', 'import'],
+  plugins: ['@typescript-eslint', 'rulesdir', 'import', 'jest'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -22,6 +22,10 @@ module.exports = {
     'import/no-nodejs-modules': 'error',
     'import/no-default-export': 'error',
     'no-implicit-globals': 'error',
+    'jest/consistent-test-it': [
+      'error',
+      { fn: 'test', withinDescribe: 'test' },
+    ],
   },
   env: {
     node: true,

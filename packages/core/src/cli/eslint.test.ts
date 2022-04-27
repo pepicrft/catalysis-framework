@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
 import { findUp, dirname } from './path'
 import { run, ESLintNotFoundError } from './eslint'
@@ -7,7 +7,7 @@ vi.mock('./system')
 vi.mock('./path')
 
 describe('run', () => {
-  it('runs eslint', async () => {
+  test('runs eslint', async () => {
     // Given
     const eslintPath = '/test/eslint'
     const eslintTSDirectory = '/gestalt/eslint'
@@ -29,7 +29,7 @@ describe('run', () => {
     })
   })
 
-  it('aborts when ESLint cannot be found', async () => {
+  test('aborts when ESLint cannot be found', async () => {
     // Given
     const eslintTSDirectory = '/gestalt/eslint'
     vi.mocked(findUp).mockResolvedValue(undefined)

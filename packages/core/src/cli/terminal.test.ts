@@ -10,14 +10,14 @@ import {
   link,
 } from './terminal'
 import terminalLink from 'terminal-link'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import pc from 'picocolors'
 
 vi.mock('terminal-link')
 vi.mock('picocolors')
 
 describe('link', () => {
-  it('delegates to terminal-link', () => {
+  test('delegates to terminal-link', () => {
     // Given
     const hyperlink = 'hyperlink'
     const name = 'name'
@@ -34,7 +34,7 @@ describe('link', () => {
 })
 
 describe('formatBold', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -50,7 +50,7 @@ describe('formatBold', () => {
 })
 
 describe('formatItalic', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -66,7 +66,7 @@ describe('formatItalic', () => {
 })
 
 describe('formatGreen', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -82,7 +82,7 @@ describe('formatGreen', () => {
 })
 
 describe('formatYellow', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -98,7 +98,7 @@ describe('formatYellow', () => {
 })
 
 describe('formatRed', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -114,7 +114,7 @@ describe('formatRed', () => {
 })
 
 describe('formatGray', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -130,7 +130,7 @@ describe('formatGray', () => {
 })
 
 describe('formatMagenta', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'
@@ -146,7 +146,7 @@ describe('formatMagenta', () => {
 })
 
 describe('formatCyan', () => {
-  it('delegates to picocolors', () => {
+  test('delegates to picocolors', () => {
     // When
     const formattedString = 'formatted'
     const stringToFormat = 'string'

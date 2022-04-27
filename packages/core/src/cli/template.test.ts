@@ -1,11 +1,11 @@
-import { describe, it, expect } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { ScaffoldOptions, scaffold } from './template'
 import { join as joinPath } from './path'
 import { writeFile, pathExists, readFile, makeDirectory } from './fs'
 
 describe('scaffold basic file', () => {
-  it('scaffold template', async () => {
+  test('scaffold template', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const sourceDirectory = joinPath(tmpDir, 'source')
@@ -32,7 +32,7 @@ describe('scaffold basic file', () => {
 })
 
 describe('scaffold handlebar file', () => {
-  it('scaffold template', async () => {
+  test('scaffold template', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const sourceDirectory = joinPath(tmpDir, 'source')

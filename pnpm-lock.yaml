@@ -25,6 +25,7 @@ importers:
       eslint-config-airbnb: 19.0.4
       eslint-config-prettier: 8.5.0
       eslint-plugin-import: 2.26.0
+      eslint-plugin-jest: ^26.1.5
       eslint-plugin-jsx-a11y: 6.5.1
       eslint-plugin-prettier: 4.0.0
       eslint-plugin-react: 7.29.4
@@ -74,6 +75,7 @@ importers:
       eslint-config-airbnb: 19.0.4_dd654766c49a4dc775667686c8ba9c6f
       eslint-config-prettier: 8.5.0_eslint@8.14.0
       eslint-plugin-import: 2.26.0_eslint@8.14.0
+      eslint-plugin-jest: 26.1.5_1183ea01bd0e0464fb7c6c91f1c7e168
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.14.0
       eslint-plugin-prettier: 4.0.0_665eb419c9d7860ca0c224f7f6dcdace
       eslint-plugin-react: 7.29.4_eslint@8.14.0
@@ -4136,6 +4138,27 @@ packages:
       object.values: 1.1.5
       resolve: 1.22.0
       tsconfig-paths: 3.14.1
+    dev: true
+
+  /eslint-plugin-jest/26.1.5_1183ea01bd0e0464fb7c6c91f1c7e168:
+    resolution: {integrity: sha512-su89aDuljL9bTjEufTXmKUMSFe2kZUL9bi7+woq+C2ukHZordhtfPm4Vg+tdioHBaKf8v3/FXW9uV0ksqhYGFw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+      jest: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+      jest:
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.21.0_829e74f28e9c9eb05edda582d47d45b8
+      '@typescript-eslint/utils': 5.21.0_eslint@8.14.0+typescript@4.6.3
+      eslint: 8.14.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /eslint-plugin-jsx-a11y/6.5.1_eslint@8.14.0:
