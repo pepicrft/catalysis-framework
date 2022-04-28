@@ -44,6 +44,9 @@ export async function getModuleLoader(
     optimizeDeps: {
       entries: [],
     },
+    build: {
+      watch: {},
+    },
     plugins: [
       {
         name: 'config-watch',
