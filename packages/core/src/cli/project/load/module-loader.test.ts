@@ -56,27 +56,4 @@ describe('getModuleLoader', () => {
       await moduleLoader.close()
     })
   })
-
-  test('watch notifies when a new module is added', async () => {
-    await temporary.directory(async (tmpDir) => {
-      // Given
-      type Module = { default: { name: string } }
-      const moduleContent = `
-        const object = { name: "Test" };
-        export default object;
-        `
-      const modulePath = pathJoin(tmpDir, 'module.js')
-      const moduleLoader = await getModuleLoader(tmpDir)
-
-      // When/Then
-      const updatedModule: Module = await new Promise((resolve) => {
-        moduleLoader.watch(tmpDir, async (modulePath) => {
-          resolve(await moduleLoader.load(modulePath))
-        })
-        writeFile(modulePath, moduleContent)
-      })
-      expect(updatedModule.default.name).toEqual('Test')
-      await moduleLoader.close()
-    })
-  })
 })
