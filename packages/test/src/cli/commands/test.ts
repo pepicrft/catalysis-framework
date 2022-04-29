@@ -7,7 +7,8 @@ export default class Test extends Command {
   static description = 'Test your Gestalt project'
 
   static flags: Interfaces.FlagInput<any> = {
-    ...Command.flags,
+    ...Command.globalFlags,
+    ...Command.projectFlags,
   }
 
   async run(): Promise<void> {

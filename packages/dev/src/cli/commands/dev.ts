@@ -8,17 +8,8 @@ export default class Dev extends Command {
   static description = 'Dev your Gestalt project'
 
   static flags: Interfaces.FlagInput<any> = {
-    ...Command.flags,
-    path: Flags.string({
-      char: 'p',
-      description:
-        'The path to the directory containing the Gestalt project. Defaults to current working directory.',
-      hidden: false,
-      multiple: false,
-      env: 'GESTALT_PATH',
-      default: process.cwd(),
-      required: false,
-    }),
+    ...Command.globalFlags,
+    ...Command.projectFlags,
   }
 
   async run(): Promise<void> {

@@ -8,17 +8,8 @@ export default class All extends Command {
   static description = 'Check code and style.'
 
   static flags: Interfaces.FlagInput<any> = {
-    ...Command.flags,
-    path: Flags.string({
-      char: 'p',
-      description:
-        'The path to the directory containing the Gestalt project. Defaults to current working directory.',
-      hidden: false,
-      multiple: false,
-      env: 'GESTALT_PATH',
-      default: process.cwd(),
-      required: false,
-    }),
+    ...Command.globalFlags,
+    ...Command.projectFlags,
     fix: Flags.boolean({
       char: 'f',
       description: 'When passed, it fixes the fixable style issues.',

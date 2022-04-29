@@ -7,7 +7,8 @@ export default class Build extends Command {
   static description = 'Build the plugin'
 
   static flags: Interfaces.FlagInput<any> = {
-    ...Command.flags,
+    ...Command.globalFlags,
+    ...Command.projectFlags,
   }
 
   async run(): Promise<void> {

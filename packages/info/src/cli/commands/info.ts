@@ -7,7 +7,8 @@ export default class Info extends Command {
   static description = 'Output an overview of a Gestalt project'
 
   static flags: Interfaces.FlagInput<any> = {
-    ...Command.flags,
+    ...Command.globalFlags,
+    ...Command.projectFlags,
   }
 
   async run(): Promise<void> {
