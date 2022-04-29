@@ -1,0 +1,50 @@
+{
+  "name": "@gestaltjs/info",
+  "version": "0.7.4",
+  "description": "Outputs an overview of a Gestalt project",
+  "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "prepack": "pnpm run build",
+    "build": "pnpm clean && rollup -c",
+    "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
+    "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-db.xml",
+    "tsc": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../.eslintrc.cjs"
+    ]
+  },
+  "peerDependencies": {
+    "@gestaltjs/core": "0.7.4",
+    "@oclif/core": "1.7.0"
+  },
+  "devDependencies": {
+    "@gestaltjs/core": "0.7.4",
+    "@oclif/core": "1.7.0"
+  },
+  "oclif": {
+    "commands": "./dist/cli/commands",
+    "topics": {
+      "db": {
+        "description": "Output an overview of a Gestalt project"
+      }
+    }
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
