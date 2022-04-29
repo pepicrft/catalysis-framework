@@ -33,7 +33,7 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   const directory = dirname(configurationPath)
   const moduleLoader = await getModuleLoader(directory)
   const configuration = await loadConfig(configurationPath, moduleLoader)
-  const targetsGraph = await loadTargetsGraph(directory)
+  const targetsGraph = await loadTargetsGraph(directory, moduleLoader)
   return {
     configuration,
     directory,

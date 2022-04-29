@@ -1,10 +1,13 @@
 import { glob, dirname, basename } from '../../path'
 import { targetFileName } from '../../constants'
 import { TargetsGraph } from '../models/target'
-import type { MainTarget, SharedTarget } from '../models/target'
+import type { SharedTarget } from '../models/target'
+import { loadMainTarget } from './target/main'
+import { ModuleLoader } from './module-loader'
 
 export async function loadTargetsGraph(
-  projectDirectory: string
+  projectDirectory: string,
+  moduleLoader: ModuleLoader
 ): Promise<TargetsGraph> {
   const globPatterns = (directory: string) =>
     ['ts', 'js'].map(
@@ -21,7 +24,9 @@ export async function loadTargetsGraph(
   const mainTargetsList = Object.fromEntries(
     (
       await Promise.all(
-        mainTargetPaths.map((manifestPath) => loadMainTarget(manifestPath))
+        mainTargetPaths.map((manifestPath) =>
+          loadMainTarget(manifestPath, moduleLoader)
+        )
       )
     ).map((target) => [target.name, target])
   )
@@ -37,15 +42,6 @@ export async function loadTargetsGraph(
     main: mainTargetsList,
     shared: sharedTargetsList,
   })
-}
-
-async function loadMainTarget(manifestPath: string): Promise<MainTarget> {
-  return {
-    manifestPath,
-    name: basename(manifestPath),
-    directory: dirname(manifestPath),
-    platforms: ['desktop'],
-  }
 }
 
 async function loadSharedTarget(manifestPath: string): Promise<SharedTarget> {
