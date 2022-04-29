@@ -1,6 +1,6 @@
 import { Project } from '../models/project'
 import { Abort } from '../../error'
-import { dirname } from '../../path'
+import { dirname, join as pathJoin } from '../../path'
 import { loadTargetsGraph } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
@@ -37,7 +37,7 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   return {
     configuration,
     directory,
-    sourcesGlob: `${directory}/src/**/*.{ts,js}`,
+    sourcesGlob: pathJoin(directory, `src/**/*.{ts,js}`),
     targetsGraph,
   }
 }

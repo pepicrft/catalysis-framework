@@ -6,7 +6,7 @@ import { project } from '@gestaltjs/core/cli'
  * @returns A project instance.
  */
 export function testProject(
-  overrides: Partial<project.Project>
+  overrides: Partial<project.Project> = {}
 ): project.Project {
   return {
     configuration: {
