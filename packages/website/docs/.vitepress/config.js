@@ -53,6 +53,11 @@ export default defineConfig({
         activeMatch: '^/contributors/',
       },
       {
+        text: 'Catalysis',
+        link: '/catalysis/introduction',
+        activeMatch: '^/catalysis/',
+      },
+      {
         text: 'Blog',
         link: '/blog/2022-03-14-cohesive-framework',
         activeMatch: '^/blog/',
@@ -75,6 +80,7 @@ export default defineConfig({
       '/guide/': getGuideSidebar(),
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
+      '/catalysis/': getCatalysisSidebar(),
       '/reference/': getReferenceSidebar(),
     },
   },
@@ -130,6 +136,20 @@ function getBlogSidebar() {
           link: '/blog/2022-03-14-cohesive-framework',
         },
         { text: 'Why Gestalt', link: '/blog/2022-01-19-why-gestalt' },
+      ],
+    },
+  ]
+}
+
+function getCatalysisSidebar() {
+  return [
+    {
+      text: 'Catalysis',
+      children: [
+        {
+          text: 'Introduction',
+          link: '/catalysis/introduction',
+        },
       ],
     },
   ]
