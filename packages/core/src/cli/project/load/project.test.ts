@@ -30,7 +30,8 @@ describe('loadProject', () => {
     vi.mocked(lookupConfigurationPathTraversing).mockResolvedValue(
       configurationManifestPath
     )
-    const moduleLoader: any = {}
+    const close = vi.fn()
+    const moduleLoader: any = { close }
     const project = models.testProject()
     vi.mocked(getModuleLoader).mockResolvedValue(moduleLoader)
     vi.mocked(loadConfig).mockResolvedValue(project.configuration)
@@ -40,6 +41,7 @@ describe('loadProject', () => {
     const got = await loadProject(fromDirectory)
 
     // Then
+    expect(close).toHaveBeenCalled()
     expect(got.configuration).toEqual(project.configuration)
     expect(got.directory).toEqual(fromDirectory)
     expect(got.targetsGraph).toEqual(project.targetsGraph)
