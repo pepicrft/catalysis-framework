@@ -4,11 +4,12 @@
   "private": true,
   "description": "Deploy your Gestalt apps",
   "scripts": {
-    "build": "true",
-    "lint": "true",
-    "lint:fix": "true",
-    "test": "true",
-    "tsc": "true"
+    "build": "./gestalt build",
+    "dev": "./gestalt dev",
+    "info": "./gestalt info",
+    "test": "./gestalt test",
+    "check": "./gestalt check",
+    "scaffold": "./gestalt scaffold"
   },
   "eslintConfig": {
     "extends": [
