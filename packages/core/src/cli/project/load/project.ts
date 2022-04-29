@@ -34,6 +34,7 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   const moduleLoader = await getModuleLoader(directory)
   const configuration = await loadConfig(configurationPath, moduleLoader)
   const targetsGraph = await loadTargetsGraph(directory, moduleLoader)
+  await moduleLoader.close()
   return {
     configuration,
     directory,
