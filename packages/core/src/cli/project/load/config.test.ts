@@ -24,4 +24,33 @@ describe('loadConfig', () => {
     // Then
     expect(got.name).toEqual('Project')
   })
+
+  test('watches the configuration through the module loader', async () => {
+    // Given
+    const watch = vi.fn()
+    const load = vi.fn()
+    const moduleLoader = {
+      watch,
+      load,
+    }
+    const manifestPath = '/test/gestalt.config.js'
+    const module: { default: Configuration } = {
+      default: {
+        name: 'Project',
+        manifestPath,
+      },
+    }
+    vi.mocked(moduleLoader.load).mockResolvedValue(module)
+
+    // When
+    let gotConfiguration: Configuration | undefined
+    await watchConfig(manifestPath, moduleLoader as any, (configuration) => {
+      gotConfiguration = configuration
+    })
+
+    // Then
+    const callback = watch.mock.calls[0][1]
+    await callback(manifestPath)
+    expect(gotConfiguration).toEqual(module.default)
+  })
 })

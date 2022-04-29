@@ -27,7 +27,7 @@ export async function loadConfig(
 export async function watchConfig(
   configurationPath: string,
   moduleLoader: ModuleLoader,
-  onChange: (configuration: Configuration) => Promise<void>
+  onChange: (configuration: Configuration) => Promise<void> | void
 ) {
   moduleLoader.watch(configurationPath, async (_) => {
     onChange(
