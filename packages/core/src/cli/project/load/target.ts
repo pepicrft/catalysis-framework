@@ -1,4 +1,4 @@
-import { glob, dirname, basename } from '../../path'
+import { glob, dirname, basename, join as pathJoin } from '../../path'
 import { targetFileName } from '../../constants'
 import { TargetsGraph } from '../models/target'
 import type { SharedTarget } from '../models/target'
@@ -10,8 +10,11 @@ export async function loadTargetsGraph(
   moduleLoader: ModuleLoader
 ): Promise<TargetsGraph> {
   const globPatterns = (directory: string) =>
-    ['ts', 'js'].map(
-      (extension) => `targets/${directory}/*/${targetFileName}.${extension}`
+    ['ts', 'js'].map((extension) =>
+      pathJoin(
+        projectDirectory,
+        `targets/${directory}/*/${targetFileName}.${extension}`
+      )
     )
   const mainTargetPaths = await glob(globPatterns('main'), {
     onlyFiles: true,

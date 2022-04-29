@@ -17,7 +17,7 @@
     ]
   },
   "devDependencies": {
-    "gestaltjs": "workspace:0.7.3",
+    "gestaltjs": "workspace:*",
     "react": "18.1.0"
   }
 }

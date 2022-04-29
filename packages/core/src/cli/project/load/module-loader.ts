@@ -65,8 +65,13 @@ export async function getModuleLoader(
   })
   return {
     load: async <T>(modulePath: string) => {
-      const module = await viteServer.ssrLoadModule(modulePath)
-      return module as T
+      try {
+        const module = await viteServer.ssrLoadModule(modulePath)
+        return module as T
+      } catch (error: any) {
+        viteServer.ssrFixStacktrace(error)
+        throw error
+      }
     },
     watch: (pathPrefix, onChange) => {
       watchers[pathPrefix] = onChange
