@@ -1,4 +1,5 @@
 import { project } from '@gestaltjs/core/cli'
+import { UserMainTarget } from '@gestaltjs/core/shared'
 
 /**
  * Creates and return a test project for testing purposes.
@@ -22,5 +23,13 @@ export function testProject(
         main: {},
         shared: {},
       }),
+  }
+}
+
+export function testMainTarget(
+  overrides: Partial<UserMainTarget> = {}
+): UserMainTarget {
+  return {
+    platforms: overrides.platforms ?? ['web'],
   }
 }

@@ -1,4 +1,19 @@
+import { RadixRouter } from 'radix3'
+
 import type { UserMainTarget, UserSharedTarget } from '../../../shared/target'
+
+/**
+ * It represents a target route.
+ */
+export type Route = {
+  /** Route type */
+  type: 'ui'
+
+  /**
+   * The path to the file that contains the route.
+   */
+  filePath: string
+}
 
 /**
  * This type augments the interface of UserMainTarget adding properties and functions that are
@@ -6,9 +21,21 @@ import type { UserMainTarget, UserSharedTarget } from '../../../shared/target'
  * which is obtained at loading time.
  */
 export type MainTarget = UserMainTarget & {
+  /**
+   * The target name.
+   */
   name: string
+  /**
+   * The path to the directory that contains the target.
+   */
   directory: string
+  /**
+   * A path to the gestalt.target.{js,ts} file that describes the project.
+   */
   manifestPath: string
+
+  /** A router instance that contains all the routes of the target */
+  router: RadixRouter<Route>
 }
 
 /**
