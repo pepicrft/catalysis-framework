@@ -63,7 +63,7 @@
     "case-anything": "2.1.10",
     "commondir": "^1.0.1",
     "fast-glob": "^3.2.11",
-    "fastify": "3.28.0",
+    "fastify": "3.29.0",
     "find-up": "6.3.0",
     "fs-extra": "10.1.0",
     "handlebars": "4.7.7",
