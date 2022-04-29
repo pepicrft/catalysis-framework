@@ -9,8 +9,6 @@ import {
   formatCyan,
 } from '../terminal'
 import { pascalCase } from '../string'
-import build from 'pino-abstract-transport'
-import { Transform } from 'node:stream'
 
 function formatLevel(level: string): string {
   let outputLevel = pascalCase(level)
@@ -49,13 +47,29 @@ const baseTransport = (options: pino.TransportBaseOptions) => {
     sync: true,
     colorize: false,
     messageFormat: (log, messageKey) => {
+      const isRaw = log['raw']
       const module = formatModule(`${log['module']}`)
       const level = pinoLogLevels[log.level as number]
-      if (level) {
+      const message = log[messageKey] as string
+
+      if (isRaw) {
+        return message
+      } else if (level) {
         const levelLabel = formatLevel(`${level}`)
-        return `${levelLabel} ${module} ${log[messageKey]}`
+        const prefix = `${levelLabel} ${module}:`
+        return message
+          .split('\n')
+          .map((line) => {
+            return `${prefix} ${line}`
+          })
+          .join('\n')
       } else {
-        return `${module} ${log[messageKey]}`
+        return message
+          .split('\n')
+          .map((line) => {
+            return `${module} ${line}`
+          })
+          .join('\n')
       }
     },
     ignore: 'module,hostname,pid,time,name,level,levelLabel',

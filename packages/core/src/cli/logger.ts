@@ -99,6 +99,15 @@ export class Logger {
   }
 
   /**
+   * Logs info messages without additional formatting.
+   * @param message {LoggerMessage} Message to be logged.
+   * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
+   */
+  rawInfo(message: LoggerMessage, object: object = {}) {
+    this.log({ ...object, raw: true }, message, 'info')
+  }
+
+  /**
    * Logs warn messages.
    * @param message {LoggerMessage} Message to be logged.
    * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.

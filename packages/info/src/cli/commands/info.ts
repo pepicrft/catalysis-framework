@@ -16,9 +16,9 @@ export default class Info extends Command {
     const { flags } = await this.parse(Info)
     const { project } = await loader.load(flags.path)
     if (flags.json) {
-      infoLogger().info(formatJson(project), project)
+      infoLogger().rawInfo(formatJson(project), { project })
     } else {
-      infoLogger().info(prettyFormat(project), project)
+      infoLogger().rawInfo(prettyFormat(project), { project })
     }
   }
 }
