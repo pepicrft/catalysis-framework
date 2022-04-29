@@ -32,13 +32,16 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   }
   const directory = dirname(configurationPath)
   const moduleLoader = await getModuleLoader(directory)
-  const configuration = await loadConfig(configurationPath, moduleLoader)
-  const targetsGraph = await loadTargetsGraph(directory, moduleLoader)
-  await moduleLoader.close()
-  return {
-    configuration,
-    directory,
-    sourcesGlob: pathJoin(directory, `src/**/*.{ts,js}`),
-    targetsGraph,
+  try {
+    const configuration = await loadConfig(configurationPath, moduleLoader)
+    const targetsGraph = await loadTargetsGraph(directory, moduleLoader)
+    return {
+      configuration,
+      directory,
+      sourcesGlob: pathJoin(directory, `src/**/*.{ts,js}`),
+      targetsGraph,
+    }
+  } finally {
+    await moduleLoader.close()
   }
 }
