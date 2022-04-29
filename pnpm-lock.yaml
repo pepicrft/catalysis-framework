@@ -243,6 +243,7 @@ importers:
       '@gestaltjs/dev': 0.7.4
       '@gestaltjs/info': 0.7.4
       '@gestaltjs/plugins': 0.7.4
+      '@gestaltjs/routes': 0.7.4
       '@gestaltjs/test': 0.7.4
       '@oclif/core': ^1.7.0
       '@oclif/plugin-help': ^5
@@ -254,6 +255,7 @@ importers:
       '@gestaltjs/dev': link:../dev
       '@gestaltjs/info': link:../info
       '@gestaltjs/plugins': link:../plugins
+      '@gestaltjs/routes': link:../routes
       '@gestaltjs/test': link:../test
       '@oclif/core': 1.7.0
       '@oclif/plugin-help': 5.1.12
@@ -290,6 +292,14 @@ importers:
       vue: 3.2.33
 
   packages/plugins:
+    specifiers:
+      '@gestaltjs/core': 0.7.4
+      '@oclif/core': 1.7.0
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@oclif/core': 1.7.0
+
+  packages/routes:
     specifiers:
       '@gestaltjs/core': 0.7.4
       '@oclif/core': 1.7.0

@@ -13,6 +13,7 @@
       "@gestaltjs/dev",
       "@gestaltjs/test",
       "@gestaltjs/info",
+      "@gestaltjs/routes",
       "@gestaltjs/core",
       "@gestaltjs/plugins",
       "@gestaltjs/gestalt-plugin-vue",
