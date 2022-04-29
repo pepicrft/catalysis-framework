@@ -15,7 +15,10 @@ export async function loadConfig(
 ): Promise<Configuration> {
   const module: any = await moduleLoader.load(configurationPath)
   const configuration = module.default as Configuration
-  return configuration
+  return {
+    ...configuration,
+    manifestPath: configurationPath,
+  }
 }
 
 /**

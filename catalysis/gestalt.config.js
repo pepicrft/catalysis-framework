@@ -1,3 +1,6 @@
 import { defineConfiguration } from 'gestaltjs/configuration'
 
-export default defineConfiguration({})
+// eslint-disable-next-line import/no-default-export
+export default defineConfiguration({
+  name: 'Catalysis',
+})

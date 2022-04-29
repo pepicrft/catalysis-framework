@@ -24,15 +24,13 @@ export async function loadMainTarget(
   moduleLoader: ModuleLoader
 ): Promise<MainTarget> {
   const directory = dirname(manifestPath)
-  const userMainTarget = (await moduleLoader.load(
-    manifestPath
-  )) as UserMainTarget
+  const userMainTarget = ((await moduleLoader.load(manifestPath)) as any)
+    .default as UserMainTarget
   return {
     ...userMainTarget,
     manifestPath,
-    name: basename(manifestPath),
+    name: basename(dirname(manifestPath)),
     directory,
-    platforms: ['desktop'],
     router: await loadRoutes(directory),
   }
 }
