@@ -12,6 +12,13 @@ export default abstract class extends Command {
         'Output additional information that might be useful for debugging.',
       required: false,
     }),
+    json: Flags.boolean({
+      name: 'json',
+      char: 'j',
+      env: 'GESTALT_JSON',
+      description: 'Outputs the command result encoded as a JSON.',
+      required: false,
+    }),
   }
 
   static projectFlags: Interfaces.FlagInput<any> = {

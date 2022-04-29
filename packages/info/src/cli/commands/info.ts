@@ -1,5 +1,7 @@
 import { Command, loader } from '@gestaltjs/core/cli'
 import { infoLogger } from '../logger'
+import { formatJson } from '../formatters/json'
+import { prettyFormat } from '../formatters/pretty'
 
 // eslint-disable-next-line import/no-default-export
 export default class Info extends Command {
@@ -10,9 +12,13 @@ export default class Info extends Command {
     ...Command.projectFlags,
   }
 
-  async run(): Promise<void> {
+  async run(): Promise<any> {
     const { flags } = await this.parse(Info)
-    const app = await loader.load(flags.path)
-    infoLogger().success('Information')
+    const { project } = await loader.load(flags.path)
+    if (flags.json) {
+      infoLogger().info(formatJson(project), project)
+    } else {
+      infoLogger().info(prettyFormat(project), project)
+    }
   }
 }
