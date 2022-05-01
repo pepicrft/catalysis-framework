@@ -3,10 +3,7 @@ import { UserPlugin } from '@gestaltjs/core/shared'
 /**
  * Interface of the arguemnt and return type of definePlugin.
  */
-type PluginExport =
-  | UserPlugin
-  | (() => Promise<UserPlugin>)
-  | (() => UserPlugin)
+type PluginExport = <T>(options: T) => UserPlugin | Promise<UserPlugin>
 
 /**
  * A utility function to define new plugins. Since the function has its argument and
@@ -16,9 +13,9 @@ type PluginExport =
  *
  * Alternatively, plugins can use the '@type' annotation:
  *   @type {import('@gestaltjs/plugins').Plugin}
- *   const config = {...}
+ *   const plugin = {...}
  *
- * @param plugin {Plugin | () => Promise<Plugin> | () => Plugin} Define a new plugin.
+ * @param plugin {<T>(options: T) => UserPlugin} Define a new plugin.
  * @returns A promise that resolves with the plugin.
  */
 export function definePlugin(plugin: PluginExport): PluginExport {

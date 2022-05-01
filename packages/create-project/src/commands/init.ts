@@ -1,4 +1,3 @@
-import { Interfaces } from '@oclif/core'
 import { Command } from '@gestaltjs/core/cli'
 import { createProjectLogger } from '../logger'
 
@@ -6,7 +5,7 @@ import { createProjectLogger } from '../logger'
 export default class Init extends Command {
   static description = 'Create a Gestalt project'
 
-  static flags: Interfaces.FlagInput<any> = {
+  static flags = {
     ...Command.flags,
   }
 

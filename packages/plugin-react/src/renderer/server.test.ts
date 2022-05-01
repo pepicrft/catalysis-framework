@@ -1,5 +1,5 @@
 import { describe, test, expect, vi } from 'vitest'
-import reactRenderer from './server'
+import { serverRenderer } from './server'
 import ReactDOMServer from 'react-dom/server'
 import { ServerRenderer } from '@gestaltjs/plugins'
 
@@ -8,7 +8,7 @@ vi.mock('react-dom/server')
 describe('hydrate', () => {
   test('hydrates using ReactDOM', () => {
     // Given/When
-    const renderer = reactRenderer as ServerRenderer
+    const renderer = serverRenderer as ServerRenderer
     const component = vi.fn()
 
     // When

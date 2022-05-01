@@ -16,6 +16,12 @@ export function prettyFormat(project: project.Project): string {
     )}`
   )
   lines.push(``)
+
+  const plugins = project.configuration.plugins ?? []
+  if (plugins.length !== 0) {
+    lines.push(terminal.formatGreen(terminal.formatBold('Plugins 🌱')))
+  }
+
   const mainTargets = project.targetsGraph.targets.main
   const sharedTargets = project.targetsGraph.targets.shared
   if (

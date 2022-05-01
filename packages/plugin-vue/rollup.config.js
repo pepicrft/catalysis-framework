@@ -5,15 +5,16 @@ import { external, plugins, distDir } from '../../configurations/rollup.config'
 import fg from 'fast-glob'
 
 const configuration = async () => {
-  const vuePluginExternal = [...(await external(__dirname))]
+  const vuePluginExternal = [
+    ...(await external(__dirname)),
+    'vue/server-renderer',
+  ]
   return [
     {
-      input: await fg(path.join(__dirname, 'src/renderer/**/*.ts'), {
-        ignore: path.join(__dirname, 'src/renderer/**/*.test.ts'),
-      }),
+      input: [path.join(__dirname, 'src/index.ts')],
       output: [
         {
-          dir: path.join(distDir(__dirname), 'renderer'),
+          dir: distDir(__dirname),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,

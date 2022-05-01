@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Deploy your Gestalt apps",
+  "type": "module",
   "scripts": {
     "build": "./gestalt build",
     "dev": "./gestalt dev",
@@ -17,6 +18,7 @@
     ]
   },
   "devDependencies": {
+    "@gestaltjs/gestalt-plugin-react": "workspace:*",
     "gestaltjs": "workspace:*",
     "react": "18.1.0"
   }

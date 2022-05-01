@@ -1,4 +1,4 @@
-import { Flags, Interfaces } from '@oclif/core'
+import { Flags } from '@oclif/core'
 import { project, Command } from '@gestaltjs/core/cli'
 
 import { checkStyle } from '../../services/style'
@@ -7,7 +7,7 @@ import { checkStyle } from '../../services/style'
 export default class Style extends Command {
   static description = 'Check the code style using ESLint.'
 
-  static flags: Interfaces.FlagInput<any> = {
+  static flags = {
     ...Command.globalFlags,
     ...Command.projectFlags,
     fix: Flags.boolean({

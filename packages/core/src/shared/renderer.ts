@@ -34,4 +34,14 @@ export type UserRenderer = {
    * A list of dependencies that are required in the project. For example "react".
    */
   requiredProjectDependencies: string[]
+
+  /**
+   * The client-side renderer that hydrates the server-side-rendered page.
+   */
+  client: UserClientRenderer
+
+  /**
+   * The server-side renderer.
+   */
+  server: UserServerRenderer
 }

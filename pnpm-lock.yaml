@@ -106,9 +106,11 @@ importers:
 
   catalysis:
     specifiers:
+      '@gestaltjs/gestalt-plugin-react': workspace:*
       gestaltjs: workspace:*
       react: 18.1.0
     devDependencies:
+      '@gestaltjs/gestalt-plugin-react': link:../packages/plugin-react
       gestaltjs: link:../packages/gestaltjs
       react: 18.1.0
 

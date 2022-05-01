@@ -1,4 +1,3 @@
-import { Flags, Interfaces } from '@oclif/core'
 import { project, Command } from '@gestaltjs/core/cli'
 import { checkCode } from '../../services/code'
 
@@ -6,7 +5,7 @@ import { checkCode } from '../../services/code'
 export default class Code extends Command {
   static description = 'Check code using Typescript'
 
-  static flags: Interfaces.FlagInput<any> = {
+  static flags = {
     ...Command.globalFlags,
     ...Command.projectFlags,
   }

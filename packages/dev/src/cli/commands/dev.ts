@@ -1,4 +1,3 @@
-import { Interfaces, Flags } from '@oclif/core'
 import { Command } from '@gestaltjs/core/cli'
 import { loader } from '@gestaltjs/core/cli'
 import { devProject } from '../services/dev'
@@ -7,14 +6,14 @@ import { devProject } from '../services/dev'
 export default class Dev extends Command {
   static description = 'Dev your Gestalt project'
 
-  static flags: Interfaces.FlagInput<any> = {
+  static flags = {
     ...Command.globalFlags,
     ...Command.projectFlags,
   }
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Dev)
-    const { project, plugins } = await loader.load(flags.path)
+    const { project } = await loader.load(flags.path)
     const { onChange } = await devProject(project)
   }
 }

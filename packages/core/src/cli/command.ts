@@ -1,9 +1,9 @@
-import { Command, Flags, Interfaces } from '@oclif/core'
+import { Command, Flags } from '@oclif/core'
 import { resolve as pathResolve } from './path'
 
 // eslint-disable-next-line import/no-default-export
 export default abstract class extends Command {
-  static globalFlags: Interfaces.FlagInput<any> = {
+  static globalFlags = {
     verbose: Flags.boolean({
       name: 'verbose',
       char: 'v',
@@ -21,7 +21,7 @@ export default abstract class extends Command {
     }),
   }
 
-  static projectFlags: Interfaces.FlagInput<any> = {
+  static projectFlags = {
     path: Flags.string({
       name: 'path',
       char: 'p',

@@ -1,7 +1,5 @@
 import { Project } from './project/models/project'
 import { loadProject } from './project/load/project'
-import { Plugin } from './plugin/models/plugin'
-import { loadPlugins } from './plugin/load/plugin'
 
 /**
  * Load is a convenient function for looking up a project by traversing up the directory structure
@@ -11,8 +9,7 @@ import { loadPlugins } from './plugin/load/plugin'
  */
 export async function load(
   fromDirectory: string
-): Promise<{ project: Project; plugins: Plugin[] }> {
+): Promise<{ project: Project }> {
   const project = await loadProject(fromDirectory)
-  const plugins = await loadPlugins([project.directory])
-  return { project, plugins }
+  return { project }
 }

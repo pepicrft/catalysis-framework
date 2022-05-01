@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { createSSRApp } from 'vue'
-import vueRenderer from './client'
+import { clientRenderer } from './client'
 import { ClientRenderer } from '@gestaltjs/plugins'
 
 vi.mock('vue')
@@ -8,7 +8,7 @@ vi.mock('vue')
 describe('hydrate', () => {
   test('delegates the creation and mounting to Vue', async () => {
     // Given
-    const renderer = vueRenderer as ClientRenderer
+    const renderer = clientRenderer as ClientRenderer
     const component: any = vi.fn()
     const domElement: any = vi.fn()
     const app: any = { mount: vi.fn() }
