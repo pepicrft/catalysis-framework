@@ -1,5 +1,7 @@
-import { testLogger } from '../logger'
-import { Command } from '@gestaltjs/core/cli'
+import { testLogger } from '../../logger'
+import { Command, project } from '@gestaltjs/core/cli'
+import { configureTests } from 'cli/services/test'
+import { load } from '../../../../../core/src/cli/loader'
 
 // eslint-disable-next-line import/no-default-export
 export default class Test extends Command {
@@ -32,6 +34,9 @@ export default class Test extends Command {
      * vitest.run({ directory: project.directory, ...config})
      *
      */
+    const { flags } = await this.parse(Test)
+    const loadedProject = await project.loadProject(flags.path)
+    await configureTests(loadedProject.directory)
     testLogger().success('Tested')
   }
 }
