@@ -41,7 +41,7 @@ export async function watchConfig(
 }
 
 /**
- * Given a directory that represents the root of a Gestalt app, it returns
+ * Given a directory that represents the root of a Gestalt project, it returns
  * the path to the configuration file.
  * @param directory {string} Directory where to locate the configuration file.
  * @returns A promise that resolves with the path if the file could be located.

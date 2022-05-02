@@ -2,7 +2,7 @@
   "name": "@gestaltjs/catalysis",
   "version": "0.1.0",
   "private": true,
-  "description": "Deploy your Gestalt apps",
+  "description": "Deploy your Gestalt projects",
   "type": "module",
   "scripts": {
     "build": "./gestalt build",

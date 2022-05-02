@@ -4,7 +4,7 @@ import { run, flush, settings } from '@oclif/core'
 const isDebug = process.env.DEBUG === '1'
 settings.debug = isDebug
 
-const runCreateApp = () => {
+const runGestalt = () => {
   run(void 0, import.meta.url)
     .then(flush)
     .catch((thrownError) => {
@@ -13,4 +13,4 @@ const runCreateApp = () => {
 }
 
 // eslint-disable-next-line import/no-default-export
-export default runCreateApp
+export default runGestalt

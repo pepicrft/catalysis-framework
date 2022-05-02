@@ -6,7 +6,7 @@ if (initIndex === -1) {
   const initIndex =
     process.argv.findIndex(
       (arg) =>
-        arg.includes('bin/create-project') ||
+        arg.includes('bin/create-plugin') ||
         arg.includes('bin/dev') ||
         arg.includes('bin/run')
     ) + 1

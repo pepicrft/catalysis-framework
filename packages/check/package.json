@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/check",
   "version": "0.7.4",
-  "description": "A set of utilities responsible checking Gestalt apps",
+  "description": "A set of utilities responsible checking Gestalt projects",
   "type": "module",
   "files": [
     "/dist"

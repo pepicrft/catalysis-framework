@@ -193,10 +193,20 @@ importers:
       tempy: 2.0.0
       terminal-link: 3.0.0
 
-  packages/create-project:
+  packages/create-plugin:
     specifiers:
+      '@gestaltjs/core': 0.7.4
       '@oclif/core': 1.7.0
     dependencies:
+      '@gestaltjs/core': link:../core
+      '@oclif/core': 1.7.0
+
+  packages/create-project:
+    specifiers:
+      '@gestaltjs/core': 0.7.4
+      '@oclif/core': 1.7.0
+    dependencies:
+      '@gestaltjs/core': link:../core
       '@oclif/core': 1.7.0
 
   packages/db:

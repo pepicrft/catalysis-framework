@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/create-project",
+  "name": "@gestaltjs/create-plugin",
   "version": "0.7.4",
   "private": false,
   "description": "Create a new Gestalt plugin",

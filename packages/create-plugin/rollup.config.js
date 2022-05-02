@@ -3,7 +3,7 @@ import alias from '@rollup/plugin-alias'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
-const createProjectPlugins = [
+const createPluginPlugins = [
   alias({
     entries: [
       {
@@ -20,7 +20,7 @@ const createProjectPlugins = [
 ]
 
 const configuration = async () => {
-  const createProjectExternal = [...(await external(__dirname))]
+  const createPluginExternal = [...(await external(__dirname))]
 
   return [
     {
@@ -33,8 +33,8 @@ const configuration = async () => {
           sourcemap: true,
         },
       ],
-      plugins: createProjectPlugins,
-      external: createProjectExternal,
+      plugins: createPluginPlugins,
+      external: createPluginExternal,
     },
     {
       input: path.join(__dirname, 'src/index.ts'),
@@ -46,8 +46,8 @@ const configuration = async () => {
           sourcemap: true,
         },
       ],
-      plugins: createProjectPlugins,
-      external: createProjectExternal,
+      plugins: createPluginPlugins,
+      external: createPluginExternal,
     },
   ]
 }

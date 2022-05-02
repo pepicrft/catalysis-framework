@@ -26,6 +26,9 @@ export class World {
   async runCreateProject(args: string[], options: RunOptions = {}) {
     await exec(createProjectExecutablePath, args, options)
   }
+  async runCreatePlugin(args: string[], options: RunOptions = {}) {
+    await exec(createProjectExecutablePath, args, options)
+  }
 }
 
 setWorldConstructor(World)

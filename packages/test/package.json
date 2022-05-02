@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/test",
   "version": "0.7.4",
-  "description": "A set of utilities responsible for testing Gestalt apps",
+  "description": "A set of utilities responsible for testing Gestalt projects",
   "type": "module",
   "files": [
     "/dist"
