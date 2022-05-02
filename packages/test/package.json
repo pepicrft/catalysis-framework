@@ -22,6 +22,9 @@
       "../../.eslintrc.cjs"
     ]
   },
+  "dependencies": {
+    "vitest": ""
+  },
   "peerDependencies": {
     "@gestaltjs/core": "0.7.4",
     "@oclif/core": "1.7.0"
