@@ -38,7 +38,7 @@
   "scripts": {
     "clean": "shx rm -rf dist",
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "pnpm clean && rollup -c",
+    "build": "pnpm clean && rollup -c ./rollup.config.js",
     "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
     "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
     "test": "vitest run",
