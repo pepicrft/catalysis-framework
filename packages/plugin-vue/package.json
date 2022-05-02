@@ -36,8 +36,19 @@
     ]
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue": "^2.3.1"
+  },
+  "devDependencies": {
+    "@gestaltjs/plugins": "0.7.4",
     "vue": "^3.2.33"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.33"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": false
+    }
   },
   "engine-strict": true,
   "engines": {
