@@ -1,0 +1,62 @@
+{
+  "name": "@gestaltjs/gestalt-plugin-svelte",
+  "version": "0.7.4",
+  "private": false,
+  "description": "Gestalt's plugin that makes Svelte the default rendering engine for Gestalt projects",
+  "keywords": [
+    "gestalt",
+    "gestaltjs",
+    "web"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/gestalt.plugin.js",
+      "types": "./dist/gestalt.plugin.d.ts"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "prepack": "cross-env NODE_ENV=production pnpm run build",
+    "build": "pnpm clean && rollup -c",
+    "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
+    "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-core.xml",
+    "tsc": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../.eslintrc.cjs"
+    ]
+  },
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.42"
+  },
+  "devDependencies": {
+    "@gestaltjs/plugins": "0.7.4",
+    "svelte": "^3.48.0"
+  },
+  "peerDependencies": {
+    "svelte": "^3.48.0"
+  },
+  "peerDependenciesMeta": {
+    "svelte": {
+      "optional": false
+    }
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}

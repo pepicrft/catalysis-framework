@@ -15,7 +15,6 @@ const plugin = definePlugin((options: ReactPluginOptions = {}) => {
       "Adds support for declaring UI using React's declarative model",
     renderer: {
       fileExtensions: ['jsx', 'tsx'],
-      requiredProjectDependencies: ['react'],
       vitePlugins: [react()],
       client: clientRenderer,
       server: serverRenderer,

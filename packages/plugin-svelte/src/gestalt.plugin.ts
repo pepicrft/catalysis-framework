@@ -1,20 +1,21 @@
 import { definePlugin } from '@gestaltjs/plugins'
-import vue from '@vitejs/plugin-vue'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { clientRenderer } from './renderer/client'
 import { serverRenderer } from './renderer/server'
 
-type VuePluginOptions = {
+type SveltePluginOptions = {
   // No options yet
 }
 
 // eslint-disable-next-line import/no-default-export
-const plugin = definePlugin((options: VuePluginOptions = {}) => {
+const plugin = definePlugin((options: SveltePluginOptions = {}) => {
   return {
-    name: 'vue',
-    description: "Adds support for declaring UI using Vue's declarative model",
+    name: 'svelte',
+    description:
+      "Adds support for declaring UI using Svelte's declarative model",
     renderer: {
-      fileExtensions: ['vue'],
-      vitePlugins: [vue()],
+      fileExtensions: ['svelte'],
+      vitePlugins: [svelte()],
       server: serverRenderer,
       client: clientRenderer,
     },

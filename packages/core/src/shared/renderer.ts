@@ -31,11 +31,6 @@ export type UserRenderer = {
   vitePlugins: (PluginOption | PluginOption[])[]
 
   /**
-   * A list of dependencies that are required in the project. For example "react".
-   */
-  requiredProjectDependencies: string[]
-
-  /**
    * The client-side renderer that hydrates the server-side-rendered page.
    */
   client: UserClientRenderer
