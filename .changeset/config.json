@@ -19,7 +19,7 @@
       "@gestaltjs/plugins",
       "@gestaltjs/gestalt-plugin-vue",
       "@gestaltjs/gestalt-plugin-react",
-      "@gestaltjs/gestalt-plugin-bugsnag"
+      "@gestaltjs/gestalt-plugin-svelte"
     ]
   ],
   "access": "public",
