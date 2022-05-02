@@ -8,7 +8,7 @@ const common = [
   '--require lib/**/*.ts',
   '--format-options \'{"colorsEnabled": true}\'',
   '--format progress',
-  '--format node_modules/cucumber-pretty',
+  '--format @cucumber/pretty-formatter',
 ]
 if (isCI) {
   common.push(

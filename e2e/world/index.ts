@@ -1,4 +1,4 @@
-import { setWorldConstructor } from 'cucumber'
+import { setWorldConstructor } from '@cucumber/cucumber'
 
 export interface WorldConstructorParams {
   temporaryDirectory: string
@@ -6,6 +6,8 @@ export interface WorldConstructorParams {
 
 export class World {
   public temporaryDirectory: string
+  public temporaryEnvironment: any | undefined
+  public projectDirectory: string | undefined
 
   constructor({ temporaryDirectory }: WorldConstructorParams) {
     this.temporaryDirectory = temporaryDirectory

@@ -1,4 +1,6 @@
-import shell from 'shelljs'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const execa = require('execa')
+import colors from 'picocolors'
 
 import { isDebug } from './environment'
 
@@ -10,29 +12,30 @@ import { isDebug } from './environment'
  * @param command The command to be executed.
  * @returns A promise that resolves or rejects when the command execution finishes.
  */
-export const exec = async (command: string) => {
-  return new Promise<void>((resolve, reject) => {
-    const childProcess = shell.exec(command, { async: true, silent: true })
-    let errorOutput = ''
-    childProcess.stdout?.on('data', (stdout) => {
-      if (isDebug) {
-        // eslint-disable-next-line no-console
-        console.log(stdout)
-      }
-    })
-    childProcess.stderr?.on('data', (stderr) => {
-      if (isDebug) {
-        // eslint-disable-next-line no-console
-        console.error(stderr)
-      }
-      errorOutput = errorOutput.concat(stderr)
-    })
-    childProcess.on('exit', (exitCode) => {
-      if (exitCode === 0) {
-        resolve()
-      } else {
-        reject(new Error(errorOutput))
-      }
-    })
+export function exec(
+  command: string,
+  args: string[] = [],
+  options?: { cwd?: string; env?: NodeJS.ProcessEnv }
+) {
+  if (isDebug) {
+    // eslint-disable-next-line no-console
+    console.log(colors.gray(`Running: ${command} ${args.join(' ')}`))
+  }
+
+  const _options: any = { ...options, stdout: undefined, stderr: undefined }
+  const shortCommand = command.split('/').slice(-1).pop() || ''
+  const commandProcess = execa(command, args, _options)
+  commandProcess.stdout?.on('data', (data: string) => {
+    if (isDebug) {
+      // eslint-disable-next-line no-console
+      console.log(colors.gray(`${colors.bold(shortCommand)}: ${data}`))
+    }
   })
+  commandProcess.stderr?.on('data', (data: string) => {
+    if (isDebug) {
+      // eslint-disable-next-line no-console
+      console.log(colors.gray(`${colors.bold(shortCommand)}: ${data}`))
+    }
+  })
+  return commandProcess
 }
