@@ -241,7 +241,7 @@ importers:
       '@gestaltjs/build': 0.7.4
       '@gestaltjs/check': 0.7.4
       '@gestaltjs/core': 0.7.4
-      '@gestaltjs/db': 0.7.3
+      '@gestaltjs/db': 0.7.4
       '@gestaltjs/dev': 0.7.4
       '@gestaltjs/info': 0.7.4
       '@gestaltjs/plugins': 0.7.4
@@ -253,7 +253,7 @@ importers:
       '@gestaltjs/build': link:../build
       '@gestaltjs/check': link:../check
       '@gestaltjs/core': link:../core
-      '@gestaltjs/db': 0.7.3_29b43680ed75eab3ac59466899117bba
+      '@gestaltjs/db': link:../db
       '@gestaltjs/dev': link:../dev
       '@gestaltjs/info': link:../info
       '@gestaltjs/plugins': link:../plugins
@@ -1076,16 +1076,6 @@ packages:
   /@fastify/error/2.0.0:
     resolution: {integrity: sha512-wI3fpfDT0t7p8E6dA2eTECzzOd+bZsZCJ2Hcv+Onn2b7ZwK3RwD27uW2QDaMtQhAfWQQP+WNK7nKf0twLsBf9w==}
     dev: true
-
-  /@gestaltjs/db/0.7.3_29b43680ed75eab3ac59466899117bba:
-    resolution: {integrity: sha512-3v2RD2bx1KSuQ1GR4WYdeL3FGTYlNFdbMW4LBpvhdziRYXnqz8RuKIhD8UAaGNoVZMNfqtf3eYVQuKn0HgCPIQ==}
-    peerDependencies:
-      '@gestaltjs/core': 0.7.3
-      '@oclif/core': 1.3.4
-    dependencies:
-      '@gestaltjs/core': link:packages/core
-      '@oclif/core': 1.7.0
-    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}

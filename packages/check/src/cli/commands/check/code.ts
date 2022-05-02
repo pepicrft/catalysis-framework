@@ -9,10 +9,10 @@ export default class Code extends Command {
     ...Command.globalFlags,
     ...Command.projectFlags,
   }
+
   async run(): Promise<void> {
     const { flags } = await this.parse(Code)
     const loadedProject = await project.loadProject(flags.path)
-
     await checkCode(loadedProject.directory)
   }
 }
