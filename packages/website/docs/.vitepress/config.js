@@ -69,7 +69,7 @@ export default defineConfig({
       {
         text: 'Telegram',
         link: 'https://t.me/gestaltjs',
-      }
+      },
       {
         text: 'Slack',
         link: 'https://join.slack.com/t/gestaltjs/shared_invite/zt-14azp22s4-sAWlH63i4K7_3DWfbxGvXw',
