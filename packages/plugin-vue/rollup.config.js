@@ -11,7 +11,7 @@ const configuration = async () => {
   ]
   return [
     {
-      input: [path.join(__dirname, 'src/index.ts')],
+      input: [path.join(__dirname, 'src/gestalt.plugin.ts')],
       output: [
         {
           dir: distDir(__dirname),

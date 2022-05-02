@@ -12,8 +12,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/gestalt.plugin.js",
+      "types": "./dist/gestalt.plugin.d.ts"
     }
   },
   "files": [
