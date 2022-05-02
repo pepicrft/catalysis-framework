@@ -2,6 +2,7 @@ import { setWorldConstructor } from '@cucumber/cucumber'
 import {
   createProjectExecutablePath,
   gestaltExecutablePath,
+  createPluginExecutablePath,
 } from '../lib/constants'
 import { exec } from '../lib/system'
 
@@ -27,7 +28,7 @@ export class World {
     await exec(createProjectExecutablePath, args, options)
   }
   async runCreatePlugin(args: string[], options: RunOptions = {}) {
-    await exec(createProjectExecutablePath, args, options)
+    await exec(createPluginExecutablePath, args, options)
   }
 }
 
