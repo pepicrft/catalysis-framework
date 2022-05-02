@@ -6,12 +6,14 @@ import path from 'pathe'
 import fs from 'fs-extra'
 import { exec } from '../lib/system'
 import { rootDirectory } from '../lib/constants'
+import { World } from '../world'
+import colors from 'picocolors'
 
 if (process.env.DEBUG === '1') {
   setDefaultTimeout(-1)
 }
 
-Given('I have a working directory', function () {
+Given('I have a working directory', function (this: World) {
   this.temporaryDirectory = tmp.dirSync().name
   const dataHomeDirectory = path.join(this.temporaryDirectory, 'XDG_DATA_HOME')
   const configHomeDirectory = path.join(
@@ -27,7 +29,7 @@ Given('I have a working directory', function () {
     'XDG_CACHE_HOME'
   )
 
-  this.temporaryEnv = {
+  this.temporaryEnvironment = {
     XDG_DATA_HOME: dataHomeDirectory,
     XDG_CONFIG_HOME: configHomeDirectory,
     XDG_STATE_HOME: stateHomeDirectory,
@@ -46,7 +48,7 @@ Given(/I have the fixture (.+) in the working directory/, function (fixture) {
  */
 BeforeAll({ timeout: 2 * 60 * 1000 }, async function () {
   // eslint-disable-next-line no-console
-  console.log('Building CLIs before running tests...')
+  console.log(colors.gray('Building Gestalt...'))
   await exec('pnpm', ['build'], { cwd: rootDirectory })
 })
 
