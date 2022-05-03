@@ -1,7 +1,6 @@
 import { testLogger } from '../../logger'
-import { Command, project } from '@gestaltjs/core/cli'
-import { configureTests } from 'cli/services/test'
-import { load } from '../../../../../core/src/cli/loader'
+import { Command, loader } from '@gestaltjs/core/cli'
+import { configureTests } from '../../services/test'
 
 // eslint-disable-next-line import/no-default-export
 export default class Test extends Command {
@@ -35,8 +34,8 @@ export default class Test extends Command {
      *
      */
     const { flags } = await this.parse(Test)
-    const loadedProject = await project.loadProject(flags.path)
-    await configureTests(loadedProject.directory)
+    const { project } = await loader.load(flags.path)
+    await configureTests(project.directory)
     testLogger().success('Tested')
   }
 }
