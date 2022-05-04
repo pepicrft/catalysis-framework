@@ -55,7 +55,7 @@
     "pino-pretty": "^7.5.1",
     "source-map-support": "^0.5.21",
     "stacktracey": "^2.1.8",
-    "vite": "2.9.7"
+    "vite": "2.9.8"
   },
   "devDependencies": {
     "@types/pino": "7.0.5",
