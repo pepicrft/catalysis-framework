@@ -11,7 +11,8 @@
     "resolveJsonModule": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "declaration": true,
+    "noEmit": true,
+    "declaration": false,
     "inlineSourceMap": true,
     "isolatedModules": false,
     "paths": {

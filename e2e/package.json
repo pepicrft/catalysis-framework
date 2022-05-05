@@ -8,7 +8,7 @@
     "lint": "eslint **/*.ts",
     "lint:fix": "eslint **/*.ts --fix",
     "test": "cucumber-js -p default",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc && echo"
   },
   "eslintConfig": {
     "extends": [
