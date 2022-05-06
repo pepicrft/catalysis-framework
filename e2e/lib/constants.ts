@@ -1,29 +1,29 @@
-import path from 'pathe'
+import { resolve as pathResolve, join as pathJoin } from 'pathe'
 
-export const rootDirectory = path.join(__dirname, '../..')
-export const gestaltPackageDirectory = path.resolve(
+export const rootDirectory = pathJoin(__dirname, '../..')
+export const gestaltPackageDirectory = pathResolve(
   rootDirectory,
   './packages/gesatltjs'
 )
-export const createProjectPackageDirectory = path.resolve(
+export const createProjectPackageDirectory = pathResolve(
   rootDirectory,
   './packages/create-project'
 )
 
-export const createPluginPackageDirectory = path.resolve(
+export const createPluginPackageDirectory = pathResolve(
   rootDirectory,
   './packages/create-plugin'
 )
 
-export const gestaltExecutablePath = path.resolve(
+export const gestaltExecutablePath = pathResolve(
   gestaltPackageDirectory,
   './bin/dev.js'
 )
-export const createProjectExecutablePath = path.resolve(
+export const createProjectExecutablePath = pathResolve(
   createProjectPackageDirectory,
   './bin/dev.js'
 )
-export const createPluginExecutablePath = path.resolve(
+export const createPluginExecutablePath = pathResolve(
   createPluginPackageDirectory,
   './bin/dev.js'
 )

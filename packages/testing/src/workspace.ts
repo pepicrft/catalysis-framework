@@ -1,4 +1,4 @@
-import path from 'pathe'
+import * as path from 'pathe'
 // eslint-disable-next-line import/no-nodejs-modules
 import { fileURLToPath } from 'node:url'
 

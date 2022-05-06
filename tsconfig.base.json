@@ -23,5 +23,5 @@
       "@gestaltjs/plugins": ["../../plugins/src/runtime/index.ts"]
     }
   },
-  "exclude": ["**/dist/**", "node_modules"]
+  "exclude": ["**/dist/**", "**/*/vitest.config.ts", "node_modules"]
 }

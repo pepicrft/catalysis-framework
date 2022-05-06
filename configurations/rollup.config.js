@@ -1,7 +1,7 @@
 import esbuild from 'rollup-plugin-esbuild'
 import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
-import path from 'pathe'
+import * as path from 'pathe'
 import stripShebang from 'rollup-plugin-strip-shebang'
 import commonjs from '@rollup/plugin-commonjs'
 

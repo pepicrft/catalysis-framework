@@ -1,4 +1,4 @@
-import path from 'pathe'
+import * as path from 'pathe'
 import dts from 'rollup-plugin-dts'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'

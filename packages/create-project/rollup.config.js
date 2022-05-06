@@ -1,4 +1,4 @@
-import path from 'pathe'
+import * as path from 'pathe'
 import alias from '@rollup/plugin-alias'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'

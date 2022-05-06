@@ -2,7 +2,7 @@
 import { Given, After, BeforeAll, setDefaultTimeout } from '@cucumber/cucumber'
 import tmp from 'tmp'
 import rimraf from 'rimraf'
-import path from 'pathe'
+import * as path from 'pathe'
 import fs from 'fs-extra'
 import { exec } from '../lib/system'
 import { rootDirectory } from '../lib/constants'
