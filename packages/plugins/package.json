@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/plugins",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "private": false,
   "description": "Models and convenient utilities for implementing Gestalt plugins",
   "keywords": [
@@ -36,11 +36,11 @@
     ]
   },
   "peerDependencies": {
-    "@gestaltjs/core": "0.7.6",
+    "@gestaltjs/core": "0.7.7",
     "@oclif/core": "1.7.0"
   },
   "devDependencies": {
-    "@gestaltjs/core": "0.7.6",
+    "@gestaltjs/core": "0.7.7",
     "@oclif/core": "1.7.0"
   },
   "oclif": {

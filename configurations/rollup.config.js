@@ -12,30 +12,24 @@ export const distDir = (packageDir) => {
 export const aliases = (packageDir) => {
   return [
     {
+      find: '@gestaltjs/plugins',
+      replacement: path.join(__dirname, '../plugins/src/runtime/index.ts'),
+    },
+    {
       find: '@gestaltjs/core/cli',
-      replacement: path.join(__dirname, '../packages/core/src/cli/index.ts'),
+      replacement: path.join(packageDir, '../packages/core/src/cli/index.ts'),
     },
     {
       find: '@gestaltjs/core/runtime',
-      replacement: path.join(
-        __dirname,
-        '../packages/core/src/runtime/index.ts'
-      ),
+      replacement: path.join(__dirname, '../core/src/runtime/index.ts'),
     },
     {
       find: '@gestaltjs/core/shared',
-      replacement: path.join(__dirname, '../packages/core/src/shared/index.ts'),
+      replacement: path.join(packageDir, '../core/src/shared/index.ts'),
     },
     {
       find: '@gestaltjs/testing',
-      replacement: path.join(__dirname, '../packages/testing/src/index.ts'),
-    },
-    {
-      find: '@gestaltjs/plugins',
-      replacement: path.join(
-        __dirname,
-        '../packages/plugins/src/runtime/index.ts'
-      ),
+      replacement: path.join(packageDir, '../testing/src/index.ts'),
     },
     {
       find: new RegExp('^\\$(.*)$'),
@@ -49,7 +43,7 @@ export const plugins = (packageDir) => {
     stripShebang(),
     resolve({
       preferBuiltins: true,
-      aliases: aliases,
+      aliases: aliases(packageDir),
     }),
     commonjs({
       include: /node_modules/,
@@ -75,6 +69,7 @@ export const external = async (packageDir) => {
   const packageJson = await import(path.join(packageDir, 'package.json'))
   const entries = [
     /@gestaltjs\/core/,
+    /@gestaltjs\/plugins/,
     /source-map-support/,
     ...Object.keys(packageJson.dependencies ?? {}),
     ...Object.keys(packageJson.peerDependencies ?? {}),

@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/routes",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Output the aggregated routes of a project",
   "type": "module",
   "files": [
@@ -23,11 +23,11 @@
     ]
   },
   "peerDependencies": {
-    "@gestaltjs/core": "0.7.6",
+    "@gestaltjs/core": "0.7.7",
     "@oclif/core": "1.7.0"
   },
   "devDependencies": {
-    "@gestaltjs/core": "0.7.6",
+    "@gestaltjs/core": "0.7.7",
     "@oclif/core": "1.7.0"
   },
   "oclif": {
