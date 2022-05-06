@@ -8,15 +8,23 @@ type DevProjectOutput = {
   onChange: (project: project.models.Project) => void
 }
 
-export async function devProject({ project, targetName}:{
-  project: projectModule.Project,
+export async function devProject({
+  project,
+  targetName,
+}: {
+  project: projectModule.Project
   targetName: string
 }): Promise<DevProjectOutput> {
   const target = project.targetsGraph.targets.main[targetName]
   if (!target) {
-    const availableTargets = Object.keys(project.targetsGraph.targets.main).join(', ')
-    throw new error.Abort(`The target ${targetName} could not be found in the project`,
-      { next: `Try running the command again with any of the following targets: ${availableTargets}` }
+    const availableTargets = Object.keys(
+      project.targetsGraph.targets.main
+    ).join(', ')
+    throw new error.Abort(
+      `The target ${targetName} could not be found in the project`,
+      {
+        next: `Try running the command again with any of the following targets: ${availableTargets}`,
+      }
     )
   }
   const viteDevServer = await getViteDevServer(project)
@@ -24,14 +32,13 @@ export async function devProject({ project, targetName}:{
   app.use(viteDevServer.middlewares)
 
   app.use('*', async (req: any) => {
-   return await render({
+    return await render({
       urlPath: req.url,
       project,
       target,
-      viteDevServer
+      viteDevServer,
     })
-  }
-  )
+  })
 
   devLogger().info('Starting the project...')
   const listener = await listen(app, { autoClose: true, showURL: false })
@@ -50,37 +57,56 @@ export async function devProject({ project, targetName}:{
   }
 }
 
-async function getViteDevServer(project: projectModule.Project): Promise<vite.ViteDevServer> {
+async function getViteDevServer(
+  project: projectModule.Project
+): Promise<vite.ViteDevServer> {
   return vite.createServer({
     root: project.directory,
     cacheDir: undefined,
     server: {
       middlewareMode: 'ssr',
-      hmr: true
+      hmr: true,
+      watch: {
+        // During tests we edit the files too fast and sometimes chokidar
+        // misses change events, so enforce polling for consistency
+        usePolling: true,
+        interval: 100,
+      },
     },
     clearScreen: false,
     logLevel: 'silent',
     plugins: [
-      ...(project.configuration.plugins ?? []).flatMap((plugin) => plugin.renderer?.vitePlugins ?? [])
-    ]
+      ...(project.configuration.plugins ?? []).flatMap(
+        (plugin) => plugin.renderer?.vitePlugins ?? []
+      ),
+    ],
   })
 }
 
-async function render(options: { urlPath: string, project: projectModule.Project, target: projectModule.MainTarget, viteDevServer: vite.ViteDevServer }): Promise<string> {
+async function render(options: {
+  urlPath: string
+  project: projectModule.Project
+  target: projectModule.MainTarget
+  viteDevServer: vite.ViteDevServer
+}): Promise<string> {
   const plugins = options.project.configuration.plugins ?? []
   const route = options.target.router.lookup(options.urlPath)
   if (!route) {
     return `<div>${options.urlPath} not found</div>`
   }
-  const renderer = plugins.find((plugin) => plugin.renderer?.fileExtensions?.includes(route.fileExtension))?.renderer
+  const renderer = plugins.find((plugin) =>
+    plugin.renderer?.fileExtensions?.includes(route.fileExtension)
+  )?.renderer
   if (!renderer) {
     return `<div> We could not find a plugin to handle the extension ${route.fileExtension}</div>`
   }
-  const component = (await options.viteDevServer.ssrLoadModule(route.filePath)).default()
+  const component = (
+    await options.viteDevServer.ssrLoadModule(route.filePath)
+  ).default()
   // TODO: Throw a good error if .default doesn't exist
 
   const routeHTML = (await renderer.server.render(component)).html
-  return `
+  const htmlDocument = `
   <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -93,4 +119,8 @@ async function render(options: { urlPath: string, project: projectModule.Project
   </body>
 </html>
   `
+  return await options.viteDevServer.transformIndexHtml(
+    options.urlPath,
+    htmlDocument
+  )
 }
