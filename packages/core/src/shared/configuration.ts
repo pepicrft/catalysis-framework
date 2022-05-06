@@ -17,5 +17,5 @@ export type UserConfigurationOptions = {
    * The environment set by the user when interacting
    * with the project.
    */
-  environment: 'development' | 'production'
+  environment: 'development' | 'production' | 'test'
 }

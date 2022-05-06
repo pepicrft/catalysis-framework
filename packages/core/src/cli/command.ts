@@ -19,6 +19,14 @@ export default abstract class extends Command {
       description: 'Outputs the command result encoded as a JSON.',
       required: false,
     }),
+    env: Flags.string({
+      name: 'env',
+      char: 'e',
+      options: ['development', 'production', 'test'],
+      env: 'GESTALT_ENV',
+      description: 'The environment used with the project.',
+      required: false,
+    }),
   }
 
   static projectFlags = {
