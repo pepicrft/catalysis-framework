@@ -13,6 +13,11 @@ export type Route = {
    * The path to the file that contains the route.
    */
   filePath: string
+
+  /**
+   * File extension of the route without including the dot (e.g. jsx)
+   */
+  fileExtension: string
 }
 
 /**

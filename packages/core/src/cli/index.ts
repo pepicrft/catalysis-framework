@@ -15,4 +15,5 @@ export * as template from './template'
 export * as eslint from './eslint'
 export * as plugin from './plugin'
 export * as loader from './loader'
+export * as vite from "vite"
 export { default as Command } from './command'

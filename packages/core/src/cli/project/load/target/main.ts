@@ -6,6 +6,7 @@ import {
   join as pathJoin,
   relative as relativePath,
   parse as parsePath,
+  extname as extensionPath
 } from '../../../path'
 import { ModuleLoader } from '../module-loader'
 import { createRouter } from 'radix3'
@@ -59,7 +60,7 @@ async function loadRoutes(directory: string): Promise<RadixRouter<Route>> {
     if (urlPath.match(/^\/index$/)) {
       urlPath = urlPath.replace('/index', '/')
     }
-    router.insert(urlPath, { filePath: routeFilePath, type: 'ui' })
+    router.insert(urlPath, { filePath: routeFilePath, fileExtension: extensionPath(routeFilePath).replace(".", ""), type: 'ui' })
   })
   return router
 }
