@@ -76,7 +76,7 @@ export default defineConfig({
       },
       {
         text: 'Community',
-        link: 'https://github.com/gestaltjs/gestalt',
+        link: 'https://community.gestaltjs.org',
       },
     ],
 
