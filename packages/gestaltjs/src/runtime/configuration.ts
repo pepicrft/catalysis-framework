@@ -1,11 +1,14 @@
-import { UserConfiguration } from '@gestaltjs/core/shared'
+import {
+  UserConfiguration,
+  UserConfigurationOptions,
+} from '@gestaltjs/core/shared'
 
 export { UserConfiguration }
 
 type UserConfigurationExport =
   | UserConfiguration
-  | (() => Promise<UserConfiguration>)
-  | (() => UserConfiguration)
+  | ((options?: UserConfigurationOptions) => Promise<UserConfiguration>)
+  | ((options?: UserConfigurationOptions) => UserConfiguration)
 
 /**
  * A utility function to define the configuration. Since the function has its argument and
