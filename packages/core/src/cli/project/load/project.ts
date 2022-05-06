@@ -12,8 +12,8 @@ import { getModuleLoader } from './module-loader'
 export const ConfigFileNotFoundError = () => {
   return new Abort('The config file could not be found', {
     cause:
-      'You might be running GestaltJS from a directory that does not contain a project',
-    next: 'Run the command from a GestaltJS project. GestaltJS projects are identified by a directory containing a configuration file.',
+      'You might be running Gestalt from a directory that does not contain a project',
+    next: 'Run the command from a Gestalt project. Gestalt projects are identified by a directory containing a gestalt.config.{js,ts} configuration file.',
   })
 }
 

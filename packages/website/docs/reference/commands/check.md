@@ -1,6 +1,6 @@
 # gestalt check
 
-This command runs a series of checks to ensure that the GestaltJS project is in a good state.
+This command runs a series of checks to ensure that the Gestalt project is in a good state.
 
 `gestalt check [option..]`
 
