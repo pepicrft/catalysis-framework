@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/create-plugin",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "private": false,
   "description": "Create a new Gestalt plugin",
   "type": "module",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@oclif/core": "1.7.0",
-    "@gestaltjs/core": "0.7.5"
+    "@gestaltjs/core": "0.7.6"
   },
   "devDependencies": {},
   "oclif": {

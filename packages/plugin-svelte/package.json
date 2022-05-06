@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/gestalt-plugin-svelte",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "private": false,
   "description": "Gestalt's plugin that makes Svelte the default rendering engine for Gestalt projects",
   "keywords": [
@@ -39,7 +39,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.42"
   },
   "devDependencies": {
-    "@gestaltjs/plugins": "0.7.5",
+    "@gestaltjs/plugins": "0.7.6",
     "svelte": "^3.48.0"
   },
   "peerDependencies": {

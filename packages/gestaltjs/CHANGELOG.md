@@ -1,5 +1,19 @@
 # gestaltjs
 
+## 0.7.6
+
+### Patch Changes
+
+- @gestaltjs/build@0.7.6
+- @gestaltjs/check@0.7.6
+- @gestaltjs/db@0.7.6
+- @gestaltjs/dev@0.7.6
+- @gestaltjs/test@0.7.6
+- @gestaltjs/info@0.7.6
+- @gestaltjs/routes@0.7.6
+- @gestaltjs/core@0.7.6
+- @gestaltjs/plugins@0.7.6
+
 ## 0.7.5
 
 ### Patch Changes
