@@ -24,6 +24,7 @@ export default abstract class extends Command {
       char: 'e',
       options: ['development', 'production', 'test'],
       env: 'GESTALT_ENV',
+      default: 'development',
       description: 'The environment used with the project.',
       required: false,
     }),
