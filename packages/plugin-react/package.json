@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/gestalt-plugin-react",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "private": false,
   "description": "Gestalt's plugin that to use React as a rendering engine in Gestalt projects",
   "keywords": [
@@ -40,7 +40,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@gestaltjs/plugins": "0.7.4",
+    "@gestaltjs/plugins": "0.7.5",
     "@types/react-dom": "^18.0.2",
     "react": "^18.0.0"
   },

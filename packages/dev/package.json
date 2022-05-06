@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/dev",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "A set of utilities responsible for serving the app",
   "type": "module",
   "files": [
@@ -23,11 +23,11 @@
     ]
   },
   "peerDependencies": {
-    "@gestaltjs/core": "0.7.4",
+    "@gestaltjs/core": "0.7.5",
     "@oclif/core": "1.7.0"
   },
   "devDependencies": {
-    "@gestaltjs/core": "0.7.4",
+    "@gestaltjs/core": "0.7.5",
     "@oclif/core": "1.7.0",
     "h3": "^0.7.4",
     "listhen": "^0.2.10"
