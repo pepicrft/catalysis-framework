@@ -2,15 +2,13 @@ import { loadMainTarget } from './main'
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
-import {
-  glob,
-  dirname,
-  basename,
-  join as pathJoin,
-  relative as relativePath,
-  parse as parsePath,
-} from '../../../path'
+import { dirname, basename, join as pathJoin } from '../../../path'
 import { writeFile, makeDirectory } from '../../../fs'
+import { loadRoutes } from './main/routes'
+import { createRouter } from 'radix3'
+import { Route } from '../../models/target'
+
+vi.mock('./main/routes')
 
 describe('loadMainTarget', () => {
   test('loads the target successfully', async () => {
@@ -20,24 +18,18 @@ describe('loadMainTarget', () => {
       const load = vi.fn()
       const mainTarget = models.testMainTarget()
       const moduleLoader: any = { load }
+      const router = createRouter<Route>()
       load.mockResolvedValue(mainTarget)
-      const aboutFilePath = pathJoin(tmpDir, 'routes/about.jsx')
-      const settingsFilePath = pathJoin(tmpDir, 'routes/settings/index.jsx')
-      await makeDirectory(dirname(aboutFilePath))
-      await makeDirectory(dirname(settingsFilePath))
-      await writeFile(aboutFilePath, '')
-      await writeFile(settingsFilePath, '')
+      vi.mocked(loadRoutes).mockResolvedValue(router)
 
       // When
       const got = await loadMainTarget(manifestPath, moduleLoader)
 
       // Then
-      const aboutRoute = got.router.lookup('/about')
-      expect(aboutRoute?.type).toEqual('ui')
-      expect(aboutRoute?.filePath).toEqual(aboutFilePath)
-      const settingsRoute = got.router.lookup('/settings')
-      expect(settingsRoute?.type).toEqual('ui')
-      expect(settingsRoute?.filePath).toEqual(settingsFilePath)
+      expect(got.manifestPath).toEqual(manifestPath)
+      expect(got.name).toEqual(basename(dirname(manifestPath)))
+      expect(got.directory).toEqual(dirname(manifestPath))
+      expect(got.router).toBe(router)
     })
   })
 })

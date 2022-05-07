@@ -1,19 +1,6 @@
 import { RadixRouter } from 'radix3'
-
+import { Route } from './target/route'
 import type { UserMainTarget, UserSharedTarget } from '../../../shared/target'
-
-/**
- * It represents a target route.
- */
-export type Route = {
-  /** Route type */
-  type: 'ui'
-
-  /**
-   * The path to the file that contains the route.
-   */
-  filePath: string
-}
 
 /**
  * This type augments the interface of UserMainTarget adding properties and functions that are

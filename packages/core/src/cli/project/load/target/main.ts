@@ -1,17 +1,8 @@
 import type { MainTarget } from '../../models/target'
-import {
-  glob,
-  dirname,
-  basename,
-  join as pathJoin,
-  relative as relativePath,
-  parse as parsePath,
-} from '../../../path'
+import { dirname, basename, join as pathJoin } from '../../../path'
 import { ModuleLoader } from '../module-loader'
-import { createRouter } from 'radix3'
+import { loadRoutes } from './main/routes'
 import type { UserMainTarget } from '../../../../shared/target'
-import { Route } from '../../models/target'
-import { RadixRouter } from 'radix3'
 
 /**
  * Loads a main target into memory and returns it.
@@ -31,35 +22,6 @@ export async function loadMainTarget(
     manifestPath,
     name: basename(dirname(manifestPath)),
     directory,
-    router: await loadRoutes(directory),
+    router: await loadRoutes(pathJoin(directory, 'routes')),
   }
-}
-
-/**
- * Loads the routes of a main target.
- * @param directory {string} Path to the target's directory.
- * @returns A promise that resolves with the router.
- */
-async function loadRoutes(directory: string): Promise<RadixRouter<Route>> {
-  const router = createRouter<Route>()
-  const routesDirectory = pathJoin(directory, 'routes')
-  const files = await glob(pathJoin(routesDirectory, '**/*'))
-  files.forEach((routeFilePath) => {
-    const routeFilePathWithoutExtension = pathJoin(
-      dirname(routeFilePath),
-      parsePath(basename(routeFilePath)).name
-    )
-    let urlPath = `/${relativePath(
-      routesDirectory,
-      routeFilePathWithoutExtension
-    )}`
-    if (urlPath.match(/^\/.+\/index$/)) {
-      urlPath = urlPath.replace('/index', '')
-    }
-    if (urlPath.match(/^\/index$/)) {
-      urlPath = urlPath.replace('/index', '/')
-    }
-    router.insert(urlPath, { filePath: routeFilePath, type: 'ui' })
-  })
-  return router
 }
