@@ -76,20 +76,6 @@ type ProcessRouteOptions = {
   directory: string
 }
 
-async function filePathIfExists(options: {
-  filePath: string
-  extensions: string[]
-}): Promise<string | undefined> {
-  const pathsToCheck = options.extensions.map(
-    (extension) => `${options.filePath}.${extension}`
-  )
-  for (let i = 0; i < pathsToCheck.length; i++) {
-    if (await pathExists(pathsToCheck[i])) {
-      return pathsToCheck[i]
-    }
-  }
-}
-
 /**
  * It processes a UI route and registers it in the router.
  * @param options {ProcessRouteOptions} Options to process the route.
@@ -113,6 +99,35 @@ async function processUIRoute(options: ProcessRouteOptions) {
     listModuleFilePath: isStatic ? listModulePath : undefined,
     type: 'ui',
   })
+}
+
+/**
+ * Options for the filePathIfExists method.
+ */
+type FilePathIfExistsOptions = {
+  /** Base file path to create paths from by appending extensions */
+  filePath: string
+  /** Extensions to append to create other paths */
+  extensions: string[]
+}
+
+/**
+ * Creates paths appending extensions and iterates through them returning
+ * the first one that exists.
+ * @param options {FilePathIfExistsOptions} Options
+ * @returns {Promise<string|undefine>} A promise that resolves with either a found path or undefined if no paths exists.
+ */
+async function filePathIfExists(
+  options: FilePathIfExistsOptions
+): Promise<string | undefined> {
+  const pathsToCheck = options.extensions.map(
+    (extension) => `${options.filePath}.${extension}`
+  )
+  for (let i = 0; i < pathsToCheck.length; i++) {
+    if (await pathExists(pathsToCheck[i])) {
+      return pathsToCheck[i]
+    }
+  }
 }
 
 /**
