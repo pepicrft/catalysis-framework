@@ -1,5 +1,5 @@
 import { Command } from '@gestaltjs/core/cli'
-import { loader } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
 import { devProject } from '../services/dev'
 
 // eslint-disable-next-line import/no-default-export
@@ -13,7 +13,7 @@ export default class Dev extends Command {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Dev)
-    const { project } = await loader.load(flags.path)
-    const { onChange } = await devProject(project)
+    const loadedProject = await project.load(flags.path)
+    const { onChange } = await devProject(loadedProject)
   }
 }

@@ -20,7 +20,7 @@ export default class All extends Command {
   }
   async run(): Promise<void> {
     const { flags } = await this.parse(All)
-    const loadedProject = await project.loadProject(flags.path)
+    const loadedProject = await project.load(flags.path)
 
     await checkCode(loadedProject.directory)
     await checkStyle({

@@ -1,29 +1,35 @@
-import { project, terminal } from '@gestaltjs/core/cli'
+import { project as projectModule, terminal } from '@gestaltjs/core/cli'
 import { path } from '@gestaltjs/core/cli'
 
-export function prettyFormat(project: project.Project): string {
+type PrettyFormatOptions = {
+  project: projectModule.models.Project
+}
+
+export function prettyFormat(options: PrettyFormatOptions): string {
   const lines: string[] = []
   lines.push(terminal.formatGreen(terminal.formatBold('Project')))
-  lines.push(`  ${terminal.formatBold('Name:')} ${project.configuration.name}`)
+  lines.push(
+    `  ${terminal.formatBold('Name:')} ${options.project.configuration.name}`
+  )
   lines.push(
     `  ${terminal.formatBold('Directory:')} ${path.relativize(
-      project.directory
+      options.project.directory
     )}`
   )
   lines.push(
     `  ${terminal.formatBold('Manifest:')} ${path.relativize(
-      project.configuration.manifestPath
+      options.project.configuration.manifestPath
     )}`
   )
   lines.push(``)
 
-  const plugins = project.configuration.plugins ?? []
+  const plugins = options.project.configuration.plugins ?? []
   if (plugins.length !== 0) {
     lines.push(terminal.formatGreen(terminal.formatBold('Plugins 🌱')))
   }
 
-  const mainTargets = project.targetsGraph.targets.main
-  const sharedTargets = project.targetsGraph.targets.shared
+  const mainTargets = options.project.targetsGraph.targets.main
+  const sharedTargets = options.project.targetsGraph.targets.shared
   if (
     Object.keys(mainTargets).length !== 0 ||
     Object.keys(mainTargets).length !== 0

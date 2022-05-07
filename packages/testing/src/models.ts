@@ -7,8 +7,8 @@ import { UserMainTarget } from '@gestaltjs/core/shared'
  * @returns A project instance.
  */
 export function testProject(
-  overrides: Partial<project.Project> = {}
-): project.Project {
+  overrides: Partial<project.models.Project> = {}
+): project.models.Project {
   return {
     configuration: {
       manifestPath:
@@ -19,7 +19,7 @@ export function testProject(
     sourcesGlob: overrides?.sourcesGlob ?? 'targets/**/*.ts',
     targetsGraph:
       overrides?.targetsGraph ??
-      new project.TargetsGraph({
+      new project.models.TargetsGraph({
         main: {},
         shared: {},
       }),

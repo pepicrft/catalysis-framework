@@ -1,4 +1,4 @@
-import { Command, loader } from '@gestaltjs/core/cli'
+import { Command, project } from '@gestaltjs/core/cli'
 import { infoLogger } from '../logger'
 import { formatJson } from '../formatters/json'
 import { prettyFormat } from '../formatters/pretty'
@@ -14,11 +14,15 @@ export default class Info extends Command {
 
   async run(): Promise<any> {
     const { flags } = await this.parse(Info)
-    const { project } = await loader.load(flags.path)
+    const loadedProject = await project.load(flags.path)
     if (flags.json) {
-      infoLogger().rawInfo(formatJson(project), { project })
+      infoLogger().rawInfo(formatJson({ project: loadedProject }), {
+        project: loadedProject,
+      })
     } else {
-      infoLogger().rawInfo(prettyFormat(project), { project })
+      infoLogger().rawInfo(prettyFormat({ project: loadedProject }), {
+        project: loadedProject,
+      })
     }
   }
 }

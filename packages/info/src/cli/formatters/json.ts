@@ -1,5 +1,9 @@
 import { project } from '@gestaltjs/core/cli'
 
-export function formatJson(project: project.Project): string {
-  return JSON.stringify(project, null, 2)
+type FormatJsonOptions = {
+  project: project.models.Project
+}
+
+export function formatJson(options: FormatJsonOptions): string {
+  return JSON.stringify(options.project, null, 2)
 }
