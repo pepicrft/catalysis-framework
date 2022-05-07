@@ -6,7 +6,7 @@ import type { UserMainTarget } from '../../../../shared/targets'
 
 /**
  * Loads a main target into memory and returns it.
- * @param manifestPath {string} Path to the gestalt.main.target.{ts,js} file.
+ * @param manifestPath {string} Path to the gestalt.main.{ts,js} file.
  * @param moduleLoader {ModuleLoader} Utility to load and transpile the manifest file.
  * @returns {Promise<MainTarget>} A promise that resolves with the loaded target or rejects with an error if the target is invalid.
  */

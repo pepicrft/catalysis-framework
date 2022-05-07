@@ -14,4 +14,12 @@ export type UserMainTarget = {
    * Platforms supported by the target.
    */
   platforms: UserMainTargetPlatform[]
+
+  /**
+   * The list of the databases the target has access to. Databases are referenced
+   * using their identifier, which is the name of the database's target directory.
+   * For example, the database  targets/databases/main/gestalt.database.ts has the
+   * identifier "main".
+   */
+  databases?: string[]
 }

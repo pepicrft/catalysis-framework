@@ -15,7 +15,7 @@ export type DatabaseTarget = UserDatabaseTarget & {
    */
   directory: string
   /**
-   * A path to the gestalt.main.target.{js,ts} file that describes the project.
+   * A path to the gestalt.main.{js,ts} file that describes the project.
    */
   manifestPath: string
 }

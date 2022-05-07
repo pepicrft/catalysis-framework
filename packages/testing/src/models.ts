@@ -28,5 +28,6 @@ export function testMainTarget(
 ): UserMainTarget {
   return {
     platforms: overrides.platforms ?? ['web'],
+    databases: overrides.databases ?? [],
   }
 }
