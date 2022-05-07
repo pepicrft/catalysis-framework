@@ -1,4 +1,5 @@
-import { UserRenderer } from './renderer'
+import { UserRenderer } from './plugin/renderer'
+import { UserAdapter } from './plugin/adapter'
 
 /**
  * The interface represents a Gestalt plugin. Plugins extend, augment, or replace Gestalt's
@@ -15,4 +16,9 @@ export type UserPlugin = {
    * A renderer integrates Gestalt with UI technologies like React or Svelte.
    */
   renderer?: UserRenderer
+
+  /**
+   * An adapter instructs Gestalt on how to build and output a Gestalt project for distribution.
+   */
+  adapter?: UserAdapter
 }

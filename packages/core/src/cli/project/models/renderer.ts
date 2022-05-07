@@ -2,7 +2,7 @@ import {
   UserRenderer,
   UserServerRenderer,
   UserClientRenderer,
-} from '../../../shared/renderer'
+} from '../../../shared/plugin/renderer'
 
 /**
  * An internal renderer type that includes the
