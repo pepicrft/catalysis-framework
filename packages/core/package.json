@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@types/pino": "7.0.5",
+    "acorn": "^8.7.1",
     "case-anything": "2.1.10",
     "commondir": "^1.0.1",
     "fast-glob": "^3.2.11",
