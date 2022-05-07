@@ -28,8 +28,7 @@ export function prettyFormat(options: PrettyFormatOptions): string {
     lines.push(terminal.formatGreen(terminal.formatBold('Plugins 🌱')))
   }
 
-  const mainTargets = options.project.targetsGraph.targets.main
-  const sharedTargets = options.project.targetsGraph.targets.shared
+  const mainTargets = options.project.targets.main
   if (
     Object.keys(mainTargets).length !== 0 ||
     Object.keys(mainTargets).length !== 0

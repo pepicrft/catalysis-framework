@@ -1,7 +1,7 @@
 import { Project } from '../models/project'
 import { Abort } from '../../error'
 import { dirname, join as pathJoin } from '../../path'
-import { loadTargetsGraph } from './target'
+import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 
@@ -34,12 +34,12 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   const moduleLoader = await getModuleLoader(directory)
   try {
     const configuration = await loadConfig(configurationPath, moduleLoader)
-    const targetsGraph = await loadTargetsGraph(directory, moduleLoader)
+    const targets = await loadTargets(directory, moduleLoader)
     return {
       configuration,
       directory,
       sourcesGlob: pathJoin(directory, `src/**/*.{ts,js}`),
-      targetsGraph,
+      targets,
     }
   } finally {
     await moduleLoader.close()

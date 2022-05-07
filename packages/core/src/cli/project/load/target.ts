@@ -1,14 +1,13 @@
 import { glob, dirname, basename, join as pathJoin } from '../../path'
 import { targetFileName } from '../../constants'
-import { TargetsGraph } from '../models/target'
-import type { SharedTarget } from '../models/target'
+import { Targets } from '../models/target'
 import { loadMainTarget } from './target/main'
 import { ModuleLoader } from './module-loader'
 
-export async function loadTargetsGraph(
+export async function loadTargets(
   projectDirectory: string,
   moduleLoader: ModuleLoader
-): Promise<TargetsGraph> {
+): Promise<Targets> {
   const globPatterns = (directory: string) =>
     ['ts', 'js'].map((extension) =>
       pathJoin(
@@ -33,25 +32,7 @@ export async function loadTargetsGraph(
       )
     ).map((target) => [target.name, target])
   )
-  const sharedTargetsList = Object.fromEntries(
-    (
-      await Promise.all(
-        sharedTargetPaths.map((manifestPath) => loadSharedTarget(manifestPath))
-      )
-    ).map((target) => [target.name, target])
-  )
-
-  return new TargetsGraph({
-    main: mainTargetsList,
-    shared: sharedTargetsList,
-  })
-}
-
-async function loadSharedTarget(manifestPath: string): Promise<SharedTarget> {
   return {
-    manifestPath,
-    name: basename(manifestPath),
-    directory: dirname(manifestPath),
-    shared: '',
+    main: mainTargetsList,
   }
 }

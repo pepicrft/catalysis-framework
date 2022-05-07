@@ -17,12 +17,9 @@ export function testProject(
     },
     directory: overrides?.directory ?? '/test/project',
     sourcesGlob: overrides?.sourcesGlob ?? 'targets/**/*.ts',
-    targetsGraph:
-      overrides?.targetsGraph ??
-      new project.models.TargetsGraph({
-        main: {},
-        shared: {},
-      }),
+    targets: overrides?.targets ?? {
+      main: {},
+    },
   }
 }
 

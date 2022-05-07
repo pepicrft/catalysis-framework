@@ -6,7 +6,7 @@ import { dirname, basename, join as pathJoin } from '../../../path'
 import { writeFile, makeDirectory } from '../../../fs'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
-import { Route } from '../../models/target'
+import { Route } from '../../models/target/route'
 
 vi.mock('./main/routes')
 

@@ -1,5 +1,5 @@
 import type { Configuration } from './configuration'
-import { TargetsGraph } from './target'
+import { Targets } from './target'
 
 /**
  * Interface that represents a Gestalt project.
@@ -14,6 +14,6 @@ export interface Project {
   /** Application sources glob */
   sourcesGlob: string
 
-  /** The graph representing the targets of the project */
-  targetsGraph: TargetsGraph
+  /** The targets of the project */
+  targets: Targets
 }

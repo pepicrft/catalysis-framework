@@ -1,5 +1,4 @@
-import { Project } from '../models/project'
-import { loadTargetsGraph } from './target'
+import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 import { describe, test, expect, vi } from 'vitest'
@@ -35,7 +34,7 @@ describe('loadProject', () => {
     const project = models.testProject()
     vi.mocked(getModuleLoader).mockResolvedValue(moduleLoader)
     vi.mocked(loadConfig).mockResolvedValue(project.configuration)
-    vi.mocked(loadTargetsGraph).mockResolvedValue(project.targetsGraph)
+    vi.mocked(loadTargets).mockResolvedValue(project.targets)
 
     // When
     const got = await loadProject(fromDirectory)
@@ -44,7 +43,7 @@ describe('loadProject', () => {
     expect(close).toHaveBeenCalled()
     expect(got.configuration).toEqual(project.configuration)
     expect(got.directory).toEqual(fromDirectory)
-    expect(got.targetsGraph).toEqual(project.targetsGraph)
+    expect(got.targets).toEqual(project.targets)
     expect(got.sourcesGlob).toEqual(pathJoin(fromDirectory, 'src/**/*.{ts,js}'))
   })
 })
