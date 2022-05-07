@@ -97,7 +97,7 @@ export const handler = async (error: Error): Promise<Error> => {
   } else {
     errorType = 'unhandled'
   }
-  message = `\n${message}\n${error.message}\n`
+  message = `${message}\n${error.message}\n`
 
   if (cause) {
     message = `${message}\n${formatBold(formatRed('Cause 🔍'))}\n`
@@ -109,7 +109,7 @@ export const handler = async (error: Error): Promise<Error> => {
     message = `${message}${next}\n`
   }
 
-  if (error.stack) {
+  if (error.stack && errorType === 'bug') {
     let stack = await new StackTracey(error).withSourcesAsync()
     stack = stack
       .filter((entry) => {
