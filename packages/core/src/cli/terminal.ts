@@ -1,6 +1,9 @@
 import pc from 'picocolors'
 import terminalLink from 'terminal-link'
 
+export * as listr from 'listr2'
+export { prompt } from 'enquirer'
+
 /**
  * Formats a string to be bold when presented
  * in a terminal.
