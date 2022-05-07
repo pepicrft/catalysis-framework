@@ -48,7 +48,9 @@ const configuration = async () => {
     ...(await runtime('support')),
     ...(await runtime('configuration')),
     ...(await runtime('target')),
+    ...(await runtime('db')),
   ]
 }
 
+// eslint-disable-next-line import/no-default-export
 export default configuration
