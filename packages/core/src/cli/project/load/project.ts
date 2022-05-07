@@ -5,6 +5,7 @@ import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 import { fileToken, content } from '../../logger'
+import { validateProject } from '../validate/project'
 
 /**
  * Error thrown when we can't find a directory containing a Gestalt configuration file.
@@ -38,12 +39,14 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   try {
     const configuration = await loadConfig(configurationPath, moduleLoader)
     const targets = await loadTargets(directory, moduleLoader)
-    return {
+    const project = {
       configuration,
       directory,
       sourcesGlob: pathJoin(directory, `src/**/*.{ts,js}`),
       targets,
     }
+    await validateProject(project)
+    return project
   } finally {
     await moduleLoader.close()
   }

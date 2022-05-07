@@ -5,10 +5,12 @@ import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project'
 import { models } from '@gestaltjs/testing'
 import { join as pathJoin } from '../../path'
+import { validateProject } from '../validate/project'
 
 vi.mock('./config')
 vi.mock('./module-loader')
 vi.mock('./target')
+vi.mock('../validate/project')
 
 describe('loadProject', () => {
   test("throws an error when a configuration can't be found", async () => {
@@ -44,6 +46,7 @@ describe('loadProject', () => {
     expect(got.configuration).toEqual(project.configuration)
     expect(got.directory).toEqual(fromDirectory)
     expect(got.targets).toEqual(project.targets)
+    expect(validateProject).toHaveBeenCalledWith(got)
     expect(got.sourcesGlob).toEqual(pathJoin(fromDirectory, 'src/**/*.{ts,js}'))
   })
 })
