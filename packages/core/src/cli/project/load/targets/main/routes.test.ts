@@ -4,7 +4,7 @@ import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
 import { dirname, join as pathJoin } from '../../../../path'
 import { writeFile, makeDirectory } from '../../../../fs'
-import { Route } from '../../../models/target/route'
+import { Route } from '../../../models/targets/main/route'
 
 describe('loadRoutes', () => {
   test('loads the routes', async () => {

@@ -1,7 +1,7 @@
-import { glob, dirname, basename, join as pathJoin } from '../../path'
-import { targetFileName } from '../../constants'
-import { Targets } from '../models/target'
-import { loadMainTarget } from './target/main'
+import { glob, join as pathJoin } from '../../path'
+import { mainTargetFileName } from '../../constants'
+import { Targets } from '../models/targets'
+import { loadMainTarget } from './targets/main'
 import { ModuleLoader } from './module-loader'
 
 export async function loadTargets(
@@ -12,7 +12,7 @@ export async function loadTargets(
     ['ts', 'js'].map((extension) =>
       pathJoin(
         projectDirectory,
-        `targets/${directory}/*/${targetFileName}.${extension}`
+        `targets/${directory}/*/${mainTargetFileName}.${extension}`
       )
     )
   const mainTargetPaths = await glob(globPatterns('main'), {

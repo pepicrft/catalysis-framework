@@ -1,5 +1,5 @@
 import type { Configuration } from './configuration'
-import { Targets } from './target'
+import { Targets } from './targets'
 
 /**
  * Interface that represents a Gestalt project.

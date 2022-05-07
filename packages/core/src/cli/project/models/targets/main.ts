@@ -1,6 +1,6 @@
 import { RadixRouter } from 'radix3'
-import { Route } from './target/route'
-import type { UserMainTarget } from '../../../shared/target'
+import { Route } from './main/route'
+import type { UserMainTarget } from '../../../../shared/targets'
 
 /**
  * This type augments the interface of UserMainTarget adding properties and functions that are
@@ -17,15 +17,10 @@ export type MainTarget = UserMainTarget & {
    */
   directory: string
   /**
-   * A path to the gestalt.target.{js,ts} file that describes the project.
+   * A path to the gestalt.main.target.{js,ts} file that describes the project.
    */
   manifestPath: string
 
   /** A router instance that contains all the routes of the target */
   router: RadixRouter<Route>
-}
-
-export type Targets = {
-  /** Main targets. Deliverables like a web or a desktop app. */
-  main: { [key: string]: MainTarget }
 }

@@ -6,7 +6,7 @@ import { dirname, basename, join as pathJoin } from '../../../path'
 import { writeFile, makeDirectory } from '../../../fs'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
-import { Route } from '../../models/target/route'
+import { Route } from '../../models/targets/main/route'
 
 vi.mock('./main/routes')
 
@@ -14,7 +14,7 @@ describe('loadMainTarget', () => {
   test('loads the target successfully', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const manifestPath = pathJoin(tmpDir, 'gestalt.target.js')
+      const manifestPath = pathJoin(tmpDir, 'gestalt.main.target.js')
       const load = vi.fn()
       const mainTarget = models.testMainTarget()
       const moduleLoader: any = { load }
