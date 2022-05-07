@@ -8,10 +8,10 @@ import {
   formatYellow,
   formatCyan,
 } from '../terminal'
-import { pascalCase } from '../string'
+import { pascalCased } from '../string'
 
 function formatLevel(level: string): string {
-  let outputLevel = pascalCase(level)
+  let outputLevel = pascalCased(level)
   if (level === 'fatal' || level === 'error') {
     outputLevel = formatRed(outputLevel)
   } else if (level === 'silent') {

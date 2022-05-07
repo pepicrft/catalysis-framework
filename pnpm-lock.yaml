@@ -165,6 +165,7 @@ importers:
       pino: ^7.8.0
       pino-abstract-transport: ^0.5.0
       pino-pretty: ^7.5.1
+      plur: ^5.1.0
       radix3: ^0.1.1
       rehype-parse: ^8.0.4
       rehype-stringify: ^9.0.3
@@ -179,6 +180,7 @@ importers:
       pino: 7.10.0
       pino-abstract-transport: 0.5.0
       pino-pretty: 7.6.1
+      plur: 5.1.0
       source-map-support: 0.5.21
       stacktracey: 2.1.8
       vite: 2.9.8
@@ -5175,6 +5177,11 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
+  /irregular-plurals/3.3.0:
+    resolution: {integrity: sha512-MVBLKUTangM3EfRPFROhmWQQKRDsrgI83J8GS3jXy+OwYqiR2/aoWndYQ5416jLE3uaGgLH7ncme3X9y09gZ3g==}
+    engines: {node: '>=8'}
+    dev: false
+
   /is-arrayish/0.2.1:
     resolution: {integrity: sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=}
     dev: true
@@ -6834,6 +6841,13 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: true
+
+  /plur/5.1.0:
+    resolution: {integrity: sha512-VP/72JeXqak2KiOzjgKtQen5y3IZHn+9GOuLDafPv0eXa47xq0At93XahYBs26MsifCQ4enGKwbjBTKgb9QJXg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      irregular-plurals: 3.3.0
+    dev: false
 
   /postcss/8.4.12:
     resolution: {integrity: sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==}
