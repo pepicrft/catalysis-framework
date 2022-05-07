@@ -26,6 +26,12 @@ export function prettyFormat(options: PrettyFormatOptions): string {
   const plugins = options.project.configuration.plugins ?? []
   if (plugins.length !== 0) {
     lines.push(terminal.formatGreen(terminal.formatBold('Plugins 🌱')))
+    plugins.forEach((plugin) => {
+      lines.push(
+        `  ${terminal.formatBold(`${plugin.name}:`)}: ${plugin.description}`
+      )
+    })
+    lines.push('')
   }
 
   const mainTargets = options.project.targets.main
