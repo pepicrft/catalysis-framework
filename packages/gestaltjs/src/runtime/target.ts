@@ -1,4 +1,5 @@
 import { UserMainTarget } from '@gestaltjs/core/shared'
+export { useContext } from '@gestaltjs/core/shared'
 
 export { UserMainTarget }
 

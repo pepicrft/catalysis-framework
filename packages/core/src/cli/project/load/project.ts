@@ -6,6 +6,7 @@ import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 import { fileToken, content } from '../../logger'
 import { validateProject } from '../validate/project'
+import { setContext } from '../../../shared/context'
 
 /**
  * Error thrown when we can't find a directory containing a Gestalt configuration file.
