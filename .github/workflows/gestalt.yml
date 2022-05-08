@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: npx nx run-many --target=build --all --parallel=3
       - name: Test
-        run: npx nx run-many --target=test:ci --all --parallel=3
+        run: npx nx run-many --target=test --all --parallel=3
       - name: Lint
         run: npx nx run-many --target=lint --all --parallel=3
       - name: Type-check
@@ -81,7 +81,7 @@ jobs:
       - name: Build
         run: npx nx run-many --target=build --all --parallel=3
       - name: Test
-        run: npx nx run-many --target=test:ci --all --all --parallel=3
+        run: npx nx run-many --target=test --all --all --parallel=3
       - name: Lint
         run: npx nx run-many --target=lint --all --parallel=3
       - name: Type-check

@@ -10,11 +10,6 @@ const common = [
   '--format progress',
   '--format @cucumber/pretty-formatter',
 ]
-if (isCI) {
-  common.push(
-    '--format node_modules/cucumber-junit-formatter:/tmp/artifacts/acceptance.junit'
-  )
-}
 if (featureToRun) {
   common.push(featureToRun)
 } else {

@@ -27,7 +27,6 @@
     "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=./junit-core.xml",
     "tsc": "tsc && echo"
   },
   "eslintConfig": {
@@ -41,7 +40,8 @@
   },
   "devDependencies": {
     "@gestaltjs/plugins": "0.7.7",
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vite": "2.9.8"
   },
   "peerDependencies": {
     "vue": "^3.2.33"
