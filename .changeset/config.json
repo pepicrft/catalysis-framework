@@ -19,7 +19,8 @@
       "@gestaltjs/plugins",
       "@gestaltjs/gestalt-plugin-vue",
       "@gestaltjs/gestalt-plugin-react",
-      "@gestaltjs/gestalt-plugin-svelte"
+      "@gestaltjs/gestalt-plugin-svelte",
+      "@gestaltjs/gestalt-plugin-netlify"
     ]
   ],
   "access": "public",

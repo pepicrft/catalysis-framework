@@ -12,7 +12,8 @@
         "@gestaltjs/core/shared": ["../packages/core/src/shared/index.ts"],
         "@gestaltjs/core/runtime": ["../packages/core/src/runtime/index.ts"],
         "@gestaltjs/core/cli": ["../packages/core/src/cli/index.ts"],
-        "@gestaltjs/gestalt-plugin-react": ["../packages/plugin-react/src/gestalt.plugin.ts"]
+        "@gestaltjs/gestalt-plugin-react": ["../packages/plugin-react/src/gestalt.plugin.ts"],
+        "@gestaltjs/gestalt-plugin-netlify": ["../packages/plugin-netlify/src/gestalt.plugin.ts"]
       }
     }
 }
