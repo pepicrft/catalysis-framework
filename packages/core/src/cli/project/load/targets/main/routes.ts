@@ -26,12 +26,7 @@ export async function loadRoutes(
     uiRouteFilePaths.map(async (filePath) => {
       await processUIRoute({
         filePath,
-        /**
-         * It returns the route file path with the extensions stripped.
-         * @param filePath {string} The path to the route file.
-         * @returns
-         */
-        filePathWithoutExtensions: getUIRouteFilePathWithoutExtension(filePath),
+        filePathWithoutExtensions: getFilePathWithoutExtension(filePath),
         router,
         directory,
       })
@@ -59,7 +54,7 @@ async function getUIRouteFilePaths(directory: string): Promise<string[]> {
 /**
  * Options to process routes
  */
-type ProcessRouteOptions = {
+type ProcessRouteFileOptions = {
   /** The path to the file representing the route */
   filePath: string
 
@@ -78,10 +73,10 @@ type ProcessRouteOptions = {
 
 /**
  * It processes a UI route and registers it in the router.
- * @param options {ProcessRouteOptions} Options to process the route.
+ * @param options {ProcessRouteFileOptions} Options to process the route.
  */
-async function processUIRoute(options: ProcessRouteOptions) {
-  const urlPath = getUrlPath(options)
+async function processUIRoute(options: ProcessRouteFileOptions) {
+  const urlPath = getUIRouteURLPath(options)
   const isStatic = options.filePath.includes('.static')
   const getModulePath = await filePathIfExists({
     filePath: options.filePathWithoutExtensions,
@@ -131,11 +126,11 @@ async function filePathIfExists(
 }
 
 /**
- * It returns the route file path with the extensions stripped.
- * @param filePath {string} The path to the route file.
- * @returns {string} The route file path without the extensions.
+ * It returns the file path with the extensions stripped.
+ * @param filePath {string} The path to the file.
+ * @returns {string} The file path without the extensions.
  */
-function getUIRouteFilePathWithoutExtension(filePath: string): string {
+function getFilePathWithoutExtension(filePath: string): string {
   return pathJoin(dirname(filePath), parsePath(basename(filePath)).name)
     .replace('.ui.static', '')
     .replace('.ui', '')
@@ -143,10 +138,10 @@ function getUIRouteFilePathWithoutExtension(filePath: string): string {
 
 /**
  * The function returns the path to register the route in the router.
- * @param options {ProcessRouteOptions} Route processing options.
+ * @param options {ProcessRouteFileOptions} Route processing options.
  * @returns {string} The path to register a route in the router.
  */
-function getUrlPath(options: ProcessRouteOptions): string {
+function getUIRouteURLPath(options: ProcessRouteFileOptions): string {
   let urlPath = `/${relativePath(
     options.directory,
     options.filePathWithoutExtensions

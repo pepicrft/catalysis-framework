@@ -23,4 +23,19 @@ export type MainTarget = UserMainTarget & {
 
   /** A router instance that contains all the routes of the target */
   router: RadixRouter<Route>
+
+  /**
+   * An object containing the layouts of the project. The key represents
+   * the URL path of the layout, and the value the path to the file module
+   * in the system. For example:
+   *
+   * routes/
+   *   posts/
+   *     _layout.jsx
+   *     [post].ui.jsx
+   *
+   * Key: /posts
+   * Value: /{target-path}/routes/posts/_layout.jsx
+   */
+  layouts: { [key: string]: string }
 }

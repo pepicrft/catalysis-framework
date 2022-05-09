@@ -15,6 +15,7 @@ describe('loadRoutes', () => {
       load.mockResolvedValue(mainTarget)
       const aboutUIFilePath = pathJoin(tmpDir, 'about.ui.static.jsx')
       const settingsUIFilePath = pathJoin(tmpDir, 'settings/index.ui.jsx')
+      const postsLayoutFile = pathJoin(tmpDir, 'posts/_layout.jsx')
       const postUIFilePath = pathJoin(tmpDir, 'posts/[post].ui.static.jsx')
       const postListFilePath = pathJoin(tmpDir, 'posts/[post].list.ts')
       const postGetFilePath = pathJoin(tmpDir, 'posts/[post].get.js')
@@ -25,6 +26,7 @@ describe('loadRoutes', () => {
 
       await writeFile(aboutUIFilePath, '')
       await writeFile(settingsUIFilePath, '')
+      await writeFile(postsLayoutFile, '')
       await writeFile(postUIFilePath, '')
       await writeFile(postListFilePath, '')
       await writeFile(postGetFilePath, '')
@@ -50,7 +52,7 @@ describe('loadRoutes', () => {
         expect(settingsRoute?.rendering).toEqual('dynamic')
       }
 
-      // Then: Post (static page with data)
+      // Then: Posts Layout (static page with data)
       const postRoute = got.lookup('/posts/1') as Route | undefined
       expect(postRoute?.type).toEqual('ui')
       if (postRoute?.type === 'ui') {
