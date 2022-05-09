@@ -11,6 +11,7 @@
       "@gestaltjs/build",
       "@gestaltjs/check",
       "@gestaltjs/db",
+      "@gestaltjs/generate",
       "@gestaltjs/dev",
       "@gestaltjs/test",
       "@gestaltjs/info",

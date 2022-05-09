@@ -253,6 +253,14 @@ importers:
       eslint: 8.15.0
       typescript: 4.6.4
 
+  packages/generate:
+    specifiers:
+      '@gestaltjs/core': 0.7.7
+      '@oclif/core': 1.8.0
+    devDependencies:
+      '@gestaltjs/core': link:../core
+      '@oclif/core': 1.8.0
+
   packages/gestaltjs:
     specifiers:
       '@gestaltjs/build': 0.7.7
@@ -260,6 +268,7 @@ importers:
       '@gestaltjs/core': 0.7.7
       '@gestaltjs/db': 0.7.7
       '@gestaltjs/dev': 0.7.7
+      '@gestaltjs/generate': 0.7.7
       '@gestaltjs/info': 0.7.7
       '@gestaltjs/plugins': 0.7.7
       '@gestaltjs/routes': 0.7.7
@@ -272,6 +281,7 @@ importers:
       '@gestaltjs/core': link:../core
       '@gestaltjs/db': link:../db
       '@gestaltjs/dev': link:../dev
+      '@gestaltjs/generate': link:../generate
       '@gestaltjs/info': link:../info
       '@gestaltjs/plugins': link:../plugins
       '@gestaltjs/routes': link:../routes

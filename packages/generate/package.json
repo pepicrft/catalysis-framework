@@ -1,0 +1,49 @@
+{
+  "name": "@gestaltjs/generate",
+  "version": "0.7.7",
+  "description": "Commands for generating code in Gestalt projects",
+  "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "prepack": "pnpm run build",
+    "build": "pnpm clean && rollup -c ./rollup.config.js",
+    "lint": "prettier -c src/** && eslint 'src/**/*.ts'",
+    "lint:fix": "prettier -w src/** && eslint 'src/**/*.ts' --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tsc": "tsc && echo"
+  },
+  "eslintConfig": {
+    "extends": [
+      "../../.eslintrc.cjs"
+    ]
+  },
+  "peerDependencies": {
+    "@gestaltjs/core": "0.7.7",
+    "@oclif/core": "1.8.0"
+  },
+  "devDependencies": {
+    "@gestaltjs/core": "0.7.7",
+    "@oclif/core": "1.8.0"
+  },
+  "oclif": {
+    "commands": "./dist/cli/commands",
+    "topics": {
+      "generate": {
+        "description": "Generate code in Gestalt projects."
+      }
+    }
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0 || >=17.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
