@@ -83,7 +83,7 @@ export class Abort extends Error {
 
 export const handler = async (error: Error): Promise<Error> => {
   let errorType: ErrorLogType
-  let message = formatBold(formatRed('WHAT HAPPENED'))
+  let message = formatBold(formatRed('ERROR'))
   let cause: string | undefined
   let next: string | undefined
 

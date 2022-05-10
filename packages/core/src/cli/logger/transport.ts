@@ -56,7 +56,7 @@ const baseTransport = (options: pino.TransportBaseOptions) => {
         return message
       } else if (level) {
         const levelLabel = formatLevel(`${level}`)
-        const prefix = `${levelLabel} ${module}:`
+        const prefix = ``
         return message
           .split('\n')
           .map((line) => {
