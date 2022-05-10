@@ -71,6 +71,7 @@ export const external = async (packageDir) => {
     /@gestaltjs\/core/,
     /@gestaltjs\/plugins/,
     /source-map-support/,
+    /electron/,
     ...Object.keys(packageJson.dependencies ?? {}),
     ...Object.keys(packageJson.peerDependencies ?? {}),
   ]
