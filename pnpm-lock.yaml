@@ -129,18 +129,18 @@ importers:
   packages/build:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/check:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/core:
     specifiers:
@@ -210,36 +210,36 @@ importers:
   packages/create-plugin:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/create-project:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/db:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/dev:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
       h3: ^0.7.4
       listhen: ^0.2.10
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
       h3: 0.7.4
       listhen: 0.2.10
 
@@ -258,10 +258,10 @@ importers:
   packages/generate:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/gestaltjs:
     specifiers:
@@ -294,10 +294,10 @@ importers:
   packages/info:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/plugin-netlify:
     specifiers:
@@ -349,18 +349,18 @@ importers:
   packages/plugins:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/routes:
     specifiers:
       '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.8.0
+      '@oclif/core': 1.8.1
 
   packages/test:
     specifiers:
@@ -1814,8 +1814,8 @@ packages:
       widest-line: 3.1.0
       wrap-ansi: 7.0.0
 
-  /@oclif/core/1.8.0:
-    resolution: {integrity: sha512-XAaqkacs4JiCOKWAX43jhuWcs7IdVMQaYWkeRiD8wan/wlmd7/WlvTFzpNeLOwylbty7uwiPQOFVYHdKj6UPvQ==}
+  /@oclif/core/1.8.1:
+    resolution: {integrity: sha512-6pNQnkL2Uk9SbRUb12BFminLPhrPab1euNzVl1eh+Q7+X8+JGMw8vgKUfQRlGZesmcd+8fByQMZBaoOAEozJsw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@oclif/linewrap': 1.0.0
