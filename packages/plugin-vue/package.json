@@ -41,7 +41,7 @@
   "devDependencies": {
     "@gestaltjs/plugins": "0.7.7",
     "vue": "^3.2.33",
-    "vite": "2.9.8"
+    "vite": "2.9.9"
   },
   "peerDependencies": {
     "vue": "^3.2.33"
