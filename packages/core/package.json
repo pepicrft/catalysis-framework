@@ -63,7 +63,7 @@
     "plur": "^5.1.0",
     "source-map-support": "^0.5.21",
     "stacktracey": "^2.1.8",
-    "vite": "2.9.8"
+    "vite": "2.9.9"
   },
   "devDependencies": {
     "electron": "^18.2.0",
