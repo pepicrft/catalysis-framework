@@ -1,8 +1,8 @@
 import type { PluginOption } from 'vite'
-import { Program as ESTreeProgram } from 'estree'
+import { Program } from 'estree'
 import { SourceMap } from 'magic-string'
 
-export type ESTree = ESTreeProgram
+export type ESTreeProgram = Program
 
 /**
  * Renderer plugins are hooked into Gestalt by leveraging Rollup plugins and virtual modules.
@@ -15,7 +15,7 @@ export type RendererOutputModule =
   | {
       code: string
       map?: string | SourceMap
-      ast?: ESTreeProgram
+      ast?: Program
       moduleSideEffects?: boolean | 'no-treeshake' | null
       syntheticNamedExports?: boolean | string | null
       meta?: { [plugin: string]: any } | null

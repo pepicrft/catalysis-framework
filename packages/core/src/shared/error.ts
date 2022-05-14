@@ -1,6 +1,6 @@
-import { coreLogger, stringify } from './logger'
-import type { ErrorLogType, LoggerMessage } from './logger'
-import { formatYellow, formatRed, formatBold } from './terminal'
+import { coreLogger, stringify } from '../cli/logger'
+import type { ErrorLogType, LoggerMessage } from '../cli/logger'
+import { formatYellow, formatRed, formatBold } from '../cli/terminal'
 import StackTracey from 'stacktracey'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -23,7 +23,7 @@ type ErrorOptions = {
  * It defines the interface of the options
  * object a bug error is initialized with.
  */
-type BugOptions = Omit<ErrorOptions, 'cause'>
+type BugOptions = Partial<ErrorOptions, 'cause'>
 
 /**
  * A bug error is an error that represents that represents
@@ -89,7 +89,7 @@ export const handler = async (error: Error): Promise<Error> => {
 
   if (error instanceof Bug) {
     errorType = 'bug'
-    cause = undefined
+    cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
   } else if (error instanceof Abort) {
     errorType = 'abort'
     cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined

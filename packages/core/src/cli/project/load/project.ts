@@ -1,12 +1,11 @@
 import { Project } from '../models/project'
-import { Abort } from '../../error'
+import { Abort } from '../../../shared/error'
 import { dirname, join as pathJoin } from '../../path'
 import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 import { fileToken, content } from '../../logger'
 import { validateProject } from '../validate/project'
-import { setContext } from '../../../shared/context'
 
 /**
  * Error thrown when we can't find a directory containing a Gestalt configuration file.

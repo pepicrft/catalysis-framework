@@ -1,4 +1,4 @@
-import { Abort } from './error'
+import { Abort } from '../shared/error'
 import { exec } from './system'
 import { findUp, dirname } from './path'
 import { fileURLToPath } from 'url'

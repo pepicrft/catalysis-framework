@@ -1,4 +1,4 @@
-import { definePlugin } from '@gestaltjs/plugins'
+import { plugins, error } from '@gestaltjs/plugins'
 import react from '@vitejs/plugin-react'
 import { clientRenderer } from './renderer/client'
 import { serverRenderer } from './renderer/server'
@@ -9,7 +9,7 @@ type ReactPluginOptions = {
 }
 
 // eslint-disable-next-line import/no-default-export
-const plugin = definePlugin((options: ReactPluginOptions = {}) => {
+const plugin = plugins.define((options: ReactPluginOptions = {}) => {
   return {
     name: 'react',
     description:
@@ -24,7 +24,15 @@ const plugin = definePlugin((options: ReactPluginOptions = {}) => {
           cwd: 'x',
           type: 'file',
         })
-        return [{ find: 'react-dom', replacement: '...' }]
+        if (!reactDomModule) {
+          throw new error.Bug(
+            `The plugin @gestaltjs/gestalt-plugin-react couldn't locate the module react-dome necessary for rendering.`,
+            {
+              cause: `The package react-dom might be missing under @gestaltjs/gestalt-plugin-react/node_modules, the dependency might have got removed by mistake, or the exported module is no longer ./index.js.`,
+            }
+          )
+        }
+        return [{ find: 'react-dom', replacement: reactDomModule }]
       },
     },
   }

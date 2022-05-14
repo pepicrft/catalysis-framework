@@ -1,6 +1,6 @@
 export * as path from './path'
 export * as system from './system'
-export * as error from './error'
+export * as error from '../shared/error'
 export * as logger from './logger'
 export * as server from './server'
 export * as cli from './cli'

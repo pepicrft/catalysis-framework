@@ -18,6 +18,6 @@ type PluginExport = <T>(options: T) => UserPlugin | Promise<UserPlugin>
  * @param plugin {<T>(options: T) => UserPlugin} Define a new plugin.
  * @returns A promise that resolves with the plugin.
  */
-export function definePlugin(plugin: PluginExport): PluginExport {
+export function define(plugin: PluginExport): PluginExport {
   return plugin
 }
