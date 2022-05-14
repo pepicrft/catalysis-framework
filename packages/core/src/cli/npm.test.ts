@@ -1,6 +1,6 @@
-import { addDependencies } from './npm'
+import { addDependencies, inferDependencyManager } from './npm'
 import { join as pathJoin } from './path'
-import { writeFile } from './fs'
+import { writeFile, makeDirectory } from './fs'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
 import { temporary } from '@gestaltjs/testing'
@@ -189,6 +189,54 @@ describe('addDependencies', () => {
         stderr: undefined,
         signal: undefined,
       })
+    })
+  })
+})
+
+describe('inferDependencyManager', () => {
+  test('returns yarn when it finds a yarn.lock', async () => {
+    await temporary.directory(async (tmpDir) => {
+      // Given
+      const lockfilePath = pathJoin(tmpDir, 'yarn.lock')
+      const nestedDirectory = pathJoin(tmpDir, 'a/b/c')
+      await makeDirectory(nestedDirectory)
+      await writeFile(lockfilePath, '')
+
+      // When
+      const got = await inferDependencyManager(nestedDirectory)
+
+      // Then
+      expect(got).toEqual('yarn')
+    })
+  })
+
+  test('returns pnpm when it finds a pnpm-lock.yaml', async () => {
+    await temporary.directory(async (tmpDir) => {
+      // Given
+      const lockfilePath = pathJoin(tmpDir, 'pnpm-lock.yaml')
+      const nestedDirectory = pathJoin(tmpDir, 'a/b/c')
+      await makeDirectory(nestedDirectory)
+      await writeFile(lockfilePath, '')
+
+      // When
+      const got = await inferDependencyManager(nestedDirectory)
+
+      // Then
+      expect(got).toEqual('pnpm')
+    })
+  })
+
+  test('returns npm by default', async () => {
+    await temporary.directory(async (tmpDir) => {
+      // Given
+      const nestedDirectory = pathJoin(tmpDir, 'a/b/c')
+      await makeDirectory(nestedDirectory)
+
+      // When
+      const got = await inferDependencyManager(nestedDirectory)
+
+      // Then
+      expect(got).toEqual('npm')
     })
   })
 })

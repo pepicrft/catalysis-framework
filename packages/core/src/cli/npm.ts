@@ -1,5 +1,5 @@
 import { Bug } from './error'
-import { join as pathJoin } from './path'
+import { join as pathJoin, findUp } from './path'
 import { pathExists } from './fs'
 import { content, fileToken } from './logger'
 import { WriteStream } from 'fs-extra'
@@ -45,7 +45,7 @@ type AddDependencyOptions = {
   /**
    * The name of the dependencies to add.
    */
-  dependencies: string
+  dependencies: string[]
 
   /**
    * The dependency manager to use to add the dependencies.
@@ -137,4 +137,32 @@ export async function addDependencies(options: AddDependencyOptions) {
     stdout: options.stdout,
     signal: options.abortSignal,
   })
+}
+
+/**
+ * Given a directory, it traverses up the directory structure
+ * it finds a lockfile that indicates the dependency manager
+ * being used. If no lockfile is found, npm is returned as the
+ * dependency manager.
+ * @param fromDirectory {string}
+ * @returns
+ */
+export async function inferDependencyManager(
+  fromDirectory: string
+): Promise<DependencyManager> {
+  const yarnLockPath = await findUp('yarn.lock', {
+    cwd: fromDirectory,
+    type: 'file',
+  })
+  if (yarnLockPath) {
+    return 'yarn'
+  }
+  const pnpmLockPath = await findUp('pnpm-lock.yaml', {
+    cwd: fromDirectory,
+    type: 'file',
+  })
+  if (pnpmLockPath) {
+    return 'pnpm'
+  }
+  return 'npm'
 }
