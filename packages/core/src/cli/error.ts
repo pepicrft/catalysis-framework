@@ -89,7 +89,7 @@ export const handler = async (error: Error): Promise<Error> => {
 
   if (error instanceof Bug) {
     errorType = 'bug'
-    cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
+    cause = undefined
   } else if (error instanceof Abort) {
     errorType = 'abort'
     cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
