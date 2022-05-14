@@ -23,7 +23,7 @@ type ErrorOptions = {
  * It defines the interface of the options
  * object a bug error is initialized with.
  */
-type BugOptions = ErrorOptions
+type BugOptions = Omit<ErrorOptions, 'cause'>
 
 /**
  * A bug error is an error that represents that represents

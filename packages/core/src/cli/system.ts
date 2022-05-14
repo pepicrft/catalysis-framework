@@ -1,9 +1,7 @@
 // execa
 import { execa } from 'execa'
-export type ExecOptions = {
-  cwd?: string
-  stdio?: 'inherit'
-}
+
+export type ExecOptions = Parameters<typeof execa>[1]
 
 export async function exec(
   command: string,
