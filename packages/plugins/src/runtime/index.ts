@@ -1,5 +1,9 @@
-export type { UserPlugin as Plugin } from '@gestaltjs/core/shared'
-export type { UserServerRenderer as ServerRenderer } from '@gestaltjs/core/shared'
-export type { UserClientRenderer as ClientRenderer } from '@gestaltjs/core/shared'
+export type {
+  UserPlugin as Plugin,
+  ESTree,
+  UserServerRenderer as ServerRenderer,
+  UserClientRenderer as ClientRenderer,
+  useContext,
+} from '@gestaltjs/core/shared'
+
 export { definePlugin } from './define/plugin'
-export { useContext } from '@gestaltjs/core/shared'

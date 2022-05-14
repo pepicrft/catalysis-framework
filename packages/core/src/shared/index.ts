@@ -6,4 +6,5 @@ export type {
   UserRenderer,
   UserServerRenderer,
   UserClientRenderer,
+  ESTree,
 } from './plugin/renderer'

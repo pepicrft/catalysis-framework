@@ -2,12 +2,14 @@ import type { PluginOption } from 'vite'
 import { Program as ESTreeProgram } from 'estree'
 import { SourceMap } from 'magic-string'
 
+export type ESTree = ESTreeProgram
+
 /**
  * Renderer plugins are hooked into Gestalt by leveraging Rollup plugins and virtual modules.
  * When loading a module for rendering a component, either server or client side, it'll obtain
  * the module from the plugin, and the output that it'll get adheres to this type.
  */
-type RendererOutputModule =
+export type RendererOutputModule =
   | string
   | null
   | {
@@ -52,6 +54,8 @@ export type UserClientRenderer = {
   ) => Promise<RendererOutputModule> | RendererOutputModule
 }
 
+export type UserRendererAlias = { find: string; replacement: string }
+
 export type UserRenderer = {
   /**
    * The file extension (without the dot) of the UI components. For example "jsx" or "svelte".
@@ -62,6 +66,12 @@ export type UserRenderer = {
    * A list of Vite plugins that are necessary for the build process to transpile the UI components.
    */
   vitePlugins: (PluginOption | PluginOption[])[]
+
+  /**
+   * Renderer modules might import modules like "react-dom" that Gestalt doesn't know
+   * how to resolve. This function instructs Gestalt on how to resolve those.
+   */
+  aliases: () => UserRendererAlias[] | Promise<UserRendererAlias[]>
 
   /**
    * The client-side renderer that hydrates the server-side-rendered page.
