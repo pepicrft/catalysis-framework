@@ -1,11 +1,13 @@
 import { UserRenderer } from './plugin/renderer'
 import { UserAdapter } from './plugin/adapter'
 
+export * as renderer from './plugin/renderer'
+
 /**
  * The interface represents a Gestalt plugin. Plugins extend, augment, or replace Gestalt's
  * functionality, and also add new functionality.
  */
-export type UserPlugin = {
+export type Plugin = {
   // The plugin name.
   name: string
 

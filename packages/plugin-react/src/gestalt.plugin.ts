@@ -1,4 +1,4 @@
-import { plugins, error } from '@gestaltjs/plugins'
+import { definePlugin, error } from '@gestaltjs/plugins'
 import react from '@vitejs/plugin-react'
 import { clientRenderer } from './renderer/client'
 import { serverRenderer } from './renderer/server'
@@ -9,7 +9,7 @@ type ReactPluginOptions = {
 }
 
 // eslint-disable-next-line import/no-default-export
-const plugin = plugins.define((options: ReactPluginOptions = {}) => {
+const plugin = definePlugin((options: ReactPluginOptions = {}) => {
   return {
     name: 'react',
     description:

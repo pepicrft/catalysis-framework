@@ -1,5 +1,5 @@
 import fg from 'fast-glob'
-import { join as joinPath, relative, dirname } from './path'
+import { join as joinPath, relative, dirname } from '../shared/path'
 import { copyFile, makeDirectory, writeFile, readFile } from './fs'
 import Handlebars from 'handlebars'
 

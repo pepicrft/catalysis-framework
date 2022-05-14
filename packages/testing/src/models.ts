@@ -1,5 +1,5 @@
 import { project } from '@gestaltjs/core/cli'
-import { UserMainTarget } from '@gestaltjs/core/shared'
+import { target } from '@gestaltjs/core/shared'
 
 /**
  * Creates and return a test project for testing purposes.
@@ -24,8 +24,8 @@ export function testProject(
 }
 
 export function testMainTarget(
-  overrides: Partial<UserMainTarget> = {}
-): UserMainTarget {
+  overrides: Partial<target.Main> = {}
+): target.Main {
   return {
     platforms: overrides.platforms ?? ['web'],
     databases: overrides.databases ?? [],

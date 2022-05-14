@@ -1,6 +1,6 @@
 import { Abort } from '../shared/error'
 import { exec } from './system'
-import { findUp, dirname } from './path'
+import { findUp, dirname } from '../shared/path'
 import { fileURLToPath } from 'url'
 
 export const ESLintNotFoundError = () => {

@@ -9,7 +9,7 @@ export type ESTreeProgram = Program
  * When loading a module for rendering a component, either server or client side, it'll obtain
  * the module from the plugin, and the output that it'll get adheres to this type.
  */
-export type RendererOutputModule =
+export type Module =
   | string
   | null
   | {
@@ -21,7 +21,7 @@ export type RendererOutputModule =
       meta?: { [plugin: string]: any } | null
     }
 
-export type UserServerRenderer = {
+export type Server = {
   /**
    * A function that returns the ESM that renders a component server-side.
    * Internally, Gestalt creates a plugin dynamically where his hydrate function represents the load hook of
@@ -29,14 +29,12 @@ export type UserServerRenderer = {
    *
    * @param componentModuleId {string} The identifier of the ESM that default-exports the component to render.
    *
-   * @returns {RendererOutputModule} The module that will be used server-side to render the component.
+   * @returns {Module} The module that will be used server-side to render the component.
    */
-  render: (
-    componentModuleId: string
-  ) => Promise<RendererOutputModule> | RendererOutputModule
+  render: (componentModuleId: string) => Promise<Module> | Module
 }
 
-export type UserClientRenderer = {
+export type Client = {
   /**
    * A function that returns the ESM that hydrates a server-side rendered component.
    * Internally, Gestalt creates a plugin dynamically where his hydrate function represents the load hook of
@@ -46,12 +44,12 @@ export type UserClientRenderer = {
    * @param componentModuleId {string} The identifier of the ESM that default-exports the component to hydrate.
    * @param domElementSelector {string} Them DOM selector where the component was mounted server-side.
    *
-   * @returns {RendererOutputModule} The module that will load client-side to hydrate the component.
+   * @returns {Module} The module that will load client-side to hydrate the component.
    */
   hydrate: (
     componentModuleId: string,
     domElementSelector: string
-  ) => Promise<RendererOutputModule> | RendererOutputModule
+  ) => Promise<Module> | Module
 }
 
 export type UserRendererAlias = { find: string; replacement: string }
@@ -76,10 +74,10 @@ export type UserRenderer = {
   /**
    * The client-side renderer that hydrates the server-side-rendered page.
    */
-  client: UserClientRenderer
+  client: Client
 
   /**
    * The server-side renderer.
    */
-  server: UserServerRenderer
+  server: Server
 }

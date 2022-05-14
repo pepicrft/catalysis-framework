@@ -1,9 +1,9 @@
 import type { MainTarget } from '../../models/targets/main'
-import { dirname, basename, join as pathJoin } from '../../../path'
+import { dirname, basename, join as pathJoin } from '../../../../shared/path'
 import { ModuleLoader } from '../module-loader'
 import { loadRoutes } from './main/routes'
 import { loadLayouts } from './main/layouts'
-import type { UserMainTarget } from '../../../../shared/targets'
+import type { Main as UserMainTarget } from '../../../../shared/target'
 
 /**
  * Loads a main target into memory and returns it.

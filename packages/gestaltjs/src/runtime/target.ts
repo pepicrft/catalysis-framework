@@ -1,12 +1,10 @@
-import { UserMainTarget } from '@gestaltjs/core/shared'
+import { target } from '@gestaltjs/core/shared'
 export { useContext } from '@gestaltjs/core/shared'
 
-export { UserMainTarget }
-
-type UserMainTargetExport =
-  | UserMainTarget
-  | (() => Promise<UserMainTarget>)
-  | (() => UserMainTarget)
+type MainTargetExport =
+  | target.Main
+  | (() => Promise<target.Main>)
+  | (() => target.Main)
 
 /**
  * A utility function to define a main target target. Since the function has its argument and
@@ -15,14 +13,12 @@ type UserMainTargetExport =
  * and auto-completion.
  *
  * Alternatively, targets can use the '@type' annotation:
- *   @type {import('gestaltjs/target').UserMainTarget}
+ *   @type {import('gestaltjs/target').target.Main}
  *   const target = {...}
  *
- * @param target {Target | () => Promise<UserMainTarget> | () => UserMainTarget} Define a new target.
+ * @param target {Target | () => Promise<target.Main> | () => target.Main} Define a new target.
  * @returns A promise that resolves with the target.
  */
-export function defineMainTarget(
-  target: UserMainTargetExport
-): UserMainTargetExport {
+export function defineMainTarget(target: MainTargetExport): MainTargetExport {
   return target
 }

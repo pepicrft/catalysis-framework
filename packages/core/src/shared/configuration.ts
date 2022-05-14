@@ -1,6 +1,6 @@
-import type { UserPlugin } from './plugin'
+import type { Plugin } from './plugin'
 
-export type UserConfiguration = {
+export type Configuration = {
   /**
    * The name of the project
    */
@@ -9,5 +9,5 @@ export type UserConfiguration = {
   /**
    * Plugins to use with the project.
    */
-  plugins?: UserPlugin[]
+  plugins?: Plugin[]
 }

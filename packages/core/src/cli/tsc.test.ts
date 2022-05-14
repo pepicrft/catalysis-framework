@@ -1,10 +1,10 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
-import { findUp, dirname } from './path'
+import { findUp, dirname } from '../shared/path'
 import { run, TSCNotFoundError } from './tsc'
 
 vi.mock('./system')
-vi.mock('./path')
+vi.mock('../shared/path')
 
 describe('run', () => {
   test('runs tsc', async () => {

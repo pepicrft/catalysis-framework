@@ -1,5 +1,5 @@
 import { addDependencies, inferDependencyManager } from './npm'
-import { join as pathJoin } from './path'
+import { join as pathJoin } from '../shared/path'
 import { writeFile, makeDirectory } from './fs'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'

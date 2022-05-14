@@ -1,8 +1,4 @@
-import {
-  UserRenderer,
-  UserServerRenderer,
-  UserClientRenderer,
-} from '../../../shared/plugin/renderer'
+import { UserRenderer, Server, Client } from '../../../shared/plugin/renderer'
 
 /**
  * An internal renderer type that includes the
@@ -11,6 +7,6 @@ import {
  * files
  */
 export type Renderer = UserRenderer & {
-  server?: UserServerRenderer
-  client?: UserClientRenderer
+  server?: Server
+  client?: Client
 }

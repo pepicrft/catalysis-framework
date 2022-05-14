@@ -1,6 +1,6 @@
-import { describe, test, expect, vi } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
-import { join as pathJoin, dirname } from '../../../../path'
+import { join as pathJoin, dirname } from '../../../../../shared/path'
 import { loadLayouts } from './layouts'
 import { writeFile, makeDirectory } from '../../../../fs'
 

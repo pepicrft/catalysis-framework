@@ -1,4 +1,3 @@
-export type {
-  UserServerRenderer as Server,
-  UserClientRenderer as Client,
-} from '@gestaltjs/core/shared'
+import { plugin } from '@gestaltjs/core/shared'
+export type Client = plugin.renderer.Client
+export type Server = plugin.renderer.Server

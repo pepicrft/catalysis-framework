@@ -2,7 +2,7 @@ import { loadRoutes } from './routes'
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
-import { dirname, join as pathJoin } from '../../../../path'
+import { dirname, join as pathJoin } from '../../../../../shared/path'
 import { writeFile, makeDirectory } from '../../../../fs'
 import { Route } from '../../../models/targets/main/route'
 

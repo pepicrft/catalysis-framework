@@ -1,4 +1,4 @@
-import { glob, join as pathJoin } from '../../path'
+import { glob, join as pathJoin } from '../../../shared/path'
 import { mainTargetFileName } from '../../constants'
 import { Targets } from '../models/targets'
 import { loadMainTarget } from './targets/main'

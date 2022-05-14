@@ -1,6 +1,6 @@
 import { Project } from '../models/project'
 import { Abort } from '../../../shared/error'
-import { dirname, join as pathJoin } from '../../path'
+import { dirname, join as pathJoin } from '../../../shared/path'
 import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
