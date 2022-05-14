@@ -56,6 +56,14 @@ export type UserRendererAlias = { find: string; replacement: string }
 
 export type UserRenderer = {
   /**
+   * The extension without the dot of the rendering modules dynamically generated
+   * by the renderer. This is necessary for Rollup to apply the right transformations
+   * to the code. For example, by specifying the extension .svelte, the Svelte plugin
+   * will transfor the code into raw Javascript.
+   */
+  moduleExtension: string
+
+  /**
    * The file extension (without the dot) of the UI components. For example "jsx" or "svelte".
    */
   fileExtensions: string[]
@@ -63,13 +71,19 @@ export type UserRenderer = {
   /**
    * A list of Vite plugins that are necessary for the build process to transpile the UI components.
    */
-  vitePlugins: (PluginOption | PluginOption[])[]
+  plugins: (PluginOption | PluginOption[])[]
 
   /**
-   * Renderer modules might import modules like "react-dom" that Gestalt doesn't know
-   * how to resolve. This function instructs Gestalt on how to resolve those.
+   * An array with node_modules directories where Gestalt can lookup
+   * modules imported by the rendering modules of the plugin.
    */
-  aliases: () => UserRendererAlias[] | Promise<UserRendererAlias[]>
+  nodeModulesDirectories?: string[]
+
+  /**
+   * Renderer modules might import modules that Gestalt doesn't know
+   * how to resolve. Aliases instructs Gestalt on how to resolve those.
+   */
+  aliases?: UserRendererAlias[]
 
   /**
    * The client-side renderer that hydrates the server-side-rendered page.

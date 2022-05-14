@@ -1,20 +1,24 @@
-import { describe, test, expect, vi } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { serverRenderer } from './server'
-import ReactDOMServer from 'react-dom/server'
-import { ServerRenderer } from '@gestaltjs/plugins'
 
-vi.mock('react-dom/server')
-
-describe('hydrate', () => {
-  test('hydrates using ReactDOM', () => {
+describe('render', () => {
+  test('hydrates using ReactDOM', async () => {
     // Given/When
-    const renderer = serverRenderer as ServerRenderer
-    const component = vi.fn()
+    const renderer = serverRenderer
 
     // When
-    renderer.render(component)
+    const got = await renderer.render('component-id')
 
     // Then
-    expect(ReactDOMServer.renderToString).toHaveBeenCalledWith(component)
+    expect(got).toMatchInlineSnapshot(`
+      "
+          import ReactDOMServer from 'react-dom/server';
+          import ComponentToRender from 'component-id';
+
+          export default async funcion () {
+            return await ReactDOMServer.renderToString(<ComponentToRender/>)
+          }
+          "
+    `)
   })
 })

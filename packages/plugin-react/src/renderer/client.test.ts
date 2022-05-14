@@ -1,21 +1,25 @@
 import { describe, test, expect, vi } from 'vitest'
 import { clientRenderer } from './client'
-import ReactDOM from 'react-dom'
-import { ClientRenderer } from '@gestaltjs/plugins'
 
 vi.mock('react-dom')
 
 describe('hydrate', () => {
-  test('hydrates using ReactDOM', () => {
+  test('hydrates using ReactDOM', async () => {
     // Given/When
-    const renderer = clientRenderer as ClientRenderer
-    const component = vi.fn()
-    const domElement: any = vi.fn()
+    const renderer = clientRenderer
 
     // When
-    renderer.hydrate(component, domElement)
+    const got = await renderer.hydrate('component-id', '#app')
 
     // Then
-    expect(ReactDOM.hydrate).toHaveBeenCalledWith(component, domElement)
+    expect(got).toMatchInlineSnapshot(`
+      "
+          import ReactDOM from 'react-dom';
+          import ComponentToHydrate from 'component-id';
+
+          const domElement = document.querySelector('#app');
+          ReactDOM.hydrate(<ComponentToHydrate/>, domElement);
+          "
+    `)
   })
 })

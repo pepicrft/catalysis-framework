@@ -1,8 +1,14 @@
-import { ServerRenderer } from '@gestaltjs/plugins'
-import ReactDOMServer from 'react-dom/server'
+import { renderer } from '@gestaltjs/plugins'
 
-export const serverRenderer: ServerRenderer = {
-  render: async function (component) {
-    return { html: ReactDOMServer.renderToString(component) }
+export const serverRenderer: renderer.Server = {
+  render: function (componentModuleId: string) {
+    return `
+    import ReactDOMServer from 'react-dom/server';
+    import ComponentToRender from '${componentModuleId}';
+
+    export default async funcion () {
+      return await ReactDOMServer.renderToString(<ComponentToRender/>)
+    }
+    `
   },
 }
