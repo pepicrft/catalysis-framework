@@ -1,22 +1,55 @@
 import type { PluginOption } from 'vite'
+import { Program as ESTreeProgram } from 'estree'
+import { SourceMap } from 'magic-string'
 
-type UserServerRendererRenderOutput = { html: string }
+/**
+ * Renderer plugins are hooked into Gestalt by leveraging Rollup plugins and virtual modules.
+ * When loading a module for rendering a component, either server or client side, it'll obtain
+ * the module from the plugin, and the output that it'll get adheres to this type.
+ */
+type RendererOutputModule =
+  | string
+  | null
+  | {
+      code: string
+      map?: string | SourceMap
+      ast?: ESTreeProgram
+      moduleSideEffects?: boolean | 'no-treeshake' | null
+      syntheticNamedExports?: boolean | string | null
+      meta?: { [plugin: string]: any } | null
+    }
 
 export type UserServerRenderer = {
   /**
-   * A function that runs server-side to render a given component
+   * A function that returns the ESM that renders a component server-side.
+   * Internally, Gestalt creates a plugin dynamically where his hydrate function represents the load hook of
+   * the plugin. You can read more about the load hook here:
+   *
+   * @param componentModuleId {string} The identifier of the ESM that default-exports the component to render.
+   *
+   * @returns {RendererOutputModule} The module that will be used server-side to render the component.
    */
   render: (
-    component: any
-  ) => Promise<UserServerRendererRenderOutput> | UserServerRendererRenderOutput
+    componentModuleId: string
+  ) => Promise<RendererOutputModule> | RendererOutputModule
 }
 
 export type UserClientRenderer = {
   /**
-   * A function that takes the UI component and the DOM element where
-   * the component needs to be hydrated.
+   * A function that returns the ESM that hydrates a server-side rendered component.
+   * Internally, Gestalt creates a plugin dynamically where his hydrate function represents the load hook of
+   * the plugin. You can read more about the load hook here:
+   *   https://rollupjs.org/guide/en/#load
+   *
+   * @param componentModuleId {string} The identifier of the ESM that default-exports the component to hydrate.
+   * @param domElementSelector {string} Them DOM selector where the component was mounted server-side.
+   *
+   * @returns {RendererOutputModule} The module that will load client-side to hydrate the component.
    */
-  hydrate: (component: any, domElement: HTMLElement) => Promise<void> | void
+  hydrate: (
+    componentModuleId: string,
+    domElementSelector: string
+  ) => Promise<RendererOutputModule> | RendererOutputModule
 }
 
 export type UserRenderer = {
