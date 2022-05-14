@@ -4,15 +4,17 @@
 We abstract away the dependency with the runtime (e.g. Node) to ensure compatibility across OSs and Javascript runtimes:
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 ```
+
+## Functions
 
 ### `readFile`
 
 Reads a file as a file and decodes its content using [utf-8](https://en.wikipedia.org/wiki/UTF-8):
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 
 const content = await fs.readFile("path/to/.env")
 ```
@@ -33,7 +35,7 @@ A promise that resolves with the content of the file as a string or rejects with
 Writes a string to a file. If the file already exists, it overwrites its content.
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 
 await fs.writeFile("path/to/.env", "GESTALT_ENV=debug")
 ```
@@ -55,7 +57,7 @@ It rejects with an error otherwise.
 Returns whether a directory or file exists in the filesystem.
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 
 const exists = await fs.pathExists("path/to/.env")
 ```
@@ -76,7 +78,7 @@ It rejects with an error otherwise.
 Creates a new directory. If the parent directories don't exist they also get created.
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 
 await fs.makeDirectory("path/to/directory")
 ```
@@ -96,7 +98,7 @@ A promise that resolves with on successful creation, and rejects if the creation
 Creates an existing directory.
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 
 await fs.removeDirectory("path/to/directory")
 ```
@@ -116,7 +118,7 @@ A promise that resolves with on successful removal, and rejects if the creation 
 Copies a file from a source to a target location.
 
 ```ts
-import { fs } from "@gestaltjs/core"
+import { fs } from "@gestaltjs/core/cli"
 
 await fs.copyFile("/from/file.txt", "/to/file.txt")
 ```

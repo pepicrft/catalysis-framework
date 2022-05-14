@@ -123,7 +123,10 @@ function getContributorsSidebar() {
         },
         {
           text: 'Core modules',
-          children: [{ text: 'fs', link: 'contributors/core/fs' }],
+          children: [
+            { text: 'fs', link: 'contributors/core/fs' },
+            { text: 'npm', link: 'contributors/core/npm' },
+          ],
         },
       ],
     },
