@@ -6,7 +6,7 @@ vi.mock('vue/server-renderer')
 
 describe('ssr', () => {
   test('has the right extension', () => {
-    expect(ssr.extension).toEqual('vue')
+    expect(ssr.extension).toEqual('js')
   })
 
   test('has the right content', () => {

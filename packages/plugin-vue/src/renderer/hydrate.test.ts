@@ -5,7 +5,7 @@ vi.mock('vue')
 
 describe('hydrate', () => {
   test('has the right extension', async () => {
-    expect(hydrate.extension).toEqual('vue')
+    expect(hydrate.extension).toEqual('js')
   })
   test('has the right content', () => {
     expect(hydrate.content('test-component.vue', '#app'))

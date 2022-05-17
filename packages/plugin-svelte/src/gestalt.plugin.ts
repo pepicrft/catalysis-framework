@@ -1,7 +1,7 @@
 import { definePlugin } from '@gestaltjs/plugins'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import { clientRenderer } from './renderer/client'
-import { serverRenderer } from './renderer/server'
+import { hydrate } from './renderer/hydrate'
+import { ssr } from './renderer/ssr'
 
 type SveltePluginOptions = {
   // No options yet
@@ -14,10 +14,11 @@ const plugin = definePlugin((options: SveltePluginOptions = {}) => {
     description:
       "Adds support for declaring UI using Svelte's declarative model",
     renderer: {
-      fileExtensions: ['svelte'],
-      vitePlugins: [svelte()],
-      server: serverRenderer,
-      client: clientRenderer,
+      moduleExtension: 'svelte',
+      extensions: ['svelte'],
+      plugins: [svelte()],
+      hydrate,
+      ssr,
     },
   }
 })

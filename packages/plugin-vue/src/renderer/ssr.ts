@@ -13,6 +13,6 @@ function content(componentModuleId: string) {
     `
 }
 
-const extension = 'vue'
+const extension = 'js'
 
 export const ssr = { content, extension }

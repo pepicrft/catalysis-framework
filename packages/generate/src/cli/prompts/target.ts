@@ -1,4 +1,6 @@
-export type PromptOptions = {}
+export type PromptOptions = {
+  name: string
+}
 
 export async function generateTargetPrompt(
   options: Partial<PromptOptions>

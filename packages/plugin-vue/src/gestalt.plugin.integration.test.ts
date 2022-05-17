@@ -39,9 +39,9 @@ function getRollupPlugins(
         return undefined
       },
       load: async (moduleId: string) => {
-        if (moduleId === `\0ssr.vue`) {
+        if (moduleId === `\0ssr.js`) {
           return await plugin.renderer?.ssr.content(componentModuleId)
-        } else if (moduleId === `\0hydrate.vue`) {
+        } else if (moduleId === `\0hydrate.js`) {
           return await plugin.renderer?.hydrate.content(
             componentModuleId,
             domElementSelector ?? '#app'
