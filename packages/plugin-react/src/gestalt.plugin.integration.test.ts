@@ -24,7 +24,6 @@ function getRollupPlugins(
   domElementSelector?: string
 ): RollupPlugin[] {
   return [
-    ...((plugin.renderer?.plugins ?? []) as RollupPlugin[]),
     {
       name: 'react-plugin',
       resolveId: (moduleId: string) => {
@@ -58,6 +57,7 @@ function getRollupPlugins(
         }
       },
     },
+    ...((plugin.renderer?.plugins ?? []) as RollupPlugin[]),
   ]
 }
 

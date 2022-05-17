@@ -24,7 +24,6 @@ function getRollupPlugins(
   domElementSelector?: string
 ): RollupPlugin[] {
   return [
-    ...((plugin.renderer?.plugins ?? []) as RollupPlugin[]),
     {
       name: 'vue-plugin',
       resolveId: (moduleId: string) => {
@@ -60,6 +59,7 @@ function getRollupPlugins(
         }
       },
     },
+    ...((plugin.renderer?.plugins ?? []) as RollupPlugin[]),
   ]
 }
 
