@@ -1,7 +1,7 @@
 import { definePlugin } from '@gestaltjs/plugins'
 import vue from '@vitejs/plugin-vue'
-import { clientRenderer } from './renderer/client'
-import { serverRenderer } from './renderer/server'
+import { hydrate } from './renderer/hydrate'
+import { ssr } from './renderer/ssr'
 
 type VuePluginOptions = {
   // No options yet
@@ -13,10 +13,17 @@ const plugin = definePlugin((options: VuePluginOptions = {}) => {
     name: 'vue',
     description: "Adds support for declaring UI using Vue's declarative model",
     renderer: {
-      fileExtensions: ['vue'],
-      vitePlugins: [vue()],
-      server: serverRenderer,
-      client: clientRenderer,
+      moduleExtension: 'vue',
+      extensions: ['vue'],
+      plugins: [
+        vue({
+          template: {
+            compilerOptions: {},
+          },
+        }),
+      ],
+      ssr,
+      hydrate,
     },
   }
 })

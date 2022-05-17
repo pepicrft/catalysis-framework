@@ -314,17 +314,17 @@ importers:
       '@gestaltjs/plugins': ^0.7.7
       '@types/react-dom': ^18.0.2
       '@vitejs/plugin-react': ^1.3.1
-      find-up: 6.3.0
       react: ^18.0.0
       react-dom: ^18.0.0
+      rollup: ^2.73.0
     dependencies:
       '@gestaltjs/plugins': link:../plugins
       '@vitejs/plugin-react': 1.3.1
       react-dom: 18.0.0_react@18.0.0
     devDependencies:
       '@types/react-dom': 18.0.2
-      find-up: 6.3.0
       react: 18.0.0
+      rollup: 2.73.0
 
   packages/plugin-svelte:
     specifiers:

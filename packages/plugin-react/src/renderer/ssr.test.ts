@@ -1,13 +1,10 @@
 import { describe, test, expect } from 'vitest'
-import { serverRenderer } from './server'
+import { ssr } from './ssr'
 
-describe('render', () => {
-  test('hydrates using ReactDOM', async () => {
-    // Given/When
-    const renderer = serverRenderer
-
+describe('ssr', () => {
+  test('content', async () => {
     // When
-    const got = await renderer.render('component-id')
+    const got = await ssr.content('component-id')
 
     // Then
     expect(got).toMatchInlineSnapshot(`
@@ -15,10 +12,18 @@ describe('render', () => {
           import ReactDOMServer from 'react-dom/server';
           import ComponentToRender from 'component-id';
 
-          export default async funcion () {
+          export default async function () {
             return await ReactDOMServer.renderToString(<ComponentToRender/>)
           }
           "
     `)
+  })
+
+  test('extension', async () => {
+    // When
+    const got = ssr.extension
+
+    // Then
+    expect(got).toEqual('jsx')
   })
 })

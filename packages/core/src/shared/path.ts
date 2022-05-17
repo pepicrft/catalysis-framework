@@ -3,12 +3,23 @@ export { default as glob } from 'fast-glob'
 export * from 'pathe'
 import process from 'node:process'
 export { pathEqual } from 'path-equal'
-import { relative as relativePath } from 'pathe'
+import { relative as relativePath, dirname } from 'pathe'
 import { fileURLToPath } from 'url'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import commondir from 'commondir'
+
+/**
+ * This utility function replaces the CJS __dirname variable exposed
+ * by Node. This method is expected to be invoked passing the import.meta.url
+ * variable that represents the caller's module.
+ * @param url {URL} The module URL obtained from import.meta.url
+ * @returns
+ */
+export function moduleDirname(url: string): string {
+  return dirname(fileURLToPath(url))
+}
 
 /**
  * Given an absolute filesystem path, it makes it relative to

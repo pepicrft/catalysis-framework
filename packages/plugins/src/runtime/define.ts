@@ -3,7 +3,7 @@ import { plugin } from '@gestaltjs/core/shared'
 /**
  * Interface of the arguemnt and return type of definePlugin.
  */
-type PluginExport = <T>(options: T) => plugin.Plugin | Promise<plugin.Plugin>
+type PluginExport = <T>(options?: T) => plugin.Plugin | Promise<plugin.Plugin>
 
 /**
  * A utility function to define new plugins. Since the function has its argument and
