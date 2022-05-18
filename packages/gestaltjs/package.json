@@ -95,7 +95,7 @@
   },
   "nx": {
     "implicitDependencies": [
-      "@gestaltjs/eslint-plugin-gestaltjs"
+      "@gestaltjs/eslint-plugin"
     ]
   }
 }
