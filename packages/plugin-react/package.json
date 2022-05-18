@@ -40,7 +40,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@gestaltjs/plugins": "0.7.8",
+    "@gestaltjs/plugins": "0.7.7",
     "@types/react-dom": "^18.0.2",
     "react": "^18.0.0",
     "rollup": "^2.73.0"

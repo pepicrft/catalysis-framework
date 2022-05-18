@@ -39,7 +39,7 @@
     "@gestaltjs/plugins": "^0.7.8"
   },
   "devDependencies": {
-    "@gestaltjs/plugins": "0.7.8",
+    "@gestaltjs/plugins": "0.7.7",
     "vue": "^3.2.33",
     "vite": "2.9.9"
   },
