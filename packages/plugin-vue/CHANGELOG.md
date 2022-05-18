@@ -1,5 +1,11 @@
 # @gestaltjs/gestalt-plugin-vue
 
+## 0.7.8
+
+### Patch Changes
+
+- @gestaltjs/plugins@0.7.8
+
 ## 0.7.7
 
 ### Patch Changes

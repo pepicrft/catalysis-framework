@@ -128,7 +128,7 @@ importers:
 
   packages/build:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
@@ -136,7 +136,7 @@ importers:
 
   packages/check:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
@@ -213,7 +213,7 @@ importers:
 
   packages/create-plugin:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     dependencies:
       '@gestaltjs/core': link:../core
@@ -221,7 +221,7 @@ importers:
 
   packages/create-project:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     dependencies:
       '@gestaltjs/core': link:../core
@@ -229,7 +229,7 @@ importers:
 
   packages/db:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
@@ -237,7 +237,7 @@ importers:
 
   packages/dev:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
       h3: ^0.7.4
       listhen: ^0.2.10
@@ -261,7 +261,7 @@ importers:
 
   packages/generate:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
@@ -269,16 +269,16 @@ importers:
 
   packages/gestaltjs:
     specifiers:
-      '@gestaltjs/build': 0.7.7
-      '@gestaltjs/check': 0.7.7
-      '@gestaltjs/core': 0.7.7
-      '@gestaltjs/db': 0.7.7
-      '@gestaltjs/dev': 0.7.7
-      '@gestaltjs/generate': 0.7.7
-      '@gestaltjs/info': 0.7.7
-      '@gestaltjs/plugins': 0.7.7
-      '@gestaltjs/routes': 0.7.7
-      '@gestaltjs/test': 0.7.7
+      '@gestaltjs/build': 0.7.8
+      '@gestaltjs/check': 0.7.8
+      '@gestaltjs/core': 0.7.8
+      '@gestaltjs/db': 0.7.8
+      '@gestaltjs/dev': 0.7.8
+      '@gestaltjs/generate': 0.7.8
+      '@gestaltjs/info': 0.7.8
+      '@gestaltjs/plugins': 0.7.8
+      '@gestaltjs/routes': 0.7.8
+      '@gestaltjs/test': 0.7.8
       '@oclif/core': ^1.7.0
       '@oclif/plugin-help': ^5
     dependencies:
@@ -297,7 +297,7 @@ importers:
 
   packages/info:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
@@ -305,13 +305,13 @@ importers:
 
   packages/plugin-netlify:
     specifiers:
-      '@gestaltjs/plugins': ^0.7.7
+      '@gestaltjs/plugins': ^0.7.8
     dependencies:
       '@gestaltjs/plugins': link:../plugins
 
   packages/plugin-react:
     specifiers:
-      '@gestaltjs/plugins': ^0.7.7
+      '@gestaltjs/plugins': ^0.7.8
       '@types/react-dom': ^18.0.2
       '@vitejs/plugin-react': ^1.3.1
       react: ^18.0.0
@@ -328,7 +328,7 @@ importers:
 
   packages/plugin-svelte:
     specifiers:
-      '@gestaltjs/plugins': ^0.7.7
+      '@gestaltjs/plugins': ^0.7.8
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.42
       svelte: ^3.48.0
       vite: 2.9.9
@@ -341,7 +341,7 @@ importers:
 
   packages/plugin-vue:
     specifiers:
-      '@gestaltjs/plugins': ^0.7.7
+      '@gestaltjs/plugins': ^0.7.8
       '@vitejs/plugin-vue': ^2.3.1
       vite: 2.9.9
       vue: ^3.2.33
@@ -354,7 +354,7 @@ importers:
 
   packages/plugins:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     dependencies:
       '@gestaltjs/core': link:../core
@@ -363,7 +363,7 @@ importers:
 
   packages/routes:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.8.1
     devDependencies:
       '@gestaltjs/core': link:../core
@@ -371,7 +371,7 @@ importers:
 
   packages/test:
     specifiers:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.7.0
     devDependencies:
       '@gestaltjs/core': link:../core

@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/gestalt-plugin-netlify",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "private": false,
   "description": "Gestalt's plugin to adapt the project to deploy it to Netlify",
   "keywords": [
@@ -36,10 +36,10 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/plugins": "^0.7.7"
+    "@gestaltjs/plugins": "^0.7.8"
   },
   "devDependencies": {
-    "@gestaltjs/plugins": "0.7.7"
+    "@gestaltjs/plugins": "0.7.8"
   },
   "engine-strict": true,
   "engines": {

@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/info",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "description": "Outputs an overview of a Gestalt project",
   "type": "module",
   "files": [
@@ -22,11 +22,11 @@
     ]
   },
   "peerDependencies": {
-    "@gestaltjs/core": "0.7.7",
+    "@gestaltjs/core": "0.7.8",
     "@oclif/core": "1.8.1"
   },
   "devDependencies": {
-    "@gestaltjs/core": "0.7.7",
+    "@gestaltjs/core": "0.7.8",
     "@oclif/core": "1.8.1"
   },
   "oclif": {
