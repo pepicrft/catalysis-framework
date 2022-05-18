@@ -60,7 +60,7 @@
     "@gestaltjs/db": "0.7.8",
     "@gestaltjs/generate": "0.7.8",
     "@gestaltjs/dev": "0.7.8",
-    "@gestaltjs/test": "0.7.8",
+    "@gestaltjs/test": "0.7.7",
     "@gestaltjs/info": "0.7.8",
     "@gestaltjs/routes": "0.7.8",
     "@gestaltjs/core": "0.7.8",
