@@ -43,7 +43,8 @@
     "@gestaltjs/plugins": "0.7.8",
     "@types/react-dom": "^18.0.2",
     "react": "^18.0.0",
-    "rollup": "^2.73.0"
+    "rollup": "^2.73.0",
+    "rollup-plugin-esbuild": "^4.9.1"
   },
   "peerDependencies": {
     "react": "^18.0.0"

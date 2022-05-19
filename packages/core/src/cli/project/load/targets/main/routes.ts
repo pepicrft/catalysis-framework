@@ -9,7 +9,7 @@ import {
   relative as relativePath,
   parse as parsePath,
 } from '../../../../../shared/path'
-import { pathExists } from '../../../../fs'
+import { pathExists } from '../../../../../shared/fs'
 
 /**
  * Loads the routes of a main target.

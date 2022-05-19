@@ -1,6 +1,6 @@
 import fg from 'fast-glob'
 import { join as joinPath, relative, dirname } from '../shared/path'
-import { copyFile, makeDirectory, writeFile, readFile } from './fs'
+import { copyFile, makeDirectory, writeFile, readFile } from '../shared/fs'
 import Handlebars from 'handlebars'
 
 export type ScaffoldOptions = {

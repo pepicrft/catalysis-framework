@@ -1,6 +1,6 @@
 import { addDependencies, inferDependencyManager } from './npm'
 import { join as pathJoin } from '../shared/path'
-import { writeFile, makeDirectory } from './fs'
+import { writeFile, makeDirectory } from '../shared/fs'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
 import { temporary } from '@gestaltjs/testing'

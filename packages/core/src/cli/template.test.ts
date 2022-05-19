@@ -2,7 +2,7 @@ import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { ScaffoldOptions, scaffold } from './template'
 import { join as joinPath } from '../shared/path'
-import { writeFile, pathExists, readFile, makeDirectory } from './fs'
+import { writeFile, pathExists, readFile, makeDirectory } from '../shared/fs'
 
 describe('scaffold basic file', () => {
   test('scaffold template', async () => {
