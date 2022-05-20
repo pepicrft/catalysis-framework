@@ -41,7 +41,10 @@
   "devDependencies": {
     "@gestaltjs/plugins": "0.7.8",
     "vue": "^3.2.33",
-    "vite": "2.9.9"
+    "vite": "2.9.9",
+    "rollup": "^2.73.0",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "esbuild": "^0.14.39"
   },
   "peerDependencies": {
     "vue": "^3.2.33"
