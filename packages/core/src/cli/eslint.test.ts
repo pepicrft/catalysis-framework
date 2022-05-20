@@ -4,7 +4,7 @@ import { findUp, dirname } from '../node/path.public'
 import { run, ESLintNotFoundError } from './eslint'
 
 vi.mock('./system')
-vi.mock('../shared/path')
+vi.mock('../node/path.public')
 
 describe('run', () => {
   test('runs eslint', async () => {

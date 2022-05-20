@@ -4,7 +4,7 @@ import { findUp, dirname } from '../node/path.public'
 import { run, TSCNotFoundError } from './tsc'
 
 vi.mock('./system')
-vi.mock('../shared/path')
+vi.mock('../node/path.public')
 
 describe('run', () => {
   test('runs tsc', async () => {
