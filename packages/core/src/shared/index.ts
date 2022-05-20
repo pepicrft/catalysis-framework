@@ -1,7 +1,7 @@
 export { useContext } from './context'
 export * as error from './error'
 export * as fs from './fs'
-export * as path from './path'
+export * as path from '../node/path.public'
 export * as plugin from './plugin'
 export * as configuration from './configuration'
 export * as target from './target'

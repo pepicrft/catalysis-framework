@@ -11,6 +11,10 @@
   "license": "MIT",
   "type": "module",
   "exports": {
+    "./node/path": {
+      "node": "./dist/node/path.public.js",
+      "types": "./dist/node/path.public.d.ts"
+    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"

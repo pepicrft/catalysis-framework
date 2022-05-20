@@ -1,5 +1,9 @@
 import type { MainTarget } from '../../models/targets/main'
-import { dirname, basename, join as pathJoin } from '../../../../shared/path'
+import {
+  dirname,
+  basename,
+  join as pathJoin,
+} from '../../../../node/path.public'
 import { ModuleLoader } from '../module-loader'
 import { loadRoutes } from './main/routes'
 import { loadLayouts } from './main/layouts'

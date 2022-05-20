@@ -6,7 +6,7 @@ import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment'
 import { LoggerContentToken, LoggerContentType } from './logger/content'
 import { LoggerTarget, NoopLoggerTarget } from './logger/target'
-import { relativize } from '../shared/path'
+import { relativize } from '../node/path.public'
 
 /**
  * We cache the loggers to ensure we only have an

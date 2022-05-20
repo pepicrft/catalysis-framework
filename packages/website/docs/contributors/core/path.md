@@ -7,15 +7,15 @@ We abstract away the dependency with the runtime (e.g. Node) to ensure compatibi
 import { path } from "@gestaltjs/core"
 ```
 
-### `relativize`
+### `relativizePath`
 
 This function makes an absolute filesystem path relative to the current working directory. This is useful when logging paths to allow users to click on the file and let the OS open it in the editor of choice.
 
 ```ts
-import { path } from "@gestaltjs/core"
+import { relativizePath } from "@gestaltjs/core/node/path"
 
 // Working directory: /project/path
-const relativePath = path.relativize("/project/path/src/index.js")
+const relativePath = relativizePath("/project/path/src/index.js")
 // Result: src/index.js
 ```
 

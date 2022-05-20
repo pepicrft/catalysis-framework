@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
-import { findUp, dirname } from '../shared/path'
+import { findUp, dirname } from '../node/path.public'
 import { run, ESLintNotFoundError } from './eslint'
 
 vi.mock('./system')

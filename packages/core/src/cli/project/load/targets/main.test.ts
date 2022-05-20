@@ -2,7 +2,11 @@ import { loadMainTarget } from './main'
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
-import { dirname, basename, join as pathJoin } from '../../../../shared/path'
+import {
+  dirname,
+  basename,
+  join as pathJoin,
+} from '../../../../node/path.public'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
 import { Route } from '../../models/targets/main/route'

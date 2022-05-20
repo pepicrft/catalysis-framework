@@ -8,7 +8,7 @@ import {
   basename,
   relative as relativePath,
   parse as parsePath,
-} from '../../../../../shared/path'
+} from '../../../../../node/path.public'
 import { pathExists } from '../../../../../shared/fs'
 
 /**

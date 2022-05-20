@@ -29,7 +29,7 @@ export function moduleDirname(url: string): string {
  * @param path {string} Path to relativize
  * @returns {string} Relativized path.
  */
-export function relativize(path: string): string {
+export function relativizePath(path: string): string {
   const result = commondir([path, process.cwd()])
   if (result !== '/') {
     return relativePath(process.cwd(), path)

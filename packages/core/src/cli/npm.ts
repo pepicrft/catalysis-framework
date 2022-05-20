@@ -1,5 +1,5 @@
 import { Bug } from '../shared/error'
-import { join as pathJoin, findUp } from '../shared/path'
+import { join as pathJoin, findUp } from '../node/path.public'
 import { pathExists } from '../shared/fs'
 import { content, fileToken } from './logger'
 import { WriteStream } from 'fs-extra'

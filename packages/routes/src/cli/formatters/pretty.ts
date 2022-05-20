@@ -1,5 +1,5 @@
 import { project, terminal } from '@gestaltjs/core/cli'
-import { path } from '@gestaltjs/core/cli'
+import { path } from '@gestaltjs/core/node/path'
 
 type PrettyFormatOptions = {
   project: project.models.Project
@@ -12,12 +12,12 @@ export function prettyFormat(options: PrettyFormatOptions): string {
     `  ${terminal.formatBold('Name:')} ${options.project.configuration.name}`
   )
   lines.push(
-    `  ${terminal.formatBold('Directory:')} ${path.relativize(
+    `  ${terminal.formatBold('Directory:')} ${path.relativizePath(
       options.project.directory
     )}`
   )
   lines.push(
-    `  ${terminal.formatBold('Manifest:')} ${path.relativize(
+    `  ${terminal.formatBold('Manifest:')} ${path.relativizePath(
       options.project.configuration.manifestPath
     )}`
   )
@@ -43,12 +43,12 @@ export function prettyFormat(options: PrettyFormatOptions): string {
       lines.push(
         `${targetMetadataPrefix}${terminal.formatBold(
           `Directory:`
-        )} ${path.relativize(target.directory)}`
+        )} ${path.relativizePath(target.directory)}`
       )
       lines.push(
         `${targetMetadataPrefix}${terminal.formatBold(
           `Manifest:`
-        )} ${path.relativize(target.manifestPath)}`
+        )} ${path.relativizePath(target.manifestPath)}`
       )
     })
   }
