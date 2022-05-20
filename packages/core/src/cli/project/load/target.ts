@@ -1,4 +1,4 @@
-import { glob, join as pathJoin } from '../../../node/path.public'
+import { glob, joinPath } from '../../../node/path.public'
 import { mainTargetFileName } from '../../constants'
 import { Targets } from '../models/targets'
 import { loadMainTarget } from './targets/main'
@@ -10,7 +10,7 @@ export async function loadTargets(
 ): Promise<Targets> {
   const globPatterns = (directory: string) =>
     ['ts', 'js'].map((extension) =>
-      pathJoin(
+      joinPath(
         projectDirectory,
         `targets/${directory}/*/${mainTargetFileName}.${extension}`
       )

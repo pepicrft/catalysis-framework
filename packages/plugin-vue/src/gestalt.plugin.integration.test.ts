@@ -68,7 +68,7 @@ async function getViteServer(
   componentModuleId: string,
   domElementSelector?: string
 ) {
-  const packageRoot = (await path.findUp('plugin-vue', {
+  const packageRoot = (await path.findPathUp('plugin-vue', {
     type: 'directory',
     cwd: path.moduleDirname(import.meta.url),
   })) as string

@@ -1,7 +1,7 @@
 import { getModuleLoader } from './module-loader'
-import { describe, test, expect, vi } from 'vitest'
+import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
-import { join as pathJoin } from '../../../node/path.public'
+import { joinPath } from '../../../node/path.public'
 import { writeFile } from '../../../shared/fs'
 
 describe('getModuleLoader', () => {
@@ -12,7 +12,7 @@ describe('getModuleLoader', () => {
         const object = { name: "Test" };
         export default object;
         `
-      const modulePath = pathJoin(tmpDir, 'module.js')
+      const modulePath = joinPath(tmpDir, 'module.js')
       await writeFile(modulePath, moduleContent)
       const moduleLoader = await getModuleLoader(tmpDir)
 
@@ -37,7 +37,7 @@ describe('getModuleLoader', () => {
         const object = { name: "Second" };
         export default object;
         `
-      const modulePath = pathJoin(tmpDir, 'module.js')
+      const modulePath = joinPath(tmpDir, 'module.js')
       await writeFile(modulePath, firstModuleContent)
       const moduleLoader = await getModuleLoader(tmpDir)
 

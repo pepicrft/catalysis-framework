@@ -1,14 +1,32 @@
-export { findUp } from 'find-up'
+export { findUp as findPathUp } from 'find-up'
 export { default as glob } from 'fast-glob'
-export * from 'pathe'
 import process from 'node:process'
-export { pathEqual } from 'path-equal'
-import { relative as relativePath, dirname } from 'pathe'
+import { relative as relativePath, dirname as patheDirname } from 'pathe'
 import { fileURLToPath } from 'url'
+export { basename, resolve, relative, parse } from 'pathe'
+import { join } from 'pathe'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import commondir from 'commondir'
+
+/**
+ * Given a path, it returns the path of the parent directory.
+ * @param path {string} Path to the directory of the given path.
+ * @returns {string} The path to the parent directory.
+ */
+export function dirname(path: string): string {
+  return patheDirname(path)
+}
+
+/**
+ * Joins path components to form a path.
+ * @param paths {string[]} The path components to concatenate.
+ * @returns Joined path.
+ */
+export function joinPath(...paths: string[]): string {
+  return join(...paths)
+}
 
 /**
  * This utility function replaces the CJS __dirname variable exposed
@@ -18,7 +36,7 @@ import commondir from 'commondir'
  * @returns
  */
 export function moduleDirname(url: string): string {
-  return dirname(fileURLToPath(url))
+  return patheDirname(fileURLToPath(url))
 }
 
 /**
@@ -44,6 +62,6 @@ export function relativizePath(path: string): string {
  * @param url {URL} URL to obtain the path from.
  * @returns {string} The string representing the path.
  */
-export function fromURL(url: string | URL): string {
+export function pathFromURL(url: string | URL): string {
   return fileURLToPath(url)
 }

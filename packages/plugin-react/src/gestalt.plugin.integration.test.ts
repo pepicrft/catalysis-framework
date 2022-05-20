@@ -24,7 +24,7 @@ describe('plugin', () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const plugin = await ReactPlugin()
-      const outputFilePath = path.join(tmpDir, 'hydrate.js')
+      const outputFilePath = path.joinPath(tmpDir, 'hydrate.js')
 
       // When
       await buildWithRollup(plugin, outputFilePath)
@@ -118,7 +118,7 @@ async function getViteServer(
   componentModuleId: string,
   domElementSelector?: string
 ) {
-  const packageRoot = (await path.findUp('plugin-react', {
+  const packageRoot = (await path.findPathUp('plugin-react', {
     type: 'directory',
     cwd: path.moduleDirname(import.meta.url),
   })) as string

@@ -4,7 +4,7 @@
 We abstract away the dependency with the runtime (e.g. Node) to ensure compatibility across OSs and Javascript runtimes:
 
 ```ts
-import { path } from "@gestaltjs/core"
+import * as path from "@gestaltjs/core/node/path"
 ```
 
 ### `relativizePath`
@@ -35,9 +35,9 @@ The path relative to the current working directory.
 This function ensures the correct decodings of percent-encoded characters as well as ensuring a cross-platform valid absolute path string.
 
 ```ts
-import { path } from "@gestaltjs/core"
+import { pathFromURL } from "@gestaltjs/core/node/path"
 
-const resolvedPath = path.fromURL("file://nas/foo.txt")
+const resolvedPath = path.pathFromURL("file://nas/foo.txt")
 ```
 
 #### Arguments

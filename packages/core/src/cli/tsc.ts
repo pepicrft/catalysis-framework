@@ -1,6 +1,6 @@
 import { Abort } from '../shared/error'
 import { exec } from './system'
-import { findUp, dirname } from '../node/path.public'
+import { findPathUp, dirname } from '../node/path.public'
 import { fileURLToPath } from 'url'
 
 export const TSCNotFoundError = () => {
@@ -9,7 +9,7 @@ export const TSCNotFoundError = () => {
 
 export async function run(args: string[], cwd: string) {
   const __dirname = dirname(fileURLToPath(import.meta.url))
-  const tscPath = await findUp('node_modules/.bin/tsc', { cwd: __dirname })
+  const tscPath = await findPathUp('node_modules/.bin/tsc', { cwd: __dirname })
   if (!tscPath) {
     throw TSCNotFoundError()
   }

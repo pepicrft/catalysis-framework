@@ -1,9 +1,5 @@
 import type { MainTarget } from '../../models/targets/main'
-import {
-  dirname,
-  basename,
-  join as pathJoin,
-} from '../../../../node/path.public'
+import { dirname, basename, joinPath } from '../../../../node/path.public'
 import { ModuleLoader } from '../module-loader'
 import { loadRoutes } from './main/routes'
 import { loadLayouts } from './main/layouts'
@@ -22,7 +18,7 @@ export async function loadMainTarget(
   const directory = dirname(manifestPath)
   const userMainTarget = ((await moduleLoader.load(manifestPath)) as any)
     .default as UserMainTarget
-  const routesDirectory = pathJoin(directory, 'routes')
+  const routesDirectory = joinPath(directory, 'routes')
   return {
     ...userMainTarget,
     manifestPath,

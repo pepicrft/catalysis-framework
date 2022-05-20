@@ -1,5 +1,5 @@
 import { configurationFileName } from '../../constants'
-import { findUp as findPathUp } from '../../../node/path.public'
+import { findPathUp as findPathUp } from '../../../node/path.public'
 import { Configuration } from '../models/configuration'
 import { ModuleLoader } from './module-loader'
 

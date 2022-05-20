@@ -1,5 +1,5 @@
 import {
-  join as pathJoin,
+  joinPath,
   glob,
   relative as relativePath,
 } from '../../../../../node/path.public'
@@ -15,7 +15,7 @@ import {
 export async function loadLayouts(
   routesDirectory: string
 ): Promise<{ [key: string]: string }> {
-  const layouts = await glob(pathJoin(routesDirectory, '**/_layout.*'))
+  const layouts = await glob(joinPath(routesDirectory, '**/_layout.*'))
   const layoutEntries = layouts.map((layoutFile) => {
     const urlPath = `/${relativePath(
       routesDirectory,

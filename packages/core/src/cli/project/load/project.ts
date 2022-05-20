@@ -1,6 +1,6 @@
 import { Project } from '../models/project'
 import { Abort } from '../../../shared/error'
-import { dirname, join as pathJoin } from '../../../node/path.public'
+import { dirname, joinPath } from '../../../node/path.public'
 import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
@@ -42,7 +42,7 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
     const project = {
       configuration,
       directory,
-      sourcesGlob: pathJoin(directory, `src/**/*.{ts,js}`),
+      sourcesGlob: joinPath(directory, `src/**/*.{ts,js}`),
       targets,
     }
     await validateProject(project)

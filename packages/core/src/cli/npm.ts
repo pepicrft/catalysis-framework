@@ -1,5 +1,5 @@
 import { Bug } from '../shared/error'
-import { join as pathJoin, findUp } from '../node/path.public'
+import { joinPath, findPathUp } from '../node/path.public'
 import { pathExists } from '../shared/fs'
 import { content, fileToken } from './logger'
 import { WriteStream } from 'fs-extra'
@@ -82,7 +82,7 @@ type AddDependencyOptions = {
  * @param options {AddDependencyOptions} Options to add a dependency.
  */
 export async function addDependencies(options: AddDependencyOptions) {
-  const packageJsonPath = pathJoin(options.directory, 'package.json')
+  const packageJsonPath = joinPath(options.directory, 'package.json')
   const packageJsonExists = await pathExists(packageJsonPath)
   if (!packageJsonExists) {
     throw PackageJsonNotFoundError(options.directory)
@@ -150,14 +150,14 @@ export async function addDependencies(options: AddDependencyOptions) {
 export async function inferDependencyManager(
   fromDirectory: string
 ): Promise<DependencyManager> {
-  const yarnLockPath = await findUp('yarn.lock', {
+  const yarnLockPath = await findPathUp('yarn.lock', {
     cwd: fromDirectory,
     type: 'file',
   })
   if (yarnLockPath) {
     return 'yarn'
   }
-  const pnpmLockPath = await findUp('pnpm-lock.yaml', {
+  const pnpmLockPath = await findPathUp('pnpm-lock.yaml', {
     cwd: fromDirectory,
     type: 'file',
   })
