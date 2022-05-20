@@ -6,7 +6,7 @@ import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment'
 import { LoggerContentToken, LoggerContentType } from './logger/content'
 import { LoggerTarget, NoopLoggerTarget } from './logger/target'
-import { relativize } from '../node/path.public'
+import { relativizePath } from '../node/path.public'
 
 /**
  * We cache the loggers to ensure we only have an
@@ -219,7 +219,7 @@ export function content(
       const enumToken = token as LoggerContentToken
       switch (enumToken.type) {
         case LoggerContentType.Path:
-          output += formatGray(relativize(enumToken.value))
+          output += formatGray(relativizePath(enumToken.value))
           break
         case LoggerContentType.File:
           output += formatGray(enumToken.value)
