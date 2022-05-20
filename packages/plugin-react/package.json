@@ -44,7 +44,8 @@
     "@types/react-dom": "^18.0.2",
     "react": "^18.0.0",
     "rollup": "^2.73.0",
-    "rollup-plugin-esbuild": "^4.9.1"
+    "rollup-plugin-esbuild": "^4.9.1",
+    "esbuild": "^0.14.39"
   },
   "peerDependencies": {
     "react": "^18.0.0"
