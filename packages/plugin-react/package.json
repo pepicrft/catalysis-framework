@@ -39,7 +39,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "gestaltjs": "0.7.8",
+    "gestaltjs": "0.7.7",
     "@gestaltjs/core": "0.7.8",
     "@types/react-dom": "^18.0.2",
     "react": "^18.0.0",
