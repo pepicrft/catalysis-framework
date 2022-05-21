@@ -1,4 +1,4 @@
-import type { Plugin } from './plugin'
+import type { Plugin } from '../node/plugin'
 
 export type Configuration = {
   /**

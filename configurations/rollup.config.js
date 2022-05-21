@@ -16,8 +16,8 @@ export const aliases = (packageDir) => {
       replacement: path.join(packageDir, '../core/src/node/path.ts'),
     },
     {
-      find: '@gestaltjs/plugins',
-      replacement: path.join(packageDir, '../plugins/src/runtime/index.ts'),
+      find: '@gestaltjs/core/node/plugin',
+      replacement: path.join(packageDir, '../core/src/node/plugin.ts'),
     },
     {
       find: '@gestaltjs/core/cli',

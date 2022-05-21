@@ -40,7 +40,7 @@ export function gestaltjsPackageModules(): GestaltJSPackageModules {
   )
   const pluginsSourceDirectory = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    '../../plugins/src/runtime'
+    '../../core/src/node'
   )
   return {
     support: {
@@ -52,8 +52,8 @@ export function gestaltjsPackageModules(): GestaltJSPackageModules {
       path: path.join(gestaltjsPackageRuntimeDirectory, 'configuration.ts'),
     },
     plugins: {
-      identifier: '@gestaltjs/plugins',
-      path: path.join(pluginsSourceDirectory, 'index.ts'),
+      identifier: '@gestaltjs/core/node/plugin',
+      path: path.join(pluginsSourceDirectory, 'plugin.ts'),
     },
   }
 }

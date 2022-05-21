@@ -1,7 +1,7 @@
 import VuePlugin from './gestalt.plugin'
 import { describe, expect, test } from 'vitest'
 import { createServer } from 'vite'
-import { Plugin } from '@gestaltjs/plugins'
+import { Plugin } from '@gestaltjs/core/node/plugin'
 import { Plugin as RollupPlugin } from 'rollup'
 import { findPathUp, moduleDirname } from '@gestaltjs/core/node/path'
 

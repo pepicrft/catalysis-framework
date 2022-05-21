@@ -1,5 +1,4 @@
 import * as path from 'pathe'
-import dts from 'rollup-plugin-dts'
 import fg from 'fast-glob'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
@@ -10,18 +9,6 @@ const configuration = async () => {
     external: [...(await external(__dirname))],
   }
   return [
-    {
-      input: path.join(__dirname, 'src/runtime/index.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'runtime/index.js'),
-          format: 'esm',
-          exports: 'auto',
-          sourcemap: true,
-        },
-      ],
-      ...options,
-    },
     {
       input: await fg(path.join(__dirname, 'src/cli/commands/**/*.ts'), {
         ignore: path.join(__dirname, 'src/cli/commands/**/*.test.ts'),
@@ -39,4 +26,5 @@ const configuration = async () => {
   ]
 }
 
+// eslint-disable-next-line import/no-default-export
 export default configuration
