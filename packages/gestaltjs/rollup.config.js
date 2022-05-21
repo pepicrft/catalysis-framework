@@ -49,6 +49,7 @@ const configuration = async () => {
     ...(await runtime('configuration')),
     ...(await runtime('target')),
     ...(await runtime('db')),
+    ...(await runtime('plugin')),
   ]
 }
 

@@ -98,16 +98,6 @@ importers:
       vite: 2.9.9
       vitest: 0.12.8
 
-  ship:
-    specifiers:
-      '@gestaltjs/gestalt-plugin-react': workspace:*
-      gestaltjs: workspace:*
-      react: 18.1.0
-    devDependencies:
-      '@gestaltjs/gestalt-plugin-react': link:../packages/plugin-react
-      gestaltjs: link:../packages/gestaltjs
-      react: 18.1.0
-
   e2e:
     specifiers:
       '@cucumber/cucumber': ^8.1.2
@@ -315,6 +305,7 @@ importers:
       '@types/react-dom': ^18.0.2
       '@vitejs/plugin-react': ^1.3.1
       esbuild: ^0.14.39
+      gestaltjs: 0.7.8
       react: ^18.0.0
       react-dom: ^18.0.0
       rollup: ^2.73.0
@@ -326,6 +317,7 @@ importers:
       '@gestaltjs/core': link:../core
       '@types/react-dom': 18.0.2
       esbuild: 0.14.39
+      gestaltjs: link:../gestaltjs
       react: 18.0.0
       rollup: 2.73.0
       rollup-plugin-esbuild: 4.9.1_7adqdep3dyb6q46ys4q2gte2am
@@ -335,6 +327,7 @@ importers:
       '@gestaltjs/core': 0.7.8
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.42
       esbuild: ^0.14.39
+      gestaltjs: 0.7.8
       rollup: ^2.73.0
       rollup-plugin-esbuild: ^4.9.1
       svelte: ^3.48.0
@@ -344,6 +337,7 @@ importers:
     devDependencies:
       '@gestaltjs/core': link:../core
       esbuild: 0.14.39
+      gestaltjs: link:../gestaltjs
       rollup: 2.74.1
       rollup-plugin-esbuild: 4.9.1_3pm4nepjd6vnmqn35npt5y2clm
       svelte: 3.48.0
@@ -354,6 +348,7 @@ importers:
       '@gestaltjs/core': 0.7.8
       '@vitejs/plugin-vue': ^2.3.1
       esbuild: ^0.14.39
+      gestaltjs: 0.7.8
       rollup: ^2.73.0
       rollup-plugin-esbuild: ^4.9.1
       vite: 2.9.9
@@ -363,6 +358,7 @@ importers:
     devDependencies:
       '@gestaltjs/core': link:../core
       esbuild: 0.14.39
+      gestaltjs: link:../gestaltjs
       rollup: 2.74.1
       rollup-plugin-esbuild: 4.9.1_3pm4nepjd6vnmqn35npt5y2clm
       vite: 2.9.9
@@ -420,6 +416,16 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       vitepress: 0.22.4_ugdjhn4r2cpuj4csimen2pts54
+
+  ship:
+    specifiers:
+      '@gestaltjs/gestalt-plugin-react': workspace:*
+      gestaltjs: workspace:*
+      react: 18.1.0
+    devDependencies:
+      '@gestaltjs/gestalt-plugin-react': link:../packages/plugin-react
+      gestaltjs: link:../packages/gestaltjs
+      react: 18.1.0
 
 packages:
 

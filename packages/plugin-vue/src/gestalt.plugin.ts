@@ -1,4 +1,4 @@
-import { definePlugin } from '@gestaltjs/core/node/plugin'
+import { definePlugin } from 'gestaltjs/plugin'
 import vue from '@vitejs/plugin-vue'
 import { hydrate } from './renderer/hydrate'
 import { ssr } from './renderer/ssr'

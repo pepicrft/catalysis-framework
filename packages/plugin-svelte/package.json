@@ -38,6 +38,7 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.42"
   },
   "devDependencies": {
+    "gestaltjs": "0.7.8",
     "@gestaltjs/core": "0.7.8",
     "svelte": "^3.48.0",
     "vite": "2.9.9",

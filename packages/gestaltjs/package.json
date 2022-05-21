@@ -37,6 +37,10 @@
     "./db": {
       "import": "./dist/runtime/db.js",
       "types": "./dist/runtime/db.d.ts"
+    },
+    "./plugin": {
+      "import": "./dist/runtime/plugin.js",
+      "types": "./dist/runtime/plugin.d.ts"
     }
   },
   "scripts": {
