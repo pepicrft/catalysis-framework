@@ -1,8 +1,9 @@
 import VuePlugin from './gestalt.plugin'
 import { describe, expect, test } from 'vitest'
 import { createServer } from 'vite'
-import { path, Plugin } from '@gestaltjs/plugins'
+import { Plugin } from '@gestaltjs/plugins'
 import { Plugin as RollupPlugin } from 'rollup'
+import { findPathUp, moduleDirname } from '@gestaltjs/core/node/path'
 
 describe('plugin', () => {
   test('ssr', async () => {
@@ -68,9 +69,9 @@ async function getViteServer(
   componentModuleId: string,
   domElementSelector?: string
 ) {
-  const packageRoot = (await path.findPathUp('plugin-vue', {
+  const packageRoot = (await findPathUp('plugin-vue', {
     type: 'directory',
-    cwd: path.moduleDirname(import.meta.url),
+    cwd: moduleDirname(import.meta.url),
   })) as string
   return await createServer({
     root: packageRoot,

@@ -2,11 +2,12 @@
 import ReactPlugin from './gestalt.plugin'
 import { describe, expect, test } from 'vitest'
 import { createServer } from 'vite'
-import { path, fs, Plugin } from '@gestaltjs/plugins'
+import { fs, Plugin } from '@gestaltjs/plugins'
 import { Plugin as RollupPlugin } from 'rollup'
 import { temporary } from '@gestaltjs/testing'
 import { rollup } from 'rollup'
 import esbuild from 'rollup-plugin-esbuild'
+import { findPathUp, joinPath, moduleDirname } from '@gestaltjs/core/node/path'
 
 describe('plugin', () => {
   test('ssr', async () => {
@@ -24,7 +25,7 @@ describe('plugin', () => {
     await temporary.directory(async (tmpDir) => {
       // Given
       const plugin = await ReactPlugin()
-      const outputFilePath = path.joinPath(tmpDir, 'hydrate.js')
+      const outputFilePath = joinPath(tmpDir, 'hydrate.js')
 
       // When
       await buildWithRollup(plugin, outputFilePath)
@@ -118,9 +119,9 @@ async function getViteServer(
   componentModuleId: string,
   domElementSelector?: string
 ) {
-  const packageRoot = (await path.findPathUp('plugin-react', {
+  const packageRoot = (await findPathUp('plugin-react', {
     type: 'directory',
-    cwd: path.moduleDirname(import.meta.url),
+    cwd: moduleDirname(import.meta.url),
   })) as string
   return await createServer({
     root: packageRoot,

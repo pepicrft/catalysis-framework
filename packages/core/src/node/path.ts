@@ -5,14 +5,37 @@ import {
   relative as relativePath,
   dirname as patheDirname,
   basename,
+  resolve,
+  parse,
+  join,
 } from 'pathe'
 import { fileURLToPath } from 'url'
-export { resolve, relative, parse } from 'pathe'
-import { join } from 'pathe'
+export { relative, parse } from 'pathe'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import commondir from 'commondir'
+
+/**
+ * Parses a string that represents a path and returns a path.ParsedPath
+ * instance that exposes attributes to access information about the path.
+ * @param path {path.ParsedPath} Parsed path.
+ * @returns
+ */
+export function parsePath(path: string): ReturnType<typeof parse> {
+  return parse(path)
+}
+
+/**
+ * The right-most parameter is considered {to}. Other parameters are considered an array of {from}.
+ * Starting from leftmost {from} parameter, resolves {to} to an absolute path.
+ * If {to} isn't already absolute, {from} arguments are prepended in right to left order, until an absolute path is found. If after using all {from} paths still no absolute path is found, the current working directory is used as well. The resulting path is normalized, and trailing slashes are removed unless the path gets resolved to the root directory.
+ * @param pathComponents {string[]} String paths to join. Non-string arguments are ignored.
+ * @returns {string} Resolved path.
+ */
+export function resolvePath(...pathComponents: string[]): string {
+  return resolve(...pathComponents)
+}
 
 /**
  * Given a path, it returns the last component. For example, if the path
