@@ -1,4 +1,4 @@
-import { UserRenderer } from '../../../shared/plugin/renderer'
+import { UserRenderer } from '../../../node/plugin/renderer'
 
 /**
  * An internal renderer type that includes the
