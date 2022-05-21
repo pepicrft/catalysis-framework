@@ -38,10 +38,10 @@
     "@gestaltjs/core": "0.7.8"
   },
   "peerDependencies": {
-    "@oclif/core": "1.8.2"
+    "@oclif/core": "1.9.0"
   },
   "devDependencies": {
-    "@oclif/core": "1.8.2"
+    "@oclif/core": "1.9.0"
   },
   "oclif": {
     "commands": "./dist/cli/commands",
