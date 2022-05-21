@@ -1,4 +1,4 @@
-import { glob, joinPath } from '../../../node/path.public'
+import { glob, joinPath } from '../../../node/path'
 import { mainTargetFileName } from '../../constants'
 import { Targets } from '../models/targets'
 import { loadMainTarget } from './targets/main'

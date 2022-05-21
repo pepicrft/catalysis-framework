@@ -1,6 +1,6 @@
 import { Project } from '../models/project'
 import { Abort } from '../../../shared/error'
-import { dirname, joinPath } from '../../../node/path.public'
+import { parentDirectory, joinPath } from '../../../node/path'
 import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
@@ -34,7 +34,7 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   if (!configurationPath) {
     throw ConfigFileNotFoundError()
   }
-  const directory = dirname(configurationPath)
+  const directory = parentDirectory(configurationPath)
   const moduleLoader = await getModuleLoader(directory)
   try {
     const configuration = await loadConfig(configurationPath, moduleLoader)

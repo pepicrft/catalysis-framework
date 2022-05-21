@@ -6,7 +6,7 @@ import { external, plugins, distDir } from '../../configurations/rollup.config'
 const configuration = async () => {
   const coreExternal = [...(await external(__dirname))]
   const publicFiles = ['src/runtime/index.ts', 'src/shared/index.ts']
-  const nodeFiles = await fg('src/node/*.public.ts', {
+  const nodeFiles = await fg('src/node/*.ts', {
     ignore: 'src/node/*.test.ts',
   })
 

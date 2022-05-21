@@ -4,7 +4,7 @@ import { getModuleLoader } from './module-loader'
 import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project'
 import { models } from '@gestaltjs/testing'
-import { joinPath } from '../../../node/path.public'
+import { joinPath } from '../../../node/path'
 import { validateProject } from '../validate/project'
 
 vi.mock('./config')

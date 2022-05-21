@@ -1,6 +1,6 @@
 import { Abort } from '../shared/error'
 import { exec } from './system'
-import { findPathUp, dirname } from '../node/path.public'
+import { findPathUp, parentDirectory } from '../node/path'
 import { fileURLToPath } from 'url'
 
 export const ESLintNotFoundError = () => {
@@ -10,7 +10,7 @@ export const ESLintNotFoundError = () => {
 }
 
 export async function run(args: string[], cwd: string) {
-  const __dirname = dirname(fileURLToPath(import.meta.url))
+  const __dirname = parentDirectory(fileURLToPath(import.meta.url))
   const eslintPath = await findPathUp('node_modules/.bin/eslint', {
     cwd: __dirname,
   })

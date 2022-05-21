@@ -1,7 +1,7 @@
 import { getModuleLoader } from './module-loader'
 import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
-import { joinPath } from '../../../node/path.public'
+import { joinPath } from '../../../node/path'
 import { writeFile } from '../../../shared/fs'
 
 describe('getModuleLoader', () => {

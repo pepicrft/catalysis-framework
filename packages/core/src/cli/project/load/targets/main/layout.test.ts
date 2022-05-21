@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
-import { joinPath, dirname } from '../../../../../node/path.public'
+import { joinPath, parentDirectory } from '../../../../../node/path'
 import { loadLayouts } from './layouts'
 import { writeFile, makeDirectory } from '../../../../../shared/fs'
 
@@ -10,8 +10,8 @@ describe('loadLayouts', () => {
       // Given
       const settingsLayoutPath = joinPath(tmpDir, 'settings/_layout.jsx')
       const homeLayout = joinPath(tmpDir, '_layout.jsx')
-      await makeDirectory(dirname(settingsLayoutPath))
-      await makeDirectory(dirname(homeLayout))
+      await makeDirectory(parentDirectory(settingsLayoutPath))
+      await makeDirectory(parentDirectory(homeLayout))
       await writeFile(settingsLayoutPath, '')
       await writeFile(homeLayout, '')
 

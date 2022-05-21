@@ -15,7 +15,7 @@ import commondir from 'commondir'
  * @param path {string} Path to the directory of the given path.
  * @returns {string} The path to the parent directory.
  */
-export function dirname(path: string): string {
+export function parentDirectory(path: string): string {
   return patheDirname(path)
 }
 

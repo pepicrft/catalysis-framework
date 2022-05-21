@@ -1,5 +1,5 @@
 import { readFile, writeFile } from './fs'
-import { joinPath } from '../node/path.public'
+import { joinPath } from '../node/path'
 
 import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'

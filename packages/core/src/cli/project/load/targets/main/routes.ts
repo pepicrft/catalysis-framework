@@ -4,11 +4,11 @@ import { createRouter } from 'radix3'
 import {
   joinPath,
   glob,
-  dirname,
+  parentDirectory,
   basename,
   relative as relativePath,
   parse as parsePath,
-} from '../../../../../node/path.public'
+} from '../../../../../node/path'
 import { pathExists } from '../../../../../shared/fs'
 
 /**
@@ -131,7 +131,7 @@ async function filePathIfExists(
  * @returns {string} The file path without the extensions.
  */
 function getFilePathWithoutExtension(filePath: string): string {
-  return joinPath(dirname(filePath), parsePath(basename(filePath)).name)
+  return joinPath(parentDirectory(filePath), parsePath(basename(filePath)).name)
     .replace('.ui.static', '')
     .replace('.ui', '')
 }

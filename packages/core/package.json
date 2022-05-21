@@ -12,8 +12,8 @@
   "type": "module",
   "exports": {
     "./node/path": {
-      "node": "./dist/node/path.public.js",
-      "types": "./dist/node/path.public.d.ts"
+      "node": "./dist/node/path.js",
+      "types": "./dist/node/path.d.ts"
     },
     "./cli": {
       "import": "./dist/cli/index.js",

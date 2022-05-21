@@ -1,4 +1,4 @@
-export * as path from '../node/path.public'
+export * as path from '../node/path'
 export * as system from './system'
 export * as error from '../shared/error'
 export * as logger from './logger'

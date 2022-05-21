@@ -2,7 +2,7 @@ import {
   joinPath,
   glob,
   relative as relativePath,
-} from '../../../../../node/path.public'
+} from '../../../../../node/path'
 
 /**
  * This functions finds all the layout files under a target's routes directory,

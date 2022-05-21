@@ -1,5 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import { resolve as pathResolve } from '../node/path.public'
+import { resolve as pathResolve } from '../node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default abstract class extends Command {
