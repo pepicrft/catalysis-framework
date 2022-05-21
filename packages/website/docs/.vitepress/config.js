@@ -53,9 +53,9 @@ export default defineConfig({
         activeMatch: '^/contributors/',
       },
       {
-        text: 'Catalysis',
-        link: '/catalysis/introduction',
-        activeMatch: '^/catalysis/',
+        text: 'Ship',
+        link: '/ship/introduction',
+        activeMatch: '^/ship/',
       },
       {
         text: 'Blog',
@@ -84,7 +84,7 @@ export default defineConfig({
       '/guide/': getGuideSidebar(),
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
-      '/catalysis/': getCatalysisSidebar(),
+      '/ship/': getShipSidebar(),
       '/reference/': getReferenceSidebar(),
     },
   },
@@ -149,14 +149,14 @@ function getBlogSidebar() {
   ]
 }
 
-function getCatalysisSidebar() {
+function getShipSidebar() {
   return [
     {
-      text: 'Catalysis',
+      text: 'Ship',
       children: [
         {
           text: 'Introduction',
-          link: '/catalysis/introduction',
+          link: '/ship/introduction',
         },
       ],
     },

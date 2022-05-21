@@ -98,7 +98,7 @@ importers:
       vite: 2.9.9
       vitest: 0.12.8
 
-  catalysis:
+  ship:
     specifiers:
       '@gestaltjs/gestalt-plugin-react': workspace:*
       gestaltjs: workspace:*
