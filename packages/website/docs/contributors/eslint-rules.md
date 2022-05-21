@@ -18,10 +18,10 @@ we recommend [configuring your code editor](https://**eslint**.org/docs/user-gui
 We also provide two commands that you can use for running ESLint with and without fixing the fixable issues:
 
 ```bash
-// Lint
+# Lint
 pnpm run lint
 
-// Fix the linting issues
+# Fix the linting issues
 pnpm run lint:fix
 ```
 
