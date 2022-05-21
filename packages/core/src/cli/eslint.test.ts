@@ -1,18 +1,18 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
-import { findUp, dirname } from '../shared/path'
+import { findPathUp, parentDirectory } from '../node/path'
 import { run, ESLintNotFoundError } from './eslint'
 
 vi.mock('./system')
-vi.mock('../shared/path')
+vi.mock('../node/path')
 
 describe('run', () => {
   test('runs eslint', async () => {
     // Given
     const eslintPath = '/test/eslint'
     const eslintTSDirectory = '/gestalt/eslint'
-    vi.mocked(findUp).mockResolvedValue(eslintPath)
-    vi.mocked(dirname).mockReturnValue(eslintTSDirectory)
+    vi.mocked(findPathUp).mockResolvedValue(eslintPath)
+    vi.mocked(parentDirectory).mockReturnValue(eslintTSDirectory)
     const args = ['foo']
     const cwd = '/project'
 
@@ -20,7 +20,7 @@ describe('run', () => {
     await run(args, cwd)
 
     // Then
-    expect(findUp).toHaveBeenCalledWith('node_modules/.bin/eslint', {
+    expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/eslint', {
       cwd: eslintTSDirectory,
     })
     expect(exec).toHaveBeenCalledWith(eslintPath, args, {
@@ -32,8 +32,8 @@ describe('run', () => {
   test('aborts when ESLint cannot be found', async () => {
     // Given
     const eslintTSDirectory = '/gestalt/eslint'
-    vi.mocked(findUp).mockResolvedValue(undefined)
-    vi.mocked(dirname).mockReturnValue(eslintTSDirectory)
+    vi.mocked(findPathUp).mockResolvedValue(undefined)
+    vi.mocked(parentDirectory).mockReturnValue(eslintTSDirectory)
     const args = ['foo']
     const cwd = '/project'
 

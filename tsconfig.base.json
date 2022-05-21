@@ -16,6 +16,7 @@
     "inlineSourceMap": true,
     "isolatedModules": false,
     "paths": {
+      "@gestaltjs/core/node/path": ["../../core/src/node/path.ts"],
       "@gestaltjs/core/shared": ["../../core/src/shared/index.ts"],
       "@gestaltjs/core/runtime": ["../../core/src/runtime/index.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],

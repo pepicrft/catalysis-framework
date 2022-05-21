@@ -2,13 +2,13 @@ import { Route } from '../../../models/targets/main/route'
 import { RadixRouter } from 'radix3'
 import { createRouter } from 'radix3'
 import {
-  join as pathJoin,
+  joinPath,
   glob,
-  dirname,
-  basename,
-  relative as relativePath,
-  parse as parsePath,
-} from '../../../../../shared/path'
+  parentDirectory,
+  pathBasename,
+  relativePath,
+  parsePath,
+} from '../../../../../node/path'
 import { pathExists } from '../../../../../shared/fs'
 
 /**
@@ -43,10 +43,10 @@ export async function loadRoutes(
  * @returns {Promise<string[]>} A promise that resolves with the paths to the files representing the routes.
  */
 async function getUIRouteFilePaths(directory: string): Promise<string[]> {
-  return await glob(pathJoin(directory, '**/*.ui.*'), {
+  return await glob(joinPath(directory, '**/*.ui.*'), {
     ignore: [
-      pathJoin(directory, '**/*.list.*'),
-      pathJoin(directory, '**/*.get.*'),
+      joinPath(directory, '**/*.list.*'),
+      joinPath(directory, '**/*.get.*'),
     ],
   })
 }
@@ -131,7 +131,10 @@ async function filePathIfExists(
  * @returns {string} The file path without the extensions.
  */
 function getFilePathWithoutExtension(filePath: string): string {
-  return pathJoin(dirname(filePath), parsePath(basename(filePath)).name)
+  return joinPath(
+    parentDirectory(filePath),
+    parsePath(pathBasename(filePath)).name
+  )
     .replace('.ui.static', '')
     .replace('.ui', '')
 }

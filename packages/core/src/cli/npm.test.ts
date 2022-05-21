@@ -1,5 +1,5 @@
 import { addDependencies, inferDependencyManager } from './npm'
-import { join as pathJoin } from '../shared/path'
+import { joinPath } from '../node/path'
 import { writeFile, makeDirectory } from '../shared/fs'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
@@ -11,7 +11,7 @@ describe('addDependencies', () => {
   test('runs the right command when npm and dev dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -34,7 +34,7 @@ describe('addDependencies', () => {
   test('runs the right command when npm and production dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -57,7 +57,7 @@ describe('addDependencies', () => {
   test('runs the right command when npm and peer dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -80,7 +80,7 @@ describe('addDependencies', () => {
   test('runs the right command when yarn and dev dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -103,7 +103,7 @@ describe('addDependencies', () => {
   test('runs the right command when yarn and prod dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -126,7 +126,7 @@ describe('addDependencies', () => {
   test('runs the right command when yarn and peer dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -149,7 +149,7 @@ describe('addDependencies', () => {
   test('runs the right command when pnpm and dev dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -172,7 +172,7 @@ describe('addDependencies', () => {
   test('runs the right command when pnpm and peer dependencies', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const packageJsonPath = pathJoin(tmpDir, 'package.json')
+      const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
 
       // When
@@ -197,8 +197,8 @@ describe('inferDependencyManager', () => {
   test('returns yarn when it finds a yarn.lock', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const lockfilePath = pathJoin(tmpDir, 'yarn.lock')
-      const nestedDirectory = pathJoin(tmpDir, 'a/b/c')
+      const lockfilePath = joinPath(tmpDir, 'yarn.lock')
+      const nestedDirectory = joinPath(tmpDir, 'a/b/c')
       await makeDirectory(nestedDirectory)
       await writeFile(lockfilePath, '')
 
@@ -213,8 +213,8 @@ describe('inferDependencyManager', () => {
   test('returns pnpm when it finds a pnpm-lock.yaml', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const lockfilePath = pathJoin(tmpDir, 'pnpm-lock.yaml')
-      const nestedDirectory = pathJoin(tmpDir, 'a/b/c')
+      const lockfilePath = joinPath(tmpDir, 'pnpm-lock.yaml')
+      const nestedDirectory = joinPath(tmpDir, 'a/b/c')
       await makeDirectory(nestedDirectory)
       await writeFile(lockfilePath, '')
 
@@ -229,7 +229,7 @@ describe('inferDependencyManager', () => {
   test('returns npm by default', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const nestedDirectory = pathJoin(tmpDir, 'a/b/c')
+      const nestedDirectory = joinPath(tmpDir, 'a/b/c')
       await makeDirectory(nestedDirectory)
 
       // When

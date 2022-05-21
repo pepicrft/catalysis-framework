@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
-import { join as pathJoin, dirname } from '../../../../../shared/path'
+import { joinPath, parentDirectory } from '../../../../../node/path'
 import { loadLayouts } from './layouts'
 import { writeFile, makeDirectory } from '../../../../../shared/fs'
 
@@ -8,10 +8,10 @@ describe('loadLayouts', () => {
   test('loads layouts named _layout.* in any subdirectory', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const settingsLayoutPath = pathJoin(tmpDir, 'settings/_layout.jsx')
-      const homeLayout = pathJoin(tmpDir, '_layout.jsx')
-      await makeDirectory(dirname(settingsLayoutPath))
-      await makeDirectory(dirname(homeLayout))
+      const settingsLayoutPath = joinPath(tmpDir, 'settings/_layout.jsx')
+      const homeLayout = joinPath(tmpDir, '_layout.jsx')
+      await makeDirectory(parentDirectory(settingsLayoutPath))
+      await makeDirectory(parentDirectory(homeLayout))
       await writeFile(settingsLayoutPath, '')
       await writeFile(homeLayout, '')
 

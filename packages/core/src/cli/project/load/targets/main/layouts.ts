@@ -1,8 +1,4 @@
-import {
-  join as pathJoin,
-  glob,
-  relative as relativePath,
-} from '../../../../../shared/path'
+import { joinPath, glob, relativePath } from '../../../../../node/path'
 
 /**
  * This functions finds all the layout files under a target's routes directory,
@@ -15,7 +11,7 @@ import {
 export async function loadLayouts(
   routesDirectory: string
 ): Promise<{ [key: string]: string }> {
-  const layouts = await glob(pathJoin(routesDirectory, '**/_layout.*'))
+  const layouts = await glob(joinPath(routesDirectory, '**/_layout.*'))
   const layoutEntries = layouts.map((layoutFile) => {
     const urlPath = `/${relativePath(
       routesDirectory,

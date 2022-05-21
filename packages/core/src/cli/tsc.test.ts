@@ -1,18 +1,18 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
-import { findUp, dirname } from '../shared/path'
+import { findPathUp, parentDirectory } from '../node/path'
 import { run, TSCNotFoundError } from './tsc'
 
 vi.mock('./system')
-vi.mock('../shared/path')
+vi.mock('../node/path')
 
 describe('run', () => {
   test('runs tsc', async () => {
     // Given
     const tscPath = '/test/tsc'
     const dirnamePath = '/gestalt/tsc'
-    vi.mocked(findUp).mockResolvedValue(tscPath)
-    vi.mocked(dirname).mockReturnValue(dirnamePath)
+    vi.mocked(findPathUp).mockResolvedValue(tscPath)
+    vi.mocked(parentDirectory).mockReturnValue(dirnamePath)
     const args = ['foo']
     const cwd = '/project'
 
@@ -20,7 +20,7 @@ describe('run', () => {
     await run(args, cwd)
 
     // Then
-    expect(findUp).toHaveBeenCalledWith('node_modules/.bin/tsc', {
+    expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/tsc', {
       cwd: dirnamePath,
     })
     expect(exec).toHaveBeenCalledWith(tscPath, args, { stdio: 'inherit', cwd })
@@ -29,8 +29,8 @@ describe('run', () => {
   test('aborts when typescript compiler cannot be found', async () => {
     // Given
     const eslintTSDirectory = '/gestalt/tsc'
-    vi.mocked(findUp).mockResolvedValue(undefined)
-    vi.mocked(dirname).mockReturnValue(eslintTSDirectory)
+    vi.mocked(findPathUp).mockResolvedValue(undefined)
+    vi.mocked(parentDirectory).mockReturnValue(eslintTSDirectory)
     const args = ['foo']
     const cwd = '/project'
 

@@ -2,7 +2,7 @@ import { loadMainTarget } from './main'
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
-import { dirname, basename, join as pathJoin } from '../../../../shared/path'
+import { parentDirectory, pathBasename, joinPath } from '../../../../node/path'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
 import { Route } from '../../models/targets/main/route'
@@ -13,7 +13,7 @@ describe('loadMainTarget', () => {
   test('loads the target successfully', async () => {
     await temporary.directory(async (tmpDir) => {
       // Given
-      const manifestPath = pathJoin(tmpDir, 'gestalt.main.js')
+      const manifestPath = joinPath(tmpDir, 'gestalt.main.js')
       const load = vi.fn()
       const mainTarget = models.testMainTarget()
       const moduleLoader: any = { load }
@@ -26,8 +26,8 @@ describe('loadMainTarget', () => {
 
       // Then
       expect(got.manifestPath).toEqual(manifestPath)
-      expect(got.name).toEqual(basename(dirname(manifestPath)))
-      expect(got.directory).toEqual(dirname(manifestPath))
+      expect(got.name).toEqual(pathBasename(parentDirectory(manifestPath)))
+      expect(got.directory).toEqual(parentDirectory(manifestPath))
       expect(got.router).toBe(router)
     })
   })

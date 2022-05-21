@@ -1,5 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import { resolve as pathResolve } from '../shared/path'
+import { resolvePath } from '../node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default abstract class extends Command {
@@ -36,7 +36,7 @@ export default abstract class extends Command {
       char: 'p',
       env: 'GESTALT_PATH',
       default: process.cwd(),
-      parse: async (input) => pathResolve(input),
+      parse: async (input) => resolvePath(input),
       description: 'The path to the directory from where the command will run.',
       required: false,
     }),

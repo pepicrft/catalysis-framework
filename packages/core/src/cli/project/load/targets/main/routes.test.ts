@@ -2,7 +2,7 @@ import { loadRoutes } from './routes'
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
-import { dirname, join as pathJoin } from '../../../../../shared/path'
+import { parentDirectory, joinPath } from '../../../../../node/path'
 import { writeFile, makeDirectory } from '../../../../../shared/fs'
 import { Route } from '../../../models/targets/main/route'
 
@@ -13,16 +13,16 @@ describe('loadRoutes', () => {
       const load = vi.fn()
       const mainTarget = models.testMainTarget()
       load.mockResolvedValue(mainTarget)
-      const aboutUIFilePath = pathJoin(tmpDir, 'about.ui.static.jsx')
-      const settingsUIFilePath = pathJoin(tmpDir, 'settings/index.ui.jsx')
-      const postsLayoutFile = pathJoin(tmpDir, 'posts/_layout.jsx')
-      const postUIFilePath = pathJoin(tmpDir, 'posts/[post].ui.static.jsx')
-      const postListFilePath = pathJoin(tmpDir, 'posts/[post].list.ts')
-      const postGetFilePath = pathJoin(tmpDir, 'posts/[post].get.js')
+      const aboutUIFilePath = joinPath(tmpDir, 'about.ui.static.jsx')
+      const settingsUIFilePath = joinPath(tmpDir, 'settings/index.ui.jsx')
+      const postsLayoutFile = joinPath(tmpDir, 'posts/_layout.jsx')
+      const postUIFilePath = joinPath(tmpDir, 'posts/[post].ui.static.jsx')
+      const postListFilePath = joinPath(tmpDir, 'posts/[post].list.ts')
+      const postGetFilePath = joinPath(tmpDir, 'posts/[post].get.js')
 
-      await makeDirectory(dirname(aboutUIFilePath))
-      await makeDirectory(dirname(settingsUIFilePath))
-      await makeDirectory(dirname(postUIFilePath))
+      await makeDirectory(parentDirectory(aboutUIFilePath))
+      await makeDirectory(parentDirectory(settingsUIFilePath))
+      await makeDirectory(parentDirectory(postUIFilePath))
 
       await writeFile(aboutUIFilePath, '')
       await writeFile(settingsUIFilePath, '')
