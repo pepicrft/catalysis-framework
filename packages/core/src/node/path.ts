@@ -16,11 +16,11 @@ import commondir from 'commondir'
 
 /**
  * Given a path, it returns the last component. For example, if the path
- * is /src/project/index.ts, pathBaseName will yield "index.ts".
+ * is /src/project/index.ts, pathBasename will yield "index.ts".
  * @param path {string} Path those basename will be returned.
  * @returns {string} The path basename.
  */
-export function pathBaseName(path: string): string {
+export function pathBasename(path: string): string {
   return basename(path)
 }
 

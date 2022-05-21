@@ -1,5 +1,5 @@
 import type { MainTarget } from '../../models/targets/main'
-import { parentDirectory, pathBaseName, joinPath } from '../../../../node/path'
+import { parentDirectory, pathBasename, joinPath } from '../../../../node/path'
 import { ModuleLoader } from '../module-loader'
 import { loadRoutes } from './main/routes'
 import { loadLayouts } from './main/layouts'
@@ -22,7 +22,7 @@ export async function loadMainTarget(
   return {
     ...userMainTarget,
     manifestPath,
-    name: pathBaseName(parentDirectory(manifestPath)),
+    name: pathBasename(parentDirectory(manifestPath)),
     directory,
     router: await loadRoutes(routesDirectory),
     layouts: await loadLayouts(routesDirectory),

@@ -5,7 +5,7 @@ import {
   joinPath,
   glob,
   parentDirectory,
-  pathBaseName,
+  pathBasename,
   relative as relativePath,
   parse as parsePath,
 } from '../../../../../node/path'
@@ -133,7 +133,7 @@ async function filePathIfExists(
 function getFilePathWithoutExtension(filePath: string): string {
   return joinPath(
     parentDirectory(filePath),
-    parsePath(pathBaseName(filePath)).name
+    parsePath(pathBasename(filePath)).name
   )
     .replace('.ui.static', '')
     .replace('.ui', '')
