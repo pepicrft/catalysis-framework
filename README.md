@@ -8,7 +8,6 @@
   <img src="https://img.shields.io/github/stars/gestaltjs/gestalt?style=flat-square" alt="GitHub stars">
   <img src="https://img.shields.io/github/commit-activity/w/gestaltjs/gestalt?style=flat-square" alt="Commit Activity">
   <img src="https://img.shields.io/github/contributors/gestaltjs/gestalt?style=flat-square" alt="Contributors">
-  <img src="https://img.shields.io/github/commits-since/gestaltjs/gestalt/latest?style=flat-square" alt="Latest Commits">
   <a href="http://twitter.com/gestaltjs"><img src="https://img.shields.io/twitter/follow/gestaltjs?style=flat-square" alt="Twitter Followers"></a>
   <img src="https://img.shields.io/github/license/gestaltjs/gestalt?style=flat-square" alt="License">
   <a href="#contributors-"><img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square" alt="Contributors"></a>
