@@ -2,7 +2,7 @@ import { loadMainTarget } from './main'
 import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
-import { parentDirectory, basename, joinPath } from '../../../../node/path'
+import { parentDirectory, pathBaseName, joinPath } from '../../../../node/path'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
 import { Route } from '../../models/targets/main/route'
@@ -26,7 +26,7 @@ describe('loadMainTarget', () => {
 
       // Then
       expect(got.manifestPath).toEqual(manifestPath)
-      expect(got.name).toEqual(basename(parentDirectory(manifestPath)))
+      expect(got.name).toEqual(pathBaseName(parentDirectory(manifestPath)))
       expect(got.directory).toEqual(parentDirectory(manifestPath))
       expect(got.router).toBe(router)
     })

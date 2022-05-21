@@ -1,14 +1,28 @@
 export { findUp as findPathUp } from 'find-up'
 export { default as glob } from 'fast-glob'
 import process from 'node:process'
-import { relative as relativePath, dirname as patheDirname } from 'pathe'
+import {
+  relative as relativePath,
+  dirname as patheDirname,
+  basename,
+} from 'pathe'
 import { fileURLToPath } from 'url'
-export { basename, resolve, relative, parse } from 'pathe'
+export { resolve, relative, parse } from 'pathe'
 import { join } from 'pathe'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import commondir from 'commondir'
+
+/**
+ * Given a path, it returns the last component. For example, if the path
+ * is /src/project/index.ts, pathBaseName will yield "index.ts".
+ * @param path {string} Path those basename will be returned.
+ * @returns {string} The path basename.
+ */
+export function pathBaseName(path: string): string {
+  return basename(path)
+}
 
 /**
  * Given a path, it returns the path of the parent directory.
