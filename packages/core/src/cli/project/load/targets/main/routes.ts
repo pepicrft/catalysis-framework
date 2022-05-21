@@ -6,8 +6,8 @@ import {
   glob,
   parentDirectory,
   pathBasename,
-  relative as relativePath,
-  parse as parsePath,
+  relativePath,
+  parsePath,
 } from '../../../../../node/path'
 import { pathExists } from '../../../../../shared/fs'
 

@@ -126,6 +126,7 @@ function getContributorsSidebar() {
           children: [
             { text: 'fs', link: 'contributors/core/fs' },
             { text: 'npm', link: 'contributors/core/npm' },
+            { text: 'path', link: 'contributors/core/path' },
           ],
         },
       ],
