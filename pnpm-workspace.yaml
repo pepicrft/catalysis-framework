@@ -2,4 +2,3 @@ packages:
   - 'packages/**'
   - 'fixtures/**'
   - 'e2e'
-  - 'ship'

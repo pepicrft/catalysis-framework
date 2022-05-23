@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
-pushd $SCRIPT_DIR/.. > /dev/null
-pnpm build
-popd > /dev/null
-
-$SCRIPT_DIR/../packages/gestaltjs/bin/dev.js $@

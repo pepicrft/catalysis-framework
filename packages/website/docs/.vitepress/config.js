@@ -53,11 +53,6 @@ export default defineConfig({
         activeMatch: '^/contributors/',
       },
       {
-        text: 'Ship',
-        link: '/ship/introduction',
-        activeMatch: '^/ship/',
-      },
-      {
         text: 'Blog',
         link: '/blog/2022-03-14-cohesive-framework',
         activeMatch: '^/blog/',
@@ -84,7 +79,6 @@ export default defineConfig({
       '/guide/': getGuideSidebar(),
       '/contributors/': getContributorsSidebar(),
       '/blog/': getBlogSidebar(),
-      '/ship/': getShipSidebar(),
       '/reference/': getReferenceSidebar(),
     },
   },
@@ -144,20 +138,6 @@ function getBlogSidebar() {
           link: '/blog/2022-03-14-cohesive-framework',
         },
         { text: 'Why Gestalt', link: '/blog/2022-01-19-why-gestalt' },
-      ],
-    },
-  ]
-}
-
-function getShipSidebar() {
-  return [
-    {
-      text: 'Ship',
-      children: [
-        {
-          text: 'Introduction',
-          link: '/ship/introduction',
-        },
       ],
     },
   ]
