@@ -1,4 +1,3 @@
-import type { UserRenderer } from './plugin/renderer'
 import type { UserAdapter } from './plugin/adapter'
 
 /**
@@ -11,11 +10,6 @@ export type Plugin = {
 
   // The plugin description.
   description: string
-
-  /**
-   * A renderer integrates Gestalt with UI technologies like React or Svelte.
-   */
-  renderer?: UserRenderer
 
   /**
    * An adapter instructs Gestalt on how to build and output a Gestalt project for distribution.

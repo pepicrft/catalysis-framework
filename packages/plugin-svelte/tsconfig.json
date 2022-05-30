@@ -1,9 +1,0 @@
-{
-  "extends": "../../tsconfig.base.json",
-  "include": ["gestalt.plugin.ts", "./src/**/*.ts"],
-  "exclude": ["./dist"],
-  "compilerOptions": {
-    "outDir": "dist",
-    "baseUrl": "src"
-  }
-}
