@@ -1,41 +1,41 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from 'react'
+import clsx from 'clsx'
+import styles from './styles.module.css'
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Opinionated',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Through opinions we ensure consistency in projects and provide an
+        beautifully integrated development experience.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Batteries-included',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We provide defaults for projects' common needs to get off your way in
+        decision-making. Focus on building not plumbing.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Built for the long-term',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        We are designed to last through a well architected and tested foundation
+        and a healthy community that drives the project forward.
       </>
     ),
   },
-];
+]
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -46,9 +46,10 @@ function Feature({Svg, title, description}) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
+// eslint-disable-next-line import/no-default-export
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
@@ -60,5 +61,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }
