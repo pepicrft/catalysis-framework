@@ -4,8 +4,8 @@ import styles from './styles.module.css'
 
 const FeatureList = [
   {
+    emoji: '🧑‍🚀',
     title: 'Opinionated',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
         Through opinions we ensure consistency in projects and provide an
@@ -14,8 +14,8 @@ const FeatureList = [
     ),
   },
   {
+    emoji: '🔋',
     title: 'Batteries-included',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         We provide defaults for projects' common needs to get off your way in
@@ -24,8 +24,8 @@ const FeatureList = [
     ),
   },
   {
+    emoji: '🌱',
     title: 'Built for the long-term',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
         We are designed to last through a well architected and tested foundation
@@ -35,13 +35,11 @@ const FeatureList = [
   },
 ]
 
-function Feature({ Svg, title, description }) {
+function Feature({ emoji, title, description }) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
+        <h2>{emoji}</h2>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
