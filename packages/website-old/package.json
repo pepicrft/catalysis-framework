@@ -1,0 +1,24 @@
+{
+  "name": "@gestaltjs/website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gestalt' website",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "clean": "shx rm -rf .vitepress/dist",
+    "lint": "true",
+    "lint:fix": "true",
+    "test": "true",
+    "test:watch": "true",
+    "tsc": "true"
+  },
+  "devDependencies": {
+    "vitepress": "0.22.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "@types/react": "17.0.45",
+    "@algolia/client-search": "^4.9.1"
+  }
+}
