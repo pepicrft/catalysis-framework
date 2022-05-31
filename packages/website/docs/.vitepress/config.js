@@ -111,17 +111,7 @@ function getContributorsSidebar() {
         {
           text: 'Plugins',
           link: '/contributors/plugins',
-          children: [
-            { text: 'Renderer', link: 'contributors/plugins/renderer' },
-          ],
-        },
-        {
-          text: 'Core modules',
-          children: [
-            { text: 'fs', link: 'contributors/core/fs' },
-            { text: 'npm', link: 'contributors/core/npm' },
-            { text: 'path', link: 'contributors/core/path' },
-          ],
+          children: [],
         },
       ],
     },
