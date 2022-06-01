@@ -49,6 +49,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: 'WA0ITB5XJR',
+        apiKey: '77c0d7b65508f8626260896fcb575ed5',
+        indexName: 'gestaltjs',
+        contextualSearch: true,
+      },
       navbar: {
         title: 'Gestalt',
         logo: {
@@ -58,9 +64,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'guide/why-gestaltjs',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Guide',
+          },
+          {
+            type: 'doc',
+            docId: 'contributors/get-started',
+            position: 'left',
+            label: 'Contributors',
           },
           {
             href: 'https://github.com/gestaltjs/gestalt',
