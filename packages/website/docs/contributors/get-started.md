@@ -25,7 +25,7 @@ The pages in "contributors" provide all the context and tools necessary to nail 
 5. Voilà 🎉.
 
 Before debugging and contributing code,
-we recommend gaining some context around [the project architecture](/contributors/architecture).
+we recommend gaining some context around [the project architecture](/docs/contributors/architecture).
 
 
 :::tip Shadowenv
