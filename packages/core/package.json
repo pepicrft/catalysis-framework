@@ -19,6 +19,10 @@
       "node": "./dist/node/fs.js",
       "types": "./dist/node/fs.d.ts"
     },
+    "./node/command": {
+      "node": "./dist/node/command.js",
+      "types": "./dist/node/command.d.ts"
+    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"

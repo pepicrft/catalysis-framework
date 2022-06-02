@@ -1,13 +1,13 @@
-import { Command } from '@gestaltjs/core/cli'
 import { dbLogger } from '../../logger'
+import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export
-export default class Migrate extends Command {
+export default class Migrate extends GestaltCommand {
   static description = 'Build your Gestalt project'
 
   static flags = {
-    ...Command.globalFlags,
-    ...Command.projectFlags,
+    ...GestaltCommand.globalFlags,
+    ...GestaltCommand.projectFlags,
   }
 
   async run(): Promise<void> {

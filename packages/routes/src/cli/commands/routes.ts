@@ -1,15 +1,16 @@
-import { Command, project } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
 import { routesLogger } from '../logger'
 import { formatJson } from '../formatters/json'
 import { prettyFormat } from '../formatters/pretty'
+import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export
-export default class Routes extends Command {
+export default class Routes extends GestaltCommand {
   static description = 'Output the aggregated routes of a project'
 
   static flags = {
-    ...Command.globalFlags,
-    ...Command.projectFlags,
+    ...GestaltCommand.globalFlags,
+    ...GestaltCommand.projectFlags,
   }
 
   async run(): Promise<any> {

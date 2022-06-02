@@ -1,15 +1,16 @@
 import { Flags } from '@oclif/core'
-import { project, Command } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
+import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 import { checkStyle } from '../../services/style'
 
 // eslint-disable-next-line import/no-default-export
-export default class Style extends Command {
+export default class Style extends GestaltCommand {
   static description = 'Check the code style using ESLint.'
 
   static flags = {
-    ...Command.globalFlags,
-    ...Command.projectFlags,
+    ...GestaltCommand.globalFlags,
+    ...GestaltCommand.projectFlags,
     fix: Flags.boolean({
       char: 'f',
       description: 'When passed, it fixes the fixable style issues.',

@@ -10,18 +10,15 @@ export const distDir = (packageDir) => {
 }
 
 export const aliases = (packageDir) => {
+  const coreNodeModules = ['path', 'fs', 'command']
   return [
+    ...coreNodeModules.map((module) => ({
+      find: `@gestaltjs/core/node/${module}`,
+      replacement: path.join(packageDir, `../core/src/node/${module}.ts`),
+    })),
     {
       find: 'gestaltjs/plugin',
       replacement: path.join(packageDir, '../gestaltjs/src/runtime/plugin.ts'),
-    },
-    {
-      find: '@gestaltjs/core/node/path',
-      replacement: path.join(packageDir, '../core/src/node/path.ts'),
-    },
-    {
-      find: '@gestaltjs/core/node/fs',
-      replacement: path.join(packageDir, '../core/src/node/fs.ts'),
     },
     {
       find: '@gestaltjs/core/node/plugin',

@@ -19,6 +19,7 @@
       "gestaltjs/plugin": ["../../gestaltjs/src/runtime/plugin.ts"],
       "@gestaltjs/core/node/path": ["../../core/src/node/path.ts"],
       "@gestaltjs/core/node/fs": ["../../core/src/node/fs.ts"],
+      "@gestaltjs/core/node/command": ["../../core/src/node/command.ts"],
       "@gestaltjs/core/node/plugin": ["../../core/src/node/plugin.ts"],
       "@gestaltjs/core/shared": ["../../core/src/shared/index.ts"],
       "@gestaltjs/core/runtime": ["../../core/src/runtime/index.ts"],

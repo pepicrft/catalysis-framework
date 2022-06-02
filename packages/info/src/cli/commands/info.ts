@@ -1,15 +1,16 @@
-import { Command, project } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
 import { infoLogger } from '../logger'
 import { formatJson } from '../formatters/json'
 import { prettyFormat } from '../formatters/pretty'
+import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export
-export default class Info extends Command {
+export default class Info extends GestaltCommand {
   static description = 'Output an overview of a Gestalt project'
 
   static flags = {
-    ...Command.globalFlags,
-    ...Command.projectFlags,
+    ...GestaltCommand.globalFlags,
+    ...GestaltCommand.projectFlags,
   }
 
   async run(): Promise<any> {

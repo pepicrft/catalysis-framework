@@ -1,14 +1,14 @@
-import { Command } from '@gestaltjs/core/cli'
 import { project } from '@gestaltjs/core/cli'
 import { devProject } from '../services/dev'
+import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export
-export default class Dev extends Command {
+export default class Dev extends GestaltCommand {
   static description = 'Dev your Gestalt project'
 
   static flags = {
-    ...Command.globalFlags,
-    ...Command.projectFlags,
+    ...GestaltCommand.globalFlags,
+    ...GestaltCommand.projectFlags,
   }
 
   async run(): Promise<void> {
