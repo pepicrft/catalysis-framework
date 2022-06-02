@@ -2,7 +2,7 @@ import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { joinPath, parentDirectory } from '../../../../../node/path'
 import { loadLayouts } from './layouts'
-import { writeFile, makeDirectory } from '../../../../../shared/fs'
+import { writeFile, makeDirectory } from '../../../../../node/fs'
 
 describe('loadLayouts', () => {
   test('loads layouts named _layout.* in any subdirectory', async () => {

@@ -15,6 +15,10 @@
       "node": "./dist/node/path.js",
       "types": "./dist/node/path.d.ts"
     },
+    "./node/fs": {
+      "node": "./dist/node/fs.js",
+      "types": "./dist/node/fs.d.ts"
+    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"

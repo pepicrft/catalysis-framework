@@ -2,7 +2,7 @@ import { getModuleLoader } from './module-loader'
 import { describe, test, expect } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { joinPath } from '../../../node/path'
-import { writeFile } from '../../../shared/fs'
+import { writeFile } from '../../../node/fs'
 
 describe('getModuleLoader', () => {
   test('load loads a module successfully', async () => {

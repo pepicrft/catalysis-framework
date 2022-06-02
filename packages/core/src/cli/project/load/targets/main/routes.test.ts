@@ -3,7 +3,7 @@ import { describe, test, expect, vi } from 'vitest'
 import { temporary } from '@gestaltjs/testing'
 import { models } from '@gestaltjs/testing'
 import { parentDirectory, joinPath } from '../../../../../node/path'
-import { writeFile, makeDirectory } from '../../../../../shared/fs'
+import { writeFile, makeDirectory } from '../../../../../node/fs'
 import { Route } from '../../../models/targets/main/route'
 
 describe('loadRoutes', () => {
