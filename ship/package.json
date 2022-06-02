@@ -18,7 +18,6 @@
     ]
   },
   "devDependencies": {
-    "@gestaltjs/gestalt-plugin-react": "workspace:*",
     "gestaltjs": "workspace:*",
     "react": "18.1.0"
   }
