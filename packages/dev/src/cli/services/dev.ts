@@ -3,6 +3,7 @@ import { project as projectModule, logger, error, project, vite } from '@gestalt
 import { devLogger } from '../logger'
 import { createApp } from 'h3'
 import { listen } from 'listhen'
+import { createBuildTool } from '@gestaltjs/core/node/build-tool'
 
 type DevProjectOutput = {
   onChange: (project: project.models.Project) => void
@@ -12,13 +13,14 @@ export async function devProject({
   project,
   targetName,
 }: {
-  project: projectModule.Project
+  project: projectModule.models.Project
   targetName: string
-}): Promise<DevProjectOutput> {
-  const target = project.targetsGraph.targets.main[targetName]
+  }): Promise<DevProjectOutput> {
+  const buildTool = await createBuildTool(project)
+  const target = project.targets.main[targetName]
   if (!target) {
     const availableTargets = Object.keys(
-      project.targetsGraph.targets.main
+      project.targets.main
     ).join(', ')
     throw new error.Abort(
       `The target ${targetName} could not be found in the project`,
@@ -27,17 +29,12 @@ export async function devProject({
       }
     )
   }
-  const viteDevServer = await getViteDevServer(project)
   const app = createApp()
-  app.use(viteDevServer.middlewares)
+  //app.use(buildTool.middlewares)
+
 
   app.use('*', async (req: any) => {
-    return await render({
-      urlPath: req.url,
-      project,
-      target,
-      viteDevServer,
-    })
+    return await buildTool.ssr(req.url)
   })
 
   devLogger().info('Starting the project...')
@@ -55,72 +52,4 @@ export async function devProject({
       project = changedProject
     },
   }
-}
-
-async function getViteDevServer(
-  project: projectModule.Project
-): Promise<vite.ViteDevServer> {
-  return vite.createServer({
-    root: project.directory,
-    cacheDir: undefined,
-    server: {
-      middlewareMode: 'ssr',
-      hmr: true,
-      watch: {
-        // During tests we edit the files too fast and sometimes chokidar
-        // misses change events, so enforce polling for consistency
-        usePolling: true,
-        interval: 100,
-      },
-    },
-    clearScreen: false,
-    logLevel: 'silent',
-    plugins: [
-      ...(project.configuration.plugins ?? []).flatMap(
-        (plugin) => plugin.renderer?.vitePlugins ?? []
-      ),
-    ],
-  })
-}
-
-async function render(options: {
-  urlPath: string
-  project: projectModule.Project
-  target: projectModule.MainTarget
-  viteDevServer: vite.ViteDevServer
-}): Promise<string> {
-  const plugins = options.project.configuration.plugins ?? []
-  const route = options.target.router.lookup(options.urlPath)
-  if (!route) {
-    return `<div>${options.urlPath} not found</div>`
-  }
-  const renderer = plugins.find((plugin) =>
-    plugin.renderer?.fileExtensions?.includes(route.fileExtension)
-  )?.renderer
-  if (!renderer) {
-    return `<div> We could not find a plugin to handle the extension ${route.fileExtension}</div>`
-  }
-  const component = (
-    await options.viteDevServer.ssrLoadModule(route.filePath)
-  ).default()
-  // TODO: Throw a good error if .default doesn't exist
-
-  const routeHTML = (await renderer.server.render(component)).html
-  const htmlDocument = `
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    ${routeHTML}
-  </body>
-</html>
-  `
-  return await options.viteDevServer.transformIndexHtml(
-    options.urlPath,
-    htmlDocument
-  )
 }
