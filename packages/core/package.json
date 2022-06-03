@@ -83,7 +83,7 @@
     "acorn": "^8.7.1",
     "case-anything": "2.1.10",
     "commondir": "^1.0.1",
-    "electron": "19.0.2",
+    "electron": "19.0.3",
     "enquirer": "^2.3.6",
     "fast-glob": "^3.2.11",
     "fastify": "3.29.0",
