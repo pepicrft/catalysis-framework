@@ -46,7 +46,7 @@ importers:
       shx: 0.3.4
       tempy: 2.0.0
       tmp: 0.2.1
-      ts-node: 10.8.0
+      ts-node: 10.8.1
       typescript: 4.7.2
       vite: 2.9.9
       vitest: 0.13.1
@@ -54,7 +54,7 @@ importers:
       '@changesets/cli': 2.22.0
       '@nrwl/cli': 14.1.9_typescript@4.7.2
       '@nrwl/tao': 14.1.9_typescript@4.7.2
-      '@nrwl/workspace': 14.1.9_2ifu2s6oe7cw6ffpgafyvzwg3q
+      '@nrwl/workspace': 14.1.9_3srqcgncapq4tfpiz2q2ul7x5u
       '@rollup/plugin-alias': 3.1.9_rollup@2.75.5
       '@rollup/plugin-commonjs': 22.0.0_rollup@2.75.5
       '@rollup/plugin-json': 4.1.0_rollup@2.75.5
@@ -93,7 +93,7 @@ importers:
       shx: 0.3.4
       tempy: 2.0.0
       tmp: 0.2.1
-      ts-node: 10.8.0_in4t6n24ax7bfuytyktbgvhrfi
+      ts-node: 10.8.1_in4t6n24ax7bfuytyktbgvhrfi
       typescript: 4.7.2
       vite: 2.9.9
       vitest: 0.13.1
@@ -3471,7 +3471,7 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /@nrwl/jest/14.1.9_7ltpokb5nddvumph4ucffxqtdu:
+  /@nrwl/jest/14.1.9_fod6yzkcvhpfmxzyg7piptsa6m:
     resolution: {integrity: sha512-rZ/+X7OzhW8nKLaYOpbIwUKzEAIDLlQd/m6qndAKU1rbSOZZVa7ZwHRQpzBMooyXCQB/wJLTM+epAI6vWjCiNg==}
     dependencies:
       '@jest/reporters': 27.5.1
@@ -3480,7 +3480,7 @@ packages:
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.7.2
       chalk: 4.1.0
       identity-obj-proxy: 3.0.0
-      jest-config: 27.5.1_ts-node@10.8.0
+      jest-config: 27.5.1_ts-node@10.8.1
       jest-resolve: 27.5.1
       jest-util: 27.5.1
       resolve.exports: 1.1.0
@@ -3497,7 +3497,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@nrwl/linter/14.1.9_p235jfpi3nkskvbabvuzhldwbq:
+  /@nrwl/linter/14.1.9_rlmttzzs5h5n75js27gdqtm5vq:
     resolution: {integrity: sha512-QgXTNWl1xzbEJuGbcOPJcvp58Tycd3yWTA1JnrAc3ZdOsouL0EphP5n1+JCePzR7mVo+kmfNhYbJhvpc8c4WEQ==}
     peerDependencies:
       eslint: ^8.0.0
@@ -3506,7 +3506,7 @@ packages:
         optional: true
     dependencies:
       '@nrwl/devkit': 14.1.9_nx@14.1.9
-      '@nrwl/jest': 14.1.9_7ltpokb5nddvumph4ucffxqtdu
+      '@nrwl/jest': 14.1.9_fod6yzkcvhpfmxzyg7piptsa6m
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.7.2
       eslint: 8.16.0
       tmp: 0.2.1
@@ -3532,7 +3532,7 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/workspace/14.1.9_2ifu2s6oe7cw6ffpgafyvzwg3q:
+  /@nrwl/workspace/14.1.9_3srqcgncapq4tfpiz2q2ul7x5u:
     resolution: {integrity: sha512-zb7/EgT0P7UN8EDrxd9+5yR2RfPvBDGwtuoa9Sl4FO3jnNr5o+qBf33408BtchigN4y885+9S9SoXq9mSfzhDg==}
     peerDependencies:
       prettier: ^2.5.1
@@ -3541,8 +3541,8 @@ packages:
         optional: true
     dependencies:
       '@nrwl/devkit': 14.1.9_nx@14.1.9
-      '@nrwl/jest': 14.1.9_7ltpokb5nddvumph4ucffxqtdu
-      '@nrwl/linter': 14.1.9_p235jfpi3nkskvbabvuzhldwbq
+      '@nrwl/jest': 14.1.9_fod6yzkcvhpfmxzyg7piptsa6m
+      '@nrwl/linter': 14.1.9_rlmttzzs5h5n75js27gdqtm5vq
       '@parcel/watcher': 2.0.4
       chalk: 4.1.0
       chokidar: 3.5.3
@@ -9347,7 +9347,7 @@ packages:
       - supports-color
     dev: true
 
-  /jest-config/27.5.1_ts-node@10.8.0:
+  /jest-config/27.5.1_ts-node@10.8.1:
     resolution: {integrity: sha512-5sAsjm6tGdsVbW9ahcChPAFCk4IlkQUknH5AvKjuLTSlcO/wCZKyFdn7Rg0EkC+OGgWODEy2hDpWB1PgzH0JNA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     peerDependencies:
@@ -9380,7 +9380,7 @@ packages:
       pretty-format: 27.5.1
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.8.0_in4t6n24ax7bfuytyktbgvhrfi
+      ts-node: 10.8.1_in4t6n24ax7bfuytyktbgvhrfi
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -13446,8 +13446,8 @@ packages:
     engines: {node: '>=6.10'}
     dev: true
 
-  /ts-node/10.8.0_in4t6n24ax7bfuytyktbgvhrfi:
-    resolution: {integrity: sha512-/fNd5Qh+zTt8Vt1KbYZjRHCE9sI5i7nqfD/dzBBRDeVXZXS6kToW6R7tTU6Nd4XavFs0mAVCg29Q//ML7WsZYA==}
+  /ts-node/10.8.1_in4t6n24ax7bfuytyktbgvhrfi:
+    resolution: {integrity: sha512-Wwsnao4DQoJsN034wePSg5nZiw4YKXf56mPIAeD6wVmiv+RytNSWqc2f3fKvcUoV+Yn2+yocD71VOfQHbmVX4g==}
     hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
