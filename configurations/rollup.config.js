@@ -10,7 +10,7 @@ export const distDir = (packageDir) => {
 }
 
 export const aliases = (packageDir) => {
-  const coreNodeModules = ['path', 'fs', 'command']
+  const coreNodeModules = ['path', 'fs', 'command', 'tsc']
   return [
     ...coreNodeModules.map((module) => ({
       find: `@gestaltjs/core/node/${module}`,

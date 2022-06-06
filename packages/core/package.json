@@ -23,6 +23,10 @@
       "node": "./dist/node/command.js",
       "types": "./dist/node/command.d.ts"
     },
+    "./node/tsc": {
+      "node": "./dist/node/tsc.js",
+      "types": "./dist/node/tsc.d.ts"
+    },
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"

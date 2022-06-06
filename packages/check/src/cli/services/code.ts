@@ -1,8 +1,9 @@
-import { tsc, error } from '@gestaltjs/core/cli'
+import { error } from '@gestaltjs/core/cli'
+import { runTypescriptCompiler } from '@gestaltjs/core/node/tsc'
 
 export async function checkCode(directory: string) {
   try {
-    await tsc.run(['--noEmit'], directory)
+    await runTypescriptCompiler(['--noEmit'], directory)
     // TODO: fix error with logger when executing tests
   } catch (err) {
     throw new error.Abort(

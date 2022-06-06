@@ -1,8 +1,8 @@
 import { describe, test, expect, vi } from 'vitest'
-import { tsc } from '@gestaltjs/core/cli'
+import { runTypescriptCompiler } from '@gestaltjs/core/node/tsc'
 import { checkCode } from './code'
 
-vi.mock('@gestaltjs/core/cli')
+vi.mock('@gestaltjs/core/node/tsc')
 describe('run', () => {
   test('runs tsc cli command', async () => {
     // Given
@@ -14,6 +14,9 @@ describe('run', () => {
     await checkCode(appDirectory)
 
     // Then
-    expect(tsc.run).toHaveBeenCalledWith(expectedArgs, appDirectory)
+    expect(runTypescriptCompiler).toHaveBeenCalledWith(
+      expectedArgs,
+      appDirectory
+    )
   })
 })
