@@ -5,6 +5,7 @@
     "wix.vscode-import-cost",
     "blodwynn.featurehighlight",
     "alexkrechik.cucumberautocomplete",
-    "octref.vetur"
+    "octref.vetur",
+    "ZixuanChen.vitest-explorer"
   ]
 }
