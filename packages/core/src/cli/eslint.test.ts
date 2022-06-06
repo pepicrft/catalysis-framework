@@ -1,10 +1,12 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
-import { findPathUp, parentDirectory } from '../node/path'
+import { parentDirectory } from '../node/path'
+import { findPathUp } from '../node/fs'
 import { run, ESLintNotFoundError } from './eslint'
 
 vi.mock('./system')
 vi.mock('../node/path')
+vi.mock('../node/fs')
 
 describe('run', () => {
   test('runs eslint', async () => {
@@ -21,7 +23,7 @@ describe('run', () => {
 
     // Then
     expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/eslint', {
-      cwd: eslintTSDirectory,
+      fromDirectory: eslintTSDirectory,
     })
     expect(exec).toHaveBeenCalledWith(eslintPath, args, {
       stdio: 'inherit',

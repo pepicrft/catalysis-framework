@@ -1,5 +1,35 @@
 import fs from 'fs-extra'
 
+import { findUp, Options as FindUpOptions } from 'find-up'
+
+type FindPathUpOptions = {
+  /** The directory from where to start the look up */
+  fromDirectory?: string
+  /**
+   * Whether the pattern should match a file or a directory
+   * @default 'file'
+   */
+  type?: 'file' | 'directory'
+}
+
+/**
+ * It traverses the directory hiearchy up appending the given pattern
+ * and checking for the presence of the obtained absolute path. If the
+ * path exists, it returns it.
+ * @param pattern {string | string[]} Pattern to match against.
+ * @param options {FindPathUpOptions} Options to configure the find up.
+ * @returns {Promise<string | undefined>} A promise that resolves with the
+ *          path if it can find it, or undefined otherwise.
+ */
+export async function findPathUp(
+  pattern: string | string[],
+  options: FindPathUpOptions
+): Promise<string | undefined> {
+  return await findUp(pattern, {
+    type: options.type ?? 'file',
+    cwd: options.fromDirectory,
+  })
+}
 /**
  * Reads a file and decodes it using utf-8.
  * @param path {string} Path to the file.

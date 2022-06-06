@@ -1,10 +1,12 @@
 import { describe, test, expect, vi } from 'vitest'
-import { exec } from './system'
-import { findPathUp, parentDirectory } from '../node/path'
-import { run, TSCNotFoundError } from './tsc'
+import { exec } from '../cli/system'
+import { parentDirectory } from '../node/path'
+import { runTypescriptCompiler, TSCNotFoundError } from './tsc'
+import { findPathUp } from '../node/fs'
 
-vi.mock('./system')
+vi.mock('../cli/system')
 vi.mock('../node/path')
+vi.mock('../node/fs')
 
 describe('run', () => {
   test('runs tsc', async () => {
@@ -17,11 +19,11 @@ describe('run', () => {
     const cwd = '/project'
 
     // When
-    await run(args, cwd)
+    await runTypescriptCompiler(args, cwd)
 
     // Then
     expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/tsc', {
-      cwd: dirnamePath,
+      fromDirectory: dirnamePath,
     })
     expect(exec).toHaveBeenCalledWith(tscPath, args, { stdio: 'inherit', cwd })
   })
@@ -35,6 +37,8 @@ describe('run', () => {
     const cwd = '/project'
 
     // When
-    await expect(run(args, cwd)).rejects.toEqual(TSCNotFoundError())
+    await expect(runTypescriptCompiler(args, cwd)).rejects.toEqual(
+      TSCNotFoundError()
+    )
   })
 })

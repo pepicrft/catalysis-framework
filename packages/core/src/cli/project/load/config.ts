@@ -1,7 +1,7 @@
 import { configurationFileName } from '../../constants'
-import { findPathUp as findPathUp } from '../../../node/path'
 import { Configuration } from '../models/configuration'
 import { ModuleLoader } from './module-loader'
+import { findPathUp } from '../../../node/fs'
 
 /**
  * This function transpiles, loads, and returns a Gestalt project configuration.
@@ -51,6 +51,6 @@ export async function lookupConfigurationPathTraversing(
 ): Promise<string | undefined> {
   return await findPathUp(
     [`${configurationFileName}.ts`, `${configurationFileName}.js`],
-    { type: 'file', cwd: fromDirectory }
+    { type: 'file', fromDirectory }
   )
 }

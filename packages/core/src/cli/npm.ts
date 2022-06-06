@@ -1,9 +1,10 @@
 import { Bug } from '../shared/error'
-import { joinPath, findPathUp } from '../node/path'
+import { joinPath } from '../node/path'
 import { pathExists } from '../node/fs'
 import { content, fileToken } from './logger'
 import { WriteStream } from 'fs-extra'
 import { exec } from './system'
+import { findPathUp } from '../node/fs'
 
 /**
  * A union type that represents the dependency managers that are available in
@@ -151,14 +152,14 @@ export async function inferDependencyManager(
   fromDirectory: string
 ): Promise<DependencyManager> {
   const yarnLockPath = await findPathUp('yarn.lock', {
-    cwd: fromDirectory,
+    fromDirectory: fromDirectory,
     type: 'file',
   })
   if (yarnLockPath) {
     return 'yarn'
   }
   const pnpmLockPath = await findPathUp('pnpm-lock.yaml', {
-    cwd: fromDirectory,
+    fromDirectory: fromDirectory,
     type: 'file',
   })
   if (pnpmLockPath) {

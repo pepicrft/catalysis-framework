@@ -1,6 +1,4 @@
 // TODO: Move to fs
-export { findUp as findPathUp } from 'find-up'
-// TODO: Move to fs
 export { default as glob } from 'fast-glob'
 import process from 'node:process'
 import {

@@ -1,7 +1,7 @@
 import { Abort } from '../shared/error'
 import { exec } from '../cli/system'
-import { findPathUp, parentDirectory } from './path'
-import { fileURLToPath } from 'url'
+import { moduleDirname } from './path'
+import { findPathUp } from './fs'
 
 export const TSCNotFoundError = () => {
   return new Abort('Could not locate typescript compiler', { next: '' })
@@ -13,8 +13,10 @@ export const TSCNotFoundError = () => {
  * @param cwd {string} Working directory from where the process will be executed.
  */
 export async function runTypescriptCompiler(args: string[], cwd?: string) {
-  const __dirname = parentDirectory(fileURLToPath(import.meta.url))
-  const tscPath = await findPathUp('node_modules/.bin/tsc', { cwd: __dirname })
+  const __dirname = moduleDirname(import.meta.url)
+  const tscPath = await findPathUp('node_modules/.bin/tsc', {
+    fromDirectory: __dirname,
+  })
   if (!tscPath) {
     throw TSCNotFoundError()
   }
