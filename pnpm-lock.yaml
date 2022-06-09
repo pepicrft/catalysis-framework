@@ -140,7 +140,7 @@ importers:
       acorn: ^8.7.1
       case-anything: 2.1.10
       commondir: ^1.0.1
-      electron: 19.0.3
+      electron: 19.0.4
       enquirer: ^2.3.6
       fast-glob: ^3.2.11
       fastify: 3.29.0
@@ -181,7 +181,7 @@ importers:
       acorn: 8.7.1
       case-anything: 2.1.10
       commondir: 1.0.1
-      electron: 19.0.3
+      electron: 19.0.4
       enquirer: 2.3.6
       fast-glob: 3.2.11
       fastify: 3.29.0
@@ -6873,8 +6873,8 @@ packages:
   /electron-to-chromium/1.4.131:
     resolution: {integrity: sha512-oi3YPmaP87hiHn0c4ePB67tXaF+ldGhxvZnT19tW9zX6/Ej+pLN0Afja5rQ6S+TND7I9EuwQTT8JYn1k7R7rrw==}
 
-  /electron/19.0.3:
-    resolution: {integrity: sha512-V/8pFkXUOsoHcBzuTYVSbIQKLIwI/FAxfpvbkMazdaO/weZoIf9AN3Qc4Wuo9+489mhelDYc8lSX5N7c6A5n6A==}
+  /electron/19.0.4:
+    resolution: {integrity: sha512-roRYr1VNAWIhjD9n8qZdmhROtrzsFpuZEXrjWAw+GqPbZlrUInmvFCviRDC2Lt+VBsTNRpTfPpfzXSlLL4reEw==}
     engines: {node: '>= 8.6'}
     hasBin: true
     requiresBuild: true
@@ -12271,7 +12271,7 @@ packages:
     dev: true
 
   /responselike/1.0.2:
-    resolution: {integrity: sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec=}
+    resolution: {integrity: sha512-/Fpe5guzJk1gPqdJLJR5u7eG/gNY4nImjbRDaVWVMRhne55TCmj2i9Q+54PBRfatRC8v/rIiv9BN0pMd9OV5EQ==}
     dependencies:
       lowercase-keys: 1.0.1
 
@@ -12508,7 +12508,7 @@ packages:
       node-forge: 1.3.1
 
   /semver-compare/1.0.0:
-    resolution: {integrity: sha1-De4hahyUGrN+nvsXiPavxf9VN/w=}
+    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
     dev: true
     optional: true
 
