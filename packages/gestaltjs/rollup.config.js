@@ -1,5 +1,4 @@
 import * as path from 'pathe'
-import dts from 'rollup-plugin-dts'
 
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
@@ -16,18 +15,6 @@ const configuration = async () => {
           },
         ],
         plugins: [...plugins(__dirname)],
-        external: [...(await external(__dirname))],
-      },
-      {
-        input: [path.join(__dirname, `src/runtime/${name}.ts`)],
-        output: [
-          {
-            dir: path.join(distDir(__dirname), 'runtime'),
-            format: 'esm',
-            sourcemap: 'inline',
-          },
-        ],
-        plugins: [dts()],
         external: [...(await external(__dirname))],
       },
     ]
