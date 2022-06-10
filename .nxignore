@@ -1,3 +1,4 @@
 example/
 fixtures/
 ship/
+vitest.config.*
