@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from '../cli/system'
-import { parentDirectory } from '../node/path'
+import { parentDirectory, moduleDirname } from '../node/path'
 import { runTypescriptCompiler, TSCNotFoundError } from './tsc'
 import { findPathUp } from '../node/fs'
 
@@ -14,7 +14,7 @@ describe('run', () => {
     const tscPath = '/test/tsc'
     const dirnamePath = '/gestalt/tsc'
     vi.mocked(findPathUp).mockResolvedValue(tscPath)
-    vi.mocked(parentDirectory).mockReturnValue(dirnamePath)
+    vi.mocked(moduleDirname).mockReturnValue(dirnamePath)
     const args = ['foo']
     const cwd = '/project'
 
