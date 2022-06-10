@@ -79,7 +79,7 @@
     "plur": "^5.1.0",
     "source-map-support": "^0.5.21",
     "stacktracey": "^2.1.8",
-    "vite": "2.9.10"
+    "vite": "2.9.12"
   },
   "devDependencies": {
     "@types/estree": "^0.0.51",
