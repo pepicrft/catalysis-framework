@@ -90,7 +90,7 @@
     "electron": "19.0.4",
     "enquirer": "^2.3.6",
     "fast-glob": "^3.2.11",
-    "fastify": "4.0.0",
+    "fastify": "4.0.1",
     "find-up": "6.3.0",
     "fs-extra": "10.1.0",
     "handlebars": "4.7.7",
