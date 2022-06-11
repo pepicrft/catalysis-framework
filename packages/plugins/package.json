@@ -34,13 +34,12 @@
       "../../.eslintrc.cjs"
     ]
   },
-  "dependencies": {
-    "@gestaltjs/core": "0.7.8"
-  },
   "peerDependencies": {
+    "@gestaltjs/core": "0.7.8",
     "@oclif/core": "1.9.0"
   },
   "devDependencies": {
+    "@gestaltjs/core": "0.7.8",
     "@oclif/core": "1.9.0"
   },
   "oclif": {
