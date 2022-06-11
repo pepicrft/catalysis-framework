@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "h3": "0.7.4",
-    "listhen": "0.2.10"
+    "listhen": "0.2.11"
   },
   "oclif": {
     "commands": "./dist/cli/commands"
