@@ -8,11 +8,11 @@ const configuration = async () => {
   const nodeFiles = await fg('src/node/*.ts', {
     ignore: 'src/node/*.test.ts',
   })
-
   const cliFiles = [
     'src/cli/index.ts',
     'src/cli/logger/transport.ts',
     ...publicFiles,
+    ...nodeFiles,
   ]
 
   return [

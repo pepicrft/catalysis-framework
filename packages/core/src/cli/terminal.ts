@@ -2,7 +2,10 @@ import pc from 'picocolors'
 import terminalLink from 'terminal-link'
 
 export * as listr from 'listr2'
-export { prompt } from 'enquirer'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+import enquirer from 'enquirer'
+const { prompt } = enquirer
+export { prompt }
 
 /**
  * Formats a string to be bold when presented
