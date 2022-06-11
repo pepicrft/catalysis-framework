@@ -20,7 +20,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@changesets/cli": "2.22.0",
+    "@changesets/cli": "2.23.0",
     "@nrwl/cli": "14.2.4",
     "@nrwl/tao": "14.2.4",
     "@nrwl/workspace": "14.2.4",
