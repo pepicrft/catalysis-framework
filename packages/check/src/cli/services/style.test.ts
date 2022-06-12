@@ -1,9 +1,9 @@
 import { describe, test, expect, vi } from 'vitest'
-import { eslint, project } from '@gestaltjs/core/cli'
 import { checkStyle } from './style'
 import type { LintOptions } from './style'
+import { runESLint } from '@gestaltjs/core/node/eslint'
 
-vi.mock('@gestaltjs/core/cli')
+vi.mock('@gestaltjs/core/node/eslint')
 
 describe('run', () => {
   test('runs eslint cli command', async () => {
@@ -16,7 +16,7 @@ describe('run', () => {
     await checkStyle(options)
 
     // Then
-    expect(eslint.run).toHaveBeenCalledWith(
+    expect(runESLint).toHaveBeenCalledWith(
       expectedArgs,
       options.project.directory
     )
@@ -31,7 +31,7 @@ describe('run', () => {
     await checkStyle(options)
 
     // Then
-    expect(eslint.run).toHaveBeenCalledWith(
+    expect(runESLint).toHaveBeenCalledWith(
       expectedArgs,
       options.project.directory
     )

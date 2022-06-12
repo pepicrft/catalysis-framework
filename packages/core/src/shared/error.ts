@@ -40,7 +40,7 @@ export class Bug extends Error {
    * @param message {string} Error messages
    * @param options {BugOptions} Error options
    */
-  constructor(message: LoggerMessage, options: BugOptions) {
+  constructor(message: LoggerMessage, options: BugOptions = {}) {
     super(stringify(message))
     this.options = options
   }
@@ -75,7 +75,7 @@ export class Abort extends Error {
    * @param message {string} Error messages
    * @param options {BugOptions} Error options
    */
-  constructor(message: LoggerMessage, options: AbortOptions) {
+  constructor(message: LoggerMessage, options: AbortOptions = {}) {
     super(stringify(message))
     this.options = options
   }

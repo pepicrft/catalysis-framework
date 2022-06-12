@@ -21,6 +21,7 @@
       "@gestaltjs/core/node/fs": ["../../core/src/node/fs.ts"],
       "@gestaltjs/core/node/command": ["../../core/src/node/command.ts"],
       "@gestaltjs/core/node/tsc": ["../../core/src/node/tsc.ts"],
+      "@gestaltjs/core/node/eslint": ["../../core/src/node/eslint.ts"],
       "@gestaltjs/core/node/plugin": ["../../core/src/node/plugin.ts"],
       "@gestaltjs/core/shared": ["../../core/src/shared/index.ts"],
       "@gestaltjs/core/runtime": ["../../core/src/runtime/index.ts"],

@@ -1,14 +1,14 @@
 import { describe, test, expect, vi } from 'vitest'
-import { exec } from './system'
+import { exec } from '../cli/system'
 import { parentDirectory } from '../node/path'
 import { findPathUp } from '../node/fs'
-import { run, ESLintNotFoundError } from './eslint'
+import { runESLint, ESLintNotFoundError } from './eslint'
 
-vi.mock('./system')
+vi.mock('../cli/system')
 vi.mock('../node/path')
 vi.mock('../node/fs')
 
-describe('run', () => {
+describe('runESLint', () => {
   test('runs eslint', async () => {
     // Given
     const eslintPath = '/test/eslint'
@@ -19,7 +19,7 @@ describe('run', () => {
     const cwd = '/project'
 
     // When
-    await run(args, cwd)
+    await runESLint(args, cwd)
 
     // Then
     expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/eslint', {
@@ -40,6 +40,6 @@ describe('run', () => {
     const cwd = '/project'
 
     // When
-    await expect(run(args, cwd)).rejects.toEqual(ESLintNotFoundError())
+    await expect(runESLint(args, cwd)).rejects.toEqual(ESLintNotFoundError())
   })
 })
