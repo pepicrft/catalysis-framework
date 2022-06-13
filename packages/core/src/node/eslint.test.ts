@@ -1,12 +1,12 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from '../cli/system'
-import { parentDirectory } from '../node/path'
-import { findPathUp } from '../node/fs'
+import { moduleDirname, parentDirectory } from './path'
+import { findPathUp } from './fs'
 import { runESLint, ESLintNotFoundError } from './eslint'
 
 vi.mock('../cli/system')
-vi.mock('../node/path')
-vi.mock('../node/fs')
+vi.mock('./path')
+vi.mock('./fs')
 
 describe('runESLint', () => {
   test('runs eslint', async () => {
@@ -14,7 +14,7 @@ describe('runESLint', () => {
     const eslintPath = '/test/eslint'
     const eslintTSDirectory = '/gestalt/eslint'
     vi.mocked(findPathUp).mockResolvedValue(eslintPath)
-    vi.mocked(parentDirectory).mockReturnValue(eslintTSDirectory)
+    vi.mocked(moduleDirname).mockReturnValue(eslintTSDirectory)
     const args = ['foo']
     const cwd = '/project'
 
