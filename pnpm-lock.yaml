@@ -232,10 +232,10 @@ importers:
       '@gestaltjs/core': 0.7.8
       '@oclif/core': 1.9.0
       h3: 0.7.4
-      listhen: 0.2.11
+      listhen: 0.2.12
     dependencies:
       h3: 0.7.4
-      listhen: 0.2.11
+      listhen: 0.2.12
     devDependencies:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.9.0
@@ -9501,8 +9501,8 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /listhen/0.2.11:
-    resolution: {integrity: sha512-AJPi6PByg78TEvmB9XWB15Cgv00MXDT0BWF+8LVFozbF9qLbOPjXXfwxkYIAmGjPOAAsPzBMEYytj7RSBhkaeg==}
+  /listhen/0.2.12:
+    resolution: {integrity: sha512-v2PibKV55Zn+BUkOB3twdStGfDlZTP+28A+WY+8KPjQXYLTstXeXGY/K9sExIVwf5YlElnp7np1S7M7XXz6ZdQ==}
     dependencies:
       clipboardy: 3.0.0
       colorette: 2.0.16
@@ -9510,6 +9510,7 @@ packages:
       get-port-please: 2.5.0
       http-shutdown: 1.2.2
       selfsigned: 2.0.1
+      ufo: 0.8.4
     dev: false
 
   /listr2/4.0.5_enquirer@2.3.6:
