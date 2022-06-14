@@ -8,7 +8,7 @@ import {
   formatYellow,
   formatCyan,
 } from '../terminal'
-import { pascalCased } from '../string'
+import { pascalCased } from '../../cli/string'
 
 function formatLevel(level: string): string {
   let outputLevel = pascalCased(level)

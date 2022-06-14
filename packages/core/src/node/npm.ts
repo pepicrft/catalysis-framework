@@ -1,10 +1,10 @@
 import { Bug } from '../shared/error'
-import { joinPath } from '../node/path'
-import { pathExists } from '../node/fs'
+import { joinPath } from './path'
+import { pathExists } from './fs'
 import { content, fileToken } from './logger'
 import { WriteStream } from 'fs-extra'
 import { exec } from './system'
-import { findPathUp } from '../node/fs'
+import { findPathUp } from './fs'
 
 /**
  * A union type that represents the dependency managers that are available in

@@ -1,5 +1,11 @@
-import { project as projectModule, terminal } from '@gestaltjs/core/cli'
-import { path } from '@gestaltjs/core/cli'
+import { project as projectModule } from '@gestaltjs/core/cli'
+import { relativizePath } from '@gestaltjs/core/node/path'
+import {
+  formatGreen,
+  formatBold,
+  formatCyan,
+  formatYellow,
+} from '@gestaltjs/core/node/terminal'
 
 type PrettyFormatOptions = {
   project: projectModule.models.Project
@@ -7,17 +13,13 @@ type PrettyFormatOptions = {
 
 export function prettyFormat(options: PrettyFormatOptions): string {
   const lines: string[] = []
-  lines.push(terminal.formatGreen(terminal.formatBold('Project')))
+  lines.push(formatGreen(formatBold('Project')))
+  lines.push(`  ${formatBold('Name:')} ${options.project.configuration.name}`)
   lines.push(
-    `  ${terminal.formatBold('Name:')} ${options.project.configuration.name}`
+    `  ${formatBold('Directory:')} ${relativizePath(options.project.directory)}`
   )
   lines.push(
-    `  ${terminal.formatBold('Directory:')} ${path.relativizePath(
-      options.project.directory
-    )}`
-  )
-  lines.push(
-    `  ${terminal.formatBold('Manifest:')} ${path.relativizePath(
+    `  ${formatBold('Manifest:')} ${relativizePath(
       options.project.configuration.manifestPath
     )}`
   )
@@ -25,11 +27,9 @@ export function prettyFormat(options: PrettyFormatOptions): string {
 
   const plugins = options.project.configuration.plugins ?? []
   if (plugins.length !== 0) {
-    lines.push(terminal.formatGreen(terminal.formatBold('Plugins 🌱')))
+    lines.push(formatGreen(formatBold('Plugins 🌱')))
     plugins.forEach((plugin) => {
-      lines.push(
-        `  ${terminal.formatBold(`${plugin.name}:`)}: ${plugin.description}`
-      )
+      lines.push(`  ${formatBold(`${plugin.name}:`)}: ${plugin.description}`)
     })
     lines.push('')
   }
@@ -39,28 +39,28 @@ export function prettyFormat(options: PrettyFormatOptions): string {
     Object.keys(mainTargets).length !== 0 ||
     Object.keys(mainTargets).length !== 0
   ) {
-    lines.push(terminal.formatGreen(terminal.formatBold('Targets 📦')))
+    lines.push(formatGreen(formatBold('Targets 📦')))
   }
   if (Object.keys(mainTargets).length !== 0) {
-    lines.push(`    ${terminal.formatCyan(terminal.formatBold('Main'))}`)
+    lines.push(`    ${formatCyan(formatBold('Main'))}`)
     Object.keys(mainTargets).forEach((targetName) => {
       const target = mainTargets[targetName]
       const targetPrefix = `      `
       const targetMetadataPrefix = `        `
       lines.push(
-        `${targetPrefix}${terminal.formatYellow(
-          terminal.formatBold(`${targetName} [${target.platforms.join(',')}]`)
+        `${targetPrefix}${formatYellow(
+          formatBold(`${targetName} [${target.platforms.join(',')}]`)
         )}`
       )
       lines.push(
-        `${targetMetadataPrefix}${terminal.formatBold(
-          `Directory:`
-        )} ${path.relativizePath(target.directory)}`
+        `${targetMetadataPrefix}${formatBold(`Directory:`)} ${relativizePath(
+          target.directory
+        )}`
       )
       lines.push(
-        `${targetMetadataPrefix}${terminal.formatBold(
-          `Manifest:`
-        )} ${path.relativizePath(target.manifestPath)}`
+        `${targetMetadataPrefix}${formatBold(`Manifest:`)} ${relativizePath(
+          target.manifestPath
+        )}`
       )
     })
   }

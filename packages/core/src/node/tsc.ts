@@ -1,5 +1,5 @@
 import { Abort } from '../shared/error'
-import { exec } from '../cli/system'
+import { exec } from './system'
 import { moduleDirname } from './path'
 import { findPathUp } from './fs'
 

@@ -1,6 +1,6 @@
-import { coreLogger, stringify } from '../cli/logger'
-import type { ErrorLogType, LoggerMessage } from '../cli/logger'
-import { formatYellow, formatRed, formatBold } from '../cli/terminal'
+import { coreLogger, stringify } from '../node/logger'
+import type { ErrorLogType, LoggerMessage } from '../node/logger'
+import { formatYellow, formatRed, formatBold } from '../node/terminal'
 import StackTracey from 'stacktracey'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

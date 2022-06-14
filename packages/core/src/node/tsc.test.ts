@@ -1,12 +1,12 @@
 import { describe, test, expect, vi } from 'vitest'
-import { exec } from '../cli/system'
+import { exec } from './system'
 import { parentDirectory, moduleDirname } from '../node/path'
 import { runTypescriptCompiler, TSCNotFoundError } from './tsc'
-import { findPathUp } from '../node/fs'
+import { findPathUp } from './fs'
 
-vi.mock('../cli/system')
-vi.mock('../node/path')
-vi.mock('../node/fs')
+vi.mock('./system')
+vi.mock('./path')
+vi.mock('./fs')
 
 describe('run', () => {
   test('runs tsc', async () => {

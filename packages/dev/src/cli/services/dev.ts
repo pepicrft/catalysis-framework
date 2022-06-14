@@ -1,4 +1,6 @@
-import { project, logger } from '@gestaltjs/core/cli'
+import { project } from '@gestaltjs/core/cli'
+import { urlToken, content } from '@gestaltjs/core/node/logger'
+
 import { devLogger } from '../logger'
 import { createApp } from 'h3'
 import { listen } from 'listhen'
@@ -16,12 +18,12 @@ export async function devProject(
   devLogger().info('Starting the project...')
   const listener = await listen(app, { autoClose: true, showURL: false })
   devLogger().info(
-    logger.content`The project is now available at: ${logger.urlToken(
+    content`The project is now available at: ${urlToken(
       listener.url,
       listener.url
     )}`
   )
-  devLogger().info(logger.content`You can press CTRL+C to open the project.`)
+  devLogger().info(content`You can press CTRL+C to open the project.`)
 
   return {
     onChange: (changedProject) => {

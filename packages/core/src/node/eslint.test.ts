@@ -1,10 +1,10 @@
 import { describe, test, expect, vi } from 'vitest'
-import { exec } from '../cli/system'
+import { exec } from './system'
 import { moduleDirname, parentDirectory } from './path'
 import { findPathUp } from './fs'
 import { runESLint, ESLintNotFoundError } from './eslint'
 
-vi.mock('../cli/system')
+vi.mock('./system')
 vi.mock('./path')
 vi.mock('./fs')
 

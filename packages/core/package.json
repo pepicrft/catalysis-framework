@@ -11,17 +11,49 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./node/path": {
-      "node": "./dist/node/path.js",
-      "types": "./dist/node/path.d.ts"
+    "./node/cli": {
+      "node": "./dist/node/cli.js",
+      "types": "./dist/node/cli.d.ts"
+    },
+    "./node/command": {
+      "node": "./dist/node/command.js",
+      "types": "./dist/node/command.d.ts"
+    },
+    "./node/environment": {
+      "node": "./dist/node/environment.js",
+      "types": "./dist/node/environment.d.ts"
+    },
+    "./node/eslint": {
+      "node": "./dist/node/eslint.js",
+      "types": "./dist/node/eslint.d.ts"
     },
     "./node/fs": {
       "node": "./dist/node/fs.js",
       "types": "./dist/node/fs.d.ts"
     },
-    "./node/command": {
-      "node": "./dist/node/command.js",
-      "types": "./dist/node/command.d.ts"
+    "./node/logger": {
+      "node": "./dist/node/logger.js",
+      "types": "./dist/node/logger.d.ts"
+    },
+    "./node/npm": {
+      "node": "./dist/node/npm.js",
+      "types": "./dist/node/npm.d.ts"
+    },
+    "./node/plugin": {
+      "node": "./dist/node/plugin.js",
+      "types": "./dist/node/plugin.d.ts"
+    },
+    "./node/path": {
+      "node": "./dist/node/path.js",
+      "types": "./dist/node/path.d.ts"
+    },
+    "./node/system": {
+      "node": "./dist/node/system.js",
+      "types": "./dist/node/system.d.ts"
+    },
+    "./node/terminal": {
+      "node": "./dist/node/terminal.js",
+      "types": "./dist/node/terminal.d.ts"
     },
     "./node/tsc": {
       "node": "./dist/node/tsc.js",
@@ -30,10 +62,6 @@
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
-    },
-    "./runtime": {
-      "import": "./dist/runtime/index.js",
-      "types": "./dist/runtime/index.d.ts"
     },
     "./shared": {
       "import": "./dist/shared/index.js",

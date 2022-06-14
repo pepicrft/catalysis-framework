@@ -1,5 +1,5 @@
 import { Bug } from '../shared/error'
-import { exec } from '../cli/system'
+import { exec } from './system'
 import { findPathUp } from './fs'
 import { moduleDirname } from './path'
 /**

@@ -1,4 +1,4 @@
-import { environmentVariables } from './constants'
+import { environmentVariables } from '../cli/constants'
 
 type Environment = 'production' | 'development'
 

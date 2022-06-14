@@ -4,7 +4,7 @@ import { parentDirectory, joinPath } from '../../../node/path'
 import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
-import { fileToken, content } from '../../logger'
+import { fileToken, content } from '../../../node/logger'
 import { validateProject } from '../validate/project'
 
 /**

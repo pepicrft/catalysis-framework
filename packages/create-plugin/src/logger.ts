@@ -1,5 +1,5 @@
-import { logger } from '@gestaltjs/core/cli'
+import { coreLogger } from '@gestaltjs/core/node/logger'
 
 export const createPluginLogger = () => {
-  return logger.coreLogger().child('create-plugin')
+  return coreLogger().child('create-plugin')
 }
