@@ -143,7 +143,7 @@ importers:
       electron: 19.0.4
       enquirer: 2.3.6
       fast-glob: 3.2.11
-      fast-json-stringify: 4.1.0
+      fast-json-stringify: 4.2.0
       fastify: 4.0.2
       find-up: 6.3.0
       fs-extra: 10.1.0
@@ -175,7 +175,7 @@ importers:
       electron: 19.0.4
       enquirer: 2.3.6
       fast-glob: 3.2.11
-      fast-json-stringify: 4.1.0
+      fast-json-stringify: 4.2.0
       fastify: 4.0.2
       find-up: 6.3.0
       fs-extra: 10.1.0
@@ -2886,7 +2886,7 @@ packages:
   /@fastify/fast-json-stringify-compiler/3.0.0:
     resolution: {integrity: sha512-Wh0wAtL2O83lrUlSawkF5uXC4pL6UGva3P8j9ztVipjIYFBMnzSaxTaSTi9GATXupl8E/BykI+HVBEIyh9FDIw==}
     dependencies:
-      fast-json-stringify: 4.1.0
+      fast-json-stringify: 4.2.0
     dev: false
 
   /@hapi/hoek/9.3.0:
@@ -7345,8 +7345,8 @@ packages:
   /fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
 
-  /fast-json-stringify/4.1.0:
-    resolution: {integrity: sha512-yy/5SUALH1LxcVFg/tqaA2a3cfXhpZl5MqdyhSJeAmOZg1nQgU0meg0KuRrFaG3iSrrDMWxTittWb12oIBXOcQ==}
+  /fast-json-stringify/4.2.0:
+    resolution: {integrity: sha512-9RWBl82H7jwnPlkZ/ghi0VD5OFZVdwgwVui0nYzjnXbPQxJ3ES1+SQcWIoeCJOgrY7JkBkY/69UNZSroFPDRdQ==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       ajv: 8.11.0
@@ -7391,7 +7391,7 @@ packages:
       '@fastify/fast-json-stringify-compiler': 3.0.0
       abstract-logging: 2.0.1
       avvio: 8.1.3
-      fast-json-stringify: 4.1.0
+      fast-json-stringify: 4.2.0
       find-my-way: 6.3.0
       light-my-request: 5.0.0
       pino: 8.0.0
