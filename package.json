@@ -52,7 +52,7 @@
     "install": "0.13.0",
     "nx": "14.3.1",
     "pathe": "0.3.0",
-    "prettier": "2.6.2",
+    "prettier": "2.7.0",
     "rimraf": "3.0.2",
     "rollup": "2.75.6",
     "rollup-plugin-dts": "4.2.2",

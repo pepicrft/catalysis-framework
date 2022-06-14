@@ -36,7 +36,7 @@ importers:
       install: 0.13.0
       nx: 14.3.1
       pathe: 0.3.0
-      prettier: 2.6.2
+      prettier: 2.7.0
       rimraf: 3.0.2
       rollup: 2.75.6
       rollup-plugin-dts: 4.2.2
@@ -54,7 +54,7 @@ importers:
       '@changesets/cli': 2.23.0
       '@nrwl/cli': 14.3.1
       '@nrwl/tao': 14.3.1
-      '@nrwl/workspace': 14.3.1_qaenaoky4vcakyli2vx7vl4ie4
+      '@nrwl/workspace': 14.3.1_yz6a6hsaxya3rpz7bodc3gaxbu
       '@rollup/plugin-alias': 3.1.9_rollup@2.75.6
       '@rollup/plugin-commonjs': 22.0.0_rollup@2.75.6
       '@rollup/plugin-json': 4.1.0_rollup@2.75.6
@@ -73,7 +73,7 @@ importers:
       eslint-plugin-import: 2.26.0_wyrfqmvemfacbroyi3ypviy7f4
       eslint-plugin-jest: 26.1.5_ns3acw3umgp6bt2hsqpnaz4mry
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.17.0
-      eslint-plugin-prettier: 4.0.0_ucegkljdju7q4zmvwxzqoprf3y
+      eslint-plugin-prettier: 4.0.0_nguwan5pqsajixjz57ffz7bkde
       eslint-plugin-react: 7.30.0_eslint@8.17.0
       eslint-plugin-react-hooks: 4.5.0_eslint@8.17.0
       eslint-plugin-rulesdir: 0.2.1
@@ -83,7 +83,7 @@ importers:
       install: 0.13.0
       nx: 14.3.1
       pathe: 0.3.0
-      prettier: 2.6.2
+      prettier: 2.7.0
       rimraf: 3.0.2
       rollup: 2.75.6
       rollup-plugin-dts: 4.2.2_fgms252lqu3rk7srzpqqayl4ya
@@ -3277,7 +3277,7 @@ packages:
       - '@swc/core'
     dev: true
 
-  /@nrwl/workspace/14.3.1_qaenaoky4vcakyli2vx7vl4ie4:
+  /@nrwl/workspace/14.3.1_yz6a6hsaxya3rpz7bodc3gaxbu:
     resolution: {integrity: sha512-ROjV859WSAJRPJoT0ZTFfWSROvCW3HSpr8yFRhXZJEyjMZ6/pfRB+A5E0GQmm9HT7nrmahHUspvM5mQPsoRc4g==}
     peerDependencies:
       prettier: ^2.6.2
@@ -3304,7 +3304,7 @@ packages:
       npm-run-path: 4.0.1
       nx: 14.3.1
       open: 8.4.0
-      prettier: 2.6.2
+      prettier: 2.7.0
       rxjs: 6.6.7
       semver: 7.3.4
       tmp: 0.2.1
@@ -6974,7 +6974,7 @@ packages:
       minimatch: 3.1.2
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_ucegkljdju7q4zmvwxzqoprf3y:
+  /eslint-plugin-prettier/4.0.0_nguwan5pqsajixjz57ffz7bkde:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -6987,7 +6987,7 @@ packages:
     dependencies:
       eslint: 8.17.0
       eslint-config-prettier: 8.5.0_eslint@8.17.0
-      prettier: 2.6.2
+      prettier: 2.7.0
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -11111,8 +11111,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier/2.6.2:
-    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+  /prettier/2.7.0:
+    resolution: {integrity: sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
