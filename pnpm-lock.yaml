@@ -151,7 +151,7 @@ importers:
       listr2: 4.0.5
       magic-string: 0.26.2
       noop-stream: 1.0.0
-      path-equal: 1.2.1
+      path-equal: 1.2.2
       pathe: 0.3.0
       picocolors: 1.0.0
       pino: 8.0.0
@@ -183,7 +183,7 @@ importers:
       listr2: 4.0.5_enquirer@2.3.6
       magic-string: 0.26.2
       noop-stream: 1.0.0
-      path-equal: 1.2.1
+      path-equal: 1.2.2
       pathe: 0.3.0
       picocolors: 1.0.0
       pino: 8.0.0
@@ -10509,8 +10509,8 @@ packages:
       ansi-escapes: 3.2.0
       cross-spawn: 6.0.5
 
-  /path-equal/1.2.1:
-    resolution: {integrity: sha512-rmEOE5jX+Hxf8BkC95qYF6/PHI+/k/GE+GbqUUAhzGrMIBIKhd25DZHLK/2GvfrOpMa0BWMNlTh8fscM4j/Auw==}
+  /path-equal/1.2.2:
+    resolution: {integrity: sha512-AUJvbcle1Zgb1TgtftHYknlrgrSYyI1ytrYgSbKUHSybwqUDnbD2cw9PIWivuMvsN+GTXmr/DRN4VBXpHG6aGg==}
     dev: false
 
   /path-exists/3.0.0:
