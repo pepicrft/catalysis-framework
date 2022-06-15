@@ -28,7 +28,7 @@ importers:
       eslint-plugin-jsx-a11y: 6.5.1
       eslint-plugin-prettier: 4.0.0
       eslint-plugin-react: 7.30.0
-      eslint-plugin-react-hooks: 4.5.0
+      eslint-plugin-react-hooks: 4.6.0
       eslint-plugin-rulesdir: ^0.2.1
       execa: 6.1.0
       fast-glob: 3.2.11
@@ -68,14 +68,14 @@ importers:
       cross-env: 7.0.3
       esbuild: 0.14.43
       eslint: 8.17.0
-      eslint-config-airbnb: 19.0.4_pefmhapqkyo3bhsmfeolqklhny
+      eslint-config-airbnb: 19.0.4_ymsdurwr2nxw43jpluuuhbyayy
       eslint-config-prettier: 8.5.0_eslint@8.17.0
       eslint-plugin-import: 2.26.0_wyrfqmvemfacbroyi3ypviy7f4
       eslint-plugin-jest: 26.1.5_ns3acw3umgp6bt2hsqpnaz4mry
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.17.0
       eslint-plugin-prettier: 4.0.0_nguwan5pqsajixjz57ffz7bkde
       eslint-plugin-react: 7.30.0_eslint@8.17.0
-      eslint-plugin-react-hooks: 4.5.0_eslint@8.17.0
+      eslint-plugin-react-hooks: 4.6.0_eslint@8.17.0
       eslint-plugin-rulesdir: 0.2.1
       execa: 6.1.0
       fast-glob: 3.2.11
@@ -368,10 +368,10 @@ importers:
   ship:
     specifiers:
       gestaltjs: workspace:*
-      react: 18.1.0
+      react: 18.2.0
     devDependencies:
       gestaltjs: link:../packages/gestaltjs
-      react: 18.1.0
+      react: 18.2.0
 
 packages:
 
@@ -6837,7 +6837,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-config-airbnb/19.0.4_pefmhapqkyo3bhsmfeolqklhny:
+  /eslint-config-airbnb/19.0.4_ymsdurwr2nxw43jpluuuhbyayy:
     resolution: {integrity: sha512-T75QYQVQX57jiNgpF9r1KegMICE94VYwoFQyMGhrvc+lB8YF2E/M/PYDaQe1AJcWaEgqLE+ErXV1Og/+6Vyzew==}
     engines: {node: ^10.12.0 || ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -6852,7 +6852,7 @@ packages:
       eslint-plugin-import: 2.26.0_wyrfqmvemfacbroyi3ypviy7f4
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.17.0
       eslint-plugin-react: 7.30.0_eslint@8.17.0
-      eslint-plugin-react-hooks: 4.5.0_eslint@8.17.0
+      eslint-plugin-react-hooks: 4.6.0_eslint@8.17.0
       object.assign: 4.1.2
       object.entries: 1.1.5
     dev: true
@@ -6991,8 +6991,8 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: true
 
-  /eslint-plugin-react-hooks/4.5.0_eslint@8.17.0:
-    resolution: {integrity: sha512-8k1gRt7D7h03kd+SAAlzXkQwWK22BnK6GKZG+FJA6BAGy22CFvl8kCIXKpVux0cCxMWDQUPqSok0LKaZ0aOcCw==}
+  /eslint-plugin-react-hooks/4.6.0_eslint@8.17.0:
+    resolution: {integrity: sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
@@ -11501,8 +11501,8 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
 
-  /react/18.1.0:
-    resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
