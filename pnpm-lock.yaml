@@ -119,22 +119,22 @@ importers:
   packages/build:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/check:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/core:
     specifiers:
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
       '@types/estree': 0.0.51
       '@types/pino': 7.0.5
       acorn: 8.7.1
@@ -168,7 +168,7 @@ importers:
       unified: 10.1.2
       vite: 2.9.12
     dependencies:
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
       acorn: 8.7.1
       case-anything: 2.1.10
       commondir: 1.0.1
@@ -206,31 +206,31 @@ importers:
   packages/create-plugin:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/create-project:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/db:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/dev:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
       h3: 0.7.10
       listhen: 0.2.13
     dependencies:
@@ -238,7 +238,7 @@ importers:
       listhen: 0.2.13
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/eslint-plugin:
     specifiers:
@@ -255,10 +255,10 @@ importers:
   packages/generate:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/gestaltjs:
     specifiers:
@@ -272,7 +272,7 @@ importers:
       '@gestaltjs/plugins': 0.7.8
       '@gestaltjs/routes': 0.7.8
       '@gestaltjs/test': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
       '@oclif/plugin-help': 5.1.12
     dependencies:
       '@gestaltjs/build': link:../build
@@ -285,16 +285,16 @@ importers:
       '@gestaltjs/plugins': link:../plugins
       '@gestaltjs/routes': link:../routes
       '@gestaltjs/test': link:../test
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
       '@oclif/plugin-help': 5.1.12
 
   packages/info:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/plugin-netlify:
     specifiers:
@@ -305,18 +305,18 @@ importers:
   packages/plugins:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/routes:
     specifiers:
       '@gestaltjs/core': 0.7.8
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     devDependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
 
   packages/test:
     specifiers:
@@ -3359,8 +3359,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-  /@oclif/core/1.9.2:
-    resolution: {integrity: sha512-+qhfvDHn+tR4UN/Vk3UYIeM0Dm0XKsHrM4igJrUpJj/ZXXdaGbZEB+cMIRDZHGqBw+pcwP4+9zQFmxotMDIWcw==}
+  /@oclif/core/1.9.3:
+    resolution: {integrity: sha512-npxWULRu+iW9AuUNoCH118MNI8cxYIkcWkknz3mCDumTo11FC+h3OY1cMtlclqZHfZcDHh4iaSkNMX/7se9GUQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@oclif/linewrap': 1.0.0
@@ -3399,7 +3399,7 @@ packages:
     resolution: {integrity: sha512-HvH/RubJxqCinP0vUWQLTOboT+SfjfL8h40s+PymkWaldIcXlpoRaJX50vz+SjZIs7uewZwEk8fzLqpF/BWXlg==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 1.9.2
+      '@oclif/core': 1.9.3
     dev: false
 
   /@oclif/screen/3.0.2:
