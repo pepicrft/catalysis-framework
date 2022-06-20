@@ -33,18 +33,18 @@ in this case,
 the error represents a bug that will be reported to the error tracking platform. Below are some examples of how to use the errors. Note how abort errors require including the cause of the error and the next steps that users should take:
 
 ```ts
-import { error } from "@gestaltjs/gestalt"
+import { Abort } from '@gestaltjs/core/common/error'
 
 // Abort error
 
-const DirectoryNotFoundError = new error.Abort("The directory app/ was not found", {
+const DirectoryNotFoundError = new Abort("The directory app/ was not found", {
     cause: "The directory might not exist in the current directory",
     next: "Make sure the directory exists and try again"
 })
 
 // Bug error
 
-const TestFailedError = new error.Bug("The test execution failed unexpectedly", {
+const TestFailedError = new Bug("The test execution failed unexpectedly", {
     cause: "There might be a bug in the logic in the contract between Gestalt and the testing framework",
 })
 ```

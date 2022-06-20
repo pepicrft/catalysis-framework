@@ -2,11 +2,11 @@ import { readFile, writeFile } from './fs'
 import { joinPath } from '../node/path'
 
 import { describe, test, expect } from 'vitest'
-import { temporary } from '@gestaltjs/testing'
+import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
 
 describe('readFile', () => {
   test('reads the file', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const filePath = joinPath(tmpDir, 'file.txt')
       const content = 'content'

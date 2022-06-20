@@ -1,0 +1,5 @@
+export type { Plugin } from '../../common/manifests/plugin'
+export type { Project } from '../../common/manifests/project'
+export type { Configuration } from '../../common/manifests/configuration'
+export type { MainTarget } from '../../common/manifests/targets/main'
+export type { Targets } from '../../common/manifests/targets'

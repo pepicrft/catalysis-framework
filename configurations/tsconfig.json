@@ -17,20 +17,32 @@
     "isolatedModules": false,
     "paths": {
       "gestaltjs/plugin": ["../../gestaltjs/src/runtime/plugin.ts"],
+      "@gestaltjs/core/common/configuration": ["../../core/src/common/configuration.ts"],
+      "@gestaltjs/core/common/constants": ["../../core/src/common/constants.ts"],
+      "@gestaltjs/core/common/context": ["../../core/src/common/context.ts"],
+      "@gestaltjs/core/common/error": ["../../core/src/common/error.ts"],
+      "@gestaltjs/core/common/string": ["../../core/src/common/string.ts"],
+      "@gestaltjs/core/common/manifests": ["../../core/src/common/manifests.ts"],
       "@gestaltjs/core/node/command": ["../../core/src/node/command.ts"],
       "@gestaltjs/core/node/environment": ["../../core/src/node/environment.ts"],
       "@gestaltjs/core/node/eslint": ["../../core/src/node/eslint.ts"],
       "@gestaltjs/core/node/fs": ["../../core/src/node/fs.ts"],
       "@gestaltjs/core/node/logger": ["../../core/src/node/logger.ts"],
       "@gestaltjs/core/node/npm": ["../../core/src/node/npm.ts"],
-      "@gestaltjs/core/node/plugin": ["../../core/src/node/plugin.ts"],
       "@gestaltjs/core/node/path": ["../../core/src/node/path.ts"],
+      "@gestaltjs/core/node/plugin": ["../../core/src/node/plugin.ts"],
+      "@gestaltjs/core/node/project": ["../../core/src/node/project.ts"],
+      "@gestaltjs/core/node/server": ["../../core/src/node/server.ts"],
+      "@gestaltjs/core/node/stream": ["../../core/src/node/stream.ts"],
       "@gestaltjs/core/node/system": ["../../core/src/node/system.ts"],
+      "@gestaltjs/core/node/template": ["../../core/src/node/template.ts"],
       "@gestaltjs/core/node/terminal": ["../../core/src/node/terminal.ts"],
       "@gestaltjs/core/node/tsc": ["../../core/src/node/tsc.ts"],
-      "@gestaltjs/core/shared": ["../../core/src/shared/index.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
-      "@gestaltjs/testing": ["../../testing/src/index.ts"]
+      "@gestaltjs/testing/node/fixtures": ["../../testing/src/node/fixtures.ts"],
+      "@gestaltjs/testing/node/temporary": ["../../testing/src/node/temporary.ts"],
+      "@gestaltjs/testing/node/workspace": ["../../testing/src/node/workspace.ts"]
+
     }
   },
   "exclude": ["**/dist/**", "**/*/vitest.config.ts", "node_modules"]

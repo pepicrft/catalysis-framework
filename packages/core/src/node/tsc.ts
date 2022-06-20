@@ -1,4 +1,4 @@
-import { Abort } from '../shared/error'
+import { Abort } from '../common/error'
 import { exec } from './system'
 import { moduleDirname } from './path'
 import { findPathUp } from './fs'

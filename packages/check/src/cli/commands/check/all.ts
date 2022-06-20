@@ -1,5 +1,5 @@
 import { Flags } from '@oclif/core'
-import { project } from '@gestaltjs/core/cli'
+import { loadProject } from '@gestaltjs/core/node/project'
 import { checkCode } from '../../services/code'
 import { checkStyle } from '../../services/style'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
@@ -21,12 +21,12 @@ export default class All extends GestaltCommand {
   }
   async run(): Promise<void> {
     const { flags } = await this.parse(All)
-    const loadedProject = await project.load(flags.path)
+    const project = await loadProject(flags.path)
 
-    await checkCode(loadedProject.directory)
+    await checkCode(project.directory)
     await checkStyle({
       fix: flags.fix,
-      project: loadedProject,
+      project: project,
     })
   }
 }

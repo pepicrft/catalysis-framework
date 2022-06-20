@@ -1,4 +1,5 @@
-import { project } from '@gestaltjs/core/cli'
+import { Project } from '@gestaltjs/core/common/manifests'
+
 import { urlToken, content } from '@gestaltjs/core/node/logger'
 
 import { devLogger } from '../logger'
@@ -6,12 +7,10 @@ import { createApp } from 'h3'
 import { listen } from 'listhen'
 
 type DevProjectOutput = {
-  onChange: (project: project.models.Project) => void
+  onChange: (project: Project) => void
 }
 
-export async function devProject(
-  project: project.models.Project
-): Promise<DevProjectOutput> {
+export async function devProject(project: Project): Promise<DevProjectOutput> {
   const app = createApp()
   app.use('/', () => 'Hello world!')
 

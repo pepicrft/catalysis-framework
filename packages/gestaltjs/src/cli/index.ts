@@ -1,4 +1,4 @@
-import { error } from '@gestaltjs/core/cli'
+import { errorHandler } from '@gestaltjs/core/common/error'
 import { run, flush, settings } from '@oclif/core'
 
 const isDebug = process.env.DEBUG === '1'
@@ -8,7 +8,7 @@ const runGestalt = () => {
   run(void 0, import.meta.url)
     .then(flush)
     .catch((thrownError) => {
-      return error.handler(thrownError)
+      return errorHandler(thrownError)
     })
 }
 

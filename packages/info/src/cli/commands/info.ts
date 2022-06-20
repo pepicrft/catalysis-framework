@@ -1,4 +1,4 @@
-import { project } from '@gestaltjs/core/cli'
+import { loadProject } from '@gestaltjs/core/node/project'
 import { infoLogger } from '../logger'
 import { formatJson } from '../formatters/json'
 import { prettyFormat } from '../formatters/pretty'
@@ -15,7 +15,7 @@ export default class Info extends GestaltCommand {
 
   async run(): Promise<any> {
     const { flags } = await this.parse(Info)
-    const loadedProject = await project.load(flags.path)
+    const loadedProject = await loadProject(flags.path)
     if (flags.json) {
       infoLogger().rawInfo(formatJson({ project: loadedProject }), {
         project: loadedProject,

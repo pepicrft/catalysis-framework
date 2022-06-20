@@ -11,9 +11,17 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+    "./node/models": {
+      "node": "./dist/node/models.js",
+      "types": "./dist/node/models.d.ts"
+    },
+    "./node/temporary": {
+      "node": "./dist/node/temporary.js",
+      "types": "./dist/node/temporary.d.ts"
+    },
+    "./node/workspace": {
+      "node": "./dist/node/workspace.js",
+      "types": "./dist/node/workspace.d.ts"
     }
   },
   "files": [

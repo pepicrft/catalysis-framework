@@ -11,6 +11,30 @@
   "license": "MIT",
   "type": "module",
   "exports": {
+    "./common/configuration": {
+      "node": "./dist/common/configuration.js",
+      "types": "./dist/common/configuration.d.ts"
+    },
+    "./common/constants": {
+      "node": "./dist/common/constants.js",
+      "types": "./dist/common/constants.d.ts"
+    },
+    "./common/context": {
+      "node": "./dist/common/context.js",
+      "types": "./dist/common/context.d.ts"
+    },
+    "./common/error": {
+      "node": "./dist/common/error.js",
+      "types": "./dist/common/error.d.ts"
+    },
+    "./common/string": {
+      "node": "./dist/common/string.js",
+      "types": "./dist/common/string.d.ts"
+    },
+    "./common/models": {
+      "node": "./dist/common/models.js",
+      "types": "./dist/common/models.d.ts"
+    },
     "./node/cli": {
       "node": "./dist/node/cli.js",
       "types": "./dist/node/cli.d.ts"
@@ -39,17 +63,33 @@
       "node": "./dist/node/npm.js",
       "types": "./dist/node/npm.d.ts"
     },
-    "./node/plugin": {
-      "node": "./dist/node/plugin.js",
-      "types": "./dist/node/plugin.d.ts"
-    },
     "./node/path": {
       "node": "./dist/node/path.js",
       "types": "./dist/node/path.d.ts"
     },
+    "./node/plugin": {
+      "node": "./dist/node/plugin.js",
+      "types": "./dist/node/plugin.d.ts"
+    },
+    "./node/project": {
+      "node": "./dist/node/project.js",
+      "types": "./dist/node/project.d.ts"
+    },
+    "./node/server": {
+      "node": "./dist/node/server.js",
+      "types": "./dist/node/server.d.ts"
+    },
+    "./node/stream": {
+      "node": "./dist/node/stream.js",
+      "types": "./dist/node/stream.d.ts"
+    },
     "./node/system": {
       "node": "./dist/node/system.js",
       "types": "./dist/node/system.d.ts"
+    },
+    "./node/template": {
+      "node": "./dist/node/template.js",
+      "types": "./dist/node/template.d.ts"
     },
     "./node/terminal": {
       "node": "./dist/node/terminal.js",
@@ -62,10 +102,6 @@
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
-    },
-    "./shared": {
-      "import": "./dist/shared/index.js",
-      "types": "./dist/shared/index.d.ts"
     }
   },
   "files": [

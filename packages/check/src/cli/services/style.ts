@@ -1,9 +1,10 @@
-import { project, error } from '@gestaltjs/core/cli'
+import { Abort } from '@gestaltjs/core/common/error'
 import { runESLint } from '@gestaltjs/core/node/eslint'
+import { Project } from '@gestaltjs/core/common/manifests'
 
 export type LintOptions = {
   fix: boolean
-  project: project.models.Project
+  project: Project
 }
 
 export async function checkStyle(options: LintOptions) {
@@ -17,7 +18,7 @@ export async function checkStyle(options: LintOptions) {
 
     // TODO: fix error with logger when executing tests
   } catch (err) {
-    throw new error.Abort('Linting failed. Check the above issues', {
+    throw new Abort('Linting failed. Check the above issues', {
       next: '',
     })
   }

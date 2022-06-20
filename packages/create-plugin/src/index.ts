@@ -1,4 +1,4 @@
-import { error } from '@gestaltjs/core/cli'
+import { errorHandler } from '@gestaltjs/core/common/error'
 import { run, flush, settings, Errors } from '@oclif/core'
 
 const initIndex = process.argv.findIndex((arg) => arg.includes('init'))
@@ -20,7 +20,7 @@ const runCreateProject = () => {
   run(void 0, import.meta.url)
     .then(flush)
     .catch((thrownError) => {
-      return error.handler(thrownError).then(Errors.handle)
+      return errorHandler(thrownError).then(Errors.handle)
     })
 }
 

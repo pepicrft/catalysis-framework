@@ -1,4 +1,4 @@
-import { project } from '@gestaltjs/core/cli'
+import { loadProject } from '@gestaltjs/core/node/project'
 import { devProject } from '../services/dev'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 
@@ -13,7 +13,7 @@ export default class Dev extends GestaltCommand {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Dev)
-    const loadedProject = await project.load(flags.path)
-    const { onChange } = await devProject(loadedProject)
+    const project = await loadProject(flags.path)
+    const { onChange } = await devProject(project)
   }
 }

@@ -1,5 +1,0 @@
-export type { Plugin } from './models/plugin'
-export type { Project } from './models/project'
-export type { Configuration } from './models/configuration'
-export type { MainTarget } from './models/targets/main'
-export type { Targets } from './models/targets'
