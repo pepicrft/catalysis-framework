@@ -101,7 +101,7 @@ importers:
   e2e:
     specifiers:
       '@cucumber/cucumber': 8.3.0
-      '@cucumber/messages': 19.0.0
+      '@cucumber/messages': 19.1.0
       '@cucumber/pretty-formatter': 1.0.0-alpha.2
       '@types/cucumber': 7.0.0
       '@types/execa': 2.0.0
@@ -109,8 +109,8 @@ importers:
       picocolors: 1.0.0
     devDependencies:
       '@cucumber/cucumber': 8.3.0
-      '@cucumber/messages': 19.0.0
-      '@cucumber/pretty-formatter': 1.0.0-alpha.2_qmg2l4xr57ozia6r5ee7ep2tfa
+      '@cucumber/messages': 19.1.0
+      '@cucumber/pretty-formatter': 1.0.0-alpha.2_2oglkmyqubpyfjo6g67bmp2bja
       '@types/cucumber': 7.0.0
       '@types/execa': 2.0.0
       execa: 5.1.1
@@ -2111,7 +2111,7 @@ packages:
     resolution: {integrity: sha512-8uIZInEe3cO1cASmy3BA0PbVFUI+xWBnZAxmICbVOPsZaMB85MtESZLafzErgfRQPsHf6uYbVagP7MIjNPM5Jw==}
     hasBin: true
     dependencies:
-      '@cucumber/messages': 19.0.0
+      '@cucumber/messages': 19.1.0
       '@teppeis/multimaps': 2.0.0
       commander: 9.3.0
     dev: true
@@ -2119,7 +2119,7 @@ packages:
   /@cucumber/gherkin/24.0.0:
     resolution: {integrity: sha512-b7OsnvX1B8myDAKMc+RAiUX9bzgtNdjGsiMj10O13xu2HBWIOQ19EqBJ4xLO5CFG/lGk1J/+L0lANQVowxLVBg==}
     dependencies:
-      '@cucumber/messages': 19.0.0
+      '@cucumber/messages': 19.1.0
     dev: true
 
   /@cucumber/html-formatter/19.2.0_@cucumber+messages@19.0.0:
@@ -2147,14 +2147,23 @@ packages:
       uuid: 8.3.2
     dev: true
 
-  /@cucumber/pretty-formatter/1.0.0-alpha.2_qmg2l4xr57ozia6r5ee7ep2tfa:
+  /@cucumber/messages/19.1.0:
+    resolution: {integrity: sha512-88asZvEKoedckl0KZ1PZFPng9TahoQdOAX1TzoXicYu67zlN480wFxC63qwqZOB8BBJYqKVWnwiwVJoiFhbhnQ==}
+    dependencies:
+      '@types/uuid': 8.3.4
+      class-transformer: 0.5.1
+      reflect-metadata: 0.1.13
+      uuid: 8.3.2
+    dev: true
+
+  /@cucumber/pretty-formatter/1.0.0-alpha.2_2oglkmyqubpyfjo6g67bmp2bja:
     resolution: {integrity: sha512-+tFbS2idJ8yL+saEYGBaJLkhU9glxmS6FMD22S/bfZsi/c3LeLMeo1ZkNeyzuxV7Yq9jGFjiwgZ+iRaO/bN8hw==}
     peerDependencies:
       '@cucumber/cucumber': '>=7.0.0'
       '@cucumber/messages': '*'
     dependencies:
       '@cucumber/cucumber': 8.3.0
-      '@cucumber/messages': 19.0.0
+      '@cucumber/messages': 19.1.0
       ansi-styles: 5.2.0
       cli-table3: 0.6.1
       figures: 3.2.0
