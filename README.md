@@ -28,7 +28,9 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 You can create a new Gestalt project by running any of the following commands:
 
 ```bash
-npx @gestaltjs/create-project@latest
+npm init @gestaltjs/project@latest
+yarn create @gestaltjs/project@latest
+pnpm create @gestaltjs/project@latest
 ```
 
 ## Development
