@@ -1,4 +1,4 @@
-import { Bug } from '../shared/error'
+import { Bug } from '../common/error'
 import { exec } from './system'
 import { findPathUp } from './fs'
 import { moduleDirname } from './path'

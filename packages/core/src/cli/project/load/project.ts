@@ -1,5 +1,5 @@
 import { Project } from '../models/project'
-import { Abort } from '../../../shared/error'
+import { Abort } from '../../../common/error'
 import { parentDirectory, joinPath } from '../../../node/path'
 import { loadTargets } from './target'
 import { lookupConfigurationPathTraversing, loadConfig } from './config'

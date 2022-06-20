@@ -81,7 +81,7 @@ export class Abort extends Error {
   }
 }
 
-export const handler = async (error: Error): Promise<Error> => {
+export const errorHandler = async (error: Error): Promise<Error> => {
   let errorType: ErrorLogType
   let message = formatBold(formatRed('ERROR'))
   let cause: string | undefined

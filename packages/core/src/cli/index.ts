@@ -1,4 +1,3 @@
-export * as error from '../shared/error'
 export * as server from './server'
 export * as stream from './stream'
 export * as constants from './constants'

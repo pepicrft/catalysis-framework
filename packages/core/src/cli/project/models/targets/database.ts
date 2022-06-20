@@ -1,4 +1,4 @@
-import type { Database as UserDatabaseTarget } from '../../../../shared/target'
+import type { DatabaseTarget as UserDatabaseTarget } from '../../../../common/target'
 
 /**
  * This type augments the interface of UserDatabaseTarget adding properties and functions that are

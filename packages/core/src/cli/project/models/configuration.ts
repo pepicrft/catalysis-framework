@@ -1,4 +1,4 @@
-import type { Configuration as UserConfiguration } from '../../../shared/configuration'
+import type { Configuration as UserConfiguration } from '../../../common/configuration'
 
 export type Configuration = UserConfiguration & {
   /** The path to the gestalt.config.{js,ts} file */

@@ -1,4 +1,4 @@
-import { Bug } from '../shared/error'
+import { Bug } from '../common/error'
 import { joinPath } from './path'
 import { pathExists } from './fs'
 import { content, fileToken } from './logger'

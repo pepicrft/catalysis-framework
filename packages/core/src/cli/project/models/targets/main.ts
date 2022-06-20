@@ -1,6 +1,6 @@
 import { RadixRouter } from 'radix3'
 import { Route } from './main/route'
-import type { Main as UserMainTarget } from '../../../../shared/target'
+import type { MainTarget as UserMainTarget } from '../../../../common/target'
 
 /**
  * This type augments the interface of UserMainTarget adding properties and functions that are

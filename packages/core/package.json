@@ -11,6 +11,22 @@
   "license": "MIT",
   "type": "module",
   "exports": {
+    "./common/configuration": {
+      "node": "./dist/common/configuration.js",
+      "types": "./dist/common/configuration.d.ts"
+    },
+    "./common/context": {
+      "node": "./dist/common/context.js",
+      "types": "./dist/common/context.d.ts"
+    },
+    "./common/error": {
+      "node": "./dist/common/error.js",
+      "types": "./dist/common/error.d.ts"
+    },
+    "./common/target": {
+      "node": "./dist/common/target.js",
+      "types": "./dist/common/target.d.ts"
+    },
     "./node/cli": {
       "node": "./dist/node/cli.js",
       "types": "./dist/node/cli.d.ts"
@@ -62,10 +78,6 @@
     "./cli": {
       "import": "./dist/cli/index.js",
       "types": "./dist/cli/index.d.ts"
-    },
-    "./shared": {
-      "import": "./dist/shared/index.js",
-      "types": "./dist/shared/index.d.ts"
     }
   },
   "files": [
