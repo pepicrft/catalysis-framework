@@ -93,7 +93,7 @@ const config = {
               },
               {
                 label: 'Forum',
-                href: 'https://community.gestaltjs.org',
+                href: 'https://github.com/gestaltjs/gestalt/discussions',
               },
               {
                 label: 'Telegram',
