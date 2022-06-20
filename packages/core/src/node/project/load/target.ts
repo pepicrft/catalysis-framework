@@ -1,5 +1,5 @@
 import { glob, joinPath } from '../../../node/path'
-import { mainTargetFileName } from '../../constants'
+import { mainTargetFileName } from '../../../common/constants'
 import { Targets } from '../models/targets'
 import { loadMainTarget } from './targets/main'
 import { ModuleLoader } from './module-loader'

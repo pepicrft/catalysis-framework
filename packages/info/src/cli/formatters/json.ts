@@ -1,7 +1,7 @@
-import { project } from '@gestaltjs/core/cli'
+import { Project } from '@gestaltjs/core/node/project'
 
 type FormatJsonOptions = {
-  project: project.models.Project
+  project: Project
 }
 
 export function formatJson(options: FormatJsonOptions): string {

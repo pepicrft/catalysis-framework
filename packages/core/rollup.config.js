@@ -11,7 +11,6 @@ const configuration = async () => {
     ignore: 'src/common/*.test.ts',
   })
   const cliFiles = [
-    'src/cli/index.ts',
     'src/node/logger/transport.ts',
     ...nodeFiles,
     ...commonFiles,

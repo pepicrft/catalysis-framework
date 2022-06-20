@@ -1,4 +1,4 @@
-import { project as projectModule } from '@gestaltjs/core/cli'
+import { Project } from '@gestaltjs/core/node/project'
 import { relativizePath } from '@gestaltjs/core/node/path'
 import {
   formatGreen,
@@ -8,7 +8,7 @@ import {
 } from '@gestaltjs/core/node/terminal'
 
 type PrettyFormatOptions = {
-  project: projectModule.models.Project
+  project: Project
 }
 
 export function prettyFormat(options: PrettyFormatOptions): string {

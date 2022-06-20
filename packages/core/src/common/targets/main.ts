@@ -1,7 +1,7 @@
 /**
  * A union that represents the platforms supported by a target.
  */
-export type TargetPlatform = 'web' | 'desktop'
+export type UserTargetPlatform = 'web' | 'desktop'
 
 /**
  * This type declares the interface of a main target defined by the user.
@@ -9,11 +9,11 @@ export type TargetPlatform = 'web' | 'desktop'
  * this type with additional properties and methods that are internal to the framework.
  * For example the directory containing the target.
  */
-export type MainTarget = {
+export type UserMainTarget = {
   /**
    * Platforms supported by the target.
    */
-  platforms: TargetPlatform[]
+  platforms: UserTargetPlatform[]
 
   /**
    * The list of the databases the target has access to. Databases are referenced

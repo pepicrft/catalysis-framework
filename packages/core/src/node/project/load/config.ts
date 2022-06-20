@@ -1,4 +1,4 @@
-import { configurationFileName } from '../../constants'
+import { configurationFileName } from '../../../common/constants'
 import { Configuration } from '../models/configuration'
 import { ModuleLoader } from './module-loader'
 import { findPathUp } from '../../../node/fs'

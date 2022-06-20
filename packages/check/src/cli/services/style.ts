@@ -1,10 +1,10 @@
-import { project } from '@gestaltjs/core/cli'
+import { Project } from '@gestaltjs/core/node/project'
 import { Abort } from '@gestaltjs/core/common/error'
 import { runESLint } from '@gestaltjs/core/node/eslint'
 
 export type LintOptions = {
   fix: boolean
-  project: project.models.Project
+  project: Project
 }
 
 export async function checkStyle(options: LintOptions) {

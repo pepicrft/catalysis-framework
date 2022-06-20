@@ -3,7 +3,7 @@ import { parentDirectory, pathBasename, joinPath } from '../../../../node/path'
 import { ModuleLoader } from '../module-loader'
 import { loadRoutes } from './main/routes'
 import { loadLayouts } from './main/layouts'
-import type { MainTarget as UserMainTarget } from '../../../../common/target'
+import type { UserMainTarget } from '../../../../common/target'
 
 /**
  * Loads a main target into memory and returns it.
