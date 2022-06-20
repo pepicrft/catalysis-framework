@@ -3,7 +3,7 @@ import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project'
-import { testProject } from '@gestaltjs/testing/node/models'
+import { testProject } from '@gestaltjs/testing/node/fixtures'
 import { joinPath } from '../../../node/path'
 import { validateProject } from '../validate/project'
 

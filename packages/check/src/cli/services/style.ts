@@ -1,6 +1,6 @@
-import { Project } from '@gestaltjs/core/node/project'
 import { Abort } from '@gestaltjs/core/common/error'
 import { runESLint } from '@gestaltjs/core/node/eslint'
+import { Project } from '@gestaltjs/core/common/manifests'
 
 export type LintOptions = {
   fix: boolean

@@ -1,4 +1,4 @@
-import { Project } from '@gestaltjs/core/node/project'
+import { Project } from '@gestaltjs/core/common/manifests'
 import { relativizePath } from '@gestaltjs/core/node/path'
 import {
   formatGreen,

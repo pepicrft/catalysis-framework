@@ -1,4 +1,4 @@
-import { UserMainTarget } from '@gestaltjs/core/common/target'
+import { UserMainTarget } from '@gestaltjs/core/common/manifests'
 export { useContext } from '@gestaltjs/core/common/context'
 
 type UserMainTargetExport =

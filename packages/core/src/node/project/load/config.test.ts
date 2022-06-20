@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { loadConfig, watchConfig } from './config'
-import { Configuration } from '../models/configuration'
+import { Configuration } from '../../../common/manifests/configuration'
 
 describe('loadConfig', () => {
   test('loads the configuration through the module loader', async () => {

@@ -1,11 +1,11 @@
 import { loadMainTarget } from './main'
 import { describe, test, expect, vi } from 'vitest'
-import { testMainTarget } from '@gestaltjs/testing/node/models'
+import { testMainTarget } from '@gestaltjs/testing/node/fixtures'
 import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
 import { parentDirectory, pathBasename, joinPath } from '../../../../node/path'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
-import { Route } from '../../models/targets/main/route'
+import { Route } from '../../../../common/manifests/targets/main/route'
 
 vi.mock('./main/routes')
 

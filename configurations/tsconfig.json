@@ -22,7 +22,7 @@
       "@gestaltjs/core/common/context": ["../../core/src/common/context.ts"],
       "@gestaltjs/core/common/error": ["../../core/src/common/error.ts"],
       "@gestaltjs/core/common/string": ["../../core/src/common/string.ts"],
-      "@gestaltjs/core/common/target": ["../../core/src/common/target.ts"],
+      "@gestaltjs/core/common/manifests": ["../../core/src/common/manifests.ts"],
       "@gestaltjs/core/node/command": ["../../core/src/node/command.ts"],
       "@gestaltjs/core/node/environment": ["../../core/src/node/environment.ts"],
       "@gestaltjs/core/node/eslint": ["../../core/src/node/eslint.ts"],
@@ -39,7 +39,7 @@
       "@gestaltjs/core/node/terminal": ["../../core/src/node/terminal.ts"],
       "@gestaltjs/core/node/tsc": ["../../core/src/node/tsc.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
-      "@gestaltjs/testing/node/models": ["../../testing/src/node/models.ts"],
+      "@gestaltjs/testing/node/fixtures": ["../../testing/src/node/fixtures.ts"],
       "@gestaltjs/testing/node/temporary": ["../../testing/src/node/temporary.ts"],
       "@gestaltjs/testing/node/workspace": ["../../testing/src/node/workspace.ts"]
 

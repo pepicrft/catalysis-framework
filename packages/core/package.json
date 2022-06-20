@@ -31,9 +31,9 @@
       "node": "./dist/common/string.js",
       "types": "./dist/common/string.d.ts"
     },
-    "./common/target": {
-      "node": "./dist/common/target.js",
-      "types": "./dist/common/target.d.ts"
+    "./common/models": {
+      "node": "./dist/common/models.js",
+      "types": "./dist/common/models.d.ts"
     },
     "./node/cli": {
       "node": "./dist/node/cli.js",

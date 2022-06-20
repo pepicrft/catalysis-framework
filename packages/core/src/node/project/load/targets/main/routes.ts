@@ -1,4 +1,4 @@
-import { Route } from '../../../models/targets/main/route'
+import { Route } from '../../../../../common/manifests/targets/main/route'
 import { RadixRouter } from 'radix3'
 import { createRouter } from 'radix3'
 import {

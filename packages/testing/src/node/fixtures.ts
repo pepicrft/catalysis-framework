@@ -1,5 +1,4 @@
-import { Project } from '@gestaltjs/core/node/project'
-import { UserMainTarget } from '@gestaltjs/core/common/target'
+import { UserMainTarget, Project } from '@gestaltjs/core/common/manifests'
 
 /**
  * Creates and return a test project for testing purposes.

@@ -1,10 +1,10 @@
 import { loadRoutes } from './routes'
 import { describe, test, expect, vi } from 'vitest'
 import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
-import { testMainTarget } from '@gestaltjs/testing/node/models'
+import { testMainTarget } from '@gestaltjs/testing/node/fixtures'
 import { parentDirectory, joinPath } from '../../../../../node/path'
 import { writeFile, makeDirectory } from '../../../../../node/fs'
-import { Route } from '../../../models/targets/main/route'
+import { Route } from '../../../../../common/manifests/targets/main/route'
 
 describe('loadRoutes', () => {
   test('loads the routes', async () => {

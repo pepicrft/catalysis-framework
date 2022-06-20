@@ -1,9 +1,9 @@
-import type { MainTarget } from '../../models/targets/main'
+import type { MainTarget } from '../../../../common/manifests/targets/main'
 import { parentDirectory, pathBasename, joinPath } from '../../../../node/path'
 import { ModuleLoader } from '../module-loader'
 import { loadRoutes } from './main/routes'
 import { loadLayouts } from './main/layouts'
-import type { UserMainTarget } from '../../../../common/target'
+import type { UserMainTarget } from '../../../../common/manifests'
 
 /**
  * Loads a main target into memory and returns it.
