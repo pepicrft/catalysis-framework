@@ -1,17 +1,17 @@
 import { loadRoutes } from './routes'
 import { describe, test, expect, vi } from 'vitest'
-import { temporary } from '@gestaltjs/testing'
-import { models } from '@gestaltjs/testing'
+import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
+import { testMainTarget } from '@gestaltjs/testing/node/models'
 import { parentDirectory, joinPath } from '../../../../../node/path'
 import { writeFile, makeDirectory } from '../../../../../node/fs'
 import { Route } from '../../../models/targets/main/route'
 
 describe('loadRoutes', () => {
   test('loads the routes', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const load = vi.fn()
-      const mainTarget = models.testMainTarget()
+      const mainTarget = testMainTarget()
       load.mockResolvedValue(mainTarget)
       const aboutUIFilePath = joinPath(tmpDir, 'about.ui.static.jsx')
       const settingsUIFilePath = joinPath(tmpDir, 'settings/index.ui.jsx')

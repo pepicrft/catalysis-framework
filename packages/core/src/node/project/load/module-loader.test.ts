@@ -1,12 +1,12 @@
 import { getModuleLoader } from './module-loader'
 import { describe, test, expect } from 'vitest'
-import { temporary } from '@gestaltjs/testing'
+import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
 import { joinPath } from '../../../node/path'
 import { writeFile } from '../../../node/fs'
 
 describe('getModuleLoader', () => {
   test('load loads a module successfully', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const moduleContent = `
         const object = { name: "Test" };
@@ -26,7 +26,7 @@ describe('getModuleLoader', () => {
   })
 
   test('watch notifies when an existing module changes', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       type Module = { default: { name: string } }
       const firstModuleContent = `

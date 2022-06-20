@@ -3,7 +3,7 @@ import { lookupConfigurationPathTraversing, loadConfig } from './config'
 import { getModuleLoader } from './module-loader'
 import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project'
-import { models } from '@gestaltjs/testing'
+import { testProject } from '@gestaltjs/testing/node/models'
 import { joinPath } from '../../../node/path'
 import { validateProject } from '../validate/project'
 
@@ -33,7 +33,7 @@ describe('loadProject', () => {
     )
     const close = vi.fn()
     const moduleLoader: any = { close }
-    const project = models.testProject()
+    const project = testProject()
     vi.mocked(getModuleLoader).mockResolvedValue(moduleLoader)
     vi.mocked(loadConfig).mockResolvedValue(project.configuration)
     vi.mocked(loadTargets).mockResolvedValue(project.targets)

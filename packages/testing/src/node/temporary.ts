@@ -5,7 +5,7 @@ import rimraf from 'rimraf'
  * Creates a temporary directory and ties its lifecycle to the lifecycle of the callback.
  * @param callback - Callback whose lifecycle is tied to the lifecycle of the temporary directory.
  */
-export async function directory<T>(
+export async function inTemporarydirectory<T>(
   callback: (temporaryDirectory: string) => T
 ) {
   return tempy.directory.task(callback)
@@ -15,7 +15,7 @@ export async function directory<T>(
  * Creates a temporary directory and ties its lifecycle to the lifecycle of the callback.
  * @param callback - Callback whose lifecycle is tied to the lifecycle of the temporary directory.
  */
-export async function deletableDirectory<T>(
+export async function inTemporaryDeletableDirectory<T>(
   callback: (temporaryDirectory: string, deleteDir: () => Promise<void>) => T
 ) {
   const directory = tempy.directory()

@@ -39,7 +39,10 @@
       "@gestaltjs/core/node/terminal": ["../../core/src/node/terminal.ts"],
       "@gestaltjs/core/node/tsc": ["../../core/src/node/tsc.ts"],
       "@gestaltjs/core/cli": ["../../core/src/cli/index.ts"],
-      "@gestaltjs/testing": ["../../testing/src/index.ts"]
+      "@gestaltjs/testing/node/models": ["../../testing/src/node/models.ts"],
+      "@gestaltjs/testing/node/temporary": ["../../testing/src/node/temporary.ts"],
+      "@gestaltjs/testing/node/workspace": ["../../testing/src/node/workspace.ts"]
+
     }
   },
   "exclude": ["**/dist/**", "**/*/vitest.config.ts", "node_modules"]

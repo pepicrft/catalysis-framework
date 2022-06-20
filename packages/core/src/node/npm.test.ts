@@ -3,13 +3,13 @@ import { joinPath } from './path'
 import { writeFile, makeDirectory } from './fs'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system'
-import { temporary } from '@gestaltjs/testing'
+import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
 
 vi.mock('./system')
 
 describe('addDependencies', () => {
   test('runs the right command when npm and dev dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -32,7 +32,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when npm and production dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -55,7 +55,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when npm and peer dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -78,7 +78,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when yarn and dev dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -101,7 +101,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when yarn and prod dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -124,7 +124,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when yarn and peer dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -147,7 +147,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when pnpm and dev dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -170,7 +170,7 @@ describe('addDependencies', () => {
   })
 
   test('runs the right command when pnpm and peer dependencies', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
       await writeFile(packageJsonPath, JSON.stringify({}))
@@ -195,7 +195,7 @@ describe('addDependencies', () => {
 
 describe('inferDependencyManager', () => {
   test('returns yarn when it finds a yarn.lock', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const lockfilePath = joinPath(tmpDir, 'yarn.lock')
       const nestedDirectory = joinPath(tmpDir, 'a/b/c')
@@ -211,7 +211,7 @@ describe('inferDependencyManager', () => {
   })
 
   test('returns pnpm when it finds a pnpm-lock.yaml', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const lockfilePath = joinPath(tmpDir, 'pnpm-lock.yaml')
       const nestedDirectory = joinPath(tmpDir, 'a/b/c')
@@ -227,7 +227,7 @@ describe('inferDependencyManager', () => {
   })
 
   test('returns npm by default', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const nestedDirectory = joinPath(tmpDir, 'a/b/c')
       await makeDirectory(nestedDirectory)

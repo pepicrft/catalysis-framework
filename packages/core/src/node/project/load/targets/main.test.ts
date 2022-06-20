@@ -1,7 +1,7 @@
 import { loadMainTarget } from './main'
 import { describe, test, expect, vi } from 'vitest'
-import { temporary } from '@gestaltjs/testing'
-import { models } from '@gestaltjs/testing'
+import { testMainTarget } from '@gestaltjs/testing/node/models'
+import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
 import { parentDirectory, pathBasename, joinPath } from '../../../../node/path'
 import { loadRoutes } from './main/routes'
 import { createRouter } from 'radix3'
@@ -11,11 +11,11 @@ vi.mock('./main/routes')
 
 describe('loadMainTarget', () => {
   test('loads the target successfully', async () => {
-    await temporary.directory(async (tmpDir) => {
+    await inTemporarydirectory(async (tmpDir) => {
       // Given
       const manifestPath = joinPath(tmpDir, 'gestalt.main.js')
       const load = vi.fn()
-      const mainTarget = models.testMainTarget()
+      const mainTarget = testMainTarget()
       const moduleLoader: any = { load }
       const router = createRouter<Route>()
       load.mockResolvedValue(mainTarget)
