@@ -144,7 +144,7 @@ importers:
       enquirer: 2.3.6
       fast-glob: 3.2.11
       fast-json-stringify: 4.2.0
-      fastify: 4.0.3
+      fastify: 4.1.0
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -176,7 +176,7 @@ importers:
       enquirer: 2.3.6
       fast-glob: 3.2.11
       fast-json-stringify: 4.2.0
-      fastify: 4.0.3
+      fastify: 4.1.0
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -7380,8 +7380,8 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.0.3:
-    resolution: {integrity: sha512-ACb3SXYQaN3zbRRND/51Dk/lmMkEJmGZ1YjSayzefCGX4UeHPw1it9PfJrfiuiG07FO2UxRC7Vxl+GwKfDi1Vw==}
+  /fastify/4.1.0:
+    resolution: {integrity: sha512-nze95u3wpVIsOXMmSi5kgUaEIZq2HJmerk/+ivFBPtYozAydoDg92BcsxDtO4cb8vW4RBkahx8zL5PgH9YulCw==}
     dependencies:
       '@fastify/ajv-compiler': 3.1.0
       '@fastify/error': 3.0.0
