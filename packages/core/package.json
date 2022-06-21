@@ -144,7 +144,7 @@
     "enquirer": "2.3.6",
     "fast-glob": "3.2.11",
     "fast-json-stringify": "4.2.0",
-    "fastify": "4.0.3",
+    "fastify": "4.1.0",
     "find-up": "6.3.0",
     "fs-extra": "10.1.0",
     "handlebars": "4.7.7",
