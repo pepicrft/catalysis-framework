@@ -1,4 +1,4 @@
-import { Project } from '@gestaltjs/core/common/manifests'
+import { Project } from '@gestaltjs/core/common/models'
 
 type FormatJsonOptions = {
   project: Project

@@ -1,4 +1,4 @@
-import { Project } from '@gestaltjs/core/common/manifests'
+import { Project } from '@gestaltjs/core/common/models'
 import { relativizePath } from '@gestaltjs/core/node/path'
 import {
   formatGreen,
@@ -34,24 +34,15 @@ export function prettyFormat(options: PrettyFormatOptions): string {
     lines.push('')
   }
 
-  const mainTargets = options.project.targets.main
-  if (
-    Object.keys(mainTargets).length !== 0 ||
-    Object.keys(mainTargets).length !== 0
-  ) {
+  const targets = options.project.targets
+  if (Object.keys(targets).length !== 0 || Object.keys(targets).length !== 0) {
     lines.push(formatGreen(formatBold('Targets 📦')))
   }
-  if (Object.keys(mainTargets).length !== 0) {
+  if (Object.keys(targets).length !== 0) {
     lines.push(`    ${formatCyan(formatBold('Main'))}`)
-    Object.keys(mainTargets).forEach((targetName) => {
-      const target = mainTargets[targetName]
-      const targetPrefix = `      `
+    Object.keys(targets).forEach((targetName) => {
+      const target = targets[targetName]
       const targetMetadataPrefix = `        `
-      lines.push(
-        `${targetPrefix}${formatYellow(
-          formatBold(`${targetName} [${target.platforms.join(',')}]`)
-        )}`
-      )
       lines.push(
         `${targetMetadataPrefix}${formatBold(`Directory:`)} ${relativizePath(
           target.directory

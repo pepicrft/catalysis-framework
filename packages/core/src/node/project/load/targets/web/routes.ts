@@ -1,4 +1,3 @@
-import { Route } from '../../../../../common/manifests/targets/main/route'
 import { RadixRouter } from 'radix3'
 import { createRouter } from 'radix3'
 import {
@@ -8,8 +7,9 @@ import {
   pathBasename,
   relativePath,
   parsePath,
-} from '../../../../../node/path'
-import { pathExists } from '../../../../../node/fs'
+} from '../../../../path'
+import { pathExists } from '../../../../fs'
+import { Route } from '../../../../../common/models/targets/web/route'
 
 /**
  * Loads the routes of a main target.

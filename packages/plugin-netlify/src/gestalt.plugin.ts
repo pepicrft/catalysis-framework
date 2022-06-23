@@ -1,4 +1,4 @@
-import { definePlugin } from '@gestaltjs/core/node/plugin'
+import { definePlugin } from 'gestaltjs/plugin'
 
 type NetlifyPluginOptions = {
   // No options yet

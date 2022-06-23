@@ -1,4 +1,4 @@
-import { joinPath, glob, relativePath } from '../../../../../node/path'
+import { joinPath, glob, relativePath } from '../../../../path'
 
 /**
  * This functions finds all the layout files under a target's routes directory,

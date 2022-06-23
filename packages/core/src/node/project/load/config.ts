@@ -1,5 +1,5 @@
 import { configurationFileName } from '../../../common/constants'
-import { Configuration } from '../../../common/manifests/configuration'
+import { Configuration } from '../../../common/models/configuration'
 import { ModuleLoader } from './module-loader'
 import { findPathUp } from '../../../node/fs'
 

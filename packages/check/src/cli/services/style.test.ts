@@ -48,9 +48,7 @@ function getOptions({ fix }: { fix: boolean }): LintOptions {
         manifestPath: '/project/gestalt.config.js',
       },
       sourcesGlob: '/project/src/**/*.{ts,js}',
-      targets: {
-        main: {},
-      },
+      targets: {},
     },
   }
 }

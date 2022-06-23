@@ -1,13 +1,13 @@
 import { RadixRouter } from 'radix3'
-import { Route } from './main/route'
-import type { UserMainTarget } from '../user/main'
+import { Route } from './web/route'
+import type { UserWebTarget } from '../../manifests/web'
 
 /**
  * This type augments the interface of UserMainTarget adding properties and functions that are
  * internal to the framework. For example, the directory where the target is located,
  * which is obtained at loading time.
  */
-export type MainTarget = UserMainTarget & {
+export type WebTarget = UserWebTarget & {
   /**
    * The target name.
    */

@@ -4,5 +4,5 @@ export const environmentVariables = {
 }
 
 export const configurationFileName = 'gestalt.config'
-export const mainTargetFileName = 'gestalt.main'
+export const webTargetFileName = 'gestalt.web'
 export const pluginFileName = 'gestalt.plugin'

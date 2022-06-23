@@ -1,6 +1,18 @@
-import { Plugin as UserPlugin } from '../../node/plugin'
+import type { UserAdapter } from '../../node/plugin/adapter'
 
-export type Plugin = UserPlugin & {
+/**
+ * The interface represents a Gestalt plugin. Plugins extend, augment, or replace Gestalt's
+ * functionality, and also add new functionality.
+ */
+export type UserPlugin = {
+  // The plugin name.
   name: string
-  directory: string
+
+  // The plugin description.
+  description: string
+
+  /**
+   * An adapter instructs Gestalt on how to build and output a Gestalt project for distribution.
+   */
+  adapter?: UserAdapter
 }

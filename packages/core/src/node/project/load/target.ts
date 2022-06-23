@@ -1,38 +1,31 @@
 import { glob, joinPath } from '../../../node/path'
-import { mainTargetFileName } from '../../../common/constants'
-import { Targets } from '../../../common/manifests/targets'
-import { loadMainTarget } from './targets/main'
+import { webTargetFileName } from '../../../common/constants'
+import { loadWebTarget } from './targets/web'
 import { ModuleLoader } from './module-loader'
+import { WebTarget } from '../../../common/models/targets/web'
 
 export async function loadTargets(
   projectDirectory: string,
   moduleLoader: ModuleLoader
-): Promise<Targets> {
-  const globPatterns = (directory: string) =>
+): Promise<{ [name: string]: WebTarget }> {
+  const globPatterns = (filename: string) =>
     ['ts', 'js'].map((extension) =>
-      joinPath(
-        projectDirectory,
-        `targets/${directory}/*/${mainTargetFileName}.${extension}`
-      )
+      joinPath(projectDirectory, `targets/*/${filename}.${extension}`)
     )
-  const mainTargetPaths = await glob(globPatterns('main'), {
+  const webTargetPaths = await glob(globPatterns(webTargetFileName), {
     onlyFiles: true,
     cwd: projectDirectory,
   })
-  const sharedTargetPaths = await glob(globPatterns('shared'), {
-    onlyFiles: true,
-    cwd: projectDirectory,
-  })
-  const mainTargetsList = Object.fromEntries(
+  const webTargets = Object.fromEntries(
     (
       await Promise.all(
-        mainTargetPaths.map((manifestPath) =>
-          loadMainTarget(manifestPath, moduleLoader)
+        webTargetPaths.map((manifestPath) =>
+          loadWebTarget(manifestPath, moduleLoader)
         )
       )
     ).map((target) => [target.name, target])
   )
   return {
-    main: mainTargetsList,
+    ...webTargets,
   }
 }
