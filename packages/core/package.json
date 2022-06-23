@@ -156,7 +156,7 @@
     "picocolors": "1.0.0",
     "pino": "8.1.0",
     "pino-abstract-transport": "1.0.0",
-    "pino-pretty": "8.0.0",
+    "pino-pretty": "8.1.0",
     "plur": "5.1.0",
     "radix3": "0.1.2",
     "rehype-parse": "8.0.4",
