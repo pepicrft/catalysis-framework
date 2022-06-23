@@ -1,4 +1,4 @@
-import { Project } from '@gestaltjs/core/common/manifests'
+import { Project } from '@gestaltjs/core/common/models'
 
 import { urlToken, content } from '@gestaltjs/core/node/logger'
 

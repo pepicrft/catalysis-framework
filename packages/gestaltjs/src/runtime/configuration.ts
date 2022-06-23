@@ -1,10 +1,10 @@
-import { Configuration } from '@gestaltjs/core/common/configuration'
+import { UserConfiguration } from '@gestaltjs/core/common/manifests'
 export { useContext } from '@gestaltjs/core/common/context'
 
-type ConfigurationExport =
-  | Configuration
-  | (() => Promise<Configuration>)
-  | (() => Configuration)
+type UserConfigurationExport =
+  | UserConfiguration
+  | (() => Promise<UserConfiguration>)
+  | (() => UserConfiguration)
 
 /**
  * A utility function to define the configuration. Since the function has its argument and
@@ -12,15 +12,11 @@ type ConfigurationExport =
  * offer a better editing experience with syntax highlighting, validation, documentation,
  * and auto-completion.
  *
- * Alternatively, Configurations can use the '@type' annotation:
- *   @type {import('gestaltjs/configuration').Configuration}
- *   const config = {...}
- *
- * @param configuration {Configuration | () => Promise<Configuration> | () => Configuration} Define a new configuration.
+ * @param configuration {UserConfiguration | () => Promise<UserConfiguration> | () => UserConfiguration} Define a new configuration.
  * @returns A promise that resolves with the configuration.
  */
 export function defineConfiguration(
-  configuration: ConfigurationExport
-): ConfigurationExport {
+  configuration: UserConfigurationExport
+): UserConfigurationExport {
   return configuration
 }
