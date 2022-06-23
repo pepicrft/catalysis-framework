@@ -1,4 +1,5 @@
-import { UserMainTarget, Project } from '@gestaltjs/core/common/manifests'
+import { UserWebTarget } from '@gestaltjs/core/common/manifests'
+import { Project } from '@gestaltjs/core/common/models'
 
 /**
  * Creates and return a test project for testing purposes.
@@ -14,17 +15,12 @@ export function testProject(overrides: Partial<Project> = {}): Project {
     },
     directory: overrides?.directory ?? '/test/project',
     sourcesGlob: overrides?.sourcesGlob ?? 'targets/**/*.ts',
-    targets: overrides?.targets ?? {
-      main: {},
-    },
+    targets: overrides?.targets ?? {},
   }
 }
 
-export function testMainTarget(
-  overrides: Partial<UserMainTarget> = {}
-): UserMainTarget {
-  return {
-    platforms: overrides.platforms ?? ['web'],
-    databases: overrides.databases ?? [],
-  }
+export function testWebTarget(
+  overrides: Partial<UserWebTarget> = {}
+): UserWebTarget {
+  return {}
 }

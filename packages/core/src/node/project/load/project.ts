@@ -1,4 +1,4 @@
-import { Project } from '../../../common/manifests/project'
+import { Project } from '../../../common/models/project'
 import { Abort } from '../../../common/error'
 import { parentDirectory, joinPath } from '../../../node/path'
 import { loadTargets } from './target'

@@ -1,3 +1,1 @@
-export type { UserMainTarget } from './manifests/user/main'
-export type { UserDatabaseTarget } from './manifests/user/database'
-export type { Project } from './manifests/project'
+export type { UserWebTarget } from './manifests/web'
