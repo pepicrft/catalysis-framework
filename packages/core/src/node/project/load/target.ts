@@ -8,14 +8,11 @@ export async function loadTargets(
   projectDirectory: string,
   moduleLoader: ModuleLoader
 ): Promise<{ [name: string]: WebTarget }> {
-  const globPatterns = (directory: string) =>
+  const globPatterns = (filename: string) =>
     ['ts', 'js'].map((extension) =>
-      joinPath(
-        projectDirectory,
-        `targets/${directory}/*/${webTargetFileName}.${extension}`
-      )
+      joinPath(projectDirectory, `targets/*/${filename}.${extension}`)
     )
-  const webTargetPaths = await glob(globPatterns('main'), {
+  const webTargetPaths = await glob(globPatterns(webTargetFileName), {
     onlyFiles: true,
     cwd: projectDirectory,
   })
