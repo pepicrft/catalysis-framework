@@ -2,6 +2,6 @@
 
 process.removeAllListeners('warning');
 
-import runCreatePlugin from "../dist/index.js"
+import runCreatePlugin from "../dist/node/index.js"
 
 runCreatePlugin();

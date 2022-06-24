@@ -44,7 +44,7 @@ Otherwise, using Gestalt will feel like talking to different people who use diff
 ### Logging in Gestalt
 
 To help provide the above logging experience,
-`@gestaltjs/core` includes a [`logger`](https://github.com/gestaltjs/gestalt/blob/main/packages/core/src/cli/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
+`@gestaltjs/core` includes a [`logger`](https://github.com/gestaltjs/gestalt/blob/main/packages/core/src/node/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
 The main reason for choosing Pino is its performance thanks to the usage of [Node Worker Threads](https://nodejs.org/api/worker_threads.html).
 When Gestalt are running in production,
 it's vital that logging doesn't make the processing of requests slower.
@@ -56,7 +56,7 @@ when they pass the `--verbose` argument when using the CLI.
 The following log levels are available:
 `fatal`, `error`, `warn`, `info`, `debug`, and `trace`.
 
-**Note** that each package includes its own child logger under `src/cli`,
+**Note** that each package includes its own child logger under `src/node`,
 which must be used by the code in the package.
 Package loggers include the package name in the logs.
 Moreover, they can extend the formatting through [Pino Transports](https://github.com/pinojs/pino/blob/master/docs/transports.md).

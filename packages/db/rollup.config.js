@@ -10,12 +10,12 @@ const configuration = async () => {
   }
   return [
     {
-      input: await fg(path.join(__dirname, 'src/cli/commands/db/**/*.ts'), {
-        ignore: path.join(__dirname, 'src/cli/commands/db/**/*.test.ts'),
+      input: await fg(path.join(__dirname, 'src/node/commands/db/**/*.ts'), {
+        ignore: path.join(__dirname, 'src/node/commands/db/**/*.test.ts'),
       }),
       output: [
         {
-          dir: path.join(distDir(__dirname), 'cli/commands/db'),
+          dir: path.join(distDir(__dirname), 'node/commands/db'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,

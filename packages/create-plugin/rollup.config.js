@@ -8,7 +8,7 @@ const createPluginPlugins = [
     entries: [
       {
         find: '@gestaltjs/core/cli',
-        replacement: path.join(__dirname, '../core/src/cli/index.ts'),
+        replacement: path.join(__dirname, '../core/src/node/index.ts'),
       },
     ],
   }),
@@ -20,10 +20,10 @@ const configuration = async () => {
 
   return [
     {
-      input: path.join(__dirname, 'src/commands/init.ts'),
+      input: path.join(__dirname, 'src/node/commands/init.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'commands/init.js'),
+          file: path.join(distDir(__dirname), 'node/commands/init.js'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
@@ -33,10 +33,10 @@ const configuration = async () => {
       external: createPluginExternal,
     },
     {
-      input: path.join(__dirname, 'src/index.ts'),
+      input: path.join(__dirname, 'src/node/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'index.js'),
+          file: path.join(distDir(__dirname), 'node/index.js'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,

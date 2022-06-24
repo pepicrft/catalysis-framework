@@ -23,10 +23,10 @@
   },
   "dependencies": {
     "@gestaltjs/core": "^0.7.8",
-    "@oclif/core": "^1.7.0"
+    "@oclif/core": "^1.9.5"
   },
   "oclif": {
-    "commands": "./dist/cli/commands"
+    "commands": "./dist/node/commands"
   },
   "engine-strict": true,
   "engines": {

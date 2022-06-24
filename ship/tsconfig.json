@@ -10,7 +10,6 @@
         "gestaltjs/target": ["../packages/gestaltjs/src/runtime/target.ts"],
         "gestaltjs/support": ["../packages/gestaltjs/src/runtime/support.ts"],
         "@gestaltjs/core/shared": ["../packages/core/src/shared/index.ts"],
-        "@gestaltjs/core/cli": ["../packages/core/src/cli/index.ts"],
         "@gestaltjs/gestalt-plugin-netlify": ["../packages/plugin-netlify/src/gestalt.plugin.ts"]
       }
     }

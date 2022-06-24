@@ -2,6 +2,6 @@
 
 process.removeAllListeners('warning');
 
-import runCreateProject from "../dist/index.js"
+import runCreateProject from "../dist/node/index.js"
 
 runCreateProject();

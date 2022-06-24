@@ -3,28 +3,12 @@ import * as path from 'pathe'
 import { external, plugins, distDir } from '../../configurations/rollup.config'
 
 const configuration = async () => {
-  const runtime = async (name) => {
-    return [
-      {
-        input: [path.join(__dirname, `src/runtime/${name}.ts`)],
-        output: [
-          {
-            dir: path.join(distDir(__dirname), 'runtime'),
-            format: 'esm',
-            sourcemap: 'inline',
-          },
-        ],
-        plugins: [...plugins(__dirname)],
-        external: [...(await external(__dirname))],
-      },
-    ]
-  }
   return [
     {
-      input: [path.join(__dirname, 'src/cli/index.ts')],
+      input: [path.join(__dirname, 'src/node/index.ts')],
       output: [
         {
-          dir: path.join(distDir(__dirname), 'cli'),
+          dir: path.join(distDir(__dirname), 'node'),
           format: 'esm',
           sourcemap: 'inline',
         },
@@ -32,11 +16,6 @@ const configuration = async () => {
       plugins: [...plugins(__dirname)],
       external: [...(await external(__dirname))],
     },
-    ...(await runtime('support')),
-    ...(await runtime('configuration')),
-    ...(await runtime('target')),
-    ...(await runtime('db')),
-    ...(await runtime('plugin')),
   ]
 }
 

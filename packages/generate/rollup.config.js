@@ -11,17 +11,17 @@ const configuration = async () => {
   return [
     {
       input: await fg(
-        path.join(__dirname, 'src/cli/commands/generate/**/*.ts'),
+        path.join(__dirname, 'src/node/commands/generate/**/*.ts'),
         {
           ignore: path.join(
             __dirname,
-            'src/cli/commands/generate/**/*.test.ts'
+            'src/node/commands/generate/**/*.test.ts'
           ),
         }
       ),
       output: [
         {
-          dir: path.join(distDir(__dirname), 'cli/commands/generate'),
+          dir: path.join(distDir(__dirname), 'node/commands/generate'),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
