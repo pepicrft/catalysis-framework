@@ -31,7 +31,8 @@
     "lint:fix": "prettier -w src/** && eslint './**/*.{js,ts}' --fix",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tsc": "tsc && echo"
+    "tsc": "tsc && echo",
+    "postpublish": "pnpm install"
   },
   "eslintConfig": {
     "extends": [
