@@ -118,23 +118,23 @@ importers:
 
   packages/build:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/check:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/core:
     specifiers:
-      '@oclif/core': 1.9.5
+      '@oclif/core': ^1.9.5
       '@types/estree': 0.0.51
       '@types/pino': 7.0.5
       acorn: 8.7.1
@@ -205,37 +205,37 @@ importers:
 
   packages/create-plugin:
     specifiers:
-      '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.9.5
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': link:../core
       '@oclif/core': 1.9.5
 
   packages/create-project:
     specifiers:
-      '@gestaltjs/core': 0.7.7
-      '@oclif/core': 1.9.5
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': link:../core
       '@oclif/core': 1.9.5
 
   packages/db:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/dev:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
       h3: ^0.7.10
       listhen: ^0.2.13
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
       h3: 0.7.10
       listhen: 0.2.13
 
@@ -254,30 +254,30 @@ importers:
 
   packages/generate:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/gestaltjs:
     specifiers:
-      '@gestaltjs/build': 0.7.8
-      '@gestaltjs/check': 0.7.8
-      '@gestaltjs/core': 0.7.7
-      '@gestaltjs/db': 0.7.8
-      '@gestaltjs/dev': 0.7.8
-      '@gestaltjs/generate': 0.7.8
-      '@gestaltjs/info': 0.7.8
-      '@gestaltjs/plugins': 0.7.8
-      '@gestaltjs/routes': 0.7.8
-      '@gestaltjs/test': 0.7.8
-      '@oclif/core': 1.9.5
-      '@oclif/plugin-help': 5.1.12
+      '@gestaltjs/build': ^0.7.8
+      '@gestaltjs/check': ^0.7.8
+      '@gestaltjs/core': ^0.7.8
+      '@gestaltjs/db': ^0.7.8
+      '@gestaltjs/dev': ^0.7.8
+      '@gestaltjs/generate': ^0.7.8
+      '@gestaltjs/info': ^0.7.8
+      '@gestaltjs/plugins': ^0.7.8
+      '@gestaltjs/routes': ^0.7.8
+      '@gestaltjs/test': ^0.7.8
+      '@oclif/core': ^1.9.5
+      '@oclif/plugin-help': ^5.1.12
     dependencies:
       '@gestaltjs/build': link:../build
       '@gestaltjs/check': link:../check
-      '@gestaltjs/core': 0.7.7
+      '@gestaltjs/core': link:../core
       '@gestaltjs/db': link:../db
       '@gestaltjs/dev': link:../dev
       '@gestaltjs/generate': link:../generate
@@ -290,11 +290,11 @@ importers:
 
   packages/info:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/plugin-netlify:
     specifiers:
@@ -304,27 +304,27 @@ importers:
 
   packages/plugins:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/routes:
     specifiers:
-      '@gestaltjs/core': ^0.7.7
-      '@oclif/core': ^1.9.3
+      '@gestaltjs/core': ^0.7.8
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/test:
     specifiers:
       '@gestaltjs/core': ^0.7.8
-      '@oclif/core': ^1.7.0
+      '@oclif/core': ^1.9.5
     dependencies:
       '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.3
+      '@oclif/core': 1.9.5
 
   packages/testing:
     specifiers:
@@ -2897,24 +2897,6 @@ packages:
       fast-json-stringify: 4.2.0
     dev: false
 
-  /@gestaltjs/core/0.7.7:
-    resolution: {integrity: sha512-j/9KovToPTW+7yyoiPfjtkucBh4n01jOpzUHjDj7mT8s9DWbfAh1BtstnyMst+1PtSQypcE+h5lERKBv8F6Tnw==}
-    engines: {node: ^14.13.1 || >=16.0.0 || >=17.0.0}
-    os: [darwin, linux, win32]
-    dependencies:
-      '@oclif/core': 1.9.5
-      pino: 7.11.0
-      pino-abstract-transport: 0.5.0
-      pino-pretty: 7.6.1
-      source-map-support: 0.5.21
-      stacktracey: 2.1.8
-      vite: 2.9.8
-    transitivePeerDependencies:
-      - less
-      - sass
-      - stylus
-    dev: false
-
   /@hapi/hoek/9.3.0:
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
 
@@ -3347,40 +3329,6 @@ packages:
       - typescript
       - utf-8-validate
     dev: true
-
-  /@oclif/core/1.9.3:
-    resolution: {integrity: sha512-npxWULRu+iW9AuUNoCH118MNI8cxYIkcWkknz3mCDumTo11FC+h3OY1cMtlclqZHfZcDHh4iaSkNMX/7se9GUQ==}
-    engines: {node: '>=12.0.0'}
-    dependencies:
-      '@oclif/linewrap': 1.0.0
-      '@oclif/screen': 3.0.2
-      ansi-escapes: 4.3.2
-      ansi-styles: 4.3.0
-      cardinal: 2.1.1
-      chalk: 4.1.2
-      clean-stack: 3.0.1
-      cli-progress: 3.10.0
-      debug: 4.3.4_supports-color@8.1.1
-      ejs: 3.1.7
-      fs-extra: 9.1.0
-      get-package-type: 0.1.0
-      globby: 11.1.0
-      hyperlinker: 1.0.0
-      indent-string: 4.0.0
-      is-wsl: 2.2.0
-      js-yaml: 3.14.1
-      natural-orderby: 2.0.3
-      object-treeify: 1.1.33
-      password-prompt: 1.1.2
-      semver: 7.3.7
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      supports-color: 8.1.1
-      supports-hyperlinks: 2.2.0
-      tslib: 2.4.0
-      widest-line: 3.1.0
-      wrap-ansi: 7.0.0
-    dev: false
 
   /@oclif/core/1.9.5:
     resolution: {integrity: sha512-C605Cr4RhHTMXYApLxdVt/PL6IA5cguN6MPvsMjxkvBppk2Fvcsj05dtRdDqShskRpZzHtu65emG1tHy8TWPWQ==}
@@ -4674,16 +4622,6 @@ packages:
   /argparse/2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
-  /args/5.0.1:
-    resolution: {integrity: sha512-1kqmFCFsPffavQFGt8OxJdIcETti99kySRUPMpOhaGjL6mRJn8HFU1OxKY5bMqfZKUwTQc1mZkAjmGYaVOHFtQ==}
-    engines: {node: '>= 6.0.0'}
-    dependencies:
-      camelcase: 5.0.0
-      chalk: 2.4.2
-      leven: 2.1.0
-      mri: 1.1.4
-    dev: false
-
   /aria-query/4.2.2:
     resolution: {integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==}
     engines: {node: '>=6.0'}
@@ -5221,11 +5159,6 @@ packages:
       map-obj: 4.3.0
       quick-lru: 4.0.1
     dev: true
-
-  /camelcase/5.0.0:
-    resolution: {integrity: sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==}
-    engines: {node: '>=6'}
-    dev: false
 
   /camelcase/5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
@@ -6435,15 +6368,6 @@ packages:
 
   /duplexer3/0.1.4:
     resolution: {integrity: sha512-CEj8FwwNA4cVH2uFCoHUrmojhYh1vmCdOaneKJXwkeY1i9jnlslVo9dx+hQ5Hl9GnH/Bwy/IjxAyOePyPKYnzA==}
-    dev: false
-
-  /duplexify/4.1.2:
-    resolution: {integrity: sha512-fz3OjcNCHmRP12MJoZMPglx8m4rrFP8rovnk4vT8Fs+aonZoCwGg10dSsQsfP/E62eZcPTMSMP6686fu9Qlqtw==}
-    dependencies:
-      end-of-stream: 1.4.4
-      inherits: 2.0.4
-      readable-stream: 3.6.0
-      stream-shift: 1.0.1
     dev: false
 
   /duration/0.2.2:
@@ -9513,11 +9437,6 @@ packages:
       package-json: 6.5.0
     dev: false
 
-  /leven/2.1.0:
-    resolution: {integrity: sha512-nvVPLpIHUxCUoRLrFqTgSxXJ614d8AgQoWl7zPe/2VadE8+1dpU3LBhowRuBAcuwruWtOdD8oYC9jDNJjXDPyA==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
   /leven/3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
     engines: {node: '>=6'}
@@ -10001,11 +9920,6 @@ packages:
       minimist: 1.2.6
     dev: false
 
-  /mri/1.1.4:
-    resolution: {integrity: sha512-6y7IjGPm8AzlvoUrwAaw1tLnUBudaS3752vcd8JtrpGGQn+rXIe63LFVHm/YMwtqAuh+LJPCFdlLYPWM1nYn6w==}
-    engines: {node: '>=4'}
-    dev: false
-
   /mrmime/1.0.0:
     resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
     engines: {node: '>=10'}
@@ -10288,10 +10202,6 @@ packages:
 
   /obuf/1.1.2:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
-    dev: false
-
-  /on-exit-leak-free/0.2.0:
-    resolution: {integrity: sha512-dqaz3u44QbRXQooZLTUKU41ZrzYrcvLISVgbrzbyCMxpmSLJvZ3ZamIJIZ29P6OhZIkNIQKosdeM6t1LYbA9hg==}
     dev: false
 
   /on-exit-leak-free/1.0.0:
@@ -10594,7 +10504,7 @@ packages:
     dev: false
 
   /path-key/2.0.1:
-    resolution: {integrity: sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=}
+    resolution: {integrity: sha512-fEHGKCSmUSDPv4uoj8AlD+joPlq3peND+HRYyxFz4KPw4z926S/b8rIuFs2FYJg3BwsxJf6A9/3eIdLaYC+9Dw==}
     engines: {node: '>=4'}
     dev: false
 
@@ -10657,37 +10567,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /pino-abstract-transport/0.5.0:
-    resolution: {integrity: sha512-+KAgmVeqXYbTtU2FScx1XS3kNyfZ5TrXY07V96QnUSFqo2gAqlvmaxH67Lj7SWazqsMabf+58ctdTcBgnOLUOQ==}
-    dependencies:
-      duplexify: 4.1.2
-      split2: 4.1.0
-    dev: false
-
   /pino-abstract-transport/1.0.0:
     resolution: {integrity: sha512-c7vo5OpW4wIS42hUVcT5REsL8ZljsUfBjqV/e2sFxmFEFZiq1XLUp5EYLtuDH6PEHq9W1egWqRbnLUP5FuZmOA==}
     dependencies:
       readable-stream: 4.0.0
       split2: 4.1.0
-
-  /pino-pretty/7.6.1:
-    resolution: {integrity: sha512-H7N6ZYkiyrfwBGW9CSjx0uyO9Q2Lyt73881+OTYk8v3TiTdgN92QHrWlEq/LeWw5XtDP64jeSk3mnc6T+xX9/w==}
-    hasBin: true
-    dependencies:
-      args: 5.0.1
-      colorette: 2.0.16
-      dateformat: 4.6.3
-      fast-safe-stringify: 2.1.1
-      joycon: 3.1.1
-      on-exit-leak-free: 0.2.0
-      pino-abstract-transport: 0.5.0
-      pump: 3.0.0
-      readable-stream: 3.6.0
-      rfdc: 1.3.0
-      secure-json-parse: 2.4.0
-      sonic-boom: 2.7.0
-      strip-json-comments: 3.1.1
-    dev: false
 
   /pino-pretty/8.1.0:
     resolution: {integrity: sha512-oKfI8qKXR2a3haHs/X8iB6QSnWLqoOGAjwxIAXem4+XOGIGNw7IKpozId1uE7j89Rj46HIfWnGbAgmQmr8+yRw==}
@@ -10709,29 +10593,8 @@ packages:
       strip-json-comments: 3.1.1
     dev: false
 
-  /pino-std-serializers/4.0.0:
-    resolution: {integrity: sha512-cK0pekc1Kjy5w9V2/n+8MkZwusa6EyyxfeQCB799CQRhRt/CqYKiWs5adeu8Shve2ZNffvfC/7J64A2PJo1W/Q==}
-    dev: false
-
   /pino-std-serializers/5.3.0:
     resolution: {integrity: sha512-Jm6EfiTTWUMxiyi07RUPpD9KLntgqc4P9lriWZG5TpabeJYxG/zkI5aUdTpUdgfS1mj3YD+0n3BINbQTz9r0Ig==}
-
-  /pino/7.11.0:
-    resolution: {integrity: sha512-dMACeu63HtRLmCG8VKdy4cShCPKaYDR4youZqoSWLxl5Gu99HUw8bw75thbPv9Nip+H+QYX8o3ZJbTdVZZ2TVg==}
-    hasBin: true
-    dependencies:
-      atomic-sleep: 1.0.0
-      fast-redact: 3.1.1
-      on-exit-leak-free: 0.2.0
-      pino-abstract-transport: 0.5.0
-      pino-std-serializers: 4.0.0
-      process-warning: 1.0.0
-      quick-format-unescaped: 4.0.4
-      real-require: 0.1.0
-      safe-stable-stringify: 2.3.1
-      sonic-boom: 2.7.0
-      thread-stream: 0.15.2
-    dev: false
 
   /pino/8.1.0:
     resolution: {integrity: sha512-53jlxs+02UNTtF1XwVWfa0dHipBiM5GK73XhkHn8M2hUl9y3L94dNwB8BwQhpd5WdHjBkyJiO7v0LRt4SGgsPg==}
@@ -11701,7 +11564,7 @@ packages:
     dev: true
 
   /redeyed/2.1.1:
-    resolution: {integrity: sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs=}
+    resolution: {integrity: sha512-FNpGGo1DycYAdnrKFxCMmKYgo/mILAqtRYbkdQD8Ep/Hk2PQ5+aEAEx+IU713RTDmuBaH0c8P5ZozurNu5ObRQ==}
     dependencies:
       esprima: 4.0.1
     dev: false
@@ -12342,7 +12205,7 @@ packages:
     resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==}
 
   /shebang-command/1.2.0:
-    resolution: {integrity: sha1-RKrGW2lbAzmJaMOfNj/uXer98eo=}
+    resolution: {integrity: sha512-EV3L1+UQWGor21OmnvojK36mhg+TyIKDh3iFBKBohr5xeXIhNBcx8oWdgkTEEQ+BEFFYdLRuqMfd5L84N1V5Vg==}
     engines: {node: '>=0.10.0'}
     dependencies:
       shebang-regex: 1.0.0
@@ -12354,7 +12217,7 @@ packages:
       shebang-regex: 3.0.0
 
   /shebang-regex/1.0.0:
-    resolution: {integrity: sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=}
+    resolution: {integrity: sha512-wpoSFAxys6b2a2wHZ1XpDSgD7N9iVjg29Ph9uV/uaP9Ex/KXlkTZTeddxDPSYQpgvzKLGJke2UU0AzoGCjNIvQ==}
     engines: {node: '>=0.10.0'}
 
   /shebang-regex/3.0.0:
@@ -12463,12 +12326,6 @@ packages:
       faye-websocket: 0.11.4
       uuid: 8.3.2
       websocket-driver: 0.7.4
-    dev: false
-
-  /sonic-boom/2.7.0:
-    resolution: {integrity: sha512-Ynxp0OGQG91wvDjCbFlRMHbSUmDq7dE/EgDeUJ/j+Q9x1FVkFry20cjLykxRSmlm3QS0B4JYAKE8239XKN4SHQ==}
-    dependencies:
-      atomic-sleep: 1.0.0
     dev: false
 
   /sonic-boom/3.0.0:
@@ -12621,10 +12478,6 @@ packages:
 
   /std-env/3.1.1:
     resolution: {integrity: sha512-/c645XdExBypL01TpFKiG/3RAa/Qmu+zRi0MwAmrdEkwHNuN0ebo8ccAXBBDa5Z0QOJgBskUIbuCK91x0sCVEw==}
-    dev: false
-
-  /stream-shift/1.0.1:
-    resolution: {integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==}
     dev: false
 
   /stream-transform/2.1.3:
@@ -12965,12 +12818,6 @@ packages:
     dependencies:
       any-promise: 1.3.0
     dev: true
-
-  /thread-stream/0.15.2:
-    resolution: {integrity: sha512-UkEhKIg2pD+fjkHQKyJO3yoIvAP3N6RlNFt2dUhcS1FGvCD1cQa1M/PGknCLFIyZdtJOWQjejp7bdNqmN7zwdA==}
-    dependencies:
-      real-require: 0.1.0
-    dev: false
 
   /thread-stream/1.0.0:
     resolution: {integrity: sha512-2Sw29jWubQWOcVa7MhLHJ51wjksUD/GHN4Fy3hP9w9DYTujifoZGSKBl54CMLRXWoD5h2pD707kY3fAdzhcwAg==}
@@ -13650,30 +13497,6 @@ packages:
       rollup: 2.75.7
     optionalDependencies:
       fsevents: 2.3.2
-
-  /vite/2.9.8:
-    resolution: {integrity: sha512-zsBGwn5UT3YS0NLSJ7hnR54+vUKfgzMUh/Z9CxF1YKEBVIe213+63jrFLmZphgGI5zXwQCSmqIdbPuE8NJywPw==}
-    engines: {node: '>=12.2.0'}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-    dependencies:
-      esbuild: 0.14.47
-      postcss: 8.4.14
-      resolve: 1.22.0
-      rollup: 2.75.7
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: false
 
   /vitest/0.16.0:
     resolution: {integrity: sha512-Ntp6jrM8wf2NMtamMBLkRBBdeqHkgAH/WMh5Xryts1j2ft2D8QZQbiSVFkSl4WmEQzcPP0YM069g/Ga1vtnEtg==}

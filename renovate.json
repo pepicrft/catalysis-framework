@@ -1,11 +1,12 @@
 {
   "extends": ["config:base"],
+  "ignorePaths": ["**/@gestaltjs/**"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "automergeType": "pr",
-      "automergeStrategy": "squash"      
+      "automergeStrategy": "squash"
     }
   ]
 }
