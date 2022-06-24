@@ -3,8 +3,6 @@ import terminalLink from 'terminal-link'
 
 export * as listr from 'listr2'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import enquirer from 'enquirer'
-const { prompt } = enquirer
 export { prompt }
 
 /**
