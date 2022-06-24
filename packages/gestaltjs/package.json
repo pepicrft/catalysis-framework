@@ -51,7 +51,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/build": "^0.7.8",
+    "@gestaltjs/build": "^0.7.7",
     "@gestaltjs/check": "^0.7.8",
     "@gestaltjs/db": "^0.7.8",
     "@gestaltjs/generate": "^0.7.8",
