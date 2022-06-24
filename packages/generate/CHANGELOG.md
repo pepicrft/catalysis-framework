@@ -1,5 +1,12 @@
 # @gestaltjs/generate
 
+## 0.7.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @gestaltjs/core@0.7.10
+
 ## 0.7.9
 
 ### Patch Changes

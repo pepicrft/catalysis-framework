@@ -1,5 +1,7 @@
 # @gestaltjs/eslint-plugin
 
+## 0.7.10
+
 ## 0.7.9
 
 ### Patch Changes

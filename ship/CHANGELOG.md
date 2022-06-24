@@ -1,5 +1,11 @@
 # @gestaltjs/ship
 
+## 0.1.2
+
+### Patch Changes
+
+- gestaltjs@0.7.10
+
 ## 0.1.1
 
 ### Patch Changes

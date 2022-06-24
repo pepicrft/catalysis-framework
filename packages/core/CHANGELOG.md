@@ -1,5 +1,11 @@
 # @gestaltjs/core
 
+## 0.7.10
+
+### Patch Changes
+
+- Fix invalid export in the terminal module of @gestaltjs/core
+
 ## 0.7.9
 
 ### Patch Changes

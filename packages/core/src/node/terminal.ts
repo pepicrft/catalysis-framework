@@ -2,8 +2,6 @@ import pc from 'picocolors'
 import terminalLink from 'terminal-link'
 
 export * as listr from 'listr2'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-export { prompt }
 
 /**
  * Formats a string to be bold when presented
