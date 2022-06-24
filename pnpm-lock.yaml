@@ -143,7 +143,7 @@ importers:
       electron: 19.0.6
       enquirer: 2.3.6
       fast-glob: 3.2.11
-      fast-json-stringify: 5.0.0
+      fast-json-stringify: 5.0.1
       fastify: 4.1.0
       find-up: 6.3.0
       fs-extra: 10.1.0
@@ -175,7 +175,7 @@ importers:
       electron: 19.0.6
       enquirer: 2.3.6
       fast-glob: 3.2.11
-      fast-json-stringify: 5.0.0
+      fast-json-stringify: 5.0.1
       fastify: 4.1.0
       find-up: 6.3.0
       fs-extra: 10.1.0
@@ -7388,8 +7388,8 @@ packages:
       string-similarity: 4.0.4
     dev: false
 
-  /fast-json-stringify/5.0.0:
-    resolution: {integrity: sha512-7eMuzUkZq1eF8y441TCaCThu3ZX5tH4IcPsC7tEW3KmfQWA6lIu5uwkdzhkR3H6PfhnVOHQrSff6k8RG9pVAsA==}
+  /fast-json-stringify/5.0.1:
+    resolution: {integrity: sha512-WM5xcPSqUh29fPvfWGiXERHqcC88QLkDgCKY/Dm8ypVkPkmEj2SmFCUVOghqAgdudpK/9KkU/s6mLbZgSWZXcA==}
     dependencies:
       ajv: 8.11.0
       ajv-formats: 2.1.1
