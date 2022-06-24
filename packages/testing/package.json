@@ -35,10 +35,12 @@
     ]
   },
   "devDependencies": {
-    "@types/rimraf": "3.0.2",
-    "pathe": "0.3.0",
-    "rimraf": "3.0.2",
-    "tempy": "2.0.0",
+    "@types/rimraf": "3.0.2"
+  },
+  "dependencies": {
+    "pathe": "^0.3.0",
+    "rimraf": "^3.0.2",
+    "tempy": "^2.0.0",
     "@gestaltjs/core": "workspace:*"
   },
   "engine-strict": true,

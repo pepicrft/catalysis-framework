@@ -17,7 +17,7 @@
       "../.eslintrc.cjs"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "gestaltjs": "workspace:*",
     "react": "18.2.0"
   }

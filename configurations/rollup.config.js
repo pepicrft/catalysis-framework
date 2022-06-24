@@ -61,6 +61,7 @@ export const external = async (packageDir) => {
     /source-map-support/,
     /electron/,
     ...Object.keys(packageJson.dependencies ?? {}),
+    ...Object.keys(packageJson.devDependencies ?? {}),
     ...Object.keys(packageJson.peerDependencies ?? {}),
   ]
   return entries
