@@ -10,10 +10,12 @@ const configuration = async () => {
       input: path.join(__dirname, 'src/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'index.js'),
+          dir: distDir(__dirname),
           format: 'cjs',
           exports: 'auto',
           sourcemap: true,
+          preserveModules: true,
+          preserveModulesRoot: path.join(__dirname, 'src'),
         },
       ],
       plugins: plugins(__dirname),

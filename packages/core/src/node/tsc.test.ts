@@ -23,7 +23,7 @@ describe('run', () => {
 
     // Then
     expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/tsc', {
-      fromDirectory: dirnamePath,
+      cwd: dirnamePath,
     })
     expect(exec).toHaveBeenCalledWith(tscPath, args, { stdio: 'inherit', cwd })
   })

@@ -20,7 +20,7 @@ export const ESLintNotFoundError = () => {
 export async function runESLint(args: string[], cwd: string) {
   const __dirname = moduleDirname(import.meta.url)
   const eslintPath = await findPathUp('node_modules/.bin/eslint', {
-    fromDirectory: __dirname,
+    cwd: __dirname,
   })
   if (!eslintPath) {
     throw ESLintNotFoundError()

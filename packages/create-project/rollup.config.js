@@ -20,26 +20,18 @@ const configuration = async () => {
 
   return [
     {
-      input: path.join(__dirname, 'src/node/commands/init.ts'),
-      output: [
-        {
-          file: path.join(distDir(__dirname), 'node/commands/init.js'),
-          format: 'esm',
-          exports: 'auto',
-          sourcemap: true,
-        },
+      input: [
+        path.join(__dirname, 'src/node/commands/init.ts'),
+        path.join(__dirname, 'src/node/index.ts'),
       ],
-      plugins: createProjectPlugins,
-      external: createProjectExternal,
-    },
-    {
-      input: path.join(__dirname, 'src/node/index.ts'),
       output: [
         {
-          file: path.join(distDir(__dirname), 'node/index.js'),
+          dir: distDir(__dirname),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
+          preserveModules: true,
+          preserveModulesRoot: path.join(__dirname, 'src'),
         },
       ],
       plugins: createProjectPlugins,

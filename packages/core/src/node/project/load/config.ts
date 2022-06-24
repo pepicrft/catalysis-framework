@@ -51,6 +51,6 @@ export async function lookupConfigurationPathTraversing(
 ): Promise<string | undefined> {
   return await findPathUp(
     [`${configurationFileName}.ts`, `${configurationFileName}.js`],
-    { type: 'file', fromDirectory }
+    { type: 'file', cwd: fromDirectory }
   )
 }

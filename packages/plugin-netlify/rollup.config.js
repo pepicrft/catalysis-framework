@@ -12,6 +12,8 @@ const configuration = async () => {
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
+          preserveModules: true,
+          preserveModulesRoot: path.join(__dirname, 'src'),
         },
       ],
       plugins: plugins(__dirname),

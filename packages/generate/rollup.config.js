@@ -21,10 +21,12 @@ const configuration = async () => {
       ),
       output: [
         {
-          dir: path.join(distDir(__dirname), 'node/commands/generate'),
+          dir: distDir(__dirname),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
+          preserveModules: true,
+          preserveModulesRoot: path.join(__dirname, 'src'),
         },
       ],
       ...options,

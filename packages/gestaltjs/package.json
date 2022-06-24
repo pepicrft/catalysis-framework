@@ -22,25 +22,17 @@
     "access": "public"
   },
   "exports": {
-    "./support": {
-      "import": "./dist/runtime/support.js",
-      "types": "./dist/runtime/support.d.ts"
-    },
     "./configuration": {
-      "import": "./dist/runtime/configuration.js",
-      "types": "./dist/runtime/configuration.d.ts"
+      "import": "./dist/node/manifests/configuration.js",
+      "types": "./dist/node/manifests/configuration.d.ts"
     },
     "./target": {
-      "import": "./dist/runtime/target.js",
-      "types": "./dist/runtime/target.d.ts"
-    },
-    "./db": {
-      "import": "./dist/runtime/db.js",
-      "types": "./dist/runtime/db.d.ts"
+      "import": "./dist/node/manifests/target.js",
+      "types": "./dist/node/manifests/target.d.ts"
     },
     "./plugin": {
-      "import": "./dist/runtime/plugin.js",
-      "types": "./dist/runtime/plugin.d.ts"
+      "import": "./dist/node/manifests/plugin.js",
+      "types": "./dist/node/manifests/plugin.d.ts"
     }
   },
   "scripts": {

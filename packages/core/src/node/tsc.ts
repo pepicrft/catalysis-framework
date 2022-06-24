@@ -15,7 +15,7 @@ export const TSCNotFoundError = () => {
 export async function runTypescriptCompiler(args: string[], cwd?: string) {
   const __dirname = moduleDirname(import.meta.url)
   const tscPath = await findPathUp('node_modules/.bin/tsc', {
-    fromDirectory: __dirname,
+    cwd: __dirname,
   })
   if (!tscPath) {
     throw TSCNotFoundError()

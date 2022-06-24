@@ -23,7 +23,7 @@ describe('runESLint', () => {
 
     // Then
     expect(findPathUp).toHaveBeenCalledWith('node_modules/.bin/eslint', {
-      fromDirectory: eslintTSDirectory,
+      cwd: eslintTSDirectory,
     })
     expect(exec).toHaveBeenCalledWith(eslintPath, args, {
       stdio: 'inherit',

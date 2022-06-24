@@ -152,14 +152,14 @@ export async function inferDependencyManager(
   fromDirectory: string
 ): Promise<DependencyManager> {
   const yarnLockPath = await findPathUp('yarn.lock', {
-    fromDirectory: fromDirectory,
+    cwd: fromDirectory,
     type: 'file',
   })
   if (yarnLockPath) {
     return 'yarn'
   }
   const pnpmLockPath = await findPathUp('pnpm-lock.yaml', {
-    fromDirectory: fromDirectory,
+    cwd: fromDirectory,
     type: 'file',
   })
   if (pnpmLockPath) {

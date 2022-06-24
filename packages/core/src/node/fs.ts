@@ -2,16 +2,6 @@ import fs from 'fs-extra'
 
 import { findUp, Options as FindUpOptions } from 'find-up'
 
-type FindPathUpOptions = {
-  /** The directory from where to start the look up */
-  fromDirectory?: string
-  /**
-   * Whether the pattern should match a file or a directory
-   * @default 'file'
-   */
-  type?: 'file' | 'directory'
-}
-
 /**
  * It traverses the directory hiearchy up appending the given pattern
  * and checking for the presence of the obtained absolute path. If the
@@ -23,12 +13,9 @@ type FindPathUpOptions = {
  */
 export async function findPathUp(
   pattern: string | string[],
-  options: FindPathUpOptions
+  options: { cwd: string; type?: 'file' | 'directory' }
 ): Promise<string | undefined> {
-  return await findUp(pattern, {
-    type: options.type ?? 'file',
-    cwd: options.fromDirectory,
-  })
+  return await findUp(pattern, options as FindUpOptions)
 }
 /**
  * Reads a file and decodes it using utf-8.

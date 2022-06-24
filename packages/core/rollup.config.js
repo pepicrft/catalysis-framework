@@ -1,53 +1,45 @@
 import * as path from 'pathe'
 import fg from 'fast-glob'
 import { external, plugins, distDir } from '../../configurations/rollup.config'
+import dts from 'rollup-plugin-dts'
 
 const configuration = async () => {
-  const coreExternal = [...(await external(__dirname))]
-  const nodeFiles = await fg('src/node/*.ts', {
-    ignore: 'src/node/*.test.ts',
-  })
-  const commonFiles = await fg('src/common/*.ts', {
-    ignore: 'src/common/*.test.ts',
-  })
-  const cliFiles = [
-    'src/node/logger/transport.ts',
-    ...nodeFiles,
-    ...commonFiles,
+  const files = [
+    path.join(__dirname, 'src/node/logger/transport.ts'),
+    ...(await fg(path.join(__dirname, 'src/common/*.ts'), {
+      ignore: path.join(__dirname, 'src/common/*.test.ts'),
+    })),
+    ...(await fg(path.join(__dirname, 'src/node/*.ts'), {
+      ignore: path.join(__dirname, 'src/node/*.test.ts'),
+    })),
   ]
 
   return [
     {
-      input: nodeFiles,
+      input: files,
       output: [
         {
-          dir: path.join(distDir(__dirname), 'node'),
+          dir: distDir(__dirname),
           format: 'esm',
           exports: 'auto',
           sourcemap: true,
+          preserveModules: true,
+          preserveModulesRoot: path.join(__dirname, 'src'),
         },
       ],
       plugins: plugins(__dirname),
-      external: coreExternal,
+      external: [...(await external(__dirname))],
     },
-    ...cliFiles.map((filePath) => {
-      return {
-        input: path.join(__dirname, filePath),
-        output: [
-          {
-            file: path.join(
-              distDir(__dirname),
-              filePath.replace('src/', '').replace('.ts', '.js')
-            ),
-            format: 'esm',
-            exports: 'auto',
-            sourcemap: true,
-          },
-        ],
-        plugins: plugins(__dirname),
-        external: coreExternal,
-      }
-    }),
+    {
+      input: files,
+      output: {
+        dir: distDir(__dirname),
+        preserveModules: true,
+        preserveModulesRoot: path.join(__dirname, 'src'),
+      },
+      plugins: [dts()],
+      external: [...(await external(__dirname))],
+    },
   ]
 }
 
