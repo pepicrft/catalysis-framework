@@ -10,12 +10,6 @@
   ],
   "license": "MIT",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/runtime/index.js",
-      "types": "./dist/runtime/index.d.ts"
-    }
-  },
   "files": [
     "/dist"
   ],
