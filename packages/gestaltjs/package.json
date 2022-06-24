@@ -59,7 +59,7 @@
     "@gestaltjs/test": "^0.7.8",
     "@gestaltjs/info": "^0.7.8",
     "@gestaltjs/routes": "^0.7.8",
-    "@gestaltjs/core": "^0.7.8",
+    "@gestaltjs/core": "^0.7.7",
     "@gestaltjs/plugins": "^0.7.8",
     "@oclif/core": "^1.9.5",
     "@oclif/plugin-help": "^5.1.12"
