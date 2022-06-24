@@ -24,10 +24,6 @@ The pages in "contributors" provide all the context and tools necessary to nail 
 4. Run `bin/create-project` if you want to create a new app or `bin/gestalt` to run the Gestalt CLI.
 5. Voilà 🎉.
 
-Before debugging and contributing code,
-we recommend gaining some context around [the project architecture](/docs/contributors/architecture).
-
-
 :::tip Shadowenv
 Shadowenv activates project-scoped environments.
 For example, we include the `bin/` directory of the project in the `PATH` environment variable,
