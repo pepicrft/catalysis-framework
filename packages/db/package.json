@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/db",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "A set of utilities for managing and interacting with databases",
   "type": "module",
   "files": [
@@ -22,7 +22,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/core": "^0.7.8",
+    "@gestaltjs/core": "^0.7.9",
     "@oclif/core": "^1.9.5"
   },
   "oclif": {

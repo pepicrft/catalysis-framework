@@ -1,5 +1,13 @@
 # @gestaltjs/info
 
+## 0.7.9
+
+### Patch Changes
+
+- Version 0.7.9
+- Updated dependencies
+  - @gestaltjs/core@0.7.9
+
 ## 0.7.8
 
 ### Patch Changes

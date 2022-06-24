@@ -1,6 +1,6 @@
 {
   "name": "@gestaltjs/ship",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Deploy your Gestalt projects",
   "type": "module",
