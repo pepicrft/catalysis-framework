@@ -1,6 +1,6 @@
 import pc from 'picocolors'
 import terminalLink from 'terminal-link'
-
+import inquirer from 'inquirer'
 export * as listr from 'listr2'
 
 /**
@@ -109,4 +109,54 @@ export function formatCyan(input: string): string {
  */
 export function link(name: string, url: string): string {
   return terminalLink(name, url)
+}
+
+interface PromptQuestion {}
+interface InputQuestion extends PromptQuestion {}
+
+/**
+ * A type that represents a list of questions indexed
+ * by the identifiers. The same identifiers will be used
+ * in the returned object to refer to the answers.
+ */
+type PromptQuestions = {
+  [Identifier: string]: PromptQuestion
+}
+
+/**
+ * A type that represents the answer to a question. The
+ * type of the answer depends on the type of question.
+ * For example, the answer to a yes/no question yields
+ * a boolean response type.
+ */
+type PromptAnswer<T extends PromptQuestion> = T extends InputQuestion
+  ? string
+  : string
+
+/**
+ * A type that contains all the answers indexed by the
+ * same identifier as the questions they are associated to.
+ */
+type PromptAnswers<T extends PromptQuestions> = {
+  [Identifier in keyof T]: PromptAnswer<T[Identifier]>
+}
+
+/**
+ * The function prompts the user interactively in the terminal.
+ * Note that this API only works if the terminal in which the process
+ * is running is an interactive terminal. A CI environment is an example
+ * of a non-interactive terminal.
+ * @param questions {T extends PromptQuestions} The questions to be prompted.
+ * @returns
+ */
+export async function prompt<T extends PromptQuestions>(
+  questions: T
+): Promise<PromptAnswers<T>> {
+  const result = await inquirer.prompt([
+    {
+      name: 'x',
+      type: 'input',
+    },
+  ])
+  return result as PromptAnswers<T>
 }

@@ -64,6 +64,7 @@
     "find-up": "^6.3.0",
     "fs-extra": "^10.1.0",
     "handlebars": "^4.7.7",
+    "inquirer": "^9.0.0",
     "listr2": "^4.0.5",
     "magic-string": "^0.26.2",
     "noop-stream": "^1.0.0",
@@ -85,7 +86,8 @@
     "vite": "^2.9.12"
   },
   "devDependencies": {
-    "@types/estree": "0.0.52"
+    "@types/estree": "0.0.52",
+    "@types/inquirer": "^8.2.1"
   },
   "engine-strict": true,
   "engines": {
