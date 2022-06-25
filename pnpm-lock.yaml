@@ -131,7 +131,7 @@ importers:
   packages/core:
     specifiers:
       '@oclif/core': ^1.9.5
-      '@types/estree': ^0.0.51
+      '@types/estree': 0.0.52
       acorn: ^8.7.1
       case-anything: ^2.1.10
       commondir: ^1.0.1
@@ -193,7 +193,7 @@ importers:
       unified: 10.1.2
       vite: 2.9.12
     devDependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 0.0.52
 
   packages/create-plugin:
     specifiers:
@@ -3939,6 +3939,10 @@ packages:
 
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
+
+  /@types/estree/0.0.52:
+    resolution: {integrity: sha512-BZWrtCU0bMVAIliIV+HJO1f1PR41M7NKjfxrFJwwhKI1KwhwOxYw1SXg9ao+CIMt774nFuGiG6eU+udtbEI9oQ==}
+    dev: true
 
   /@types/express-serve-static-core/4.17.28:
     resolution: {integrity: sha512-P1BJAEAW3E2DJUlkgq4tOL3RyMunoWXqbSCygWo5ZIWTjUgN1YnaXWW4VWl/oc8vs/XoYibEGBKP0uZyF4AHig==}

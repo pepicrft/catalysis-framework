@@ -85,7 +85,7 @@
     "vite": "^2.9.12"
   },
   "devDependencies": {
-    "@types/estree": "^0.0.51"
+    "@types/estree": "0.0.52"
   },
   "engine-strict": true,
   "engines": {
