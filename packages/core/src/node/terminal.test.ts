@@ -8,13 +8,16 @@ import {
   formatMagenta,
   formatCyan,
   link,
+  prompt,
 } from './terminal'
 import terminalLink from 'terminal-link'
-import { describe, test, expect, vi } from 'vitest'
+import { describe, test, expect, vi, it } from 'vitest'
 import pc from 'picocolors'
+import inquirer from 'inquirer'
 
 vi.mock('terminal-link')
 vi.mock('picocolors')
+vi.mock('inquirer')
 
 describe('link', () => {
   test('delegates to terminal-link', () => {
@@ -158,5 +161,38 @@ describe('formatCyan', () => {
 
     // Then
     expect(got).toEqual(formattedString)
+  })
+})
+
+describe('prompt', () => {
+  it('delegates the prompting to inquirer', async () => {
+    // When
+    vi.mocked(inquirer.prompt).mockResolvedValue({
+      name: 'gestalt',
+    })
+    const promptType = 'input'
+    const promptMessage = 'Introduce your name'
+    const response = await prompt(
+      {
+        name: {
+          type: promptType,
+          message: promptMessage,
+        },
+      },
+      { name: 'answered-name' }
+    )
+
+    // Then
+    expect(inquirer.prompt).toHaveBeenCalledWith(
+      [
+        {
+          name: 'name',
+          type: promptType,
+          message: promptMessage,
+        },
+      ],
+      { name: 'answered-name' }
+    )
+    expect(response.name).toEqual('gestalt')
   })
 })

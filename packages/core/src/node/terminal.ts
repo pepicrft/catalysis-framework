@@ -1,6 +1,6 @@
 import pc from 'picocolors'
 import terminalLink from 'terminal-link'
-
+import inquirer from 'inquirer'
 export * as listr from 'listr2'
 
 /**
@@ -109,4 +109,123 @@ export function formatCyan(input: string): string {
  */
 export function link(name: string, url: string): string {
   return terminalLink(name, url)
+}
+
+type PromptQuestion =
+  | PromptInputQuestion
+  | PromptListQuestion
+  | PromptPasswordQuestion
+  | PromptConfirmQuestion
+  | PromptCheckboxQuestion
+
+type PromptInputQuestion = {
+  type: 'input'
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+type PromptListQuestion = {
+  type: 'list'
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A prompt for the user to introduce sensitive
+ * information like passwords. The password is masked
+ * with asterisks in the terminal.
+ */
+type PromptPasswordQuestion = {
+  type: 'password'
+
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A prompt that presents the user with a yes/no
+ * confirmation experience.
+ */
+type PromptConfirmQuestion = {
+  type: 'confirm'
+
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A prompt that presents the user with a list of
+ * options to check off. The selected options are
+ * returned as an array.
+ */
+type PromptCheckboxQuestion = {
+  type: 'checkbox'
+
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A type that represents a list of questions indexed
+ * by the identifiers. The same identifiers will be used
+ * in the returned object to refer to the answers.
+ */
+type PromptQuestions = {
+  [Identifier: string]: PromptQuestion
+}
+
+/**
+ * A type that represents the answer to a question. The
+ * type of the answer depends on the type of question.
+ * For example, the answer to a yes/no question yields
+ * a boolean response type.
+ */
+type PromptAnswer<T extends PromptQuestion> = T extends PromptInputQuestion
+  ? string
+  : T extends PromptListQuestion
+  ? string
+  : T extends PromptPasswordQuestion
+  ? string
+  : T extends PromptConfirmQuestion
+  ? boolean
+  : T extends PromptCheckboxQuestion
+  ? string[]
+  : any
+
+/**
+ * A type that contains all the answers indexed by the
+ * same identifier as the questions they are associated to.
+ */
+type PromptAnswers<T extends PromptQuestions> = {
+  [Identifier in keyof T]: PromptAnswer<T[Identifier]>
+}
+
+/**
+ * The function prompts the user interactively in the terminal.
+ * Note that this API only works if the terminal in which the process
+ * is running is an interactive terminal. A CI environment is an example
+ * of a non-interactive terminal.
+ * @param questions {T extends PromptQuestions} The questions to be prompted.
+ * @returns
+ */
+export async function prompt<T extends PromptQuestions>(
+  questions: T,
+  answers: Partial<PromptAnswers<T>> = {}
+): Promise<PromptAnswers<T>> {
+  return (await inquirer.prompt(
+    Object.entries(questions).map((entry) => ({
+      name: entry[0],
+      ...entry[1],
+    })),
+    answers
+  )) as PromptAnswers<T>
 }
