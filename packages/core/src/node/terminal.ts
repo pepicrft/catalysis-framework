@@ -111,8 +111,68 @@ export function link(name: string, url: string): string {
   return terminalLink(name, url)
 }
 
-interface PromptQuestion {}
-interface InputQuestion extends PromptQuestion {}
+type PromptQuestion =
+  | PromptInputQuestion
+  | PromptListQuestion
+  | PromptPasswordQuestion
+  | PromptConfirmQuestion
+  | PromptCheckboxQuestion
+
+type PromptInputQuestion = {
+  type: 'input'
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+type PromptListQuestion = {
+  type: 'list'
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A prompt for the user to introduce sensitive
+ * information like passwords. The password is masked
+ * with asterisks in the terminal.
+ */
+type PromptPasswordQuestion = {
+  type: 'password'
+
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A prompt that presents the user with a yes/no
+ * confirmation experience.
+ */
+type PromptConfirmQuestion = {
+  type: 'confirm'
+
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
+
+/**
+ * A prompt that presents the user with a list of
+ * options to check off. The selected options are
+ * returned as an array.
+ */
+type PromptCheckboxQuestion = {
+  type: 'checkbox'
+
+  /**
+   * Prompt's message.
+   */
+  message: string
+}
 
 /**
  * A type that represents a list of questions indexed
@@ -129,9 +189,17 @@ type PromptQuestions = {
  * For example, the answer to a yes/no question yields
  * a boolean response type.
  */
-type PromptAnswer<T extends PromptQuestion> = T extends InputQuestion
+type PromptAnswer<T extends PromptQuestion> = T extends PromptInputQuestion
   ? string
-  : string
+  : T extends PromptListQuestion
+  ? string
+  : T extends PromptPasswordQuestion
+  ? string
+  : T extends PromptConfirmQuestion
+  ? boolean
+  : T extends PromptCheckboxQuestion
+  ? string[]
+  : any
 
 /**
  * A type that contains all the answers indexed by the
@@ -150,13 +218,14 @@ type PromptAnswers<T extends PromptQuestions> = {
  * @returns
  */
 export async function prompt<T extends PromptQuestions>(
-  questions: T
+  questions: T,
+  answers: Partial<PromptAnswers<T>> = {}
 ): Promise<PromptAnswers<T>> {
-  const result = await inquirer.prompt([
-    {
-      name: 'x',
-      type: 'input',
-    },
-  ])
-  return result as PromptAnswers<T>
+  return (await inquirer.prompt(
+    Object.entries(questions).map((entry) => ({
+      name: entry[0],
+      ...entry[1],
+    })),
+    answers
+  )) as PromptAnswers<T>
 }
