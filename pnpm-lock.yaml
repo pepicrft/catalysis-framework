@@ -100,15 +100,15 @@ importers:
 
   e2e:
     specifiers:
-      '@cucumber/cucumber': 8.3.1
+      '@cucumber/cucumber': 8.4.0
       '@cucumber/messages': 19.1.2
       '@cucumber/pretty-formatter': 1.0.0-alpha.2
       execa: 5.1.1
       picocolors: 1.0.0
     devDependencies:
-      '@cucumber/cucumber': 8.3.1
+      '@cucumber/cucumber': 8.4.0
       '@cucumber/messages': 19.1.2
-      '@cucumber/pretty-formatter': 1.0.0-alpha.2_b6luqwdhcvkxadbywce4j5ihkm
+      '@cucumber/pretty-formatter': 1.0.0-alpha.2_n3g5365futiwovd4g4mvpbez7e
       execa: 5.1.1
       picocolors: 1.0.0
 
@@ -2203,8 +2203,8 @@ packages:
       regexp-match-indices: 1.0.2
     dev: true
 
-  /@cucumber/cucumber/8.3.1:
-    resolution: {integrity: sha512-gVitlYXdH//7ymbxIttp4hTd5KBHtVMO7Q4DruRRRBWSD5IHX66Tnik+vwhaNUQHfmP+lpbP3UK/5p/4ocEnqA==}
+  /@cucumber/cucumber/8.4.0:
+    resolution: {integrity: sha512-9MXtmpc/+ZmQH9s++u/2AF/N+D35Z6p3GpwbSr7xxDtfjM1ZCD7j6OSx+E99JGXZAOdShKzI7EhiOqwRERjKYQ==}
     engines: {node: 12 || 14 || >=16}
     hasBin: true
     dependencies:
@@ -2226,7 +2226,7 @@ packages:
       duration: 0.2.2
       durations: 3.4.2
       figures: 3.2.0
-      glob: 7.2.0
+      glob: 7.2.3
       has-ansi: 4.0.1
       indent-string: 4.0.0
       is-stream: 2.0.1
@@ -2235,7 +2235,7 @@ packages:
       lodash.mergewith: 4.6.2
       mz: 2.7.0
       progress: 2.0.3
-      resolve: 1.22.0
+      resolve: 1.22.1
       resolve-pkg: 2.0.0
       semver: 7.3.7
       stack-chain: 2.0.0
@@ -2312,13 +2312,13 @@ packages:
       uuid: 8.3.2
     dev: true
 
-  /@cucumber/pretty-formatter/1.0.0-alpha.2_b6luqwdhcvkxadbywce4j5ihkm:
+  /@cucumber/pretty-formatter/1.0.0-alpha.2_n3g5365futiwovd4g4mvpbez7e:
     resolution: {integrity: sha512-+tFbS2idJ8yL+saEYGBaJLkhU9glxmS6FMD22S/bfZsi/c3LeLMeo1ZkNeyzuxV7Yq9jGFjiwgZ+iRaO/bN8hw==}
     peerDependencies:
       '@cucumber/cucumber': '>=7.0.0'
       '@cucumber/messages': '*'
     dependencies:
-      '@cucumber/cucumber': 8.3.1
+      '@cucumber/cucumber': 8.4.0
       '@cucumber/messages': 19.1.2
       ansi-styles: 5.2.0
       cli-table3: 0.6.1
@@ -7936,6 +7936,7 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+    dev: false
 
   /glob/7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -12024,6 +12025,7 @@ packages:
       is-core-module: 2.9.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: false
 
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
