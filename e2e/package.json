@@ -16,7 +16,7 @@
     ]
   },
   "devDependencies": {
-    "@cucumber/cucumber": "8.3.1",
+    "@cucumber/cucumber": "8.4.0",
     "@cucumber/messages": "19.1.2",
     "@cucumber/pretty-formatter": "1.0.0-alpha.2",
     "execa": "5.1.1",
