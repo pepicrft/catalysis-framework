@@ -102,13 +102,13 @@ importers:
     specifiers:
       '@cucumber/cucumber': 8.4.0
       '@cucumber/messages': 19.1.2
-      '@cucumber/pretty-formatter': 1.0.0-alpha.2
+      '@cucumber/pretty-formatter': 1.0.0
       execa: 5.1.1
       picocolors: 1.0.0
     devDependencies:
       '@cucumber/cucumber': 8.4.0
       '@cucumber/messages': 19.1.2
-      '@cucumber/pretty-formatter': 1.0.0-alpha.2_n3g5365futiwovd4g4mvpbez7e
+      '@cucumber/pretty-formatter': 1.0.0_n3g5365futiwovd4g4mvpbez7e
       execa: 5.1.1
       picocolors: 1.0.0
 
@@ -2312,8 +2312,8 @@ packages:
       uuid: 8.3.2
     dev: true
 
-  /@cucumber/pretty-formatter/1.0.0-alpha.2_n3g5365futiwovd4g4mvpbez7e:
-    resolution: {integrity: sha512-+tFbS2idJ8yL+saEYGBaJLkhU9glxmS6FMD22S/bfZsi/c3LeLMeo1ZkNeyzuxV7Yq9jGFjiwgZ+iRaO/bN8hw==}
+  /@cucumber/pretty-formatter/1.0.0_n3g5365futiwovd4g4mvpbez7e:
+    resolution: {integrity: sha512-wcnIMN94HyaHGsfq72dgCvr1d8q6VGH4Y6Gl5weJ2TNZw1qn2UY85Iki4c9VdaLUONYnyYH3+178YB+9RFe/Hw==}
     peerDependencies:
       '@cucumber/cucumber': '>=7.0.0'
       '@cucumber/messages': '*'
@@ -2321,7 +2321,7 @@ packages:
       '@cucumber/cucumber': 8.4.0
       '@cucumber/messages': 19.1.2
       ansi-styles: 5.2.0
-      cli-table3: 0.6.1
+      cli-table3: 0.6.2
       figures: 3.2.0
       ts-dedent: 2.2.0
     dev: true
@@ -5489,15 +5489,6 @@ packages:
     resolution: {integrity: sha512-x/5fWmGMnbKQAaNwN+UZlV79qBLM9JFnJuJ03gIi5whrob0xV0ofNVHy9DhwGdsMJQc2OKv0oGmLzvaqvAVv+g==}
     engines: {node: '>=6'}
 
-  /cli-table3/0.6.1:
-    resolution: {integrity: sha512-w0q/enDHhPLq44ovMGdQeeDLvwxwavsJX7oQGYt/LrBlYsyaxyDnp6z3QzFut/6kLLKnlcUVJLrpB7KBfgG/RA==}
-    engines: {node: 10.* || >= 12.*}
-    dependencies:
-      string-width: 4.2.3
-    optionalDependencies:
-      colors: 1.4.0
-    dev: true
-
   /cli-table3/0.6.2:
     resolution: {integrity: sha512-QyavHCaIC80cMivimWu4aWHilIpiDpfm3hGmqAmXVL1UsnbLuBSMd21hTX6VY4ZSDSM73ESLeF8TOYId3rBTbw==}
     engines: {node: 10.* || >= 12.*}
@@ -5604,13 +5595,6 @@ packages:
   /colorette/2.0.16:
     resolution: {integrity: sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==}
     dev: false
-
-  /colors/1.4.0:
-    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
-    engines: {node: '>=0.1.90'}
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /combine-promises/1.1.0:
     resolution: {integrity: sha512-ZI9jvcLDxqwaXEixOhArm3r7ReIivsXkpbyEWyeOhzz1QS0iSgBPnWvEqvIQtYyamGCYA88gFhmUrs9hrrQ0pg==}
