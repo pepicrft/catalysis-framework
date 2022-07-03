@@ -1,4 +1,4 @@
-import { environmentVariables } from '../common/constants'
+import { environmentVariables } from '../common/constants.js'
 
 type Environment = 'production' | 'development'
 

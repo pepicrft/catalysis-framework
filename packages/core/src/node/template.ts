@@ -1,6 +1,6 @@
 import fg from 'fast-glob'
-import { joinPath, relativePath, parentDirectory } from './path'
-import { copyFile, makeDirectory, writeFile, readFile } from './fs'
+import { joinPath, relativePath, parentDirectory } from './path.js'
+import { copyFile, makeDirectory, writeFile, readFile } from './fs.js'
 import Handlebars from 'handlebars'
 
 export type ScaffoldOptions = {

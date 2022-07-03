@@ -1,9 +1,9 @@
-import { parentDirectory, pathBasename, joinPath } from '../../../path'
-import { ModuleLoader } from '../module-loader'
-import { loadRoutes } from './web/routes'
-import { loadLayouts } from './web/layouts'
-import { UserWebTarget } from '../../../../common/manifests/web'
-import { WebTarget } from '../../../../common/models/targets/web'
+import { parentDirectory, pathBasename, joinPath } from '../../../path.js'
+import { ModuleLoader } from '../module-loader.js'
+import { loadRoutes } from './web/routes.js'
+import { loadLayouts } from './web/layouts.js'
+import { UserWebTarget } from '../../../../common/manifests/web.js'
+import { WebTarget } from '../../../../common/models/targets/web.js'
 
 /**
  * Loads a web target into memory and returns it.

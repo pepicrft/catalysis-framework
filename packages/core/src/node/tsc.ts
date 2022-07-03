@@ -1,7 +1,7 @@
-import { Abort } from '../common/error'
-import { exec } from './system'
-import { moduleDirname } from './path'
-import { findPathUp } from './fs'
+import { Abort } from '../common/error.js'
+import { exec } from './system.js'
+import { moduleDirname } from './path.js'
+import { findPathUp } from './fs.js'
 
 export const TSCNotFoundError = () => {
   return new Abort('Could not locate typescript compiler', { next: '' })

@@ -1,4 +1,4 @@
-import { gestalt as gestaltEnvironment } from './environment'
+import { gestalt as gestaltEnvironment } from './environment.js'
 import { describe, test, expect } from 'vitest'
 
 describe('gestalt', () => {

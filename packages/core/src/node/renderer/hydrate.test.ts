@@ -1,5 +1,5 @@
 import { describe, test, expect, vi } from 'vitest'
-import { hydrate } from './hydrate'
+import { hydrate } from './hydrate.js'
 
 vi.mock('react-dom')
 

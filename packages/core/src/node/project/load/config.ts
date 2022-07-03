@@ -1,7 +1,7 @@
-import { configurationFileName } from '../../../common/constants'
-import { Configuration } from '../../../common/models/configuration'
-import { ModuleLoader } from './module-loader'
-import { findPathUp } from '../../../node/fs'
+import { configurationFileName } from '../../../common/constants.js'
+import { Configuration } from '../../../common/models/configuration.js'
+import { ModuleLoader } from './module-loader.js'
+import { findPathUp } from '../../../node/fs.js'
 
 /**
  * This function transpiles, loads, and returns a Gestalt project configuration.

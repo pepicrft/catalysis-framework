@@ -1,4 +1,4 @@
-import { createPluginLogger } from '../logger'
+import { createPluginLogger } from '../logger.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export

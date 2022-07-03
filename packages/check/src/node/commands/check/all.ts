@@ -1,7 +1,7 @@
 import { Flags } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
-import { checkCode } from '../../services/code'
-import { checkStyle } from '../../services/style'
+import { checkCode } from '../../services/code.js'
+import { checkStyle } from '../../services/style.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export

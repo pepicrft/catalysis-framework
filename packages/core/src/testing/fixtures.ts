@@ -1,5 +1,5 @@
-import { UserWebTarget } from '@gestaltjs/core/common/manifests'
-import { Project } from '@gestaltjs/core/common/models'
+import { UserWebTarget } from '../common/manifests.js'
+import { Project } from '../common/models.js'
 
 /**
  * Creates and return a test project for testing purposes.

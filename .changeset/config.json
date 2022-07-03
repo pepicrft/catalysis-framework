@@ -16,12 +16,10 @@
       "@gestaltjs/test",
       "@gestaltjs/info",
       "@gestaltjs/routes",
-      "@gestaltjs/core",
-      "@gestaltjs/plugins",
-      "@gestaltjs/gestalt-plugin-netlify"
+      "@gestaltjs/core"
     ]
   ],
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@gestaltjs/testing", "@gestaltjs/website", "@gestaltjs/e2e"]
+  "ignore": ["@gestaltjs/website", "@gestaltjs/e2e"]
 }

@@ -1,6 +1,7 @@
 import { loadProject } from '@gestaltjs/core/node/project'
-import { devProject } from '../services/dev'
+import { devProject } from '../services/dev.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Dev extends GestaltCommand {

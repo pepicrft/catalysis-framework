@@ -1,12 +1,12 @@
 import { describe, test, expect, vi } from 'vitest'
-import { exec } from './system'
-import { moduleDirname, parentDirectory } from './path'
-import { findPathUp } from './fs'
-import { runESLint, ESLintNotFoundError } from './eslint'
+import { exec } from './system.js'
+import { moduleDirname, parentDirectory } from './path.js'
+import { findPathUp } from './fs.js'
+import { runESLint, ESLintNotFoundError } from './eslint.js'
 
-vi.mock('./system')
-vi.mock('./path')
-vi.mock('./fs')
+vi.mock('./system.js')
+vi.mock('./path.js')
+vi.mock('./fs.js')
 
 describe('runESLint', () => {
   test('runs eslint', async () => {

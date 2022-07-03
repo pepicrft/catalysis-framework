@@ -1,9 +1,43 @@
 {
   "extends": "../../configurations/tsconfig.json",
-  "include": ["./src/**/*.ts"],
-  "exclude": ["./dist"],
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "./dist"
+  ],
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "src"
-  }
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.build.tsbuildinfo"
+  },
+  "references": [
+    {
+      "path": "../build",
+    },
+    {
+      "path": "../check",
+    },
+    {
+      "path": "../db",
+    },
+    {
+      "path": "../dev",
+    },
+    {
+      "path": "../test",
+    },
+    {
+      "path": "../info",
+    },
+    {
+      "path": "../routes",
+    },
+    {
+      "path": "../generate",
+    },
+    {
+      "path": "../core",
+    }
+  ]
 }
