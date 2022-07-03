@@ -321,21 +321,6 @@ importers:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.9.5
 
-  packages/testing:
-    specifiers:
-      '@gestaltjs/core': workspace:*
-      '@types/rimraf': 3.0.2
-      pathe: ^0.3.0
-      rimraf: ^3.0.2
-      tempy: ^2.0.0
-    dependencies:
-      '@gestaltjs/core': link:../core
-      pathe: 0.3.0
-      rimraf: 3.0.2
-      tempy: 2.0.0
-    devDependencies:
-      '@types/rimraf': 3.0.2
-
   packages/website:
     specifiers:
       '@docusaurus/core': 2.0.0-beta.21
