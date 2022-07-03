@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { runTypescriptCompiler } from '@gestaltjs/core/node/tsc'
-import { checkCode } from './code'
+import { checkCode } from './code.js'
 
 vi.mock('@gestaltjs/core/node/tsc')
 describe('run', () => {

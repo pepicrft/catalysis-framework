@@ -1,4 +1,4 @@
-import { buildLogger } from '../logger'
+import { buildLogger } from '../logger.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 import { Flags } from '@oclif/core'
 
