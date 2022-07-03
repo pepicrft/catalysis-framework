@@ -1,6 +1,7 @@
-import { generateLogger } from '../../logger'
-import { generateTargetPrompt } from '../../prompts/target'
+import { generateLogger } from '../../logger.js'
+import { generateTargetPrompt } from '../../prompts/target.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Target extends GestaltCommand {
