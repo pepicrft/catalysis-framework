@@ -18,8 +18,8 @@
     "sourceMap": true,
     "composite": true,
     "paths": {
-      "gestaltjs/*": ["../../gestaltjs/src/node/manifests/*.ts"],
-      "@gestaltjs/core/*": ["../../core/src/*.ts"],
+      "gestaltjs/*": ["../packages/gestaltjs/src/node/manifests/*.ts"],
+      "@gestaltjs/core/*": ["../packages/core/src/*.ts"],
 
     }
   },

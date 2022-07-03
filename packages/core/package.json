@@ -11,9 +11,17 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./*/*": {
+    "./common/*": {
       "node": "./dist/*/*.js",
       "types": "./dist/*/*.d.ts"
+    },
+    "./node/*": {
+      "node": "./dist/node/*.js",
+      "types": "./dist/node/*.d.ts"
+    },
+    "./testing/*": {
+      "node": "./dist/testing/*.js",
+      "types": "./dist/testing/*.d.ts"
     }
   },
   "files": [

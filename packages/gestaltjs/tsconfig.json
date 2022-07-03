@@ -4,6 +4,9 @@
   "exclude": ["./dist"],
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "src"
-  }
+    "rootDir": "src"
+  },
+  "references": [
+    {"path": "../core"}
+  ]
 }

@@ -4,7 +4,7 @@ import { inTemporarydirectory } from '@gestaltjs/core/testing/temporary'
 import { testWebTarget } from '@gestaltjs/core/testing/fixtures'
 import { parentDirectory, joinPath } from '../../../../path.js'
 import { writeFile, makeDirectory } from '../../../../fs.js'
-import { Route } from 'common/models/targets/web/route.js'
+import { Route } from '../../../../../common/models/targets/web/route.js'
 
 describe('loadRoutes', () => {
   test('loads the routes', async () => {
