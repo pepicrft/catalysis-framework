@@ -1,12 +1,12 @@
-import { loadWebTarget } from './web'
+import { loadWebTarget } from './web.js'
 import { describe, test, expect, vi } from 'vitest'
 import { testWebTarget } from '@gestaltjs/testing/node/fixtures'
 import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
-import { parentDirectory, pathBasename, joinPath } from '../../../path'
-import { loadRoutes } from './web/routes'
+import { parentDirectory, pathBasename, joinPath } from '../../../path.js'
+import { loadRoutes } from './web/routes.js'
 import { createRouter } from 'radix3'
-import { Route } from '../../../../common/models/targets/web/route'
-import { webTargetFileName } from '../../../../common/constants'
+import { Route } from '../../../../common/models/targets/web/route.js'
+import { webTargetFileName } from '../../../../common/constants.js'
 
 vi.mock('./web/routes')
 

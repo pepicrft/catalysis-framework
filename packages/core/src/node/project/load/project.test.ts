@@ -1,11 +1,11 @@
-import { loadTargets } from './target'
-import { lookupConfigurationPathTraversing, loadConfig } from './config'
-import { getModuleLoader } from './module-loader'
+import { loadTargets } from './target.js'
+import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
+import { getModuleLoader } from './module-loader.js'
 import { describe, test, expect, vi } from 'vitest'
-import { loadProject, ConfigFileNotFoundError } from './project'
+import { loadProject, ConfigFileNotFoundError } from './project.js'
 import { testProject } from '@gestaltjs/testing/node/fixtures'
-import { joinPath } from '../../../node/path'
-import { validateProject } from '../validate/project'
+import { joinPath } from '../../../node/path.js'
+import { validateProject } from '../validate/project.js'
 
 vi.mock('./config')
 vi.mock('./module-loader')

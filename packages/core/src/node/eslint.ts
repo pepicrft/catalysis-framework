@@ -1,7 +1,7 @@
-import { Bug } from '../common/error'
-import { exec } from './system'
-import { findPathUp } from './fs'
-import { moduleDirname } from './path'
+import { Bug } from '../common/error.js'
+import { exec } from './system.js'
+import { findPathUp } from './fs.js'
+import { moduleDirname } from './path.js'
 /**
  * A function that returns an error to raise when the eslint executable
  * can't be located. This would happen if the dependency is deleted by

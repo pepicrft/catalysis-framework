@@ -1,5 +1,5 @@
-import { readFile, writeFile } from './fs'
-import { joinPath } from '../node/path'
+import { readFile, writeFile } from './fs.js'
+import { joinPath } from '../node/path.js'
 
 import { describe, test, expect } from 'vitest'
 import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'

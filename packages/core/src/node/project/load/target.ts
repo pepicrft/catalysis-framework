@@ -1,8 +1,8 @@
-import { glob, joinPath } from '../../../node/path'
-import { webTargetFileName } from '../../../common/constants'
-import { loadWebTarget } from './targets/web'
-import { ModuleLoader } from './module-loader'
-import { WebTarget } from '../../../common/models/targets/web'
+import { glob, joinPath } from '../../../node/path.js'
+import { webTargetFileName } from '../../../common/constants.js'
+import { loadWebTarget } from './targets/web.js'
+import { ModuleLoader } from './module-loader.js'
+import { WebTarget } from '../../../common/models/targets/web.js'
 
 export async function loadTargets(
   projectDirectory: string,

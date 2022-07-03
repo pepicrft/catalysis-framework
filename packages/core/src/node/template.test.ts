@@ -1,8 +1,8 @@
 import { describe, test, expect } from 'vitest'
 import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
-import { ScaffoldOptions, scaffold } from './template'
-import { joinPath } from '../node/path'
-import { writeFile, pathExists, readFile, makeDirectory } from '../node/fs'
+import { ScaffoldOptions, scaffold } from './template.js'
+import { joinPath } from './path.js'
+import { writeFile, pathExists, readFile, makeDirectory } from './fs.js'
 
 describe('scaffold basic file', () => {
   test('scaffold template', async () => {

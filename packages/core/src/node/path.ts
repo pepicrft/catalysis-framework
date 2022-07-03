@@ -9,7 +9,7 @@ import {
   join,
   relative,
 } from 'pathe'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

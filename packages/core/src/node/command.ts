@@ -1,5 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import { resolvePath } from './path'
+import { resolvePath } from './path.js'
 
 // eslint-disable-next-line import/no-default-export
 export abstract class GestaltCommand extends Command {

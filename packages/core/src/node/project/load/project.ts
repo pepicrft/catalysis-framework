@@ -1,11 +1,11 @@
-import { Project } from '../../../common/models/project'
-import { Abort } from '../../../common/error'
-import { parentDirectory, joinPath } from '../../../node/path'
-import { loadTargets } from './target'
-import { lookupConfigurationPathTraversing, loadConfig } from './config'
-import { getModuleLoader } from './module-loader'
-import { fileToken, content } from '../../../node/logger'
-import { validateProject } from '../validate/project'
+import { Project } from '../../../common/models/project.js'
+import { Abort } from '../../../common/error.js'
+import { parentDirectory, joinPath } from '../../../node/path.js'
+import { loadTargets } from './target.js'
+import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
+import { getModuleLoader } from './module-loader.js'
+import { fileToken, content } from '../../../node/logger.js'
+import { validateProject } from '../validate/project.js'
 
 /**
  * Error thrown when we can't find a directory containing a Gestalt configuration file.

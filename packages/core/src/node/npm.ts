@@ -1,10 +1,10 @@
-import { Bug } from '../common/error'
-import { joinPath } from './path'
-import { pathExists } from './fs'
-import { content, fileToken } from './logger'
+import { Bug } from '../common/error.js'
+import { joinPath } from './path.js'
+import { pathExists } from './fs.js'
+import { content, fileToken } from './logger.js'
 import { WriteStream } from 'fs-extra'
-import { exec } from './system'
-import { findPathUp } from './fs'
+import { exec } from './system.js'
+import { findPathUp } from './fs.js'
 
 /**
  * A union type that represents the dependency managers that are available in

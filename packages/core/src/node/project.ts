@@ -1,1 +1,1 @@
-export { loadProject } from './project/load/project'
+export { loadProject } from './project/load/project.js'

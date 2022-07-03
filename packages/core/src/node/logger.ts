@@ -1,12 +1,12 @@
 import pino from 'pino'
-import { isRunningInVerbose } from './cli'
+import { isRunningInVerbose } from './cli.js'
 export type LogLevel = Omit<pino.Level, 'trace' | 'fatal'>
-import { formatYellow, formatGray, formatBold } from './terminal'
+import { formatYellow, formatGray, formatBold } from './terminal.js'
 import terminalLink from 'terminal-link'
-import { isRunningTests } from './environment'
-import { LoggerContentToken, LoggerContentType } from './logger/content'
-import { LoggerTarget, NoopLoggerTarget } from './logger/target'
-import { relativizePath } from './path'
+import { isRunningTests } from './environment.js'
+import { LoggerContentToken, LoggerContentType } from './logger/content.js'
+import { LoggerTarget, NoopLoggerTarget } from './logger/target.js'
+import { relativizePath } from './path.js'
 
 /**
  * We cache the loggers to ensure we only have an

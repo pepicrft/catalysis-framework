@@ -1,8 +1,8 @@
-import { addDependencies, inferDependencyManager } from './npm'
-import { joinPath } from './path'
-import { writeFile, makeDirectory } from './fs'
+import { addDependencies, inferDependencyManager } from './npm.js'
+import { joinPath } from './path.js'
+import { writeFile, makeDirectory } from './fs.js'
 import { describe, test, expect, vi } from 'vitest'
-import { exec } from './system'
+import { exec } from './system.js'
 import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
 
 vi.mock('./system')

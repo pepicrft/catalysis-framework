@@ -4,6 +4,9 @@
   "exclude": ["./dist"],
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "src"
-  }
+    "baseUrl": "src",
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.build.tsbuildinfo"
+  },
+  "references": []
 }
