@@ -38,9 +38,6 @@
       "path": "../generate",
     },
     {
-      "path": "../plugins",
-    },
-    {
       "path": "../core",
     }
   ]

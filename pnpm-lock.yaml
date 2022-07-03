@@ -264,7 +264,6 @@ importers:
       '@gestaltjs/dev': ^0.7.10
       '@gestaltjs/generate': ^0.7.10
       '@gestaltjs/info': ^0.7.10
-      '@gestaltjs/plugins': ^0.7.10
       '@gestaltjs/routes': ^0.7.10
       '@gestaltjs/test': ^0.7.10
       '@oclif/core': ^1.9.5
@@ -277,27 +276,12 @@ importers:
       '@gestaltjs/dev': link:../dev
       '@gestaltjs/generate': link:../generate
       '@gestaltjs/info': link:../info
-      '@gestaltjs/plugins': link:../plugins
       '@gestaltjs/routes': link:../routes
       '@gestaltjs/test': link:../test
       '@oclif/core': 1.9.5
       '@oclif/plugin-help': 5.1.12
 
   packages/info:
-    specifiers:
-      '@gestaltjs/core': ^0.7.10
-      '@oclif/core': ^1.9.5
-    dependencies:
-      '@gestaltjs/core': link:../core
-      '@oclif/core': 1.9.5
-
-  packages/plugin-netlify:
-    specifiers:
-      '@gestaltjs/plugins': ^0.7.10
-    dependencies:
-      '@gestaltjs/plugins': link:../plugins
-
-  packages/plugins:
     specifiers:
       '@gestaltjs/core': ^0.7.10
       '@oclif/core': ^1.9.5

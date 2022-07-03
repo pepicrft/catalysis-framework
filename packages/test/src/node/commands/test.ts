@@ -1,5 +1,6 @@
-import { testLogger } from '../logger'
+import { testLogger } from '../logger.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Test extends GestaltCommand {

@@ -60,7 +60,6 @@
     "@gestaltjs/info": "^0.7.10",
     "@gestaltjs/routes": "^0.7.10",
     "@gestaltjs/core": "^0.7.10",
-    "@gestaltjs/plugins": "^0.7.10",
     "@oclif/core": "^1.9.5",
     "@oclif/plugin-help": "^5.1.12"
   },
@@ -85,7 +84,6 @@
       "@gestaltjs/info",
       "@gestaltjs/routes",
       "@gestaltjs/generate",
-      "@gestaltjs/plugins",
       "@oclif/plugin-help"
     ]
   },

@@ -7,9 +7,9 @@ import {
   pathBasename,
   relativePath,
   parsePath,
-} from '../../../../path'
-import { pathExists } from '../../../../fs'
-import { Route } from '../../../../../common/models/targets/web/route'
+} from '../../../../path.js'
+import { pathExists } from '../../../../fs.js'
+import { Route } from '../../../../../common/models/targets/web/route.js'
 
 /**
  * Loads the routes of a main target.

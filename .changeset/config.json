@@ -16,9 +16,7 @@
       "@gestaltjs/test",
       "@gestaltjs/info",
       "@gestaltjs/routes",
-      "@gestaltjs/core",
-      "@gestaltjs/plugins",
-      "@gestaltjs/gestalt-plugin-netlify"
+      "@gestaltjs/core"
     ]
   ],
   "access": "public",

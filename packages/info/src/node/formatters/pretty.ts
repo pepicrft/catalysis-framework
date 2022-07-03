@@ -4,7 +4,6 @@ import {
   formatGreen,
   formatBold,
   formatCyan,
-  formatYellow,
 } from '@gestaltjs/core/node/terminal'
 
 type PrettyFormatOptions = {

@@ -1,8 +1,9 @@
 import { loadProject } from '@gestaltjs/core/node/project'
-import { routesLogger } from '../logger'
-import { formatJson } from '../formatters/json'
-import { prettyFormat } from '../formatters/pretty'
+import { routesLogger } from '../logger.js'
+import { formatJson } from '../formatters/json.js'
+import { prettyFormat } from '../formatters/pretty.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Routes extends GestaltCommand {

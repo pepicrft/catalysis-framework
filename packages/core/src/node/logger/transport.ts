@@ -7,8 +7,8 @@ import {
   formatGreen,
   formatYellow,
   formatCyan,
-} from '../terminal'
-import { pascalCased } from '../../common/string'
+} from '../terminal.js'
+import { pascalCased } from '../../common/string.js'
 
 function formatLevel(level: string): string {
   let outputLevel = pascalCased(level)

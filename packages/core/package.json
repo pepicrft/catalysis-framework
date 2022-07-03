@@ -12,8 +12,8 @@
   "type": "module",
   "exports": {
     "./common/*": {
-      "node": "./dist/*/*.js",
-      "types": "./dist/*/*.d.ts"
+      "node": "./dist/common/*.js",
+      "types": "./dist/common/*.d.ts"
     },
     "./node/*": {
       "node": "./dist/node/*.js",
