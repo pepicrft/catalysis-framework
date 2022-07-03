@@ -73,7 +73,7 @@
     "magic-string": "^0.26.2",
     "noop-stream": "^1.0.0",
     "path-equal": "^1.2.2",
-    "pathe": "^0.3.0",
+    "pathe": "^0.2.0",
     "picocolors": "^1.0.0",
     "pino": "^8.1.0",
     "pino-abstract-transport": "^1.0.0",

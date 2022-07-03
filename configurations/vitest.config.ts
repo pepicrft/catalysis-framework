@@ -1,16 +1,20 @@
 import { defineConfig } from 'vite'
-import { aliases, plugins } from './rollup.config'
+import path from 'pathe'
 
 // eslint-disable-next-line import/no-default-export
-export default function config(packageDir) {
+export default function config(packageDir: string) {
   return defineConfig({
     resolve: {
-      alias: aliases(packageDir),
-    },
-    build: {
-      rollupOptions: {
-        plugins: plugins(packageDir),
-      },
+      alias: [
+        {
+          find: new RegExp('^@gestaltjs/(.+)/(.+)/(.+)$'),
+          replacement: path.join(packageDir, '../$1/src/$2/$3.ts'),
+        },
+        {
+          find: new RegExp('^\\$(.*)$'),
+          replacement: path.join(packageDir, './src/$1.ts'),
+        },
+      ],
     },
   })
 }
