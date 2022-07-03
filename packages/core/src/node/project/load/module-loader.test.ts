@@ -1,6 +1,6 @@
 import { getModuleLoader } from './module-loader.js'
 import { describe, test, expect } from 'vitest'
-import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
+import { inTemporarydirectory } from '../../../testing/temporary.js'
 import { joinPath } from '../../../node/path.js'
 import { writeFile } from '../../../node/fs.js'
 

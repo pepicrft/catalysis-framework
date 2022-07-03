@@ -2,7 +2,7 @@ import { readFile, writeFile } from './fs.js'
 import { joinPath } from '../node/path.js'
 
 import { describe, test, expect } from 'vitest'
-import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
+import { inTemporarydirectory } from '../testing/temporary.js'
 
 describe('readFile', () => {
   test('reads the file', async () => {

@@ -1,9 +1,9 @@
 import { loadRoutes } from './routes.js'
 import { describe, test, expect, vi } from 'vitest'
-import { inTemporarydirectory } from '@gestaltjs/testing/node/temporary'
-import { testWebTarget } from '@gestaltjs/testing/node/fixtures'
-import { parentDirectory, joinPath } from 'node/path.js'
-import { writeFile, makeDirectory } from 'node/fs.js'
+import { inTemporarydirectory } from '@gestaltjs/core/testing/temporary'
+import { testWebTarget } from '@gestaltjs/core/testing/fixtures'
+import { parentDirectory, joinPath } from '../../../../path.js'
+import { writeFile, makeDirectory } from '../../../../fs.js'
 import { Route } from 'common/models/targets/web/route.js'
 
 describe('loadRoutes', () => {
