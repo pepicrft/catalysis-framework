@@ -2,7 +2,7 @@ import { Project } from '@gestaltjs/core/common/models'
 
 import { urlToken, content } from '@gestaltjs/core/node/logger'
 
-import { devLogger } from '../logger'
+import { devLogger } from '../logger.js'
 import { createApp } from 'h3'
 import { listen } from 'listhen'
 
