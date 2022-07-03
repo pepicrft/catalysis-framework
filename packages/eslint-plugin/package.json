@@ -16,7 +16,7 @@
   "scripts": {
     "clean": "shx rm -rf dist",
     "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "pnpm clean && rollup -c ./rollup.config.js",
+    "build": "pnpm clean && tsc -b tsconfig.build.json",
     "lint": "prettier -c src/** && eslint './**/*.{js,ts}'",
     "lint:fix": "prettier -w src/** && eslint './**/*.{js,ts}' --fix",
     "test": "vitest run",
