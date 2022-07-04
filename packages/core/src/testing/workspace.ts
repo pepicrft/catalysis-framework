@@ -1,9 +1,13 @@
-import * as path from 'pathe'
+import {
+  resolve as resolvePath,
+  dirname as pathDirname,
+  join as joinPath,
+} from 'pathe'
 // eslint-disable-next-line import/no-nodejs-modules
 import { fileURLToPath } from 'node:url'
 
 export function packagesDirectory(): string {
-  return path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
+  return resolvePath(pathDirname(fileURLToPath(import.meta.url)), '../..')
 }
 
 /** It represents a ES module */
@@ -34,26 +38,26 @@ type GestaltJSPackageModules = {
  * @returns {GestaltJSPackageModules} An object representing the Node modules that are exported by the "gestaltjs" NPM package.
  */
 export function gestaltjsPackageModules(): GestaltJSPackageModules {
-  const gestaltjsPackageRuntimeDirectory = path.resolve(
-    path.dirname(fileURLToPath(import.meta.url)),
+  const gestaltjsPackageRuntimeDirectory = resolvePath(
+    pathDirname(fileURLToPath(import.meta.url)),
     '../../gestaltjs/src/runtime'
   )
-  const pluginsSourceDirectory = path.resolve(
-    path.dirname(fileURLToPath(import.meta.url)),
+  const pluginsSourceDirectory = resolvePath(
+    pathDirname(fileURLToPath(import.meta.url)),
     '../../core/src/node'
   )
   return {
     support: {
       identifier: 'gestaltjs/support',
-      path: path.join(gestaltjsPackageRuntimeDirectory, 'support.ts'),
+      path: joinPath(gestaltjsPackageRuntimeDirectory, 'support.ts'),
     },
     configuration: {
       identifier: 'gestaltjs/configuration',
-      path: path.join(gestaltjsPackageRuntimeDirectory, 'configuration.ts'),
+      path: joinPath(gestaltjsPackageRuntimeDirectory, 'configuration.ts'),
     },
     plugins: {
       identifier: '@gestaltjs/core/node/plugin',
-      path: path.join(pluginsSourceDirectory, 'plugin.ts'),
+      path: joinPath(pluginsSourceDirectory, 'plugin.ts'),
     },
   }
 }
