@@ -292,7 +292,7 @@ importers:
       '@docusaurus/preset-classic': 2.0.0-beta.21
       '@mdx-js/react': 1.6.22
       '@types/react': 17.0.47
-      clsx: 1.2.0
+      clsx: 1.2.1
       prism-react-renderer: 1.3.5
       react: 17.0.2
       react-dom: 17.0.2
@@ -301,7 +301,7 @@ importers:
       '@docusaurus/core': 2.0.0-beta.21_3tgeifm2vmwrlpqlopppsnjtcu
       '@docusaurus/preset-classic': 2.0.0-beta.21_fjtp7haypwd3jrz2anmo67qyu4
       '@mdx-js/react': 1.6.22_react@17.0.2
-      clsx: 1.2.0
+      clsx: 1.2.1
       prism-react-renderer: 1.3.5_react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -2765,7 +2765,7 @@ packages:
       '@docusaurus/utils-common': 2.0.0-beta.21
       '@docusaurus/utils-validation': 2.0.0-beta.21
       '@mdx-js/react': 1.6.22_react@17.0.2
-      clsx: 1.2.0
+      clsx: 1.2.1
       copy-text-to-clipboard: 3.0.1
       infima: 0.2.0-alpha.39
       lodash: 4.17.21
@@ -2805,7 +2805,7 @@ packages:
       '@docusaurus/plugin-content-blog': 2.0.0-beta.21_3tgeifm2vmwrlpqlopppsnjtcu
       '@docusaurus/plugin-content-docs': 2.0.0-beta.21_3tgeifm2vmwrlpqlopppsnjtcu
       '@docusaurus/plugin-content-pages': 2.0.0-beta.21_3tgeifm2vmwrlpqlopppsnjtcu
-      clsx: 1.2.0
+      clsx: 1.2.1
       parse-numeric-range: 1.3.0
       prism-react-renderer: 1.3.5_react@17.0.2
       react: 17.0.2
@@ -2845,7 +2845,7 @@ packages:
       '@docusaurus/utils-validation': 2.0.0-beta.21
       algoliasearch: 4.13.1
       algoliasearch-helper: 3.8.2_algoliasearch@4.13.1
-      clsx: 1.2.0
+      clsx: 1.2.1
       eta: 1.12.3
       fs-extra: 10.1.0
       lodash: 4.17.21
@@ -5417,8 +5417,8 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  /clsx/1.2.0:
-    resolution: {integrity: sha512-EPRP7XJsM1y0iCU3Z7C7jFKdQboXSeHgEfzQUTlz7m5NP3hDrlz48aUsmNGp4pC+JOW9WA3vIRqlYuo/bl4Drw==}
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
     dev: false
 
