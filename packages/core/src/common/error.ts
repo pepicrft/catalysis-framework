@@ -2,11 +2,27 @@ import { coreLogger, stringify } from '../node/logger.js'
 import type { ErrorLogType, LoggerMessage } from '../node/logger.js'
 import { formatYellow, formatRed, formatBold } from '../node/terminal.js'
 import StackTracey from 'stacktracey'
+import { ExtendableError } from 'ts-error'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import sourceMapSupport from 'source-map-support'
 sourceMapSupport.install()
+
+/**
+ * `FatalError` represents an error that causes the execution of the program
+ * to terminate. All handled errors must subclass from `FatalError` for the
+ * error handling logic to apply standard formatting and exit gracefully.
+ * Note that this class extends `ExtendableError` instead of `Error`.
+ * The `Error` class in Javascript is not designed to be extended and
+ * that leads to some shortcomings:
+ *  * We can't add new properties.
+ *  * We can't use instanceof to check the error type.
+ * `ExtendableError` addresses those shortcomings and many others tha are listed
+ * in the repository's README:
+ * {@link https://www.npmjs.com/package/ts-error}
+ */
+class FatalError extends ExtendableError {}
 
 type ErrorOptions = {
   /**
@@ -29,7 +45,7 @@ type BugOptions = Partial<ErrorOptions>
  * A bug error is an error that represents that represents
  * a bug and should be tracked for fixing.
  */
-export class Bug extends Error {
+export class Bug extends FatalError {
   /**
    * Bug options
    */
@@ -50,7 +66,7 @@ export class Bug extends Error {
  * An error that represents a bug but that doesn't
  * get presented to the user.
  */
-export class BugSilent extends Error {}
+export class BugSilent extends FatalError {}
 
 type AbortOptions = ErrorOptions & { next?: LoggerMessage }
 
@@ -59,12 +75,12 @@ type AbortOptions = ErrorOptions & { next?: LoggerMessage }
  * and that is not presented to the user by the
  * error handler.
  */
-export class AbortSilent extends Error {}
+export class AbortSilent extends FatalError {}
 
 /**
  * An error that aborts the execution of the program.
  */
-export class Abort extends Error {
+export class Abort extends FatalError {
   /**
    * Bug options
    */
@@ -81,9 +97,16 @@ export class Abort extends Error {
   }
 }
 
-export const errorHandler = async (error: Error): Promise<Error> => {
+/**
+ * A function that handles the errors that bubble up to the CLI's root.
+ * The function applies standard formatting and outputs the error to
+ * the user.
+ * @param error {Error} Instace of the error to be handled
+ * @returns
+ */
+export async function errorHandler(error: Error): Promise<Error> {
   let errorType: ErrorLogType
-  let message = formatBold(formatRed('ERROR'))
+  let message = formatBold(formatRed('Error'))
   let cause: string | undefined
   let next: string | undefined
 
