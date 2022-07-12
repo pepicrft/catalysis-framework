@@ -91,7 +91,7 @@
     "vite": "^2.9.12"
   },
   "devDependencies": {
-    "@types/estree": "0.0.52",
+    "@types/estree": "1.0.0",
     "@types/inquirer": "^8.2.1"
   },
   "engine-strict": true,

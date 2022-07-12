@@ -111,7 +111,7 @@ importers:
   packages/core:
     specifiers:
       '@oclif/core': ^1.9.5
-      '@types/estree': 0.0.52
+      '@types/estree': 1.0.0
       '@types/inquirer': ^8.2.1
       acorn: ^8.7.1
       case-anything: ^2.1.10
@@ -178,7 +178,7 @@ importers:
       unified: 10.1.2
       vite: 2.9.12
     devDependencies:
-      '@types/estree': 0.0.52
+      '@types/estree': 1.0.0
       '@types/inquirer': 8.2.1
 
   packages/create-plugin:
@@ -4237,6 +4237,10 @@ packages:
 
   /@types/estree/0.0.52:
     resolution: {integrity: sha512-BZWrtCU0bMVAIliIV+HJO1f1PR41M7NKjfxrFJwwhKI1KwhwOxYw1SXg9ao+CIMt774nFuGiG6eU+udtbEI9oQ==}
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: true
 
   /@types/express-serve-static-core/4.17.28:
     resolution: {integrity: sha512-P1BJAEAW3E2DJUlkgq4tOL3RyMunoWXqbSCygWo5ZIWTjUgN1YnaXWW4VWl/oc8vs/XoYibEGBKP0uZyF4AHig==}
