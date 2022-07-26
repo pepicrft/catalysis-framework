@@ -124,7 +124,7 @@ importers:
       fs-extra: ^10.1.0
       handlebars: ^4.7.7
       inquirer: ^9.0.0
-      listr2: ^4.0.5
+      listr2: ^5.0.0
       magic-string: ^0.26.2
       noop-stream: ^1.0.0
       path-equal: ^1.2.2
@@ -157,7 +157,7 @@ importers:
       fs-extra: 10.1.0
       handlebars: 4.7.7
       inquirer: 9.0.0
-      listr2: 4.0.5
+      listr2: 5.0.1
       magic-string: 0.26.2
       noop-stream: 1.0.0
       path-equal: 1.2.2
@@ -5865,6 +5865,10 @@ packages:
     resolution: {integrity: sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==}
     dev: false
 
+  /colorette/2.0.19:
+    resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
+    dev: false
+
   /combine-promises/1.1.0:
     resolution: {integrity: sha512-ZI9jvcLDxqwaXEixOhArm3r7ReIivsXkpbyEWyeOhzz1QS0iSgBPnWvEqvIQtYyamGCYA88gFhmUrs9hrrQ0pg==}
     engines: {node: '>=10'}
@@ -9859,9 +9863,9 @@ packages:
       ufo: 0.8.4
     dev: false
 
-  /listr2/4.0.5:
-    resolution: {integrity: sha512-juGHV1doQdpNT3GSTs9IUN43QJb7KHdF9uqg7Vufs/tG9VTzpFphqF4pm/ICdAABGQxsyNn9CiYA3StkI6jpwA==}
-    engines: {node: '>=12'}
+  /listr2/5.0.1:
+    resolution: {integrity: sha512-ZDCi/xtStQ+hKHSHdECCzcSqclmluGi7ArEHs55r5GEa6r5OgP2uzdBNice9q+hy111bQ3QJpMg/gCxMmn8/Mw==}
+    engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
     peerDependenciesMeta:
@@ -9869,11 +9873,11 @@ packages:
         optional: true
     dependencies:
       cli-truncate: 2.1.0
-      colorette: 2.0.16
+      colorette: 2.0.19
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
-      rxjs: 7.5.5
+      rxjs: 7.5.6
       through: 2.3.8
       wrap-ansi: 7.0.0
     dev: false
@@ -12305,6 +12309,12 @@ packages:
     resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==}
     dependencies:
       tslib: 2.4.0
+
+  /rxjs/7.5.6:
+    resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
