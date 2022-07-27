@@ -116,7 +116,7 @@ importers:
       acorn: 8.7.1
       case-anything: 2.1.10
       commondir: 1.0.1
-      electron: 19.0.9
+      electron: 19.0.10
       fast-glob: 3.2.11
       fast-json-stringify: 5.0.1
       fastify: 4.1.0
@@ -149,7 +149,7 @@ importers:
       acorn: 8.7.1
       case-anything: 2.1.10
       commondir: 1.0.1
-      electron: 19.0.9
+      electron: 19.0.10
       fast-glob: 3.2.11
       fast-json-stringify: 5.0.1
       fastify: 4.1.0
@@ -6748,8 +6748,8 @@ packages:
   /electron-to-chromium/1.4.131:
     resolution: {integrity: sha512-oi3YPmaP87hiHn0c4ePB67tXaF+ldGhxvZnT19tW9zX6/Ej+pLN0Afja5rQ6S+TND7I9EuwQTT8JYn1k7R7rrw==}
 
-  /electron/19.0.9:
-    resolution: {integrity: sha512-ooEwrv8Y7NSzdhKcl6kPCYecnzcg5nFWuS5ryG+VFH3MMBR8zXh9nW2wLsZrBz6OGUxXrcc5BKBC7dA8C6RhGQ==}
+  /electron/19.0.10:
+    resolution: {integrity: sha512-EiWtPWdD7CzkRkp1cw7t0N9W2qhI5XZOudHX7daOh5wI076nsdV2dtlAf/XyTHhPNoKR5qhTWrSnYL9PY6D1vg==}
     engines: {node: '>= 8.6'}
     hasBin: true
     requiresBuild: true

@@ -61,7 +61,7 @@
     "acorn": "8.7.1",
     "case-anything": "2.1.10",
     "commondir": "1.0.1",
-    "electron": "19.0.9",
+    "electron": "19.0.10",
     "fast-glob": "3.2.11",
     "fast-json-stringify": "5.0.1",
     "fastify": "4.1.0",
