@@ -123,7 +123,7 @@ importers:
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
-      inquirer: 9.0.0
+      inquirer: 9.0.2
       listr2: 5.0.0
       magic-string: 0.26.2
       noop-stream: 1.0.0
@@ -156,7 +156,7 @@ importers:
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
-      inquirer: 9.0.0
+      inquirer: 9.0.2
       listr2: 5.0.0
       magic-string: 0.26.2
       noop-stream: 1.0.0
@@ -8828,8 +8828,8 @@ packages:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
-  /inquirer/9.0.0:
-    resolution: {integrity: sha512-eYTDdTYr/YPwRenOzLZTvaJUDXDW8GQgxvzBppuXLj/kauTRLfV8bCPVbGh2staP7edrqL+rGwjaOa+JVxBWsg==}
+  /inquirer/9.0.2:
+    resolution: {integrity: sha512-AqmDHmz3bIe573OiM4svTZzajBzff1xpuzYAimW8gjzW5ncuPllWB8t/GKl+NSuKRJaKyIF2bU2RCx8H1dwqyQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       ansi-escapes: 5.0.0
@@ -8840,7 +8840,7 @@ packages:
       figures: 4.0.1
       lodash: 4.17.21
       mute-stream: 0.0.8
-      ora: 6.1.0
+      ora: 6.1.2
       run-async: 2.4.1
       rxjs: 7.5.6
       string-width: 5.1.2
@@ -10653,8 +10653,8 @@ packages:
       type-check: 0.4.0
       word-wrap: 1.2.3
 
-  /ora/6.1.0:
-    resolution: {integrity: sha512-CxEP6845hLK+NHFWZ+LplGO4zfw4QSfxTlqMfvlJ988GoiUeZDMzCvqsZkFHv69sPICmJH1MDxZoQFOKXerAVw==}
+  /ora/6.1.2:
+    resolution: {integrity: sha512-EJQ3NiP5Xo94wJXIzAyOtSb0QEIAUu7m8t6UZ9krbz0vAJqr92JpcK/lEXg91q6B9pEGqrykkd2EQplnifDSBw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       bl: 5.0.0
