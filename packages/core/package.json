@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@oclif/core": "1.9.5",
-    "acorn": "8.7.1",
+    "acorn": "8.8.0",
     "case-anything": "2.1.10",
     "commondir": "1.0.1",
     "electron": "19.0.10",
