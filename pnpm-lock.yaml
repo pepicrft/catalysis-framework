@@ -118,7 +118,7 @@ importers:
       commondir: 1.0.1
       electron: 19.0.10
       fast-glob: 3.2.11
-      fast-json-stringify: 5.0.1
+      fast-json-stringify: 5.1.0
       fastify: 4.1.0
       find-up: 6.3.0
       fs-extra: 10.1.0
@@ -151,7 +151,7 @@ importers:
       commondir: 1.0.1
       electron: 19.0.10
       fast-glob: 3.2.11
-      fast-json-stringify: 5.0.1
+      fast-json-stringify: 5.1.0
       fastify: 4.1.0
       find-up: 6.3.0
       fs-extra: 10.1.0
@@ -3422,6 +3422,10 @@ packages:
       ajv: 8.11.0
       ajv-formats: 2.1.1
       fast-uri: 1.0.1
+    dev: false
+
+  /@fastify/deepmerge/1.1.0:
+    resolution: {integrity: sha512-E8Hfdvs1bG6u0N4vN5Nty6JONUfTdOciyD5rn8KnEsLKIenvOVcr210BQR9t34PRkNyjqnMLGk3e0BsaxRdL+g==}
     dev: false
 
   /@fastify/error/3.0.0:
@@ -7703,12 +7707,12 @@ packages:
       string-similarity: 4.0.4
     dev: false
 
-  /fast-json-stringify/5.0.1:
-    resolution: {integrity: sha512-WM5xcPSqUh29fPvfWGiXERHqcC88QLkDgCKY/Dm8ypVkPkmEj2SmFCUVOghqAgdudpK/9KkU/s6mLbZgSWZXcA==}
+  /fast-json-stringify/5.1.0:
+    resolution: {integrity: sha512-IybGfbUc1DQgyrp9Myhwlr1Z5vjV37mBkdgcbuvsvUxv5fayG+cHlTQQpXH9nMwUPgp+5Y3RT7QDgx5zJ9NS3A==}
     dependencies:
+      '@fastify/deepmerge': 1.1.0
       ajv: 8.11.0
       ajv-formats: 2.1.1
-      deepmerge: 4.2.2
       fast-uri: 2.1.0
       rfdc: 1.3.0
     dev: false
