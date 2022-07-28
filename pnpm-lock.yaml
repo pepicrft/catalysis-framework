@@ -113,7 +113,7 @@ importers:
       '@oclif/core': 1.9.5
       '@types/estree': 1.0.0
       '@types/inquirer': 8.2.1
-      acorn: 8.7.1
+      acorn: 8.8.0
       case-anything: 2.1.10
       commondir: 1.0.1
       electron: 19.0.10
@@ -146,7 +146,7 @@ importers:
       vite: 3.0.0
     dependencies:
       '@oclif/core': 1.9.5
-      acorn: 8.7.1
+      acorn: 8.8.0
       case-anything: 2.1.10
       commondir: 1.0.1
       electron: 19.0.10
@@ -4821,6 +4821,12 @@ packages:
     resolution: {integrity: sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  /acorn/8.8.0:
+    resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
 
   /address/1.2.0:
     resolution: {integrity: sha512-tNEZYz5G/zYunxFm7sfhAxkXEuLj3K6BKwv6ZURlsF6yiUQ65z0Q2wZW9L5cPUl9ocofGvXOdFYbFHp0+6MOig==}
