@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0",
-    "@typescript-eslint/eslint-plugin": "5.29.0",
-    "@typescript-eslint/parser": "5.29.0",
+    "@typescript-eslint/eslint-plugin": "5.31.0",
+    "@typescript-eslint/parser": "5.31.0",
     "typescript": "4.7.4"
   },
   "engine-strict": true,
