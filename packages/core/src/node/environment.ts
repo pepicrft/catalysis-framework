@@ -1,5 +1,5 @@
 import { environmentVariables } from '../common/constants.js'
-
+export { getUsername } from './environment/username.js'
 type Environment = 'production' | 'development'
 
 /**
