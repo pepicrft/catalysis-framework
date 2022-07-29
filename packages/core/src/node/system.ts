@@ -7,6 +7,6 @@ export async function exec(
   command: string,
   args?: string[],
   options?: ExecOptions
-): Promise<void> {
-  await execa(command, args, options)
+) {
+  return await execa(command, args, options)
 }
