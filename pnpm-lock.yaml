@@ -39,7 +39,7 @@ importers:
       ts-node: ^10.8.1
       typescript: ^4.7.4
       vite: 3.0.4
-      vitest: 0.20.2
+      vitest: 0.20.3
     devDependencies:
       '@changesets/cli': 2.23.0
       '@nrwl/cli': 14.3.6
@@ -76,7 +76,7 @@ importers:
       ts-node: 10.8.1_x2utdhayajzrh747hktprshhby
       typescript: 4.7.4
       vite: 3.0.4
-      vitest: 0.20.2
+      vitest: 0.20.3
 
   e2e:
     specifiers:
@@ -14017,8 +14017,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitest/0.20.2:
-    resolution: {integrity: sha512-AFXTHrwG4d2OO6SAL8WP5ZkOwLtgeF4tlrHfXFqrHc+5chNegeR53pge0lv/C4316SqJ2DbYaUBH8vh3CdF+BQ==}
+  /vitest/0.20.3:
+    resolution: {integrity: sha512-cXMjTbZxBBUUuIF3PUzEGPLJWtIMeURBDXVxckSHpk7xss4JxkiiWh5cnIlfGyfJne2Ii3QpbiRuFL5dMJtljw==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
