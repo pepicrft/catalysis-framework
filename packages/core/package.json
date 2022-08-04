@@ -68,7 +68,7 @@
     "find-up": "6.3.0",
     "fs-extra": "10.1.0",
     "handlebars": "4.7.7",
-    "inquirer": "9.0.2",
+    "inquirer": "9.1.0",
     "listr2": "5.0.1",
     "magic-string": "0.26.2",
     "noop-stream": "1.0.0",
