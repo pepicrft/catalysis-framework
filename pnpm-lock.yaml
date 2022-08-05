@@ -124,7 +124,7 @@ importers:
       fs-extra: 10.1.0
       handlebars: 4.7.7
       inquirer: 9.1.0
-      listr2: 5.0.1
+      listr2: 5.0.2
       magic-string: 0.26.2
       noop-stream: 1.0.0
       path-equal: 1.2.2
@@ -157,7 +157,7 @@ importers:
       fs-extra: 10.1.0
       handlebars: 4.7.7
       inquirer: 9.1.0
-      listr2: 5.0.1
+      listr2: 5.0.2
       magic-string: 0.26.2
       noop-stream: 1.0.0
       path-equal: 1.2.2
@@ -10007,8 +10007,8 @@ packages:
       ufo: 0.8.4
     dev: false
 
-  /listr2/5.0.1:
-    resolution: {integrity: sha512-ZDCi/xtStQ+hKHSHdECCzcSqclmluGi7ArEHs55r5GEa6r5OgP2uzdBNice9q+hy111bQ3QJpMg/gCxMmn8/Mw==}
+  /listr2/5.0.2:
+    resolution: {integrity: sha512-/yIYitiJgIkzVIKqQc+Dpcpwaj4PjeW/hSi7/xoGJ5mil7vQYedr5kKuEyLhANlnifCcumafnIR6azpb8loODw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
