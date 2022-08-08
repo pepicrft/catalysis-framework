@@ -210,12 +210,12 @@ importers:
       '@gestaltjs/core': 0.7.10
       '@oclif/core': 1.9.5
       h3: 0.7.14
-      listhen: 0.2.13
+      listhen: 0.2.15
     dependencies:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.9.5
       h3: 0.7.14
-      listhen: 0.2.13
+      listhen: 0.2.15
 
   packages/eslint-plugin:
     specifiers:
@@ -8248,8 +8248,8 @@ packages:
     resolution: {integrity: sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==}
     engines: {node: '>=8.0.0'}
 
-  /get-port-please/2.5.0:
-    resolution: {integrity: sha512-NblPebBznYARC1R2r1qmusbJAAgBr954gWhEZgwTerzR8r3ud6U5PI1SG4Lue43r87aikPPjObs85VieIDK99A==}
+  /get-port-please/2.6.1:
+    resolution: {integrity: sha512-4PDSrL6+cuMM1xs6w36ZIkaKzzE0xzfVBCfebHIJ3FE8iB9oic/ECwPw3iNiD4h1AoJ5XLLBhEviFAVrZsDC5A==}
     dependencies:
       fs-memo: 1.2.0
     dev: false
@@ -9995,16 +9995,16 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /listhen/0.2.13:
-    resolution: {integrity: sha512-axfyPgsrypKohOglPjzMVj+6nSQuDfdDzq92tYEg4HO+YkvvMGz0bGeoGA+pdEC7a8gbIgLduf/62Pkk1a9jMQ==}
+  /listhen/0.2.15:
+    resolution: {integrity: sha512-F/IWj/aJLeokHAIVY+l3JoWRUnbRaf2F0cr+Ybc1YyozMA/yP0C2nf3c0Oi7vAbFvtfiwfWWfP7bIrQc/u5L1A==}
     dependencies:
       clipboardy: 3.0.0
       colorette: 2.0.19
       defu: 6.0.0
-      get-port-please: 2.5.0
+      get-port-please: 2.6.1
       http-shutdown: 1.2.2
       selfsigned: 2.0.1
-      ufo: 0.8.4
+      ufo: 0.8.5
     dev: false
 
   /listr2/5.0.2:
@@ -13617,10 +13617,6 @@ packages:
 
   /ua-parser-js/0.7.31:
     resolution: {integrity: sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==}
-    dev: false
-
-  /ufo/0.8.4:
-    resolution: {integrity: sha512-/+BmBDe8GvlB2nIflWasLLAInjYG0bC9HRnfEpNi4sw77J2AJNnEVnTDReVrehoh825+Q/evF3THXTAweyam2g==}
     dev: false
 
   /ufo/0.8.5:
