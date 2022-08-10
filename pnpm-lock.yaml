@@ -209,12 +209,12 @@ importers:
     specifiers:
       '@gestaltjs/core': 0.7.10
       '@oclif/core': 1.9.5
-      h3: 0.7.14
+      h3: 0.7.15
       listhen: 0.2.15
     dependencies:
       '@gestaltjs/core': link:../core
       '@oclif/core': 1.9.5
-      h3: 0.7.14
+      h3: 0.7.15
       listhen: 0.2.15
 
   packages/eslint-plugin:
@@ -8469,8 +8469,8 @@ packages:
       duplexer: 0.1.2
     dev: false
 
-  /h3/0.7.14:
-    resolution: {integrity: sha512-qF49Le5rhn9L+Kg7Dbd5JPdxr/JldWCLDMvFi46D/Pvqdzp6WQJyje2zm/ShfO8Ni+MFwA3efn1ldEAhznkAJQ==}
+  /h3/0.7.15:
+    resolution: {integrity: sha512-4lile6Q64nQ5Z2+6NaD85WU64fhF/qIVyGm4NaFyl4w7L/XDIiq5gkogWLUzZGGtq60M4tnFSj7qIxc0rmTqrg==}
     dependencies:
       cookie-es: 0.5.0
       destr: 1.1.1
