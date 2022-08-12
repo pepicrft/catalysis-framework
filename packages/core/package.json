@@ -88,7 +88,7 @@
     "terminal-link": "3.0.0",
     "ts-error": "1.0.6",
     "unified": "10.1.2",
-    "vite": "3.0.6"
+    "vite": "3.0.7"
   },
   "devDependencies": {
     "@types/estree": "1.0.0",
