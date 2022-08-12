@@ -75,7 +75,7 @@
     "path-equal": "1.2.2",
     "pathe": "0.3.4",
     "picocolors": "1.0.0",
-    "pino": "8.4.0",
+    "pino": "8.4.1",
     "pino-abstract-transport": "1.0.0",
     "pino-pretty": "8.1.0",
     "plur": "5.1.0",
