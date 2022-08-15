@@ -112,7 +112,7 @@ importers:
     specifiers:
       '@oclif/core': 1.9.5
       '@types/estree': 1.0.0
-      '@types/inquirer': 8.2.2
+      '@types/inquirer': 8.2.3
       acorn: 8.8.0
       case-anything: 2.1.10
       commondir: 1.0.1
@@ -179,7 +179,7 @@ importers:
       vite: 3.0.7
     devDependencies:
       '@types/estree': 1.0.0
-      '@types/inquirer': 8.2.2
+      '@types/inquirer': 8.2.3
 
   packages/create-plugin:
     specifiers:
@@ -4003,8 +4003,8 @@ packages:
       '@types/node': 17.0.45
     dev: false
 
-  /@types/inquirer/8.2.2:
-    resolution: {integrity: sha512-HXoFOl+KS4yvmUjisi83VpuSBOeeXIzdJfoT/v2pUruqybpHy0Dz1DyXy3E2jNH0cSVKJZV92VOnFBwJR6k83A==}
+  /@types/inquirer/8.2.3:
+    resolution: {integrity: sha512-ZlBqD+8WIVNy3KIVkl+Qne6bGLW2erwN0GJXY9Ri/9EMbyupee3xw3H0Mmv5kJoLyNpfd/oHlwKxO0DUDH7yWA==}
     dependencies:
       '@types/through': 0.0.30
     dev: true
