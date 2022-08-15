@@ -39,7 +39,7 @@ importers:
       ts-node: 10.9.1
       typescript: 4.7.4
       vite: 3.0.7
-      vitest: 0.21.1
+      vitest: 0.22.0
     devDependencies:
       '@changesets/cli': 2.24.3
       '@nrwl/cli': 14.5.6
@@ -76,7 +76,7 @@ importers:
       ts-node: 10.9.1_x2utdhayajzrh747hktprshhby
       typescript: 4.7.4
       vite: 3.0.7
-      vitest: 0.21.1
+      vitest: 0.22.0
 
   e2e:
     specifiers:
@@ -13804,15 +13804,14 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitest/0.21.1:
-    resolution: {integrity: sha512-WBIxuFmIDPuK47GO6Lu9eNeRMqHj/FWL3dk73OHH3eyPPWPiu+UB3QHLkLK2PEggCqJW4FaWoWg8R68S7p9+9Q==}
+  /vitest/0.22.0:
+    resolution: {integrity: sha512-BSIro/QOHLaQY08FHwT6THWhqLQ+VPU+N4Rdo4pcP+16XB6oLmNNAXGcSh/MOLUhfUy+mqCwx7AyKmU7Ms5R+g==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@vitest/browser': '*'
       '@vitest/ui': '*'
-      c8: '*'
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -13821,8 +13820,6 @@ packages:
       '@vitest/browser':
         optional: true
       '@vitest/ui':
-        optional: true
-      c8:
         optional: true
       happy-dom:
         optional: true
