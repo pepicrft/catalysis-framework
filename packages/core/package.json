@@ -92,7 +92,7 @@
   },
   "devDependencies": {
     "@types/estree": "1.0.0",
-    "@types/inquirer": "8.2.3"
+    "@types/inquirer": "9.0.1"
   },
   "engine-strict": true,
   "engines": {
