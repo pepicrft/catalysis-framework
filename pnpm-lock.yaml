@@ -119,7 +119,7 @@ importers:
       electron: 19.0.12
       fast-glob: 3.2.11
       fast-json-stringify: 5.1.0
-      fastify: 4.4.0
+      fastify: 4.5.0
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -152,7 +152,7 @@ importers:
       electron: 19.0.12
       fast-glob: 3.2.11
       fast-json-stringify: 5.1.0
-      fastify: 4.4.0
+      fastify: 4.5.0
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -7623,8 +7623,8 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.4.0:
-    resolution: {integrity: sha512-ePI4g9vPJXIBF4YlVcDSLxjvtdTrlM8QzdgYAPFGdCH+rot+4MXoFFAUb10fGrIcRRjaq6CvcbIzxiWQzMMHkw==}
+  /fastify/4.5.0:
+    resolution: {integrity: sha512-21DEAqgFniJhgKPiJ0dIzSMrnl9X3bE14/jK2y8EcIy3GLBrjUhqFvIb8cayOrks2eenssVaUhUgMX1t2i4H5g==}
     dependencies:
       '@fastify/ajv-compiler': 3.1.2
       '@fastify/error': 3.0.0
@@ -11632,6 +11632,12 @@ packages:
   /react-dev-utils/12.0.1_3o2jfq6vfqxns3sz6wn2nnc3ei:
     resolution: {integrity: sha512-84Ivxmr17KjUupyqzFode6xKhjwuEJDROWKJy/BthkL7Wn6NJ8h4WE6k/exAv6ImS+0oZLRRW5j/aINMHyeGeQ==}
     engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=2.7'
+      webpack: '>=4'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       '@babel/code-frame': 7.18.6
       address: 1.2.0
@@ -11657,12 +11663,12 @@ packages:
       shell-quote: 1.7.3
       strip-ansi: 6.0.1
       text-table: 0.2.0
+      typescript: 4.7.4
+      webpack: 5.73.0
     transitivePeerDependencies:
       - eslint
       - supports-color
-      - typescript
       - vue-template-compiler
-      - webpack
     dev: false
 
   /react-dom/17.0.2_react@17.0.2:
@@ -13476,6 +13482,7 @@ packages:
   /unified/9.2.0:
     resolution: {integrity: sha512-vx2Z0vY+a3YoTj8+pttM3tiJHCwY5UFbYdiWrwBEbHmK8pvsPj2rtAX2BFfgXen8T39CJWblWRDT4L5WGXtDdg==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-buffer: 2.0.5
@@ -13487,6 +13494,7 @@ packages:
   /unified/9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-buffer: 2.0.5
