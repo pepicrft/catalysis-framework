@@ -119,7 +119,7 @@ importers:
       electron: 19.0.13
       fast-glob: 3.2.11
       fast-json-stringify: 5.1.0
-      fastify: 4.5.0
+      fastify: 4.5.2
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -152,7 +152,7 @@ importers:
       electron: 19.0.13
       fast-glob: 3.2.11
       fast-json-stringify: 5.1.0
-      fastify: 4.5.0
+      fastify: 4.5.2
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -7623,8 +7623,8 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.5.0:
-    resolution: {integrity: sha512-21DEAqgFniJhgKPiJ0dIzSMrnl9X3bE14/jK2y8EcIy3GLBrjUhqFvIb8cayOrks2eenssVaUhUgMX1t2i4H5g==}
+  /fastify/4.5.2:
+    resolution: {integrity: sha512-cDLhc0bh1ftzMoS7ccGGPUW/xTUnk6I51TktQqKFeJnhoAfk56tfn+xDs8JcJYfouPK23Ljx4OpMaEi+kIDwEg==}
     dependencies:
       '@fastify/ajv-compiler': 3.1.2
       '@fastify/error': 3.0.0
