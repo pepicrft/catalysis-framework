@@ -55,7 +55,7 @@
     "ts-node": "10.9.1",
     "typescript": "4.7.4",
     "vite": "3.0.8",
-    "vitest": "0.22.0"
+    "vitest": "0.22.1"
   },
   "prettier": {
     "trailingComma": "es5",
