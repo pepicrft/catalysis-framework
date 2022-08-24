@@ -132,7 +132,7 @@ importers:
       picocolors: 1.0.0
       pino: 8.4.2
       pino-abstract-transport: 1.0.0
-      pino-pretty: 8.1.0
+      pino-pretty: 9.1.0
       plur: 5.1.0
       radix3: 0.1.2
       rehype-parse: 8.0.4
@@ -165,7 +165,7 @@ importers:
       picocolors: 1.0.0
       pino: 8.4.2
       pino-abstract-transport: 1.0.0
-      pino-pretty: 8.1.0
+      pino-pretty: 9.1.0
       plur: 5.1.0
       radix3: 0.1.2
       rehype-parse: 8.0.4
@@ -10514,10 +10514,6 @@ packages:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
     dev: false
 
-  /on-exit-leak-free/1.0.0:
-    resolution: {integrity: sha512-Ve8ubhrXRdnuCJ5bQSQpP3uaV43K1PMcOfSRC1pqHgRZommXCgsXwh08jVC5NpjwScE23BPDwDvVg4cov3mwjw==}
-    dev: false
-
   /on-exit-leak-free/2.1.0:
     resolution: {integrity: sha512-VuCaZZAjReZ3vUwgOB8LxAosIurDiAW0s13rI1YwmaP++jvcxP77AWoQvenZebpCA2m8WC1/EosPYPMjnRAp/w==}
     dev: false
@@ -10895,8 +10891,8 @@ packages:
       split2: 4.1.0
     dev: false
 
-  /pino-pretty/8.1.0:
-    resolution: {integrity: sha512-oKfI8qKXR2a3haHs/X8iB6QSnWLqoOGAjwxIAXem4+XOGIGNw7IKpozId1uE7j89Rj46HIfWnGbAgmQmr8+yRw==}
+  /pino-pretty/9.1.0:
+    resolution: {integrity: sha512-IM6NY9LLo/dVgY7/prJhCh4rAJukafdt0ibxeNOWc2fxKMyTk90SOB9Ao2HfbtShT9QPeP0ePpJktksMhSQMYA==}
     hasBin: true
     dependencies:
       colorette: 2.0.19
@@ -10906,12 +10902,12 @@ packages:
       help-me: 4.0.1
       joycon: 3.1.1
       minimist: 1.2.6
-      on-exit-leak-free: 1.0.0
+      on-exit-leak-free: 2.1.0
       pino-abstract-transport: 1.0.0
       pump: 3.0.0
       readable-stream: 4.0.0
       secure-json-parse: 2.4.0
-      sonic-boom: 3.0.0
+      sonic-boom: 3.2.0
       strip-json-comments: 3.1.1
     dev: false
 
@@ -12623,12 +12619,6 @@ packages:
       faye-websocket: 0.11.4
       uuid: 8.3.2
       websocket-driver: 0.7.4
-    dev: false
-
-  /sonic-boom/3.0.0:
-    resolution: {integrity: sha512-p5DiZOZHbJ2ZO5MADczp5qrfOd3W5Vr2vHxfCpe7G4AzPwVOweIjbfgku8wSQUuk+Y5Yuo8W7JqRe6XKmKistg==}
-    dependencies:
-      atomic-sleep: 1.0.0
     dev: false
 
   /sonic-boom/3.2.0:
