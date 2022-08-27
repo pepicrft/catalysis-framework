@@ -119,7 +119,7 @@ importers:
       electron: 19.0.14
       fast-glob: 3.2.11
       fast-json-stringify: 5.1.0
-      fastify: 4.5.2
+      fastify: 4.5.3
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -152,7 +152,7 @@ importers:
       electron: 19.0.14
       fast-glob: 3.2.11
       fast-json-stringify: 5.1.0
-      fastify: 4.5.2
+      fastify: 4.5.3
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -7623,8 +7623,8 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.5.2:
-    resolution: {integrity: sha512-cDLhc0bh1ftzMoS7ccGGPUW/xTUnk6I51TktQqKFeJnhoAfk56tfn+xDs8JcJYfouPK23Ljx4OpMaEi+kIDwEg==}
+  /fastify/4.5.3:
+    resolution: {integrity: sha512-Q8Zvkmg7GnioMCDX1jT2Q7iRqjywlnDZ1735D2Ipf7ashCM/3/bqPKv2Jo1ZF2iDExct2eP1C/tdhcj0GG/OuQ==}
     dependencies:
       '@fastify/ajv-compiler': 3.1.2
       '@fastify/error': 3.0.0
@@ -7632,7 +7632,7 @@ packages:
       abstract-logging: 2.0.1
       avvio: 8.1.3
       find-my-way: 7.0.0
-      light-my-request: 5.0.0
+      light-my-request: 5.5.1
       pino: 8.4.2
       process-warning: 2.0.0
       proxy-addr: 2.0.7
@@ -9750,12 +9750,11 @@ packages:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  /light-my-request/5.0.0:
-    resolution: {integrity: sha512-0OPHKV+uHgBOnRokzL1LqeMCnSAo5l/rZS7kyB6G1I8qxGCvhXpq1M6WK565Y9A5CSn50l3DVaHnJ5FCdpguZQ==}
+  /light-my-request/5.5.1:
+    resolution: {integrity: sha512-Zd4oZjF7axSyc5rYQsbB0qsgY4LFFviZSbEywxf7Vi5UE3y3c7tYF/GeheQjBNYY+pQ55BF8UGGJTjneoxOS1w==}
     dependencies:
-      ajv: 8.11.0
       cookie: 0.5.0
-      process-warning: 1.0.0
+      process-warning: 2.0.0
       set-cookie-parser: 2.4.8
     dev: false
 
@@ -11460,10 +11459,6 @@ packages:
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
-    dev: false
-
-  /process-warning/1.0.0:
-    resolution: {integrity: sha512-du4wfLyj4yCZq1VupnVSZmRsPJsNuxoDQFdCFHLaYiEbFBD7QE0a+I4D7hOxrVnh78QE/YipFAj9lXHiXocV+Q==}
     dev: false
 
   /process-warning/2.0.0:
