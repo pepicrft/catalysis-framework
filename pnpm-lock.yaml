@@ -314,14 +314,6 @@ importers:
       '@types/react': 17.0.49
       typescript: 4.8.2
 
-  ship:
-    specifiers:
-      gestaltjs: workspace:*
-      react: 18.2.0
-    dependencies:
-      gestaltjs: link:../packages/gestaltjs
-      react: 18.2.0
-
 packages:
 
   /@algolia/autocomplete-core/1.7.1:
@@ -11820,13 +11812,6 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-
-  /react/18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
 
   /read-pkg-up/7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
