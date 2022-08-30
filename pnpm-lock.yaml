@@ -125,7 +125,7 @@ importers:
       handlebars: 4.7.7
       inquirer: 9.1.0
       listr2: 5.0.2
-      magic-string: 0.26.2
+      magic-string: 0.26.3
       noop-stream: 1.0.0
       path-equal: 1.2.2
       pathe: 0.3.5
@@ -158,7 +158,7 @@ importers:
       handlebars: 4.7.7
       inquirer: 9.1.0
       listr2: 5.0.2
-      magic-string: 0.26.2
+      magic-string: 0.26.3
       noop-stream: 1.0.0
       path-equal: 1.2.2
       pathe: 0.3.5
@@ -9997,8 +9997,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /magic-string/0.26.2:
-    resolution: {integrity: sha512-NzzlXpclt5zAbmo6h6jNc8zl2gNRGHvmsZW4IvZhTC4W7k4OlLP+S5YLussa/r3ixNT66KOQfNORlXHSOy/X4A==}
+  /magic-string/0.26.3:
+    resolution: {integrity: sha512-u1Po0NDyFcwdg2nzHT88wSK0+Rih0N1M+Ph1Sp08k8yvFFU3KR72wryS7e1qMPJypt99WB7fIFVCA92mQrMjrg==}
     engines: {node: '>=12'}
     dependencies:
       sourcemap-codec: 1.4.8
