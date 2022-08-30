@@ -22,7 +22,7 @@
     ]
   },
   "dependencies": {
-    "h3": "0.7.16",
+    "h3": "0.7.17",
     "listhen": "0.2.15",
     "@gestaltjs/core": "0.7.10",
     "@oclif/core": "1.9.5"
