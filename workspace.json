@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "projects": {
+    "build": "packages/build",
+    "check": "packages/check",
+    "db": "packages/db",
+    "dev": "packages/dev",
+    "eslint-plugin": "packages/eslint-plugin",
+    "generate": "packages/generate",
+    "info": "packages/info",
+    "routes": "packages/routes",
+    "test": "packages/test",
+    "core": "packages/core",
+    "website": "packages/website",
+    "create-plugin": "packages/create-plugin",
+    "create-project": "packages/create-project"
+  }
+}
