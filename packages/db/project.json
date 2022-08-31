@@ -1,0 +1,62 @@
+{
+  "name": "db",
+  "root": "packages/db",
+  "sourceRoot": "packages/db/src",
+  "projectType": "library",
+  "implicitDependencies": ["core"],
+  "tags": ["scope:feature"],
+  "targets": {
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm shx rm -rf dist",
+        "cwd": "packages/db"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["dist"],
+      "inputs": ["{projectRoot}/src/**/*"],
+      "options": {
+        "command": "pnpm tsc -b ./tsconfig.build.json",
+        "cwd": "packages/db"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm prettier -c src/** && eslint './**/*.{js,ts}'",
+        "cwd": "packages/db"
+      }
+    },
+    "lint:fix": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm prettier -w src/** && eslint './**/*.{js,ts}' --fix",
+        "cwd": "packages/db"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm vitest run",
+        "cwd": "packages/db"
+      }
+    },
+    "test:watch": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm vitest watch",
+        "cwd": "packages/db"
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm tsc --noEmit",
+        "cwd": "packages/db"
+      }
+    }
+  }
+}
