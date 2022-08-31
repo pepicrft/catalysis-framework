@@ -123,7 +123,7 @@ importers:
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
-      inquirer: 9.1.0
+      inquirer: 9.1.1
       listr2: 5.0.2
       magic-string: 0.26.3
       noop-stream: 1.0.0
@@ -156,7 +156,7 @@ importers:
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
-      inquirer: 9.1.0
+      inquirer: 9.1.1
       listr2: 5.0.2
       magic-string: 0.26.3
       noop-stream: 1.0.0
@@ -7666,9 +7666,9 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /figures/4.0.1:
-    resolution: {integrity: sha512-rElJwkA/xS04Vfg+CaZodpso7VqBknOYbzi6I76hI4X80RUjkSxO2oAyPmGbuXUppywjqndOrQDl817hDnI++w==}
-    engines: {node: '>=12'}
+  /figures/5.0.0:
+    resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
+    engines: {node: '>=14'}
     dependencies:
       escape-string-regexp: 5.0.0
       is-unicode-supported: 1.2.0
@@ -8674,8 +8674,8 @@ packages:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
-  /inquirer/9.1.0:
-    resolution: {integrity: sha512-eukdjrBljg9t55ZnvJjvGi1OyYEzVBFsO/8o5d2MV3mc28u3x4X2kS4eJ/+9U10KiREfPkEBSeCrU/S2G/uRtw==}
+  /inquirer/9.1.1:
+    resolution: {integrity: sha512-hfS9EJ1pVkGNbYKqzdGwMj0Dqosd36Qvxd5pFy4657QT23gmtFTSqoYBisZR75DReeSMWPNa8J0Lf6TQCz8PvA==}
     engines: {node: '>=12.0.0'}
     dependencies:
       ansi-escapes: 5.0.0
@@ -8683,7 +8683,7 @@ packages:
       cli-cursor: 4.0.0
       cli-width: 4.0.0
       external-editor: 3.1.0
-      figures: 4.0.1
+      figures: 5.0.0
       lodash: 4.17.21
       mute-stream: 0.0.8
       ora: 6.1.2
