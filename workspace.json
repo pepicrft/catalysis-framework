@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "test": "packages/test",
     "build": "packages/build",
     "core": "packages/core",
     "create-project": "packages/create-project",
