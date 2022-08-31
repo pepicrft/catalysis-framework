@@ -4,7 +4,7 @@ import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Migrate extends GestaltCommand {
-  static description = 'Build your Gestalt project'
+  static description = 'Migrate the database'
 
   static flags = {
     ...GestaltCommand.globalFlags,
