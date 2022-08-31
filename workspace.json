@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "projects": {
+    "gestaltjs": "packages/gestaltjs",
+    "routes": "packages/routes",
+    "generate": "packages/generate",
+    "dev": "packages/dev",
+    "info": "packages/info",
+    "db": "packages/db",
+    "test": "packages/test",
+    "build": "packages/build",
+    "check": "packages/check",
+    "core": "packages/core",
+    "create-project": "packages/create-project",
+    "create-plugin": "packages/create-plugin",
+    "website": "packages/website",
+    "eslint-plugin": "packages/eslint-plugin"
+  }
+}

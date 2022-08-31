@@ -5,37 +5,11 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "tsc",
-          "test",
-          "lint",
-          "package",
-          "prepare"
-        ]
+        "cacheableOperations": ["build"]
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "prepare": [
-      {
-        "target": "prepare",
-        "projects": "dependencies"
-      }
-    ],
-    "package": [
-      {
-        "target": "package",
-        "projects": "dependencies"
-      }
-    ]
-  },
+  "targetDependencies": {},
   "affected": {
     "defaultBase": "main"
   }

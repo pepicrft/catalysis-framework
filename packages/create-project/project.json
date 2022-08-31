@@ -1,0 +1,62 @@
+{
+  "name": "create-project",
+  "root": "packages/create-project",
+  "sourceRoot": "packages/create-project/src",
+  "projectType": "library",
+  "implicitDependencies": ["core"],
+  "tags": ["scope:create"],
+  "targets": {
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm shx rm -rf dist",
+        "cwd": "packages/create-project"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["dist"],
+      "inputs": ["{projectRoot}/src/**/*"],
+      "options": {
+        "command": "pnpm tsc -b ./tsconfig.build.json",
+        "cwd": "packages/create-project"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm prettier -c src/** && eslint './**/*.{js,ts}'",
+        "cwd": "packages/create-project"
+      }
+    },
+    "lint:fix": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm prettier -w src/** && eslint './**/*.{js,ts}' --fix",
+        "cwd": "packages/create-project"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm vitest run",
+        "cwd": "packages/create-project"
+      }
+    },
+    "test:watch": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm vitest watch",
+        "cwd": "packages/create-project"
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm tsc --noEmit",
+        "cwd": "packages/create-project"
+      }
+    }
+  }
+}

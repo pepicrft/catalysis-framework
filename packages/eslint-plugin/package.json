@@ -14,14 +14,15 @@
     "/dist"
   ],
   "scripts": {
-    "clean": "shx rm -rf dist",
-    "prepack": "cross-env NODE_ENV=production pnpm run build",
-    "build": "pnpm clean && tsc -b tsconfig.build.json",
-    "lint": "prettier -c src/** && eslint './**/*.{js,ts}'",
-    "lint:fix": "prettier -w src/** && eslint './**/*.{js,ts}' --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "tsc": "tsc && echo"
+    "prepack": "cross-env NODE_ENV=production pnpm nx build",
+    "build": "nx build",
+    "clean": "nx clean",
+    "lint": "nx lint",
+    "lint:fix": "nx lint:fix",
+    "test": "nx run test",
+    "test:watch": "nx test:watch",
+    "type-check": "nx type-check",
+    "postpublish": "pnpm install"
   },
   "eslintConfig": {
     "extends": [

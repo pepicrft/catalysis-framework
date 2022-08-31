@@ -1,0 +1,72 @@
+{
+  "name": "gestaltjs",
+  "root": "packages/gestaltjs",
+  "sourceRoot": "packages/gestaltjs/src",
+  "projectType": "library",
+  "implicitDependencies": [
+    "build",
+    "check",
+    "db",
+    "dev",
+    "generate",
+    "info",
+    "routes",
+    "test",
+    "eslint-plugin"
+  ],
+  "tags": ["scope:cli"],
+  "targets": {
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm shx rm -rf dist",
+        "cwd": "packages/gestaltjs"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["dist"],
+      "inputs": ["{projectRoot}/src/**/*"],
+      "options": {
+        "command": "pnpm tsc -b ./tsconfig.build.json",
+        "cwd": "packages/gestaltjs"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm prettier -c src/** && eslint './**/*.{js,ts}'",
+        "cwd": "packages/gestaltjs"
+      }
+    },
+    "lint:fix": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm prettier -w src/** && eslint './**/*.{js,ts}' --fix",
+        "cwd": "packages/gestaltjs"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm vitest run",
+        "cwd": "packages/gestaltjs"
+      }
+    },
+    "test:watch": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm vitest watch",
+        "cwd": "packages/gestaltjs"
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm tsc --noEmit",
+        "cwd": "packages/gestaltjs"
+      }
+    }
+  }
+}

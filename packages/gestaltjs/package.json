@@ -86,10 +86,5 @@
       "@gestaltjs/generate",
       "@oclif/plugin-help"
     ]
-  },
-  "nx": {
-    "implicitDependencies": [
-      "@gestaltjs/eslint-plugin"
-    ]
   }
 }

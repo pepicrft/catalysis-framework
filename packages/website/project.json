@@ -1,0 +1,44 @@
+{
+  "name": "website",
+  "root": "packages/website",
+  "sourceRoot": "packages/website/src",
+  "projectType": "library",
+  "tags": ["scope:website"],
+  "targets": {
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm docusaurus clear",
+        "cwd": "packages/website"
+      }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm docusaurus serve",
+        "cwd": "packages/website"
+      }
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm docusaurus start",
+        "cwd": "packages/website"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm docusaurus build",
+        "cwd": "packages/website"
+      }
+    },
+    "swizzle": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm docusaurus swizzle",
+        "cwd": "packages/website"
+      }
+    }
+  }
+}
