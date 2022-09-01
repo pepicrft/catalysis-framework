@@ -10,6 +10,7 @@ const sidebars = {
     'contributors/logging',
     'contributors/errors',
     'contributors/eslint-rules',
+    'contributors/automation',
     {
       type: 'category',
       label: 'Decision record',
