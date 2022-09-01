@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "nx start",
+    "dev": "nx dev",
     "build": "nx build",
     "swizzle": "nx swizzle",
-    "clean": "nx clean",
-    "dev": "nx dev"
+    "clean": "nx clean"
   },
   "dependencies": {
     "@algolia/client-search": "4.14.2",
