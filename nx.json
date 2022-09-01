@@ -12,5 +12,16 @@
   "targetDependencies": {},
   "affected": {
     "defaultBase": "main"
+  },
+  "targetDefaults": {
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "type-check": {
+      "dependsOn": []
+    }
   }
 }
