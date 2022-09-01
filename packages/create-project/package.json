@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@oclif/core": "1.9.5",
+    "@oclif/core": "1.16.0",
     "@gestaltjs/core": "0.7.10"
   },
   "oclif": {

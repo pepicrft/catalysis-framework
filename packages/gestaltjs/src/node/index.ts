@@ -6,7 +6,9 @@ settings.debug = isDebug
 
 const runGestalt = () => {
   run(void 0, import.meta.url)
-    .then(flush)
+    .then(async (ms) => {
+      await flush(ms as number)
+    })
     .catch((thrownError) => {
       return errorHandler(thrownError)
     })
