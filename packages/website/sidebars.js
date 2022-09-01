@@ -10,6 +10,11 @@ const sidebars = {
     'contributors/logging',
     'contributors/errors',
     'contributors/eslint-rules',
+    {
+      type: 'category',
+      label: 'Decision record',
+      items: ['contributors/decision-record/2022-09-01-pnpm'],
+    },
   ],
 }
 
