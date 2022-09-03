@@ -19,6 +19,7 @@ module.exports = {
     'no-console': 'error',
     'no-useless-catch': 'error',
     'rulesdir/noop': 'error',
+    'rulesdir/no-json-class': 'error',
     'import/no-nodejs-modules': 'error',
     'import/no-default-export': 'error',
     'no-implicit-globals': 'error',
