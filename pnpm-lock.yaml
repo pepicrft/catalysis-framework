@@ -34,7 +34,7 @@ importers:
       prettier: 2.7.1
       rimraf: 3.0.2
       shx: 0.3.4
-      tempy: 2.0.0
+      tempy: 3.0.0
       tmp: 0.2.1
       ts-node: 10.9.1
       typescript: 4.8.2
@@ -71,7 +71,7 @@ importers:
       prettier: 2.7.1
       rimraf: 3.0.2
       shx: 0.3.4
-      tempy: 2.0.0
+      tempy: 3.0.0
       tmp: 0.2.1
       ts-node: 10.9.1_vxrnv5tlr43u5xabofdb6zoswy
       typescript: 4.8.2
@@ -140,7 +140,7 @@ importers:
       rehype-stringify: 9.0.3
       source-map-support: 0.5.21
       stacktracey: 2.1.8
-      tempy: 2.0.0
+      tempy: 3.0.0
       terminal-link: 3.0.0
       ts-error: 1.0.6
       unified: 10.1.2
@@ -175,7 +175,7 @@ importers:
       rehype-stringify: 9.0.3
       source-map-support: 0.5.21
       stacktracey: 2.1.8
-      tempy: 2.0.0
+      tempy: 3.0.0
       terminal-link: 3.0.0
       ts-error: 1.0.6
       unified: 10.1.2
@@ -4665,6 +4665,7 @@ packages:
     dependencies:
       clean-stack: 2.2.0
       indent-string: 4.0.0
+    dev: false
 
   /ajv-formats/2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
@@ -5565,6 +5566,7 @@ packages:
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
+    dev: false
 
   /clean-stack/3.0.1:
     resolution: {integrity: sha512-lR9wNiMRcVQjSB3a7xXGLuz4cr4wJuuXlaAEbRutGowQTmlp7R72/DOgN21e8jdwblMWl9UOJMJXarX94pzKdg==}
@@ -6335,6 +6337,7 @@ packages:
       p-map: 4.0.0
       rimraf: 3.0.2
       slash: 3.0.0
+    dev: false
 
   /depd/1.1.2:
     resolution: {integrity: sha512-7emPTl6Dpo6JRXOXjLRxck+FlLRX5847cLKEn00PLAgc3g2hTZZgr+e4c2v6QpSmLeFP3n5yUo7ft6avBK/5jQ==}
@@ -8847,6 +8850,7 @@ packages:
   /is-path-cwd/2.2.0:
     resolution: {integrity: sha512-w942bTcih8fdJPJmQHFzkS76NEP8Kzzvmw92cXsazb8intwLqPibPPdXf4ANdKV3rYMuuQYGIWtvz9JilB3NFQ==}
     engines: {node: '>=6'}
+    dev: false
 
   /is-path-inside/3.0.3:
     resolution: {integrity: sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==}
@@ -10511,6 +10515,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       aggregate-error: 3.1.0
+    dev: false
 
   /p-retry/4.6.2:
     resolution: {integrity: sha512-312Id396EbJdvRONlngUx0NydfrIQ5lsYu0znKVUzVvArzEIt08V1qhtyESbGVd1FGX7UKtiFp5uwKZdM8wIuQ==}
@@ -12808,11 +12813,10 @@ packages:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
     engines: {node: '>=8'}
 
-  /tempy/2.0.0:
-    resolution: {integrity: sha512-m+QReZVhpa0Y56fmfoLFRZN4aDFdd3qVd8a9k3RfyTw/1utVYNg+Ar4BY6l4/TlkhYCCJFfhYWt9uy0127buJg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+  /tempy/3.0.0:
+    resolution: {integrity: sha512-B2I9X7+o2wOaW4r/CWMkpOO9mdiTRCxXNgob6iGvPmfPWgH/KyUD6Uy5crtWBxIBe3YrNZKR2lSzv1JJKWD4vA==}
+    engines: {node: '>=14.16'}
     dependencies:
-      del: 6.1.1
       is-stream: 3.0.0
       temp-dir: 2.0.0
       type-fest: 2.14.0
