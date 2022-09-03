@@ -4,12 +4,29 @@ import { writeFile } from './fs.js'
 import {
   JSONFileNotFoundError,
   JSONFileParseError,
-  readJsonFile,
+  JSONParseError,
+  parseJsonFile,
+  parseJson,
 } from './json.js'
 import { joinPath } from './path.js'
-import parseJson from 'parse-json'
+import externalParseJson from 'parse-json'
 
-describe('readJsonFile', () => {
+describe('parseJsonFile', () => {
+  test('returns the Javascript object when the JSON is valid', async () => {
+    await inTemporarydirectory(async (tmpDir) => {
+      // Given
+      const validJson = '{ "name": "test" }'
+      const jsonPath = joinPath(tmpDir, 'test.json')
+      await writeFile(jsonPath, validJson)
+
+      // When
+      const { name } = await parseJsonFile(jsonPath)
+
+      // Then
+      expect(name).toEqual('test')
+    })
+  })
+
   test("throws a JSONFileNotFoundError error if it doesn't exist", async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
@@ -17,7 +34,7 @@ describe('readJsonFile', () => {
 
       // When/Then
       await expect(async () => {
-        await readJsonFile(jsonPath)
+        await parseJsonFile(jsonPath)
       }).rejects.toThrow(JSONFileNotFoundError(jsonPath))
     })
   })
@@ -37,15 +54,51 @@ describe('readJsonFile', () => {
       let internalError: any | undefined
 
       try {
-        parseJson(invalidJson)
+        externalParseJson(invalidJson)
       } catch (error: any) {
         internalError = error
       }
 
       // When/Then
       await expect(async () => {
-        await readJsonFile(jsonPath)
+        await parseJsonFile(jsonPath)
       }).rejects.toThrow(JSONFileParseError(jsonPath, internalError))
     })
+  })
+})
+
+describe('parseJson', () => {
+  test('returns the object when the JSON is valid', async () => {
+    // Given
+    const validJson = `{ "name": "test" }`
+
+    // When
+    const { name } = await parseJson(validJson)
+
+    // Then
+    expect(name).toEqual('test')
+  })
+
+  test('throws a JSONParseError error if the JSON is invalid', async () => {
+    // Given
+    const invalidJson = `
+    {
+      "test": {
+        "invalid
+      }
+    }
+          `
+    let internalError: any | undefined
+
+    try {
+      externalParseJson(invalidJson)
+    } catch (error: any) {
+      internalError = error
+    }
+
+    // When/Then
+    await expect(async () => {
+      await parseJson(invalidJson)
+    }).rejects.toThrow(JSONParseError(internalError))
   })
 })
