@@ -112,12 +112,14 @@ A function that alters the behavior of the stringification process, or an array 
  */
 export function encodeJson(
   value: any,
-  replacer?: (key: string, value: any) => any,
-  space?: string | number,
-  options?: { depthLimit: number | undefined; edgesLimit: number | undefined }
+  replacer?: (key: string, value: any) => any | undefined,
+  space?: string | number | undefined,
+  options?:
+    | { depthLimit: number | undefined; edgesLimit: number | undefined }
+    | undefined
 ): string {
   try {
-    return safeStringify.default(value, replacer, space, options)
+    return safeStringify(value, replacer, space, options)
   } catch (error: any) {
     throw JSONEncodeError(error)
   }

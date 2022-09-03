@@ -118,7 +118,8 @@ importers:
       electron: 19.0.6
       fast-glob: 3.2.11
       fast-json-stringify: 5.0.1
-      fastify: 4.1.0
+      fast-safe-stringify: 2.1.1
+      fastify: 4.5.3
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -128,11 +129,11 @@ importers:
       noop-stream: 1.0.0
       parse-json: 6.0.2
       path-equal: 1.2.2
-      pathe: ^0.3.2
+      pathe: 0.3.5
       picocolors: 1.0.0
-      pino: ^8.1.0
+      pino: 8.4.2
       pino-abstract-transport: 1.0.0
-      pino-pretty: 8.1.0
+      pino-pretty: 9.1.0
       plur: 5.1.0
       radix3: 0.1.2
       rehype-parse: 8.0.4
@@ -152,7 +153,8 @@ importers:
       electron: 19.0.6
       fast-glob: 3.2.11
       fast-json-stringify: 5.0.1
-      fastify: 4.1.0
+      fast-safe-stringify: 2.1.1
+      fastify: 4.5.3
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -166,7 +168,7 @@ importers:
       picocolors: 1.0.0
       pino: 8.4.2
       pino-abstract-transport: 1.0.0
-      pino-pretty: 8.1.0
+      pino-pretty: 9.1.0
       plur: 5.1.0
       radix3: 0.1.2
       rehype-parse: 8.0.4
@@ -3137,10 +3139,10 @@ packages:
     resolution: {integrity: sha512-dPRyT40GiHRzSCll3/Jn2nPe25+E1VXc9tDwRAIKwFCxd5Np5wzgz1tmooWG3sV0qKgrBibihVoCna2ru4SEFg==}
     dev: false
 
-  /@fastify/fast-json-stringify-compiler/3.0.1:
-    resolution: {integrity: sha512-X9BL9/N7827M9UTBVsa5G3xOoD3MQ6EqX+D6EyJyF8LdvWTHQJ//BDN4FAEaGZUA2sL+GEMC6+KNjHESnPwQuw==}
+  /@fastify/fast-json-stringify-compiler/4.1.0:
+    resolution: {integrity: sha512-cTKBV2J9+u6VaKDhX7HepSfPSzw+F+TSd+k0wzifj4rG+4E5PjSFJCk19P8R6tr/72cuzgGd+mbB3jFT6lvAgw==}
     dependencies:
-      fast-json-stringify: 4.2.0
+      fast-json-stringify: 5.0.1
     dev: false
 
   /@hapi/hoek/9.3.0:
@@ -7543,18 +7545,6 @@ packages:
   /fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
 
-  /fast-json-stringify/4.2.0:
-    resolution: {integrity: sha512-9RWBl82H7jwnPlkZ/ghi0VD5OFZVdwgwVui0nYzjnXbPQxJ3ES1+SQcWIoeCJOgrY7JkBkY/69UNZSroFPDRdQ==}
-    engines: {node: '>= 10.0.0'}
-    dependencies:
-      ajv: 8.11.0
-      ajv-formats: 2.1.1
-      deepmerge: 4.2.2
-      fast-uri: 2.1.0
-      rfdc: 1.3.0
-      string-similarity: 4.0.4
-    dev: false
-
   /fast-json-stringify/5.0.1:
     resolution: {integrity: sha512-WM5xcPSqUh29fPvfWGiXERHqcC88QLkDgCKY/Dm8ypVkPkmEj2SmFCUVOghqAgdudpK/9KkU/s6mLbZgSWZXcA==}
     dependencies:
@@ -7587,15 +7577,15 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.1.0:
-    resolution: {integrity: sha512-nze95u3wpVIsOXMmSi5kgUaEIZq2HJmerk/+ivFBPtYozAydoDg92BcsxDtO4cb8vW4RBkahx8zL5PgH9YulCw==}
+  /fastify/4.5.3:
+    resolution: {integrity: sha512-Q8Zvkmg7GnioMCDX1jT2Q7iRqjywlnDZ1735D2Ipf7ashCM/3/bqPKv2Jo1ZF2iDExct2eP1C/tdhcj0GG/OuQ==}
     dependencies:
       '@fastify/ajv-compiler': 3.2.0
       '@fastify/error': 3.0.0
-      '@fastify/fast-json-stringify-compiler': 3.0.1
+      '@fastify/fast-json-stringify-compiler': 4.1.0
       abstract-logging: 2.0.1
       avvio: 8.1.3
-      find-my-way: 6.4.0
+      find-my-way: 7.0.1
       light-my-request: 5.5.1
       pino: 8.4.2
       process-warning: 2.0.0
@@ -7737,9 +7727,9 @@ packages:
       pkg-dir: 4.2.0
     dev: false
 
-  /find-my-way/6.4.0:
-    resolution: {integrity: sha512-OAxMF75jKPpy8jUb29WupNfypFAzBuAiPM6xS17twiP07hJb0tKkD6Fy8dy8pN14AD8hMlc0jA6q0d+Dg5reUQ==}
-    engines: {node: '>=12'}
+  /find-my-way/7.0.1:
+    resolution: {integrity: sha512-w05SaOPg54KqBof/RDA+75n1R48V7ZZNPL3nR17jJJs5dgZpR3ivfrMWOyx7BVFQgCLhYRG05hfgFCohYvSUXA==}
+    engines: {node: '>=14'}
     dependencies:
       fast-deep-equal: 3.1.3
       safe-regex2: 2.0.0
@@ -10401,10 +10391,6 @@ packages:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
     dev: false
 
-  /on-exit-leak-free/1.0.0:
-    resolution: {integrity: sha512-Ve8ubhrXRdnuCJ5bQSQpP3uaV43K1PMcOfSRC1pqHgRZommXCgsXwh08jVC5NpjwScE23BPDwDvVg4cov3mwjw==}
-    dev: false
-
   /on-exit-leak-free/2.1.0:
     resolution: {integrity: sha512-VuCaZZAjReZ3vUwgOB8LxAosIurDiAW0s13rI1YwmaP++jvcxP77AWoQvenZebpCA2m8WC1/EosPYPMjnRAp/w==}
     dev: false
@@ -10781,18 +10767,18 @@ packages:
       split2: 4.1.0
     dev: false
 
-  /pino-pretty/8.1.0:
-    resolution: {integrity: sha512-oKfI8qKXR2a3haHs/X8iB6QSnWLqoOGAjwxIAXem4+XOGIGNw7IKpozId1uE7j89Rj46HIfWnGbAgmQmr8+yRw==}
+  /pino-pretty/9.1.0:
+    resolution: {integrity: sha512-IM6NY9LLo/dVgY7/prJhCh4rAJukafdt0ibxeNOWc2fxKMyTk90SOB9Ao2HfbtShT9QPeP0ePpJktksMhSQMYA==}
     hasBin: true
     dependencies:
-      colorette: 2.0.16
+      colorette: 2.0.19
       dateformat: 4.6.3
       fast-copy: 2.1.3
       fast-safe-stringify: 2.1.1
       help-me: 4.0.1
       joycon: 3.1.1
       minimist: 1.2.6
-      on-exit-leak-free: 1.0.0
+      on-exit-leak-free: 2.1.0
       pino-abstract-transport: 1.0.0
       pump: 3.0.0
       readable-stream: 4.0.0
@@ -12634,10 +12620,6 @@ packages:
       char-regex: 1.0.2
       strip-ansi: 6.0.1
     dev: true
-
-  /string-similarity/4.0.4:
-    resolution: {integrity: sha512-/q/8Q4Bl4ZKAPjj8WerIBJWALKkaPRfrvhfF8k/B23i4nzrlRj2/go1m90In7nG/3XDSbOo0+pu6RvCTM9RGMQ==}
-    dev: false
 
   /string-width/4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}

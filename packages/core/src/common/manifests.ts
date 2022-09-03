@@ -1,3 +1,3 @@
-export type { UserWebTarget } from './manifests/web'
-export type { UserConfiguration } from './manifests/configuration'
-export type { UserPlugin } from './manifests/plugin'
+export type { UserWebTarget } from './manifests/web.js'
+export type { UserConfiguration } from './manifests/configuration.js'
+export type { UserPlugin } from './manifests/plugin.js'

@@ -4,6 +4,7 @@ import { writeFile, makeDirectory } from './fs.js'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system.js'
 import { inTemporarydirectory } from '../testing/temporary.js'
+import { encodeJson } from './json.js'
 
 vi.mock('./system')
 
@@ -12,7 +13,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -35,7 +36,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -58,7 +59,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -81,7 +82,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -104,7 +105,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -127,7 +128,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -150,7 +151,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -173,7 +174,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = joinPath(tmpDir, 'package.json')
-      await writeFile(packageJsonPath, JSON.stringify({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
