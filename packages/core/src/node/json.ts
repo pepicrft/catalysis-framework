@@ -1,7 +1,8 @@
 import { Abort } from '../common/error.js'
 import { pathExists, readFile } from './fs.js'
 import { content, coreLogger, pathToken } from './logger.js'
-import externalParseJson from 'parse-json'
+import parseJson from 'parse-json'
+import safeStringify from 'fast-safe-stringify'
 
 /**
  * A function that returns an Abort error that represents that
@@ -25,15 +26,17 @@ export const JSONFileNotFoundError = (path: string) => {
  * @param error {Error | undefined} The parsing error.
  * @returns {Abort} An Abort instance.
  */
-export const JSONFileParseError = (path: string, error: Error | undefined) => {
+export const JSONFileDecodeError = (path: string, error: Error | undefined) => {
   if (error?.message) {
-    return new Abort(content`We couldn't parse the content of the JSON file ${pathToken(
+    return new Abort(content`We couldn't decode the content of the JSON file ${pathToken(
       path
     )} due to the following error:
     ${error.message}`)
   } else {
     return new Abort(
-      content`We couldn't parse the content of the JSON file ${pathToken(path)}`
+      content`We couldn't decode the content of the JSON file ${pathToken(
+        path
+      )}`
     )
   }
 }
@@ -44,13 +47,25 @@ export const JSONFileParseError = (path: string, error: Error | undefined) => {
  * @param error {Error | undefined} The parsing error.
  * @returns {Abort} An Abort instance.
  */
-export const JSONParseError = (error: Error | undefined) => {
+export const JSONDecodeError = (error: Error | undefined) => {
   if (error?.message) {
-    return new Abort(content`We couldn't parse the content of the JSON due to the following error:
+    return new Abort(content`We couldn't decode the content of the JSON due to the following error:
     ${error.message}`)
   } else {
-    return new Abort(content`We couldn't parse the content of the JSON`)
+    return new Abort(content`We couldn't decode the content of the JSON`)
   }
+}
+
+/**
+ * A function that returns an Abort error that represents that the
+ * encoding of a JSON has failed.
+ * @param error {Error} The error thrown by the 'fast-safe-stringify' package.
+ * @returns {Abort} An Abort instance.
+ */
+export const JSONEncodeError = (error: Error) => {
+  return new Abort(content`We couldn't encode into JSON due to:
+  ${error.message}
+`)
 }
 
 /**
@@ -58,7 +73,7 @@ export const JSONParseError = (error: Error | undefined) => {
  * @param path {string} The absolute path to the JSON file to read.
  * @returns {Promise<any>} A promise that resolves with a Javascript object representing the JSON content.
  */
-export async function parseJsonFile(path: string): Promise<any> {
+export async function decodeJsonFile(path: string): Promise<any> {
   coreLogger().debug(content`Reading JSON file from path ${pathToken(path)}`)
   const fileExists = await pathExists(path)
   if (!fileExists) {
@@ -66,9 +81,9 @@ export async function parseJsonFile(path: string): Promise<any> {
   }
   const jsonContent = await readFile(path)
   try {
-    return externalParseJson(jsonContent)
+    return parseJson(jsonContent)
   } catch (error: any | undefined) {
-    throw JSONFileParseError(path, error)
+    throw JSONFileDecodeError(path, error)
   }
 }
 
@@ -78,10 +93,32 @@ export async function parseJsonFile(path: string): Promise<any> {
  * @returns {Promise<any>} A promise that resolves with the Javascript object
  * or
  */
-export async function parseJson(content: string): Promise<any> {
+export function decodeJson(content: string): any {
   try {
-    return externalParseJson(content)
+    return parseJson(content)
   } catch (error: any | undefined) {
-    throw JSONParseError(error)
+    throw JSONDecodeError(error)
+  }
+}
+
+/**
+ * A version of JSON.stringify that's faster and more stable.
+ * @param value {any} The value to convert to a JSON string.
+ * @param replacer {(key: string, value: any) => any}
+A function that alters the behavior of the stringification process, or an array of strings or numbers naming properties of value that should be included in the output.
+ * @param space {string | number} A string or number that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
+ * @param options {{ depthLimit: number | undefined; edgesLimit: number | undefined }} Options
+ * @returns
+ */
+export function encodeJson(
+  value: any,
+  replacer?: (key: string, value: any) => any,
+  space?: string | number,
+  options?: { depthLimit: number | undefined; edgesLimit: number | undefined }
+): string {
+  try {
+    return safeStringify.default(value, replacer, space, options)
+  } catch (error: any) {
+    throw JSONEncodeError(error)
   }
 }

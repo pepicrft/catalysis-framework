@@ -1,5 +1,6 @@
-import { setContext, _useContext } from './context'
+import { setContext, _useContext } from './context.js'
 import { describe, test, expect } from 'vitest'
+import { decodeJson } from '../node/json.js'
 
 describe('setContext', () => {
   test('serializes the context as a JSON and sets it to the env', () => {
@@ -11,7 +12,7 @@ describe('setContext', () => {
 
     // Then
     expect(
-      JSON.parse(env.GESTALT_INTERNAL_CONTEXT as string).environment
+      decodeJson(env.GESTALT_INTERNAL_CONTEXT as string).environment
     ).toEqual('production')
   })
 })

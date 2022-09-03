@@ -3,15 +3,16 @@ import { inTemporarydirectory } from '../testing/temporary.js'
 import { writeFile } from './fs.js'
 import {
   JSONFileNotFoundError,
-  JSONFileParseError,
-  JSONParseError,
-  parseJsonFile,
-  parseJson,
+  JSONFileDecodeError,
+  JSONDecodeError,
+  decodeJsonFile,
+  decodeJson,
+  encodeJson,
 } from './json.js'
 import { joinPath } from './path.js'
-import externalParseJson from 'parse-json'
+import parseJson from 'parse-json'
 
-describe('parseJsonFile', () => {
+describe('decodeJsonFile', () => {
   test('returns the Javascript object when the JSON is valid', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
@@ -20,7 +21,7 @@ describe('parseJsonFile', () => {
       await writeFile(jsonPath, validJson)
 
       // When
-      const { name } = await parseJsonFile(jsonPath)
+      const { name } = await decodeJsonFile(jsonPath)
 
       // Then
       expect(name).toEqual('test')
@@ -34,12 +35,12 @@ describe('parseJsonFile', () => {
 
       // When/Then
       await expect(async () => {
-        await parseJsonFile(jsonPath)
+        await decodeJsonFile(jsonPath)
       }).rejects.toThrow(JSONFileNotFoundError(jsonPath))
     })
   })
 
-  test('throws a JSONFileParseError error if the JSON is invalid', async () => {
+  test('throws a JSONFileDecodeError error if the JSON is invalid', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const invalidJson = `
@@ -54,32 +55,32 @@ describe('parseJsonFile', () => {
       let internalError: any | undefined
 
       try {
-        externalParseJson(invalidJson)
+        parseJson(invalidJson)
       } catch (error: any) {
         internalError = error
       }
 
       // When/Then
       await expect(async () => {
-        await parseJsonFile(jsonPath)
-      }).rejects.toThrow(JSONFileParseError(jsonPath, internalError))
+        await decodeJsonFile(jsonPath)
+      }).rejects.toThrow(JSONFileDecodeError(jsonPath, internalError))
     })
   })
 })
 
-describe('parseJson', () => {
-  test('returns the object when the JSON is valid', async () => {
+describe('decodeJson', () => {
+  test('returns the object when the JSON is valid', () => {
     // Given
     const validJson = `{ "name": "test" }`
 
     // When
-    const { name } = await parseJson(validJson)
+    const { name } = decodeJson(validJson)
 
     // Then
     expect(name).toEqual('test')
   })
 
-  test('throws a JSONParseError error if the JSON is invalid', async () => {
+  test('throws a JSONDecodeError error if the JSON is invalid', () => {
     // Given
     const invalidJson = `
     {
@@ -91,14 +92,27 @@ describe('parseJson', () => {
     let internalError: any | undefined
 
     try {
-      externalParseJson(invalidJson)
+      parseJson(invalidJson)
     } catch (error: any) {
       internalError = error
     }
 
     // When/Then
-    await expect(async () => {
-      await parseJson(invalidJson)
-    }).rejects.toThrow(JSONParseError(internalError))
+    expect(() => {
+      decodeJson(invalidJson)
+    }).toThrow(JSONDecodeError(internalError))
+  })
+})
+
+describe('encodeJson', () => {
+  test('returns the JSON string representation given an object', () => {
+    // Given
+    const object = { name: 'test' }
+
+    // When
+    const got = encodeJson(object)
+
+    // Then
+    expect(got).toMatchInlineSnapshot('"{\\"name\\":\\"test\\"}"')
   })
 })

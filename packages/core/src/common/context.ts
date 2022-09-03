@@ -1,3 +1,5 @@
+import { decodeJson } from '../node/json.js'
+
 /**
  * The context is used to expose information to manifest files at loading time.
  * For example, plugins can change their setting depending on whether the project
@@ -28,7 +30,7 @@ export function setContext(context: Context, env = process.env) {
 export function _useContext(env = process.env): Context {
   const envVariable = env.GESTALT_INTERNAL_CONTEXT
   if (envVariable) {
-    return JSON.parse(envVariable)
+    return decodeJson(envVariable)
   } else {
     return { environment: 'development' }
   }
