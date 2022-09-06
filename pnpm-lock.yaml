@@ -142,6 +142,7 @@ importers:
       tempy: 3.0.0
       terminal-link: 3.0.0
       ts-error: 1.0.6
+      ts-pattern: 4.0.5
       unified: 10.1.2
       vite: 3.1.0
     dependencies:
@@ -176,6 +177,7 @@ importers:
       tempy: 3.0.0
       terminal-link: 3.0.0
       ts-error: 1.0.6
+      ts-pattern: 4.0.5
       unified: 10.1.2
       vite: 3.1.0
     devDependencies:
@@ -12907,6 +12909,10 @@ packages:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
+
+  /ts-pattern/4.0.5:
+    resolution: {integrity: sha512-Bq44KCEt7JVaNLa148mBCJkcQf4l7jtLEBDuDdeuLynWDA+1a60P4D0rMkqSM9mOKLQbIWUddE9h3XKyKwBeqA==}
+    dev: false
 
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
