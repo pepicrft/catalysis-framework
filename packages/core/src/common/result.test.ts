@@ -1,5 +1,5 @@
 import { Err, Ok } from './result'
-import { vi, describe, test, it, expect } from 'vitest'
+import { describe, test, it, expect } from 'vitest'
 import ExtendableError from 'ts-error'
 
 class TestError extends ExtendableError {}

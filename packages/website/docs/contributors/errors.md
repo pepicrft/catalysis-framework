@@ -17,12 +17,37 @@ But what makes great errors?
 Let's dive into a set of principles that Gestalt errors must embrace.
 
 
-## Designing great errors
+## Principles
+
+The following list contains principles that we recommend embracing when devising errors:
 
 - **Clear:** It should answer a straightforward question: *What happened?* We need to make an effort to understand errors to explain them to users in plain words. If errors are coming from third-party dependencies, the errors that we get from them are not self-descriptive. Translate them into the users' language.
 - **Actionable:** When users get an error, they want to know what to do next. In scenarios where we know what to do next, for example, when they are trying to run a CLI command outside of a Gestalt project, we should provide a set of next steps that they can follow. If we leave users with no actions, the action that they'll most likely take will be opening GitHub issues, which increases our support load.
 
-## Error module
+## Types of errors
+
+### Result
+
+There are scenarios where the caller of a function might want to get notified about failures to handle them.
+For example, to auto-retry HTTP requests that fail with a 5xx status code. Those functions should wrap errors
+in the `Result` type from the module `@gestaltjs/core/common/result` like shown in the example below:
+
+```ts
+// http.ts
+import { Err } from "@gestaltjs/core/common/result"
+import { ExtendableError } from "@gestaltjs/core/common/error"
+
+// Errors
+class HTTPServerError extends ExtendableError {}
+
+// Exports
+export async function fetch<T>(url: string): Result<T, HTTPServerError> {
+    return Err(new HTTPServerError())
+}
+```
+
+
+### Abort
 
 The above principles are codified in the `error` module from `@gestaltjs/gestalt`,
 which exposes `Abort` and `Bug` error classes.
@@ -37,14 +62,14 @@ import { Abort } from '@gestaltjs/core/common/error'
 
 // Abort error
 
-const DirectoryNotFoundError = new Abort("The directory app/ was not found", {
+const DirectoryNotFoundError = () => new Abort("The directory app/ was not found", {
     cause: "The directory might not exist in the current directory",
     next: "Make sure the directory exists and try again"
 })
 
 // Bug error
 
-const TestFailedError = new Bug("The test execution failed unexpectedly", {
+const TestFailedError = new () => Bug("The test execution failed unexpectedly", {
     cause: "There might be a bug in the logic in the contract between Gestalt and the testing framework",
 })
 ```
