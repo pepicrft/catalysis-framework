@@ -81,7 +81,7 @@
     "terminal-link": "3.0.0",
     "ts-error": "1.0.6",
     "unified": "10.1.2",
-    "vite": "3.0.9"
+    "vite": "3.1.0"
   },
   "devDependencies": {
     "@types/inquirer": "9.0.1"
