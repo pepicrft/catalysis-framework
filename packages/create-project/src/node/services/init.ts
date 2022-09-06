@@ -3,6 +3,7 @@ import { hyphenCased } from '@gestaltjs/core/common/string'
 import { joinPath } from '@gestaltjs/core/node/path'
 import {
   inTemporarydirectory,
+  makeDirectory,
   moveFileOrDirectory,
   pathExists,
   writeFile,
@@ -16,6 +17,7 @@ import {
   pathToken,
 } from '@gestaltjs/core/node/logger'
 import { getUsername } from '@gestaltjs/core/node/environment'
+import { initGitRepository, isGitAvailable } from '@gestaltjs/core/node/git'
 import { encodeJson } from '@gestaltjs/core/node/json'
 import { getVersionForGeneratedProject } from '../utilities/versions.js'
 import { getLocalPackagesOverrides } from '../utilities/packages.js'
@@ -61,10 +63,18 @@ export async function initService(options: InitServiceOptions) {
   await ensureProjectDirectoryAbsence(projectDirectory)
 
   await inTemporarydirectory(async (temporaryDirectory) => {
+    await initDirectories(temporaryDirectory)
     await initPackageJson(temporaryDirectory, options)
     await initREADME(temporaryDirectory, options)
+    await initGestaltConfig(temporaryDirectory, options.name)
+    await initTSConfig(temporaryDirectory)
+    await initGitignore(temporaryDirectory)
     await moveFileOrDirectory(temporaryDirectory, projectDirectory)
   })
+
+  if (await isGitAvailable()) {
+    await initGitRepository({ branch: 'main', directory: projectDirectory })
+  }
 
   createProjectLogger().info(
     contentBox(
@@ -88,6 +98,30 @@ export async function initService(options: InitServiceOptions) {
 export async function ensureProjectDirectoryAbsence(directory: string) {
   if (await pathExists(directory)) {
     throw ProjectDirectoryExistsError(directory)
+  }
+}
+
+/**
+ * Creates the directory hierarchy.
+ * @param directory {string} Absolute path to the project directory.
+ */
+export async function initDirectories(directory: string) {
+  const directories = [
+    '_build',
+    'assets',
+    'priv',
+    'config',
+    'src/models',
+    'src/controllers',
+    'src/views',
+    'src/components',
+  ]
+  for (const directoryName of directories) {
+    const directoryPath = joinPath(directory, directoryName)
+    createProjectLogger().debug(`Creating directory: ${directoryPath}`)
+    const gitkeepPath = joinPath(directoryPath, '.gitkeep')
+    await makeDirectory(directoryPath)
+    await writeFile(gitkeepPath, '')
   }
 }
 
@@ -148,4 +182,148 @@ This repository contains a [Gestalt](https://gestaltjs.org) project.
 - [NPM registry](https://npmjs.com)
   `
   await writeFile(joinPath(directory, 'README.md'), content)
+}
+
+async function initGestaltConfig(directory: string, projectName: string) {
+  const gestaltConfigPath = joinPath(directory, 'gestalt.config.ts')
+  const content = `import { defineConfiguration } from "gestaltjs/configuration"
+
+export default defineConfiguration(() => ({
+  name: "${projectName}",
+  plugins: []
+}))
+`
+  await writeFile(gestaltConfigPath, content)
+}
+
+async function initTSConfig(directory: string) {
+  const tsconfigPath = joinPath(directory, 'tsconfig.json')
+  // TODO: Make it extend from a tsconfig generated.
+  const tsconfig = {
+    compileOnSave: false,
+    compilerOptions: {
+      lib: ['ES2020'],
+      module: 'ES2020',
+      target: 'ES2020',
+      moduleResolution: 'nodenext',
+      esModuleInterop: true,
+      strict: true,
+      strictNullChecks: true,
+      resolveJsonModule: true,
+      inlineSourceMap: false,
+      isolatedModules: false,
+    },
+    exclude: ['dist/**', '**/*/vitest.config.ts', 'node_modules'],
+  }
+
+  await writeFile(tsconfigPath, encodeJson(tsconfig))
+}
+
+async function initGitignore(directory: string) {
+  const content = `
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Optional stylelint cache
+.stylelintcache
+
+
+# Gestalt
+_build
+_types
+`
+  await writeFile(joinPath(directory, '.gitignore'), content)
 }
