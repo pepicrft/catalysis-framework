@@ -8,7 +8,13 @@ import {
   writeFile,
 } from '@gestaltjs/core/node/fs'
 import { Abort } from '@gestaltjs/core/common/error'
-import { content, pathToken } from '@gestaltjs/core/node/logger'
+import {
+  chooseDirectoryToken,
+  commandToken,
+  content,
+  contentBox,
+  pathToken,
+} from '@gestaltjs/core/node/logger'
 import { getUsername } from '@gestaltjs/core/node/environment'
 import { encodeJson } from '@gestaltjs/core/node/json'
 import { getVersionForGeneratedProject } from '../utilities/versions.js'
@@ -53,12 +59,25 @@ export type InitServiceOptions = {
 export async function initService(options: InitServiceOptions) {
   const projectDirectory = joinPath(options.directory, options.name)
   await ensureProjectDirectoryAbsence(projectDirectory)
+
   await inTemporarydirectory(async (temporaryDirectory) => {
     await initPackageJson(temporaryDirectory, options)
     await initREADME(temporaryDirectory, options)
     await moveFileOrDirectory(temporaryDirectory, projectDirectory)
   })
-  createProjectLogger().info('it works!')
+
+  createProjectLogger().info(
+    contentBox(
+      'success',
+      `The project ${options.name} has been initialized`,
+      content`· Choose the project directory with ${chooseDirectoryToken(
+        projectDirectory
+      )}\n· Run ${commandToken(`pnpm dev`)}\n· Run ${commandToken(
+        `pnpm info`
+      )} to familiarize with the commands`,
+      'Be creative ✨. We are the catalyst to make your ideas thrive.'
+    )
+  )
 }
 
 /**
@@ -110,4 +129,23 @@ export async function initPackageJson(
 export async function initREADME(
   directory: string,
   options: InitServiceOptions
-) {}
+) {
+  const content = `
+# ${options.name}
+
+This repository contains a [Gestalt](https://gestaltjs.org) project.
+
+## Development
+
+1. Clone the repository.
+2. Install dependencies with \`pnpm install\`
+3. Run \`pnpm dev\`.
+4. Enjoy 🚀
+
+## Resources
+
+- [Gestalt](https://gestaltjs.org)
+- [NPM registry](https://npmjs.com)
+  `
+  await writeFile(joinPath(directory, 'README.md'), content)
+}

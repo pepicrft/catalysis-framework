@@ -3,6 +3,7 @@ import { Flags } from '@oclif/core'
 import { resolvePath } from '@gestaltjs/core/node/path'
 import { initPrompt } from '../prompts/init.js'
 import { initService } from '../services/init.js'
+import { createProjectLogger } from '../logger.js'
 
 // eslint-disable-next-line import/no-default-export
 export default class Init extends GestaltCommand {
@@ -49,6 +50,7 @@ export default class Init extends GestaltCommand {
 
   async run(): Promise<void> {
     const { flags } = await this.parse(Init)
+
     const options = { ...flags, ...(await initPrompt(flags)) }
     await initService({
       ...options,
