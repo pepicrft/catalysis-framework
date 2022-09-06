@@ -1,8 +1,7 @@
 import { createProjectLogger } from '../logger.js'
 import { hyphenCased } from '@gestaltjs/core/common/string'
-import { joinPath, moduleDirname } from '@gestaltjs/core/node/path'
+import { joinPath } from '@gestaltjs/core/node/path'
 import {
-  findPathUp,
   inTemporarydirectory,
   moveFileOrDirectory,
   pathExists,
@@ -11,7 +10,9 @@ import {
 import { Abort } from '@gestaltjs/core/common/error'
 import { content, pathToken } from '@gestaltjs/core/node/logger'
 import { getUsername } from '@gestaltjs/core/node/environment'
-import { decodeJsonFile } from '@gestaltjs/core/node/json'
+import { encodeJson } from '@gestaltjs/core/node/json'
+import { getVersionForGeneratedProject } from '../utilities/versions.js'
+import { getLocalPackagesOverrides } from '../utilities/packages.js'
 
 /**
  * An abort error that's thrown when the user tries to create a project and the directory
@@ -50,7 +51,7 @@ export type InitServiceOptions = {
 }
 
 export async function initService(options: InitServiceOptions) {
-  const projectDirectory = joinPath(options.directory)
+  const projectDirectory = joinPath(options.directory, options.name)
   await ensureProjectDirectoryAbsence(projectDirectory)
   await inTemporarydirectory(async (temporaryDirectory) => {
     await initPackageJson(temporaryDirectory, options)
@@ -89,48 +90,24 @@ export async function initPackageJson(
       routes: 'gestalt routes',
     },
     dependencies: {
-      gestaltjs: await getVersion(),
+      gestaltjs: await getVersionForGeneratedProject(),
     },
     author: await getUsername(),
   }
   if (options.local) {
-    const overrides = {
-      gestaltjs: `file:/`,
-    }
+    const packageOverrides = await getLocalPackagesOverrides()
     packageJson = {
       ...packageJson,
-      resolutions: overrides,
-      overrides: overrides,
+      resolutions: packageOverrides,
+      overrides: packageOverrides,
     }
   }
 
   const packageJsonPath = joinPath(directory, 'package.json')
-  await writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2))
+  await writeFile(packageJsonPath, encodeJson(packageJson, undefined, 2))
 }
 
 export async function initREADME(
   directory: string,
   options: InitServiceOptions
 ) {}
-
-/**
- * It returns the version of the gestaltjs dependency that should be use.
- * NOTE that the logic in this function assumes that the dependencies
- * between the packages in this repository is strict and that they are all
- * versioned togehter. If that assumption breaks, we might end up generating
- * projects that point to old versions of gestaltjs.
- *
- * An assumption-free implementation of this function could read the version
- * from the gestaltjs package's package.json at build time, but because we are
- * using the Typescript compiler, we can't do that. We'd need to introduce
- * a transpiler like Babel.
- * @returns {string}
- */
-export async function getVersion(): Promise<string> {
-  const packageJsonPath = (await findPathUp('package.json', {
-    type: 'file',
-    cwd: moduleDirname(import.meta.url),
-  })) as string
-  const { version } = await decodeJsonFile(packageJsonPath)
-  return version
-}

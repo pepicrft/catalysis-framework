@@ -107,7 +107,7 @@ export class Abort extends FatalError {
  */
 export async function errorHandler(error: Error): Promise<Error> {
   let errorType: ErrorLogType
-  let message = formatBold(formatRed('Error'))
+  let message = `\n${formatBold(formatRed('Error'))}`
   let cause: string | undefined
   let next: string | undefined
 
