@@ -3,6 +3,7 @@ import type { ErrorLogType, LoggerMessage } from '../node/logger.js'
 import { formatYellow, formatRed, formatBold } from '../node/terminal.js'
 import StackTracey from 'stacktracey'
 import { ExtendableError } from 'ts-error'
+export { ExtendableError } from 'ts-error'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
