@@ -1,7 +1,8 @@
 import { createProjectLogger } from '../logger.js'
 import { hyphenCased } from '@gestaltjs/core/common/string'
-import { joinPath } from '@gestaltjs/core/node/path'
+import { joinPath, moduleDirname } from '@gestaltjs/core/node/path'
 import {
+  findPathUp,
   inTemporarydirectory,
   moveFileOrDirectory,
   pathExists,
@@ -9,15 +10,9 @@ import {
 } from '@gestaltjs/core/node/fs'
 import { Abort } from '@gestaltjs/core/common/error'
 import { content, pathToken } from '@gestaltjs/core/node/logger'
-
-/**
- * The version is inlined here at transpilation time so the publishing of new versions of @gestaltjs/create-project
- * brings the version in the repository.
- **/
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { version as gestaltjsVersion } from '../../../../gestaltjs/package.json'
 import { getUsername } from '@gestaltjs/core/node/environment'
+import { decodeJsonFile } from '@gestaltjs/core/node/json'
+
 /**
  * An abort error that's thrown when the user tries to create a project and the directory
  * already exists.
@@ -94,7 +89,7 @@ export async function initPackageJson(
       routes: 'gestalt routes',
     },
     dependencies: {
-      gestaltjs: gestaltjsVersion,
+      gestaltjs: await getVersion(),
     },
     author: await getUsername(),
   }
@@ -117,3 +112,25 @@ export async function initREADME(
   directory: string,
   options: InitServiceOptions
 ) {}
+
+/**
+ * It returns the version of the gestaltjs dependency that should be use.
+ * NOTE that the logic in this function assumes that the dependencies
+ * between the packages in this repository is strict and that they are all
+ * versioned togehter. If that assumption breaks, we might end up generating
+ * projects that point to old versions of gestaltjs.
+ *
+ * An assumption-free implementation of this function could read the version
+ * from the gestaltjs package's package.json at build time, but because we are
+ * using the Typescript compiler, we can't do that. We'd need to introduce
+ * a transpiler like Babel.
+ * @returns {string}
+ */
+export async function getVersion(): Promise<string> {
+  const packageJsonPath = (await findPathUp('package.json', {
+    type: 'file',
+    cwd: moduleDirname(import.meta.url),
+  })) as string
+  const { version } = await decodeJsonFile(packageJsonPath)
+  return version
+}
