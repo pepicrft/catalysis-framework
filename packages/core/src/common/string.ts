@@ -1,4 +1,4 @@
-import { pascalCase as pc } from 'case-anything'
+import { pascalCase, kebabCase } from 'case-anything'
 import plur from 'plur'
 
 /**
@@ -7,13 +7,28 @@ import plur from 'plur'
  * @returns {string} Pascal-cased string
  */
 export function pascalCased(input: string): string {
-  return pc(input)
+  return pascalCase(input)
+}
+
+/**
+ * Given a string, it returns it hyphen-case version.
+ * @param input  {string} String to turn into hyphen case.
+ * @returns {string} Hyphen-cased string
+ *
+ * @example
+ *    hyphenCased("my app") === "my-app"
+ */
+export function hyphenCased(input: string): string {
+  return kebabCase(input)
 }
 
 /**
  * Returns the pluralized version of a word.
  * @param word {string} Word to pluralize
- * @returns
+ * @returns {string} Pluralized string
+ *
+ * @example
+ *    pluralized("project") === "projects"
  */
 export function pluralized(word: string): string {
   return plur(word)

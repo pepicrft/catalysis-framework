@@ -2,6 +2,7 @@ import pc from 'picocolors'
 import terminalLink from 'terminal-link'
 import inquirer from 'inquirer'
 export * as listr from 'listr2'
+import stripAnsi from 'strip-ansi'
 
 /**
  * Formats a string to be bold when presented
@@ -109,6 +110,19 @@ export function formatCyan(input: string): string {
  */
 export function link(name: string, url: string): string {
   return terminalLink(name, url)
+}
+
+/**
+ * Given a string, it returns an unstyled string by stripping
+ * ansi characters
+ * @param input {string} String to unstyle
+ * @returns {string} Unstyled string
+ *
+ * @example
+ *  unstyled('\u001B[4mUnicorn\u001B[0m') === 'Unicorn'
+ */
+export function unstyled(input: string): string {
+  return stripAnsi(input)
 }
 
 type PromptQuestion =

@@ -9,6 +9,7 @@ import {
   formatCyan,
   link,
   prompt,
+  unstyled,
 } from './terminal'
 import terminalLink from 'terminal-link'
 import { describe, test, expect, vi, it } from 'vitest'
@@ -194,5 +195,18 @@ describe('prompt', () => {
       { name: 'answered-name' }
     )
     expect(response.name).toEqual('gestalt')
+  })
+})
+
+describe('unstyled', () => {
+  test('strips the ansi characters', () => {
+    // Given
+    const value = '\u001B[4mUnicorn\u001B[0m'
+
+    // When
+    const got = unstyled(value)
+
+    // Then
+    expect(got).toEqual('Unicorn')
   })
 })
