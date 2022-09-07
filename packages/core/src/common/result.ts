@@ -1,5 +1,13 @@
 import ExtendableError from 'ts-error'
 
+/**
+ * A type that represents a promise whose value is a result type.
+ */
+export type AsyncResult<
+  T,
+  E extends ExtendableError = ExtendableError
+> = Promise<Result<T, E>>
+
 interface Result<T, E extends ExtendableError = ExtendableError> {
   /**
    * Returns the value if the result instance
