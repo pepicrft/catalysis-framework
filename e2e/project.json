@@ -1,0 +1,38 @@
+{
+  "name": "e2e",
+  "root": "e2e",
+  "sourceRoot": "e2e",
+  "projectType": "library",
+  "implicitDependencies": ["gestaltjs"],
+  "tags": ["scope:e2e"],
+  "targets": {
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "eslint './{lib,steps,worls}/**/*.{js,ts}'",
+        "cwd": "e2e"
+      }
+    },
+    "lint:fix": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "eslint './{lib,steps,worls}/**/*.{js,ts}' --fix",
+        "cwd": "e2e"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm cucumber-js -p default",
+        "cwd": "e2e"
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm tsc --noEmit",
+        "cwd": "e2e"
+      }
+    }
+  }
+}

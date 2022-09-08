@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "e2e": "e2e",
     "gestaltjs": "packages/gestaltjs",
     "routes": "packages/routes",
     "generate": "packages/generate",

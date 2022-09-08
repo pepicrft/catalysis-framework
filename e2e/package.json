@@ -4,11 +4,10 @@
   "private": true,
   "description": "e2e tests implemented with Cucumber",
   "scripts": {
-    "build": "true",
-    "lint": "eslint **/*.ts",
-    "lint:fix": "eslint **/*.ts --fix",
-    "test": "cucumber-js -p default",
-    "type-check": "tsc && echo"
+    "lint": "nx run e2e:lint",
+    "lint:fix": "nx run e2e:lint:fix",
+    "test": "nx run e2e:test",
+    "type-check": "nx run e2e:type-check"
   },
   "eslintConfig": {
     "extends": [

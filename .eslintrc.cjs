@@ -13,9 +13,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@shopify/prettier',
     'prettier',
   ],
   rules: {
+    'prettier/prettier': ['error'],
     'no-console': 'error',
     'no-useless-catch': 'error',
     'rulesdir/noop': 'error',

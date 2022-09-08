@@ -25,14 +25,14 @@
     "lint": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm prettier -c src/** && eslint './**/*.{js,ts}'",
+        "command": "eslint './**/*.{js,ts}'",
         "cwd": "packages/build"
       }
     },
     "lint:fix": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm prettier -w src/** && eslint './**/*.{js,ts}' --fix",
+        "command": "eslint './**/*.{js,ts}' --fix",
         "cwd": "packages/build"
       }
     },

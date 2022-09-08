@@ -37,15 +37,6 @@ Given(/I have the fixture (.+) in the working directory/, function (fixture) {
   fs.copySync(from, to)
 })
 
-/**
- * Before running the acceptance tests, we
- */
-BeforeAll({ timeout: 2 * 60 * 1000 }, async function () {
-  // eslint-disable-next-line no-console
-  console.log(colors.gray('Building Gestalt...'))
-  await exec('pnpm', ['build'], { cwd: rootDirectory })
-})
-
 After(async function () {
   if (this.temporaryDirectory) {
     rimraf.sync(this.temporaryDirectory)
