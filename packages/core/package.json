@@ -62,7 +62,7 @@
     "handlebars": "4.7.7",
     "inquirer": "9.0.0",
     "listr2": "4.0.5",
-    "magic-string": "0.26.2",
+    "magic-string": "0.26.3",
     "noop-stream": "1.0.0",
     "parse-json": "6.0.2",
     "path-equal": "1.2.2",
