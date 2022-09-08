@@ -3,6 +3,7 @@
  */
 export enum LoggerContentType {
   Command,
+  ChooseDirectory,
   Path,
   File,
   Url,

@@ -1,4 +1,5 @@
 import fs from 'fs-extra'
+import { temporaryDirectoryTask } from 'tempy'
 
 import { findUp, Options as FindUpOptions } from 'find-up'
 
@@ -64,6 +65,20 @@ export async function removeDirectory(path: string): Promise<void> {
 }
 
 /**
+ * It moves a file or a directory from one location to another.
+ *
+ * @param from {string} Path from where the file or directory will be moved.
+ * @param to {string} Path to where the file or directory will be moved.
+ * @returns {Promise<void>} A promise that resolves when the move is complete.
+ */
+export async function moveFileOrDirectory(
+  from: string,
+  to: string
+): Promise<void> {
+  return fs.move(from, to)
+}
+
+/**
  * Copies a file from a source to a target location.
  * @param sourcePath {string} Path to the source file that will be copied.
  * @param targetPath {string} Path to the target location.
@@ -74,4 +89,14 @@ export async function copyFile(
   targetPath: string
 ): Promise<void> {
   return fs.promises.copyFile(sourcePath, targetPath)
+}
+
+/**
+ * Creates a temporary directory and ties its lifecycle to the lifecycle of the callback.
+ * @param callback - Callback whose lifecycle is tied to the lifecycle of the temporary directory.
+ */
+export async function inTemporarydirectory<T>(
+  callback: (temporaryDirectory: string) => T | Promise<T>
+) {
+  return temporaryDirectoryTask(callback)
 }

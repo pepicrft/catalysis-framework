@@ -82,7 +82,9 @@
     "ts-error": "1.0.6",
     "ts-pattern": "4.0.5",
     "unified": "10.1.2",
-    "vite": "3.1.0"
+    "vite": "3.1.0",
+    "strip-ansi": "7.0.1",
+    "username": "6.0.0"
   },
   "devDependencies": {
     "@types/inquirer": "9.0.1"

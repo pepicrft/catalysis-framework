@@ -1,7 +1,12 @@
 import pino from 'pino'
 import { isRunningInVerbose } from './cli.js'
 export type LogLevel = Omit<pino.Level, 'trace' | 'fatal'>
-import { formatYellow, formatGray, formatBold } from './terminal.js'
+import {
+  formatYellow,
+  formatGray,
+  formatBold,
+  formatGreen,
+} from './terminal.js'
 import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment.js'
 import { LoggerContentToken, LoggerContentType } from './logger/content.js'
@@ -126,9 +131,6 @@ export class Logger {
     message: LoggerMessage,
     level: LogLevel = 'info'
   ) {
-    if (isRunningTests()) {
-      return
-    }
     switch (level) {
       case 'debug':
         this.target.debug(object, stringify(message))
@@ -153,6 +155,10 @@ export class Logger {
  */
 export function commandToken(value: string): LoggerContentToken {
   return new LoggerContentToken(value, {}, LoggerContentType.Command)
+}
+
+export function chooseDirectoryToken(path: string): LoggerContentToken {
+  return new LoggerContentToken(path, {}, LoggerContentType.ChooseDirectory)
 }
 
 /**
@@ -197,6 +203,36 @@ export function stringify(content: LoggerMessage): string {
   }
 }
 
+type ContextBoxType = 'success'
+
+export function contentBox(
+  type: ContextBoxType,
+  header: LoggerMessage,
+  body: LoggerMessage,
+  footer: LoggerMessage
+): LoggerMessage {
+  let output = `\n`
+  if (type === 'success') {
+    output = output += `${formatBold(
+      formatGreen(`Success: ${stringify(header)}`)
+    )}\n`
+  }
+
+  output =
+    output +
+    `
+${stringify(body)
+  .split('\n')
+  .map((line) => `  ${line.trim()}`)
+  .join('\n')}
+  `
+  if (footer) {
+    output = output + `\n${formatGray(stringify(footer))}`
+  }
+
+  return output
+}
+
 /**
  * A template-literal function that initializes a tokenized logger
  * message.
@@ -229,6 +265,11 @@ export function content(
           break
         case LoggerContentType.Url:
           output += terminalLink(enumToken.value, enumToken.metadata.url ?? '')
+          break
+        case LoggerContentType.ChooseDirectory:
+          output += formatBold(
+            formatYellow(`cd ${relativizePath(enumToken.value)}`)
+          )
           break
       }
     }
