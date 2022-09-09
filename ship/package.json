@@ -1,0 +1,19 @@
+{
+  "name": "ship",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "nx run ship:dev",
+    "build": "nx run ship:build",
+    "test": "nx run ship:test",
+    "check": "nx run ship:check",
+    "generate": "nx run ship:generate",
+    "info": "nx run ship:info",
+    "routes": "nx run ship:routes"
+  },
+  "dependencies": {
+    "gestaltjs": "workspace:gestaltjs@*"
+  },
+  "author": "pepicrft"
+}

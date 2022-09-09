@@ -1,0 +1,1 @@
+{"compileOnSave":false,"compilerOptions":{"lib":["ES2020"],"module":"ES2020","target":"ES2020","moduleResolution":"nodenext","esModuleInterop":true,"strict":true,"strictNullChecks":true,"resolveJsonModule":true,"inlineSourceMap":false,"isolatedModules":false},"exclude":["dist/**","**/*/vitest.config.ts","node_modules"]}

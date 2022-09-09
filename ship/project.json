@@ -1,0 +1,66 @@
+{
+  "name": "ship",
+  "root": "ship",
+  "sourceRoot": "ship/src",
+  "projectType": "library",
+  "implicitDependencies": ["gestaltjs"],
+  "tags": ["scope:ship"],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt dev",
+        "cwd": "ship"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt build",
+        "cwd": "ship"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt test",
+        "cwd": "ship"
+      }
+    },
+    "check": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt check",
+        "cwd": "ship"
+      }
+    },
+    "generate": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt generate",
+        "cwd": "ship"
+      }
+    },
+    "info": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt info",
+        "cwd": "ship"
+      }
+    },
+    "routes": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["^build"],
+      "options": {
+        "command": "pnpm gestalt routes",
+        "cwd": "ship"
+      }
+    }
+  }
+}
