@@ -64,7 +64,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'guide/why-gestaltjs',
+            docId: 'guide/why',
             position: 'left',
             label: 'Guide',
           },
