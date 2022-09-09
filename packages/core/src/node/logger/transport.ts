@@ -1,32 +1,7 @@
 import pinoPretty from 'pino-pretty'
 import pino from 'pino'
-import {
-  formatGray,
-  formatRed,
-  formatMagenta,
-  formatGreen,
-  formatYellow,
-  formatCyan,
-} from '../terminal.js'
-import { pascalCased } from '../../common/string.js'
+import { formatGray } from '../terminal.js'
 
-function formatLevel(level: string): string {
-  let outputLevel = pascalCased(level)
-  if (level === 'fatal' || level === 'error') {
-    outputLevel = formatRed(outputLevel)
-  } else if (level === 'silent') {
-    outputLevel = formatGray(outputLevel)
-  } else if (level === 'trace') {
-    outputLevel = formatMagenta(outputLevel)
-  } else if (level === 'debug') {
-    outputLevel = formatCyan(outputLevel)
-  } else if (level === 'info') {
-    outputLevel = formatGreen(outputLevel)
-  } else if (level === 'warn') {
-    outputLevel = formatYellow(outputLevel)
-  }
-  return outputLevel
-}
 function formatModule(module: string): string {
   return formatGray(`[@gestaltjs/${module}]`)
 }
@@ -55,7 +30,6 @@ const baseTransport = (options: pino.TransportBaseOptions) => {
       if (isRaw) {
         return message
       } else if (level) {
-        const levelLabel = formatLevel(`${level}`)
         const prefix = ``
         return message
           .split('\n')

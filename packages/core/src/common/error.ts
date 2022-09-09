@@ -107,6 +107,7 @@ export class Abort extends FatalError {
  */
 export async function errorHandler(error: Error): Promise<Error> {
   let errorType: ErrorLogType
+  let shouldPrint = true
   let message = `\n${formatBold(formatRed('Error'))}`
   let cause: string | undefined
   let next: string | undefined
@@ -114,12 +115,21 @@ export async function errorHandler(error: Error): Promise<Error> {
   if (error instanceof Bug) {
     errorType = 'bug'
     cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
+  } else if (error instanceof BugSilent) {
+    errorType = 'bug'
+    shouldPrint = false
   } else if (error instanceof Abort) {
     errorType = 'abort'
     cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
     next = error?.options?.next ? stringify(error?.options?.next) : undefined
+  } else if (error instanceof AbortSilent) {
+    errorType = 'abort'
+    shouldPrint = false
   } else {
     errorType = 'unhandled'
+  }
+  if (!shouldPrint) {
+    return error
   }
   message = `${message}\n${error.message}\n`
 

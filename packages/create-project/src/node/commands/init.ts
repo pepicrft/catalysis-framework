@@ -49,6 +49,8 @@ export default class Init extends GestaltCommand {
   }
 
   async run(): Promise<void> {
+    createProjectLogger().info('Creating a new Gestalt project...')
+
     const { flags } = await this.parse(Init)
 
     const options = { ...flags, ...(await initPrompt(flags)) }

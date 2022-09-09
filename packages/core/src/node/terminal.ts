@@ -1,9 +1,12 @@
 import pc from 'picocolors'
 import terminalLink from 'terminal-link'
-import inquirer from 'inquirer'
+import { createRequire } from 'node:module'
 export * as listr from 'listr2'
 import stripAnsi from 'strip-ansi'
+import { AbortSilent } from '../common/error.js'
 
+const require = createRequire(import.meta.url)
+const { prompt: enquirerPrompt } = require('enquirer')
 /**
  * Formats a string to be bold when presented
  * in a terminal.
@@ -235,11 +238,20 @@ export async function prompt<T extends PromptQuestions>(
   questions: T,
   answers: Partial<PromptAnswers<T>> = {}
 ): Promise<PromptAnswers<T>> {
-  return (await inquirer.prompt(
-    Object.entries(questions).map((entry) => ({
-      name: entry[0],
-      ...entry[1],
-    })),
-    answers
-  )) as PromptAnswers<T>
+  try {
+    return (await enquirerPrompt(
+      Object.entries(questions).map((entry) => ({
+        name: entry[0],
+        skip: answers[entry[0]] !== undefined,
+        ...entry[1],
+      }))
+    )) as PromptAnswers<T>
+    /**
+     * An error at this point most likely indicates that we received a termination signal.
+     * When that happens we want the execution to abort without printing any error messages
+     * or stacktraces.
+     */
+  } catch (error) {
+    throw new AbortSilent()
+  }
 }
