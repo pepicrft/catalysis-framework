@@ -53,7 +53,7 @@
     "acorn": "8.8.0",
     "case-anything": "2.1.10",
     "commondir": "1.0.1",
-    "fast-glob": "3.2.11",
+    "fast-glob": "3.2.12",
     "fast-json-stringify": "5.0.1",
     "fast-safe-stringify": "2.1.1",
     "fastify": "4.5.3",
