@@ -42,6 +42,10 @@ class LoggerTokenizedString {
 
 export type LoggerMessage = string | LoggerTokenizedString
 
+export type LoggerLogOptions = {
+  sameProcess?: boolean
+}
+
 export class Logger {
   target: LoggerTarget
 
@@ -77,8 +81,9 @@ export class Logger {
   /**
    * Logs an error.
    * @param log {ErrorLog} Error log
+   * @param options {LoggerLogOptions} Options
    */
-  error(log: ErrorLog) {
+  error(log: ErrorLog, options: LoggerLogOptions = {}) {
     if (isRunningTests()) {
       return
     }
@@ -89,60 +94,103 @@ export class Logger {
    * Logs a debug messages.
    * @param message {LoggerMessage} Message to be logged.
    * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
+   * @param options {LoggerLogOptions} Options
    */
-  debug(message: LoggerMessage, object: object = {}) {
-    this.log(object, formatGray(stringify(message)), 'debug')
+  debug(
+    message: LoggerMessage,
+    object: object = {},
+    options: LoggerLogOptions = {}
+  ) {
+    this.log(object, formatGray(stringify(message)), 'debug', options)
   }
 
   /**
    * Logs info messages.
    * @param message {LoggerMessage} Message to be logged.
    * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
+   * @param options {LoggerOptions} Logging options.
    */
-  info(message: LoggerMessage, object: object = {}) {
-    this.log(object, message, 'info')
+  info(
+    message: LoggerMessage,
+    object: object = {},
+    options: LoggerLogOptions = {}
+  ) {
+    this.log(object, message, 'info', options)
   }
 
   /**
    * Logs info messages without additional formatting.
    * @param message {LoggerMessage} Message to be logged.
    * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
+   * @param options {LoggerOptions} Logging options.
    */
-  rawInfo(message: LoggerMessage, object: object = {}) {
-    this.log({ ...object, raw: true }, message, 'info')
+  rawInfo(
+    message: LoggerMessage,
+    object: object = {},
+    options: LoggerLogOptions = {}
+  ) {
+    this.log({ ...object, raw: true }, message, 'info', options)
   }
 
   /**
    * Logs warn messages.
    * @param message {LoggerMessage} Message to be logged.
    * @param object {object} Object containing contextual metadata that will be serialized when logs get serialized.
+   * @param options {LoggerOptions} Logging options.
    */
-  warn(message: LoggerMessage, object: object = {}) {
-    this.log(object, message, 'warn')
+  warn(
+    message: LoggerMessage,
+    object: object = {},
+    options: LoggerLogOptions = {}
+  ) {
+    this.log(object, message, 'warn', options)
   }
 
   /**
    * Outputs the given message to the user.
    * @param message {LoggerMessage} The message to output.
    * @param level {LogLevel} The log level of the message.
+   * @param options {LoggerOptions} Logging options.
    */
   private log(
     object: object,
     message: LoggerMessage,
-    level: LogLevel = 'info'
+    level: LogLevel = 'info',
+    options: LoggerLogOptions = {}
   ) {
+    const stringifiedMessage = stringify(message)
     switch (level) {
       case 'debug':
-        this.target.debug(object, stringify(message))
+        if (options.sameProcess) {
+          // eslint-disable-next-line no-console
+          console.log(stringifiedMessage)
+        } else {
+          this.target.debug(object, stringifiedMessage)
+        }
         break
       case 'error':
-        this.target.error(object, stringify(message))
+        if (options.sameProcess) {
+          // eslint-disable-next-line no-console
+          console.error(stringifiedMessage)
+        } else {
+          this.target.error(object, stringifiedMessage)
+        }
         break
       case 'info':
-        this.target.info(object, stringify(message))
+        if (options.sameProcess) {
+          // eslint-disable-next-line no-console
+          console.info(stringifiedMessage)
+        } else {
+          this.target.info(object, stringifiedMessage)
+        }
         break
       case 'warn':
-        this.target.warn(object, stringify(message))
+        if (options.sameProcess) {
+          // eslint-disable-next-line no-console
+          console.warn(stringifiedMessage)
+        } else {
+          this.target.warn(object, stringifiedMessage)
+        }
         break
     }
   }

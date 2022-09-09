@@ -4,6 +4,7 @@ import { resolvePath } from '@gestaltjs/core/node/path'
 import { initPrompt } from '../prompts/init.js'
 import { initService } from '../services/init.js'
 import { createProjectLogger } from '../logger.js'
+import { content } from '@gestaltjs/core/node/logger'
 
 // eslint-disable-next-line import/no-default-export
 export default class Init extends GestaltCommand {
@@ -49,7 +50,11 @@ export default class Init extends GestaltCommand {
   }
 
   async run(): Promise<void> {
-    createProjectLogger().info('Creating a new Gestalt project...')
+    createProjectLogger().info(
+      content`Creating a new Gestalt 🧪 project...\n`,
+      {},
+      { sameProcess: true }
+    )
 
     const { flags } = await this.parse(Init)
 

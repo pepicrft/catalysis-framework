@@ -1,12 +1,11 @@
 import pc from 'picocolors'
 import terminalLink from 'terminal-link'
-import { createRequire } from 'node:module'
 export * as listr from 'listr2'
 import stripAnsi from 'strip-ansi'
 import { AbortSilent } from '../common/error.js'
+import inquirer from 'inquirer'
+import { Writable } from 'node:stream'
 
-const require = createRequire(import.meta.url)
-const { prompt: enquirerPrompt } = require('enquirer')
 /**
  * Formats a string to be bold when presented
  * in a terminal.
@@ -238,13 +237,14 @@ export async function prompt<T extends PromptQuestions>(
   questions: T,
   answers: Partial<PromptAnswers<T>> = {}
 ): Promise<PromptAnswers<T>> {
+  const inquirerPrompt = inquirer.createPromptModule()
   try {
-    return (await enquirerPrompt(
+    return (await inquirerPrompt(
       Object.entries(questions).map((entry) => ({
         name: entry[0],
-        skip: answers[entry[0]] !== undefined,
         ...entry[1],
-      }))
+      })),
+      answers
     )) as PromptAnswers<T>
     /**
      * An error at this point most likely indicates that we received a termination signal.
