@@ -172,3 +172,4 @@ TODO.md
 vite.config.ts.js
 
 junit-*.xml
+yarn.lock
