@@ -1,0 +1,21 @@
+{
+    "extends": "./configurations/tsconfig.json",
+    "include": [],
+    "references": [
+      {"path": "./ship"},
+      {"path": "./e2e"},
+      {"path": "./packages/build"},
+      {"path": "./packages/check"},
+      {"path": "./packages/core"},
+      {"path": "./packages/create-plugin"},
+      {"path": "./packages/create-project"},
+      {"path": "./packages/db"},
+      {"path": "./packages/dev"},
+      {"path": "./packages/eslint-plugin"},
+      {"path": "./packages/generate"},
+      {"path": "./packages/gestaltjs"},
+      {"path": "./packages/info"},
+      {"path": "./packages/routes"},
+      {"path": "./packages/test"}
+    ]
+}
