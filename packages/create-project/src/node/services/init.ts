@@ -331,7 +331,7 @@ node_modules/
 
 # Gestalt
 _build
-_types
+.gestalt
 `
   await writeFile(joinPath(directory, '.gitignore'), content)
 }
