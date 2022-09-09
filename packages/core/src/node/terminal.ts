@@ -4,7 +4,6 @@ export * as listr from 'listr2'
 import stripAnsi from 'strip-ansi'
 import { AbortSilent } from '../common/error.js'
 import inquirer from 'inquirer'
-import { Writable } from 'node:stream'
 
 /**
  * Formats a string to be bold when presented
@@ -237,9 +236,8 @@ export async function prompt<T extends PromptQuestions>(
   questions: T,
   answers: Partial<PromptAnswers<T>> = {}
 ): Promise<PromptAnswers<T>> {
-  const inquirerPrompt = inquirer.createPromptModule()
   try {
-    return (await inquirerPrompt(
+    return (await inquirer.prompt(
       Object.entries(questions).map((entry) => ({
         name: entry[0],
         ...entry[1],
