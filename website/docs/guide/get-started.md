@@ -14,10 +14,10 @@ We recommend using [asdf](https://asdf-vm.com/) to manage the above tools' insta
 
 ### Creating the first project
 
-To create our first project all we need to do is running the following command:
+To create our first project, all we need to do is run the following command:
 
 ```bash
 pnpm create @gestaltjs/create-project@latest
 ```
 
-The command will prompt for necessary information, generate the project, and install its NPM dependencies.
+The command will prompt necessary information, generate the project, and install its NPM dependencies.

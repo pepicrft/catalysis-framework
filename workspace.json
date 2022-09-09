@@ -14,7 +14,7 @@
     "core": "packages/core",
     "create-project": "packages/create-project",
     "create-plugin": "packages/create-plugin",
-    "website": "packages/website",
+    "website": "website",
     "eslint-plugin": "packages/eslint-plugin"
   }
 }

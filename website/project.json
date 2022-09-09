@@ -1,7 +1,7 @@
 {
   "name": "website",
-  "root": "packages/website",
-  "sourceRoot": "packages/website/src",
+  "root": "website",
+  "sourceRoot": "website/src",
   "projectType": "library",
   "tags": ["scope:website"],
   "targets": {
@@ -9,28 +9,28 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm docusaurus clear",
-        "cwd": "packages/website"
+        "cwd": "website"
       }
     },
     "dev": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm docusaurus start",
-        "cwd": "packages/website"
+        "cwd": "website"
       }
     },
     "build": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm docusaurus build",
-        "cwd": "packages/website"
+        "cwd": "website"
       }
     },
     "swizzle": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm docusaurus swizzle",
-        "cwd": "packages/website"
+        "cwd": "website"
       }
     }
   }
