@@ -224,7 +224,7 @@ async function initTSConfig(directory: string) {
     exclude: ['dist/**', '**/*/vitest.config.ts', 'node_modules'],
   }
 
-  await writeFile(tsconfigPath, encodeJson(tsconfig, null, 2))
+  await writeFile(tsconfigPath, encodeJson(tsconfig, undefined, 2))
 }
 
 async function initGitignore(directory: string) {
