@@ -89,13 +89,13 @@ importers:
       '@cucumber/cucumber': 8.5.2
       '@cucumber/messages': 19.1.2
       '@cucumber/pretty-formatter': 1.0.0
-      execa: 5.1.1
+      execa: 6.1.0
       picocolors: 1.0.0
     devDependencies:
       '@cucumber/cucumber': 8.5.2
       '@cucumber/messages': 19.1.2
       '@cucumber/pretty-formatter': 1.0.0_uxs4xf54mxdvrhvwalaa2ghdkm
-      execa: 5.1.1
+      execa: 6.1.0
       picocolors: 1.0.0
 
   packages/build:

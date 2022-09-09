@@ -3,10 +3,11 @@
   "include": ["./**/*.ts"],
   "exclude": ["./dist"],
   "compilerOptions": {
-    "lib": ["ES2019"],
-    "module": "commonjs",
-    "target": "ES2019",
+    "module": "esnext",
     "outDir": "dist",
     "baseUrl": "."
+  },
+  "ts-node": {
+    "transpileOnly": true,
   }
 }

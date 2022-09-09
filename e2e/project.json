@@ -23,7 +23,7 @@
     "test": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm cucumber-js -p default",
+        "command": "NODE_OPTIONS=\"--loader ts-node/esm --no-warnings --experimental-specifier-resolution=node\" pnpm cucumber-js -p default",
         "cwd": "e2e"
       }
     },

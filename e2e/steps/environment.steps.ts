@@ -1,19 +1,15 @@
 // eslint-disable-next-line import/no-nodejs-modules
-import { Given, After, BeforeAll, setDefaultTimeout } from '@cucumber/cucumber'
+import { Given, After, setDefaultTimeout } from '@cucumber/cucumber'
 import tmp from 'tmp'
 import rimraf from 'rimraf'
 import { join as joinPath } from 'pathe'
 import fs from 'fs-extra'
-import { exec } from '../lib/system'
-import { rootDirectory } from '../lib/constants'
-import { World } from '../world'
-import colors from 'picocolors'
 
 if (process.env.DEBUG === '1') {
   setDefaultTimeout(-1)
 }
 
-Given('I have a working directory', function (this: World) {
+Given('I have a working directory', function (this: GestaltWorld) {
   this.temporaryDirectory = tmp.dirSync().name
   const dataHomeDirectory = joinPath(this.temporaryDirectory, 'XDG_DATA_HOME')
   const configHomeDirectory = joinPath(

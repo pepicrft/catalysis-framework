@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const execa = require('execa')
+import { execa } from 'execa'
 import colors from 'picocolors'
 
-import { isDebug } from './environment'
+import { isDebug } from './environment.js'
 
 /**
  * It provides a promise-based interface for running system processes.

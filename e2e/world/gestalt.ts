@@ -3,8 +3,8 @@ import {
   createProjectExecutablePath,
   gestaltExecutablePath,
   createPluginExecutablePath,
-} from '../lib/constants'
-import { exec } from '../lib/system'
+} from '../lib/constants.js'
+import { exec } from '../lib/system.js'
 
 export interface WorldConstructorParams {
   temporaryDirectory: string
@@ -12,7 +12,7 @@ export interface WorldConstructorParams {
 
 type RunOptions = { cwd?: string; env?: NodeJS.ProcessEnv }
 
-export class World {
+export class GestaltWorldImplementation implements GestaltWorld {
   public temporaryDirectory: string
   public temporaryEnvironment: any | undefined
   public projectDirectory: string | undefined
@@ -32,4 +32,4 @@ export class World {
   }
 }
 
-setWorldConstructor(World)
+setWorldConstructor(GestaltWorldImplementation)
