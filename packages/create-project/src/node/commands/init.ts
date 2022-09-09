@@ -51,7 +51,7 @@ export default class Init extends GestaltCommand {
 
   async run(): Promise<void> {
     createProjectLogger().info(
-      content`Creating a new Gestalt 🧪 project...\n`,
+      content`Creating a new Gestalt project...\n`,
       {},
       { sameProcess: true }
     )
