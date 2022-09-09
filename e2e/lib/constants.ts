@@ -8,7 +8,7 @@ export const rootDirectory = pathJoin(__dirname, '../..')
 
 export const gestaltPackageDirectory = pathResolve(
   rootDirectory,
-  './packages/gesatltjs'
+  './packages/gestaltjs'
 )
 export const createProjectPackageDirectory = pathResolve(
   rootDirectory,

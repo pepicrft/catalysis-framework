@@ -21,6 +21,7 @@ import { initGitRepository, isGitAvailable } from '@gestaltjs/core/node/git'
 import { encodeJson } from '@gestaltjs/core/node/json'
 import { getVersionForGeneratedProject } from '../utilities/versions.js'
 import { getLocalPackagesOverrides } from '../utilities/packages.js'
+import { pnpmInstall } from '@gestaltjs/core/node/pnpm'
 
 /**
  * An abort error that's thrown when the user tries to create a project and the directory
@@ -75,6 +76,12 @@ export async function initService(options: InitServiceOptions) {
   if (await isGitAvailable()) {
     await initGitRepository({ branch: 'main', directory: projectDirectory })
   }
+
+  await pnpmInstall({
+    directory: projectDirectory,
+    stderr: process.stdout,
+    stdout: process.stderr,
+  })
 
   createProjectLogger().info(
     contentBox(
@@ -133,6 +140,7 @@ export async function initPackageJson(
     name: hyphenCased(options.name),
     private: true,
     license: 'UNLICENSED',
+    type: 'module',
     scripts: {
       dev: 'gestalt dev',
       build: 'gestalt build',

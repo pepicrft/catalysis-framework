@@ -22,7 +22,17 @@ export function exec(
     console.log(colors.gray(`Running: ${command} ${args.join(' ')}`))
   }
 
-  const _options: any = { ...options, stdout: undefined, stderr: undefined }
+  const _options: any = {
+    ...options,
+    stdout: undefined,
+    stderr: undefined,
+    /**
+     * To use ESM with Cucumber, we have to invoke it passing the "--loader ts-node/esm"
+     * Node option through the NODE_OPTIONS environment variable. Because the environment
+     * is inherited by underlying process, we need to reset the value when invoking processes.
+     */
+    env: { ...process.env, NODE_OPTIONS: '' },
+  }
   const shortCommand = command.split('/').slice(-1).pop() || ''
   const commandProcess = execa(command, args, _options)
   commandProcess.stdout?.on('data', (data: string) => {
