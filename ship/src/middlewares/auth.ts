@@ -1,8 +1,10 @@
 import { defineMiddleware, Request, Response } from 'gestaltjs/middleware'
 
-export default defineMiddleware((request) => {
+const authMiddleware = defineMiddleware((request) => {
   const response = new Response({
     status: 200,
   })
   return response
 })
+
+export default authMiddleware
