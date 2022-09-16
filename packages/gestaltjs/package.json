@@ -65,7 +65,7 @@
     "@gestaltjs/info": "0.7.10",
     "@gestaltjs/routes": "0.7.10",
     "@gestaltjs/core": "0.7.10",
-    "@oclif/core": "1.16.0",
+    "@oclif/core": "1.16.3",
     "@oclif/plugin-help": "5.1.12"
   },
   "engine-strict": true,
