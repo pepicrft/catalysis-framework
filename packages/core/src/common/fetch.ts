@@ -1,3 +1,1 @@
-import { Request, Response } from 'node-fetch'
-
-export { Request, Response }
+export { Request, Response } from '@remix-run/web-fetch'

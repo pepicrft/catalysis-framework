@@ -8,7 +8,7 @@ import { exec } from './system.js'
  */
 export async function isGitAvailable(): Promise<boolean> {
   try {
-    await exec('git', ['-v'])
+    await exec('git', ['--version'])
     return true
   } catch {
     return false

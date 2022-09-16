@@ -1,10 +1,9 @@
-import { Request, Response } from '@gestaltjs/core/common/fetch'
-
-type Middleware =
-  | ((request: Request) => Promise<Response>)
-  | ((request: Request) => Response)
-
-export { Request, Response }
+export { Request, Response } from '@gestaltjs/core/common/fetch'
+export {
+  MiddlewareInput,
+  MiddlewareOutput,
+} from '@gestaltjs/core/common/middleware'
+import { Middleware } from '@gestaltjs/core/common/middleware'
 
 /**
  * A utility function to define a middleware. Since the function has its argument and
