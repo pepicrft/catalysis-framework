@@ -150,6 +150,7 @@ importers:
       terminal-link: 3.0.0
       ts-error: 1.0.6
       ts-pattern: 4.0.5
+      typed-file-system-path: 0.7.0
       unified: 10.1.2
       username: 6.0.0
       vite: 3.1.1
@@ -189,6 +190,7 @@ importers:
       terminal-link: 3.0.0
       ts-error: 1.0.6
       ts-pattern: 4.0.5
+      typed-file-system-path: 0.7.0
       unified: 10.1.2
       username: 6.0.0
       vite: 3.1.1
@@ -12485,7 +12487,6 @@ packages:
     dependencies:
       minimist: 1.2.6
       shelljs: 0.8.5
-    dev: true
 
   /side-channel/1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
@@ -13315,6 +13316,14 @@ packages:
   /type/2.6.0:
     resolution: {integrity: sha512-eiDBDOmkih5pMbo9OqsqPRGMljLodLcwd5XD5JbtNB0o89xZAwynY9EdCDsJU7LtcVCClu9DvM7/0Ep1hYX3EQ==}
     dev: true
+
+  /typed-file-system-path/0.7.0:
+    resolution: {integrity: sha512-ig/QvfWswW4ATAPaR1xqzCx5DP+NpGPV39ojRbm7ure9BB/RKWzeVOlwdid5q0ZEJxk/6+AaStswYV1Mhpov+A==}
+    dependencies:
+      pathe: 0.3.7
+      shx: 0.3.4
+      ts-error: 1.0.6
+    dev: false
 
   /typedarray-to-buffer/3.1.5:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}

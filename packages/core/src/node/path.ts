@@ -10,6 +10,12 @@ import {
   relative,
 } from 'pathe'
 import { fileURLToPath } from 'node:url'
+export {
+  absolutePath,
+  relativePath,
+  AbsolutePath,
+  RelativePath,
+} from 'typed-file-system-path'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -87,7 +93,7 @@ export function pathFromURL(url: string | URL): string {
  * @param to {string} Path to relativize.
  * @returns {string} The relative path.
  */
-export function relativePath(from: string, to: string): string {
+export function relativePathFrom(from: string, to: string): string {
   return relative(from, to)
 }
 
@@ -102,7 +108,7 @@ export function relativePath(from: string, to: string): string {
 export function relativizePath(path: string): string {
   const result = commondir([path, process.cwd()])
   if (result !== '/') {
-    return relativePath(process.cwd(), path)
+    return relativePathFrom(process.cwd(), path)
   } else {
     return path
   }

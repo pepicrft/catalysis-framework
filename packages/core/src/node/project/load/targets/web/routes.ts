@@ -5,7 +5,7 @@ import {
   glob,
   parentDirectory,
   pathBasename,
-  relativePath,
+  relativePathFrom,
   parsePath,
 } from '../../../../path.js'
 import { pathExists } from '../../../../fs.js'
@@ -145,7 +145,7 @@ function getFilePathWithoutExtension(filePath: string): string {
  * @returns {string} The path to register a route in the router.
  */
 function getUIRouteURLPath(options: ProcessRouteFileOptions): string {
-  let urlPath = `/${relativePath(
+  let urlPath = `/${relativePathFrom(
     options.directory,
     options.filePathWithoutExtensions
   )}`

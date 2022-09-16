@@ -20,7 +20,6 @@
     "paths": {
       "gestaltjs/*": ["../packages/gestaltjs/src/node/manifests/*.ts"],
       "@gestaltjs/core/*": ["../packages/core/src/*.ts"],
-
     }
   },
   "exclude": ["dist/**", "**/*/vitest.config.ts", "node_modules"]

@@ -1,5 +1,5 @@
 import fg from 'fast-glob'
-import { joinPath, relativePath, parentDirectory } from './path.js'
+import { joinPath, relativePathFrom, parentDirectory } from './path.js'
 import { copyFile, makeDirectory, writeFile, readFile } from './fs.js'
 import Handlebars from 'handlebars'
 
@@ -24,7 +24,7 @@ export async function scaffold(scaffoldOptions: ScaffoldOptions) {
   )
   await Promise.all(
     entries.map(async (sourceFile) => {
-      const path = relativePath(scaffoldOptions.sourceDirectory, sourceFile)
+      const path = relativePathFrom(scaffoldOptions.sourceDirectory, sourceFile)
       let targetFile = joinPath(scaffoldOptions.targetDirectory, path)
       if (targetFile.endsWith('.hbs')) {
         const sourceContent = await readFile(sourceFile)
