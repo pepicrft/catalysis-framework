@@ -136,7 +136,7 @@ importers:
       path-equal: 1.2.2
       pathe: 0.3.8
       picocolors: 1.0.0
-      pino: 8.5.0
+      pino: 8.6.0
       pino-abstract-transport: 1.0.0
       pino-pretty: 9.1.0
       plur: 5.1.0
@@ -172,7 +172,7 @@ importers:
       path-equal: 1.2.2
       pathe: 0.3.8
       picocolors: 1.0.0
-      pino: 8.5.0
+      pino: 8.6.0
       pino-abstract-transport: 1.0.0
       pino-pretty: 9.1.0
       plur: 5.1.0
@@ -7785,7 +7785,7 @@ packages:
       avvio: 8.1.3
       find-my-way: 7.0.1
       light-my-request: 5.5.1
-      pino: 8.5.0
+      pino: 8.6.0
       process-warning: 2.0.0
       proxy-addr: 2.0.7
       rfdc: 1.3.0
@@ -10872,8 +10872,8 @@ packages:
     resolution: {integrity: sha512-mMMOwSKrmyl+Y12Ri2xhH1lbzQxwwpuru9VjyJpgFIH4asSj88F2csdMwN6+M5g1Ll4rmsYghHLQJw81tgZ7LQ==}
     dev: false
 
-  /pino/8.5.0:
-    resolution: {integrity: sha512-PuD6sOti8Y+p9zRoNB5dibmfjfM/OU2tEtJFICxw5ulXi1d0qnq/Rt3CsR6aBEAOeyCXP+ZUfiNWW+tt55pNzg==}
+  /pino/8.6.0:
+    resolution: {integrity: sha512-gCEOs6XpgiM8mSFjiLXQejDJ1PZww8AUmHowQ16QpqpXQDIm3mFwn/29+Y6CJxd6i+x3uXduuerjq+IqWoABbA==}
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
