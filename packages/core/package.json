@@ -68,7 +68,7 @@
     "ohmyfetch": "0.4.19",
     "parse-json": "6.0.2",
     "path-equal": "1.2.2",
-    "pathe": "0.3.7",
+    "pathe": "0.3.8",
     "picocolors": "1.0.0",
     "pino": "8.5.0",
     "pino-abstract-transport": "1.0.0",
