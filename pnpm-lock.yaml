@@ -131,7 +131,7 @@ importers:
       listr2: 4.0.5
       magic-string: 0.26.3
       noop-stream: 1.0.0
-      ohmyfetch: 0.4.18
+      ohmyfetch: 0.4.19
       parse-json: 6.0.2
       path-equal: 1.2.2
       pathe: 0.3.7
@@ -167,7 +167,7 @@ importers:
       listr2: 4.0.5
       magic-string: 0.26.3
       noop-stream: 1.0.0
-      ohmyfetch: 0.4.18
+      ohmyfetch: 0.4.19
       parse-json: 6.0.2
       path-equal: 1.2.2
       pathe: 0.3.7
@@ -10288,8 +10288,8 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /node-fetch-native/0.1.4:
-    resolution: {integrity: sha512-10EKpOCQPXwZVFh3U1ptOMWBgKTbsN7Vvo6WVKt5pw4hp8zbv6ZVBZPlXw+5M6Tyi1oc1iD4/sNPd71KYA16tQ==}
+  /node-fetch-native/0.1.5:
+    resolution: {integrity: sha512-4NYY0JOTYFsahDjKy4gId6uuf7TPzkIDSDMuvtmlFd2Jf25tj9fQsDD5+kLdzM7sm6BbG8lL/154tdrsgN25Zw==}
     dev: false
 
   /node-fetch/2.6.7:
@@ -10484,11 +10484,11 @@ packages:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
     dev: false
 
-  /ohmyfetch/0.4.18:
-    resolution: {integrity: sha512-MslzNrQzBLtZHmiZBI8QMOcMpdNFlK61OJ34nFNFynZ4v+4BonfCQ7VIN4EGXvGGq5zhDzgdJoY3o9S1l2T7KQ==}
+  /ohmyfetch/0.4.19:
+    resolution: {integrity: sha512-OH2xVeRPNsHkx+JFdq1ewe9EwVDfTrv6lsBHpIx8wIWXowP5FyLhhYVaXIVlPsW542rt7gmwK14FwIDWUXEO+Q==}
     dependencies:
       destr: 1.1.1
-      node-fetch-native: 0.1.4
+      node-fetch-native: 0.1.5
       ufo: 0.8.5
       undici: 5.10.0
     dev: false
