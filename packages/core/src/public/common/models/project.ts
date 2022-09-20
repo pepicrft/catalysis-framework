@@ -1,5 +1,4 @@
 import type { Configuration } from './configuration'
-import { WebTarget } from './targets/web'
 
 /**
  * Interface that represents a Gestalt project.
@@ -13,7 +12,4 @@ export interface Project {
 
   /** Application sources glob */
   sourcesGlob: string
-
-  /** The web targets of the project */
-  targets: { [name: string]: WebTarget }
 }

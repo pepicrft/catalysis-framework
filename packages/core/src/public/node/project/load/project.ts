@@ -1,7 +1,6 @@
 import { Project } from '../../../common/models/project.js'
 import { Abort } from '../../../common/error.js'
 import { parentDirectory, joinPath } from '../../../node/path.js'
-import { loadTargets } from './target.js'
 import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
 import { getModuleLoader } from './module-loader.js'
 import { fileToken, content } from '../../../node/logger.js'
@@ -38,12 +37,10 @@ export async function loadProject(fromDirectory: string): Promise<Project> {
   const moduleLoader = await getModuleLoader(directory)
   try {
     const configuration = await loadConfig(configurationPath, moduleLoader)
-    const targets = await loadTargets(directory, moduleLoader)
     const project = {
       configuration,
       directory,
       sourcesGlob: joinPath(directory, `src/**/*.{ts,js}`),
-      targets,
     }
     await validateProject(project)
     return project

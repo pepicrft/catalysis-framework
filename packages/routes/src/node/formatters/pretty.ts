@@ -23,32 +23,6 @@ export function prettyFormat(options: PrettyFormatOptions): string {
     )}`
   )
   lines.push(``)
-  const mainTargets = options.project.targets
-  if (
-    Object.keys(mainTargets).length !== 0 ||
-    Object.keys(mainTargets).length !== 0
-  ) {
-    lines.push(formatGreen(formatBold('Targets 📦')))
-  }
-  if (Object.keys(mainTargets).length !== 0) {
-    lines.push(`    ${formatCyan(formatBold('Main'))}`)
-    Object.keys(mainTargets).forEach((targetName) => {
-      const target = mainTargets[targetName]
-      const targetPrefix = `      `
-      const targetMetadataPrefix = `        `
-      lines.push(
-        `${targetMetadataPrefix}${formatBold(`Directory:`)} ${relativizePath(
-          target.directory
-        )}`
-      )
-      lines.push(
-        `${targetMetadataPrefix}${formatBold(`Manifest:`)} ${relativizePath(
-          target.manifestPath
-        )}`
-      )
-    })
-  }
 
-  lines.push(``)
   return lines.join('\n')
 }

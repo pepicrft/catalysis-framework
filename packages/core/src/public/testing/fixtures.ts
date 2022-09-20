@@ -1,4 +1,3 @@
-import { UserWebTarget } from '../common/manifests.js'
 import { Project } from '../common/models.js'
 
 /**
@@ -14,13 +13,6 @@ export function testProject(overrides: Partial<Project> = {}): Project {
       name: overrides?.configuration?.name ?? 'Test',
     },
     directory: overrides?.directory ?? '/test/project',
-    sourcesGlob: overrides?.sourcesGlob ?? 'targets/**/*.ts',
-    targets: overrides?.targets ?? {},
+    sourcesGlob: overrides?.sourcesGlob ?? '**/*.ts',
   }
-}
-
-export function testWebTarget(
-  overrides: Partial<UserWebTarget> = {}
-): UserWebTarget {
-  return {}
 }

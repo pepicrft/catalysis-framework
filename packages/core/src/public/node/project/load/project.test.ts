@@ -1,15 +1,13 @@
-import { loadTargets } from './target.js'
 import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
 import { getModuleLoader } from './module-loader.js'
 import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project.js'
-import { testProject } from '@gestaltjs/core/testing/fixtures'
 import { joinPath } from '../../../node/path.js'
 import { validateProject } from '../validate/project.js'
+import { testProject } from '../../../testing/fixtures.js'
 
 vi.mock('./config')
 vi.mock('./module-loader')
-vi.mock('./target')
 vi.mock('../validate/project')
 
 describe('loadProject', () => {
@@ -36,7 +34,6 @@ describe('loadProject', () => {
     const project = testProject()
     vi.mocked(getModuleLoader).mockResolvedValue(moduleLoader)
     vi.mocked(loadConfig).mockResolvedValue(project.configuration)
-    vi.mocked(loadTargets).mockResolvedValue(project.targets)
 
     // When
     const got = await loadProject(fromDirectory)
@@ -45,7 +42,6 @@ describe('loadProject', () => {
     expect(close).toHaveBeenCalled()
     expect(got.configuration).toEqual(project.configuration)
     expect(got.directory).toEqual(fromDirectory)
-    expect(got.targets).toEqual(project.targets)
     expect(validateProject).toHaveBeenCalledWith(got)
     expect(got.sourcesGlob).toEqual(joinPath(fromDirectory, 'src/**/*.{ts,js}'))
   })

@@ -33,28 +33,6 @@ export function prettyFormat(options: PrettyFormatOptions): string {
     lines.push('')
   }
 
-  const targets = options.project.targets
-  if (Object.keys(targets).length !== 0 || Object.keys(targets).length !== 0) {
-    lines.push(formatGreen(formatBold('Targets 📦')))
-  }
-  if (Object.keys(targets).length !== 0) {
-    lines.push(`    ${formatCyan(formatBold('Main'))}`)
-    Object.keys(targets).forEach((targetName) => {
-      const target = targets[targetName]
-      const targetMetadataPrefix = `        `
-      lines.push(
-        `${targetMetadataPrefix}${formatBold(`Directory:`)} ${relativizePath(
-          target.directory
-        )}`
-      )
-      lines.push(
-        `${targetMetadataPrefix}${formatBold(`Manifest:`)} ${relativizePath(
-          target.manifestPath
-        )}`
-      )
-    })
-  }
-
   lines.push(``)
   return lines.join('\n')
 }
