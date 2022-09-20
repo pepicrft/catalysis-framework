@@ -19,7 +19,7 @@
     "composite": true,
     "paths": {
       "gestaltjs/*": ["../packages/gestaltjs/src/node/manifests/*.ts"],
-      "@gestaltjs/core/*": ["../packages/core/src/*.ts"],
+      "@gestaltjs/core/*": ["../packages/core/src/public/*.ts"],
     }
   },
   "exclude": ["dist/**", "**/*/vitest.config.ts", "node_modules"]
