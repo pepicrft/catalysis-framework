@@ -1,9 +1,9 @@
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 import { Flags } from '@oclif/core'
 import { resolvePath } from '@gestaltjs/core/node/path'
-import { initPrompt } from '../prompts/init.js'
-import { initService } from '../services/init.js'
-import { createProjectLogger } from '../logger.js'
+import { initPrompt } from '../../../private/node/prompts/init.js'
+import { initService } from '../../../private/node/services/init.js'
+import { createProjectLogger } from '../../../private/node/logger.js'
 import { content } from '@gestaltjs/core/node/logger'
 
 // eslint-disable-next-line import/no-default-export
