@@ -1,11 +1,11 @@
-import { generateLogger } from '../../logger.js'
-import { generateTargetPrompt } from '../../prompts/target.js'
+import { generateLogger } from '../../../../private/node/logger.js'
+import { generateTargetPrompt } from '../../../../private/node/prompts/target.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Target extends GestaltCommand {
-  static description = 'Generate a new target'
+  static description = 'Generate new elements in an app'
 
   static args = [
     { name: 'name', description: 'The name of the target', required: true },

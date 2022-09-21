@@ -27,7 +27,7 @@
     "@oclif/core": "1.16.0"
   },
   "oclif": {
-    "commands": "./dist/node/commands",
+    "commands": "./dist/public/node/commands",
     "topics": {
       "generate": {
         "description": "Generate code in Gestalt projects."

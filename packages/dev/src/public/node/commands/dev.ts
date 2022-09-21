@@ -1,5 +1,5 @@
 import { loadProject } from '@gestaltjs/core/node/project'
-import { devProject } from '../services/dev.js'
+import { devProject } from '../../../private/node/services/dev.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 import { Flags } from '@oclif/core'
 

@@ -23,20 +23,20 @@
   },
   "exports": {
     "./configuration": {
-      "import": "./dist/node/exports/configuration.js",
-      "types": "./dist/node/exports/configuration.d.ts"
+      "import": "./dist/public/node/configuration.js",
+      "types": "./dist/public/node/configuration.d.ts"
     },
     "./middleware": {
-      "import": "./dist/node/exports/middleware.js",
-      "types": "./dist/node/exports/middleware.d.ts"
+      "import": "./dist/public/node/middleware.js",
+      "types": "./dist/public/node/middleware.d.ts"
     },
     "./target": {
-      "import": "./dist/node/exports/target.js",
-      "types": "./dist/node/exports/target.d.ts"
+      "import": "./dist/public/node/target.js",
+      "types": "./dist/public/node/target.d.ts"
     },
     "./plugin": {
-      "import": "./dist/node/exports/plugin.js",
-      "types": "./dist/node/exports/plugin.d.ts"
+      "import": "./dist/public/node/plugin.js",
+      "types": "./dist/public/node/plugin.d.ts"
     }
   },
   "scripts": {

@@ -27,9 +27,9 @@
     "@oclif/core": "1.16.0"
   },
   "oclif": {
-    "commands": "./dist/node/commands",
+    "commands": "./dist/public/node/commands",
     "topics": {
-      "db": {
+      "routes": {
         "description": "Output the aggregated routes of a project"
       }
     }
