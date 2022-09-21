@@ -43,7 +43,7 @@
   },
   "oclif": {
     "bin": "create-project",
-    "commands": "./dist/node/commands"
+    "commands": "./dist/public/node/commands"
   },
   "engine-strict": true,
   "engines": {
