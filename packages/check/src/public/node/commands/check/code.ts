@@ -1,5 +1,5 @@
 import { loadProject } from '@gestaltjs/core/node/project'
-import { checkCode } from '../../services/code.js'
+import { checkCode } from '../../../../internal/node/services/code.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 
 // eslint-disable-next-line import/no-default-export

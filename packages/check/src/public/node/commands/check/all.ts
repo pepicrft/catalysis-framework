@@ -1,12 +1,12 @@
 import { Flags } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
+import { checkCode } from '../../../../internal/node/services/code.js'
+import { checkStyle } from '../../../../internal/node/services/style.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 
-import { checkStyle } from '../../services/style.js'
-
 // eslint-disable-next-line import/no-default-export
-export default class Style extends GestaltCommand {
-  static description = 'Check the code style using ESLint.'
+export default class All extends GestaltCommand {
+  static description = 'Check code and style.'
 
   static flags = {
     ...GestaltCommand.globalFlags,
@@ -20,9 +20,10 @@ export default class Style extends GestaltCommand {
     }),
   }
   async run(): Promise<void> {
-    const { flags } = await this.parse(Style)
+    const { flags } = await this.parse(All)
     const project = await loadProject(flags.path)
 
+    await checkCode(project.directory)
     await checkStyle({
       fix: flags.fix,
       project: project,
