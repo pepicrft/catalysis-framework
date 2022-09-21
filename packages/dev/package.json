@@ -3,6 +3,12 @@
   "version": "0.7.10",
   "description": "A set of utilities responsible for serving the app",
   "type": "module",
+  "exports": {
+    "./*": {
+      "node": "./dist/public/*.js",
+      "types": "./dist/public/*.d.ts"
+    }
+  },
   "files": [
     "/dist"
   ],
