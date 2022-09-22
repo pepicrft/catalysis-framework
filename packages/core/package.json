@@ -55,7 +55,7 @@
     "handlebars": "4.7.7",
     "inquirer": "9.1.2",
     "listr2": "4.0.5",
-    "magic-string": "0.26.3",
+    "magic-string": "0.26.4",
     "noop-stream": "1.0.0",
     "ohmyfetch": "0.4.19",
     "parse-json": "6.0.2",

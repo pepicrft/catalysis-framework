@@ -129,7 +129,7 @@ importers:
       handlebars: 4.7.7
       inquirer: 9.1.2
       listr2: 4.0.5
-      magic-string: 0.26.3
+      magic-string: 0.26.4
       noop-stream: 1.0.0
       ohmyfetch: 0.4.19
       parse-json: 6.0.2
@@ -165,7 +165,7 @@ importers:
       handlebars: 4.7.7
       inquirer: 9.1.2
       listr2: 4.0.5
-      magic-string: 0.26.3
+      magic-string: 0.26.4
       noop-stream: 1.0.0
       ohmyfetch: 0.4.19
       parse-json: 6.0.2
@@ -9950,8 +9950,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /magic-string/0.26.3:
-    resolution: {integrity: sha512-u1Po0NDyFcwdg2nzHT88wSK0+Rih0N1M+Ph1Sp08k8yvFFU3KR72wryS7e1qMPJypt99WB7fIFVCA92mQrMjrg==}
+  /magic-string/0.26.4:
+    resolution: {integrity: sha512-e5uXtVJ22aEpK9u1+eQf0fSxHeqwyV19K+uGnlROCxUhzwRip9tBsaMViK/0vC3viyPd5Gtucp3UmEp/Q2cPTQ==}
     engines: {node: '>=12'}
     dependencies:
       sourcemap-codec: 1.4.8
