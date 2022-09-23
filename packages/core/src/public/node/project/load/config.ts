@@ -1,5 +1,8 @@
 import { configurationFileName } from '../../../common/constants.js'
-import { Configuration } from '../../../common/models/configuration.js'
+import {
+  Configuration,
+  ConfigurationImpl,
+} from '../../../common/models/configuration.js'
 import { ModuleLoader } from './module-loader.js'
 import { findPathUp } from '../../../node/fs.js'
 import { absolutePath } from '../../../node/path.js'
@@ -16,10 +19,10 @@ export async function loadConfig(
 ): Promise<Configuration> {
   const module: any = await moduleLoader.load(configurationPath)
   const configuration = module.default as Configuration
-  return {
-    ...configuration,
-    manifestPath: absolutePath(configurationPath),
-  }
+  return new ConfigurationImpl({
+    path: absolutePath(configurationPath),
+    userConfiguration: configuration,
+  })
 }
 
 /**

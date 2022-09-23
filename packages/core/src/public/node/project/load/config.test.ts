@@ -14,7 +14,7 @@ describe('loadConfig', () => {
     const module: { default: Configuration } = {
       default: {
         name: 'Project',
-        manifestPath: absolutePath(manifestPath),
+        path: absolutePath(manifestPath),
       },
     }
     vi.mocked(moduleLoader.load).mockResolvedValue(module)
@@ -38,7 +38,7 @@ describe('loadConfig', () => {
     const module: { default: Configuration } = {
       default: {
         name: 'Project',
-        manifestPath: absolutePath(manifestPath),
+        path: absolutePath(manifestPath),
       },
     }
     vi.mocked(moduleLoader.load).mockResolvedValue(module)
