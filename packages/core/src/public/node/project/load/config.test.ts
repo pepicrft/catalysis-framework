@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { loadConfig, watchConfig } from './config.js'
-import { Configuration } from '../../../common/models/configuration.js'
+import { Configuration } from '../models/configuration.js'
 import { absolutePath } from '../../path.js'
 
 describe('loadConfig', () => {

@@ -1,4 +1,4 @@
-import { Project } from '@gestaltjs/core/common/models/project'
+import { Project } from '@gestaltjs/core/node/project'
 
 export const GENERATE_MIDDLEWARE_LANGUAGES = ['javascript', 'typescript']
 export type GenerateMiddlewareLanguage =

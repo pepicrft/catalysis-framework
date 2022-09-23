@@ -1,4 +1,4 @@
-import { Project } from '@gestaltjs/core/common/models'
+import { Project } from '@gestaltjs/core/node/project'
 import { encodeJson } from '@gestaltjs/core/node/json'
 
 type FormatJsonOptions = {

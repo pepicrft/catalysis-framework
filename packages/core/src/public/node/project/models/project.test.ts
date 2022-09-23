@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test } from 'vitest'
 import { ProjectImpl } from './project.js'
-import { testProject } from '../../testing/fixtures.js'
+import { testProject } from '../../../testing/fixtures.js'
 
 describe('ProjectImpl', () => {
   let project: ProjectImpl

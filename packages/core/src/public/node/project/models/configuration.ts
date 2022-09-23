@@ -1,6 +1,6 @@
-import { AbsolutePath } from '../../node/path.js'
-import type { UserConfiguration } from '../manifests/configuration'
-import { UserPlugin } from '../manifests/plugin.js'
+import { AbsolutePath } from '../../path.js'
+import type { UserConfiguration } from '../../../common/manifests/configuration'
+import { UserPlugin } from '../../../common/manifests/plugin.js'
 
 /** Options to create a ConfigurationImpl instance */
 type ConfigurationImplInitOptions = {

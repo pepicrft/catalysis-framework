@@ -2,6 +2,7 @@ import { describe, test, expect, vi } from 'vitest'
 import { checkStyle } from './style.js'
 import type { LintOptions } from './style.js'
 import { runESLint } from '@gestaltjs/core/node/eslint'
+import { testProject } from '@gestaltjs/core/testing/fixtures'
 
 vi.mock('@gestaltjs/core/node/eslint')
 
@@ -18,7 +19,7 @@ describe('run', () => {
     // Then
     expect(runESLint).toHaveBeenCalledWith(
       expectedArgs,
-      options.project.directory
+      `${options.project.directory}`
     )
   })
 
@@ -33,7 +34,7 @@ describe('run', () => {
     // Then
     expect(runESLint).toHaveBeenCalledWith(
       expectedArgs,
-      options.project.directory
+      `${options.project.directory}`
     )
   })
 })
@@ -41,13 +42,6 @@ describe('run', () => {
 function getOptions({ fix }: { fix: boolean }): LintOptions {
   return {
     fix,
-    project: {
-      directory: '/project',
-      configuration: {
-        name: 'project',
-        manifestPath: '/project/gestalt.config.js',
-      },
-      sourcesGlob: '/project/src/**/*.{ts,js}',
-    },
+    project: testProject(),
   }
 }

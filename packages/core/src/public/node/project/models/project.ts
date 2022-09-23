@@ -1,4 +1,4 @@
-import { AbsolutePath, absolutePath } from '../../node/path.js'
+import { AbsolutePath, joinPath } from '../../path.js'
 import type { Configuration } from './configuration'
 
 export type ProjectImplConstructorOptions = {
@@ -16,6 +16,10 @@ export class ProjectImpl implements Project {
   constructor(options: ProjectImplConstructorOptions) {
     this.directory = options.directory
     this.configuration = options.configuration
+  }
+
+  get sourcesGlob(): string {
+    return joinPath(`${this.sourceDirectory}`, '**/*.ts')
   }
 
   get sourceDirectory(): AbsolutePath {
@@ -36,6 +40,9 @@ export interface Project {
 
   /** Project configuration */
   readonly configuration: Configuration
+
+  /** A glob pattern to look up the sources of the project */
+  readonly sourcesGlob: string
 
   /** Returns the directory that contains the source code */
   readonly sourceDirectory: AbsolutePath

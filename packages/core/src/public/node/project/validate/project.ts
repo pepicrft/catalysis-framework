@@ -1,4 +1,4 @@
-import { Project } from '../../../common/models/project.js'
+import { Project } from '../models/project.js'
 
 export async function validateProject(project: Project): Promise<void> {
   // noop

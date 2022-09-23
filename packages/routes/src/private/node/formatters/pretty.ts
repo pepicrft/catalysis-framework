@@ -1,10 +1,6 @@
-import { Project } from '@gestaltjs/core/common/models'
+import { Project } from '@gestaltjs/core/node/project'
 import { relativizePath } from '@gestaltjs/core/node/path'
-import {
-  formatGreen,
-  formatBold,
-  formatCyan,
-} from '@gestaltjs/core/node/terminal'
+import { formatGreen, formatBold } from '@gestaltjs/core/node/terminal'
 
 type PrettyFormatOptions = {
   project: Project
@@ -19,7 +15,7 @@ export function prettyFormat(options: PrettyFormatOptions): string {
   )
   lines.push(
     `  ${formatBold('Manifest:')} ${relativizePath(
-      options.project.configuration.manifestPath
+      options.project.configuration.path
     )}`
   )
   lines.push(``)

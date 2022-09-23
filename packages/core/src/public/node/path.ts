@@ -20,6 +20,7 @@ export {
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import commondir from 'commondir'
+import { AbsolutePath } from 'typed-file-system-path'
 
 /**
  * Joins all given path components together using the platform-specific separator as a delimiter,
@@ -105,12 +106,12 @@ export function relativePathFrom(from: string, to: string): string {
  * @param path {string} Path to relativize
  * @returns {string} Relativized path.
  */
-export function relativizePath(path: string): string {
+export function relativizePath(path: string | AbsolutePath): string {
   const result = commondir([path, process.cwd()])
   if (result !== '/') {
-    return relativePathFrom(process.cwd(), path)
+    return relativePathFrom(process.cwd(), `${path}`)
   } else {
-    return path
+    return `${path}`
   }
 }
 

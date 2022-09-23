@@ -1,7 +1,7 @@
 import { absolutePath } from '../node/path.js'
-import { Project } from '../common/models.js'
-import { ProjectImpl } from '../common/models/project.js'
-import { ConfigurationImpl } from '../common/models/configuration.js'
+import { Project } from '../node/project/models/project.js'
+import { ProjectImpl } from '../node/project/models/project.js'
+import { ConfigurationImpl } from '../node/project/models/configuration.js'
 
 /**
  * Creates and return a test project for testing purposes.

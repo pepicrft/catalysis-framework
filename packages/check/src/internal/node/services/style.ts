@@ -1,6 +1,6 @@
 import { Abort } from '@gestaltjs/core/common/error'
 import { runESLint } from '@gestaltjs/core/node/eslint'
-import { Project } from '@gestaltjs/core/common/models'
+import { Project } from '@gestaltjs/core/node/project'
 
 export type LintOptions = {
   fix: boolean
@@ -14,7 +14,7 @@ export async function checkStyle(options: LintOptions) {
   }
   args.push(options.project.sourcesGlob)
   try {
-    await runESLint(args, options.project.directory)
+    await runESLint(args, `${options.project.directory}`)
 
     // TODO: fix error with logger when executing tests
   } catch (err) {

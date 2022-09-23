@@ -1,8 +1,5 @@
 import { configurationFileName } from '../../../common/constants.js'
-import {
-  Configuration,
-  ConfigurationImpl,
-} from '../../../common/models/configuration.js'
+import { Configuration, ConfigurationImpl } from '../models/configuration.js'
 import { ModuleLoader } from './module-loader.js'
 import { findPathUp } from '../../../node/fs.js'
 import { absolutePath } from '../../../node/path.js'

@@ -1,4 +1,4 @@
-import { Project, ProjectImpl } from '../../../common/models/project.js'
+import { Project, ProjectImpl } from '../models/project.js'
 import { Abort } from '../../../common/error.js'
 import { parentDirectory, joinPath, absolutePath } from '../../../node/path.js'
 import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
