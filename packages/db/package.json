@@ -36,7 +36,7 @@
     "commands": "./dist/public/node/commands",
     "topics": {
       "db": {
-        "description": "Create and manage databases"
+        "description": "Creates and manages databases"
       }
     }
   },

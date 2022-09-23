@@ -7,7 +7,7 @@ import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Info extends GestaltCommand {
-  static description = 'Output an overview of a Gestalt project'
+  static description = 'Output an overview of a project'
 
   static flags = {
     ...GestaltCommand.globalFlags,

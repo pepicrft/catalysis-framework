@@ -7,7 +7,7 @@ import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Routes extends GestaltCommand {
-  static description = 'Output the aggregated routes of a project'
+  static description = "Output a project's routes"
 
   static flags = {
     ...GestaltCommand.globalFlags,

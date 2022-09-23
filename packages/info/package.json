@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/info",
   "version": "0.7.10",
-  "description": "Outputs an overview of a Gestalt project",
+  "description": "Output an overview of a project",
   "type": "module",
   "exports": {
     "./*": {
@@ -36,7 +36,7 @@
     "commands": "./dist/public/node/commands",
     "topics": {
       "info": {
-        "description": "Output an overview of a Gestalt project"
+        "description": "Output a project's overview"
       }
     }
   },

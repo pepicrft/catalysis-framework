@@ -1,7 +1,7 @@
 {
   "name": "@gestaltjs/routes",
   "version": "0.7.10",
-  "description": "Output the aggregated routes of a project",
+  "description": "Output a project's routes",
   "type": "module",
   "exports": {
     "./*": {
@@ -36,7 +36,7 @@
     "commands": "./dist/public/node/commands",
     "topics": {
       "routes": {
-        "description": "Output the aggregated routes of a project"
+        "description": "Output a project's routes"
       }
     }
   },

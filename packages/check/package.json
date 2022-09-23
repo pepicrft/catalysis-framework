@@ -36,7 +36,7 @@
     "commands": "./dist/public/node/commands",
     "topics": {
       "check": {
-        "description": "Run checks against your project (style, types)"
+        "description": "Runs checks against against a project (style, types)"
       }
     }
   },
