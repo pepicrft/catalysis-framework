@@ -1,4 +1,6 @@
+import { absolutePath } from '../node/path.js'
 import { Project } from '../common/models.js'
+import { ProjectImpl } from '../common/models/project.js'
 
 /**
  * Creates and return a test project for testing purposes.
@@ -6,13 +8,13 @@ import { Project } from '../common/models.js'
  * @returns A project instance.
  */
 export function testProject(overrides: Partial<Project> = {}): Project {
-  return {
+  return new ProjectImpl({
     configuration: {
       manifestPath:
-        overrides?.configuration?.manifestPath ?? 'gestalt.config.js',
+        overrides?.configuration?.manifestPath ??
+        absolutePath('/project/gestalt.config.js'),
       name: overrides?.configuration?.name ?? 'Test',
     },
-    directory: overrides?.directory ?? '/test/project',
-    sourcesGlob: overrides?.sourcesGlob ?? '**/*.ts',
-  }
+    directory: overrides?.directory ?? absolutePath('/test/project'),
+  })
 }

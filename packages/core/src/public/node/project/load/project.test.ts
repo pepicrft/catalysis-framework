@@ -2,9 +2,9 @@ import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
 import { getModuleLoader } from './module-loader.js'
 import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project.js'
-import { joinPath } from '../../../node/path.js'
 import { validateProject } from '../validate/project.js'
 import { testProject } from '../../../testing/fixtures.js'
+import { absolutePath } from '../../path.js'
 
 vi.mock('./config')
 vi.mock('./module-loader')
@@ -41,8 +41,7 @@ describe('loadProject', () => {
     // Then
     expect(close).toHaveBeenCalled()
     expect(got.configuration).toEqual(project.configuration)
-    expect(got.directory).toEqual(fromDirectory)
+    expect(got.directory).toEqual(absolutePath(fromDirectory))
     expect(validateProject).toHaveBeenCalledWith(got)
-    expect(got.sourcesGlob).toEqual(joinPath(fromDirectory, 'src/**/*.{ts,js}'))
   })
 })

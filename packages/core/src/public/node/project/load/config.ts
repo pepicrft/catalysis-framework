@@ -2,6 +2,7 @@ import { configurationFileName } from '../../../common/constants.js'
 import { Configuration } from '../../../common/models/configuration.js'
 import { ModuleLoader } from './module-loader.js'
 import { findPathUp } from '../../../node/fs.js'
+import { absolutePath } from '../../../node/path.js'
 
 /**
  * This function transpiles, loads, and returns a Gestalt project configuration.
@@ -17,7 +18,7 @@ export async function loadConfig(
   const configuration = module.default as Configuration
   return {
     ...configuration,
-    manifestPath: configurationPath,
+    manifestPath: absolutePath(configurationPath),
   }
 }
 

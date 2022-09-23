@@ -1,6 +1,7 @@
 import { describe, test, expect, vi } from 'vitest'
 import { loadConfig, watchConfig } from './config.js'
 import { Configuration } from '../../../common/models/configuration.js'
+import { absolutePath } from '../../path.js'
 
 describe('loadConfig', () => {
   test('loads the configuration through the module loader', async () => {
@@ -13,7 +14,7 @@ describe('loadConfig', () => {
     const module: { default: Configuration } = {
       default: {
         name: 'Project',
-        manifestPath,
+        manifestPath: absolutePath(manifestPath),
       },
     }
     vi.mocked(moduleLoader.load).mockResolvedValue(module)
@@ -37,7 +38,7 @@ describe('loadConfig', () => {
     const module: { default: Configuration } = {
       default: {
         name: 'Project',
-        manifestPath,
+        manifestPath: absolutePath(manifestPath),
       },
     }
     vi.mocked(moduleLoader.load).mockResolvedValue(module)
