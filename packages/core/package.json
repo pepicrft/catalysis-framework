@@ -78,7 +78,7 @@
     "vite": "3.1.4"
   },
   "devDependencies": {
-    "@types/inquirer": "9.0.1"
+    "@types/inquirer": "9.0.2"
   },
   "engine-strict": true,
   "engines": {

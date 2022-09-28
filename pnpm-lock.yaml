@@ -116,7 +116,7 @@ importers:
     specifiers:
       '@oclif/core': 1.16.0
       '@remix-run/web-fetch': ^4.2.0
-      '@types/inquirer': 9.0.1
+      '@types/inquirer': 9.0.2
       acorn: 8.8.0
       case-anything: 2.1.10
       commondir: 1.0.1
@@ -187,7 +187,7 @@ importers:
       username: 6.0.0
       vite: 3.1.4
     devDependencies:
-      '@types/inquirer': 9.0.1
+      '@types/inquirer': 9.0.2
 
   packages/create-plugin:
     specifiers:
@@ -4179,11 +4179,11 @@ packages:
       '@types/node': 17.0.45
     dev: false
 
-  /@types/inquirer/9.0.1:
-    resolution: {integrity: sha512-I4eZdYXpFHj0pAzMndJFQMu/4hCc6Z340au9lvxHofGJnFmVgckxR/t9jRzsOVviajsOmEL+OABx+e0e28IbNw==}
+  /@types/inquirer/9.0.2:
+    resolution: {integrity: sha512-MQc3adiIh/rDxLkjnvL03rSvuHg+/dKif4dn/MRsnE+oU1bAdyuDbW0w+ewR1M/M/u/Z0YAbw7NZYCpgQ5SW8A==}
     dependencies:
       '@types/through': 0.0.30
-      rxjs: 7.5.5
+      rxjs: 7.5.6
     dev: true
 
   /@types/is-ci/3.0.0:
@@ -12178,17 +12178,10 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /rxjs/7.5.5:
-    resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==}
-    dependencies:
-      tslib: 2.4.0
-    dev: true
-
   /rxjs/7.5.6:
     resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
     dependencies:
       tslib: 2.4.0
-    dev: false
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
