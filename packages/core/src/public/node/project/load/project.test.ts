@@ -1,5 +1,5 @@
 import { lookupConfigurationPathTraversing, loadConfig } from './config.js'
-import { getModuleLoader } from './module-loader.js'
+import { getModuleLoader } from '../../../../private/module-loader.js'
 import { describe, test, expect, vi } from 'vitest'
 import { loadProject, ConfigFileNotFoundError } from './project.js'
 import { validateProject } from '../validate/project.js'
@@ -7,7 +7,7 @@ import { testProject } from '../../../testing/fixtures.js'
 import { absolutePath } from '../../path.js'
 
 vi.mock('./config')
-vi.mock('./module-loader')
+vi.mock('../../../../private/module-loader')
 vi.mock('../validate/project')
 
 describe('loadProject', () => {

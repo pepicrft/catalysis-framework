@@ -1,8 +1,8 @@
 import { getModuleLoader } from './module-loader.js'
 import { describe, test, expect } from 'vitest'
-import { inTemporarydirectory } from '../../../testing/temporary.js'
-import { joinPath } from '../../../node/path.js'
-import { writeFile } from '../../../node/fs.js'
+import { inTemporarydirectory } from '../public/testing/temporary.js'
+import { joinPath } from '../public/node/path.js'
+import { writeFile } from '../public/node/fs.js'
 
 describe('getModuleLoader', () => {
   test('load loads a module successfully', async () => {
