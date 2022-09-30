@@ -6,6 +6,7 @@ import {
   generateMiddlewareService,
   GENERATE_MIDDLEWARE_LANGUAGES,
 } from '../../../../private/node/services/commands/generate/middleware.js'
+import { absolutePath } from '@gestaltjs/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default class Middleware extends GestaltCommand {
@@ -30,7 +31,7 @@ export default class Middleware extends GestaltCommand {
 
   async run(): Promise<void> {
     const { flags, args } = await this.parse(Middleware)
-    const project = await loadProject(flags.path)
+    const project = await loadProject(absolutePath(flags.path))
     await generateMiddlewareService({
       name: args.name,
       language: flags.language as GenerateMiddlewareLanguage,

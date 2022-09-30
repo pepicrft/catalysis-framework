@@ -3,6 +3,7 @@ import { loadProject } from '@gestaltjs/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
 import { checkStyle } from '../../../../internal/node/services/style.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { absolutePath } from '@gestaltjs/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default class All extends GestaltCommand {
@@ -21,7 +22,7 @@ export default class All extends GestaltCommand {
   }
   async run(): Promise<void> {
     const { flags } = await this.parse(All)
-    const project = await loadProject(flags.path)
+    const project = await loadProject(absolutePath(flags.path))
 
     await checkCode(project.directory)
     await checkStyle({
