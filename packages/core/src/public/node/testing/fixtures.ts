@@ -1,7 +1,7 @@
-import { ConfigurationImpl } from '../../private/node/project/models/configuration.js'
-import { ProjectImpl } from '../../private/node/project/models/project.js'
-import { absolutePath } from '../node/path.js'
-import { Project } from '../node/project/project.js'
+import { ConfigurationImpl } from '../../../private/node/project/models/configuration.js'
+import { ProjectImpl } from '../../../private/node/project/models/project.js'
+import { absolutePath } from '../path.js'
+import { Project } from '../project/project.js'
 
 /**
  * Creates and return a test project for testing purposes.
