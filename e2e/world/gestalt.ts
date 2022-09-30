@@ -12,7 +12,7 @@ export interface WorldConstructorParams {
 
 type RunOptions = { cwd?: string; env?: NodeJS.ProcessEnv }
 
-export class GestaltWorldImplementation implements GestaltWorld {
+export class GestaltWorldImpl implements GestaltWorld {
   public temporaryDirectory: string
   public temporaryEnvironment: any | undefined
   public projectDirectory: string | undefined
@@ -32,4 +32,4 @@ export class GestaltWorldImplementation implements GestaltWorld {
   }
 }
 
-setWorldConstructor(GestaltWorldImplementation)
+setWorldConstructor(GestaltWorldImpl)

@@ -69,7 +69,7 @@ export async function createProjectBundler(
       },
     ],
   })
-  return new ProjectBundlerImplementation({
+  return new ProjectBundlerImpl({
     vite,
     configurationManifestPath: configurationManifestPath,
   })
@@ -80,7 +80,7 @@ type ProjectBundlerImplementationConstructorOptions = {
   vite: ViteDevServer
 }
 
-class ProjectBundlerImplementation implements ProjectBundler {
+class ProjectBundlerImpl implements ProjectBundler {
   configurationManifestPath: AbsolutePath
   vite: ViteDevServer
 

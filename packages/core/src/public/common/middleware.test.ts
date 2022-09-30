@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest'
 import { Request } from './fetch.js'
 import {
-  MiddlewareInputImplementation,
+  MiddlewareInputImpl,
   MiddlewareInputKeyNotFoundError,
   MiddlewareSettingExistingKeyError,
 } from './middleware.js'
@@ -30,10 +30,10 @@ describe('MiddlewareSettingExistingKeyError', () => {
   })
 })
 
-describe('MiddlewareInputImplementation', () => {
+describe('MiddlewareInputImpl', () => {
   test('set throws if the key already exists', () => {
     // Given
-    const subject = new MiddlewareInputImplementation(
+    const subject = new MiddlewareInputImpl(
       'middlewareId',
       new Request('http://localhost:3000/'),
       { key: 'test' }
@@ -47,7 +47,7 @@ describe('MiddlewareInputImplementation', () => {
 
   test("set stores the data if the key doesn't exist", () => {
     // Given
-    const subject = new MiddlewareInputImplementation(
+    const subject = new MiddlewareInputImpl(
       'middlewareId',
       new Request('http://localhost:3000/'),
       {}
@@ -62,7 +62,7 @@ describe('MiddlewareInputImplementation', () => {
 
   test('fetch retrieves the data under the given key if it exists', () => {
     // Given
-    const subject = new MiddlewareInputImplementation(
+    const subject = new MiddlewareInputImpl(
       'middlewareId',
       new Request('http://localhost:3000/'),
       { key: 'test' }
@@ -74,7 +74,7 @@ describe('MiddlewareInputImplementation', () => {
 
   test("fetch throws an error the data under the given key doesn't exist", () => {
     // Given
-    const subject = new MiddlewareInputImplementation(
+    const subject = new MiddlewareInputImpl(
       'middlewareId',
       new Request('http://localhost:3000/'),
       {}
@@ -88,7 +88,7 @@ describe('MiddlewareInputImplementation', () => {
 
   test('hasKey returns true if the key exists in the context', () => {
     // Given
-    const subject = new MiddlewareInputImplementation(
+    const subject = new MiddlewareInputImpl(
       'middlewareId',
       new Request('http://localhost:3000/'),
       { key: 'test' }

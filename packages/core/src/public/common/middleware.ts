@@ -62,7 +62,7 @@ export interface MiddlewareInput {
   hasKey(key: string): boolean
 }
 
-export class MiddlewareInputImplementation implements MiddlewareInput {
+export class MiddlewareInputImpl implements MiddlewareInput {
   middlewareId: string
   request: Request
   context: { [key: string]: any }
