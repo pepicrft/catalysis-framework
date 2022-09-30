@@ -1,5 +1,5 @@
 import { AbsolutePath } from 'typed-file-system-path'
-import { createProjectBundler } from '../../private/bundler.js'
+import { createProjectBundler } from '../../private/node/bundler.js'
 import { Project } from './project/models/project.js'
 
 export { Project } from './project/models/project.js'

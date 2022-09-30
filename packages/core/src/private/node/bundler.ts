@@ -1,14 +1,13 @@
-import { Abort } from '../public/common/error.js'
+import { Abort } from '../../public/common/error.js'
 import { absolutePath, AbsolutePath } from 'typed-file-system-path'
 import { createServer, ViteDevServer } from 'vite'
-import { Project, ProjectImpl } from '../public/node/project/models/project.js'
-import { content, fileToken } from '../public/node/logger.js'
-import { findPathUp } from '../public/node/fs.js'
-import { configurationFileName } from '../public/common/constants.js'
-import {
-  Configuration,
-  ConfigurationImpl,
-} from '../public/node/project/models/configuration.js'
+import { Project } from '../../public/node/project/models/project.js'
+import { content, fileToken } from '../../public/node/logger.js'
+import { findPathUp } from '../../public/node/fs.js'
+import { configurationFileName } from '../../public/common/constants.js'
+import { Configuration } from '../../public/node/project/models/configuration.js'
+import { ConfigurationImpl } from './project/models/configuration.js'
+import { ProjectImpl } from './project/models/project.js'
 
 interface ProjectBundler {
   /**

@@ -1,6 +1,6 @@
 import { createProjectBundler } from './bundler.js'
 import { describe, test, expect } from 'vitest'
-import { inTemporarydirectory } from '../public/testing/temporary.js'
+import { inTemporarydirectory } from '../../public/testing/temporary.js'
 
 // import { inTemporarydirectory } from '../../../public/testing/temporary.js'
 // import { joinPath } from '../../../public/node/path.js'
