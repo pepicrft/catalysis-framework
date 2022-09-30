@@ -7,18 +7,15 @@ export default function config() {
     resolve: {
       alias: [
         {
-          find: new RegExp('^@gestaltjs/(.+)/(.+)/(.+)/(.+)$'),
+          find: new RegExp('^@gestaltjs/core/internal/(.+)$'),
           replacement: pathJoin(
             __dirname,
-            '../packages/$1/src/public/$2/$3/$4.ts'
+            '../packages/core/src/internal/$1.ts'
           ),
         },
         {
-          find: new RegExp('^@gestaltjs/(.+)/(.+)/(.+)$'),
-          replacement: pathJoin(
-            __dirname,
-            '../packages/$1/src/public/$2/$3.ts'
-          ),
+          find: new RegExp('^@gestaltjs/core/(.+)$'),
+          replacement: pathJoin(__dirname, '../packages/core/src/public/$1.ts'),
         },
       ],
     },

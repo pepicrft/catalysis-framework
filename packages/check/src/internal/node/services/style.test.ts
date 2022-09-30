@@ -2,7 +2,7 @@ import { describe, test, expect, vi } from 'vitest'
 import { checkStyle } from './style.js'
 import type { LintOptions } from './style.js'
 import { runESLint } from '@gestaltjs/core/node/eslint'
-import { testProject } from '@gestaltjs/core/node/testing/fixtures'
+import { testProject } from '@gestaltjs/core/internal/node/testing/fixtures'
 
 vi.mock('@gestaltjs/core/node/eslint')
 

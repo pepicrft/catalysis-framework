@@ -19,6 +19,7 @@
     "composite": true,
     "paths": {
       "gestaltjs/*": ["../packages/gestaltjs/src/node/manifests/*.ts"],
+      "@gestaltjs/core/internal/*": ["../packages/core/src/internal/*.ts"],
       "@gestaltjs/core/*": ["../packages/core/src/public/*.ts"],
     }
   },

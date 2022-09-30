@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { inTemporarydirectory } from './testing/temporary.js'
+import { inTemporarydirectory } from '../../internal/node/testing/temporary.js'
 import { ScaffoldOptions, scaffold } from './template.js'
 import { joinPath } from './path.js'
 import { writeFile, pathExists, readFile, makeDirectory } from './fs.js'

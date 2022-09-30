@@ -1,5 +1,5 @@
 import { describe, test } from 'vitest'
-import { inTemporarydirectory } from '../../public/node/testing/temporary.js'
+import { inTemporarydirectory } from '../../internal/node/testing/temporary.js'
 
 // import { inTemporarydirectory } from '../../../public/testing/temporary.js'
 // import { joinPath } from '../../../public/node/path.js'

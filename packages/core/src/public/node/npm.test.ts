@@ -3,7 +3,7 @@ import { joinPath } from './path.js'
 import { writeFile, makeDirectory } from './fs.js'
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system.js'
-import { inTemporarydirectory } from './testing/temporary.js'
+import { inTemporarydirectory } from '../../internal/node/testing/temporary.js'
 import { encodeJson } from './json.js'
 
 vi.mock('./system')

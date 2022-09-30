@@ -1,5 +1,8 @@
 import { AbsolutePath } from 'typed-file-system-path'
-import { createProjectBundler } from '../../private/node/bundler.js'
+import {
+  createProjectBundler,
+  ProjectBundler,
+} from '../../private/node/bundler.js'
 import { Project } from './project/project.js'
 
 export { Project } from './project/project.js'
@@ -15,6 +18,13 @@ export { Plugin } from './project/plugin.js'
 export async function loadProject(
   fromDirectory: AbsolutePath
 ): Promise<Project> {
-  const bundler = createProjectBundler(fromDirectory)
-  return (await bundler).load()
+  let bundler: ProjectBundler | undefined
+  let project: Project
+  try {
+    bundler = await createProjectBundler(fromDirectory)
+    project = await bundler.load()
+  } finally {
+    await bundler?.close()
+  }
+  return project
 }

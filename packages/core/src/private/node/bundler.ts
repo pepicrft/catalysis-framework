@@ -9,7 +9,7 @@ import { Configuration } from '../../public/node/project/configuration.js'
 import { ConfigurationImpl } from './project/models/configuration.js'
 import { ProjectImpl } from './project/models/project.js'
 
-interface ProjectBundler {
+export interface ProjectBundler {
   /**
    * This function loads and returns a project
    */
@@ -42,7 +42,9 @@ export async function createProjectBundler(
     root: directory.pathString,
     cacheDir: undefined,
     server: {
-      middlewareMode: 'ssr',
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      middlewareMode: 'true',
     },
     clearScreen: false,
     logLevel: 'silent',
@@ -108,6 +110,9 @@ class ProjectBundlerImpl implements ProjectBundler {
       })
       return project
     } catch (error: any) {
+      console.log('noooo')
+      console.log(this.directory)
+      console.log(error)
       this.vite.ssrFixStacktrace(error)
       throw error
     }
