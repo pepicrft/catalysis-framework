@@ -1,10 +1,10 @@
 import { AbsolutePath } from 'typed-file-system-path'
 import { createProjectBundler } from '../../private/node/bundler.js'
-import { Project } from './project/models/project.js'
+import { Project } from './project/project.js'
 
-export { Project } from './project/models/project.js'
-export { Configuration } from './project/models/configuration.js'
-export { Plugin } from './project/models/plugin.js'
+export { Project } from './project/project.js'
+export { Configuration } from './project/configuration.js'
+export { Plugin } from './project/plugin.js'
 
 /**
  * It looks up a project by traversing up the directory structure from the given directory.

@@ -1,4 +1,4 @@
-import { AbsolutePath } from '../../path.js'
+import { AbsolutePath } from '../path.js'
 import type { Configuration } from './configuration'
 
 /**

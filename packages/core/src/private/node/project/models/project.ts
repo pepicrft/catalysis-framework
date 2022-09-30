@@ -1,6 +1,6 @@
 import { AbsolutePath } from 'typed-file-system-path'
-import { Project } from '../../../../public/node/project/models/project.js'
-import { Configuration } from '../../../../public/node/project/models/configuration.js'
+import { Project } from '../../../../public/node/project/project.js'
+import { Configuration } from '../../../../public/node/project/configuration.js'
 import { joinPath } from '../../../../public/node/path.js'
 
 export type ProjectImplConstructorOptions = {
