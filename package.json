@@ -21,7 +21,7 @@
   "type": "module",
   "devDependencies": {
     "@babel/core": "7.19.3",
-    "@changesets/cli": "2.24.4",
+    "@changesets/cli": "2.25.0",
     "@nrwl/cli": "14.8.2",
     "@nrwl/tao": "14.8.2",
     "@nrwl/workspace": "14.8.2",
