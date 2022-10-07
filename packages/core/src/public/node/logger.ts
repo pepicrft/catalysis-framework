@@ -9,38 +9,22 @@ import {
 } from './terminal.js'
 import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment.js'
-import { LoggerContentToken, LoggerContentType } from './logger/content.js'
 import { LoggerTarget, NoopLoggerTarget } from './logger/target.js'
 import { relativizePath } from './path.js'
+import {
+  ErrorLog,
+  LoggerContentToken,
+  LoggerContentType,
+  LoggerMessage,
+  LoggerTokenizedString,
+  stringify,
+} from '../common/logger.js'
 
 /**
  * We cache the loggers to ensure we only have an
  * instance per module and thus use the memory efficiently.
  */
 const cachedLoggers: { [key: string]: Logger } = {}
-
-export type ErrorLogType = 'bug' | 'abort' | 'unhandled'
-
-/**
- * It defines the type of an error log.
- */
-export type ErrorLog = {
-  type: ErrorLogType
-  message: string
-  error: object
-}
-
-/**
- * It represents a string that's been generated from a tokenized string.
- */
-class LoggerTokenizedString {
-  value: string
-  constructor(value: string) {
-    this.value = value
-  }
-}
-
-export type LoggerMessage = string | LoggerTokenizedString
 
 export type LoggerLogOptions = {
   sameProcess?: boolean
@@ -196,6 +180,35 @@ export class Logger {
   }
 }
 
+let _core: Logger | undefined
+
+export function coreLogger(): Logger {
+  if (_core) {
+    return _core
+  }
+  // NoopLoggerTarget
+  let target: LoggerTarget
+  if (isRunningTests()) {
+    target = new NoopLoggerTarget()
+  } else {
+    target = pino({
+      name: 'gestalt',
+      level: isRunningInVerbose() ? 'debug' : 'info',
+      transport: {
+        targets: [
+          {
+            target: `./logger/transport.js`,
+            options: {},
+            level: 'debug',
+          },
+        ],
+      },
+    })
+  }
+  _core = new Logger(target).child('core')
+  return _core
+}
+
 /**
  * Returns a token that represents a command.
  * @param value {string} The command (including its arguments)
@@ -238,19 +251,6 @@ export function urlToken(value: string, url: string): LoggerContentToken {
   return new LoggerContentToken(value, { url }, LoggerContentType.Url)
 }
 
-/**
- * Given a LoggerMessage instance, it returns a string representing it.
- * @param message {LoggerMessage} Either a tokenized content or a string.
- * @returns A string representing the content.
- */
-export function stringify(content: LoggerMessage): string {
-  if (content instanceof LoggerTokenizedString) {
-    return content.value
-  } else {
-    return content
-  }
-}
-
 type ContextBoxType = 'success'
 
 export function contentBox(
@@ -269,11 +269,11 @@ export function contentBox(
   output =
     output +
     `
-${stringify(body)
-  .split('\n')
-  .map((line) => `  ${line.trim()}`)
-  .join('\n')}
-  `
+  ${stringify(body)
+    .split('\n')
+    .map((line) => `  ${line.trim()}`)
+    .join('\n')}
+    `
   if (footer) {
     output = output + `\n${formatGray(stringify(footer))}`
   }
@@ -323,33 +323,4 @@ export function content(
     }
   })
   return new LoggerTokenizedString(output)
-}
-
-let _core: Logger | undefined
-
-export function coreLogger(): Logger {
-  if (_core) {
-    return _core
-  }
-  // NoopLoggerTarget
-  let target: LoggerTarget
-  if (isRunningTests()) {
-    target = new NoopLoggerTarget()
-  } else {
-    target = pino({
-      name: 'gestalt',
-      level: isRunningInVerbose() ? 'debug' : 'info',
-      transport: {
-        targets: [
-          {
-            target: `./logger/transport.js`,
-            options: {},
-            level: 'debug',
-          },
-        ],
-      },
-    })
-  }
-  _core = new Logger(target).child('core')
-  return _core
 }

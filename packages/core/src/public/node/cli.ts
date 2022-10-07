@@ -1,5 +1,5 @@
 import { run, flush, settings } from '@oclif/core'
-import { errorHandler } from '../common/error.js'
+import { errorHandler } from '../node/error.js'
 
 /**
  * Returns true if the current process has been called with either a --verbose or -v argument.

@@ -41,6 +41,9 @@ export async function createProjectBundler(
   const vite = await createServer({
     root: directory.pathString,
     cacheDir: undefined,
+    esbuild: {
+      exclude: ['pino'],
+    },
     server: {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -110,9 +113,6 @@ class ProjectBundlerImpl implements ProjectBundler {
       })
       return project
     } catch (error: any) {
-      console.log('noooo')
-      console.log(this.directory)
-      console.log(error)
       this.vite.ssrFixStacktrace(error)
       throw error
     }
