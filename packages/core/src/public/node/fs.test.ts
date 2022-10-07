@@ -4,7 +4,6 @@ import {
   readFile,
   writeFile,
 } from './fs.js'
-import { joinPath } from '../node/path.js'
 import { describe, test, expect } from 'vitest'
 import { inTemporarydirectory } from '../../internal/node/testing/temporary.js'
 
@@ -12,12 +11,12 @@ describe('readFile', () => {
   test('reads the file', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const filePath = joinPath(tmpDir, 'file.txt')
+      const filePath = tmpDir.appending('file.txt')
       const content = 'content'
-      await writeFile(filePath, content)
+      await writeFile(filePath.pathString, content)
 
       // When
-      const got = await readFile(filePath)
+      const got = await readFile(filePath.pathString)
 
       // Then
       expect(got).toEqual(content)
@@ -29,15 +28,15 @@ describe('moveFileOrDirectory', () => {
   test('moves a file', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const fromPath = joinPath(tmpDir, 'from')
-      const toPath = joinPath(tmpDir, 'to')
-      await writeFile(fromPath, 'content')
+      const fromPath = tmpDir.appending('from')
+      const toPath = tmpDir.appending('to')
+      await writeFile(fromPath.pathString, 'content')
 
       // When
-      await moveFileOrDirectory(fromPath, toPath)
+      await moveFileOrDirectory(fromPath.pathString, toPath.pathString)
 
       // Then
-      const content = await readFile(toPath)
+      const content = await readFile(toPath.pathString)
       expect(content).toEqual('content')
     })
   })
@@ -45,19 +44,19 @@ describe('moveFileOrDirectory', () => {
   test('moves a directory', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const fromPath = joinPath(tmpDir, 'from')
-      const fromPathFilePath = joinPath(fromPath, 'file')
-      await makeDirectory(fromPath)
-      await writeFile(fromPathFilePath, 'content')
-      await makeDirectory(fromPath)
-      const toPath = joinPath(tmpDir, 'to')
-      const toPathFilePath = joinPath(toPath, 'file')
+      const fromPath = tmpDir.appending('from')
+      const fromPathFilePath = fromPath.appending('file')
+      await makeDirectory(fromPath.pathString)
+      await writeFile(fromPathFilePath.pathString, 'content')
+      await makeDirectory(fromPath.pathString)
+      const toPath = tmpDir.appending('to')
+      const toPathFilePath = toPath.appending('file')
 
       // When
-      await moveFileOrDirectory(fromPath, toPath)
+      await moveFileOrDirectory(fromPath.pathString, toPath.pathString)
 
       // Then
-      const content = await readFile(toPathFilePath)
+      const content = await readFile(toPathFilePath.pathString)
       expect(content).toEqual('content')
     })
   })

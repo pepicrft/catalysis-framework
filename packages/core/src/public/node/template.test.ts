@@ -8,24 +8,24 @@ describe('scaffold basic file', () => {
   test('scaffold template', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const sourceDirectory = joinPath(tmpDir, 'source')
-      const targetDirectory = joinPath(tmpDir, 'target')
+      const sourceDirectory = tmpDir.appending('source')
+      const targetDirectory = tmpDir.appending('target')
       const handlebarData = {
         name: 'my-cool-project',
       }
       const fileName = 'hello-world.txt'
-      const sourceFile = joinPath(sourceDirectory, fileName)
-      await makeDirectory(sourceDirectory)
+      const sourceFile = joinPath(sourceDirectory.pathString, fileName)
+      await makeDirectory(sourceDirectory.pathString)
       await writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
-        sourceDirectory: sourceDirectory,
-        targetDirectory: targetDirectory,
+        sourceDirectory: sourceDirectory.pathString,
+        targetDirectory: targetDirectory.pathString,
         data: handlebarData,
       }
       // When
       await scaffold(scaffoldOptions)
       // Then
-      const targetFile = joinPath(targetDirectory, fileName)
+      const targetFile = joinPath(targetDirectory.pathString, fileName)
       await expect(pathExists(targetFile))
     })
   })
@@ -35,27 +35,27 @@ describe('scaffold handlebar file', () => {
   test('scaffold template', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const sourceDirectory = joinPath(tmpDir, 'source')
-      const targetDirectory = joinPath(tmpDir, '{{name}}')
+      const sourceDirectory = tmpDir.appending('source')
+      const targetDirectory = tmpDir.appending('{{name}}')
       const handlebarData = {
         name: 'my-cool-project',
       }
       const sourceFileName = '{{name}}.txt.hbs'
-      const sourceFile = joinPath(sourceDirectory, sourceFileName)
+      const sourceFile = joinPath(sourceDirectory.pathString, sourceFileName)
       const sourceContent = '{{name}}'
-      await makeDirectory(sourceDirectory)
+      await makeDirectory(sourceDirectory.pathString)
       await writeFile(sourceFile, sourceContent)
       const scaffoldOptions: ScaffoldOptions = {
-        sourceDirectory: sourceDirectory,
-        targetDirectory: targetDirectory,
+        sourceDirectory: sourceDirectory.pathString,
+        targetDirectory: targetDirectory.pathString,
         data: handlebarData,
       }
       // When
       await scaffold(scaffoldOptions)
       // Then
-      await expect(pathExists(targetDirectory))
+      await expect(pathExists(targetDirectory.pathString))
       const expectedFile = joinPath(
-        tmpDir,
+        tmpDir.pathString,
         'my-cool-project/my-cool-project.txt'
       )
       await expect(pathExists(expectedFile))

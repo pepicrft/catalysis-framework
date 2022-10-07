@@ -1,13 +1,35 @@
+import { absolutePath, joinPath } from '../../public/node/path.js'
+import { writeFile } from '../../public/node/fs.js'
 import { describe, test } from 'vitest'
 import { inTemporarydirectory } from '../../internal/node/testing/temporary.js'
+import { createProjectBundler } from './bundler.js'
 
-// import { inTemporarydirectory } from '../../../public/testing/temporary.js'
 // import { joinPath } from '../../../public/node/path.js'
 // import { writeFile } from '../../../public/node/fs.js'
 
 describe('getModuleLoader', () => {
   test('load loads a module successfully', async () => {
     await inTemporarydirectory(async (tmpDir) => {
+      // Given
+      const configurationFileContent = `
+import { defineConfiguration } from 'gestaltjs/configuration'
+
+// eslint-disable-next-line import/no-default-export
+export default defineConfiguration(() => ({
+  name: 'test',
+  plugins: [],
+}))
+`
+      const configurationFilePath = tmpDir.appending('gestalt.config.js')
+      await writeFile(
+        configurationFilePath.pathString,
+        configurationFileContent
+      )
+      const projectBundler = await createProjectBundler(tmpDir)
+
+      // When
+      // const got = await projectBundler.load()
+
       // // Given
       // const moduleContent = `
       //   const object = { name: "Test" };
