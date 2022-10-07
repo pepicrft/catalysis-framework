@@ -1,6 +1,6 @@
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 import { Flags } from '@oclif/core'
-import { resolvePath } from '@gestaltjs/core/node/path'
+import { absolutePath, resolvePath } from '@gestaltjs/core/node/path'
 import { initPrompt } from '../../../private/node/prompts/init.js'
 import { initService } from '../../../private/node/services/init.js'
 import { createProjectLogger } from '../../../private/node/logger.js'
@@ -61,7 +61,7 @@ export default class Init extends GestaltCommand {
     const options = { ...flags, ...(await initPrompt(flags)) }
     await initService({
       ...options,
-      directory: options.path,
+      directory: absolutePath(options.path),
     })
   }
 }

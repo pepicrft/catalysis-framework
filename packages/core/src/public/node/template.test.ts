@@ -14,18 +14,18 @@ describe('scaffold basic file', () => {
         name: 'my-cool-project',
       }
       const fileName = 'hello-world.txt'
-      const sourceFile = joinPath(sourceDirectory.pathString, fileName)
-      await makeDirectory(sourceDirectory.pathString)
+      const sourceFile = sourceDirectory.appending(fileName)
+      await makeDirectory(sourceDirectory)
       await writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
-        sourceDirectory: sourceDirectory.pathString,
-        targetDirectory: targetDirectory.pathString,
+        sourceDirectory: sourceDirectory,
+        targetDirectory: targetDirectory,
         data: handlebarData,
       }
       // When
       await scaffold(scaffoldOptions)
       // Then
-      const targetFile = joinPath(targetDirectory.pathString, fileName)
+      const targetFile = targetDirectory.appending(fileName)
       await expect(pathExists(targetFile))
     })
   })
@@ -41,21 +41,20 @@ describe('scaffold handlebar file', () => {
         name: 'my-cool-project',
       }
       const sourceFileName = '{{name}}.txt.hbs'
-      const sourceFile = joinPath(sourceDirectory.pathString, sourceFileName)
+      const sourceFile = sourceDirectory.appending(sourceFileName)
       const sourceContent = '{{name}}'
-      await makeDirectory(sourceDirectory.pathString)
+      await makeDirectory(sourceDirectory)
       await writeFile(sourceFile, sourceContent)
       const scaffoldOptions: ScaffoldOptions = {
-        sourceDirectory: sourceDirectory.pathString,
-        targetDirectory: targetDirectory.pathString,
+        sourceDirectory: sourceDirectory,
+        targetDirectory: targetDirectory,
         data: handlebarData,
       }
       // When
       await scaffold(scaffoldOptions)
       // Then
-      await expect(pathExists(targetDirectory.pathString))
-      const expectedFile = joinPath(
-        tmpDir.pathString,
+      await expect(pathExists(targetDirectory))
+      const expectedFile = tmpDir.appending(
         'my-cool-project/my-cool-project.txt'
       )
       await expect(pathExists(expectedFile))

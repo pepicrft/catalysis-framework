@@ -10,7 +10,7 @@ import {
 import terminalLink from 'terminal-link'
 import { isRunningTests } from './environment.js'
 import { LoggerTarget, NoopLoggerTarget } from './logger/target.js'
-import { relativizePath } from './path.js'
+import { AbsolutePath, RelativePath, relativizePath } from './path.js'
 import {
   ErrorLog,
   LoggerContentToken,
@@ -218,8 +218,14 @@ export function commandToken(value: string): LoggerContentToken {
   return new LoggerContentToken(value, {}, LoggerContentType.Command)
 }
 
-export function chooseDirectoryToken(path: string): LoggerContentToken {
-  return new LoggerContentToken(path, {}, LoggerContentType.ChooseDirectory)
+export function chooseDirectoryToken(
+  path: AbsolutePath | RelativePath
+): LoggerContentToken {
+  return new LoggerContentToken(
+    path.pathString,
+    {},
+    LoggerContentType.ChooseDirectory
+  )
 }
 
 /**
@@ -227,8 +233,10 @@ export function chooseDirectoryToken(path: string): LoggerContentToken {
  * @param value {string} The path (either to a directory or a file)
  * @returns {LoggerContentToken} A token that represents a path.
  */
-export function pathToken(value: string): LoggerContentToken {
-  return new LoggerContentToken(value, {}, LoggerContentType.Path)
+export function pathToken(
+  value: AbsolutePath | RelativePath
+): LoggerContentToken {
+  return new LoggerContentToken(value.pathString, {}, LoggerContentType.Path)
 }
 
 /**

@@ -1,3 +1,4 @@
+import { AbsolutePath } from 'typed-file-system-path'
 import { coreLogger } from './logger.js'
 import { exec } from './system.js'
 
@@ -27,7 +28,7 @@ export type InitGitRepositoryOptions = {
   /**
    * Directory where the Git repository will be initialized
    */
-  directory: string
+  directory: AbsolutePath
 }
 
 /**
@@ -42,5 +43,5 @@ export async function initGitRepository(
   if (options.branch) {
     args = args.concat(['-b', options.branch])
   }
-  await exec('git', args, { cwd: options.directory })
+  await exec('git', args, { cwd: options.directory.pathString })
 }

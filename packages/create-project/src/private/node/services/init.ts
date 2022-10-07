@@ -1,6 +1,6 @@
 import { createProjectLogger } from '../logger.js'
 import { hyphenCased } from '@gestaltjs/core/common/string'
-import { joinPath } from '@gestaltjs/core/node/path'
+import { AbsolutePath, joinPath } from '@gestaltjs/core/node/path'
 import {
   inTemporarydirectory,
   makeDirectory,
@@ -29,7 +29,7 @@ import { pnpmInstall } from '@gestaltjs/core/node/pnpm'
  * @param directory {directory} The absolute path to the already-existing directory.
  * @returns {Abort} An abort error.
  */
-export const ProjectDirectoryExistsError = (directory: string) => {
+export const ProjectDirectoryExistsError = (directory: AbsolutePath) => {
   return new Abort(
     content`The directory ${pathToken(directory)} already exists.`
   )
@@ -51,7 +51,7 @@ export type InitServiceOptions = {
   /**
    * The directory where the project's directory will get created.
    */
-  directory: string
+  directory: AbsolutePath
 
   /**
    * The package manager to use to install dependencies
@@ -60,7 +60,7 @@ export type InitServiceOptions = {
 }
 
 export async function initService(options: InitServiceOptions) {
-  const projectDirectory = joinPath(options.directory, options.name)
+  const projectDirectory = options.directory.appending(options.name)
   await ensureProjectDirectoryAbsence(projectDirectory)
 
   await inTemporarydirectory(async (temporaryDirectory) => {
@@ -99,10 +99,10 @@ export async function initService(options: InitServiceOptions) {
 
 /**
  * It throws an error if the project directory already exists in the system.
- * @param directory {string} Absolute path to the project directory.
+ * @param directory {AbsolutePath} Absolute path to the project directory.
  * @throws {ProjectDirectoryExistsError} If the directory already exists.
  */
-export async function ensureProjectDirectoryAbsence(directory: string) {
+export async function ensureProjectDirectoryAbsence(directory: AbsolutePath) {
   if (await pathExists(directory)) {
     throw ProjectDirectoryExistsError(directory)
   }
@@ -110,9 +110,9 @@ export async function ensureProjectDirectoryAbsence(directory: string) {
 
 /**
  * Creates the directory hierarchy.
- * @param directory {string} Absolute path to the project directory.
+ * @param directory {AbsolutePath} Absolute path to the project directory.
  */
-export async function initDirectories(directory: string) {
+export async function initDirectories(directory: AbsolutePath) {
   const directories = [
     '_build',
     'assets',
@@ -124,16 +124,16 @@ export async function initDirectories(directory: string) {
     'src/components',
   ]
   for (const directoryName of directories) {
-    const directoryPath = joinPath(directory, directoryName)
+    const directoryPath = directory.appending(directoryName)
     createProjectLogger().debug(`Creating directory: ${directoryPath}`)
-    const gitkeepPath = joinPath(directoryPath, '.gitkeep')
+    const gitkeepPath = directoryPath.appending('.gitkeep')
     await makeDirectory(directoryPath)
     await writeFile(gitkeepPath, '')
   }
 }
 
 export async function initPackageJson(
-  directory: string,
+  directory: AbsolutePath,
   options: InitServiceOptions
 ) {
   let packageJson: any = {
@@ -164,12 +164,12 @@ export async function initPackageJson(
     }
   }
 
-  const packageJsonPath = joinPath(directory, 'package.json')
+  const packageJsonPath = directory.appending('package.json')
   await writeFile(packageJsonPath, encodeJson(packageJson, undefined, 2))
 }
 
 export async function initREADME(
-  directory: string,
+  directory: AbsolutePath,
   options: InitServiceOptions
 ) {
   const content = `
@@ -189,11 +189,11 @@ This repository contains a [Gestalt](https://gestaltjs.org) project.
 - [Gestalt](https://gestaltjs.org)
 - [NPM registry](https://npmjs.com)
   `
-  await writeFile(joinPath(directory, 'README.md'), content)
+  await writeFile(directory.appending('README.md'), content)
 }
 
-async function initGestaltConfig(directory: string, projectName: string) {
-  const gestaltConfigPath = joinPath(directory, 'gestalt.config.ts')
+async function initGestaltConfig(directory: AbsolutePath, projectName: string) {
+  const gestaltConfigPath = directory.appending('gestalt.config.ts')
   const content = `import { defineConfiguration } from "gestaltjs/configuration"
 
 export default defineConfiguration(() => ({
@@ -204,8 +204,8 @@ export default defineConfiguration(() => ({
   await writeFile(gestaltConfigPath, content)
 }
 
-async function initTSConfig(directory: string) {
-  const tsconfigPath = joinPath(directory, 'tsconfig.json')
+async function initTSConfig(directory: AbsolutePath) {
+  const tsconfigPath = directory.appending('tsconfig.json')
   // TODO: Make it extend from a tsconfig generated.
   const tsconfig = {
     compileOnSave: false,
@@ -227,7 +227,7 @@ async function initTSConfig(directory: string) {
   await writeFile(tsconfigPath, encodeJson(tsconfig, undefined, 2))
 }
 
-async function initGitignore(directory: string) {
+async function initGitignore(directory: AbsolutePath) {
   const content = `
 ### macOS ###
 # General
@@ -333,5 +333,5 @@ node_modules/
 _build
 .gestalt
 `
-  await writeFile(joinPath(directory, '.gitignore'), content)
+  await writeFile(directory.appending('.gitignore'), content)
 }

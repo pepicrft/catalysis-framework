@@ -1,11 +1,17 @@
 import fg from 'fast-glob'
-import { joinPath, relativePathFrom, parentDirectory } from './path.js'
+import {
+  joinPath,
+  relativePathFrom,
+  parentDirectory,
+  absolutePath,
+  AbsolutePath,
+} from './path.js'
 import { copyFile, makeDirectory, writeFile, readFile } from './fs.js'
 import Handlebars from 'handlebars'
 
 export type ScaffoldOptions = {
-  sourceDirectory: string
-  targetDirectory: string
+  sourceDirectory: AbsolutePath
+  targetDirectory: AbsolutePath
   data: { [key: string]: string }
 }
 
@@ -16,16 +22,23 @@ export type ScaffoldOptions = {
  */
 export async function scaffold(scaffoldOptions: ScaffoldOptions) {
   const entries = await fg(
-    [joinPath(scaffoldOptions.sourceDirectory, '**/*')],
+    [joinPath(scaffoldOptions.sourceDirectory.pathString, '**/*')],
     {
       dot: true,
       onlyFiles: true,
     }
   )
   await Promise.all(
-    entries.map(async (sourceFile) => {
-      const path = relativePathFrom(scaffoldOptions.sourceDirectory, sourceFile)
-      let targetFile = joinPath(scaffoldOptions.targetDirectory, path)
+    entries.map(async (sourceFileString) => {
+      const sourceFile = absolutePath(sourceFileString)
+      const path = relativePathFrom(
+        scaffoldOptions.sourceDirectory.pathString,
+        sourceFile.pathString
+      )
+      let targetFile = joinPath(
+        scaffoldOptions.targetDirectory.pathString,
+        path
+      )
       if (targetFile.endsWith('.hbs')) {
         const sourceContent = await readFile(sourceFile)
         const contentTemplate = Handlebars.compile(sourceContent)
@@ -34,12 +47,12 @@ export async function scaffold(scaffoldOptions: ScaffoldOptions) {
         targetFile = fileNameTemplate(scaffoldOptions.data)
         targetFile = targetFile.replace('.hbs', '')
         const targetFileDirectory = parentDirectory(targetFile)
-        await makeDirectory(targetFileDirectory)
-        await writeFile(targetFile, targetContent)
+        await makeDirectory(absolutePath(targetFileDirectory))
+        await writeFile(absolutePath(targetFile), targetContent)
       } else {
         const targetFileDirectory = parentDirectory(targetFile)
-        await makeDirectory(targetFileDirectory)
-        await copyFile(sourceFile, targetFile)
+        await makeDirectory(absolutePath(targetFileDirectory))
+        await copyFile(sourceFile, absolutePath(targetFile))
       }
     })
   )

@@ -3,6 +3,7 @@ import { pathExists, readFile } from './fs.js'
 import { content, coreLogger, pathToken } from './logger.js'
 import parseJson from 'parse-json'
 import safeStringify from 'fast-safe-stringify'
+import { AbsolutePath } from 'typed-file-system-path'
 
 /**
  * A function that returns an Abort error that represents that
@@ -11,7 +12,7 @@ import safeStringify from 'fast-safe-stringify'
  * @param path {string} The absolute path to the JSON file.
  * @returns {Abort} An Abort instance.
  */
-export const JSONFileNotFoundError = (path: string) => {
+export const JSONFileNotFoundError = (path: AbsolutePath) => {
   return new Abort(
     content`We couldn't read the JSON file at ${pathToken(
       path
@@ -26,7 +27,10 @@ export const JSONFileNotFoundError = (path: string) => {
  * @param error {Error | undefined} The parsing error.
  * @returns {Abort} An Abort instance.
  */
-export const JSONFileDecodeError = (path: string, error: Error | undefined) => {
+export const JSONFileDecodeError = (
+  path: AbsolutePath,
+  error: Error | undefined
+) => {
   if (error?.message) {
     return new Abort(content`We couldn't decode the content of the JSON file ${pathToken(
       path
@@ -73,7 +77,7 @@ export const JSONEncodeError = (error: Error) => {
  * @param path {string} The absolute path to the JSON file to read.
  * @returns {Promise<any>} A promise that resolves with a Javascript object representing the JSON content.
  */
-export async function decodeJsonFile(path: string): Promise<any> {
+export async function decodeJsonFile(path: AbsolutePath): Promise<any> {
   coreLogger().debug(content`Reading JSON file from path ${pathToken(path)}`)
   const fileExists = await pathExists(path)
   if (!fileExists) {

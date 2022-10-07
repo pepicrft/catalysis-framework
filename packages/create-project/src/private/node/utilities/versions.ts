@@ -1,6 +1,6 @@
 import { findPathUp } from '@gestaltjs/core/node/fs'
 import { decodeJsonFile } from '@gestaltjs/core/node/json'
-import { moduleDirname } from '@gestaltjs/core/node/path'
+import { absolutePath, moduleDirname } from '@gestaltjs/core/node/path'
 
 /**
  * It returns the version of the gestaltjs dependency that should be use.
@@ -20,6 +20,6 @@ export async function getVersionForGeneratedProject(): Promise<string> {
     type: 'file',
     cwd: moduleDirname(import.meta.url),
   })) as string
-  const { version } = await decodeJsonFile(packageJsonPath)
+  const { version } = await decodeJsonFile(absolutePath(packageJsonPath))
   return version
 }

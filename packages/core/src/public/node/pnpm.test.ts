@@ -1,3 +1,4 @@
+import { absolutePath } from 'typed-file-system-path'
 import { describe, expect, test, vi } from 'vitest'
 import { isPnpmPresent, pnpmInstall } from './pnpm.js'
 import { exec } from './system.js'
@@ -9,7 +10,7 @@ describe('pnpmInstall', () => {
     // Given
     const output: any = {}
     vi.mocked(exec).mockResolvedValue(output)
-    const directory = '/tmp'
+    const directory = absolutePath('/tmp')
     const stdout: any = 'stdout'
     const stderr: any = 'stderr'
 
@@ -22,7 +23,7 @@ describe('pnpmInstall', () => {
 
     // Then
     expect(exec).toHaveBeenCalledWith('pnpm', ['install'], {
-      cwd: directory,
+      cwd: directory.pathString,
       stdout,
       stderr,
     })

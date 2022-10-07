@@ -1,3 +1,4 @@
+import { absolutePath } from 'typed-file-system-path'
 import { describe, expect, test, vi } from 'vitest'
 import { initGitRepository } from './git.js'
 import { exec } from './system.js'
@@ -7,7 +8,7 @@ vi.mock('./system.js')
 describe('initGitRepository', async () => {
   test('invokes git with the right arguments', async () => {
     // Given
-    const directory = '/tmp/project'
+    const directory = absolutePath('/tmp/project')
     const branch = 'main'
 
     // When
@@ -18,7 +19,7 @@ describe('initGitRepository', async () => {
 
     // Then
     expect(exec).toHaveBeenCalledWith('git', ['init', '-b', branch], {
-      cwd: directory,
+      cwd: directory.pathString,
     })
   })
 })

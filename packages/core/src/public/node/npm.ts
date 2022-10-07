@@ -1,5 +1,5 @@
 import { Bug } from '../common/error.js'
-import { joinPath } from './path.js'
+import { absolutePath, joinPath } from './path.js'
 import { pathExists } from './fs.js'
 import { content, fileToken } from './logger.js'
 import { WriteStream } from 'fs-extra'
@@ -84,7 +84,7 @@ type AddDependencyOptions = {
  */
 export async function addDependencies(options: AddDependencyOptions) {
   const packageJsonPath = joinPath(options.directory, 'package.json')
-  const packageJsonExists = await pathExists(packageJsonPath)
+  const packageJsonExists = await pathExists(absolutePath(packageJsonPath))
   if (!packageJsonExists) {
     throw PackageJsonNotFoundError(options.directory)
   }

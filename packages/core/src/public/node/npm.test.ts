@@ -13,7 +13,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -36,7 +36,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -59,7 +59,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -82,7 +82,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -105,7 +105,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -128,7 +128,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -151,7 +151,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -174,7 +174,7 @@ describe('addDependencies', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const packageJsonPath = tmpDir.appending('package.json')
-      await writeFile(packageJsonPath.pathString, encodeJson({}))
+      await writeFile(packageJsonPath, encodeJson({}))
 
       // When
       await addDependencies({
@@ -199,12 +199,12 @@ describe('inferDependencyManager', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const lockfilePath = tmpDir.appending('yarn.lock')
-      const nestedDirectory = joinPath(tmpDir.pathString, 'a/b/c')
+      const nestedDirectory = tmpDir.appending('a/b/c')
       await makeDirectory(nestedDirectory)
-      await writeFile(lockfilePath.pathString, '')
+      await writeFile(lockfilePath, '')
 
       // When
-      const got = await inferDependencyManager(nestedDirectory)
+      const got = await inferDependencyManager(nestedDirectory.pathString)
 
       // Then
       expect(got).toEqual('yarn')
@@ -215,12 +215,12 @@ describe('inferDependencyManager', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const lockfilePath = tmpDir.appending('pnpm-lock.yaml')
-      const nestedDirectory = joinPath(tmpDir.pathString, 'a/b/c')
+      const nestedDirectory = tmpDir.appending('a/b/c')
       await makeDirectory(nestedDirectory)
-      await writeFile(lockfilePath.pathString, '')
+      await writeFile(lockfilePath, '')
 
       // When
-      const got = await inferDependencyManager(nestedDirectory)
+      const got = await inferDependencyManager(nestedDirectory.pathString)
 
       // Then
       expect(got).toEqual('pnpm')
@@ -231,7 +231,7 @@ describe('inferDependencyManager', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const nestedDirectory = tmpDir.appending('a/b/c')
-      await makeDirectory(nestedDirectory.pathString)
+      await makeDirectory(nestedDirectory)
 
       // When
       const got = await inferDependencyManager(nestedDirectory.pathString)

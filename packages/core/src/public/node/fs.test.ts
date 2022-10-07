@@ -13,10 +13,10 @@ describe('readFile', () => {
       // Given
       const filePath = tmpDir.appending('file.txt')
       const content = 'content'
-      await writeFile(filePath.pathString, content)
+      await writeFile(filePath, content)
 
       // When
-      const got = await readFile(filePath.pathString)
+      const got = await readFile(filePath)
 
       // Then
       expect(got).toEqual(content)
@@ -30,13 +30,13 @@ describe('moveFileOrDirectory', () => {
       // Given
       const fromPath = tmpDir.appending('from')
       const toPath = tmpDir.appending('to')
-      await writeFile(fromPath.pathString, 'content')
+      await writeFile(fromPath, 'content')
 
       // When
-      await moveFileOrDirectory(fromPath.pathString, toPath.pathString)
+      await moveFileOrDirectory(fromPath, toPath)
 
       // Then
-      const content = await readFile(toPath.pathString)
+      const content = await readFile(toPath)
       expect(content).toEqual('content')
     })
   })
@@ -46,17 +46,17 @@ describe('moveFileOrDirectory', () => {
       // Given
       const fromPath = tmpDir.appending('from')
       const fromPathFilePath = fromPath.appending('file')
-      await makeDirectory(fromPath.pathString)
-      await writeFile(fromPathFilePath.pathString, 'content')
-      await makeDirectory(fromPath.pathString)
+      await makeDirectory(fromPath)
+      await writeFile(fromPathFilePath, 'content')
+      await makeDirectory(fromPath)
       const toPath = tmpDir.appending('to')
       const toPathFilePath = toPath.appending('file')
 
       // When
-      await moveFileOrDirectory(fromPath.pathString, toPath.pathString)
+      await moveFileOrDirectory(fromPath, toPath)
 
       // Then
-      const content = await readFile(toPathFilePath.pathString)
+      const content = await readFile(toPathFilePath)
       expect(content).toEqual('content')
     })
   })

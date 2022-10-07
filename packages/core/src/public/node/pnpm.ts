@@ -1,4 +1,5 @@
 import { Writable } from 'node:stream'
+import { AbsolutePath } from 'typed-file-system-path'
 import { exec } from './system.js'
 
 /**
@@ -7,7 +8,7 @@ import { exec } from './system.js'
  */
 type PNPMInstallOptions = {
   /** Directory containing a package.json */
-  directory: string
+  directory: AbsolutePath
   /** Stream to forward standard output events */
   stdout?: Writable
   /** Stream to forward standard error events */
@@ -22,7 +23,7 @@ type PNPMInstallOptions = {
  */
 export async function pnpmInstall(options: PNPMInstallOptions) {
   await exec('pnpm', ['install'], {
-    cwd: options.directory,
+    cwd: options.directory.pathString,
     stdout: options.stdout,
     stderr: options.stderr,
   })

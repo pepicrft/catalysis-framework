@@ -21,10 +21,7 @@ export default defineConfiguration(() => ({
 }))
 `
       const configurationFilePath = tmpDir.appending('gestalt.config.js')
-      await writeFile(
-        configurationFilePath.pathString,
-        configurationFileContent
-      )
+      await writeFile(configurationFilePath, configurationFileContent)
       const projectBundler = await createProjectBundler(tmpDir)
 
       // When
