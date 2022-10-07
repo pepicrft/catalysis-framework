@@ -54,7 +54,7 @@
     "type-check": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm tsc --noEmit",
+        "command": "pnpm tsc --noEmit --incremental",
         "cwd": "packages/build"
       }
     }

@@ -21,7 +21,7 @@
       "dependsOn": ["^build"]
     },
     "type-check": {
-      "dependsOn": []
+      "dependsOn": ["^build"]
     }
   }
 }
