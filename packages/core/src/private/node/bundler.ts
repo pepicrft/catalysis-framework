@@ -36,7 +36,7 @@ export async function createProjectBundler(
       )} configuration file.`,
     })
   }
-  const directory = absolutePath(configurationManifestPath.parentDirectory)
+  const directory = configurationManifestPath.parentDirectory
 
   const vite = await createServer({
     root: directory.pathString,
@@ -94,7 +94,7 @@ class ProjectBundlerImpl implements ProjectBundler {
   }
 
   get directory(): AbsolutePath {
-    return absolutePath(this.configurationManifestPath.parentDirectory)
+    return this.configurationManifestPath.parentDirectory
   }
 
   async load(): Promise<Project> {

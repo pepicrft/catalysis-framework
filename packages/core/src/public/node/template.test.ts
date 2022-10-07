@@ -8,13 +8,13 @@ describe('scaffold basic file', () => {
   test('scaffold template', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const sourceDirectory = tmpDir.appending('source')
-      const targetDirectory = tmpDir.appending('target')
+      const sourceDirectory = tmpDir.pathAppendingComponent('source')
+      const targetDirectory = tmpDir.pathAppendingComponent('target')
       const handlebarData = {
         name: 'my-cool-project',
       }
       const fileName = 'hello-world.txt'
-      const sourceFile = sourceDirectory.appending(fileName)
+      const sourceFile = sourceDirectory.pathAppendingComponent(fileName)
       await makeDirectory(sourceDirectory)
       await writeFile(sourceFile, '')
       const scaffoldOptions: ScaffoldOptions = {
@@ -25,7 +25,7 @@ describe('scaffold basic file', () => {
       // When
       await scaffold(scaffoldOptions)
       // Then
-      const targetFile = targetDirectory.appending(fileName)
+      const targetFile = targetDirectory.pathAppendingComponent(fileName)
       await expect(pathExists(targetFile))
     })
   })
@@ -35,13 +35,13 @@ describe('scaffold handlebar file', () => {
   test('scaffold template', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const sourceDirectory = tmpDir.appending('source')
-      const targetDirectory = tmpDir.appending('{{name}}')
+      const sourceDirectory = tmpDir.pathAppendingComponent('source')
+      const targetDirectory = tmpDir.pathAppendingComponent('{{name}}')
       const handlebarData = {
         name: 'my-cool-project',
       }
       const sourceFileName = '{{name}}.txt.hbs'
-      const sourceFile = sourceDirectory.appending(sourceFileName)
+      const sourceFile = sourceDirectory.pathAppendingComponent(sourceFileName)
       const sourceContent = '{{name}}'
       await makeDirectory(sourceDirectory)
       await writeFile(sourceFile, sourceContent)
@@ -54,7 +54,7 @@ describe('scaffold handlebar file', () => {
       await scaffold(scaffoldOptions)
       // Then
       await expect(pathExists(targetDirectory))
-      const expectedFile = tmpDir.appending(
+      const expectedFile = tmpDir.pathAppendingComponent(
         'my-cool-project/my-cool-project.txt'
       )
       await expect(pathExists(expectedFile))

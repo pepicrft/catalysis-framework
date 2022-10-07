@@ -20,7 +20,8 @@ export default defineConfiguration(() => ({
   plugins: [],
 }))
 `
-      const configurationFilePath = tmpDir.appending('gestalt.config.js')
+      const configurationFilePath =
+        tmpDir.pathAppendingComponent('gestalt.config.js')
       await writeFile(configurationFilePath, configurationFileContent)
       const projectBundler = await createProjectBundler(tmpDir)
 

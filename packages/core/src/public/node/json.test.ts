@@ -17,7 +17,7 @@ describe('decodeJsonFile', () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
       const validJson = '{ "name": "test" }'
-      const jsonPath = tmpDir.appending('test.json')
+      const jsonPath = tmpDir.pathAppendingComponent('test.json')
       await writeFile(jsonPath, validJson)
 
       // When
@@ -31,7 +31,7 @@ describe('decodeJsonFile', () => {
   test("throws a JSONFileNotFoundError error if it doesn't exist", async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const jsonPath = tmpDir.appending('test.json')
+      const jsonPath = tmpDir.pathAppendingComponent('test.json')
 
       // When/Then
       await expect(async () => {
@@ -50,7 +50,7 @@ describe('decodeJsonFile', () => {
   }
 }
       `
-      const jsonPath = tmpDir.appending('test.json')
+      const jsonPath = tmpDir.pathAppendingComponent('test.json')
       await writeFile(jsonPath, invalidJson)
       let internalError: any | undefined
 

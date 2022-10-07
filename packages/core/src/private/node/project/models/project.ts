@@ -25,10 +25,10 @@ export class ProjectImpl implements Project {
   }
 
   get sourceDirectory(): AbsolutePath {
-    return this.directory.appending('src')
+    return this.directory.pathAppendingComponent('src')
   }
 
   get middlewaresDirectory(): AbsolutePath {
-    return this.sourceDirectory.appending('middlewares')
+    return this.sourceDirectory.pathAppendingComponent('middlewares')
   }
 }

@@ -60,7 +60,9 @@ export type InitServiceOptions = {
 }
 
 export async function initService(options: InitServiceOptions) {
-  const projectDirectory = options.directory.appending(options.name)
+  const projectDirectory = options.directory.pathAppendingComponent(
+    options.name
+  )
   await ensureProjectDirectoryAbsence(projectDirectory)
 
   await inTemporarydirectory(async (temporaryDirectory) => {
@@ -124,9 +126,9 @@ export async function initDirectories(directory: AbsolutePath) {
     'src/components',
   ]
   for (const directoryName of directories) {
-    const directoryPath = directory.appending(directoryName)
+    const directoryPath = directory.pathAppendingComponent(directoryName)
     createProjectLogger().debug(`Creating directory: ${directoryPath}`)
-    const gitkeepPath = directoryPath.appending('.gitkeep')
+    const gitkeepPath = directoryPath.pathAppendingComponent('.gitkeep')
     await makeDirectory(directoryPath)
     await writeFile(gitkeepPath, '')
   }
@@ -164,7 +166,7 @@ export async function initPackageJson(
     }
   }
 
-  const packageJsonPath = directory.appending('package.json')
+  const packageJsonPath = directory.pathAppendingComponent('package.json')
   await writeFile(packageJsonPath, encodeJson(packageJson, undefined, 2))
 }
 
@@ -189,11 +191,12 @@ This repository contains a [Gestalt](https://gestaltjs.org) project.
 - [Gestalt](https://gestaltjs.org)
 - [NPM registry](https://npmjs.com)
   `
-  await writeFile(directory.appending('README.md'), content)
+  await writeFile(directory.pathAppendingComponent('README.md'), content)
 }
 
 async function initGestaltConfig(directory: AbsolutePath, projectName: string) {
-  const gestaltConfigPath = directory.appending('gestalt.config.ts')
+  const gestaltConfigPath =
+    directory.pathAppendingComponent('gestalt.config.ts')
   const content = `import { defineConfiguration } from "gestaltjs/configuration"
 
 export default defineConfiguration(() => ({
@@ -205,7 +208,7 @@ export default defineConfiguration(() => ({
 }
 
 async function initTSConfig(directory: AbsolutePath) {
-  const tsconfigPath = directory.appending('tsconfig.json')
+  const tsconfigPath = directory.pathAppendingComponent('tsconfig.json')
   // TODO: Make it extend from a tsconfig generated.
   const tsconfig = {
     compileOnSave: false,
@@ -333,5 +336,5 @@ node_modules/
 _build
 .gestalt
 `
-  await writeFile(directory.appending('.gitignore'), content)
+  await writeFile(directory.pathAppendingComponent('.gitignore'), content)
 }

@@ -14,7 +14,7 @@ describe('ProjectImpl', () => {
     const got = project.sourceDirectory
 
     // Then
-    expect(got).toEqual(project.directory.appending('src'))
+    expect(got).toEqual(project.directory.pathAppendingComponent('src'))
   })
 
   test('middlewaresDirectory returns the right directory', () => {
@@ -22,6 +22,8 @@ describe('ProjectImpl', () => {
     const got = project.middlewaresDirectory
 
     // Then
-    expect(got).toEqual(project.directory.appending('src/middlewares'))
+    expect(got).toEqual(
+      project.directory.pathAppendingComponent('src/middlewares')
+    )
   })
 })

@@ -11,7 +11,7 @@ describe('readFile', () => {
   test('reads the file', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const filePath = tmpDir.appending('file.txt')
+      const filePath = tmpDir.pathAppendingComponent('file.txt')
       const content = 'content'
       await writeFile(filePath, content)
 
@@ -28,8 +28,8 @@ describe('moveFileOrDirectory', () => {
   test('moves a file', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const fromPath = tmpDir.appending('from')
-      const toPath = tmpDir.appending('to')
+      const fromPath = tmpDir.pathAppendingComponent('from')
+      const toPath = tmpDir.pathAppendingComponent('to')
       await writeFile(fromPath, 'content')
 
       // When
@@ -44,13 +44,13 @@ describe('moveFileOrDirectory', () => {
   test('moves a directory', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
-      const fromPath = tmpDir.appending('from')
-      const fromPathFilePath = fromPath.appending('file')
+      const fromPath = tmpDir.pathAppendingComponent('from')
+      const fromPathFilePath = fromPath.pathAppendingComponent('file')
       await makeDirectory(fromPath)
       await writeFile(fromPathFilePath, 'content')
       await makeDirectory(fromPath)
-      const toPath = tmpDir.appending('to')
-      const toPathFilePath = toPath.appending('file')
+      const toPath = tmpDir.pathAppendingComponent('to')
+      const toPathFilePath = toPath.pathAppendingComponent('file')
 
       // When
       await moveFileOrDirectory(fromPath, toPath)
