@@ -32,7 +32,7 @@ importers:
       fs-extra: 10.1.0
       install: 0.13.0
       nx: 14.8.3
-      pathe: 0.3.8
+      pathe: 0.3.9
       prettier: 2.7.1
       rimraf: 3.0.2
       shx: 0.3.4
@@ -71,7 +71,7 @@ importers:
       fs-extra: 10.1.0
       install: 0.13.0
       nx: 14.8.3
-      pathe: 0.3.8
+      pathe: 0.3.9
       prettier: 2.7.1
       rimraf: 3.0.2
       shx: 0.3.4
@@ -134,7 +134,7 @@ importers:
       ohmyfetch: 0.4.19
       parse-json: 6.0.2
       path-equal: 1.2.2
-      pathe: 0.3.8
+      pathe: 0.3.9
       picocolors: 1.0.0
       pino: 8.6.1
       pino-abstract-transport: 1.0.0
@@ -170,7 +170,7 @@ importers:
       ohmyfetch: 0.4.19
       parse-json: 6.0.2
       path-equal: 1.2.2
-      pathe: 0.3.8
+      pathe: 0.3.9
       picocolors: 1.0.0
       pino: 8.6.1
       pino-abstract-transport: 1.0.0
@@ -10894,8 +10894,8 @@ packages:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
 
-  /pathe/0.3.8:
-    resolution: {integrity: sha512-c71n61F1skhj/jzZe+fWE9XDoTYjWbUwIKVwFftZ5IOgiX44BVkTkD+/803YDgR50tqeO4eXWxLyVHBLWQAD1g==}
+  /pathe/0.3.9:
+    resolution: {integrity: sha512-6Y6s0vT112P3jD8dGfuS6r+lpa0qqNrLyHPOwvXMnyNTQaYiwgau2DP3aNDsR13xqtGj7rrPo+jFUATpU6/s+g==}
 
   /pathval/1.1.1:
     resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==}
@@ -13309,7 +13309,7 @@ packages:
   /typed-file-system-path/0.10.0:
     resolution: {integrity: sha512-LC/xzg9/wvBTiaf97BWpgkmpxe8UlzVy1r4mNoR+3MU5rNo3T5FC0JIN7mPRFLsv4fknjJ2t2BvU1zlkWRAA+w==}
     dependencies:
-      pathe: 0.3.8
+      pathe: 0.3.9
       shx: 0.3.4
       ts-error: 1.0.6
     dev: false
