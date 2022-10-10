@@ -123,7 +123,7 @@ importers:
       execa: 6.1.0
       fast-glob: 3.2.12
       fast-safe-stringify: 2.1.1
-      fastify: 4.7.0
+      fastify: 4.8.1
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -159,7 +159,7 @@ importers:
       execa: 6.1.0
       fast-glob: 3.2.12
       fast-safe-stringify: 2.1.1
-      fastify: 4.7.0
+      fastify: 4.8.1
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -7868,15 +7868,15 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.7.0:
-    resolution: {integrity: sha512-FK3WT6arZOd2Fm696vIn90DOFr1f8QZbFcvUzYRPJTBV0pzm1xN8Y3n9yegtv1ajAxpdTwuLhB10Wwb/ptMRqQ==}
+  /fastify/4.8.1:
+    resolution: {integrity: sha512-3an6yyXg7j5XPHTRxgFqUwIRaJPR7F8OPR8Uboo0SIgHx1orOqc9Y8Sl5Kz8+xK7JCy3c3mfRujskDjMu/nFfA==}
     dependencies:
       '@fastify/ajv-compiler': 3.3.1
       '@fastify/error': 3.0.0
       '@fastify/fast-json-stringify-compiler': 4.1.0
       abstract-logging: 2.0.1
       avvio: 8.2.0
-      find-my-way: 7.2.0
+      find-my-way: 7.3.1
       light-my-request: 5.6.1
       pino: 8.6.1
       process-warning: 2.0.0
@@ -8012,8 +8012,8 @@ packages:
       pkg-dir: 4.2.0
     dev: false
 
-  /find-my-way/7.2.0:
-    resolution: {integrity: sha512-27SFA5sSYDYFZCQ/7SSJB0yhStTP/qxKP1OEC8feZvkHFRuD3fGcQ97Y+0w8HpKTDfMYWXGU3h2ETRGt5zPWyA==}
+  /find-my-way/7.3.1:
+    resolution: {integrity: sha512-kGvM08SOkqvheLcuQ8GW9t/H901Qb9rZEbcNWbXopzy4jDRoaJpJoObPSKf4MnQLZ20ZTp7rL5MpF6rf+pqmyg==}
     engines: {node: '>=14'}
     dependencies:
       fast-deep-equal: 3.1.3
