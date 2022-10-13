@@ -1,7 +1,6 @@
 <div align="center">
   <img src="assets/header.png" width="200"/>
   <br/>
-  <a href="https://gitpod.io/#https://github.com/gestaltjs/gestalt" alt="Open in Gitpod"><img src="https://gitpod.io/button/open-in-gitpod.svg"/></a>
   <br/>
   <img src="https://github.com/gestaltjs/gestalt/workflows/Gestalt/badge.svg" alt="Gestalt">
   <img src="https://img.shields.io/github/forks/gestaltjs/gestalt?style=flat-square" alt="GitHub forks">

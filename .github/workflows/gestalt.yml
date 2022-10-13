@@ -17,7 +17,7 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     strategy:
       matrix:
-        node: ['18']
+        node: ['18.10.0']
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v3
@@ -38,20 +38,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: npx nx run-many --target=build --all --parallel=3
+        run: pnpm nx run-many --target=build --all --parallel=3
       - name: Test
-        run: npx nx run-many --target=test --all --parallel=3
+        run: pnpm nx run-many --target=test --all --parallel=3
       - name: Lint
-        run: npx nx run-many --target=lint --all --parallel=3
+        run: pnpm nx run-many --target=lint --all --parallel=3
       - name: Type-check
-        run: npx nx run-many --target=type-check --all --parallel=3
+        run: pnpm nx run-many --target=type-check --all --parallel=3
   main:
     name: Node ${{ matrix.node }} in ${{ matrix.os }}
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request' }}
     strategy:
       matrix:
-        node: ['18']
+        node: ['18.10.0']
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v3
@@ -72,10 +72,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: npx nx run-many --target=build --all --parallel=3
+        run: pnpm nx run-many --target=build --all --parallel=3
       - name: Test
-        run: npx nx run-many --target=test --all --all --parallel=3
+        run: pnpm nx run-many --target=test --all --all --parallel=3
       - name: Lint
-        run: npx nx run-many --target=lint --all --parallel=3
+        run: pnpm nx run-many --target=lint --all --parallel=3
       - name: Type-check
-        run: npx nx run-many --target=type-check --all --parallel=3
+        run: pnpm nx run-many --target=type-check --all --parallel=3
