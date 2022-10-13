@@ -1,5 +1,6 @@
 import { createPluginLogger } from '../../../private/logger.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { Flags } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
 export default class Init extends GestaltCommand {
