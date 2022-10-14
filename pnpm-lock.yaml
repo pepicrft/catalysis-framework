@@ -6,9 +6,9 @@ importers:
     specifiers:
       '@babel/core': 7.19.3
       '@changesets/cli': 2.25.0
-      '@nrwl/cli': 14.8.6
-      '@nrwl/tao': 14.8.6
-      '@nrwl/workspace': 14.8.6
+      '@nrwl/cli': 15.0.0
+      '@nrwl/tao': 15.0.0
+      '@nrwl/workspace': 15.0.0
       '@shopify/eslint-plugin': 42.0.1
       '@shopify/prettier-config': 1.1.2
       '@types/fs-extra': 9.0.13
@@ -31,7 +31,7 @@ importers:
       fast-glob: 3.2.12
       fs-extra: 10.1.0
       install: 0.13.0
-      nx: 14.8.6
+      nx: 15.0.0
       pathe: 0.3.9
       prettier: 2.7.1
       rimraf: 3.0.2
@@ -45,9 +45,9 @@ importers:
     devDependencies:
       '@babel/core': 7.19.3
       '@changesets/cli': 2.25.0
-      '@nrwl/cli': 14.8.6
-      '@nrwl/tao': 14.8.6
-      '@nrwl/workspace': 14.8.6_bg3kgcnp54urbdvxd3qtsi7exm
+      '@nrwl/cli': 15.0.0
+      '@nrwl/tao': 15.0.0
+      '@nrwl/workspace': 15.0.0_bg3kgcnp54urbdvxd3qtsi7exm
       '@shopify/eslint-plugin': 42.0.1_gdw6c6hvx3ofvutksankatp6m4
       '@shopify/prettier-config': 1.1.2
       '@types/fs-extra': 9.0.13
@@ -70,7 +70,7 @@ importers:
       fast-glob: 3.2.12
       fs-extra: 10.1.0
       install: 0.13.0
-      nx: 14.8.6
+      nx: 15.0.0
       pathe: 0.3.9
       prettier: 2.7.1
       rimraf: 3.0.2
@@ -3549,36 +3549,37 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nrwl/cli/14.8.6:
-    resolution: {integrity: sha512-R4udxekMd4jhoRPEksJu+224DocOIrAqenFo0D2R36epE5FaCnZQX7xg+b3TjRbdS10e426i4D9LuXdQmP5jJg==}
+  /@nrwl/cli/15.0.0:
+    resolution: {integrity: sha512-D0zAhZ375bQnoUM2HLifMzAa75A3/lC9OkkewsiVVbqaznjEIry8ezHZepgfjFRVzLr3ue7FIpDEH3iJIYzvVw==}
     dependencies:
-      nx: 14.8.6
+      nx: 15.0.0
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
       - debug
     dev: true
 
-  /@nrwl/devkit/14.8.6_nx@14.8.6+typescript@4.8.4:
-    resolution: {integrity: sha512-+3KqohOKeUuyS176jrwY0yeB3E2IFQ3jMkS0KizzsHGsZWdZbQ2WQ46hZ0/bvRh9Efl8CAg6n4fUWR0BXUePMA==}
+  /@nrwl/devkit/15.0.0_nx@15.0.0+typescript@4.8.4:
+    resolution: {integrity: sha512-ALtPfILlxLDg77rV/XNdDGbhUkh0gZPj/4Ehy3ScvVqPhTrDIZNLGX13dXgUUF9xhGb7SXPmvzZkduBpqmHnfQ==}
     peerDependencies:
-      nx: '>= 13.10 <= 15'
+      nx: '>= 14 <= 16'
     dependencies:
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.8.4
       ejs: 3.1.8
       ignore: 5.2.0
-      nx: 14.8.6
+      nx: 15.0.0
+      semver: 7.3.4
       tslib: 2.4.0
     transitivePeerDependencies:
       - typescript
     dev: true
 
-  /@nrwl/jest/14.8.6_rb45xicp4zbizweydrvl6bk27q:
-    resolution: {integrity: sha512-v+y833GGKVPc2RAd1odUGAzMdBUuKN6ZbbI8seAT+eI/2qQDvab51zOlf66/8zUv7Kr4yrkDYl0slf24GklTvQ==}
+  /@nrwl/jest/15.0.0_pynwdp2ntshao45c2jtk5ojx54:
+    resolution: {integrity: sha512-CSwUPMq/pFetackADicRGu1EiAvJVcOPwOvZdByfm8QLSZyFCXNjvpSUtbAnh48cKv+rU4jAlmJ3PZ7youJgiw==}
     dependencies:
       '@jest/reporters': 28.1.1
       '@jest/test-result': 28.1.1
-      '@nrwl/devkit': 14.8.6_nx@14.8.6+typescript@4.8.4
+      '@nrwl/devkit': 15.0.0_nx@15.0.0+typescript@4.8.4
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.8.4
       chalk: 4.1.0
       dotenv: 10.0.0
@@ -3597,19 +3598,19 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/linter/14.8.6_rndkktei3vy7iwyq5vptmc5zo4:
-    resolution: {integrity: sha512-Usqh17Q+BiZpownyMOC5TrDFkSSRazjTXmTFqUoLkfGI07qF8i7DB1hrqedE32mNv9V0N6LS3FaAb4plFPgPxA==}
+  /@nrwl/linter/15.0.0_rndkktei3vy7iwyq5vptmc5zo4:
+    resolution: {integrity: sha512-h2Momt/VfNtUIJESSG7FM9bfJFRfu/xpDnXgvvLLeUz+EWUfWK/HeuYhV1a9AGyTfCPV3pp4k7Ph/DiV//8VMQ==}
     peerDependencies:
       eslint: ^8.0.0
     peerDependenciesMeta:
       eslint:
         optional: true
     dependencies:
-      '@nrwl/devkit': 14.8.6_nx@14.8.6+typescript@4.8.4
-      '@nrwl/jest': 14.8.6_rb45xicp4zbizweydrvl6bk27q
+      '@nrwl/devkit': 15.0.0_nx@15.0.0+typescript@4.8.4
+      '@nrwl/jest': 15.0.0_pynwdp2ntshao45c2jtk5ojx54
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.8.4
       eslint: 8.25.0
-      nx: 14.8.6
+      nx: 15.0.0
       tmp: 0.2.1
       tslib: 2.4.0
     transitivePeerDependencies:
@@ -3623,28 +3624,28 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/tao/14.8.6:
-    resolution: {integrity: sha512-CByqrsfSJeonOd7TLAHP8bRYNWgDksxA7j+yncSzgQnFLEbZdJGG/AqqIovx8g6g2v0JS+nRgGC+w5UPf04UrQ==}
+  /@nrwl/tao/15.0.0:
+    resolution: {integrity: sha512-qup1eSWYwp/KVrw/wxeWBvYttQ9dcbQnqpXb5NQMD31SpXEZSpJB1i3GV/o6CF5qQQSNLwICXZx25rNTTQAqpg==}
     hasBin: true
     dependencies:
-      nx: 14.8.6
+      nx: 15.0.0
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
       - debug
     dev: true
 
-  /@nrwl/workspace/14.8.6_bg3kgcnp54urbdvxd3qtsi7exm:
-    resolution: {integrity: sha512-a0qUpy2LhnH1SIgMhiuu1JVqiGOKF+Lku/0HZv3WSEUEhn5+fpLgdQDbLbZVACMtjsGL9eNrR9rD4rRm+lth+Q==}
+  /@nrwl/workspace/15.0.0_bg3kgcnp54urbdvxd3qtsi7exm:
+    resolution: {integrity: sha512-VTmqjEiymLYRNPgMp9OrkIgBgX1BjwnDQtmTo+F0rSM5/KTjwmLevqoCApgeV1/YMTUHsjI4tLIOeOPvMARX7Q==}
     peerDependencies:
       prettier: ^2.6.2
     peerDependenciesMeta:
       prettier:
         optional: true
     dependencies:
-      '@nrwl/devkit': 14.8.6_nx@14.8.6+typescript@4.8.4
-      '@nrwl/jest': 14.8.6_rb45xicp4zbizweydrvl6bk27q
-      '@nrwl/linter': 14.8.6_rndkktei3vy7iwyq5vptmc5zo4
+      '@nrwl/devkit': 15.0.0_nx@15.0.0+typescript@4.8.4
+      '@nrwl/jest': 15.0.0_pynwdp2ntshao45c2jtk5ojx54
+      '@nrwl/linter': 15.0.0_rndkktei3vy7iwyq5vptmc5zo4
       '@parcel/watcher': 2.0.4
       chalk: 4.1.0
       chokidar: 3.5.3
@@ -3659,7 +3660,7 @@ packages:
       ignore: 5.2.0
       minimatch: 3.0.5
       npm-run-path: 4.0.1
-      nx: 14.8.6
+      nx: 15.0.0
       open: 8.4.0
       prettier: 2.7.1
       rxjs: 6.6.7
@@ -10523,8 +10524,8 @@ packages:
       boolbase: 1.0.0
     dev: false
 
-  /nx/14.8.6:
-    resolution: {integrity: sha512-QLU3sip/g3JdNO8n5Nw2esN+0G26Jsy3u1LlrB9Giu4zf/+KsfN8CcXMbEVqOnPR1FkCS52xliaq7IBQfvvMQA==}
+  /nx/15.0.0:
+    resolution: {integrity: sha512-uh9Ou5oj7yr6Uyp4QhqW1vIVoanYn1sJM1jzOyoT17GAhhODfS0BtQgUvlmInDuRqP8LMaPg4LXFMby07U1HXg==}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -10536,8 +10537,8 @@ packages:
       '@swc/core':
         optional: true
     dependencies:
-      '@nrwl/cli': 14.8.6
-      '@nrwl/tao': 14.8.6
+      '@nrwl/cli': 15.0.0
+      '@nrwl/tao': 15.0.0
       '@parcel/watcher': 2.0.4
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.20
