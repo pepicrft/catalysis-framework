@@ -1,9 +1,8 @@
-import { Command, Flags } from '@oclif/core'
+import { Flags } from '@oclif/core'
 import { resolvePath } from './path.js'
 
-// eslint-disable-next-line import/no-default-export
-export abstract class GestaltCommand extends Command {
-  static globalFlags = {
+export function globalFlags() {
+  return {
     verbose: Flags.boolean({
       name: 'verbose',
       char: 'v',
@@ -29,8 +28,10 @@ export abstract class GestaltCommand extends Command {
       required: false,
     }),
   }
+}
 
-  static projectFlags = {
+export function projectFlags() {
+  return {
     path: Flags.string({
       name: 'path',
       char: 'p',
