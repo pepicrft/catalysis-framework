@@ -1,4 +1,4 @@
-import { Flags } from '@oclif/core'
+import { Interfaces, Flags } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
 
@@ -9,7 +9,7 @@ import { absolutePath } from '@gestaltjs/core/node/path'
 export default class Style extends GestaltCommand {
   static description = 'Check the code style using ESLint.'
 
-  static flags = {
+  static flags: Interfaces.FlagInput = {
     ...GestaltCommand.globalFlags,
     ...GestaltCommand.projectFlags,
     fix: Flags.boolean({

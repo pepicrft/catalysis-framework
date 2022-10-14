@@ -1,5 +1,5 @@
 import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { Flags, Interfaces } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
 import {
   GenerateMiddlewareLanguage,
@@ -15,7 +15,7 @@ export default class Middleware extends GestaltCommand {
   static args = [
     { name: 'name', description: 'The name of the target', required: true },
   ]
-  static flags = {
+  static flags: Interfaces.FlagInput = {
     ...GestaltCommand.globalFlags,
     ...GestaltCommand.projectFlags,
     language: Flags.string({

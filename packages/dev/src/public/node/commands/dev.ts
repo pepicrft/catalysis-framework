@@ -1,14 +1,14 @@
 import { loadProject } from '@gestaltjs/core/node/project'
 import { devProject } from '../../../private/node/services/dev.js'
 import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { Interfaces } from '@oclif/core'
 import { absolutePath } from '@gestaltjs/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default class Dev extends GestaltCommand {
   static description = 'Serves a project for development'
 
-  static flags = {
+  static flags: Interfaces.FlagInput = {
     ...GestaltCommand.globalFlags,
     ...GestaltCommand.projectFlags,
   }

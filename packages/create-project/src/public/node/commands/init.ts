@@ -1,5 +1,5 @@
 import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { Interfaces, Flags } from '@oclif/core'
 import { absolutePath, resolvePath } from '@gestaltjs/core/node/path'
 import { initPrompt } from '../../../private/node/prompts/init.js'
 import { initService } from '../../../private/node/services/init.js'
@@ -10,7 +10,7 @@ import { content } from '@gestaltjs/core/node/logger'
 export default class Init extends GestaltCommand {
   static description = 'Create a Gestalt project'
 
-  static flags = {
+  static flags: Interfaces.FlagInput = {
     ...GestaltCommand.flags,
     local: Flags.boolean({
       name: 'local',

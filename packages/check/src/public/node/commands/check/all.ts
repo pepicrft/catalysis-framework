@@ -1,4 +1,4 @@
-import { Flags } from '@oclif/core'
+import { Interfaces, Flags } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
 import { checkStyle } from '../../../../internal/node/services/style.js'
@@ -9,7 +9,7 @@ import { absolutePath } from '@gestaltjs/core/node/path'
 export default class All extends GestaltCommand {
   static description = 'Check code and style.'
 
-  static flags = {
+  static flags: Interfaces.FlagInput = {
     ...GestaltCommand.globalFlags,
     ...GestaltCommand.projectFlags,
     fix: Flags.boolean({
