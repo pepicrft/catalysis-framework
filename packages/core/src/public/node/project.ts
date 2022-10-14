@@ -21,7 +21,7 @@ export async function loadProject(
   let bundler: ProjectBundler | undefined
   let project: Project
   try {
-    bundler = await createProjectBundler(fromDirectory)
+    bundler = await createProjectBundler({ fromDirectory })
     project = await bundler.load()
   } finally {
     await bundler?.close()

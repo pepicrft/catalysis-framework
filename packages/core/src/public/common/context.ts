@@ -1,4 +1,4 @@
-import { decodeJson, encodeJson } from '../node/json.js'
+import { decodeJSON, encodeJSON } from './json.js'
 
 /**
  * The context is used to expose information to manifest files at loading time.
@@ -20,7 +20,7 @@ export type Context = {
  * @param env {NodeJS.ProcessEnv} The Node environment to set the context.
  */
 export function setContext(context: Context, env = process.env) {
-  env.GESTALT_INTERNAL_CONTEXT = encodeJson(context)
+  env.GESTALT_INTERNAL_CONTEXT = encodeJSON(context)
 }
 
 /**
@@ -30,7 +30,7 @@ export function setContext(context: Context, env = process.env) {
 export function _useContext(env = process.env): Context {
   const envVariable = env.GESTALT_INTERNAL_CONTEXT
   if (envVariable) {
-    return decodeJson(envVariable)
+    return decodeJSON(envVariable)
   } else {
     return { environment: 'development' }
   }

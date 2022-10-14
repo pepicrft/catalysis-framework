@@ -18,7 +18,7 @@ import {
 } from '@gestaltjs/core/node/logger'
 import { getUsername } from '@gestaltjs/core/node/environment'
 import { initGitRepository, isGitAvailable } from '@gestaltjs/core/node/git'
-import { encodeJson } from '@gestaltjs/core/node/json'
+import { encodeJSON } from '@gestaltjs/core/common/json'
 import { getVersionForGeneratedProject } from '../utilities/versions.js'
 import { getLocalPackagesOverrides } from '../utilities/packages.js'
 import { pnpmInstall } from '@gestaltjs/core/node/pnpm'
@@ -167,7 +167,7 @@ export async function initPackageJson(
   }
 
   const packageJsonPath = directory.pathAppendingComponent('package.json')
-  await writeFile(packageJsonPath, encodeJson(packageJson, undefined, 2))
+  await writeFile(packageJsonPath, encodeJSON(packageJson, undefined, 2))
 }
 
 export async function initREADME(
@@ -227,7 +227,7 @@ async function initTSConfig(directory: AbsolutePath) {
     exclude: ['dist/**', '**/*/vitest.config.ts', 'node_modules'],
   }
 
-  await writeFile(tsconfigPath, encodeJson(tsconfig, undefined, 2))
+  await writeFile(tsconfigPath, encodeJSON(tsconfig, undefined, 2))
 }
 
 async function initGitignore(directory: AbsolutePath) {

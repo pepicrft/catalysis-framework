@@ -1,9 +1,9 @@
 import { Project } from '@gestaltjs/core/node/project'
-import { encodeJson } from '@gestaltjs/core/node/json'
+import { encodeJSON } from '@gestaltjs/core/common/json'
 
 type FormatJsonOptions = {
   project: Project
 }
 export function formatJson(options: FormatJsonOptions): string {
-  return encodeJson(options.project, undefined, 2)
+  return encodeJSON(options.project, undefined, 2)
 }

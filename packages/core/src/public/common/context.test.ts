@@ -1,6 +1,6 @@
 import { setContext, _useContext } from './context.js'
 import { describe, test, expect } from 'vitest'
-import { decodeJson, encodeJson } from '../node/json.js'
+import { decodeJSON, encodeJSON } from './json.js'
 
 describe('setContext', () => {
   test('serializes the context as a JSON and sets it to the env', () => {
@@ -12,7 +12,7 @@ describe('setContext', () => {
 
     // Then
     expect(
-      decodeJson(env.GESTALT_INTERNAL_CONTEXT as string).environment
+      decodeJSON(env.GESTALT_INTERNAL_CONTEXT as string).environment
     ).toEqual('production')
   })
 })
@@ -21,7 +21,7 @@ describe('useContext', () => {
   test('returns the context if it exists', () => {
     // Given
     const env: { GESTALT_INTERNAL_CONTEXT?: string } = {
-      GESTALT_INTERNAL_CONTEXT: encodeJson({ environment: 'production' }),
+      GESTALT_INTERNAL_CONTEXT: encodeJSON({ environment: 'production' }),
     }
 
     // When

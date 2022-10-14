@@ -1,5 +1,5 @@
 import { findPathUp } from '@gestaltjs/core/node/fs'
-import { decodeJsonFile } from '@gestaltjs/core/node/json'
+import { decodeJSONFile } from '@gestaltjs/core/node/json'
 import {
   absolutePath,
   glob,
@@ -27,7 +27,7 @@ export async function getLocalPackagesOverrides(): Promise<{
   )
   let entries = await Promise.all(
     packageJsonPaths.map(async (packageJsonPath): Promise<string[]> => {
-      const { name } = await decodeJsonFile(absolutePath(packageJsonPath))
+      const { name } = await decodeJSONFile(absolutePath(packageJsonPath))
       return [name, `file:${parentDirectory(packageJsonPath)}`]
     })
   )
