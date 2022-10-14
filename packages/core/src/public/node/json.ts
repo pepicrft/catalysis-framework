@@ -4,6 +4,10 @@ import { content, coreLogger, pathToken } from './logger.js'
 import parseJson from 'parse-json'
 import { AbsolutePath } from 'typed-file-system-path'
 
+/**
+ * An abort error that's thrown when a JSON file to be
+ * decoded doesn't exist in the file system.
+ */
 export class JSONFileNotFoundError extends Abort {
   constructor(path: AbsolutePath) {
     super(
@@ -14,6 +18,11 @@ export class JSONFileNotFoundError extends Abort {
   }
 }
 
+/**
+ * An abort error that's thrown when there's an error decoding the JSON,
+ * possibly because the JSON to be decoded is invalid. The error contains
+ * details about why it couldn't get decoded.
+ */
 export class JSONFileDecodeError extends Abort {
   constructor(path: AbsolutePath, error: Error) {
     if (error?.message) {

@@ -2,6 +2,10 @@ import { Abort } from '../common/error.js'
 import parseJson from 'parse-json'
 import safeStringify from 'fast-safe-stringify'
 
+/**
+ * An abort error that's thrown when a JSON cannot be decoded
+ * possibly due to an invalid JSON.
+ */
 export class DecodeJSONError extends Abort {
   constructor(error: Error) {
     if (error?.message) {

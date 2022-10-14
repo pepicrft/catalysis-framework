@@ -21,10 +21,26 @@ export interface ProjectBundler {
   close: () => Promise<void>
 }
 
-export async function createProjectBundler(options: {
+type CreateProjectBundlerOptions = {
+  /**
+   * The bundler creation traverses the directory structure from this directory
+   * looking for a project. If it can't find the project it throws.
+   */
   fromDirectory: AbsolutePath
+  /**
+   * Resolve is intended for tests to provide aliases to resolve modules.
+   */
   resolve?: InlineConfig['resolve']
-}): Promise<ProjectBundler> {
+}
+
+/**
+ * Creates a bundler to load and watch a project.
+ * @param options {CreateProjectBundlerOptions} The options to create a bundler.
+ * @returns {Promise<ProjectBundler>} A promise that resolves with the project bundler.
+ */
+export async function createProjectBundler(
+  options: CreateProjectBundlerOptions
+): Promise<ProjectBundler> {
   const configurationManifestPath = await lookupConfigurationPathTraversing(
     options.fromDirectory
   )
@@ -99,14 +115,7 @@ class ProjectBundlerImpl implements ProjectBundler {
 
   async load(): Promise<Project> {
     try {
-      const configurationModule = await this.vite.ssrLoadModule(
-        this.configurationManifestPath.pathString
-      )
-      const configuration = new ConfigurationImpl({
-        path: this.configurationManifestPath,
-        userConfiguration:
-          (await configurationModule.default()) as Configuration,
-      })
+      const configuration = await this.loadConfiguration()
 
       const project = new ProjectImpl({
         configuration,
@@ -119,6 +128,25 @@ class ProjectBundlerImpl implements ProjectBundler {
     }
   }
 
+  /**
+   * It transpiles, loads, and returns the project's configuration.
+   * @returns {Promise<ConfigurationImpl>} Returns the project configuration.
+   */
+  private async loadConfiguration() {
+    const configurationModule = await this.vite.ssrLoadModule(
+      this.configurationManifestPath.pathString
+    )
+    const configuration = new ConfigurationImpl({
+      path: this.configurationManifestPath,
+      userConfiguration: (await configurationModule.default()) as Configuration,
+    })
+    return configuration
+  }
+
+  /**
+   * When the bundler is used in "watch" mode to be notified about
+   * changes in the project, this function can be invoked to stop watching.
+   */
   async close() {
     await this.vite.close()
   }
