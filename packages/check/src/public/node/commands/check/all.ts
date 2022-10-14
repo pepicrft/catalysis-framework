@@ -1,17 +1,17 @@
-import { Flags } from '@oclif/core'
+import { Command, Flags } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
 import { checkStyle } from '../../../../internal/node/services/style.js'
-import { GestaltCommand } from '@gestaltjs/core/node/command'
+import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
 import { absolutePath } from '@gestaltjs/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
-export default class All extends GestaltCommand {
+export default class All extends Command {
   static description = 'Check code and style.'
 
   static flags = {
-    ...GestaltCommand.globalFlags,
-    ...GestaltCommand.projectFlags,
+    ...globalFlags(),
+    ...projectFlags(),
     fix: Flags.boolean({
       char: 'f',
       description: 'When passed, it fixes the fixable style issues.',

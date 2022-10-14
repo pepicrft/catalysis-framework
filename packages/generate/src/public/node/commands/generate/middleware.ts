@@ -1,5 +1,5 @@
-import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
+import { Flags, Command } from '@oclif/core'
 import { loadProject } from '@gestaltjs/core/node/project'
 import {
   GenerateMiddlewareLanguage,
@@ -9,15 +9,15 @@ import {
 import { absolutePath } from '@gestaltjs/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
-export default class Middleware extends GestaltCommand {
+export default class Middleware extends Command {
   static description = 'Generates a new middleware'
 
   static args = [
     { name: 'name', description: 'The name of the target', required: true },
   ]
   static flags = {
-    ...GestaltCommand.globalFlags,
-    ...GestaltCommand.projectFlags,
+    ...globalFlags(),
+    ...projectFlags(),
     language: Flags.string({
       name: 'language',
       char: 'l',

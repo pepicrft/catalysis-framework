@@ -1,13 +1,13 @@
 import { createPluginLogger } from '../../../private/logger.js'
-import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { globalFlags } from '@gestaltjs/core/node/command'
+import { Command } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
-export default class Init extends GestaltCommand {
+export default class Init extends Command {
   static description = 'Create a Gestalt plugin'
 
   static flags = {
-    ...GestaltCommand.flags,
+    ...globalFlags(),
   }
 
   async run(): Promise<void> {

@@ -1,14 +1,14 @@
 import { buildLogger } from '../../../private/node/logger.js'
-import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
+import { Interfaces, Command } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
-export default class Build extends GestaltCommand {
+export default class Build extends Command {
   static description = 'Build a project'
 
-  static flags = {
-    ...GestaltCommand.globalFlags,
-    ...GestaltCommand.projectFlags,
+  static flags: Interfaces.FlagInput = {
+    ...globalFlags(),
+    ...projectFlags(),
   }
 
   async run(): Promise<void> {

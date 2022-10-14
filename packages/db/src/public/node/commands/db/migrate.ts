@@ -1,14 +1,14 @@
 import { dbLogger } from '../../../../private/logger.js'
-import { GestaltCommand } from '@gestaltjs/core/node/command'
-import { Flags } from '@oclif/core'
+import { projectFlags, globalFlags } from '@gestaltjs/core/node/command'
+import { Command } from '@oclif/core'
 
 // eslint-disable-next-line import/no-default-export
-export default class Migrate extends GestaltCommand {
+export default class Migrate extends Command {
   static description = 'Migrate the database'
 
   static flags = {
-    ...GestaltCommand.globalFlags,
-    ...GestaltCommand.projectFlags,
+    ...globalFlags(),
+    ...projectFlags(),
   }
 
   async run(): Promise<void> {
