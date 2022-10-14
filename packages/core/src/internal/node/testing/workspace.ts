@@ -1,14 +1,6 @@
-import {
-  resolve as resolvePath,
-  dirname as pathDirname,
-  join as joinPath,
-} from 'pathe'
-// eslint-disable-next-line import/no-nodejs-modules
-import { fileURLToPath } from 'node:url'
-
-export function packagesDirectory(): string {
-  return resolvePath(pathDirname(fileURLToPath(import.meta.url)), '../..')
-}
+import { join as joinPath } from 'pathe'
+import { findPathUp } from '../../../public/node/fs.js'
+import { moduleDirname } from '../../../public/node/path.js'
 
 /** It represents a ES module */
 type ESModule = {
@@ -22,13 +14,8 @@ type ESModule = {
  * An interface to represent the modules exported by the "gestaltjs" package.
  */
 type GestaltJSPackageModules = {
-  /** Represents the support module which provides a set of convenient tools for building Gestalt projects. */
-  support: ESModule
-
   /** Represents the configuration module which exports the defineConfiguration module for defining a configuration. */
   configuration: ESModule
-
-  plugins: ESModule
 }
 
 /**
@@ -37,27 +24,15 @@ type GestaltJSPackageModules = {
  * how to resolve those modules.
  * @returns {GestaltJSPackageModules} An object representing the Node modules that are exported by the "gestaltjs" NPM package.
  */
-export function gestaltjsPackageModules(): GestaltJSPackageModules {
-  const gestaltjsPackageRuntimeDirectory = resolvePath(
-    pathDirname(fileURLToPath(import.meta.url)),
-    '../../gestaltjs/src/runtime'
-  )
-  const pluginsSourceDirectory = resolvePath(
-    pathDirname(fileURLToPath(import.meta.url)),
-    '../../core/src/node'
-  )
+export async function gestaltjsPackageModules(): Promise<GestaltJSPackageModules> {
+  const gestaltjsPackageRuntimeDirectory = (await findPathUp(
+    'gestaltjs/src/public/node',
+    { type: 'directory', cwd: moduleDirname(import.meta.url) }
+  )) as string
   return {
-    support: {
-      identifier: 'gestaltjs/support',
-      path: joinPath(gestaltjsPackageRuntimeDirectory, 'support.ts'),
-    },
     configuration: {
       identifier: 'gestaltjs/configuration',
       path: joinPath(gestaltjsPackageRuntimeDirectory, 'configuration.ts'),
-    },
-    plugins: {
-      identifier: '@gestaltjs/core/node/plugin',
-      path: joinPath(pluginsSourceDirectory, 'plugin.ts'),
     },
   }
 }

@@ -1,5 +1,4 @@
 import { UserConfiguration } from '@gestaltjs/core/common/manifests'
-export { useContext } from '@gestaltjs/core/common/context'
 
 type UserConfigurationExport =
   | UserConfiguration

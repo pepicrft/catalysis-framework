@@ -1,6 +1,6 @@
 import { Abort } from '../../public/common/error.js'
 import { absolutePath, AbsolutePath } from 'typed-file-system-path'
-import { createServer, ViteDevServer } from 'vite'
+import { createServer, ViteDevServer, InlineConfig } from 'vite'
 import { Project } from '../../public/node/project/project.js'
 import { content, fileToken } from '../../public/node/logger.js'
 import { findPathUp } from '../../public/node/fs.js'
@@ -21,11 +21,12 @@ export interface ProjectBundler {
   close: () => Promise<void>
 }
 
-export async function createProjectBundler(
+export async function createProjectBundler(options: {
   fromDirectory: AbsolutePath
-): Promise<ProjectBundler> {
+  resolve?: InlineConfig['resolve']
+}): Promise<ProjectBundler> {
   const configurationManifestPath = await lookupConfigurationPathTraversing(
-    fromDirectory
+    options.fromDirectory
   )
   if (!configurationManifestPath) {
     throw new Abort('The config file could not be found', {
@@ -41,9 +42,7 @@ export async function createProjectBundler(
   const vite = await createServer({
     root: directory.pathString,
     cacheDir: undefined,
-    esbuild: {
-      exclude: ['pino'],
-    },
+    esbuild: {},
     server: {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -54,6 +53,7 @@ export async function createProjectBundler(
     optimizeDeps: {
       entries: [],
     },
+    resolve: options.resolve,
     build: {
       watch: {},
     },
@@ -104,7 +104,8 @@ class ProjectBundlerImpl implements ProjectBundler {
       )
       const configuration = new ConfigurationImpl({
         path: this.configurationManifestPath,
-        userConfiguration: configurationModule.default as Configuration,
+        userConfiguration:
+          (await configurationModule.default()) as Configuration,
       })
 
       const project = new ProjectImpl({
