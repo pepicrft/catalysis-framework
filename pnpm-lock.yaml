@@ -140,7 +140,7 @@ importers:
       pino-abstract-transport: 1.0.0
       pino-pretty: 9.1.1
       plur: 5.1.0
-      radix3: 0.2.0
+      radix3: 0.2.1
       source-map-support: 0.5.21
       stacktracey: 2.1.8
       strip-ansi: 7.0.1
@@ -176,7 +176,7 @@ importers:
       pino-abstract-transport: 1.0.0
       pino-pretty: 9.1.1
       plur: 5.1.0
-      radix3: 0.2.0
+      radix3: 0.2.1
       source-map-support: 0.5.21
       stacktracey: 2.1.8
       strip-ansi: 7.0.1
@@ -11615,8 +11615,8 @@ packages:
     resolution: {integrity: sha512-Mpfd/OuX0zoJ6ojLD/RTOHvJPg6e6PjINtmYzV87kIXc5iUtDz34i7gg4SV4XjqRJTmSiYO/g9i/mKWGf4z8wg==}
     dev: false
 
-  /radix3/0.2.0:
-    resolution: {integrity: sha512-31LEskiJwlPK3rbEacXdPs7+MezZ+f7SnmJsvDhmhxcrP54IAawgMrR128V3x6JAXiHok/mwCF6UySl+nk7Otw==}
+  /radix3/0.2.1:
+    resolution: {integrity: sha512-FnhArTl5Tq7dodiLeSPKrDUyCQuJqEncP8cKdyy399g8F/cz7GH6FmzA3Rkosu2IZMkpswFFwXfb2ERSiL06pg==}
     dev: false
 
   /randombytes/2.1.0:
