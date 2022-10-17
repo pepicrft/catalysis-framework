@@ -123,7 +123,7 @@ importers:
       execa: 6.1.0
       fast-glob: 3.2.12
       fast-safe-stringify: 2.1.1
-      fastify: 4.8.1
+      fastify: 4.9.0
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -159,7 +159,7 @@ importers:
       execa: 6.1.0
       fast-glob: 3.2.12
       fast-safe-stringify: 2.1.1
-      fastify: 4.8.1
+      fastify: 4.9.0
       find-up: 6.3.0
       fs-extra: 10.1.0
       handlebars: 4.7.7
@@ -7855,8 +7855,8 @@ packages:
       punycode: 1.4.1
     dev: false
 
-  /fastify/4.8.1:
-    resolution: {integrity: sha512-3an6yyXg7j5XPHTRxgFqUwIRaJPR7F8OPR8Uboo0SIgHx1orOqc9Y8Sl5Kz8+xK7JCy3c3mfRujskDjMu/nFfA==}
+  /fastify/4.9.0:
+    resolution: {integrity: sha512-q7/UE8NVdxIeHTpaFOXbavGH+AhX7qN/t601bCsTlW5baN+Anzb9MJ3lFctJVCnMDe29YNqU0htoXbJAkVLVmA==}
     dependencies:
       '@fastify/ajv-compiler': 3.3.1
       '@fastify/error': 3.0.0
