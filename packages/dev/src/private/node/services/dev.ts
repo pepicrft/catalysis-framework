@@ -3,7 +3,7 @@ import { Project } from '@gestaltjs/core/node/project'
 import { urlToken, content } from '@gestaltjs/core/node/logger'
 
 import { devLogger } from '../logger.js'
-import { createApp } from 'h3'
+import { createApp, toNodeListener } from 'h3'
 import { listen } from 'listhen'
 
 type DevProjectOutput = {
@@ -15,7 +15,10 @@ export async function devProject(project: Project): Promise<DevProjectOutput> {
   app.use('/', () => 'Hello world!')
 
   devLogger().info('Starting the project...')
-  const listener = await listen(app, { autoClose: true, showURL: false })
+  const listener = await listen(toNodeListener(app), {
+    autoClose: true,
+    showURL: false,
+  })
   devLogger().info(
     content`The project is now available at: ${urlToken(
       listener.url,
