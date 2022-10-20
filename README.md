@@ -18,8 +18,8 @@ Gestalt is a modern opinionated and batteries-included [NodeJS](https://nodejs.o
 
 | Project              | Description     | URL |
 | -------------------- | --------------- | --- |
-| [gestalt](/packages/gestaltjs) | The Gestalt CLI  | |
-| [website](/website) | The Gestalt Website | [gestaltjs.org](https://gestaltjs.org) |
+| [gestalt](/packages/gestaltjs) | The CLI and framework runtime packages  | |
+| [website](/website) | The project website | [gestaltjs.org](https://gestaltjs.org) |
 | [ship](/ship) | A Gestalt-powered web app to coordinate deployments | [ship.gestaltjs.org](https://ship.gestaltjs.org) |
 | [e2e](/e2e) | [Cucumber](https://cucumber.io)-powered e2e tests |  |
 
