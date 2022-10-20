@@ -131,7 +131,7 @@ importers:
       path-equal: 1.2.2
       pathe: 0.3.9
       picocolors: 1.0.0
-      pino: 8.6.1
+      pino: 8.7.0
       pino-abstract-transport: 1.0.0
       pino-pretty: 9.1.1
       plur: 5.1.0
@@ -166,7 +166,7 @@ importers:
       path-equal: 1.2.2
       pathe: 0.3.9
       picocolors: 1.0.0
-      pino: 8.6.1
+      pino: 8.7.0
       pino-abstract-transport: 1.0.0
       pino-pretty: 9.1.1
       plur: 5.1.0
@@ -10865,8 +10865,8 @@ packages:
     resolution: {integrity: sha512-mMMOwSKrmyl+Y12Ri2xhH1lbzQxwwpuru9VjyJpgFIH4asSj88F2csdMwN6+M5g1Ll4rmsYghHLQJw81tgZ7LQ==}
     dev: false
 
-  /pino/8.6.1:
-    resolution: {integrity: sha512-fi+V2K98eMZjQ/uEHHSiMALNrz7HaFdKNYuyA3ZUrbH0f1e8sPFDmeRGzg7ZH2q4QDxGnJPOswmqlEaTAZeDPA==}
+  /pino/8.7.0:
+    resolution: {integrity: sha512-l9sA5uPxmZzwydhMWUcm1gI0YxNnYl8MfSr2h8cwLvOAzQLBLewzF247h/vqHe3/tt6fgtXeG9wdjjoetdI/vA==}
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
