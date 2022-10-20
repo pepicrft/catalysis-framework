@@ -1,7 +1,7 @@
 import { loadProject } from '@gestaltjs/core/node/project'
 import { devProject } from '../../../private/node/services/dev.js'
 import { projectFlags, globalFlags } from '@gestaltjs/core/node/command'
-import { Command } from '@oclif/core'
+import { Command, Interfaces } from '@gestaltjs/core/node/oclif'
 import { absolutePath } from '@gestaltjs/core/node/path'
 
 // eslint-disable-next-line import/no-default-export

@@ -6,3 +6,10 @@ When(
     await this.runGestalt(['build', '--path', this.projectDirectory as string])
   }
 )
+
+When(
+  'I should be able to info the project',
+  async function (this: GestaltWorld) {
+    await this.runGestalt(['info', '--path', this.projectDirectory as string])
+  }
+)

@@ -2,7 +2,7 @@ import { loadProject } from '@gestaltjs/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
 import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
 import { absolutePath } from '@gestaltjs/core/node/path'
-import { Command } from '@oclif/core'
+import { Command, Interfaces } from '@gestaltjs/core/node/oclif'
 
 // eslint-disable-next-line import/no-default-export
 export default class Code extends Command {

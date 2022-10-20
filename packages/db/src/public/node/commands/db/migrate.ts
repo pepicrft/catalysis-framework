@@ -1,6 +1,6 @@
 import { dbLogger } from '../../../../private/logger.js'
 import { projectFlags, globalFlags } from '@gestaltjs/core/node/command'
-import { Command } from '@oclif/core'
+import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
 
 // eslint-disable-next-line import/no-default-export
 export default class Migrate extends Command {

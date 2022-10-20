@@ -4,7 +4,7 @@ import { join as joinPath } from 'pathe'
 
 When(
   'I create a project',
-  { timeout: 30 * 1000 },
+  { timeout: 120 * 1000 },
   async function (this: GestaltWorld) {
     const projectName = randomString()
     await this.runCreateProject([

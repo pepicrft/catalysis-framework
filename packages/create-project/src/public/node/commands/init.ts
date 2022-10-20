@@ -1,5 +1,5 @@
 import { globalFlags } from '@gestaltjs/core/node/command'
-import { Command, Flags } from '@oclif/core'
+import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
 import { absolutePath, resolvePath } from '@gestaltjs/core/node/path'
 import { initPrompt } from '../../../private/node/prompts/init.js'
 import { initService } from '../../../private/node/services/init.js'

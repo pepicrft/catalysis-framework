@@ -1,4 +1,4 @@
-import { Command, Flags } from '@oclif/core'
+import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
 import { loadProject } from '@gestaltjs/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
 import { checkStyle } from '../../../../internal/node/services/style.js'

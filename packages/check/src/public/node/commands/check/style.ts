@@ -1,4 +1,4 @@
-import { Command, Flags } from '@oclif/core'
+import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
 import { loadProject } from '@gestaltjs/core/node/project'
 import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
 
