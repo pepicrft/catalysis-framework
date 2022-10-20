@@ -8,7 +8,6 @@
   <img src="https://img.shields.io/github/commit-activity/w/gestaltjs/gestalt?style=flat-square" alt="Commit Activity">
   <img src="https://img.shields.io/github/contributors/gestaltjs/gestalt?style=flat-square" alt="Contributors">
   <a href="http://twitter.com/gestaltjs"><img src="https://img.shields.io/twitter/follow/gestaltjs?style=flat-square" alt="Twitter Followers"></a>
-  <img src="https://img.shields.io/github/license/gestaltjs/gestalt?style=flat-square" alt="License">
   <a href="#contributors-"><img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square" alt="Contributors"></a>
   <a href="https://tuple.app"><img src="https://img.shields.io/badge/Pairing%20with-Tuple-5A67D8"></a>
 </div>
