@@ -31,8 +31,7 @@
   "dependencies": {
     "h3": "0.8.5",
     "listhen": "0.3.4",
-    "@gestaltjs/core": "0.7.10",
-    "@oclif/core": "1.19.1"
+    "@gestaltjs/core": "0.7.10"
   },
   "oclif": {
     "commands": "./dist/public/node/commands"

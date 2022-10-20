@@ -1,5 +1,5 @@
 import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
-import { Flags, Command } from '@oclif/core'
+import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
 import { loadProject } from '@gestaltjs/core/node/project'
 import {
   GenerateMiddlewareLanguage,
