@@ -107,11 +107,17 @@ export function relativePathFrom(from: string, to: string): string {
  * @returns {string} Relativized path.
  */
 export function relativizePath(path: string | AbsolutePath): string {
-  const result = commondir([path, process.cwd()])
-  if (result !== '/') {
-    return relativePathFrom(process.cwd(), `${path}`)
+  let stringPath: string
+  if (Object.hasOwnProperty.call(path, 'pathString')) {
+    stringPath = (path as AbsolutePath).pathString
   } else {
-    return `${path}`
+    stringPath = path as string
+  }
+  const result = commondir([stringPath, process.cwd()])
+  if (result !== '/') {
+    return relativePathFrom(process.cwd(), `${stringPath}`)
+  } else {
+    return `${stringPath}`
   }
 }
 

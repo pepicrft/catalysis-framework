@@ -18,6 +18,7 @@ export function prettyFormat(options: PrettyFormatOptions): string {
       options.project.configuration.path
     )}`
   )
+
   lines.push(``)
 
   const plugins = options.project.configuration.plugins ?? []
