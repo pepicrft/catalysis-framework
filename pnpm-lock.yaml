@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@babel/core': 7.19.6
-      '@changesets/cli': 2.25.0
+      '@changesets/cli': 2.25.1
       '@nrwl/cli': 15.0.4
       '@nrwl/tao': 15.0.4
       '@nrwl/workspace': 15.0.4
@@ -44,7 +44,7 @@ importers:
       vitest: 0.24.3
     devDependencies:
       '@babel/core': 7.19.6
-      '@changesets/cli': 2.25.0
+      '@changesets/cli': 2.25.1
       '@nrwl/cli': 15.0.4
       '@nrwl/tao': 15.0.4
       '@nrwl/workspace': 15.0.4_b4lxm3wnhvemgzhn4ya5surkua
@@ -1880,8 +1880,8 @@ packages:
       '@changesets/types': 5.2.0
     dev: true
 
-  /@changesets/cli/2.25.0:
-    resolution: {integrity: sha512-Svu5KD2enurVHGEEzCRlaojrHjVYgF9srmMP9VQSy9c1TspX6C9lDPpulsSNIjYY9BuU/oiWpjBgR7RI9eQiAA==}
+  /@changesets/cli/2.25.1:
+    resolution: {integrity: sha512-e65ZJ7QKq7aERV/vAeuG0DTkkuEnTZK8eVNYqnd6wBsc9YTK+5iuuzp8aG0E80AngxeOaI4u77OIfzE9fv2T5Q==}
     hasBin: true
     dependencies:
       '@babel/runtime': 7.19.0
