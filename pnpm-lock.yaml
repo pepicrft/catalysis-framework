@@ -142,7 +142,7 @@ importers:
       tempy: 3.0.0
       terminal-link: 3.0.0
       ts-error: 1.0.6
-      typed-file-system-path: 0.10.0
+      typed-file-system-path: 0.11.0
       username: 6.0.0
       vite: 3.2.1
     dependencies:
@@ -177,7 +177,7 @@ importers:
       tempy: 3.0.0
       terminal-link: 3.0.0
       ts-error: 1.0.6
-      typed-file-system-path: 0.10.0
+      typed-file-system-path: 0.11.0
       username: 6.0.0
       vite: 3.2.1
     devDependencies:
@@ -13234,8 +13234,8 @@ packages:
     resolution: {integrity: sha512-eiDBDOmkih5pMbo9OqsqPRGMljLodLcwd5XD5JbtNB0o89xZAwynY9EdCDsJU7LtcVCClu9DvM7/0Ep1hYX3EQ==}
     dev: true
 
-  /typed-file-system-path/0.10.0:
-    resolution: {integrity: sha512-LC/xzg9/wvBTiaf97BWpgkmpxe8UlzVy1r4mNoR+3MU5rNo3T5FC0JIN7mPRFLsv4fknjJ2t2BvU1zlkWRAA+w==}
+  /typed-file-system-path/0.11.0:
+    resolution: {integrity: sha512-dcT+agDticCURP2EWN8pbwQ5Te5uBXkICiToeYLV/eLQNHXR6QAvDdaPv4IF5SgWsLG/HommsBoSI0WybTtx2g==}
     dependencies:
       pathe: 0.3.9
       shx: 0.3.4
