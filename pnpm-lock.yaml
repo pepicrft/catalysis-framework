@@ -110,7 +110,7 @@ importers:
 
   packages/core:
     specifiers:
-      '@oclif/core': 1.20.2
+      '@oclif/core': 1.20.3
       '@remix-run/web-fetch': ^4.2.0
       '@types/inquirer': 9.0.2
       acorn: 8.8.1
@@ -146,7 +146,7 @@ importers:
       username: 6.0.0
       vite: 3.2.2
     dependencies:
-      '@oclif/core': 1.20.2
+      '@oclif/core': 1.20.3
       '@remix-run/web-fetch': 4.2.0
       acorn: 8.8.1
       case-anything: 2.1.10
@@ -3579,12 +3579,12 @@ packages:
       - typescript
     dev: true
 
-  /@oclif/core/1.20.2:
-    resolution: {integrity: sha512-c6CpDbDPS9UuKwGoajzsjrjfnwQywWEV3WI5FDvb87h0/WW2tGf1QwHUWgdKOojafEcMAa9DnP5j+mXdUTtpCg==}
+  /@oclif/core/1.20.3:
+    resolution: {integrity: sha512-sM2zQlzOUpHpcTBi7ETnHzK1KRF5BReKvERuF0jRlI2HgQ669arGccv1gkdouyMTG5prG92qy9P4ByhFVkLSQQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@oclif/linewrap': 1.0.0
-      '@oclif/screen': 3.0.2
+      '@oclif/screen': 3.0.3
       ansi-escapes: 4.3.2
       ansi-styles: 4.3.0
       cardinal: 2.1.1
@@ -3621,11 +3621,11 @@ packages:
     resolution: {integrity: sha512-yc35xn4lSkHTnS6ajolYAi9dVMWXsRRPPPNEfYF0Nq1bkKNnh3DEC1MS/iTWNEYC5JCVd4YAQ2/Ky2wqA2Ujiw==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 1.20.2
+      '@oclif/core': 1.20.3
     dev: false
 
-  /@oclif/screen/3.0.2:
-    resolution: {integrity: sha512-S/SF/XYJeevwIgHFmVDAFRUvM3m+OjhvCAYMk78ZJQCYCQ5wS7j+LTt1ZEv2jpEEGg2tx/F6TYYWxddNAYHrFQ==}
+  /@oclif/screen/3.0.3:
+    resolution: {integrity: sha512-KX8gMYA9ujBPOd1HFsV9e0iEx7Uoj8AG/3YsW4TtWQTg4lJvr82qNm7o/cFQfYRIt+jw7Ew/4oL4A22zOT+IRA==}
     engines: {node: '>=12.0.0'}
     dev: false
 
