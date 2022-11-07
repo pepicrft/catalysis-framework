@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0",
-    "@typescript-eslint/eslint-plugin": "5.42.0",
-    "@typescript-eslint/parser": "5.42.0",
+    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "@typescript-eslint/parser": "5.42.1",
     "typescript": "4.8.4"
   },
   "engine-strict": true,
