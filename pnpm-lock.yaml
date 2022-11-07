@@ -112,7 +112,7 @@ importers:
     specifiers:
       '@oclif/core': 1.20.4
       '@remix-run/web-fetch': ^4.2.0
-      '@types/inquirer': 9.0.2
+      '@types/inquirer': 9.0.3
       acorn: 8.8.1
       case-anything: 2.1.10
       commondir: 1.0.1
@@ -181,7 +181,7 @@ importers:
       username: 6.0.0
       vite: 3.2.3
     devDependencies:
-      '@types/inquirer': 9.0.2
+      '@types/inquirer': 9.0.3
 
   packages/create-plugin:
     specifiers:
@@ -2506,7 +2506,7 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       reading-time: 1.5.0
-      tslib: 2.4.0
+      tslib: 2.4.1
       unist-util-visit: 2.0.3
       utility-types: 3.10.0
       webpack: 5.74.0
@@ -2548,7 +2548,7 @@ packages:
       lodash: 4.17.21
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
       utility-types: 3.10.0
       webpack: 5.74.0
     transitivePeerDependencies:
@@ -2582,7 +2582,7 @@ packages:
       fs-extra: 10.1.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
       webpack: 5.74.0
     transitivePeerDependencies:
       - '@parcel/css'
@@ -2614,7 +2614,7 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-json-view: 1.21.3_gzv7pa6nrbev3fs6gyzn7sadkq
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@parcel/css'
       - '@swc/core'
@@ -2645,7 +2645,7 @@ packages:
       '@docusaurus/utils-validation': 2.2.0_@docusaurus+types@2.2.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@parcel/css'
       - '@swc/core'
@@ -2674,7 +2674,7 @@ packages:
       '@docusaurus/utils-validation': 2.2.0_@docusaurus+types@2.2.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@parcel/css'
       - '@swc/core'
@@ -2708,7 +2708,7 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       sitemap: 7.1.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@parcel/css'
       - '@swc/core'
@@ -2806,7 +2806,7 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-router-dom: 5.3.3_react@17.0.2
       rtlcss: 3.5.0
-      tslib: 2.4.0
+      tslib: 2.4.1
       utility-types: 3.10.0
     transitivePeerDependencies:
       - '@parcel/css'
@@ -2845,7 +2845,7 @@ packages:
       prism-react-renderer: 1.3.5_react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
       utility-types: 3.10.0
     transitivePeerDependencies:
       - '@docusaurus/types'
@@ -2887,7 +2887,7 @@ packages:
       lodash: 4.17.21
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
       utility-types: 3.10.0
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -4113,11 +4113,11 @@ packages:
       '@types/node': 18.11.9
     dev: false
 
-  /@types/inquirer/9.0.2:
-    resolution: {integrity: sha512-MQc3adiIh/rDxLkjnvL03rSvuHg+/dKif4dn/MRsnE+oU1bAdyuDbW0w+ewR1M/M/u/Z0YAbw7NZYCpgQ5SW8A==}
+  /@types/inquirer/9.0.3:
+    resolution: {integrity: sha512-CzNkWqQftcmk2jaCWdBTf9Sm7xSw4rkI1zpU/Udw3HX5//adEZUIm9STtoRP1qgWj0CWQtJ9UTvqmO2NNjhMJw==}
     dependencies:
       '@types/through': 0.0.30
-      rxjs: 7.5.6
+      rxjs: 7.5.7
     dev: true
 
   /@types/is-ci/3.0.0:
@@ -12185,13 +12185,13 @@ packages:
   /rxjs/7.5.6:
     resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
+    dev: false
 
   /rxjs/7.5.7:
     resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
     dependencies:
       tslib: 2.4.1
-    dev: false
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
