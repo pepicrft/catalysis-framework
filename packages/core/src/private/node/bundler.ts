@@ -33,6 +33,53 @@ type CreateProjectBundlerOptions = {
   resolve?: InlineConfig['resolve']
 }
 
+export type BundleResolveAlias = {
+  find: string | RegExp
+  replacement: string
+}
+
+/**
+ * A type that reprents the options that are passed
+ * when creating an instance of a bundler.
+ */
+export type BundlerInitOptions = {
+  /**
+   * The directory in which the bundler operates
+   */
+  directory: AbsolutePath
+
+  /**
+   * The directory where artifacts will be cached across
+   * runs
+   */
+  cacheDirectory?: AbsolutePath
+
+  /**
+   * A set of options to configure how modules are resolved.
+   */
+  resolve?: {
+    /**
+     * A list of aliases to map an id to a different id or to a module
+     * in the file system.
+     */
+    aliases?: BundleResolveAlias[]
+  }
+}
+
+/**
+ * An interface that represents a Javascript bundler. The bundler is defined
+ * behind an interface to prevent Gestalt from having a strong dependency with
+ * a specific bundling solution. The ecosystem moves so fast, and we continue
+ * to see bundling tools like Turbopack implemented in compiled languages like
+ * Rust. Although Vite is one of the best ones a the moment due to its community,
+ * it might not hold true in the future.
+ */
+export interface Bundler {
+  options: BundlerInitOptions
+  /** Close the bundling process */
+  close(): Promise<void>
+}
+
 /**
  * Creates a bundler to load and watch a project.
  * @param options {CreateProjectBundlerOptions} The options to create a bundler.
@@ -73,21 +120,6 @@ export async function createProjectBundler(
     build: {
       watch: {},
     },
-    plugins: [
-      {
-        name: 'config-watch',
-        handleHotUpdate: async (context) => {
-          // const watcherKey = Object.keys(watchers).find((pathPrefix) =>
-          //   context.file.startsWith(pathPrefix)
-          // )
-          // if (!watcherKey) {
-          //   return context.modules
-          // }
-          // await watchers[watcherKey](context.file)
-          // return context.modules
-        },
-      },
-    ],
   })
   return new ProjectBundlerImpl({
     vite,
