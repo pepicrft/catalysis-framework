@@ -15,20 +15,11 @@ export const createProjectPackageDirectory = pathResolve(
   './packages/create-project'
 )
 
-export const createPluginPackageDirectory = pathResolve(
-  rootDirectory,
-  './packages/create-plugin'
-)
-
 export const gestaltExecutablePath = pathResolve(
   gestaltPackageDirectory,
   './bin/dev.js'
 )
 export const createProjectExecutablePath = pathResolve(
   createProjectPackageDirectory,
-  './bin/dev.js'
-)
-export const createPluginExecutablePath = pathResolve(
-  createPluginPackageDirectory,
   './bin/dev.js'
 )

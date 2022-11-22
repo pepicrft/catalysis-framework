@@ -7,7 +7,6 @@
       {"path": "./packages/build"},
       {"path": "./packages/check"},
       {"path": "./packages/core"},
-      {"path": "./packages/create-plugin"},
       {"path": "./packages/create-project"},
       {"path": "./packages/db"},
       {"path": "./packages/dev"},
