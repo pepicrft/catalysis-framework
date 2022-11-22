@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  PNPM_VERSION: "7.13.5"
+  PNPM_VERSION: "7.17.0"
 
 jobs:
   pr:
@@ -20,7 +20,7 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     strategy:
       matrix:
-        node: ['18.11.0']
+        node: ['19.1.0']
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
     if: ${{ github.event_name != 'pull_request' }}
     strategy:
       matrix:
-        node: ['18.11.0']
+        node: ['19.1.0']
         os: ['ubuntu-latest', 'macos-latest', 'windows-latest']
     steps:
       - uses: actions/checkout@v3
