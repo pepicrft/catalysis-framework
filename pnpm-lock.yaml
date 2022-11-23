@@ -199,11 +199,11 @@ importers:
     specifiers:
       '@gestaltjs/core': 0.7.10
       h3: 1.0.1
-      listhen: 0.3.5
+      listhen: 1.0.0
     dependencies:
       '@gestaltjs/core': link:../core
       h3: 1.0.1
-      listhen: 0.3.5
+      listhen: 1.0.0
 
   packages/eslint-plugin:
     specifiers:
@@ -6513,8 +6513,8 @@ packages:
       has-property-descriptors: 1.0.0
       object-keys: 1.1.1
 
-  /defu/6.1.0:
-    resolution: {integrity: sha512-pOFYRTIhoKujrmbTRhcW5lYQLBXw/dlTwfI8IguF1QCDJOcJzNH1w+YFjxqy6BAuJrClTy6MUE8q+oKJ2FLsIw==}
+  /defu/6.1.1:
+    resolution: {integrity: sha512-aA964RUCsBt0FGoNIlA3uFgo2hO+WWC0fiC6DBps/0SFzkKcYoM/3CzVLIa5xSsrFjdioMdYgAIbwo80qp2MoA==}
     dev: false
 
   /del/6.1.1:
@@ -9821,17 +9821,17 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
-  /listhen/0.3.5:
-    resolution: {integrity: sha512-suyt79hNmCFeBIyftcLqLPfYiXeB795gSUWOJT7nspl2IvREY0Q9xvchLhekxvQ0KiOPvWoyALnc9Mxoelm0Pw==}
+  /listhen/1.0.0:
+    resolution: {integrity: sha512-frdf7TVqT/JSHzRjEuo/vWIgbBYzEuY3oeTq8Yv1XkQVTKDPs2M4yotXICqYZYj2QxbkqKssSo8Wa6QCtBnFhg==}
     dependencies:
       clipboardy: 3.0.0
       colorette: 2.0.19
-      defu: 6.1.0
+      defu: 6.1.1
       get-port-please: 2.6.1
       http-shutdown: 1.2.2
       ip-regex: 5.0.0
       node-forge: 1.3.1
-      ufo: 0.8.6
+      ufo: 1.0.0
     dev: false
 
   /listr2/5.0.5:
@@ -12353,6 +12353,7 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: false
 
   /semver/7.3.8:
     resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
