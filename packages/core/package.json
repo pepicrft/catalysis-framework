@@ -65,7 +65,7 @@
     "pino-abstract-transport": "1.0.0",
     "pino-pretty": "9.1.1",
     "plur": "5.1.0",
-    "radix3": "0.2.1",
+    "radix3": "1.0.0",
     "source-map-support": "0.5.21",
     "stacktracey": "2.1.8",
     "strip-ansi": "7.0.1",
