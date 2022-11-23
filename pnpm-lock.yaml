@@ -85,14 +85,14 @@ importers:
   e2e:
     specifiers:
       '@cucumber/cucumber': 8.7.0
-      '@cucumber/messages': 19.1.4
+      '@cucumber/messages': 20.0.0
       '@cucumber/pretty-formatter': 1.0.0
       execa: 6.1.0
       picocolors: 1.0.0
     devDependencies:
       '@cucumber/cucumber': 8.7.0
-      '@cucumber/messages': 19.1.4
-      '@cucumber/pretty-formatter': 1.0.0_mffkqosuiot2ntmvy22ejy6dhu
+      '@cucumber/messages': 20.0.0
+      '@cucumber/pretty-formatter': 1.0.0_2st7etco533pwmzp2wiams3uti
       execa: 6.1.0
       picocolors: 1.0.0
 
@@ -2175,14 +2175,23 @@ packages:
       uuid: 9.0.0
     dev: true
 
-  /@cucumber/pretty-formatter/1.0.0_mffkqosuiot2ntmvy22ejy6dhu:
+  /@cucumber/messages/20.0.0:
+    resolution: {integrity: sha512-JFrFwuhxsbig0afaViNhuzoQyC+GQzlI7m+rX+lSiDGV13K3sJzMmHjkbCiNOgoRlKAMwIGR9TRMH0xj9/My0w==}
+    dependencies:
+      '@types/uuid': 8.3.4
+      class-transformer: 0.5.1
+      reflect-metadata: 0.1.13
+      uuid: 9.0.0
+    dev: true
+
+  /@cucumber/pretty-formatter/1.0.0_2st7etco533pwmzp2wiams3uti:
     resolution: {integrity: sha512-wcnIMN94HyaHGsfq72dgCvr1d8q6VGH4Y6Gl5weJ2TNZw1qn2UY85Iki4c9VdaLUONYnyYH3+178YB+9RFe/Hw==}
     peerDependencies:
       '@cucumber/cucumber': '>=7.0.0'
       '@cucumber/messages': '*'
     dependencies:
       '@cucumber/cucumber': 8.7.0
-      '@cucumber/messages': 19.1.4
+      '@cucumber/messages': 20.0.0
       ansi-styles: 5.2.0
       cli-table3: 0.6.2
       figures: 3.2.0
