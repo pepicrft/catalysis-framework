@@ -8,6 +8,15 @@ import { configurationFileName } from '../../public/common/constants.js'
 import { Configuration } from '../../public/node/project/configuration.js'
 import { ConfigurationImpl } from './project/models/configuration.js'
 import { ProjectImpl } from './project/models/project.js'
+import { createUnplugin } from 'unplugin'
+
+export function createBuildPlugin() {
+  return createUnplugin((options) => {
+    return {
+      name: 'gestalt-plugin',
+    }
+  })
+}
 
 export interface ProjectBundler {
   /**
