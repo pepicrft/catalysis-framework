@@ -5,5 +5,4 @@ declare interface GestaltWorld {
 
   runGestalt(args: string[], options: RunOptions = {}): Promise<void>
   runCreateProject(args: string[], options: RunOptions = {}): Promise<void>
-  runCreatePlugin(args: string[], options: RunOptions = {}): Promise<void>
 }
