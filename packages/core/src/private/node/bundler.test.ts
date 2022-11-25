@@ -4,9 +4,11 @@
 // import { createProjectBundler } from './bundler.js'
 // import { gestaltjsPackageModules } from '../../internal/node/testing/workspace.js'
 
-import { test } from 'vitest'
+import { expect, test } from 'vitest'
 
-test('something', () => {})
+test('something', () => {
+  expect(true).toBeTruthy()
+})
 // describe('getModuleLoader', () => {
 //   test('load loads a module successfully', async () => {
 //     await inTemporarydirectory(async (tmpDir) => {
