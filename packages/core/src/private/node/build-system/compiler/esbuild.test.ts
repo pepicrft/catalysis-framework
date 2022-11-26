@@ -1,14 +1,14 @@
 import { describe, beforeEach, test, expect, vi } from 'vitest'
-import { ESBuildCompiler } from './esbuild.js'
+import { ESBuildBaseCompiler } from './esbuild.js'
 import { inTemporarydirectory } from '../../../../internal/node/testing/temporary'
 import { build as esbuild } from 'esbuild'
 
 vi.mock('esbuild')
 
-let subject: ESBuildCompiler
+let subject: ESBuildBaseCompiler
 
 beforeEach(() => {
-  subject = new ESBuildCompiler()
+  subject = new ESBuildBaseCompiler()
 })
 
 describe('buildAndLoadModule', () => {

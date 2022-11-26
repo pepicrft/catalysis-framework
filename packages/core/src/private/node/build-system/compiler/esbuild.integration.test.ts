@@ -1,13 +1,13 @@
 import { describe, beforeEach, test, expect } from 'vitest'
-import { ESBuildCompiler } from './esbuild.js'
+import { ESBuildBaseCompiler } from './esbuild.js'
 import { inTemporarydirectory } from '../../../../internal/node/testing/temporary'
 import { writeFile } from '../../../../public/node/fs.js'
 import { ModuleCompilationError } from '../compiler.js'
 
-let subject: ESBuildCompiler
+let subject: ESBuildBaseCompiler
 
 beforeEach(() => {
-  subject = new ESBuildCompiler()
+  subject = new ESBuildBaseCompiler()
 })
 
 describe('buildAndLoadModule', () => {

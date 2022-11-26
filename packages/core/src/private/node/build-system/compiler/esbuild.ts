@@ -2,7 +2,7 @@ import { inTemporarydirectory } from '../../../../internal/node/testing/temporar
 import { AbsolutePath } from '../../../../public/node/path.js'
 import {
   BuildAndLoadModuleError,
-  Compiler,
+  BaseCompiler,
   ModuleCompilationError,
 } from '../compiler.js'
 import { build as esbuild } from 'esbuild'
@@ -15,7 +15,7 @@ import {
 } from '../../../../public/common/result.js'
 import { Abort } from '../../../../public/common/error.js'
 
-export class ESBuildCompiler implements Compiler {
+export class ESBuildBaseCompiler implements BaseCompiler {
   async buildAndLoadModule(
     path: AbsolutePath
   ): AsyncResult<any, BuildAndLoadModuleError> {
