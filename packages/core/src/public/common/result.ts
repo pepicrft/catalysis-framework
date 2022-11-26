@@ -8,7 +8,7 @@ export type AsyncResult<
   E extends ExtendableError = ExtendableError
 > = Promise<Result<T, E>>
 
-interface Result<T, E extends ExtendableError = ExtendableError> {
+export interface Result<T, E extends ExtendableError = ExtendableError> {
   /**
    * Returns the value if the result instance
    * represents a success.
