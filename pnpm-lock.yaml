@@ -129,7 +129,7 @@ importers:
       noop-stream: 1.0.0
       ohmyfetch: 0.4.21
       parse-json: 6.0.2
-      path-equal: 1.2.4
+      path-equal: 1.2.5
       pathe: 1.0.0
       picocolors: 1.0.0
       pino: 8.7.0
@@ -166,7 +166,7 @@ importers:
       noop-stream: 1.0.0
       ohmyfetch: 0.4.21
       parse-json: 6.0.2
-      path-equal: 1.2.4
+      path-equal: 1.2.5
       pathe: 1.0.0
       picocolors: 1.0.0
       pino: 8.7.0
@@ -10761,8 +10761,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /path-equal/1.2.4:
-    resolution: {integrity: sha512-qYtLj9MtoSedTVGfJ1VesEKnO3378nofKJUSTKDZY658T3eXHGPCPnFQiH4bFyHg0TIRBI5qJb6MKjbv2LAmsQ==}
+  /path-equal/1.2.5:
+    resolution: {integrity: sha512-i73IctDr3F2W+bsOWDyyVm/lqsXO47aY9nsFZUjTT/aljSbkxHxxCoyZ9UUrM8jK0JVod+An+rl48RCsvWM+9g==}
     dev: false
 
   /path-exists/3.0.0:
