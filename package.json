@@ -45,7 +45,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-rulesdir": "0.2.1",
     "fast-glob": "3.2.12",
-    "fs-extra": "10.1.0",
+    "fs-extra": "11.1.0",
     "install": "0.13.0",
     "nx": "15.2.1",
     "pathe": "1.0.0",
