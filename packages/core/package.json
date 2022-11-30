@@ -59,7 +59,7 @@
     "noop-stream": "1.0.0",
     "ohmyfetch": "0.4.21",
     "parse-json": "6.0.2",
-    "path-equal": "1.2.4",
+    "path-equal": "1.2.5",
     "pathe": "1.0.0",
     "picocolors": "1.0.0",
     "pino": "8.7.0",
