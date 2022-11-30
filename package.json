@@ -20,7 +20,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@babel/core": "7.20.2",
+    "@babel/core": "7.20.5",
     "@changesets/cli": "2.25.2",
     "@nrwl/cli": "15.2.1",
     "@nrwl/tao": "15.2.1",
