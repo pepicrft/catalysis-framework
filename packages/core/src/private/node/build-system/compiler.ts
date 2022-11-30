@@ -7,7 +7,7 @@ export class ModuleCompilationError extends ExtendableError {}
 export type BuildAndLoadModuleError = ModuleCompilationError | Abort
 type BaseCompilerConstructor = new (...args: any[]) => BaseCompiler
 
-function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
+export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
   return class Compiling extends Base {}
 }
 
