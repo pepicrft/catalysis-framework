@@ -1,29 +1,31 @@
-import { describe, beforeEach, test, expect, vi } from 'vitest'
+import { absolutePath } from 'typed-file-system-path'
+import { describe, beforeEach, test, vi, expect } from 'vitest'
 import { ESBuildBaseCompiler } from './esbuild.js'
-import { inTemporarydirectory } from '../../../../internal/node/testing/temporary'
 import { build as esbuild } from 'esbuild'
 
 vi.mock('esbuild')
 
-// let subject: ESBuildBaseCompiler
+let subject: ESBuildBaseCompiler
 
-// beforeEach(() => {
-//   subject = new ESBuildBaseCompiler()
-// })
+beforeEach(() => {
+  subject = new ESBuildBaseCompiler()
+})
 
-describe('buildAndLoadModule', () => {
-  test('it returns an Abort error when esbuild throws a non-Error instance', async () => {
-    // await inTemporarydirectory(async (tmpDir) => {
-    //   // Given
-    //   const modulePath = tmpDir.pathAppendingComponent('module.ts')
-    //   vi.mocked(esbuild).mockRejectedValue('error')
-    //   // When/Then
-    //   await expect(async () => {
-    //     const result = await subject.buildAndLoadModule(modulePath)
-    //     result.valueOrThrow()
-    //   }).rejects.toThrowErrorMatchingInlineSnapshot(
-    //     '"Unknown error building and loading a module with ESBuild: error"'
-    //   )
-    // })
+describe('esbuild', () => {
+  test('it invokes esbuild with the right arguments', async () => {
+    // Given
+    const inputPath = absolutePath('/input.js')
+    const outputPath = absolutePath('/output.js')
+
+    // When
+    await subject.compile(inputPath, outputPath)
+
+    // Then
+    expect(esbuild).toHaveBeenCalledWith({
+      entryPoints: [inputPath.pathString],
+      bundle: false,
+      outfile: outputPath.pathString,
+      logLevel: 'silent',
+    })
   })
 })

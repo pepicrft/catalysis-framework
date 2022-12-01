@@ -1,14 +1,50 @@
 import { AbsolutePath } from 'typed-file-system-path'
-import { AsyncResult } from '../../../public/common/result.js'
+import { AsyncResult, Err, Ok, Result } from '../../../public/common/result.js'
 import { Abort, ExtendableError } from '../../../public/common/error.js'
 import { ESBuildBaseCompiler } from './compiler/esbuild.js'
+import { inTemporarydirectory } from '@gestaltjs/core/node/fs'
 
 export class ModuleCompilationError extends ExtendableError {}
 export type BuildAndLoadModuleError = ModuleCompilationError | Abort
+
 type BaseCompilerConstructor = new (...args: any[]) => BaseCompiler
 
 export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
-  return class Compiling extends Base {}
+  return class Compiling extends Base {
+    /**
+     * Given a path to a module, it builds it into a temporary
+     * directory, loads it, and returns the temporary directory
+     * before deleting the module.
+     * @param path
+     */
+    async buildAndLoadModule(
+      filePath: AbsolutePath
+    ): AsyncResult<any, BuildAndLoadModuleError> {
+      let result: Result<any, BuildAndLoadModuleError>
+      await inTemporarydirectory(async (tmpDir) => {
+        const outputPath = tmpDir.pathAppendingComponent('output.js')
+        try {
+          await this.compile(filePath, outputPath)
+          result = Ok(await import(outputPath.pathString))
+        } catch (_error) {
+          if (_error instanceof Error) {
+            const error = new ModuleCompilationError(_error.message)
+            error.stack = _error.stack
+            result = Err(error)
+          } else {
+            result = Err(
+              new Abort(
+                `Unknown error building and loading a module with ESBuild: ${_error}`
+              )
+            )
+          }
+        }
+      })
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      return Promise.resolve(result)
+    }
+  }
 }
 
 export const ESBuildCompiler = Compiler(ESBuildBaseCompiler)
@@ -22,13 +58,5 @@ export const ESBuildCompiler = Compiler(ESBuildBaseCompiler)
  * hot-reloading.
  */
 export interface BaseCompiler {
-  /**
-   * Given a path to a module, it builds it into a temporary
-   * directory, loads it, and returns the temporary directory
-   * before deleting the module.
-   * @param path
-   */
-  buildAndLoadModule(
-    path: AbsolutePath
-  ): AsyncResult<any, BuildAndLoadModuleError>
+  compile(inputPath: AbsolutePath, outputPath: AbsolutePath): Promise<void>
 }
