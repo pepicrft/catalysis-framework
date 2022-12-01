@@ -2,7 +2,7 @@ import { AbsolutePath } from 'typed-file-system-path'
 import { AsyncResult, Err, Ok, Result } from '../../../public/common/result.js'
 import { Abort, ExtendableError } from '../../../public/common/error.js'
 import { ESBuildBaseCompiler } from './compiler/esbuild.js'
-import { inTemporarydirectory } from '@gestaltjs/core/node/fs'
+import { inTemporarydirectory } from '../../../public/node/fs.js'
 
 export class ModuleCompilationError extends ExtendableError {}
 export type BuildAndLoadModuleError = ModuleCompilationError | Abort
@@ -17,7 +17,7 @@ export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
      * before deleting the module.
      * @param path
      */
-    async buildAndLoadModule(
+    async buildAndImportModule(
       filePath: AbsolutePath
     ): AsyncResult<any, BuildAndLoadModuleError> {
       let result: Result<any, BuildAndLoadModuleError>
@@ -47,6 +47,9 @@ export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
   }
 }
 
+/**
+ * A compiler that uses ESBuild internally to compile modules.
+ */
 export const ESBuildCompiler = Compiler(ESBuildBaseCompiler)
 
 /**
