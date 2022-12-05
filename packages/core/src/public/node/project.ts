@@ -3,7 +3,6 @@ import { Project } from './project/project.js'
 
 export { Project } from './project/project.js'
 export { Configuration } from './project/configuration.js'
-export { Plugin } from './project/plugin.js'
 
 /**
  * It looks up a project by traversing up the directory structure from the given directory.

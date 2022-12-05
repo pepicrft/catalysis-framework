@@ -1,7 +1,4 @@
-import {
-  UserConfiguration,
-  UserPlugin,
-} from '../../../../public/common/manifests'
+import { UserConfiguration } from '../../../../public/common/manifests'
 import { AbsolutePath } from 'typed-file-system-path'
 
 /** Options to create a ConfigurationImpl instance */
@@ -16,11 +13,9 @@ type ConfigurationImplInitOptions = {
 export class ConfigurationImpl implements UserConfiguration {
   path: AbsolutePath
   name: string
-  plugins?: UserPlugin[]
 
   constructor(options: ConfigurationImplInitOptions) {
     this.path = options.path
     this.name = options.userConfiguration.name
-    this.plugins = options.userConfiguration.plugins
   }
 }
