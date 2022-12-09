@@ -23,7 +23,7 @@ const baseTransport = (options: pino.TransportBaseOptions) => {
     colorize: false,
     messageFormat: (log, messageKey) => {
       const isRaw = log['raw']
-      const module = formatModule(`${log['module']}`)
+      const module = formatModule(`${log['module'] as string}`)
       const level = pinoLogLevels[log.level as number]
       const message = log[messageKey] as string
 

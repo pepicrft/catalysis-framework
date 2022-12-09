@@ -4,7 +4,7 @@ import { runTypescriptCompiler } from '@gestaltjs/core/node/tsc'
 
 export async function checkCode(directory: AbsolutePath) {
   try {
-    await runTypescriptCompiler(['--noEmit'], `${directory}`)
+    await runTypescriptCompiler(['--noEmit'], `${directory.pathString}`)
     // TODO: fix error with logger when executing tests
   } catch (err) {
     throw new Abort('Typescript compiler failed. Check the above issues', {

@@ -81,10 +81,12 @@ export class MiddlewareInputImpl implements MiddlewareInput {
     if (this.hasKey(key)) {
       throw new MiddlewareSettingExistingKeyError(this.middlewareId, key)
     }
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     this.context[key] = data
   }
 
   fetch(key: string): any {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const value = this.context[key]
     if (!value) {
       throw new MiddlewareInputKeyNotFoundError(this.middlewareId, key)

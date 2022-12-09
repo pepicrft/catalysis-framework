@@ -17,6 +17,7 @@ describe('decodeJSONFile', () => {
       await writeFile(jsonPath, validJson)
 
       // When
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const { name } = await decodeJSONFile(jsonPath)
 
       // Then
@@ -53,13 +54,16 @@ describe('decodeJSONFile', () => {
       try {
         parseJson(invalidJson)
       } catch (error: any) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         internalError = error
       }
 
       // When/Then
       await expect(async () => {
         await decodeJSONFile(jsonPath)
-      }).rejects.toThrow(new JSONFileDecodeError(jsonPath, internalError))
+      }).rejects.toThrow(
+        new JSONFileDecodeError(jsonPath, internalError as Error)
+      )
     })
   })
 })

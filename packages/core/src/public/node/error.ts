@@ -7,6 +7,7 @@ import { ErrorLogType, stringify } from '../common/logger.js'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import sourceMapSupport from 'source-map-support'
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
 sourceMapSupport.install()
 
 /**

@@ -12,6 +12,7 @@ describe('setContext', () => {
 
     // Then
     expect(
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       decodeJSON(env.GESTALT_INTERNAL_CONTEXT as string).environment
     ).toEqual('production')
   })

@@ -38,7 +38,9 @@ export type InitGitRepositoryOptions = {
 export async function initGitRepository(
   options: InitGitRepositoryOptions
 ): Promise<void> {
-  coreLogger().debug(`Initializing Git repository at ${options.directory}`)
+  coreLogger().debug(
+    `Initializing Git repository at ${options.directory.pathString}`
+  )
   let args = ['init']
   if (options.branch) {
     args = args.concat(['-b', options.branch])

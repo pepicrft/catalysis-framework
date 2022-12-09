@@ -33,6 +33,7 @@ export default class Init extends Command {
       char: 'p',
       env: 'GESTALT_PATH',
       default: process.cwd(),
+      // eslint-disable-next-line @typescript-eslint/require-await
       parse: async (input) => resolvePath(input),
       description:
         "The path to the directory that where the project's directory will be created",

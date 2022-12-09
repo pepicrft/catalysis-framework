@@ -21,7 +21,7 @@ export class ProjectImpl implements Project {
   }
 
   get sourcesGlob(): string {
-    return joinPath(`${this.sourceDirectory}`, '**/*.ts')
+    return joinPath(`${this.sourceDirectory.pathString}`, '**/*.ts')
   }
 
   get sourceDirectory(): AbsolutePath {

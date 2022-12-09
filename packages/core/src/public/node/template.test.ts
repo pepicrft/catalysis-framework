@@ -1,7 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { inTemporarydirectory } from '../../internal/node/testing/temporary.js'
 import { ScaffoldOptions, scaffold } from './template.js'
-import { joinPath } from './path.js'
 import { writeFile, pathExists, readFile, makeDirectory } from './fs.js'
 
 describe('scaffold basic file', () => {
@@ -26,7 +25,8 @@ describe('scaffold basic file', () => {
       await scaffold(scaffoldOptions)
       // Then
       const targetFile = targetDirectory.pathAppendingComponent(fileName)
-      await expect(pathExists(targetFile))
+      const fileExists = await pathExists(targetFile)
+      expect(fileExists).toBeTruthy()
     })
   })
 })
@@ -53,14 +53,18 @@ describe('scaffold handlebar file', () => {
       // When
       await scaffold(scaffoldOptions)
       // Then
-      await expect(pathExists(targetDirectory))
+      await expect(async () => {
+        await pathExists(targetDirectory)
+      }).resolves.toBeTruthy()
       const expectedFile = tmpDir.pathAppendingComponent(
         'my-cool-project/my-cool-project.txt'
       )
-      await expect(pathExists(expectedFile))
+      await expect(async () => {
+        await pathExists(expectedFile)
+      }).resolves.toBeTruthy()
       const expectedContent = 'my-cool-project'
       const targetContent = await readFile(expectedFile)
-      await expect(targetContent).toEqual(expectedContent)
+      expect(targetContent).toEqual(expectedContent)
     })
   })
 })

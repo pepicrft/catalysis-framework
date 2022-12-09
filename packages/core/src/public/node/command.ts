@@ -37,6 +37,7 @@ export function projectFlags() {
       char: 'p',
       env: 'GESTALT_PATH',
       default: process.cwd(),
+      // eslint-disable-next-line @typescript-eslint/require-await
       parse: async (input) => resolvePath(input),
       description: 'The path to the directory from where the command will run.',
       required: false,

@@ -20,6 +20,8 @@ export async function getVersionForGeneratedProject(): Promise<string> {
     type: 'file',
     cwd: moduleDirname(import.meta.url),
   })) as string
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { version } = await decodeJSONFile(absolutePath(packageJsonPath))
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return version
 }

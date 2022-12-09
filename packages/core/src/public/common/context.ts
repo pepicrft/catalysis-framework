@@ -30,6 +30,7 @@ export function setContext(context: Context, env = process.env) {
 export function _useContext(env = process.env): Context {
   const envVariable = env.GESTALT_INTERNAL_CONTEXT
   if (envVariable) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return decodeJSON(envVariable)
   } else {
     return { environment: 'development' }

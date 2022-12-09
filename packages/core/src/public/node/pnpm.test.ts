@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { absolutePath } from 'typed-file-system-path'
 import { describe, expect, test, vi } from 'vitest'
 import { isPnpmPresent, pnpmInstall } from './pnpm.js'
@@ -9,6 +10,7 @@ describe('pnpmInstall', () => {
   test('it runs the right pnpm command', async () => {
     // Given
     const output: any = {}
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     vi.mocked(exec).mockResolvedValue(output)
     const directory = absolutePath('/tmp')
     const stdout: any = 'stdout'
@@ -46,6 +48,7 @@ describe('isPnpmPresent', () => {
   test("returns true if the 'pnpm -h' command succeeds", async () => {
     // Given
     const output: any = {}
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     vi.mocked(exec).mockResolvedValue(output)
 
     // When

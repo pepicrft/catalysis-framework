@@ -5,14 +5,21 @@ const path = require('path')
 
 rulesDirPlugin.RULES_DIR = path.join(__dirname, 'eslint-rules')
 
+console.log(path.join(__dirname, './packages/*/tsconfig.json'));
+
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+    EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true
+  },
   plugins: ['@typescript-eslint', 'rulesdir', 'import', 'jest'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@shopify/prettier',
     'prettier',
   ],

@@ -26,7 +26,7 @@ export function decodeJSON(content: string): any {
   try {
     return parseJson(content)
   } catch (error: any | undefined) {
-    throw new DecodeJSONError(error)
+    throw new DecodeJSONError(error as Error)
   }
 }
 
@@ -56,6 +56,6 @@ export function encodeJSON(
   try {
     return safeStringify(value, replacer, space, options)
   } catch (error: any) {
-    throw new EncodeJSONError(error)
+    throw new EncodeJSONError(error as Error)
   }
 }

@@ -26,7 +26,7 @@ export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
         try {
           await this.compile(filePath, outputPath)
           result = Ok(await import(outputPath.pathString))
-        } catch (_error) {
+        } catch (_error: any) {
           if (_error instanceof Error) {
             const error = new ModuleCompilationError(_error.message)
             error.stack = _error.stack
@@ -34,6 +34,7 @@ export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
           } else {
             result = Err(
               new Abort(
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
                 `Unknown error building and loading a module with ESBuild: ${_error}`
               )
             )

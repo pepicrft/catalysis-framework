@@ -9,6 +9,7 @@ describe('decodeJSON', () => {
     const validJson = `{ "name": "test" }`
 
     // When
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { name } = decodeJSON(validJson)
 
     // Then
@@ -29,6 +30,7 @@ describe('decodeJSON', () => {
     try {
       parseJson(invalidJson)
     } catch (error: any) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       internalError = error
     }
 

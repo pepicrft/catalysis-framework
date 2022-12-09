@@ -1,4 +1,3 @@
-// TODO: Move to fs
 export { default as glob } from 'fast-glob'
 import process from 'node:process'
 import {
@@ -113,6 +112,7 @@ export function relativizePath(path: string | AbsolutePath): string {
   } else {
     stringPath = path as string
   }
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
   const result = commondir([stringPath, process.cwd()])
   if (result !== '/') {
     return relativePathFrom(process.cwd(), `${stringPath}`)

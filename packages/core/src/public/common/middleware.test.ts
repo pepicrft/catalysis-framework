@@ -81,6 +81,7 @@ describe('MiddlewareInputImpl', () => {
     )
 
     // When/Then
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     expect(() => subject.fetch('key')).toThrowError(
       new MiddlewareInputKeyNotFoundError('middlewareId', 'key')
     )

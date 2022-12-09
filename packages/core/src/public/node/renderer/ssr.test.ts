@@ -2,9 +2,9 @@ import { describe, test, expect } from 'vitest'
 import { ssr } from './ssr'
 
 describe('ssr', () => {
-  test('content', async () => {
+  test('content', () => {
     // When
-    const got = await ssr.content('component-id')
+    const got = ssr.content('component-id')
 
     // Then
     expect(got).toMatchInlineSnapshot(`
@@ -19,7 +19,7 @@ describe('ssr', () => {
     `)
   })
 
-  test('extension', async () => {
+  test('extension', () => {
     // When
     const got = ssr.extension
 

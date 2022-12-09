@@ -14,7 +14,7 @@ export async function checkStyle(options: LintOptions) {
   }
   args.push(options.project.sourcesGlob)
   try {
-    await runESLint(args, `${options.project.directory}`)
+    await runESLint(args, `${options.project.directory.pathString}`)
 
     // TODO: fix error with logger when executing tests
   } catch (err) {

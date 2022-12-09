@@ -11,6 +11,7 @@ export default class Migrate extends Command {
     ...projectFlags(),
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   async run(): Promise<void> {
     dbLogger().success('Migrated')
   }

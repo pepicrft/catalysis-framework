@@ -17,7 +17,7 @@ describe('run', () => {
     // Then
     expect(runTypescriptCompiler).toHaveBeenCalledWith(
       expectedArgs,
-      `${appDirectory}`
+      `${appDirectory.pathString}`
     )
   })
 })

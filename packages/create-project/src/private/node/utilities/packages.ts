@@ -27,12 +27,15 @@ export async function getLocalPackagesOverrides(): Promise<{
   )
   let entries = await Promise.all(
     packageJsonPaths.map(async (packageJsonPath): Promise<string[]> => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const { name } = await decodeJSONFile(absolutePath(packageJsonPath))
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       return [name, `file:${parentDirectory(packageJsonPath)}`]
     })
   )
   entries = entries.filter((entry) => {
     return !entry[0].includes('create-') && !entry[0].includes('website')
   })
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return Object.fromEntries(entries)
 }

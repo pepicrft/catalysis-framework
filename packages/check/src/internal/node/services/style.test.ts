@@ -19,7 +19,7 @@ describe('run', () => {
     // Then
     expect(runESLint).toHaveBeenCalledWith(
       expectedArgs,
-      `${options.project.directory}`
+      `${options.project.directory.pathString}`
     )
   })
 
@@ -34,7 +34,7 @@ describe('run', () => {
     // Then
     expect(runESLint).toHaveBeenCalledWith(
       expectedArgs,
-      `${options.project.directory}`
+      `${options.project.directory.pathString}`
     )
   })
 })

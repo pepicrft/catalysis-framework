@@ -27,14 +27,21 @@ Given('I have a working directory', function (this: GestaltWorld) {
   }
 })
 
-Given(/I have the fixture (.+) in the working directory/, function (fixture) {
-  const from = joinPath(__dirname, '../../fixtures', fixture)
-  const to = this.temporaryDirectory
-  fs.copySync(from, to)
-})
+Given(
+  /I have the fixture (.+) in the working directory/,
+  function (fixture: string) {
+    const from = joinPath(__dirname, '../../fixtures', fixture)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const to = this.temporaryDirectory
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    fs.copySync(from, to)
+  }
+)
 
+// eslint-disable-next-line @typescript-eslint/require-await
 After(async function () {
   if (this.temporaryDirectory) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     rimraf.sync(this.temporaryDirectory)
   }
 })

@@ -4,7 +4,7 @@ import { hydrate } from './hydrate.js'
 vi.mock('react-dom')
 
 describe('hydrate', () => {
-  test('content', async () => {
+  test('content', () => {
     // When
     const got = hydrate.content('component-id', '#app')
 
@@ -20,7 +20,7 @@ describe('hydrate', () => {
     `)
   })
 
-  test('extension', async () => {
+  test('extension', () => {
     // When
     const got = hydrate.extension
 

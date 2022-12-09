@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { isGitAvailable } from './git.js'
 
-describe('isGitAvailable', async () => {
+describe('isGitAvailable', () => {
   /**
    * Since the project is part of a Git repository it's safe to assume
    * that Git is present from this integration test.

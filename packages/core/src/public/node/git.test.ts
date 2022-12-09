@@ -5,7 +5,7 @@ import { exec } from './system.js'
 
 vi.mock('./system.js')
 
-describe('initGitRepository', async () => {
+describe('initGitRepository', () => {
   test('invokes git with the right arguments', async () => {
     // Given
     const directory = absolutePath('/tmp/project')

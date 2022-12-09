@@ -53,8 +53,9 @@ export async function decodeJSONFile(path: AbsolutePath): Promise<any> {
   }
   const jsonContent = await readFile(path)
   try {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return parseJson(jsonContent)
   } catch (error: any | undefined) {
-    throw new JSONFileDecodeError(path, error)
+    throw new JSONFileDecodeError(path, error as Error)
   }
 }

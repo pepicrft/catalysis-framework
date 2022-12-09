@@ -10,6 +10,7 @@ export { Configuration } from './project/configuration.js'
  * @param fromDirectory {AbsolutePath} Directory from where the project will be looked up.
  * @returns {Promise<Project>} A promise that resolves with the loaded project.
  */
+// eslint-disable-next-line @typescript-eslint/require-await
 export async function loadProject(
   fromDirectory: AbsolutePath
 ): Promise<Project> {

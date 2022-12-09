@@ -11,6 +11,7 @@ export default class Test extends Command {
     ...projectFlags(),
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   async run(): Promise<void> {
     testLogger().success('Tested')
   }

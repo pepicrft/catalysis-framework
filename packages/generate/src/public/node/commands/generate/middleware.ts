@@ -33,8 +33,9 @@ export default class Middleware extends Command {
     const { flags, args } = await this.parse(Middleware)
     const project = await loadProject(absolutePath(flags.path))
     await generateMiddlewareService({
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       name: args.name,
-      language: flags.language as GenerateMiddlewareLanguage,
+      language: flags.language,
       project: project,
     })
   }

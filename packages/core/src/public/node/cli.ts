@@ -37,7 +37,7 @@ export function runCLI(options: RunCLIOptions) {
         await flush(ms as number)
       })
       .catch((thrownError) => {
-        return errorHandler(thrownError)
+        return errorHandler(thrownError as Error)
       })
   }
 }

@@ -1,6 +1,6 @@
 import { createProjectLogger } from '../logger.js'
 import { hyphenCased } from '@gestaltjs/core/common/string'
-import { AbsolutePath, joinPath } from '@gestaltjs/core/node/path'
+import { AbsolutePath } from '@gestaltjs/core/node/path'
 import {
   inTemporarydirectory,
   makeDirectory,
@@ -127,7 +127,9 @@ export async function initDirectories(directory: AbsolutePath) {
   ]
   for (const directoryName of directories) {
     const directoryPath = directory.pathAppendingComponent(directoryName)
-    createProjectLogger().debug(`Creating directory: ${directoryPath}`)
+    createProjectLogger().debug(
+      `Creating directory: ${directoryPath.pathString}`
+    )
     const gitkeepPath = directoryPath.pathAppendingComponent('.gitkeep')
     await makeDirectory(directoryPath)
     await writeFile(gitkeepPath, '')
@@ -159,6 +161,7 @@ export async function initPackageJson(
   }
   if (options.local) {
     const packageOverrides = await getLocalPackagesOverrides()
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     packageJson = {
       ...packageJson,
       resolutions: packageOverrides,

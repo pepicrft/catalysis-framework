@@ -308,7 +308,7 @@ export function content(
     if (typeof token === 'string') {
       output += token
     } else {
-      const enumToken = token as LoggerContentToken
+      const enumToken = token
       switch (enumToken.type) {
         case LoggerContentType.Path:
           output += formatGray(relativizePath(enumToken.value))

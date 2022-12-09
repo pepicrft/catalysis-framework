@@ -25,6 +25,7 @@ export async function inTemporaryDeletableDirectory<T>(
   ) => T
 ) {
   const directory = temporaryDirectory()
+  // eslint-disable-next-line @typescript-eslint/await-thenable
   const value = await callback(absolutePath(directory), async () => {
     await new Promise((resolve, reject) => {
       rimraf(directory, {}, resolve)

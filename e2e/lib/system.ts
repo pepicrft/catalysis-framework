@@ -34,7 +34,7 @@ export function exec(
     env: { ...process.env, NODE_OPTIONS: '' },
   }
   const shortCommand = command.split('/').slice(-1).pop() || ''
-  const commandProcess = execa(command, args, _options)
+  const commandProcess = execa(command, args)
   commandProcess.stdout?.on('data', (data: string) => {
     if (isDebug) {
       // eslint-disable-next-line no-console

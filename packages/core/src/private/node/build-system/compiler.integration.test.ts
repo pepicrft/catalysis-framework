@@ -27,6 +27,7 @@ describe('ESBuildCompiler', () => {
         const got = await subject.buildAndImportModule(modulePath)
 
         // Then
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
         expect(got.value.foo()).toEqual('bar')
       })
     })

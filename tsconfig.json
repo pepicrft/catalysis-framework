@@ -1,6 +1,5 @@
 {
     "extends": "./configurations/tsconfig.json",
-    "include": [],
     "references": [
       {"path": "./ship"},
       {"path": "./e2e"},
