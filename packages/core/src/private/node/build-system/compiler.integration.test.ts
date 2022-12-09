@@ -21,7 +21,7 @@ describe('ESBuildCompiler', () => {
         const inputModule = `
         export function foo() { return "bar" }
         `
-        writeFile(modulePath, inputModule)
+        await writeFile(modulePath, inputModule)
 
         // When
         const got = await subject.buildAndImportModule(modulePath)
@@ -38,7 +38,7 @@ describe('ESBuildCompiler', () => {
         const inputModule = `
           export functon invalid { retn bar" }
           `
-        writeFile(modulePath, inputModule)
+        await writeFile(modulePath, inputModule)
 
         // When/Then
         await expect(async () => {
