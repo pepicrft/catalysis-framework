@@ -41,7 +41,7 @@ importers:
       ts-node: 10.9.1
       typescript: 4.9.4
       vite: 4.0.0
-      vitest: 0.25.3
+      vitest: 0.25.6
     devDependencies:
       '@babel/core': 7.20.5
       '@changesets/cli': 2.25.2
@@ -80,7 +80,7 @@ importers:
       ts-node: 10.9.1_r65g46xrm45gbuklnvp6xevc2y
       typescript: 4.9.4
       vite: 4.0.0_@types+node@18.11.12
-      vitest: 0.25.3
+      vitest: 0.25.6
 
   e2e:
     specifiers:
@@ -11993,6 +11993,7 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: false
 
   /postcss/8.4.19:
     resolution: {integrity: sha512-h+pbPsyhlYj6N2ozBmHhHrs9DzGmbaarbLvWipMRO7RLS+v4onj26MPFXA5OBYFxyqYhUJK456SwDcY9H2/zsA==}
@@ -13470,8 +13471,8 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  /strip-literal/0.4.2:
-    resolution: {integrity: sha512-pv48ybn4iE1O9RLgCAN0iU4Xv7RlBTiit6DKmMiErbs9x1wH6vXBs45tWc0H5wUIF6TLTrKweqkmYF/iraQKNw==}
+  /strip-literal/1.0.0:
+    resolution: {integrity: sha512-5o4LsH1lzBzO9UFH63AJ2ad2/S2AVx6NtjOcaz+VTT2h1RiRvbipW72z8M/lxEhcPHDBQwpDrnTF7sXy/7OwCQ==}
     dependencies:
       acorn: 8.8.1
     dev: true
@@ -14395,7 +14396,7 @@ packages:
     dependencies:
       '@types/node': 18.11.12
       esbuild: 0.15.18
-      postcss: 8.4.18
+      postcss: 8.4.19
       resolve: 1.22.1
       rollup: 2.79.1
     optionalDependencies:
@@ -14469,8 +14470,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.25.3:
-    resolution: {integrity: sha512-/UzHfXIKsELZhL7OaM2xFlRF8HRZgAHtPctacvNK8H4vOcbJJAMEgbWNGSAK7Y9b1NBe5SeM7VTuz2RsTHFJJA==}
+  /vitest/0.25.6:
+    resolution: {integrity: sha512-jdPgmZ7BcDnm1+hmMPIl9BZjSy+b8Y8V0tQMsv7ECO90Qic7EZ5/+traILXLpsXgqK5KgVrUJmchevAUuKL/1w==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -14500,7 +14501,7 @@ packages:
       debug: 4.3.4
       local-pkg: 0.4.2
       source-map: 0.6.1
-      strip-literal: 0.4.2
+      strip-literal: 1.0.0
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
