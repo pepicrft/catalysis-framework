@@ -39,7 +39,6 @@ module.exports = {
   },
   env: {
     node: true,
-    commonjs: true,
   },
-  ignorePatterns: ['dist', 'node_modules', 'bin'],
+  ignorePatterns: ['dist', 'node_modules', 'bin', 'vitest.config.ts'],
 }
