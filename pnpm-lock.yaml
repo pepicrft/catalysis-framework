@@ -33,7 +33,7 @@ importers:
       install: 0.13.0
       nx: 15.2.4
       pathe: 1.0.0
-      prettier: 2.8.0
+      prettier: 2.8.1
       rimraf: 3.0.2
       shx: 0.3.4
       tempy: 3.0.0
@@ -47,8 +47,8 @@ importers:
       '@changesets/cli': 2.25.2
       '@nrwl/cli': 15.2.4
       '@nrwl/tao': 15.2.4
-      '@nrwl/workspace': 15.2.4_smyufremwsyz5zxezfqf77zkjq
-      '@shopify/eslint-plugin': 42.0.2_5l4rapcvpjm5u56xs73oudt7pm
+      '@nrwl/workspace': 15.2.4_wmvgrer77zuzszcy3y2g4aadjy
+      '@shopify/eslint-plugin': 42.0.2_nn3tlpaeznckhcklhivv4gxjqu
       '@shopify/prettier-config': 1.1.2
       '@types/fs-extra': 9.0.13
       '@types/node': 18.11.12
@@ -63,7 +63,7 @@ importers:
       eslint-plugin-import: 2.26.0_jx43xxcguvnqqmtmaaygwl7cmu
       eslint-plugin-jest: 27.1.6_tjvinx5bdnfpg7kkz6ii3mf2ym
       eslint-plugin-jsx-a11y: 6.6.1_eslint@8.29.0
-      eslint-plugin-prettier: 4.2.1_nrhoyyjffvfyk4vtlt5destxgm
+      eslint-plugin-prettier: 4.2.1_5dgjrgoi64tgrv3zzn3walur3u
       eslint-plugin-react: 7.31.11_eslint@8.29.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.29.0
       eslint-plugin-rulesdir: 0.2.1
@@ -72,7 +72,7 @@ importers:
       install: 0.13.0
       nx: 15.2.4
       pathe: 1.0.0
-      prettier: 2.8.0
+      prettier: 2.8.1
       rimraf: 3.0.2
       shx: 0.3.4
       tempy: 3.0.0
@@ -1857,7 +1857,7 @@ packages:
       fs-extra: 7.0.1
       lodash.startcase: 4.4.0
       outdent: 0.5.0
-      prettier: 2.8.0
+      prettier: 2.8.1
       resolve-from: 5.0.0
       semver: 5.7.1
     dev: true
@@ -2024,7 +2024,7 @@ packages:
       '@changesets/types': 5.2.0
       fs-extra: 7.0.1
       human-id: 1.0.2
-      prettier: 2.8.0
+      prettier: 2.8.1
     dev: true
 
   /@colors/colors/1.5.0:
@@ -3774,7 +3774,7 @@ packages:
       - debug
     dev: true
 
-  /@nrwl/workspace/15.2.4_smyufremwsyz5zxezfqf77zkjq:
+  /@nrwl/workspace/15.2.4_wmvgrer77zuzszcy3y2g4aadjy:
     resolution: {integrity: sha512-h35+NwG2zCeJpQzLevw8q9frrKCwsQyOfUxzyP7nApoxQNO70iGdTwRli/dvB7jVIckp3x78yLuu32D9oqiKEA==}
     peerDependencies:
       prettier: ^2.6.2
@@ -3801,7 +3801,7 @@ packages:
       npm-run-path: 4.0.1
       nx: 15.2.4
       open: 8.4.0
-      prettier: 2.8.0
+      prettier: 2.8.1
       rxjs: 6.6.7
       semver: 7.3.4
       tmp: 0.2.1
@@ -3923,7 +3923,7 @@ packages:
       web-streams-polyfill: 3.2.1
     dev: false
 
-  /@shopify/eslint-plugin/42.0.2_5l4rapcvpjm5u56xs73oudt7pm:
+  /@shopify/eslint-plugin/42.0.2_nn3tlpaeznckhcklhivv4gxjqu:
     resolution: {integrity: sha512-z8r01/KIgeI9YDiPhjrcDC4RjHppZwtNR8C5um6syAq76oXdpsNZLzaVUE3bhWfPuEuETQrEBwHiKxkbtizm6g==}
     peerDependencies:
       eslint: ^8.3.0
@@ -3944,7 +3944,7 @@ packages:
       eslint-plugin-jest-formatting: 3.1.0_eslint@8.29.0
       eslint-plugin-jsx-a11y: 6.6.1_eslint@8.29.0
       eslint-plugin-node: 11.1.0_eslint@8.29.0
-      eslint-plugin-prettier: 4.2.1_nrhoyyjffvfyk4vtlt5destxgm
+      eslint-plugin-prettier: 4.2.1_5dgjrgoi64tgrv3zzn3walur3u
       eslint-plugin-promise: 6.1.1_eslint@8.29.0
       eslint-plugin-react: 7.31.11_eslint@8.29.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.29.0
@@ -7684,7 +7684,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_nrhoyyjffvfyk4vtlt5destxgm:
+  /eslint-plugin-prettier/4.2.1_5dgjrgoi64tgrv3zzn3walur3u:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -7697,7 +7697,7 @@ packages:
     dependencies:
       eslint: 8.29.0
       eslint-config-prettier: 8.5.0_eslint@8.29.0
-      prettier: 2.8.0
+      prettier: 2.8.1
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -12029,8 +12029,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier/2.8.0:
-    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
