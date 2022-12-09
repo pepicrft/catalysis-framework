@@ -25,7 +25,7 @@
     "@nrwl/cli": "15.2.4",
     "@nrwl/tao": "15.2.4",
     "@nrwl/workspace": "15.2.4",
-    "@shopify/eslint-plugin": "42.0.1",
+    "@shopify/eslint-plugin": "42.0.2",
     "@shopify/prettier-config": "1.1.2",
     "@types/fs-extra": "9.0.13",
     "@types/node": "18.11.10",

@@ -9,7 +9,7 @@ importers:
       '@nrwl/cli': 15.2.4
       '@nrwl/tao': 15.2.4
       '@nrwl/workspace': 15.2.4
-      '@shopify/eslint-plugin': 42.0.1
+      '@shopify/eslint-plugin': 42.0.2
       '@shopify/prettier-config': 1.1.2
       '@types/fs-extra': 9.0.13
       '@types/node': 18.11.10
@@ -48,7 +48,7 @@ importers:
       '@nrwl/cli': 15.2.4
       '@nrwl/tao': 15.2.4
       '@nrwl/workspace': 15.2.4_56dztdpl2yn2ib73lgoc7x5rma
-      '@shopify/eslint-plugin': 42.0.1_jhe2gm5lqtmxba5u5ms5x6gcpi
+      '@shopify/eslint-plugin': 42.0.2_jhe2gm5lqtmxba5u5ms5x6gcpi
       '@shopify/prettier-config': 1.1.2
       '@types/fs-extra': 9.0.13
       '@types/node': 18.11.10
@@ -3923,8 +3923,8 @@ packages:
       web-streams-polyfill: 3.2.1
     dev: false
 
-  /@shopify/eslint-plugin/42.0.1_jhe2gm5lqtmxba5u5ms5x6gcpi:
-    resolution: {integrity: sha512-rtWKd0hdXkyhYo8XkG7TYYVFCIQV8cJ2zCQHaYmsq5p7q1EZ9itXoOcNFzrNjSmiqXoDjCDpBj+33bcZYHKG3Q==}
+  /@shopify/eslint-plugin/42.0.2_jhe2gm5lqtmxba5u5ms5x6gcpi:
+    resolution: {integrity: sha512-z8r01/KIgeI9YDiPhjrcDC4RjHppZwtNR8C5um6syAq76oXdpsNZLzaVUE3bhWfPuEuETQrEBwHiKxkbtizm6g==}
     peerDependencies:
       eslint: ^8.3.0
     dependencies:
