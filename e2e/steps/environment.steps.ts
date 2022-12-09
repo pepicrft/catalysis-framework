@@ -4,6 +4,7 @@ import tmp from 'tmp'
 import rimraf from 'rimraf'
 import { join as joinPath } from 'pathe'
 import fs from 'fs-extra'
+import { GestaltWorld } from '../world/gestalt.js'
 
 if (process.env.DEBUG === '1') {
   setDefaultTimeout(-1)

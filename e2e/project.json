@@ -24,7 +24,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "NODE_OPTIONS=\"--loader ts-node/esm --no-warnings --experimental-specifier-resolution=node\" pnpm cucumber-js -p default",
+        "command": "pnpm exec ts-node-esm ./node_modules/@cucumber/cucumber/bin/cucumber.js  -p default",
         "cwd": "e2e"
       }
     },

@@ -9,7 +9,16 @@ export interface WorldConstructorParams {
   temporaryDirectory: string
 }
 
-type RunOptions = { cwd?: string; env?: NodeJS.ProcessEnv }
+export type RunOptions = { cwd?: string; env?: NodeJS.ProcessEnv }
+
+export interface GestaltWorld {
+  temporaryDirectory: string
+  temporaryEnvironment: any | undefined
+  projectDirectory: string | undefined
+
+  runGestalt(args: string[], options: RunOptions): Promise<void>
+  runCreateProject(args: string[], options: RunOptions): Promise<void>
+}
 
 export class GestaltWorldImpl implements GestaltWorld {
   public temporaryDirectory: string
