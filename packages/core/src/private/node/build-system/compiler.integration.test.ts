@@ -42,7 +42,7 @@ describe('ESBuildCompiler', () => {
 
         // When/Then
         await expect(async () => {
-          (await subject.buildAndImportModule(modulePath)).valueOrThrow()
+          ;(await subject.buildAndImportModule(modulePath)).valueOrThrow()
         }).rejects.toThrowError(ModuleCompilationError)
       })
     })
