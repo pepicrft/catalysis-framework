@@ -52,16 +52,13 @@ describe('scaffold handlebar file', () => {
       }
       // When
       await scaffold(scaffoldOptions)
+
       // Then
-      await expect(async () => {
-        await pathExists(targetDirectory)
-      }).resolves.toBeTruthy()
+      await expect(pathExists(targetDirectory)).resolves.toBeFalsy()
       const expectedFile = tmpDir.pathAppendingComponent(
         'my-cool-project/my-cool-project.txt'
       )
-      await expect(async () => {
-        await pathExists(expectedFile)
-      }).resolves.toBeTruthy()
+      await expect(pathExists(expectedFile)).resolves.toBeTruthy()
       const expectedContent = 'my-cool-project'
       const targetContent = await readFile(expectedFile)
       expect(targetContent).toEqual(expectedContent)
