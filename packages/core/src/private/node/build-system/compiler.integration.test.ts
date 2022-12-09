@@ -36,7 +36,7 @@ describe('ESBuildCompiler', () => {
         // Given
         const modulePath = tmpDir.pathAppendingComponent('input.js')
         const inputModule = `
-          export function invalid { return "bar" }
+          export functon invalid { retn bar" }
           `
         writeFile(modulePath, inputModule)
 
