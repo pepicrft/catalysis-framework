@@ -27,6 +27,7 @@ export function Compiler<TBase extends BaseCompilerConstructor>(Base: TBase) {
           await this.compile(filePath, outputPath)
           result = Ok(await import(outputPath.pathString))
         } catch (_error) {
+          console.log(_error)
           if (_error instanceof Error) {
             const error = new ModuleCompilationError(_error.message)
             error.stack = _error.stack

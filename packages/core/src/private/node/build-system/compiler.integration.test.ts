@@ -40,13 +40,10 @@ describe('ESBuildCompiler', () => {
           `
         writeFile(modulePath, inputModule)
 
-        // When
-        const got = await subject.buildAndImportModule(modulePath)
-
-        // Then
-        expect(() => {
-          got.valueOrThrow()
-        }).toThrowError(ModuleCompilationError)
+        // When/Then
+        await expect(async () => {
+          (await subject.buildAndImportModule(modulePath)).valueOrThrow()
+        }).rejects.toThrowError(ModuleCompilationError)
       })
     })
   })

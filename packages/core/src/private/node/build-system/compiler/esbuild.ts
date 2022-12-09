@@ -7,11 +7,13 @@ export class ESBuildBaseCompiler implements BaseCompiler {
     inputPath: AbsolutePath,
     outputPath: AbsolutePath
   ): Promise<void> {
-    await esbuild({
+    const result = await esbuild({
       entryPoints: [inputPath.pathString],
       bundle: false,
       outfile: outputPath.pathString,
       logLevel: 'silent',
     })
+    console.log(`YOLO:`)
+    console.log(result)
   }
 }
