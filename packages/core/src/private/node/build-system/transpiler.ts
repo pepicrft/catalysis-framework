@@ -9,7 +9,9 @@ export type BuildAndLoadModuleError = ModuleTranspilationError | Abort
 
 type BaseTranspilerConstructor = new (...args: any[]) => BaseTranspiler
 
-export function Transpiler<TBase extends BaseTranspilerConstructor>(Base: TBase) {
+export function Transpiler<TBase extends BaseTranspilerConstructor>(
+  Base: TBase
+) {
   return class Transpiling extends Base {
     /**
      * Given a path to a module, it builds it into a temporary
