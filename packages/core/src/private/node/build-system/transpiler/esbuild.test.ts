@@ -1,14 +1,14 @@
 import { absolutePath } from 'typed-file-system-path'
 import { describe, beforeEach, test, vi, expect } from 'vitest'
-import { ESBuildBaseCompiler } from './esbuild.js'
+import { ESBuildBaseTranspiler } from './esbuild.js'
 import { build as esbuild } from 'esbuild'
 
 vi.mock('esbuild')
 
-let subject: ESBuildBaseCompiler
+let subject: ESBuildBaseTranspiler
 
 beforeEach(() => {
-  subject = new ESBuildBaseCompiler()
+  subject = new ESBuildBaseTranspiler()
 })
 
 describe('esbuild', () => {
@@ -18,7 +18,7 @@ describe('esbuild', () => {
     const outputPath = absolutePath('/output.js')
 
     // When
-    await subject.compile(inputPath, outputPath)
+    await subject.transpile(inputPath, outputPath)
 
     // Then
     expect(esbuild).toHaveBeenCalledWith({

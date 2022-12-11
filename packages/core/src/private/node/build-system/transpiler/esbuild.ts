@@ -1,9 +1,9 @@
 import { AbsolutePath } from '../../../../public/node/path.js'
-import { BaseCompiler } from '../compiler.js'
+import { BaseTranspiler } from '../transpiler.js'
 import { build as esbuild } from 'esbuild'
 
-export class ESBuildBaseCompiler implements BaseCompiler {
-  async compile(
+export class ESBuildBaseTranspiler implements BaseTranspiler {
+  async transpile(
     inputPath: AbsolutePath,
     outputPath: AbsolutePath
   ): Promise<void> {

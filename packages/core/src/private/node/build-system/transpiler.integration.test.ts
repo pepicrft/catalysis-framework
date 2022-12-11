@@ -1,16 +1,16 @@
 import { beforeEach, describe, expect, test } from 'vitest'
 import {
-  ESBuildCompiler,
-  Compiler,
-  ModuleCompilationError,
-} from './compiler.js'
+  ESBuildTranspiler,
+  Transpiler,
+  ModuleTranspilationError,
+} from './transpiler.js'
 import { inTemporarydirectory, writeFile } from '../../../public/node/fs.js'
 
-let subject: InstanceType<ReturnType<typeof Compiler>>
+let subject: InstanceType<ReturnType<typeof Transpiler>>
 
-describe('ESBuildCompiler', () => {
+describe('ESBuildTranspiler', () => {
   beforeEach(() => {
-    subject = new ESBuildCompiler()
+    subject = new ESBuildTranspiler()
   })
 
   describe('buildAndImportModule', () => {
@@ -32,7 +32,7 @@ describe('ESBuildCompiler', () => {
       })
     })
 
-    test('it returns a ModuleCompilationError error when the module fails to compile', async () => {
+    test('it returns a ModuleTranspilationError error when the module fails to compile', async () => {
       await inTemporarydirectory(async (tmpDir) => {
         // Given
         const modulePath = tmpDir.pathAppendingComponent('input.js')
@@ -44,7 +44,7 @@ describe('ESBuildCompiler', () => {
         // When/Then
         await expect(async () => {
           ;(await subject.buildAndImportModule(modulePath)).valueOrThrow()
-        }).rejects.toThrowError(ModuleCompilationError)
+        }).rejects.toThrowError(ModuleTranspilationError)
       })
     })
   })

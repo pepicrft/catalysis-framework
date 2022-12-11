@@ -1,15 +1,15 @@
 import { describe, beforeEach, test, expect } from 'vitest'
-import { ESBuildBaseCompiler } from './esbuild.js'
+import { ESBuildBaseTranspiler } from './esbuild.js'
 import { inTemporarydirectory } from '../../../../internal/node/testing/temporary'
 import { writeFile } from '../../../../public/node/fs.js'
 
-let subject: ESBuildBaseCompiler
+let subject: ESBuildBaseTranspiler
 
 beforeEach(() => {
-  subject = new ESBuildBaseCompiler()
+  subject = new ESBuildBaseTranspiler()
 })
 
-describe('compile', () => {
+describe('transpile', () => {
   test('it compiles when the input module is valid', async () => {
     await inTemporarydirectory(async (tmpDir) => {
       // Given
@@ -19,7 +19,7 @@ describe('compile', () => {
       await writeFile(inputPath, `export function foo(): string {}`)
 
       // When/Then
-      await subject.compile(inputPath, outputPath)
+      await subject.transpile(inputPath, outputPath)
     })
   })
 
@@ -33,7 +33,7 @@ describe('compile', () => {
 
       // When/Then
       await expect(async () => {
-        await subject.compile(inputPath, outputPath)
+        await subject.transpile(inputPath, outputPath)
       }).rejects.toThrowError()
     })
   })
