@@ -121,6 +121,7 @@ importers:
       '@types/inquirer': 9.0.3
       acorn: 8.8.1
       case-anything: 2.1.10
+      chokidar: ^3.5.3
       commondir: 1.0.1
       esbuild: 0.16.4
       execa: 6.1.0
@@ -158,6 +159,7 @@ importers:
       '@remix-run/web-fetch': 4.2.0
       acorn: 8.8.1
       case-anything: 2.1.10
+      chokidar: 3.5.3
       commondir: 1.0.1
       esbuild: 0.16.4
       execa: 6.1.0
