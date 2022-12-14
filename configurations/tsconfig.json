@@ -23,6 +23,7 @@
       "@gestaltjs/core/internal/*": ["../packages/core/src/internal/*.ts"],
       "@gestaltjs/core/*": ["../packages/core/src/public/*.ts"],
       "@gestaltjs/plugins/*": ["../packages/plugins/src/public/*.ts"],
+      "@gestaltjs/plugin-esbuild": ["../packages/plugin-esbuild/dist/index.js"]
     }
   },
   "exclude": ["dist/**", "node_modules"]
