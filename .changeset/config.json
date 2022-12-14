@@ -6,7 +6,6 @@
     [
       "gestaltjs",
       "@gestaltjs/create-project",
-      "@gestaltjs/eslint-plugin",
       "@gestaltjs/build",
       "@gestaltjs/check",
       "@gestaltjs/db",

@@ -16,7 +16,12 @@
       "types": "./dist/public/*.d.ts"
     }
   },
+  "bin": {
+    "gestalt": "./bin/run.js"
+  },
   "files": [
+    "/bin/run.js",
+    "/bin/run.cmd",
     "/dist"
   ],
   "scripts": {
@@ -40,7 +45,9 @@
       ]
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "@gestaltjs/core": "0.7.10"
+  },
   "devDependencies": {
   },
   "engine-strict": true,
@@ -51,5 +58,10 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "oclif": {
+    "bin": "gestalt",
+    "topicSeparator": " ",
+    "commands": "./dist/public/node/commands"
+  }
 }

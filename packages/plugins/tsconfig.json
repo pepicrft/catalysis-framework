@@ -11,5 +11,9 @@
     "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.build.tsbuildinfo"
   },
-  "references": []
+  "references": [
+    {
+      "path": "../core"
+    }
+  ]
 }

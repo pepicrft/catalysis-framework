@@ -4,7 +4,6 @@
   "sourceRoot": "packages/core/src",
   "projectType": "library",
   "tags": ["scope:foundation"],
-  "implicitDependencies": ["kit"],
   "targets": {
     "clean": {
       "executor": "nx:run-commands",

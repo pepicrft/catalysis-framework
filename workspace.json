@@ -12,9 +12,9 @@
     "test": "packages/test",
     "build": "packages/build",
     "check": "packages/check",
+    "plugins": "packages/plugins",
     "core": "packages/core",
     "create-project": "packages/create-project",
-    "website": "website",
-    "eslint-plugin": "packages/eslint-plugin"
+    "website": "website"
   }
 }

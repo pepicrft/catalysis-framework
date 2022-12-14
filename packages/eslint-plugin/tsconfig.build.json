@@ -9,7 +9,6 @@
   ],
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "src",
     "rootDir": "src"
   },
   "references": []
