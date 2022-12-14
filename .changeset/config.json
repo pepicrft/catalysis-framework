@@ -16,7 +16,7 @@
       "@gestaltjs/info",
       "@gestaltjs/routes",
       "@gestaltjs/core",
-      "@gestaltjs/kit"
+      "@gestaltjs/plugins"
     ]
   ],
   "access": "public",

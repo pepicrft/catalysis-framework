@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/kit",
+  "name": "@gestaltjs/plugins",
   "version": "0.7.10",
   "private": false,
   "description": "Set of Getalt models and utilities to extend the Gestalt framework and projects",

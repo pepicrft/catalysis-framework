@@ -1,7 +1,7 @@
 {
-  "name": "kit",
-  "root": "packages/kit",
-  "sourceRoot": "packages/kit/src",
+  "name": "plugins",
+  "root": "packages/plugins",
+  "sourceRoot": "packages/plugins/src",
   "projectType": "library",
   "tags": ["scope:foundation"],
   "targets": {
@@ -9,7 +9,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm shx rm -rf dist",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     },
     "build": {
@@ -18,28 +18,28 @@
       "inputs": ["{projectRoot}/src/**/*"],
       "options": {
         "command": "pnpm tsc -b ./tsconfig.build.json",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
         "command": "eslint './**/*.{js,ts}'",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     },
     "lint:fix": {
       "executor": "nx:run-commands",
       "options": {
         "command": "eslint './**/*.{js,ts}' --fix",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     },
     "test": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm vitest run",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     },
     "test:watch": {
@@ -47,14 +47,14 @@
       "dependsOn": ["^build"],
       "options": {
         "command": "pnpm vitest watch",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     },
     "type-check": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm tsc --noEmit",
-        "cwd": "packages/kit"
+        "cwd": "packages/plugins"
       }
     }
   }

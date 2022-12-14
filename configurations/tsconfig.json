@@ -22,7 +22,7 @@
       "gestaltjs/*": ["../packages/gestaltjs/src/node/manifests/*.ts"],
       "@gestaltjs/core/internal/*": ["../packages/core/src/internal/*.ts"],
       "@gestaltjs/core/*": ["../packages/core/src/public/*.ts"],
-      "@gestaltjs/kit/*": ["../packages/kit/src/public/*.ts"],
+      "@gestaltjs/plugins/*": ["../packages/plugins/src/public/*.ts"],
     }
   },
   "exclude": ["dist/**", "node_modules"]

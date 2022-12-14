@@ -263,7 +263,7 @@ importers:
     dependencies:
       '@gestaltjs/core': link:../core
 
-  packages/kit:
+  packages/plugins:
     specifiers: {}
 
   packages/routes:
