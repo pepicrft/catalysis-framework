@@ -15,10 +15,11 @@
       "@gestaltjs/test",
       "@gestaltjs/info",
       "@gestaltjs/routes",
-      "@gestaltjs/core"
+      "@gestaltjs/core",
+      "@gestaltjs/kit"
     ]
   ],
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@gestaltjs/website", "@gestaltjs/e2e"]
+  "ignore": ["@gestaltjs/website", "@gestaltjs/e2e", "ship"]
 }
