@@ -263,6 +263,12 @@ importers:
     dependencies:
       '@gestaltjs/core': link:../core
 
+  packages/plugin-esbuild:
+    specifiers:
+      '@gestaltjs/plugins': 0.7.10
+    dependencies:
+      '@gestaltjs/plugins': link:../plugins
+
   packages/plugins:
     specifiers:
       '@gestaltjs/core': 0.7.10

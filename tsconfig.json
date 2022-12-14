@@ -16,6 +16,7 @@
       {"path": "./packages/gestaltjs"},
       {"path": "./packages/info"},
       {"path": "./packages/routes"},
-      {"path": "./packages/test"}
+      {"path": "./packages/test"},
+      {"path": "./packages/plugin-esbuild"}
     ]
 }

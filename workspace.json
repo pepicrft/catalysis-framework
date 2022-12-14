@@ -15,6 +15,7 @@
     "plugins": "packages/plugins",
     "core": "packages/core",
     "create-project": "packages/create-project",
-    "website": "website"
+    "website": "website",
+    "plugin-esbuild": "packages/plugin-esbuild"
   }
 }

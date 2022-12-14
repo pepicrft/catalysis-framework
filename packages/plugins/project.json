@@ -3,7 +3,7 @@
   "root": "packages/plugins",
   "sourceRoot": "packages/plugins/src",
   "projectType": "library",
-  "tags": ["scope:foundation"],
+  "tags": ["scope:plugins"],
   "implicitDependencies": ["core"],
   "targets": {
     "clean": {
