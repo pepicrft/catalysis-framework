@@ -208,11 +208,11 @@ importers:
   packages/dev:
     specifiers:
       '@gestaltjs/core': 0.7.10
-      h3: 1.0.1
+      h3: 1.0.2
       listhen: 1.0.1
     dependencies:
       '@gestaltjs/core': link:../core
-      h3: 1.0.1
+      h3: 1.0.2
       listhen: 1.0.1
 
   packages/eslint-plugin:
@@ -6403,8 +6403,8 @@ packages:
     resolution: {integrity: sha512-JG+cG4ZPB1L27sl2C2URg8MIOmIUtTbE5wEx02BpmrTCqg/hXxFKXsYsnODl5PdpqNRaS1KQGUQ56V8jk8XpYQ==}
     dev: false
 
-  /destr/1.2.1:
-    resolution: {integrity: sha512-ud8w0qMLlci6iFG7CNgeRr8OcbUWMsbfjtWft1eJ5Luqrz/M8Ebqk/KCzne8rKUlIQWWfLv0wD6QHrqOf4GshA==}
+  /destr/1.2.2:
+    resolution: {integrity: sha512-lrbCJwD9saUQrqUfXvl6qoM+QN3W7tLV5pAOs+OqOmopCCz/JkE05MHedJR1xfk4IAnZuJXPVuN5+7jNA2ZCiA==}
     dev: false
 
   /destroy/1.2.0:
@@ -8253,13 +8253,13 @@ packages:
       duplexer: 0.1.2
     dev: false
 
-  /h3/1.0.1:
-    resolution: {integrity: sha512-gDCGpRvjchZW2JBlTqbJ9IOs+mdkXXuwSQkSye+jubHAv/UhdamKqoQvd4RFgyBNjHSId8Y+b10UdTcPlP/V+w==}
+  /h3/1.0.2:
+    resolution: {integrity: sha512-25QqjQMz8pX1NI2rZ/ziNT9B8Aog7jmu2a0o8Qm9kKoH3zOhE+2icVs069h6DEp0g1Dst1+zKfRdRYcK0MogJA==}
     dependencies:
       cookie-es: 0.5.0
-      destr: 1.2.1
+      destr: 1.2.2
       radix3: 1.0.0
-      ufo: 1.0.0
+      ufo: 1.0.1
     dev: false
 
   /handle-thing/2.0.1:
@@ -13004,6 +13004,10 @@ packages:
 
   /ufo/1.0.0:
     resolution: {integrity: sha512-DRty0ZBNlJ2R59y4mEupJRKLbkLQsc4qtxjpQv78AwEDuBkaUogMc2LkeqW3HddFlw6NwnXYfdThEZOiNgkmmQ==}
+    dev: false
+
+  /ufo/1.0.1:
+    resolution: {integrity: sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==}
     dev: false
 
   /uglify-js/3.15.4:
