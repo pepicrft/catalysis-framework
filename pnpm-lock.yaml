@@ -27,7 +27,7 @@ importers:
       eslint-plugin-prettier: 4.2.1
       eslint-plugin-react: 7.31.11
       eslint-plugin-react-hooks: 4.6.0
-      eslint-plugin-rulesdir: 0.2.1
+      eslint-plugin-rulesdir: 0.2.2
       fast-glob: 3.2.12
       fs-extra: 11.1.0
       install: 0.13.0
@@ -66,7 +66,7 @@ importers:
       eslint-plugin-prettier: 4.2.1_5dgjrgoi64tgrv3zzn3walur3u
       eslint-plugin-react: 7.31.11_eslint@8.29.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.29.0
-      eslint-plugin-rulesdir: 0.2.1
+      eslint-plugin-rulesdir: 0.2.2
       fast-glob: 3.2.12
       fs-extra: 11.1.0
       install: 0.13.0
@@ -7300,8 +7300,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-rulesdir/0.2.1:
-    resolution: {integrity: sha512-t7rQvEyfE4JZJu6dPl4/uVr6Fr0fxopBhzVbtq3isfOHMKdlIe9xW/5CtIaWZI0E1U+wzAk0lEnZC8laCD5YLA==}
+  /eslint-plugin-rulesdir/0.2.2:
+    resolution: {integrity: sha512-qhBtmrWgehAIQeMDJ+Q+PnOz1DWUZMPeVrI0wE9NZtnpIMFUfh3aPKFYt2saeMSemZRrvUtjWfYwepsC8X+mjQ==}
     engines: {node: '>=4.0.0'}
     dev: true
 
