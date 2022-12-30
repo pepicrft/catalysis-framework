@@ -85,7 +85,7 @@ importers:
   e2e:
     specifiers:
       '@cucumber/cucumber': 8.10.0
-      '@cucumber/messages': 20.0.0
+      '@cucumber/messages': 21.0.1
       '@cucumber/pretty-formatter': 1.0.0
       '@types/node': '*'
       execa: 6.1.0
@@ -94,8 +94,8 @@ importers:
       typescript: 4.9.4
     devDependencies:
       '@cucumber/cucumber': 8.10.0
-      '@cucumber/messages': 20.0.0
-      '@cucumber/pretty-formatter': 1.0.0_b3cwa5riqbatxzwedqidqhtv6y
+      '@cucumber/messages': 21.0.1
+      '@cucumber/pretty-formatter': 1.0.0_6n2wdgitughq7go5sedtye2o2y
       '@types/node': 18.11.10
       execa: 6.1.0
       picocolors: 1.0.0
@@ -2194,14 +2194,23 @@ packages:
       uuid: 9.0.0
     dev: true
 
-  /@cucumber/pretty-formatter/1.0.0_b3cwa5riqbatxzwedqidqhtv6y:
+  /@cucumber/messages/21.0.1:
+    resolution: {integrity: sha512-pGR7iURM4SF9Qp1IIpNiVQ77J9kfxMkPOEbyy+zRmGABnWWCsqMpJdfHeh9Mb3VskemVw85++e15JT0PYdcR3g==}
+    dependencies:
+      '@types/uuid': 8.3.4
+      class-transformer: 0.5.1
+      reflect-metadata: 0.1.13
+      uuid: 9.0.0
+    dev: true
+
+  /@cucumber/pretty-formatter/1.0.0_6n2wdgitughq7go5sedtye2o2y:
     resolution: {integrity: sha512-wcnIMN94HyaHGsfq72dgCvr1d8q6VGH4Y6Gl5weJ2TNZw1qn2UY85Iki4c9VdaLUONYnyYH3+178YB+9RFe/Hw==}
     peerDependencies:
       '@cucumber/cucumber': '>=7.0.0'
       '@cucumber/messages': '*'
     dependencies:
       '@cucumber/cucumber': 8.10.0
-      '@cucumber/messages': 20.0.0
+      '@cucumber/messages': 21.0.1
       ansi-styles: 5.2.0
       cli-table3: 0.6.2
       figures: 3.2.0
