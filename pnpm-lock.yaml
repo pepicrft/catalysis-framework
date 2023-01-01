@@ -244,7 +244,7 @@ importers:
       '@gestaltjs/info': 0.7.10
       '@gestaltjs/routes': 0.7.10
       '@gestaltjs/test': 0.7.10
-      '@oclif/plugin-help': 5.1.20
+      '@oclif/plugin-help': 5.1.22
     dependencies:
       '@gestaltjs/build': link:../build
       '@gestaltjs/check': link:../check
@@ -255,7 +255,7 @@ importers:
       '@gestaltjs/info': link:../info
       '@gestaltjs/routes': link:../routes
       '@gestaltjs/test': link:../test
-      '@oclif/plugin-help': 5.1.20
+      '@oclif/plugin-help': 5.1.22
 
   packages/info:
     specifiers:
@@ -3657,8 +3657,8 @@ packages:
     resolution: {integrity: sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==}
     dev: false
 
-  /@oclif/plugin-help/5.1.20:
-    resolution: {integrity: sha512-N8xRxE/isFcdBDI8cobixEZA5toxIK5jbxpwALNTr4s8KNAtBA3ORQrSiY0fWGkcv0sCGMwZw7rJ0Izh18JPsw==}
+  /@oclif/plugin-help/5.1.22:
+    resolution: {integrity: sha512-gflrCqV3c7nd1UgknuZZTX6Th9CTkvVyTjL76UNHrea3kCZEpPzsMGhwP989R+j3KSGJGeZVrq2i9g2QXI9tZA==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@oclif/core': 1.23.1
