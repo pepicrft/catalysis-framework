@@ -20,7 +20,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@babel/core": "7.20.7",
+    "@babel/core": "7.20.12",
     "@changesets/cli": "2.26.0",
     "@shopify/eslint-plugin": "42.0.2",
     "@nrwl/cli": "15.4.4",
