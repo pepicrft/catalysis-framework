@@ -11,7 +11,7 @@ importers:
       '@nrwl/workspace': 15.4.5
       '@shopify/eslint-plugin': 42.0.3
       '@shopify/prettier-config': 1.1.2
-      '@types/fs-extra': 9.0.13
+      '@types/fs-extra': 11.0.1
       '@types/node': 18.11.18
       '@types/rimraf': 3.0.2
       '@types/tmp': 0.2.3
@@ -51,7 +51,7 @@ importers:
       '@nrwl/workspace': 15.4.5_pizzqsi6myk3636ihwmmh4mlr4
       '@shopify/eslint-plugin': 42.0.3_zg4j5cv7a5yulwz7vufizraica
       '@shopify/prettier-config': 1.1.2
-      '@types/fs-extra': 9.0.13
+      '@types/fs-extra': 11.0.1
       '@types/node': 18.11.18
       '@types/rimraf': 3.0.2
       '@types/tmp': 0.2.3
@@ -4037,9 +4037,10 @@ packages:
       '@types/serve-static': 1.15.0
     dev: false
 
-  /@types/fs-extra/9.0.13:
-    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
+  /@types/fs-extra/11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
     dependencies:
+      '@types/jsonfile': 6.1.1
       '@types/node': 18.11.18
     dev: true
 
@@ -4087,6 +4088,12 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.11.18
     dev: true
 
   /@types/keyv/3.1.4:
