@@ -19,7 +19,7 @@ Catalysis is a modern opinionated and batteries-included [NodeJS](https://nodejs
 | -------------------- | --------------- | --- |
 | [catalysis](/packages/catalysis) | The CLI and framework runtime packages  | |
 | [website](/website) | The project website | [catalysis.dev](https://catalysis.dev) |
-| [ship](/ship) | A Catalysis-powered web app to coordinate deployments | [ship.catalysis.org](https://ship.catalysis.org) |
+| [ship](/ship) | A Catalysis-powered web app to coordinate deployments | [ship.catalysis.dev](https://ship.catalysis.dev) |
 | [e2e](/e2e) | [Cucumber](https://cucumber.io)-powered e2e tests |  |
 
 ## Usage
