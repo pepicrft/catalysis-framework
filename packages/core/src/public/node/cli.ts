@@ -16,7 +16,7 @@ export function isRunningInVerbose(argv: string[] = process.argv): boolean {
 /**
  * A set of options for running an oclif-based CLI
  */
-type RunCLIOptions = {
+type RunOclifCLIOptions = {
   moduleURL: string
 }
 
@@ -24,10 +24,10 @@ type RunCLIOptions = {
  * It returns a function to invoke a CLI through oclif.
  * It ensures that errors that bubble up from the execution are handled using
  * @catalysisdev/core's error handler.
- * @param options {RunCLIOptions} Options
+ * @param options {RunOclifCLIOptions} Options
  * @returns {() => ()} A function to run the CLI.
  */
-export function runCLI(options: RunCLIOptions) {
+export function runOclifCLI(options: RunOclifCLIOptions) {
   const isDebug = process.env.DEBUG === '1'
   settings.debug = isDebug
 
@@ -45,7 +45,7 @@ export function runCLI(options: RunCLIOptions) {
 /**
  * A set of options for running a create-* CLI
  */
-type RunInitCLIOptions = RunCLIOptions & {
+type RunOclifInitCLIOptions = RunOclifCLIOptions & {
   /**
    * The name of the init CLI including the "create-" prefix (e.g. create-project)
    */
@@ -53,12 +53,12 @@ type RunInitCLIOptions = RunCLIOptions & {
 }
 
 /**
- * It invokes a create-* CLI. Unlike the runCLI function, it adjusts
+ * It invokes a create-* CLI. Unlike the runOclifCLI function, it adjusts
  * the process.argv to force the only init command to execute by default.
- * @param options {RunInitCLIOptions} Options.
+ * @param options {RunOclifInitCLIOptions} Options.
  * @returns {() => ()} A function to run the CLI.
  */
-export function runInitCLI(options: RunInitCLIOptions) {
+export function runOclifInitCLI(options: RunOclifInitCLIOptions) {
   const initIndex = process.argv.findIndex((arg) => arg.includes('init'))
   if (initIndex === -1) {
     const initIndex =
@@ -70,5 +70,5 @@ export function runInitCLI(options: RunInitCLIOptions) {
       ) + 1
     process.argv.splice(initIndex, 0, 'init')
   }
-  return runCLI(options)
+  return runOclifCLI(options)
 }

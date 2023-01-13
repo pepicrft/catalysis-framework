@@ -145,6 +145,7 @@ importers:
       '@types/inquirer': 9.0.3
       acorn: 8.8.1
       case-anything: 2.1.10
+      commander: ^9.5.0
       commondir: 1.0.1
       esbuild: 0.16.16
       execa: 6.1.0
@@ -182,6 +183,7 @@ importers:
       '@remix-run/web-fetch': 4.2.0
       acorn: 8.8.1
       case-anything: 2.1.10
+      commander: 9.5.0
       commondir: 1.0.1
       esbuild: 0.16.16
       execa: 6.1.0
@@ -5829,6 +5831,11 @@ packages:
     resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
     engines: {node: ^12.20.0 || >=14}
     dev: true
+
+  /commander/9.5.0:
+    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
+    engines: {node: ^12.20.0 || >=14}
+    dev: false
 
   /common-tags/1.8.2:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
