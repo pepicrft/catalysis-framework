@@ -1,5 +1,6 @@
 import { run, flush, settings } from '@oclif/core'
 import { errorHandler } from '../node/error.js'
+import { Command } from 'commander'
 
 /**
  * Returns true if the current process has been called with either a --verbose or -v argument.
@@ -11,6 +12,18 @@ export function isRunningInVerbose(argv: string[] = process.argv): boolean {
   } else {
     return false
   }
+}
+
+type RunCLIOptions = {
+  moduleURL: string
+}
+
+export function runCLI(options: RunCLIOptions) {
+  const cli = new Command()
+  cli
+    .name('catalysis')
+    .description('A full-stack web framework for Javascript')
+    .version('0.8.0')
 }
 
 /**

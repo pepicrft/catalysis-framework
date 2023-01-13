@@ -18,21 +18,21 @@
       "outputs": ["dist/"],
       "inputs": ["{projectRoot}/src/**/*"],
       "options": {
-        "command": "pnpm tsc -b ./tsconfig.build.json",
+       "command": "pnpm tsc -b ./tsconfig.build.json && pnpm recursive-copy src dist -w -f 'public/**/*.{js,d.ts}'",
         "cwd": "packages/routes"
       }
     },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "eslint './**/*.{js,ts}'",
+        "command": "eslint './**/*.{js,ts,d.ts}'",
         "cwd": "packages/routes"
       }
     },
     "lint:fix": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "eslint './**/*.{js,ts}' --fix",
+        "command": "eslint './**/*.{js,ts,d.ts}' --fix",
         "cwd": "packages/routes"
       }
     },
