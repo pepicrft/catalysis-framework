@@ -1,6 +1,6 @@
 {
   "name": "@catalysisdev/routes",
-  "version": "0.7.10",
+  "version": "0.8.0",
   "description": "Output a project's routes",
   "type": "module",
   "exports": {
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@catalysisdev/core": "0.7.10"
+    "@catalysisdev/core": "0.8.0"
   },
   "oclif": {
     "commands": "./dist/public/node/commands",

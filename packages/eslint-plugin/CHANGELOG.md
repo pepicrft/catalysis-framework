@@ -1,5 +1,7 @@
 # @catalysisdev/eslint-plugin
 
+## 0.8.0
+
 ## 0.7.10
 
 ## 0.7.9

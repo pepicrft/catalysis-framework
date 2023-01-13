@@ -1,6 +1,6 @@
 {
   "name": "@catalysisdev/build",
-  "version": "0.7.10",
+  "version": "0.8.0",
   "description": "A set of utilities responsible for building the app",
   "type": "module",
   "exports": {
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@catalysisdev/core": "0.7.10"
+    "@catalysisdev/core": "0.8.0"
   },
   "oclif": {
     "commands": "./dist/public/node/commands"

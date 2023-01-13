@@ -1,5 +1,14 @@
 # @catalysisdev/check
 
+## 0.8.0
+
+### Patch Changes
+
+- Updated dependencies [7e86817]
+- Updated dependencies [15fbf4e]
+- Updated dependencies [d91188d]
+  - @catalysisdev/core@0.8.0
+
 ## 0.7.10
 
 ### Patch Changes

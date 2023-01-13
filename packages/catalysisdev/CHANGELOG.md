@@ -1,5 +1,22 @@
 # catalysisdev
 
+## 0.8.0
+
+### Patch Changes
+
+- Updated dependencies [7e86817]
+- Updated dependencies [15fbf4e]
+- Updated dependencies [d91188d]
+  - @catalysisdev/core@0.8.0
+  - @catalysisdev/build@0.8.0
+  - @catalysisdev/check@0.8.0
+  - @catalysisdev/db@0.8.0
+  - @catalysisdev/dev@0.8.0
+  - @catalysisdev/generate@0.8.0
+  - @catalysisdev/info@0.8.0
+  - @catalysisdev/routes@0.8.0
+  - @catalysisdev/test@0.8.0
+
 ## 0.7.10
 
 ### Patch Changes

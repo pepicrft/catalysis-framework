@@ -1,6 +1,6 @@
 {
   "name": "@catalysisdev/generate",
-  "version": "0.7.10",
+  "version": "0.8.0",
   "description": "Commands for generating code in Catalysis projects",
   "type": "module",
   "exports": {
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@catalysisdev/core": "0.7.10"
+    "@catalysisdev/core": "0.8.0"
   },
   "oclif": {
     "commands": "./dist/public/node/commands",

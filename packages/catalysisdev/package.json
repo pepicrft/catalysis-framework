@@ -1,6 +1,6 @@
 {
   "name": "catalysisdev",
-  "version": "0.7.10",
+  "version": "0.8.0",
   "private": false,
   "description": "A tool for building Catalysis web app",
   "keywords": [
@@ -56,15 +56,15 @@
     ]
   },
   "dependencies": {
-    "@catalysisdev/build": "0.7.10",
-    "@catalysisdev/check": "0.7.10",
-    "@catalysisdev/db": "0.7.10",
-    "@catalysisdev/generate": "0.7.10",
-    "@catalysisdev/dev": "0.7.10",
-    "@catalysisdev/test": "0.7.10",
-    "@catalysisdev/info": "0.7.10",
-    "@catalysisdev/routes": "0.7.10",
-    "@catalysisdev/core": "0.7.10",
+    "@catalysisdev/build": "0.8.0",
+    "@catalysisdev/check": "0.8.0",
+    "@catalysisdev/db": "0.8.0",
+    "@catalysisdev/generate": "0.8.0",
+    "@catalysisdev/dev": "0.8.0",
+    "@catalysisdev/test": "0.8.0",
+    "@catalysisdev/info": "0.8.0",
+    "@catalysisdev/routes": "0.8.0",
+    "@catalysisdev/core": "0.8.0",
     "@oclif/plugin-help": "5.1.22"
   },
   "engine-strict": true,
