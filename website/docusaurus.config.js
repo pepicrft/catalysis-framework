@@ -75,7 +75,7 @@ const config = {
             label: 'Contributors',
           },
           {
-            href: 'https://github.com/catalysisdev/framework',
+            href: 'https://github.com/catalysisdev/catalysis',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,7 +93,7 @@ const config = {
               },
               {
                 label: 'Forum',
-                href: 'https://github.com/catalysisdev/framework/discussions',
+                href: 'https://github.com/catalysisdev/catalysis/discussions',
               },
               {
                 label: 'Telegram',

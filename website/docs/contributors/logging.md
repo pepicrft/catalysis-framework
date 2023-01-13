@@ -44,7 +44,7 @@ Otherwise, using Catalysis will feel like talking to different people who use di
 ### Logging in Catalysis
 
 To help provide the above logging experience,
-`@catalysisdev/core` includes a [`logger`](https://github.com/catalysisdev/framework/blob/main/packages/core/src/node/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
+`@catalysisdev/core` includes a [`logger`](https://github.com/catalysisdev/catalysis/blob/main/packages/core/src/node/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
 The main reason for choosing Pino is its performance thanks to the usage of [Node Worker Threads](https://nodejs.org/api/worker_threads.html).
 When Catalysis are running in production,
 it's vital that logging doesn't make the processing of requests slower.

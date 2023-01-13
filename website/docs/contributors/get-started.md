@@ -6,7 +6,7 @@ Because of that,
 we design the project and the documentation to ease contributions.
 
 A contribution can come in many shapes:
-1. [GitHub issues](https://github.com/catalysisdev/framework/issues) reporting bugs or sharing ideas.
+1. [GitHub issues](https://github.com/catalysisdev/catalysis/issues) reporting bugs or sharing ideas.
 2. Community support.
 3. Framework evangelization.
 4. Code contributions as [pull requests](https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests).
