@@ -180,6 +180,7 @@ importers:
       unplugin: 1.0.1
       username: 6.0.0
       vite: 4.0.4
+      zod: 3.20.2
     dependencies:
       '@oclif/core': 1.23.2
       '@remix-run/web-fetch': 4.2.0
@@ -218,6 +219,7 @@ importers:
       unplugin: 1.0.1
       username: 6.0.0
       vite: 4.0.4
+      zod: 3.20.2
     devDependencies:
       '@types/inquirer': 9.0.3
 
@@ -14061,6 +14063,10 @@ packages:
       property-expr: 2.0.5
       toposort: 2.0.2
     dev: true
+
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
+    dev: false
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
