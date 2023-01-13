@@ -35,7 +35,7 @@ importers:
       pathe: 1.0.0
       prettier: 2.8.1
       recursive-copy-cli: ^1.0.20
-      rimraf: 3.0.2
+      rimraf: 4.0.4
       shx: 0.3.4
       tempy: 3.0.0
       tmp: 0.2.1
@@ -75,7 +75,7 @@ importers:
       pathe: 1.0.0
       prettier: 2.8.1
       recursive-copy-cli: 1.0.20
-      rimraf: 3.0.2
+      rimraf: 4.0.4
       shx: 0.3.4
       tempy: 3.0.0
       tmp: 0.2.1
@@ -170,6 +170,7 @@ importers:
       pino-pretty: 9.1.1
       plur: 5.1.0
       radix3: 1.0.0
+      rimraf: 4.0.4
       source-map-support: 0.5.21
       stacktracey: 2.1.8
       strip-ansi: 7.0.1
@@ -222,6 +223,7 @@ importers:
       zod: 3.20.2
     devDependencies:
       '@types/inquirer': 9.0.3
+      rimraf: 4.0.4
 
   packages/create-project:
     specifiers:
@@ -11908,6 +11910,12 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+
+  /rimraf/4.0.4:
+    resolution: {integrity: sha512-R0hoVr9xTwemarQjoWlNt/nb5dEGVTBhVdkRmEX2zEkT8T6onH0XKiGjuaC7rNNj/gYzY2p4NVRJ3sjO1ascHQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /rollup/3.7.0:
     resolution: {integrity: sha512-FIJe0msW9P7L9BTfvaJyvn1U1BVCNTL3w8O+PKIrCyiMLg+rIUGb4MbcgVZ10Lnm1uWXOTOWRNARjfXC1+M12Q==}
