@@ -104,21 +104,21 @@ importers:
 
   packages/build:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
   packages/catalysisdev:
     specifiers:
-      '@catalysisdev/build': 0.7.10
-      '@catalysisdev/check': 0.7.10
-      '@catalysisdev/core': 0.7.10
-      '@catalysisdev/db': 0.7.10
-      '@catalysisdev/dev': 0.7.10
-      '@catalysisdev/generate': 0.7.10
-      '@catalysisdev/info': 0.7.10
-      '@catalysisdev/routes': 0.7.10
-      '@catalysisdev/test': 0.7.10
+      '@catalysisdev/build': 0.8.0
+      '@catalysisdev/check': 0.8.0
+      '@catalysisdev/core': 0.8.0
+      '@catalysisdev/db': 0.8.0
+      '@catalysisdev/dev': 0.8.0
+      '@catalysisdev/generate': 0.8.0
+      '@catalysisdev/info': 0.8.0
+      '@catalysisdev/routes': 0.8.0
+      '@catalysisdev/test': 0.8.0
       '@oclif/plugin-help': 5.1.22
     dependencies:
       '@catalysisdev/build': link:../build
@@ -134,7 +134,7 @@ importers:
 
   packages/check:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
@@ -219,19 +219,19 @@ importers:
 
   packages/create-project:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
   packages/db:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
   packages/dev:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
       h3: 1.0.2
       listhen: 1.0.1
     dependencies:
@@ -253,13 +253,13 @@ importers:
 
   packages/generate:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
   packages/info:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
@@ -268,13 +268,13 @@ importers:
 
   packages/routes:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
   packages/test:
     specifiers:
-      '@catalysisdev/core': 0.7.10
+      '@catalysisdev/core': 0.8.0
     dependencies:
       '@catalysisdev/core': link:../core
 
