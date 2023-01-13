@@ -2,7 +2,7 @@ import { Project } from '@catalysisdev/core/node/project'
 
 export const GENERATE_MIDDLEWARE_LANGUAGES = ['javascript', 'typescript']
 export type GenerateMiddlewareLanguage =
-  typeof GENERATE_MIDDLEWARE_LANGUAGES[number]
+  (typeof GENERATE_MIDDLEWARE_LANGUAGES)[number]
 
 type GenerateMiddlewareOptions = {
   // The name of the middleware
