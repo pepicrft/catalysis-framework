@@ -80,7 +80,8 @@
     "vite": "4.0.4"
   },
   "devDependencies": {
-    "@types/inquirer": "9.0.3"
+    "@types/inquirer": "9.0.3",
+    "rimraf": "4.0.4"
   },
   "engine-strict": true,
   "engines": {
