@@ -3,6 +3,6 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 pushd $SCRIPT_DIR/.. > /dev/null
-pnpm exec nx build gestaltjs
-$SCRIPT_DIR/../packages/gestaltjs/bin/dev.js $@
+pnpm exec nx build catalysisdev
+$SCRIPT_DIR/../packages/catalysisdev/bin/dev.js $@
 popd > /dev/null

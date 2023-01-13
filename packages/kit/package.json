@@ -1,11 +1,11 @@
 {
-  "name": "@gestaltjs/kit",
+  "name": "@catalysisdev/kit",
   "version": "0.7.10",
   "private": false,
-  "description": "Set of Getalt models and utilities to extend the Gestalt framework and projects",
+  "description": "Set of Getalt models and utilities to extend the Catalysis framework and projects",
   "keywords": [
-    "gestalt",
-    "gestaltjs",
+    "catalysis",
+    "catalysisdev",
     "web"
   ],
   "license": "MIT",

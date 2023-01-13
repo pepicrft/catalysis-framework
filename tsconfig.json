@@ -13,7 +13,7 @@
       {"path": "./packages/dev"},
       {"path": "./packages/eslint-plugin"},
       {"path": "./packages/generate"},
-      {"path": "./packages/gestaltjs"},
+      {"path": "./packages/catalysisdev"},
       {"path": "./packages/info"},
       {"path": "./packages/routes"},
       {"path": "./packages/test"}

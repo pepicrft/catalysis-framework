@@ -1,8 +1,8 @@
 export const environmentVariables = {
   /** Specify the Node environment the app is running in (production/development) */
-  environment: 'GESTALT_ENV',
+  environment: 'CATALYSIS_ENV',
 }
 
-export const configurationFileName = 'gestalt.config'
-export const webTargetFileName = 'gestalt.web'
-export const pluginFileName = 'gestalt.plugin'
+export const configurationFileName = 'catalysis.config'
+export const webTargetFileName = 'catalysis.web'
+export const pluginFileName = 'catalysis.plugin'

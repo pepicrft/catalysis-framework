@@ -1,27 +1,27 @@
 import { createProjectLogger } from '../logger.js'
-import { hyphenCased } from '@gestaltjs/core/common/string'
-import { AbsolutePath } from '@gestaltjs/core/node/path'
+import { hyphenCased } from '@catalysisdev/core/common/string'
+import { AbsolutePath } from '@catalysisdev/core/node/path'
 import {
   inTemporarydirectory,
   makeDirectory,
   moveFileOrDirectory,
   pathExists,
   writeFile,
-} from '@gestaltjs/core/node/fs'
-import { Abort } from '@gestaltjs/core/common/error'
+} from '@catalysisdev/core/node/fs'
+import { Abort } from '@catalysisdev/core/common/error'
 import {
   chooseDirectoryToken,
   commandToken,
   content,
   contentBox,
   pathToken,
-} from '@gestaltjs/core/node/logger'
-import { getUsername } from '@gestaltjs/core/node/environment'
-import { initGitRepository, isGitAvailable } from '@gestaltjs/core/node/git'
-import { encodeJSON } from '@gestaltjs/core/common/json'
+} from '@catalysisdev/core/node/logger'
+import { getUsername } from '@catalysisdev/core/node/environment'
+import { initGitRepository, isGitAvailable } from '@catalysisdev/core/node/git'
+import { encodeJSON } from '@catalysisdev/core/common/json'
 import { getVersionForGeneratedProject } from '../utilities/versions.js'
 import { getLocalPackagesOverrides } from '../utilities/packages.js'
-import { pnpmInstall } from '@gestaltjs/core/node/pnpm'
+import { pnpmInstall } from '@catalysisdev/core/node/pnpm'
 
 /**
  * An abort error that's thrown when the user tries to create a project and the directory
@@ -37,7 +37,7 @@ export const ProjectDirectoryExistsError = (directory: AbsolutePath) => {
 
 export type InitServiceOptions = {
   /**
-   * When true, the generated project should have its Gestalt dependencies
+   * When true, the generated project should have its Catalysis dependencies
    * pointing to the packages in the repository.
    */
   local: boolean
@@ -69,7 +69,7 @@ export async function initService(options: InitServiceOptions) {
     await initDirectories(temporaryDirectory)
     await initPackageJson(temporaryDirectory, options)
     await initREADME(temporaryDirectory, options)
-    await initGestaltConfig(temporaryDirectory, options.name)
+    await initCatalysisConfig(temporaryDirectory, options.name)
     await initTSConfig(temporaryDirectory)
     await initGitignore(temporaryDirectory)
     await moveFileOrDirectory(temporaryDirectory, projectDirectory)
@@ -146,16 +146,16 @@ export async function initPackageJson(
     license: 'UNLICENSED',
     type: 'module',
     scripts: {
-      dev: 'gestalt dev',
-      build: 'gestalt build',
-      test: 'gestalt test',
-      check: 'gestalt check',
-      generate: 'gestalt generate',
-      info: 'gestalt info',
-      routes: 'gestalt routes',
+      dev: 'catalysis dev',
+      build: 'catalysis build',
+      test: 'catalysis test',
+      check: 'catalysis check',
+      generate: 'catalysis generate',
+      info: 'catalysis info',
+      routes: 'catalysis routes',
     },
     dependencies: {
-      gestaltjs: await getVersionForGeneratedProject(),
+      catalysisdev: await getVersionForGeneratedProject(),
     },
     author: await getUsername(),
   }
@@ -180,7 +180,7 @@ export async function initREADME(
   const content = `
 # ${options.name}
 
-This repository contains a [Gestalt](https://gestaltjs.org) project.
+This repository contains a [Catalysis](https://catalysisdev.org) project.
 
 ## Development
 
@@ -191,23 +191,27 @@ This repository contains a [Gestalt](https://gestaltjs.org) project.
 
 ## Resources
 
-- [Gestalt](https://gestaltjs.org)
+- [Catalysis](https://catalysisdev.org)
 - [NPM registry](https://npmjs.com)
   `
   await writeFile(directory.pathAppendingComponent('README.md'), content)
 }
 
-async function initGestaltConfig(directory: AbsolutePath, projectName: string) {
-  const gestaltConfigPath =
-    directory.pathAppendingComponent('gestalt.config.ts')
-  const content = `import { defineConfiguration } from "gestaltjs/configuration"
+async function initCatalysisConfig(
+  directory: AbsolutePath,
+  projectName: string
+) {
+  const catalysisConfigPath = directory.pathAppendingComponent(
+    'catalysis.config.ts'
+  )
+  const content = `import { defineConfiguration } from "catalysisdev/configuration"
 
 export default defineConfiguration(() => ({
   name: "${projectName}",
   plugins: []
 }))
 `
-  await writeFile(gestaltConfigPath, content)
+  await writeFile(catalysisConfigPath, content)
 }
 
 async function initTSConfig(directory: AbsolutePath) {
@@ -335,9 +339,9 @@ node_modules/
 .stylelintcache
 
 
-# Gestalt
+# Catalysis
 _build
-.gestalt
+.catalysis
 `
   await writeFile(directory.pathAppendingComponent('.gitignore'), content)
 }

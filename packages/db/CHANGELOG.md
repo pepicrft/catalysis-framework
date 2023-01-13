@@ -1,11 +1,11 @@
-# @gestaltjs/db
+# @catalysisdev/db
 
 ## 0.7.10
 
 ### Patch Changes
 
 - Updated dependencies
-  - @gestaltjs/core@0.7.10
+  - @catalysisdev/core@0.7.10
 
 ## 0.7.9
 
@@ -13,31 +13,31 @@
 
 - Version 0.7.9
 - Updated dependencies
-  - @gestaltjs/core@0.7.9
+  - @catalysisdev/core@0.7.9
 
 ## 0.7.8
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.8
+- @catalysisdev/core@0.7.8
 
 ## 0.7.7
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.7
+- @catalysisdev/core@0.7.7
 
 ## 0.7.6
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.6
+- @catalysisdev/core@0.7.6
 
 ## 0.7.5
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.5
+- @catalysisdev/core@0.7.5
 
 ## 0.7.4
 
@@ -45,14 +45,14 @@
 
 - New version
 - Updated dependencies
-  - @gestaltjs/core@0.7.4
+  - @catalysisdev/core@0.7.4
 
 ## 0.7.3
 
 ### Patch Changes
 
 - Updated dependencies
-  - @gestaltjs/core@0.7.3
+  - @catalysisdev/core@0.7.3
 
 ## 0.7.2
 
@@ -60,7 +60,7 @@
 
 - Disable custom level formatters
 - Updated dependencies
-  - @gestaltjs/core@0.7.2
+  - @catalysisdev/core@0.7.2
 
 ## 0.7.1
 
@@ -68,4 +68,4 @@
 
 - Version 0.7.1
 - Updated dependencies
-  - @gestaltjs/core@0.7.1
+  - @catalysisdev/core@0.7.1

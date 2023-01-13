@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/db",
+  "name": "@catalysisdev/db",
   "version": "0.7.10",
   "description": "A set of utilities for managing and interacting with databases",
   "type": "module",
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/core": "0.7.10"
+    "@catalysisdev/core": "0.7.10"
   },
   "oclif": {
     "commands": "./dist/public/node/commands",

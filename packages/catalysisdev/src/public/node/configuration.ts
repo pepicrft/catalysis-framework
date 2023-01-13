@@ -1,4 +1,4 @@
-import { UserConfiguration } from '@gestaltjs/core/common/manifests'
+import { UserConfiguration } from '@catalysisdev/core/common/manifests'
 
 type UserConfigurationExport =
   | UserConfiguration

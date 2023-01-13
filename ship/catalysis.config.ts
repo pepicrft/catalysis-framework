@@ -1,4 +1,4 @@
-import { defineConfiguration } from 'gestaltjs/configuration'
+import { defineConfiguration } from 'catalysisdev/configuration'
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfiguration(() => ({

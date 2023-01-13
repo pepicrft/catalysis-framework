@@ -1,8 +1,8 @@
 import { describe, expect, test, vi } from 'vitest'
 import { initPrompt, InitPromptFlags } from './init.js'
-import { prompt } from '@gestaltjs/core/node/terminal'
+import { prompt } from '@catalysisdev/core/node/terminal'
 
-vi.mock('@gestaltjs/core/node/terminal')
+vi.mock('@catalysisdev/core/node/terminal')
 
 describe('initPrompt', () => {
   test('delegates the prompting to prompt', async () => {

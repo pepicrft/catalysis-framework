@@ -1,17 +1,17 @@
 {
-  "name": "gestaltjs",
+  "name": "catalysisdev",
   "version": "0.7.10",
   "private": false,
-  "description": "A tool for building Gestalt web app",
+  "description": "A tool for building Catalysis web app",
   "keywords": [
-    "gestalt",
-    "gestaltjs",
+    "catalysis",
+    "catalysisdev",
     "web"
   ],
   "license": "MIT",
   "type": "module",
   "bin": {
-    "gestalt": "./bin/run.js"
+    "catalysis": "./bin/run.js"
   },
   "files": [
     "/bin/run.js",
@@ -56,15 +56,15 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/build": "0.7.10",
-    "@gestaltjs/check": "0.7.10",
-    "@gestaltjs/db": "0.7.10",
-    "@gestaltjs/generate": "0.7.10",
-    "@gestaltjs/dev": "0.7.10",
-    "@gestaltjs/test": "0.7.10",
-    "@gestaltjs/info": "0.7.10",
-    "@gestaltjs/routes": "0.7.10",
-    "@gestaltjs/core": "0.7.10",
+    "@catalysisdev/build": "0.7.10",
+    "@catalysisdev/check": "0.7.10",
+    "@catalysisdev/db": "0.7.10",
+    "@catalysisdev/generate": "0.7.10",
+    "@catalysisdev/dev": "0.7.10",
+    "@catalysisdev/test": "0.7.10",
+    "@catalysisdev/info": "0.7.10",
+    "@catalysisdev/routes": "0.7.10",
+    "@catalysisdev/core": "0.7.10",
     "@oclif/plugin-help": "5.1.22"
   },
   "engine-strict": true,
@@ -77,17 +77,17 @@
     "win32"
   ],
   "oclif": {
-    "bin": "gestalt",
+    "bin": "catalysis",
     "topicSeparator": " ",
     "plugins": [
-      "@gestaltjs/build",
-      "@gestaltjs/check",
-      "@gestaltjs/db",
-      "@gestaltjs/dev",
-      "@gestaltjs/test",
-      "@gestaltjs/info",
-      "@gestaltjs/routes",
-      "@gestaltjs/generate",
+      "@catalysisdev/build",
+      "@catalysisdev/check",
+      "@catalysisdev/db",
+      "@catalysisdev/dev",
+      "@catalysisdev/test",
+      "@catalysisdev/info",
+      "@catalysisdev/routes",
+      "@catalysisdev/generate",
       "@oclif/plugin-help"
     ]
   }

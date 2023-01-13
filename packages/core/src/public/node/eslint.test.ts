@@ -12,7 +12,7 @@ describe('runESLint', () => {
   test('runs eslint', async () => {
     // Given
     const eslintPath = '/test/eslint'
-    const eslintTSDirectory = '/gestalt/eslint'
+    const eslintTSDirectory = '/catalysis/eslint'
     vi.mocked(findPathUp).mockResolvedValue(eslintPath)
     vi.mocked(moduleDirname).mockReturnValue(eslintTSDirectory)
     const args = ['foo']
@@ -33,7 +33,7 @@ describe('runESLint', () => {
 
   test('aborts when ESLint cannot be found', async () => {
     // Given
-    const eslintTSDirectory = '/gestalt/eslint'
+    const eslintTSDirectory = '/catalysis/eslint'
     vi.mocked(findPathUp).mockResolvedValue(undefined)
     vi.mocked(parentDirectory).mockReturnValue(eslintTSDirectory)
     const args = ['foo']

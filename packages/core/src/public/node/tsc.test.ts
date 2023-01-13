@@ -12,7 +12,7 @@ describe('run', () => {
   test('runs tsc', async () => {
     // Given
     const tscPath = '/test/tsc'
-    const dirnamePath = '/gestalt/tsc'
+    const dirnamePath = '/catalysis/tsc'
     vi.mocked(findPathUp).mockResolvedValue(tscPath)
     vi.mocked(moduleDirname).mockReturnValue(dirnamePath)
     const args = ['foo']
@@ -30,7 +30,7 @@ describe('run', () => {
 
   test('aborts when typescript compiler cannot be found', async () => {
     // Given
-    const eslintTSDirectory = '/gestalt/tsc'
+    const eslintTSDirectory = '/catalysis/tsc'
     vi.mocked(findPathUp).mockResolvedValue(undefined)
     vi.mocked(parentDirectory).mockReturnValue(eslintTSDirectory)
     const args = ['foo']

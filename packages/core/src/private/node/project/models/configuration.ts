@@ -3,7 +3,7 @@ import { AbsolutePath } from 'typed-file-system-path'
 
 /** Options to create a ConfigurationImpl instance */
 type ConfigurationImplInitOptions = {
-  /** The path to the gestalt.config.{js,ts} file */
+  /** The path to the catalysis.config.{js,ts} file */
   path: AbsolutePath
 
   /** The content of the loaded configuration file module */

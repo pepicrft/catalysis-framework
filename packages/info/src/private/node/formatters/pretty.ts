@@ -1,6 +1,6 @@
-import { Project } from '@gestaltjs/core/node/project'
-import { relativizePath } from '@gestaltjs/core/node/path'
-import { formatGreen, formatBold } from '@gestaltjs/core/node/terminal'
+import { Project } from '@catalysisdev/core/node/project'
+import { relativizePath } from '@catalysisdev/core/node/path'
+import { formatGreen, formatBold } from '@catalysisdev/core/node/terminal'
 
 type PrettyFormatOptions = {
   project: Project

@@ -5,7 +5,7 @@ import { decodeJSON, encodeJSON } from './json.js'
 describe('setContext', () => {
   test('serializes the context as a JSON and sets it to the env', () => {
     // Given
-    const env: { GESTALT_INTERNAL_CONTEXT?: string } = {}
+    const env: { CATALYSIS_INTERNAL_CONTEXT?: string } = {}
 
     // When
     setContext({ environment: 'production' }, env)
@@ -13,7 +13,7 @@ describe('setContext', () => {
     // Then
     expect(
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      decodeJSON(env.GESTALT_INTERNAL_CONTEXT as string).environment
+      decodeJSON(env.CATALYSIS_INTERNAL_CONTEXT as string).environment
     ).toEqual('production')
   })
 })
@@ -21,8 +21,8 @@ describe('setContext', () => {
 describe('useContext', () => {
   test('returns the context if it exists', () => {
     // Given
-    const env: { GESTALT_INTERNAL_CONTEXT?: string } = {
-      GESTALT_INTERNAL_CONTEXT: encodeJSON({ environment: 'production' }),
+    const env: { CATALYSIS_INTERNAL_CONTEXT?: string } = {
+      CATALYSIS_INTERNAL_CONTEXT: encodeJSON({ environment: 'production' }),
     }
 
     // When

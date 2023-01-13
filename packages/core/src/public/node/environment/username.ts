@@ -2,7 +2,7 @@
  * This module branched off from the commit f4a47485fcdf3bafee221cf5e6d6180344020d08
  * from the MIT-licensed project https://github.com/sindresorhus/username/blob/main/index.js
  *
- * We vendor modules to mitigate "delete node_modules" for Gestalt users. Those are caused
+ * We vendor modules to mitigate "delete node_modules" for Catalysis users. Those are caused
  * by packages shipping breaking changes in minor version bumps, and becomes more frequent
  * the larger the dependency graph is.
  */

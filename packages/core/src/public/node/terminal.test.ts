@@ -25,7 +25,7 @@ describe('link', () => {
     // Given
     const hyperlink = 'hyperlink'
     const name = 'name'
-    const url = 'https://gestaltjs.org'
+    const url = 'https://catalysisdev.org'
     vi.mocked(terminalLink).mockReturnValue(hyperlink)
 
     // When
@@ -169,7 +169,7 @@ describe('prompt', () => {
   it('delegates the prompting to inquirer', async () => {
     // When
     vi.mocked(inquirer.prompt).mockResolvedValue({
-      name: 'gestalt',
+      name: 'catalysis',
     })
     const promptType = 'input'
     const promptMessage = 'Introduce your name'
@@ -194,7 +194,7 @@ describe('prompt', () => {
       ],
       { name: 'answered-name' }
     )
-    expect(response.name).toEqual('gestalt')
+    expect(response.name).toEqual('catalysis')
   })
 })
 

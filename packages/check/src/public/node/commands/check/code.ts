@@ -1,8 +1,8 @@
-import { loadProject } from '@gestaltjs/core/node/project'
+import { loadProject } from '@catalysisdev/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
-import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
-import { absolutePath } from '@gestaltjs/core/node/path'
-import { Command, Interfaces } from '@gestaltjs/core/node/oclif'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
+import { absolutePath } from '@catalysisdev/core/node/path'
+import { Command, Interfaces } from '@catalysisdev/core/node/oclif'
 
 // eslint-disable-next-line import/no-default-export
 export default class Code extends Command {

@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Gestalt',
+  title: 'Catalysis',
   tagline: 'A framework for crafting digital experiences with web technologies',
-  url: 'https://gestaltjs.org',
+  url: 'https://catalysis.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'gestaltjs',
-  projectName: 'gestalt',
+  organizationName: 'catalysisdev',
+  projectName: 'framework',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -52,14 +52,14 @@ const config = {
       algolia: {
         appId: 'WA0ITB5XJR',
         apiKey: '77c0d7b65508f8626260896fcb575ed5',
-        indexName: 'gestaltjs',
+        indexName: 'catalysisdev',
         contextualSearch: true,
       },
       navbar: {
-        title: 'Gestalt',
+        title: 'Catalysis',
         logo: {
-          alt: 'Gestalt Logo',
-          src: 'img/logo.svg',
+          alt: 'Catalysis Logo',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -75,7 +75,7 @@ const config = {
             label: 'Contributors',
           },
           {
-            href: 'https://github.com/gestaltjs/gestalt',
+            href: 'https://github.com/catalysisdev/framework',
             label: 'GitHub',
             position: 'right',
           },
@@ -89,15 +89,15 @@ const config = {
             items: [
               {
                 label: 'Slack',
-                href: 'https://join.slack.com/t/gestaltjs/shared_invite/zt-14azp22s4-sAWlH63i4K7_3DWfbxGvXw',
+                href: 'https://join.slack.com/t/catalysisdev/shared_invite/zt-14azp22s4-sAWlH63i4K7_3DWfbxGvXw',
               },
               {
                 label: 'Forum',
-                href: 'https://github.com/gestaltjs/gestalt/discussions',
+                href: 'https://github.com/catalysisdev/framework/discussions',
               },
               {
                 label: 'Telegram',
-                href: 'https://t.me/gestaltjs',
+                href: 'https://t.me/catalysisdev',
               },
             ],
           },
@@ -115,7 +115,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Gestalt, Inc. Built with love from Europe.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Catalysis, Inc. Built with love from Europe.`,
       },
       prism: {
         theme: lightCodeTheme,

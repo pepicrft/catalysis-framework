@@ -6,17 +6,17 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 export const rootDirectory = pathJoin(__dirname, '../..')
 
-export const gestaltPackageDirectory = pathResolve(
+export const catalysisPackageDirectory = pathResolve(
   rootDirectory,
-  './packages/gestaltjs'
+  './packages/catalysisdev'
 )
 export const createProjectPackageDirectory = pathResolve(
   rootDirectory,
   './packages/create-project'
 )
 
-export const gestaltExecutablePath = pathResolve(
-  gestaltPackageDirectory,
+export const catalysisExecutablePath = pathResolve(
+  catalysisPackageDirectory,
   './bin/dev.js'
 )
 export const createProjectExecutablePath = pathResolve(

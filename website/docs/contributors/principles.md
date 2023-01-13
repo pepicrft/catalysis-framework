@@ -10,7 +10,7 @@ Everything becomes a plugin, even for the most common needs.
 *Are you thinking about doing background jobs?* There’s a plugin too.
 Everything is possible with the framework, but **at the cost of making the simple things hard**. They are hard because you are not given a hand when you stumble upon everyday needs when building web apps like accessing databases or running background jobs. You have to search for plugins, decide on the one that’s more suitable to your needs, and hope that the plugin integrates reliably with the rest of the stack. Moreover, there might be incompatibilities between plugins and the rest of the framework, leading to broken developer experiences.
 
-**Gestalt makes simple things easy through well-integrated defaults and abstractions.**
+**Catalysis makes simple things easy through well-integrated defaults and abstractions.**
 For example,
 we'll make [Vue](https://vuejs.org/) and [Vitest](https://vitest.dev/) the defaults for declaring UI, writing and running tests, and integrating them into the framework experience.
 If the defaults don't align with the projects' requirements,

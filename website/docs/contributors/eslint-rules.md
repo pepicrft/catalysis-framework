@@ -3,7 +3,7 @@
 **Evolving a software project can be challenging**,
 especially in open source projects where contributions come from many diverse sources with more or less context on the project.
 If they are not aligned with the conventions and patterns, the code can morph into [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code), making maintaining and reasoning about the code harder. Even worse, it manifests as bugs for users.
-**We want Gestalt to be easy to contribute and reliable regardless of its scale.**
+**We want Catalysis to be easy to contribute and reliable regardless of its scale.**
 
 Projects initially rely on human reviews through [pull requests](https://en.wikipedia.org/wiki/Fork_and_pull_model) to ensure contributions align with the rest of the codebase.
 However, relying on humans to do that work can become unmanageable at a particular scale.

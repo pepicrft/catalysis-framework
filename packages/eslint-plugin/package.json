@@ -1,11 +1,11 @@
 {
-  "name": "@gestaltjs/eslint-plugin",
+  "name": "@catalysisdev/eslint-plugin",
   "version": "0.7.10",
   "private": false,
-  "description": "A plugin that provides an ESLint configuration for projects to extend from and custom Gestalt-specific rules",
+  "description": "A plugin that provides an ESLint configuration for projects to extend from and custom Catalysis-specific rules",
   "keywords": [
-    "gestalt",
-    "gestaltjs",
+    "catalysis",
+    "catalysisdev",
     "eslint"
   ],
   "main": "dist/index.js",

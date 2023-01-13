@@ -1,14 +1,14 @@
-Copyright (c) 2022-present GestaltJS
+Copyright (c) 2022-present Catalysis
 
 Portions of this software are licensed as follows:
 
-* All content that resides under https://github.com/gestaltjs/gestalt/tree/main/ship directory of this repository (GestaltJS Ship) is licensed under the license defined in "ship/LICENSE".
+* All content that resides under https://github.com/catalysisdev/framework/tree/main/ship directory of this repository (Catalysis Ship) is licensed under the license defined in "ship/LICENSE".
 * Content outside of the above mentioned directories or restrictions above is available under the "MIT" license as defined below.
 
 
 MIT License
 
-Copyright (c) 2021 Gestalt
+Copyright (c) 2021 Catalysis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

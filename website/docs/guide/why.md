@@ -1,4 +1,4 @@
-# Why Gestalt?
+# Why Catalysis?
 
 **The web empowers creators to build and share their craft with the world.**
 It's become the foundation for new forms of value exchange to emerge,
@@ -9,7 +9,7 @@ Crafters often spend most of their time figuring out the right tools for the job
 They struggle to gain **creative momentum**,
 and that's necessary for great ideas to flourish.
 
-**Gestalt builds upon simplicity to create a space for crafters to gain building momentum.**
+**Catalysis builds upon simplicity to create a space for crafters to gain building momentum.**
 We are a framework for building websites with web technologies.
 We [make simple things simple, and complex things possible](https://goodreads.com/quotes/8636264-simple-things-should-be-simple-complex-things-should-be-possible),
 and we achieve so through a set of defaults, conventions, and abstractions that [conceptually compress](https://m.signalvnoise.com/conceptual-compression-means-beginners-dont-need-to-know-sql-hallelujah/) intricacies.

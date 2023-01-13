@@ -1,11 +1,11 @@
 {
-  "name": "@gestaltjs/core",
+  "name": "@catalysisdev/core",
   "version": "0.7.10",
   "private": false,
   "description": "Set of Getalt tools and models that are shared across all the features",
   "keywords": [
-    "gestalt",
-    "gestaltjs",
+    "catalysis",
+    "catalysisdev",
     "web"
   ],
   "license": "MIT",

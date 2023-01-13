@@ -1,5 +1,5 @@
-import { Project } from '@gestaltjs/core/node/project'
-import { encodeJSON } from '@gestaltjs/core/common/json'
+import { Project } from '@catalysisdev/core/node/project'
+import { encodeJSON } from '@catalysisdev/core/common/json'
 
 type FormatJsonOptions = {
   project: Project

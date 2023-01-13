@@ -1,5 +1,5 @@
-import { absolutePath } from '@gestaltjs/core/node/path'
-import { unstyled } from '@gestaltjs/core/node/terminal'
+import { absolutePath } from '@catalysisdev/core/node/path'
+import { unstyled } from '@catalysisdev/core/node/terminal'
 import { test, describe, expect } from 'vitest'
 import { ProjectDirectoryExistsError } from './init.js'
 

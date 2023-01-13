@@ -3,7 +3,7 @@
   "root": "e2e",
   "sourceRoot": "e2e",
   "projectType": "library",
-  "implicitDependencies": ["gestaltjs", "create-project"],
+  "implicitDependencies": ["catalysisdev", "create-project"],
   "tags": ["scope:e2e"],
   "targets": {
     "lint": {

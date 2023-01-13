@@ -3,7 +3,7 @@ import pino from 'pino'
 import { formatGray } from '../terminal.js'
 
 function formatModule(module: string): string {
-  return formatGray(`[@gestaltjs/${module}]`)
+  return formatGray(`[@catalysisdev/${module}]`)
 }
 
 const pinoLogLevels: { [key: number]: string } = {

@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/info",
+  "name": "@catalysisdev/info",
   "version": "0.7.10",
   "description": "Output an overview of a project",
   "type": "module",
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/core": "0.7.10"
+    "@catalysisdev/core": "0.7.10"
   },
   "oclif": {
     "commands": "./dist/public/node/commands",

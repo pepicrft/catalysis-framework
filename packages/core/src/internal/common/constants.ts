@@ -1,1 +1,1 @@
-export const configurationFilenameWithoutExtension = 'gestalt.config'
+export const configurationFilenameWithoutExtension = 'catalysis.config'

@@ -19,10 +19,10 @@
     "sourceMap": true,
     "composite": true,
     "paths": {
-      "gestaltjs/*": ["../packages/gestaltjs/src/node/manifests/*.ts"],
-      "@gestaltjs/core/internal/*": ["../packages/core/src/internal/*.ts"],
-      "@gestaltjs/core/*": ["../packages/core/src/public/*.ts"],
-      "@gestaltjs/kit/*": ["../packages/kit/src/public/*.ts"],
+      "catalysisdev/*": ["../packages/catalysisdev/src/node/manifests/*.ts"],
+      "@catalysisdev/core/internal/*": ["../packages/core/src/internal/*.ts"],
+      "@catalysisdev/core/*": ["../packages/core/src/public/*.ts"],
+      "@catalysisdev/kit/*": ["../packages/kit/src/public/*.ts"],
     }
   },
   "exclude": ["dist/**", "node_modules"]

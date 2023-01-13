@@ -1,12 +1,12 @@
 import { When } from '@cucumber/cucumber'
 import { randomString } from '../../lib/random.js'
 import { join as joinPath } from 'pathe'
-import { GestaltWorld } from '../../world/gestalt.js'
+import { CatalysisWorld } from '../../world/catalysis.js'
 
 When(
   'I create a project',
   { timeout: 120 * 1000 },
-  async function (this: GestaltWorld) {
+  async function (this: CatalysisWorld) {
     const projectName = randomString()
     await this.runCreateProject(
       ['--path', this.temporaryDirectory, '--name', projectName],

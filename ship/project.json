@@ -3,14 +3,14 @@
   "root": "ship",
   "sourceRoot": "ship/src",
   "projectType": "library",
-  "implicitDependencies": ["gestaltjs"],
+  "implicitDependencies": ["catalysisdev"],
   "tags": ["scope:ship"],
   "targets": {
     "dev": {
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt dev",
+        "command": "pnpm catalysis dev",
         "cwd": "ship"
       }
     },
@@ -18,7 +18,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt build",
+        "command": "pnpm catalysis build",
         "cwd": "ship"
       }
     },
@@ -26,7 +26,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt test",
+        "command": "pnpm catalysis test",
         "cwd": "ship"
       }
     },
@@ -34,7 +34,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt check",
+        "command": "pnpm catalysis check",
         "cwd": "ship"
       }
     },
@@ -42,7 +42,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt generate",
+        "command": "pnpm catalysis generate",
         "cwd": "ship"
       }
     },
@@ -50,7 +50,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt info",
+        "command": "pnpm catalysis info",
         "cwd": "ship"
       }
     },
@@ -58,7 +58,7 @@
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "command": "pnpm gestalt routes",
+        "command": "pnpm catalysis routes",
         "cwd": "ship"
       }
     }

@@ -4,22 +4,22 @@
   "commit": false,
   "fixed": [
     [
-      "gestaltjs",
-      "@gestaltjs/create-project",
-      "@gestaltjs/eslint-plugin",
-      "@gestaltjs/build",
-      "@gestaltjs/check",
-      "@gestaltjs/db",
-      "@gestaltjs/generate",
-      "@gestaltjs/dev",
-      "@gestaltjs/test",
-      "@gestaltjs/info",
-      "@gestaltjs/routes",
-      "@gestaltjs/core",
-      "@gestaltjs/kit"
+      "catalysisdev",
+      "@catalysisdev/create-project",
+      "@catalysisdev/eslint-plugin",
+      "@catalysisdev/build",
+      "@catalysisdev/check",
+      "@catalysisdev/db",
+      "@catalysisdev/generate",
+      "@catalysisdev/dev",
+      "@catalysisdev/test",
+      "@catalysisdev/info",
+      "@catalysisdev/routes",
+      "@catalysisdev/core",
+      "@catalysisdev/kit"
     ]
   ],
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@gestaltjs/website", "@gestaltjs/e2e", "ship"]
+  "ignore": ["@catalysisdev/website", "@catalysisdev/e2e", "ship"]
 }

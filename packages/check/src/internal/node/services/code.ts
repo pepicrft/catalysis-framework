@@ -1,6 +1,6 @@
-import { Abort } from '@gestaltjs/core/common/error'
-import { AbsolutePath } from '@gestaltjs/core/node/path'
-import { runTypescriptCompiler } from '@gestaltjs/core/node/tsc'
+import { Abort } from '@catalysisdev/core/common/error'
+import { AbsolutePath } from '@catalysisdev/core/node/path'
+import { runTypescriptCompiler } from '@catalysisdev/core/node/tsc'
 
 export async function checkCode(directory: AbsolutePath) {
   try {

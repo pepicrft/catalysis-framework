@@ -23,7 +23,7 @@ type RunCLIOptions = {
 /**
  * It returns a function to invoke a CLI through oclif.
  * It ensures that errors that bubble up from the execution are handled using
- * @gestalt/core's error handler.
+ * @catalysisdev/core's error handler.
  * @param options {RunCLIOptions} Options
  * @returns {() => ()} A function to run the CLI.
  */

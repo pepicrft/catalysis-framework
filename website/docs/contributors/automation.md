@@ -6,10 +6,10 @@ In Javascript projects, it's common to use the `scripts` section in projects' `p
 
 For familiarity, we provide an interface via scripts in package.json's so that you can interact with the workspace and its projects by running `pnpm run build|test|lint|lint:fix|type-check`. When done with the workspace, it'll run the task in every project. If you want to only run it for the projects affected by your changes you can use the "affected" version of the script. For example, `pnpm run build:affected`.
 
-If you want to run Gestalt from the repository, you can do the following:
+If you want to run Catalysis from the repository, you can do the following:
 
 ```bash
-pnpm run gestalt ...
+pnpm run catalysis ...
 ```
 
 ## Configuration

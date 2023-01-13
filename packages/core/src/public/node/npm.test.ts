@@ -17,7 +17,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'npm',
         type: 'dev',
       })
@@ -40,7 +40,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'npm',
         type: 'prod',
       })
@@ -63,7 +63,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'npm',
         type: 'peer',
       })
@@ -86,7 +86,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'yarn',
         type: 'dev',
       })
@@ -109,7 +109,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'yarn',
         type: 'prod',
       })
@@ -132,7 +132,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'yarn',
         type: 'peer',
       })
@@ -155,7 +155,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'pnpm',
         type: 'dev',
       })
@@ -178,7 +178,7 @@ describe('addDependencies', () => {
       // When
       await addDependencies({
         directory: tmpDir.pathString,
-        dependencies: ['gestaltjs'],
+        dependencies: ['catalysisdev'],
         dependencyManager: 'pnpm',
         type: 'peer',
       })

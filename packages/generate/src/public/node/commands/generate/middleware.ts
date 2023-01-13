@@ -1,12 +1,12 @@
-import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
-import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
-import { loadProject } from '@gestaltjs/core/node/project'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
+import { loadProject } from '@catalysisdev/core/node/project'
 import {
   GenerateMiddlewareLanguage,
   generateMiddlewareService,
   GENERATE_MIDDLEWARE_LANGUAGES,
 } from '../../../../private/node/services/commands/generate/middleware.js'
-import { absolutePath } from '@gestaltjs/core/node/path'
+import { absolutePath } from '@catalysisdev/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default class Middleware extends Command {
@@ -21,7 +21,7 @@ export default class Middleware extends Command {
     language: Flags.string({
       name: 'language',
       char: 'l',
-      env: 'GESTALT_LANGUAGE',
+      env: 'CATALYSIS_LANGUAGE',
       default: process.cwd(),
       options: GENERATE_MIDDLEWARE_LANGUAGES,
       description: 'The programming language used in the generated middleware',

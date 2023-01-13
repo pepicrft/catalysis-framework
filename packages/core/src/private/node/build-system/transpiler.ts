@@ -59,7 +59,7 @@ export const ESBuildTranspiler = Transpiler(ESBuildBaseTranspiler)
  * This interface describes the interface a transpiler that can transform
  * and bundle Javascript and supersets of Javascript (e.g. Typescript).
  * The interface decouples the build tool from the build system. The
- * latter is owned by Gestalt to be able to provide optimizations and
+ * latter is owned by Catalysis to be able to provide optimizations and
  * features that are not provided by the runtime, for example module
  * hot-reloading.
  */

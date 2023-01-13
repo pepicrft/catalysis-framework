@@ -39,14 +39,14 @@ If we add say more than what we have to,
 we'll add up to the cognitive load.
 And last but not least,
 we should be **consistent** in communicating.
-Otherwise, using Gestalt will feel like talking to different people who use different tones, words, and styles.
+Otherwise, using Catalysis will feel like talking to different people who use different tones, words, and styles.
 
-### Logging in Gestalt
+### Logging in Catalysis
 
 To help provide the above logging experience,
-`@gestaltjs/core` includes a [`logger`](https://github.com/gestaltjs/gestalt/blob/main/packages/core/src/node/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
+`@catalysisdev/core` includes a [`logger`](https://github.com/catalysisdev/framework/blob/main/packages/core/src/node/logger.ts) utility that builds upon [pino](https://github.com/pinojs/pino).
 The main reason for choosing Pino is its performance thanks to the usage of [Node Worker Threads](https://nodejs.org/api/worker_threads.html).
-When Gestalt are running in production,
+When Catalysis are running in production,
 it's vital that logging doesn't make the processing of requests slower.
 
 Logged messages can include a **log level**.
@@ -63,7 +63,7 @@ Moreover, they can extend the formatting through [Pino Transports](https://githu
 By default, all loggers apply the same formatting.
 But a particular package,
 for example,
-`@gestaltjs/dev` might want to accommodate the formatting for communicating the requests processed by the HTTP server.
+`@catalysisdev/dev` might want to accommodate the formatting for communicating the requests processed by the HTTP server.
 
 ```ts
 import logger from './logger'

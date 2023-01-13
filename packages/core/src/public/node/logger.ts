@@ -192,7 +192,7 @@ export function coreLogger(): Logger {
     target = new NoopLoggerTarget()
   } else {
     target = pino({
-      name: 'gestalt',
+      name: 'catalysis',
       level: isRunningInVerbose() ? 'debug' : 'info',
       transport: {
         targets: [

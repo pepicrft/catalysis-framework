@@ -1,21 +1,21 @@
-import { globalFlags } from '@gestaltjs/core/node/command'
-import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
-import { absolutePath, resolvePath } from '@gestaltjs/core/node/path'
+import { globalFlags } from '@catalysisdev/core/node/command'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
+import { absolutePath, resolvePath } from '@catalysisdev/core/node/path'
 import { initPrompt } from '../../../private/node/prompts/init.js'
 import { initService } from '../../../private/node/services/init.js'
 import { createProjectLogger } from '../../../private/node/logger.js'
-import { content } from '@gestaltjs/core/node/logger'
+import { content } from '@catalysisdev/core/node/logger'
 
 // eslint-disable-next-line import/no-default-export
 export default class Init extends Command {
-  static description = 'Create a Gestalt project'
+  static description = 'Create a Catalysis project'
 
   static flags = {
     ...globalFlags(),
     local: Flags.boolean({
       name: 'local',
       char: 'l',
-      env: 'GESTALT_LOCAL',
+      env: 'CATALYSIS_LOCAL',
       description:
         'Intended for development to point to the local CLI repository',
       required: false,
@@ -24,14 +24,14 @@ export default class Init extends Command {
     name: Flags.string({
       name: 'name',
       char: 'n',
-      env: 'GESTALT_NAME',
+      env: 'CATALYSIS_NAME',
       description: 'The name of the project',
       required: false,
     }),
     path: Flags.string({
       name: 'path',
       char: 'p',
-      env: 'GESTALT_PATH',
+      env: 'CATALYSIS_PATH',
       default: process.cwd(),
       // eslint-disable-next-line @typescript-eslint/require-await
       parse: async (input) => resolvePath(input),
@@ -42,7 +42,7 @@ export default class Init extends Command {
     'package-manager': Flags.string({
       name: 'package-manager',
       char: 'd',
-      env: 'GESTALT_PACKAGE_MANAGER',
+      env: 'CATALYSIS_PACKAGE_MANAGER',
       description:
         'The package manager to use. It defaults to the one used to run create-x and fallbacks to npm.',
       options: ['npm', 'yarn', 'pnpm'],
@@ -52,7 +52,7 @@ export default class Init extends Command {
 
   async run(): Promise<void> {
     createProjectLogger().info(
-      content`Creating a new Gestalt project...\n`,
+      content`Creating a new Catalysis project...\n`,
       {},
       { sameProcess: true }
     )

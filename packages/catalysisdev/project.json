@@ -1,7 +1,7 @@
 {
-  "name": "gestaltjs",
-  "root": "packages/gestaltjs",
-  "sourceRoot": "packages/gestaltjs/src",
+  "name": "catalysisdev",
+  "root": "packages/catalysisdev",
+  "sourceRoot": "packages/catalysisdev/src",
   "projectType": "library",
   "implicitDependencies": [
     "build",
@@ -20,7 +20,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm shx rm -rf dist",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     },
     "build": {
@@ -29,28 +29,28 @@
       "inputs": ["{projectRoot}/src/**/*"],
       "options": {
         "command": "pnpm tsc -b ./tsconfig.build.json",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
         "command": "eslint './**/*.{js,ts}'",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     },
     "lint:fix": {
       "executor": "nx:run-commands",
       "options": {
         "command": "eslint './**/*.{js,ts}' --fix",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     },
     "test": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm vitest run",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     },
     "test:watch": {
@@ -58,14 +58,14 @@
       "dependsOn": ["^build"],
       "options": {
         "command": "pnpm vitest watch",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     },
     "type-check": {
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm tsc --noEmit",
-        "cwd": "packages/gestaltjs"
+        "cwd": "packages/catalysisdev"
       }
     }
   }

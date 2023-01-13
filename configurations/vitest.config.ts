@@ -7,14 +7,14 @@ export default function config() {
     resolve: {
       alias: [
         {
-          find: new RegExp('^@gestaltjs/core/internal/(.+)$'),
+          find: new RegExp('^@catalysisdev/core/internal/(.+)$'),
           replacement: pathJoin(
             __dirname,
             '../packages/core/src/internal/$1.ts'
           ),
         },
         {
-          find: new RegExp('^@gestaltjs/core/(.+)$'),
+          find: new RegExp('^@catalysisdev/core/(.+)$'),
           replacement: pathJoin(__dirname, '../packages/core/src/public/$1.ts'),
         },
       ],

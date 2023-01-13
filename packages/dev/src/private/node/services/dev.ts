@@ -1,6 +1,6 @@
-import { Project } from '@gestaltjs/core/node/project'
+import { Project } from '@catalysisdev/core/node/project'
 
-import { urlToken, content } from '@gestaltjs/core/node/logger'
+import { urlToken, content } from '@catalysisdev/core/node/logger'
 
 import { devLogger } from '../logger.js'
 import { createApp, toNodeListener } from 'h3'

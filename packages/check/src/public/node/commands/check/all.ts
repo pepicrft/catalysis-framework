@@ -1,9 +1,9 @@
-import { Command, Flags, Interfaces } from '@gestaltjs/core/node/oclif'
-import { loadProject } from '@gestaltjs/core/node/project'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
+import { loadProject } from '@catalysisdev/core/node/project'
 import { checkCode } from '../../../../internal/node/services/code.js'
 import { checkStyle } from '../../../../internal/node/services/style.js'
-import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
-import { absolutePath } from '@gestaltjs/core/node/path'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
+import { absolutePath } from '@catalysisdev/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default class All extends Command {
@@ -17,7 +17,7 @@ export default class All extends Command {
       description: 'When passed, it fixes the fixable style issues.',
       default: false,
       required: false,
-      env: 'GESTALT_FIX',
+      env: 'CATALYSIS_FIX',
     }),
   }
   async run(): Promise<void> {

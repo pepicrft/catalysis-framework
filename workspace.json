@@ -3,7 +3,7 @@
   "projects": {
     "ship": "ship",
     "e2e": "e2e",
-    "gestaltjs": "packages/gestaltjs",
+    "catalysisdev": "packages/catalysisdev",
     "routes": "packages/routes",
     "generate": "packages/generate",
     "dev": "packages/dev",

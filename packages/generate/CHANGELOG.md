@@ -1,11 +1,11 @@
-# @gestaltjs/generate
+# @catalysisdev/generate
 
 ## 0.7.10
 
 ### Patch Changes
 
 - Updated dependencies
-  - @gestaltjs/core@0.7.10
+  - @catalysisdev/core@0.7.10
 
 ## 0.7.9
 
@@ -13,11 +13,11 @@
 
 - Version 0.7.9
 - Updated dependencies
-  - @gestaltjs/core@0.7.9
+  - @catalysisdev/core@0.7.9
 
 ## 0.7.8
 
 ### Patch Changes
 
-- 6bd1812: Add a @gestaltjs/generate package that contains the generate command and its business logic
-  - @gestaltjs/core@0.7.8
+- 6bd1812: Add a @catalysisdev/generate package that contains the generate command and its business logic
+  - @catalysisdev/core@0.7.8

@@ -7,7 +7,7 @@ type Environment = 'production' | 'development'
  * @param env {{[key: string]: string}} Object containing environment variables.
  * @returns The environment the app should run in.
  */
-export function gestalt(env = process.env): Environment {
+export function catalysis(env = process.env): Environment {
   if (env[environmentVariables.environment] === 'development') {
     return 'development'
   } else if (env[environmentVariables.environment] === 'production') {

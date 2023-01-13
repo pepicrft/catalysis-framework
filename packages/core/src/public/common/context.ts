@@ -6,7 +6,7 @@ import { decodeJSON, encodeJSON } from './json.js'
  * is running in development or production.
  *
  * Because manifest files are loaded through Vite's virtual module graph, they don't
- * have access to Gestalt's module graph, and therefore we can't share the context via
+ * have access to Catalysis's module graph, and therefore we can't share the context via
  * an in-memory variable. To workaround that, we use the process.env global variable.
  */
 export type Context = {
@@ -20,7 +20,7 @@ export type Context = {
  * @param env {NodeJS.ProcessEnv} The Node environment to set the context.
  */
 export function setContext(context: Context, env = process.env) {
-  env.GESTALT_INTERNAL_CONTEXT = encodeJSON(context)
+  env.CATALYSIS_INTERNAL_CONTEXT = encodeJSON(context)
 }
 
 /**
@@ -28,7 +28,7 @@ export function setContext(context: Context, env = process.env) {
  * This removes the need for mocking the global process variable.
  */
 export function _useContext(env = process.env): Context {
-  const envVariable = env.GESTALT_INTERNAL_CONTEXT
+  const envVariable = env.CATALYSIS_INTERNAL_CONTEXT
   if (envVariable) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return decodeJSON(envVariable)

@@ -6,7 +6,7 @@ export function globalFlags() {
     verbose: Flags.boolean({
       name: 'verbose',
       char: 'v',
-      env: 'GESTALT_VERBOSE',
+      env: 'CATALYSIS_VERBOSE',
       description:
         'Output additional information that might be useful for debugging.',
       required: false,
@@ -14,7 +14,7 @@ export function globalFlags() {
     json: Flags.boolean({
       name: 'json',
       char: 'j',
-      env: 'GESTALT_JSON',
+      env: 'CATALYSIS_JSON',
       description: 'Outputs the command result encoded as a JSON.',
       required: false,
     }),
@@ -22,7 +22,7 @@ export function globalFlags() {
       name: 'env',
       char: 'e',
       options: ['development', 'production', 'test'],
-      env: 'GESTALT_ENV',
+      env: 'CATALYSIS_ENV',
       default: 'development',
       description: 'The environment used with the project.',
       required: false,
@@ -35,7 +35,7 @@ export function projectFlags() {
     path: Flags.string({
       name: 'path',
       char: 'p',
-      env: 'GESTALT_PATH',
+      env: 'CATALYSIS_PATH',
       default: process.cwd(),
       // eslint-disable-next-line @typescript-eslint/require-await
       parse: async (input) => resolvePath(input),

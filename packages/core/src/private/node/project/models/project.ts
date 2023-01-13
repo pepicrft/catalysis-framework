@@ -7,7 +7,7 @@ export type ProjectImplConstructorOptions = {
   /** The directory that contains the project */
   directory: AbsolutePath
 
-  /** The project's configuration loaded from the gestalt.config.{js,ts} file */
+  /** The project's configuration loaded from the catalysis.config.{js,ts} file */
   configuration: Configuration
 }
 

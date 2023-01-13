@@ -1,10 +1,10 @@
-# @gestaltjs/core
+# @catalysisdev/core
 
 ## 0.7.10
 
 ### Patch Changes
 
-- Fix invalid export in the terminal module of @gestaltjs/core
+- Fix invalid export in the terminal module of @catalysisdev/core
 
 ## 0.7.9
 
@@ -58,7 +58,7 @@
 
 - Fix an issue that caused the building of the dependencies to fail
 - Updated dependencies
-  - @gestaltjs/support@0.3.2
+  - @catalysisdev/support@0.3.2
 
 ## 0.3.1
 
@@ -66,7 +66,7 @@
 
 - Revisit the architecture
 - Updated dependencies
-  - @gestaltjs/support@0.3.1
+  - @catalysisdev/support@0.3.1
 
 ## 0.3.0
 
@@ -79,7 +79,7 @@
 
 - Updated dependencies [c200c4f]
 - Updated dependencies [4c68516]
-  - @gestaltjs/support@0.3.0
+  - @catalysisdev/support@0.3.0
 
 ## 0.2.0
 
@@ -90,4 +90,4 @@
 ### Patch Changes
 
 - Updated dependencies [4b77d2b]
-  - @gestaltjs/support@0.2.0
+  - @catalysisdev/support@0.2.0

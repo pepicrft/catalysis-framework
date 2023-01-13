@@ -1,4 +1,4 @@
-import { defineMiddleware, Response } from 'gestaltjs/middleware'
+import { defineMiddleware, Response } from 'catalysisdev/middleware'
 
 const authMiddleware = defineMiddleware((input) => {
   // Some authentication checks

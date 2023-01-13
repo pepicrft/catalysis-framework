@@ -1,11 +1,11 @@
-# @gestaltjs/create-project
+# @catalysisdev/create-project
 
 ## 0.7.10
 
 ### Patch Changes
 
 - Updated dependencies
-  - @gestaltjs/core@0.7.10
+  - @catalysisdev/core@0.7.10
 
 ## 0.7.9
 
@@ -13,31 +13,31 @@
 
 - Version 0.7.9
 - Updated dependencies
-  - @gestaltjs/core@0.7.9
+  - @catalysisdev/core@0.7.9
 
 ## 0.7.8
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.8
+- @catalysisdev/core@0.7.8
 
 ## 0.7.7
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.7
+- @catalysisdev/core@0.7.7
 
 ## 0.7.6
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.6
+- @catalysisdev/core@0.7.6
 
 ## 0.7.5
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.5
+- @catalysisdev/core@0.7.5
 
 ## 0.7.4
 
@@ -73,7 +73,7 @@
 
 - Fix an issue that caused the building of the dependencies to fail
 - Updated dependencies
-  - @gestaltjs/support@0.3.2
+  - @catalysisdev/support@0.3.2
 
 ## 0.3.1
 
@@ -81,7 +81,7 @@
 
 - Revisit the architecture
 - Updated dependencies
-  - @gestaltjs/support@0.3.1
+  - @catalysisdev/support@0.3.1
 
 ## 0.3.0
 
@@ -94,7 +94,7 @@
 
 - Updated dependencies [c200c4f]
 - Updated dependencies [4c68516]
-  - @gestaltjs/support@0.3.0
+  - @catalysisdev/support@0.3.0
 
 ## 0.2.0
 
@@ -105,4 +105,4 @@
 ### Patch Changes
 
 - Updated dependencies [4b77d2b]
-  - @gestaltjs/support@0.2.0
+  - @catalysisdev/support@0.2.0

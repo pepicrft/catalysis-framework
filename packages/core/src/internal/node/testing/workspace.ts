@@ -11,28 +11,28 @@ type ESModule = {
 }
 
 /**
- * An interface to represent the modules exported by the "gestaltjs" package.
+ * An interface to represent the modules exported by the "catalysisdev" package.
  */
-type GestaltJSPackageModules = {
+type catalysisdevPackageModules = {
   /** Represents the configuration module which exports the defineConfiguration module for defining a configuration. */
   configuration: ESModule
 }
 
 /**
- * This function returns the modules exported by the "gestaltjs" NPM package.
+ * This function returns the modules exported by the "catalysisdev" NPM package.
  * This is useful for tests that invoke a build system like Vite and need to instruct it on
  * how to resolve those modules.
- * @returns {GestaltJSPackageModules} An object representing the Node modules that are exported by the "gestaltjs" NPM package.
+ * @returns {catalysisdevPackageModules} An object representing the Node modules that are exported by the "catalysisdev" NPM package.
  */
-export async function gestaltjsPackageModules(): Promise<GestaltJSPackageModules> {
-  const gestaltjsPackageRuntimeDirectory = (await findPathUp(
-    'gestaltjs/src/public/node',
+export async function catalysisdevPackageModules(): Promise<catalysisdevPackageModules> {
+  const catalysisdevPackageRuntimeDirectory = (await findPathUp(
+    'catalysisdev/src/public/node',
     { type: 'directory', cwd: moduleDirname(import.meta.url) }
   )) as string
   return {
     configuration: {
-      identifier: 'gestaltjs/configuration',
-      path: joinPath(gestaltjsPackageRuntimeDirectory, 'configuration.ts'),
+      identifier: 'catalysisdev/configuration',
+      path: joinPath(catalysisdevPackageRuntimeDirectory, 'configuration.ts'),
     },
   }
 }

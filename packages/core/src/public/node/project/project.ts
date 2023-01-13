@@ -2,7 +2,7 @@ import { AbsolutePath } from '../path.js'
 import type { Configuration } from './configuration'
 
 /**
- * Interface that represents a Gestalt project.
+ * Interface that represents a Catalysis project.
  */
 export interface Project {
   /** Directory where the project lives */

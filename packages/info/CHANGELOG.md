@@ -1,11 +1,11 @@
-# @gestaltjs/info
+# @catalysisdev/info
 
 ## 0.7.10
 
 ### Patch Changes
 
 - Updated dependencies
-  - @gestaltjs/core@0.7.10
+  - @catalysisdev/core@0.7.10
 
 ## 0.7.9
 
@@ -13,29 +13,29 @@
 
 - Version 0.7.9
 - Updated dependencies
-  - @gestaltjs/core@0.7.9
+  - @catalysisdev/core@0.7.9
 
 ## 0.7.8
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.8
+- @catalysisdev/core@0.7.8
 
 ## 0.7.7
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.7
+- @catalysisdev/core@0.7.7
 
 ## 0.7.6
 
 ### Patch Changes
 
-- @gestaltjs/core@0.7.6
+- @catalysisdev/core@0.7.6
 
 ## 0.7.5
 
 ### Patch Changes
 
-- dd424dd: Add a @gestaltjs/info package that contains an info command to get an overview of an app
-  - @gestaltjs/core@0.7.5
+- dd424dd: Add a @catalysisdev/info package that contains an info command to get an overview of an app
+  - @catalysisdev/core@0.7.5

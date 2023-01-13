@@ -13,7 +13,7 @@
     "routes": "nx run ship:routes"
   },
   "dependencies": {
-    "gestaltjs": "workspace:gestaltjs@*"
+    "catalysisdev": "workspace:catalysisdev@*"
   },
   "author": "pepicrft"
 }

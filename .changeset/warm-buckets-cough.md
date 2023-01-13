@@ -1,5 +1,5 @@
 ---
-'@gestaltjs/kit': minor
+'@catalysisdev/kit': minor
 ---
 
-Add a @gestaltjs/kit package with utilities to extend the Gestalt framework and projects
+Add a @catalysisdev/kit package with utilities to extend the Catalysis framework and projects

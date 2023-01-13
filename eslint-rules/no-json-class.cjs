@@ -6,7 +6,7 @@ module.exports = {
   meta: {
     docs: {
       description:
-        'Disallow the usage of the JSON class in favor of the json module in @gestaltjs/json',
+        'Disallow the usage of the JSON class in favor of the json module in @catalysisdev/json',
       category: 'ES5',
       recommended: false,
       url: 'http://mysticatea.github.io/eslint-plugin-es/rules/no-json.html',
@@ -14,7 +14,7 @@ module.exports = {
     fixable: null,
     messages: {
       forbidden:
-        "'{{name}}' class is forbidden. Use the module @gestaltjs/node/json instead.",
+        "'{{name}}' class is forbidden. Use the module @catalysisdev/node/json instead.",
     },
     schema: [],
     type: 'problem',

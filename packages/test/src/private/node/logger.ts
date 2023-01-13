@@ -1,4 +1,4 @@
-import { coreLogger } from '@gestaltjs/core/node/logger'
+import { coreLogger } from '@catalysisdev/core/node/logger'
 
 export const testLogger = () => {
   return coreLogger().child('test')

@@ -1,26 +1,26 @@
 import { describe, expect, test } from 'vitest'
 import { unstyled } from './terminal.js'
 import {
-  GestaltDirectoryNotFoundError,
-  gestaltjsPackageDirectory,
+  CatalysisDirectoryNotFoundError,
+  catalysisdevPackageDirectory,
 } from './workspace.js'
 
-describe('GestaltDirectoryNotFoundError', () => {
+describe('CatalysisDirectoryNotFoundError', () => {
   test('has the right message', () => {
     // Given/When
-    const got = GestaltDirectoryNotFoundError().message
+    const got = CatalysisDirectoryNotFoundError().message
 
     // Then
     expect(unstyled(got)).toMatchInlineSnapshot(
-      "\"Couldn't find the directory of the 'gestalt' package\""
+      "\"Couldn't find the directory of the 'catalysis' package\""
     )
   })
 })
 
-describe('gestaltjsPackageDirectory', () => {
+describe('catalysisdevPackageDirectory', () => {
   test('it finds the directory', async () => {
     // Given/When
-    const got = await gestaltjsPackageDirectory()
+    const got = await catalysisdevPackageDirectory()
 
     // Then
     expect(got).not.toBeUndefined()

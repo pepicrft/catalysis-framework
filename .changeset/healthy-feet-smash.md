@@ -1,5 +1,5 @@
 ---
-'@gestaltjs/core': minor
+'@catalysisdev/core': minor
 ---
 
-Add a utility function to @gestaltjs/core/node/fs, moveFileOrDirectory, to move files and directories
+Add a utility function to @catalysisdev/core/node/fs, moveFileOrDirectory, to move files and directories

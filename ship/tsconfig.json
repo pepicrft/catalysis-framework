@@ -8,7 +8,7 @@
   },
   "include": [
     "./src/**/*.ts",
-    "./gestalt.config.ts"
+    "./catalysis.config.ts"
   ],
   "exclude": ["dist/**", "node_modules"]
 }

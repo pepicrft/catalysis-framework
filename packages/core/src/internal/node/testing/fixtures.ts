@@ -15,7 +15,7 @@ export function testProject(overrides: Partial<Project> = {}): Project {
       new ConfigurationImpl({
         path:
           overrides?.configuration?.path ??
-          absolutePath('/project/gestalt.config.js'),
+          absolutePath('/project/catalysis.config.js'),
         userConfiguration: {
           name: overrides?.configuration?.name ?? 'Test',
         },

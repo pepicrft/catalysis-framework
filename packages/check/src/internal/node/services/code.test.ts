@@ -1,9 +1,9 @@
 import { describe, test, expect, vi } from 'vitest'
-import { runTypescriptCompiler } from '@gestaltjs/core/node/tsc'
+import { runTypescriptCompiler } from '@catalysisdev/core/node/tsc'
 import { checkCode } from './code.js'
-import { absolutePath } from '@gestaltjs/core/node/path'
+import { absolutePath } from '@catalysisdev/core/node/path'
 
-vi.mock('@gestaltjs/core/node/tsc')
+vi.mock('@catalysisdev/core/node/tsc')
 describe('run', () => {
   test('runs tsc cli command', async () => {
     // Given

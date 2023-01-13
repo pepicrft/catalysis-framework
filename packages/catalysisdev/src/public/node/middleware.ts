@@ -1,9 +1,9 @@
-export { Request, Response } from '@gestaltjs/core/common/fetch'
+export { Request, Response } from '@catalysisdev/core/common/fetch'
 export {
   MiddlewareInput,
   MiddlewareOutput,
-} from '@gestaltjs/core/common/middleware'
-import { Middleware } from '@gestaltjs/core/common/middleware'
+} from '@catalysisdev/core/common/middleware'
+import { Middleware } from '@catalysisdev/core/common/middleware'
 
 /**
  * A utility function to define a middleware. Since the function has its argument and

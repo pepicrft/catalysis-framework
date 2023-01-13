@@ -4,7 +4,7 @@ import { test, expect, describe } from 'vitest'
 describe('isRunningInVerbose', () => {
   test('returns true when --verbose is passed', () => {
     // Given
-    const argv = ['gestalt', 'build', '--verbose']
+    const argv = ['catalysis', 'build', '--verbose']
 
     // When
     const got = isRunningInVerbose(argv)
@@ -15,7 +15,7 @@ describe('isRunningInVerbose', () => {
 
   test('returns true when -v is passed', () => {
     // Given
-    const argv = ['gestalt', 'build', '-v']
+    const argv = ['catalysis', 'build', '-v']
 
     // When
     const got = isRunningInVerbose(argv)
@@ -26,7 +26,7 @@ describe('isRunningInVerbose', () => {
 
   test('returns false when neither -v nor --verbose are set', () => {
     // Given
-    const argv = ['gestalt', 'build']
+    const argv = ['catalysis', 'build']
 
     // When
     const got = isRunningInVerbose(argv)

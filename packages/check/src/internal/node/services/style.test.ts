@@ -1,10 +1,10 @@
 import { describe, test, expect, vi } from 'vitest'
 import { checkStyle } from './style.js'
 import type { LintOptions } from './style.js'
-import { runESLint } from '@gestaltjs/core/node/eslint'
-import { testProject } from '@gestaltjs/core/internal/node/testing/fixtures'
+import { runESLint } from '@catalysisdev/core/node/eslint'
+import { testProject } from '@catalysisdev/core/internal/node/testing/fixtures'
 
-vi.mock('@gestaltjs/core/node/eslint')
+vi.mock('@catalysisdev/core/node/eslint')
 
 describe('run', () => {
   test('runs eslint cli command', async () => {

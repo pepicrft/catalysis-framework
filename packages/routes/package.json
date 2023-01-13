@@ -1,5 +1,5 @@
 {
-  "name": "@gestaltjs/routes",
+  "name": "@catalysisdev/routes",
   "version": "0.7.10",
   "description": "Output a project's routes",
   "type": "module",
@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/core": "0.7.10"
+    "@catalysisdev/core": "0.7.10"
   },
   "oclif": {
     "commands": "./dist/public/node/commands",

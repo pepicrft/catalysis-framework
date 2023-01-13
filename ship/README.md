@@ -1,7 +1,7 @@
 
 # ship
 
-This repository contains a [Gestalt](https://gestaltjs.org) project.
+This repository contains a [Catalysis](https://catalysis.dev) project.
 
 ## Development
 
@@ -12,6 +12,5 @@ This repository contains a [Gestalt](https://gestaltjs.org) project.
 
 ## Resources
 
-- [Gestalt](https://gestaltjs.org)
+- [Catalysis](https://catalysis.dev)
 - [NPM registry](https://npmjs.com)
-  

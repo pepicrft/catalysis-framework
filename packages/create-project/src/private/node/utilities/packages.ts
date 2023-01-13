@@ -1,15 +1,15 @@
-import { findPathUp } from '@gestaltjs/core/node/fs'
-import { decodeJSONFile } from '@gestaltjs/core/node/json'
+import { findPathUp } from '@catalysisdev/core/node/fs'
+import { decodeJSONFile } from '@catalysisdev/core/node/json'
 import {
   absolutePath,
   glob,
   joinPath,
   moduleDirname,
   parentDirectory,
-} from '@gestaltjs/core/node/path'
+} from '@catalysisdev/core/node/path'
 
 /**
- * When contributing to the Gestalt project, it might be useful to generate projects
+ * When contributing to the Catalysis project, it might be useful to generate projects
  * that point to the packages in this repository. To do so, we need to use the "overrides"
  * section of the package.json. This function returns the overrides for all the packages
  * in this repository.

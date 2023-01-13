@@ -1,4 +1,4 @@
-import { prompt } from '@gestaltjs/core/node/terminal'
+import { prompt } from '@catalysisdev/core/node/terminal'
 
 /**
  * An interface that represents the flags that have been passed

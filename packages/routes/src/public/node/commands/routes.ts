@@ -1,10 +1,10 @@
-import { loadProject } from '@gestaltjs/core/node/project'
+import { loadProject } from '@catalysisdev/core/node/project'
 import { routesLogger } from '../../../private/node/logger.js'
 import { formatJson } from '../../../private/node/formatters/json.js'
 import { prettyFormat } from '../../../private/node/formatters/pretty.js'
-import { globalFlags, projectFlags } from '@gestaltjs/core/node/command'
-import { Command, Interfaces } from '@gestaltjs/core/node/oclif'
-import { absolutePath } from '@gestaltjs/core/node/path'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
+import { Command, Interfaces } from '@catalysisdev/core/node/oclif'
+import { absolutePath } from '@catalysisdev/core/node/path'
 
 // eslint-disable-next-line import/no-default-export
 export default class Routes extends Command {

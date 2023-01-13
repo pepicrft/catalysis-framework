@@ -1,4 +1,4 @@
-import { gestaltRules } from './rules/gestalt'
+import { catalysisRules } from './rules/catalysis'
 
 // eslint-disable-next-line import/no-default-export
 export default {
@@ -9,6 +9,6 @@ export default {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    ...gestaltRules,
+    ...catalysisRules,
   },
 }

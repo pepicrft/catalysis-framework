@@ -1,17 +1,17 @@
 {
-  "name": "@gestaltjs/create-project",
+  "name": "@catalysisdev/create-project",
   "version": "0.7.10",
   "private": false,
-  "description": "Create a new Gestalt plugin",
+  "description": "Create a new Catalysis plugin",
   "type": "module",
   "keywords": [
-    "gestalt",
-    "gestaltjs",
+    "catalysis",
+    "catalysisdev",
     "web"
   ],
   "license": "MIT",
   "bin": {
-    "gestalt": "./bin/run.js"
+    "catalysis": "./bin/run.js"
   },
   "files": [
     "/bin/run.js",
@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@gestaltjs/core": "0.7.10"
+    "@catalysisdev/core": "0.7.10"
   },
   "oclif": {
     "bin": "create-project",

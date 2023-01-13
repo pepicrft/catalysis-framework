@@ -1,4 +1,4 @@
-# @gestaltjs/eslint-plugin
+# @catalysisdev/eslint-plugin
 
 ## 0.7.10
 
@@ -40,4 +40,4 @@
 
 ### Minor Changes
 
-- c7b4397: Add ESLint plugin for Gestalt
+- c7b4397: Add ESLint plugin for Catalysis

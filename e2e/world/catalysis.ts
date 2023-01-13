@@ -1,7 +1,7 @@
 import { setWorldConstructor } from '@cucumber/cucumber'
 import {
   createProjectExecutablePath,
-  gestaltExecutablePath,
+  catalysisExecutablePath,
 } from '../lib/constants.js'
 import { exec } from '../lib/system.js'
 
@@ -11,16 +11,16 @@ export interface WorldConstructorParams {
 
 export type RunOptions = { cwd?: string; env?: NodeJS.ProcessEnv }
 
-export interface GestaltWorld {
+export interface CatalysisWorld {
   temporaryDirectory: string
   temporaryEnvironment: any | undefined
   projectDirectory: string | undefined
 
-  runGestalt(args: string[], options: RunOptions): Promise<void>
+  runCatalysis(args: string[], options: RunOptions): Promise<void>
   runCreateProject(args: string[], options: RunOptions): Promise<void>
 }
 
-export class GestaltWorldImpl implements GestaltWorld {
+export class CatalysisWorldImpl implements CatalysisWorld {
   public temporaryDirectory: string
   public temporaryEnvironment: any | undefined
   public projectDirectory: string | undefined
@@ -29,12 +29,12 @@ export class GestaltWorldImpl implements GestaltWorld {
     this.temporaryDirectory = temporaryDirectory
   }
 
-  async runGestalt(args: string[], options: RunOptions = {}) {
-    await exec(gestaltExecutablePath, args, options)
+  async runCatalysis(args: string[], options: RunOptions = {}) {
+    await exec(catalysisExecutablePath, args, options)
   }
   async runCreateProject(args: string[], options: RunOptions = {}) {
     await exec(createProjectExecutablePath, args, options)
   }
 }
 
-setWorldConstructor(GestaltWorldImpl)
+setWorldConstructor(CatalysisWorldImpl)
