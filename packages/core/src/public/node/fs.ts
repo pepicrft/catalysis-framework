@@ -15,9 +15,12 @@ import { absolutePath, AbsolutePath } from 'typed-file-system-path'
  */
 export async function findPathUp(
   pattern: string | string[],
-  options: { cwd: string; type?: 'file' | 'directory' }
+  options: { cwd: AbsolutePath; type?: 'file' | 'directory' }
 ): Promise<string | undefined> {
-  return await findUp(pattern, options as FindUpOptions)
+  return await findUp(pattern, {
+    ...options,
+    cwd: options.cwd.pathString,
+  } as FindUpOptions)
 }
 /**
  * Reads a file and decodes it using utf-8.

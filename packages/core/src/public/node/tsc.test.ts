@@ -1,6 +1,6 @@
 import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system.js'
-import { parentDirectory, moduleDirname } from '../node/path.js'
+import { parentDirectory, moduleDirname, absolutePath } from '../node/path.js'
 import { runTypescriptCompiler, TSCNotFoundError } from './tsc.js'
 import { findPathUp } from './fs'
 
@@ -12,7 +12,7 @@ describe('run', () => {
   test('runs tsc', async () => {
     // Given
     const tscPath = '/test/tsc'
-    const dirnamePath = '/catalysis/tsc'
+    const dirnamePath = absolutePath('/catalysis/tsc')
     vi.mocked(findPathUp).mockResolvedValue(tscPath)
     vi.mocked(moduleDirname).mockReturnValue(dirnamePath)
     const args = ['foo']

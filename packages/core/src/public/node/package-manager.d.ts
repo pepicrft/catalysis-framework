@@ -1,12 +1,14 @@
-declare type FindPackageJsonUpOptions = {
+import type { AbsolutePath } from './path.js'
+
+export declare type FindPackageJsonUpOptions = {
   /**
    * The directory from where to look up the package.json
    */
-  fromDirectory: string
+  fromDirectory: AbsolutePath
 }
 
-declare type FindPackageJsonUpOutput = void
+export declare type FindPackageJsonUpOutput = void
 
-declare function findPackageJsonUp(
+export declare function findPackageJsonUp(
   options: FindPackageJsonUpOptions
-): Promise<FindPackageJsonUpOptions>
+): Promise<FindPackageJsonUpOutput>

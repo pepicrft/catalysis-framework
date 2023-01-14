@@ -1,5 +1,5 @@
 import { Bug } from '../common/error.js'
-import { absolutePath, joinPath } from './path.js'
+import { AbsolutePath, absolutePath, joinPath } from './path.js'
 import { pathExists } from './fs.js'
 import { content, fileToken } from './logger.js'
 import { WriteStream } from 'fs-extra'
@@ -145,11 +145,11 @@ export async function addDependencies(options: AddDependencyOptions) {
  * it finds a lockfile that indicates the dependency manager
  * being used. If no lockfile is found, npm is returned as the
  * dependency manager.
- * @param fromDirectory {string}
+ * @param fromDirectory {AbsolutePath}
  * @returns
  */
 export async function inferDependencyManager(
-  fromDirectory: string
+  fromDirectory: AbsolutePath
 ): Promise<DependencyManager> {
   const yarnLockPath = await findPathUp('yarn.lock', {
     cwd: fromDirectory,

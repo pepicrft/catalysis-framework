@@ -17,6 +17,10 @@ export default function config() {
           find: new RegExp('^@catalysisdev/core/(.+)$'),
           replacement: pathJoin(__dirname, '../packages/core/src/public/$1.ts'),
         },
+        {
+          find: new RegExp('^(\./.+\).js$'),
+          replacement: '$1',
+        }
       ],
     },
   })

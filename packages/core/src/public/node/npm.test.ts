@@ -203,7 +203,7 @@ describe('inferDependencyManager', () => {
       await writeFile(lockfilePath, '')
 
       // When
-      const got = await inferDependencyManager(nestedDirectory.pathString)
+      const got = await inferDependencyManager(nestedDirectory)
 
       // Then
       expect(got).toEqual('yarn')
@@ -219,7 +219,7 @@ describe('inferDependencyManager', () => {
       await writeFile(lockfilePath, '')
 
       // When
-      const got = await inferDependencyManager(nestedDirectory.pathString)
+      const got = await inferDependencyManager(nestedDirectory)
 
       // Then
       expect(got).toEqual('pnpm')
@@ -233,7 +233,7 @@ describe('inferDependencyManager', () => {
       await makeDirectory(nestedDirectory)
 
       // When
-      const got = await inferDependencyManager(nestedDirectory.pathString)
+      const got = await inferDependencyManager(nestedDirectory)
 
       // Then
       expect(got).toEqual('npm')

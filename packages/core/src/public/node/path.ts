@@ -19,7 +19,7 @@ export {
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import commondir from 'commondir'
-import { AbsolutePath } from 'typed-file-system-path'
+import { absolutePath, AbsolutePath } from 'typed-file-system-path'
 
 /**
  * Joins all given path components together using the platform-specific separator as a delimiter,
@@ -40,8 +40,8 @@ export function joinPath(...components: string[]): string {
  * @param url {URL} The module URL obtained from import.meta.url
  * @returns
  */
-export function moduleDirname(url: string): string {
-  return patheDirname(fileURLToPath(url))
+export function moduleDirname(url: string): AbsolutePath {
+  return absolutePath(patheDirname(fileURLToPath(url)))
 }
 
 /**
