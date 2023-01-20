@@ -146,8 +146,8 @@ importers:
       '@remix-run/web-fetch': ^4.2.0
       '@types/inquirer': 9.0.3
       acorn: 8.8.1
+      cac: 6.7.14
       case-anything: 2.1.10
-      commander: 10.0.0
       commondir: 1.0.1
       esbuild: 0.16.16
       execa: 6.1.0
@@ -186,8 +186,8 @@ importers:
       '@oclif/core': 1.23.2
       '@remix-run/web-fetch': 4.2.0
       acorn: 8.8.1
+      cac: 6.7.14
       case-anything: 2.1.10
-      commander: 10.0.0
       commondir: 1.0.1
       esbuild: 0.16.16
       execa: 6.1.0
@@ -5427,6 +5427,11 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
+  /cac/6.7.14:
+    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
+    engines: {node: '>=8'}
+    dev: false
+
   /cacheable-request/6.1.0:
     resolution: {integrity: sha512-Oj3cAGPCqOZX7Rz64Uny2GYAZNliQSqfbePrgAQ1wKAihYmCUnraBtJtKcGR4xz7wF+LoJC+ssFZvv5BgF9Igg==}
     engines: {node: '>=8'}
@@ -5832,11 +5837,6 @@ packages:
 
   /comma-separated-tokens/1.0.8:
     resolution: {integrity: sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==}
-    dev: false
-
-  /commander/10.0.0:
-    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
-    engines: {node: '>=14'}
     dev: false
 
   /commander/2.20.3:

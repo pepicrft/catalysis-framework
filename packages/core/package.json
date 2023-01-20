@@ -45,7 +45,7 @@
     "@remix-run/web-fetch": "^4.2.0",
     "acorn": "8.8.1",
     "case-anything": "2.1.10",
-    "commander": "10.0.0",
+    "cac": "6.7.14",
     "commondir": "1.0.1",
     "esbuild": "0.16.16",
     "execa": "6.1.0",

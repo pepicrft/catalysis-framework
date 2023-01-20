@@ -1,7 +1,9 @@
-import { runOclifInitCLI } from '@catalysisdev/core/node/cli'
+import { runCLI } from '@catalysisdev/core/node/cli'
 
 // eslint-disable-next-line import/no-default-export
-export default runOclifInitCLI({
-  moduleURL: import.meta.url,
-  name: 'create-project',
-})
+export default async function runCatalysis() {
+  await runCLI({
+    name: 'create-project ',
+    moduleURL: import.meta.url,
+  })
+}
