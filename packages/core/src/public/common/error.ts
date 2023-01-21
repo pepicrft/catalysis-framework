@@ -1,6 +1,48 @@
-import { ExtendableError } from 'ts-error'
-import { LoggerMessage, stringify } from './logger.js'
-export { ExtendableError } from 'ts-error'
+/**
+ * ExtendableError is an extendable error class that actually works with TypeScript
+ * and ES6 support compatible with all environments, even very old browsers.
+ *
+ * We've vendored the implementation from the ts-error project:
+ *  - https://github.com/gfmio/ts-error
+ */
+export class ExtendableError extends Error {
+  constructor(...params: ConstructorParameters<typeof Error>) {
+    super(...params)
+    const message =
+      params.length > 0 && typeof params[0] === 'string' ? params[0] : ''
+
+    // Replace Error with ClassName of the constructor, if it has not been overwritten already
+    if (this.name === undefined || this.name === 'Error') {
+      Object.defineProperty(this, 'name', {
+        configurable: true,
+        enumerable: false,
+        value: this.constructor.name,
+        writable: true,
+      })
+    }
+
+    Object.defineProperty(this, 'message', {
+      configurable: true,
+      enumerable: false,
+      value: message,
+      writable: true,
+    })
+
+    Object.defineProperty(this, 'stack', {
+      configurable: true,
+      enumerable: false,
+      value: '',
+      writable: true,
+    })
+
+    // Maintains proper stack trace for where our error was thrown (only available on V8)
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor)
+    } else if (this.stack === '') {
+      this.stack = new Error(message).stack
+    }
+  }
+}
 
 /**
  * `FatalError` represents an error that causes the execution of the program
@@ -26,7 +68,7 @@ type ErrorOptions = {
    * a cause with the aim of iterating on it once we have
    * additional context from the bug report.
    */
-  cause?: LoggerMessage
+  cause?: string
 }
 /**
  * It defines the interface of the options
@@ -49,8 +91,8 @@ export class Bug extends FatalError {
    * @param message {string} Error messages
    * @param options {BugOptions} Error options
    */
-  constructor(message: LoggerMessage, options: BugOptions = {}) {
-    super(stringify(message))
+  constructor(message: string, options: BugOptions = {}) {
+    super(message)
     this.options = options
   }
 }
@@ -61,7 +103,7 @@ export class Bug extends FatalError {
  */
 export class BugSilent extends FatalError {}
 
-type AbortOptions = ErrorOptions & { next?: LoggerMessage }
+type AbortOptions = ErrorOptions & { next?: string }
 
 /**
  * An error that aborts the execution of the program
@@ -84,8 +126,8 @@ export class Abort extends FatalError {
    * @param message {string} Error messages
    * @param options {BugOptions} Error options
    */
-  constructor(message: LoggerMessage, options: AbortOptions = {}) {
-    super(stringify(message))
+  constructor(message: string, options: AbortOptions = {}) {
+    super(message)
     this.options = options
   }
 }

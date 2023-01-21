@@ -16,6 +16,6 @@ export default class Dev extends Command {
   async run(): Promise<void> {
     const { flags } = await this.parse(Dev)
     const project = await loadProject(absolutePath(flags.path))
-    const { onChange } = await devProject(project)
+    // const { onChange } = await devProject(project)
   }
 }

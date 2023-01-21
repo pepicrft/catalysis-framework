@@ -1,6 +1,5 @@
-import { run, flush, settings } from '@oclif/core'
 import { errorHandler } from '../node/error.js'
-import cli from 'cac'
+import yargs from 'yargs/yargs'
 
 /**
  * Returns true if the current process has been called with either a --verbose or -v argument.
@@ -29,12 +28,9 @@ type RunCLIOptions = {
 
 export async function runCLI(options: RunCLIOptions) {
   try {
-    const catalysis = cli(options.name).help().version('0.8.0')
-    catalysis.parse(process.argv, { run: false })
-    await catalysis.runMatchedCommand()
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-  } catch (error: Error) {
+    const catalysis = yargs(process.argv)
+    await catalysis.parseAsync()
+  } catch (error: any) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     await errorHandler(error)
   }

@@ -7,7 +7,6 @@ const sidebars = {
   contributorsSidebar: [
     'contributors/get-started',
     'contributors/principles',
-    'contributors/logging',
     'contributors/errors',
     'contributors/eslint-rules',
     'contributors/automation',

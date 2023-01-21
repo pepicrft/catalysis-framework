@@ -1,6 +1,6 @@
 import { Abort } from '../common/error.js'
 import parseJson from 'parse-json'
-import safeStringify from 'fast-safe-stringify'
+import safeStableStringify from 'safe-stable-stringify'
 
 /**
  * An abort error that's thrown when a JSON cannot be decoded
@@ -48,13 +48,11 @@ A function that alters the behavior of the stringification process, or an array 
 export function encodeJSON(
   value: any,
   replacer?: (key: string, value: any) => any | undefined,
-  space?: string | number | undefined,
-  options?:
-    | { depthLimit: number | undefined; edgesLimit: number | undefined }
-    | undefined
+  space?: string | number | undefined
 ): string {
   try {
-    return safeStringify(value, replacer, space, options)
+    // TODO - Handle errors gracefully
+    return safeStableStringify(value, replacer, space) ?? ''
   } catch (error: any) {
     throw new EncodeJSONError(error as Error)
   }

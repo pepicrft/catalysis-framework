@@ -1,5 +1,4 @@
 import { loadProject } from '@catalysisdev/core/node/project'
-import { infoLogger } from '../../../private/node/logger.js'
 import { formatJson } from '../../../private/node/formatters/json.js'
 import { prettyFormat } from '../../../private/node/formatters/pretty.js'
 import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
@@ -19,13 +18,11 @@ export default class Info extends Command {
     const { flags } = await this.parse(Info)
     const loadedProject = await loadProject(absolutePath(flags.path))
     if (flags.json) {
-      infoLogger().rawInfo(formatJson({ project: loadedProject }), {
-        project: loadedProject,
-      })
+      // eslint-disable-next-line no-console
+      console.log(formatJson({ project: loadedProject }))
     } else {
-      infoLogger().rawInfo(prettyFormat({ project: loadedProject }), {
-        project: loadedProject,
-      })
+      // eslint-disable-next-line no-console
+      console.log(prettyFormat({ project: loadedProject }))
     }
   }
 }

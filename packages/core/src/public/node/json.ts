@@ -1,6 +1,5 @@
 import { Abort } from '../common/error.js'
 import { pathExists, readFile } from './fs.js'
-import { content, coreLogger, pathToken } from './logger.js'
 import parseJson from 'parse-json'
 import { AbsolutePath } from 'typed-file-system-path'
 
@@ -11,9 +10,7 @@ import { AbsolutePath } from 'typed-file-system-path'
 export class JSONFileNotFoundError extends Abort {
   constructor(path: AbsolutePath) {
     super(
-      content`We couldn't read the JSON file at ${pathToken(
-        path
-      )} because it doesn't exist.`
+      `We couldn't read the JSON file at ${path.pathString} because it doesn't exist.`
     )
   }
 }
@@ -26,15 +23,11 @@ export class JSONFileNotFoundError extends Abort {
 export class JSONFileDecodeError extends Abort {
   constructor(path: AbsolutePath, error: Error) {
     if (error?.message) {
-      super(content`We couldn't decode the content of the JSON file ${pathToken(
-        path
-      )} due to the following error:
+      super(`We couldn't decode the content of the JSON file ${path.pathString} due to the following error:
       ${error.message}`)
     } else {
       super(
-        content`We couldn't decode the content of the JSON file ${pathToken(
-          path
-        )}`
+        `We couldn't decode the content of the JSON file ${path.pathString}`
       )
     }
   }
@@ -46,7 +39,6 @@ export class JSONFileDecodeError extends Abort {
  * @returns {Promise<any>} A promise that resolves with a Javascript object representing the JSON content.
  */
 export async function decodeJSONFile(path: AbsolutePath): Promise<any> {
-  coreLogger().debug(content`Reading JSON file from path ${pathToken(path)}`)
   const fileExists = await pathExists(path)
   if (!fileExists) {
     throw new JSONFileNotFoundError(path)

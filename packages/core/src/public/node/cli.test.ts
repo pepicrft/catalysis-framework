@@ -1,4 +1,4 @@
-import { isRunningInVerbose } from './cli'
+import { isRunningInVerbose } from './cli.js'
 import { test, expect, describe } from 'vitest'
 
 describe('isRunningInVerbose', () => {

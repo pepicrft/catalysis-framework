@@ -1,5 +1,5 @@
 import { AbsolutePath } from '../path.js'
-import type { Configuration } from './configuration'
+import type { Configuration } from './configuration.js'
 
 /**
  * Interface that represents a Catalysis project.

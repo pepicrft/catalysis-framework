@@ -1,4 +1,4 @@
-import { UserConfiguration } from '../../../../public/common/manifests'
+import { UserConfiguration } from '../../../../public/common/manifests.js'
 import { AbsolutePath } from 'typed-file-system-path'
 
 /** Options to create a ConfigurationImpl instance */

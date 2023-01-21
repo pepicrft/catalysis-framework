@@ -3,8 +3,6 @@ import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
 import { absolutePath, resolvePath } from '@catalysisdev/core/node/path'
 import { initPrompt } from '../../../private/node/prompts/init.js'
 import { initService } from '../../../private/node/services/init.js'
-import { createProjectLogger } from '../../../private/node/logger.js'
-import { content } from '@catalysisdev/core/node/logger'
 
 // eslint-disable-next-line import/no-default-export
 export default class Init extends Command {
@@ -51,11 +49,8 @@ export default class Init extends Command {
   }
 
   async run(): Promise<void> {
-    createProjectLogger().info(
-      content`Creating a new Catalysis project...\n`,
-      {},
-      { sameProcess: true }
-    )
+    // eslint-disable-next-line no-console
+    console.log('Creating a new Catalysis project...')
 
     const { flags } = await this.parse(Init)
 

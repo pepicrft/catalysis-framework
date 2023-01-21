@@ -1,4 +1,3 @@
-import { testLogger } from '../../../private/node/logger.js'
 import { projectFlags, globalFlags } from '@catalysisdev/core/node/command'
 import { Command, Interfaces } from '@catalysisdev/core/node/oclif'
 
@@ -13,6 +12,7 @@ export default class Test extends Command {
 
   // eslint-disable-next-line @typescript-eslint/require-await
   async run(): Promise<void> {
-    testLogger().success('Tested')
+    // eslint-disable-next-line no-console
+    console.log('Tested')
   }
 }

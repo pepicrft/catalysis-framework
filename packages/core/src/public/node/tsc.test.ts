@@ -2,7 +2,7 @@ import { describe, test, expect, vi } from 'vitest'
 import { exec } from './system.js'
 import { parentDirectory, moduleDirname, absolutePath } from '../node/path.js'
 import { runTypescriptCompiler, TSCNotFoundError } from './tsc.js'
-import { findPathUp } from './fs'
+import { findPathUp } from './fs.js'
 
 vi.mock('./system.js')
 vi.mock('./path.js')

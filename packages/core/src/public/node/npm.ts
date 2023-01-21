@@ -1,7 +1,6 @@
 import { Bug } from '../common/error.js'
 import { AbsolutePath, absolutePath, joinPath } from './path.js'
 import { pathExists } from './fs.js'
-import { content, fileToken } from './logger.js'
 import { WriteStream } from 'fs-extra'
 import { exec } from './system.js'
 import { findPathUp } from './fs.js'
@@ -28,12 +27,7 @@ export type DependencyType = 'peer' | 'dev' | 'prod'
  * @returns {Bug} A bug error.
  */
 export const PackageJsonNotFoundError = (directory: string) => {
-  return new Bug(
-    content`The directory ${fileToken(directory)} doesn't have a ${fileToken(
-      `package.json`
-    )}.`,
-    {}
-  )
+  return new Bug(`The directory ${directory} doesn't have a package.json.`, {})
 }
 
 type AddDependencyOptions = {

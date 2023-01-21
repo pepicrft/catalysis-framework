@@ -1,14 +1,14 @@
-import { coreLogger } from '../node/logger.js'
 import { formatYellow, formatRed, formatBold } from '../node/terminal.js'
 import StackTracey from 'stacktracey'
 import { Abort, AbortSilent, Bug, BugSilent } from '../common/error.js'
-import { ErrorLogType, stringify } from '../common/logger.js'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import sourceMapSupport from 'source-map-support'
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
 sourceMapSupport.install()
+
+export type ErrorLogType = 'bug' | 'abort' | 'unhandled'
 
 /**
  * A function that handles the errors that bubble up to the CLI's root.
@@ -26,14 +26,14 @@ export async function errorHandler(error: Error): Promise<Error> {
 
   if (error instanceof Bug) {
     errorType = 'bug'
-    cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
+    cause = error?.options?.cause ? error?.options?.cause : undefined
   } else if (error instanceof BugSilent) {
     errorType = 'bug'
     shouldPrint = false
   } else if (error instanceof Abort) {
     errorType = 'abort'
-    cause = error?.options?.cause ? stringify(error?.options?.cause) : undefined
-    next = error?.options?.next ? stringify(error?.options?.next) : undefined
+    cause = error?.options?.cause ? error?.options?.cause : undefined
+    next = error?.options?.next ? error?.options?.next : undefined
   } else if (error instanceof AbortSilent) {
     errorType = 'abort'
     shouldPrint = false
@@ -71,16 +71,7 @@ export async function errorHandler(error: Error): Promise<Error> {
       message = `${message}${stackString}`
     }
   }
-
-  coreLogger().error({
-    type: errorType,
-    message: message,
-    error: {
-      message: error.message,
-      cause,
-      next,
-    },
-  })
+  // TODO: Output error
 
   return Promise.resolve(error)
 }

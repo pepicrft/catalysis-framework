@@ -1,4 +1,3 @@
-import { dbLogger } from '../../../../private/logger.js'
 import { projectFlags, globalFlags } from '@catalysisdev/core/node/command'
 import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
 
@@ -13,6 +12,7 @@ export default class Migrate extends Command {
 
   // eslint-disable-next-line @typescript-eslint/require-await
   async run(): Promise<void> {
-    dbLogger().success('Migrated')
+    // eslint-disable-next-line no-console
+    console.log('Migrated')
   }
 }

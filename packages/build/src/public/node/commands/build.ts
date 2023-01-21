@@ -1,4 +1,3 @@
-import { buildLogger } from '../../../private/node/logger.js'
 import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
 import { Command, Interfaces } from '@catalysisdev/core/node/oclif'
 
@@ -13,6 +12,7 @@ export default class Build extends Command {
 
   // eslint-disable-next-line @typescript-eslint/require-await
   async run(): Promise<void> {
-    buildLogger().success('Built')
+    // eslint-disable-next-line no-console
+    console.log('Built')
   }
 }

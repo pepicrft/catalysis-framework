@@ -1,4 +1,4 @@
-import ExtendableError from 'ts-error'
+import { ExtendableError } from './error.js'
 
 /**
  * A type that represents a promise whose value is a result type.

@@ -4,7 +4,7 @@
     "lib": ["ES2021"],
     "module": "ES2020",
     "target": "ES2021",
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "strict": true,
     "incremental": true,

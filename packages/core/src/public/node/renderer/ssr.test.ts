@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { ssr } from './ssr'
+import { ssr } from './ssr.js'
 
 describe('ssr', () => {
   test('content', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { hyphenCased, pascalCased, pluralized } from './string'
+import { hyphenCased, pascalCased, pluralized } from './string.js'
 
 describe('pascalCased', () => {
   test('returns the string pascal-cased', () => {

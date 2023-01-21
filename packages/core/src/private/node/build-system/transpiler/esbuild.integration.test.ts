@@ -1,6 +1,6 @@
 import { describe, beforeEach, test, expect } from 'vitest'
 import { ESBuildBaseTranspiler } from './esbuild.js'
-import { inTemporarydirectory } from '../../../../internal/node/testing/temporary'
+import { inTemporarydirectory } from '../../../../internal/node/testing/temporary.js'
 import { writeFile } from '../../../../public/node/fs.js'
 
 let subject: ESBuildBaseTranspiler

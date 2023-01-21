@@ -1,4 +1,3 @@
-import { createProjectLogger } from '../logger.js'
 import { hyphenCased } from '@catalysisdev/core/common/string'
 import { AbsolutePath } from '@catalysisdev/core/node/path'
 import {
@@ -9,13 +8,6 @@ import {
   writeFile,
 } from '@catalysisdev/core/node/fs'
 import { Abort } from '@catalysisdev/core/common/error'
-import {
-  chooseDirectoryToken,
-  commandToken,
-  content,
-  contentBox,
-  pathToken,
-} from '@catalysisdev/core/node/logger'
 import { getUsername } from '@catalysisdev/core/node/environment'
 import { initGitRepository, isGitAvailable } from '@catalysisdev/core/node/git'
 import { encodeJSON } from '@catalysisdev/core/common/json'
@@ -30,9 +22,7 @@ import { pnpmInstall } from '@catalysisdev/core/node/pnpm'
  * @returns {Abort} An abort error.
  */
 export const ProjectDirectoryExistsError = (directory: AbsolutePath) => {
-  return new Abort(
-    content`The directory ${pathToken(directory)} already exists.`
-  )
+  return new Abort(`The directory ${directory.pathString} already exists.`)
 }
 
 export type InitServiceOptions = {
@@ -84,19 +74,7 @@ export async function initService(options: InitServiceOptions) {
     stderr: process.stdout,
     stdout: process.stderr,
   })
-
-  createProjectLogger().info(
-    contentBox(
-      'success',
-      `The project ${options.name} has been initialized`,
-      content`· Choose the project directory with ${chooseDirectoryToken(
-        projectDirectory
-      )}\n· Run ${commandToken(`pnpm dev`)}\n· Run ${commandToken(
-        `pnpm info`
-      )} to familiarize with the commands`,
-      'Be creative ✨. We are the catalyst to make your ideas thrive.'
-    )
-  )
+  // TODO: Add log
 }
 
 /**
@@ -127,9 +105,6 @@ export async function initDirectories(directory: AbsolutePath) {
   ]
   for (const directoryName of directories) {
     const directoryPath = directory.pathAppendingComponent(directoryName)
-    createProjectLogger().debug(
-      `Creating directory: ${directoryPath.pathString}`
-    )
     const gitkeepPath = directoryPath.pathAppendingComponent('.gitkeep')
     await makeDirectory(directoryPath)
     await writeFile(gitkeepPath, '')

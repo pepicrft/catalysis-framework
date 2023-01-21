@@ -1,6 +1,6 @@
-import { Err, Ok } from './result'
+import { Err, Ok } from './result.js'
 import { describe, test, it, expect } from 'vitest'
-import { ExtendableError } from 'ts-error'
+import { ExtendableError } from './error.js'
 
 class TestError extends ExtendableError {}
 

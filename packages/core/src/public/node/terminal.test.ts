@@ -10,7 +10,7 @@ import {
   link,
   prompt,
   unstyled,
-} from './terminal'
+} from './terminal.js'
 import terminalLink from 'terminal-link'
 import { describe, test, expect, vi, it } from 'vitest'
 import pc from 'picocolors'

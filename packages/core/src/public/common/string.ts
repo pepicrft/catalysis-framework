@@ -7,6 +7,7 @@ import plur from 'plur'
  * @returns {string} Pascal-cased string
  */
 export function pascalCased(input: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return
   return pascalCase(input)
 }
 
@@ -19,6 +20,7 @@ export function pascalCased(input: string): string {
  *    hyphenCased("my app") === "my-app"
  */
 export function hyphenCased(input: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return
   return kebabCase(input)
 }
 
