@@ -1,19 +1,22 @@
-import { hyphenCased } from '@catalysisdev/core/common/string'
-import { AbsolutePath } from '@catalysisdev/core/node/path'
+import { hyphenCased } from '@catalysisdev/core/common/string.js'
+import { AbsolutePath } from '@catalysisdev/core/node/path.js'
 import {
   inTemporarydirectory,
   makeDirectory,
   moveFileOrDirectory,
   pathExists,
   writeFile,
-} from '@catalysisdev/core/node/fs'
-import { Abort } from '@catalysisdev/core/common/error'
-import { getUsername } from '@catalysisdev/core/node/environment'
-import { initGitRepository, isGitAvailable } from '@catalysisdev/core/node/git'
-import { encodeJSON } from '@catalysisdev/core/common/json'
+} from '@catalysisdev/core/node/fs.js'
+import { Abort } from '@catalysisdev/core/common/error.js'
+import { getUsername } from '@catalysisdev/core/node/environment.js'
+import {
+  initGitRepository,
+  isGitAvailable,
+} from '@catalysisdev/core/node/git.js'
+import { encodeJSON } from '@catalysisdev/core/common/json.js'
 import { getVersionForGeneratedProject } from '../utilities/versions.js'
 import { getLocalPackagesOverrides } from '../utilities/packages.js'
-import { pnpmInstall } from '@catalysisdev/core/node/pnpm'
+import { pnpmInstall } from '@catalysisdev/core/node/pnpm.js'
 
 /**
  * An abort error that's thrown when the user tries to create a project and the directory

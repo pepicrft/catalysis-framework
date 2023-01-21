@@ -1,5 +1,5 @@
-import { Project } from '@catalysisdev/core/node/project'
-import { encodeJSON } from '@catalysisdev/core/common/json'
+import { Project } from '@catalysisdev/core/node/project.js'
+import { encodeJSON } from '@catalysisdev/core/common/json.js'
 
 type FormatJsonOptions = {
   project: Project

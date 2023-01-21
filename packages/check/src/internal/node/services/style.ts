@@ -1,6 +1,6 @@
-import { Abort } from '@catalysisdev/core/common/error'
-import { runESLint } from '@catalysisdev/core/node/eslint'
-import { Project } from '@catalysisdev/core/node/project'
+import { Abort } from '@catalysisdev/core/common/error.js'
+import { runESLint } from '@catalysisdev/core/node/eslint.js'
+import { Project } from '@catalysisdev/core/node/project.js'
 
 export type LintOptions = {
   fix: boolean

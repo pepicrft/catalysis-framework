@@ -1,6 +1,6 @@
-import { Project } from '@catalysisdev/core/node/project'
-import { relativizePath } from '@catalysisdev/core/node/path'
-import { formatGreen, formatBold } from '@catalysisdev/core/node/terminal'
+import { Project } from '@catalysisdev/core/node/project.js'
+import { relativizePath } from '@catalysisdev/core/node/path.js'
+import { formatGreen, formatBold } from '@catalysisdev/core/node/terminal.js'
 
 type PrettyFormatOptions = {
   project: Project

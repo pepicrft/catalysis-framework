@@ -1,12 +1,12 @@
-import { findPathUp } from '@catalysisdev/core/node/fs'
-import { decodeJSONFile } from '@catalysisdev/core/node/json'
+import { findPathUp } from '@catalysisdev/core/node/fs.js'
+import { decodeJSONFile } from '@catalysisdev/core/node/json.js'
 import {
   absolutePath,
   glob,
   joinPath,
   moduleDirname,
   parentDirectory,
-} from '@catalysisdev/core/node/path'
+} from '@catalysisdev/core/node/path.js'
 
 /**
  * When contributing to the Catalysis project, it might be useful to generate projects

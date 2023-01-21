@@ -1,8 +1,8 @@
-import { loadProject } from '@catalysisdev/core/node/project'
+import { loadProject } from '@catalysisdev/core/node/project.js'
 import { checkCode } from '../../../../internal/node/services/code.js'
-import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
-import { absolutePath } from '@catalysisdev/core/node/path'
-import { Command, Interfaces } from '@catalysisdev/core/node/oclif'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command.js'
+import { absolutePath } from '@catalysisdev/core/node/path.js'
+import { Command, Interfaces } from '@catalysisdev/core/node/oclif.js'
 
 // eslint-disable-next-line import/no-default-export
 export default class Code extends Command {

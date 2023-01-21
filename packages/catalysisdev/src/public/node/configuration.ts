@@ -1,4 +1,4 @@
-import { UserConfiguration } from '@catalysisdev/core/common/manifests'
+import { UserConfiguration } from '@catalysisdev/core/common/manifests.js'
 
 type UserConfigurationExport =
   | UserConfiguration

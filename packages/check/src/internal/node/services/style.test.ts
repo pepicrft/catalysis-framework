@@ -1,8 +1,8 @@
 import { describe, test, expect, vi } from 'vitest'
 import { checkStyle } from './style.js'
 import type { LintOptions } from './style.js'
-import { runESLint } from '@catalysisdev/core/node/eslint'
-import { testProject } from '@catalysisdev/core/internal/node/testing/fixtures'
+import { runESLint } from '@catalysisdev/core/node/eslint.js'
+import { testProject } from '@catalysisdev/core/internal/node/testing/fixtures.js'
 
 vi.mock('@catalysisdev/core/node/eslint')
 

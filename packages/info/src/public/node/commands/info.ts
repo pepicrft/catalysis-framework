@@ -1,9 +1,9 @@
-import { loadProject } from '@catalysisdev/core/node/project'
+import { loadProject } from '@catalysisdev/core/node/project.js'
 import { formatJson } from '../../../private/node/formatters/json.js'
 import { prettyFormat } from '../../../private/node/formatters/pretty.js'
-import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
-import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
-import { absolutePath } from '@catalysisdev/core/node/path'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command.js'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif.js'
+import { absolutePath } from '@catalysisdev/core/node/path.js'
 
 // eslint-disable-next-line import/no-default-export
 export default class Info extends Command {

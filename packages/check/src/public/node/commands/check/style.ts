@@ -1,9 +1,9 @@
-import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
-import { loadProject } from '@catalysisdev/core/node/project'
-import { globalFlags, projectFlags } from '@catalysisdev/core/node/command'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif.js'
+import { loadProject } from '@catalysisdev/core/node/project.js'
+import { globalFlags, projectFlags } from '@catalysisdev/core/node/command.js'
 
 import { checkStyle } from '../../../../internal/node/services/style.js'
-import { absolutePath } from '@catalysisdev/core/node/path'
+import { absolutePath } from '@catalysisdev/core/node/path.js'
 
 // eslint-disable-next-line import/no-default-export
 export default class Style extends Command {

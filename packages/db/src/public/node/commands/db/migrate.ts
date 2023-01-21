@@ -1,5 +1,5 @@
-import { projectFlags, globalFlags } from '@catalysisdev/core/node/command'
-import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
+import { projectFlags, globalFlags } from '@catalysisdev/core/node/command.js'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif.js'
 
 // eslint-disable-next-line import/no-default-export
 export default class Migrate extends Command {

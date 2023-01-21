@@ -1,6 +1,6 @@
-import { Abort } from '@catalysisdev/core/common/error'
-import { AbsolutePath } from '@catalysisdev/core/node/path'
-import { runTypescriptCompiler } from '@catalysisdev/core/node/tsc'
+import { Abort } from '@catalysisdev/core/common/error.js'
+import { AbsolutePath } from '@catalysisdev/core/node/path.js'
+import { runTypescriptCompiler } from '@catalysisdev/core/node/tsc.js'
 
 export async function checkCode(directory: AbsolutePath) {
   try {

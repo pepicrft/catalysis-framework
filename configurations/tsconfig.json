@@ -19,10 +19,10 @@
     "sourceMap": true,
     "composite": true,
     "paths": {
-      "catalysisdev/*": ["../packages/catalysisdev/src/node/manifests/*.ts"],
-      "@catalysisdev/core/internal/*": ["../packages/core/src/internal/*.ts"],
-      "@catalysisdev/core/*": ["../packages/core/src/public/*.ts"],
-      "@catalysisdev/kit/*": ["../packages/kit/src/public/*.ts"],
+      "catalysisdev/*": ["../packages/catalysisdev/src/node/manifests/*"],
+      "@catalysisdev/core/internal/*": ["../packages/core/src/internal/*"],
+      "@catalysisdev/core/*": ["../packages/core/src/public/*"],
+      "@catalysisdev/kit/*": ["../packages/kit/src/public/*"],
     }
   },
   "exclude": ["dist/**", "node_modules"]

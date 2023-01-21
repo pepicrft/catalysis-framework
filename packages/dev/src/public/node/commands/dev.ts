@@ -1,8 +1,8 @@
-import { loadProject } from '@catalysisdev/core/node/project'
+import { loadProject } from '@catalysisdev/core/node/project.js'
 import { devProject } from '../../../private/node/services/dev.js'
-import { projectFlags, globalFlags } from '@catalysisdev/core/node/command'
-import { Command, Interfaces } from '@catalysisdev/core/node/oclif'
-import { absolutePath } from '@catalysisdev/core/node/path'
+import { projectFlags, globalFlags } from '@catalysisdev/core/node/command.js'
+import { Command, Interfaces } from '@catalysisdev/core/node/oclif.js'
+import { absolutePath } from '@catalysisdev/core/node/path.js'
 
 // eslint-disable-next-line import/no-default-export
 export default class Dev extends Command {

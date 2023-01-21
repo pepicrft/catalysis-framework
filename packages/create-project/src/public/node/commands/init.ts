@@ -1,6 +1,6 @@
-import { globalFlags } from '@catalysisdev/core/node/command'
-import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif'
-import { absolutePath, resolvePath } from '@catalysisdev/core/node/path'
+import { globalFlags } from '@catalysisdev/core/node/command.js'
+import { Command, Flags, Interfaces } from '@catalysisdev/core/node/oclif.js'
+import { absolutePath, resolvePath } from '@catalysisdev/core/node/path.js'
 import { initPrompt } from '../../../private/node/prompts/init.js'
 import { initService } from '../../../private/node/services/init.js'
 

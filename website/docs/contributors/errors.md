@@ -47,7 +47,7 @@ export function getBearerToken(): Result<string, TokenNotFoundError> {
 There are scenarios where a failing operation can't be handled or recovered by the caller. In those cases, it's more sensible to abort the execution. We use Javascript throws, but errors that subclass from the `Abort` and `Bug` classes exported by the `@catalysisdev/common/error` module. Abort errors cause the execution termination due to an unexpected condition on which the user must take action. Bug errors also cause the termination of the execution. Still, in this case, the error represents a bug that will be reported to the error tracking platform. Below are some examples of how to use the errors. Note how abort errors require including the cause of the error and the next steps that users should take:
 
 ```ts
-import { Abort } from '@catalysisdev/core/common/error'
+import { Abort } from '@catalysisdev/core/common/error.js'
 
 // Abort error
 

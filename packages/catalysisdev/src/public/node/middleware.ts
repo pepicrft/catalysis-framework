@@ -1,9 +1,9 @@
-export { Request, Response } from '@catalysisdev/core/common/fetch'
+export { Request, Response } from '@catalysisdev/core/common/fetch.js'
 export {
   MiddlewareInput,
   MiddlewareOutput,
-} from '@catalysisdev/core/common/middleware'
-import { Middleware } from '@catalysisdev/core/common/middleware'
+} from '@catalysisdev/core/common/middleware.js'
+import { Middleware } from '@catalysisdev/core/common/middleware.js'
 
 /**
  * A utility function to define a middleware. Since the function has its argument and

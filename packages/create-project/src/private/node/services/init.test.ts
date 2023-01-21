@@ -1,5 +1,5 @@
-import { absolutePath } from '@catalysisdev/core/node/path'
-import { unstyled } from '@catalysisdev/core/node/terminal'
+import { absolutePath } from '@catalysisdev/core/node/path.js'
+import { unstyled } from '@catalysisdev/core/node/terminal.js'
 import { test, describe, expect } from 'vitest'
 import { ProjectDirectoryExistsError } from './init.js'
 

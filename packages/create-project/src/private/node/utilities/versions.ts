@@ -1,6 +1,6 @@
-import { findPathUp } from '@catalysisdev/core/node/fs'
-import { decodeJSONFile } from '@catalysisdev/core/node/json'
-import { absolutePath, moduleDirname } from '@catalysisdev/core/node/path'
+import { findPathUp } from '@catalysisdev/core/node/fs.js'
+import { decodeJSONFile } from '@catalysisdev/core/node/json.js'
+import { absolutePath, moduleDirname } from '@catalysisdev/core/node/path.js'
 
 /**
  * It returns the version of the catalysisdev dependency that should be use.

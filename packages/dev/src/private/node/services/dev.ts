@@ -1,4 +1,4 @@
-import { Project } from '@catalysisdev/core/node/project'
+import { Project } from '@catalysisdev/core/node/project.js'
 import { createApp } from 'h3'
 
 type DevProjectOutput = {

@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from 'vitest'
 import { initPrompt, InitPromptFlags } from './init.js'
-import { prompt } from '@catalysisdev/core/node/terminal'
+import { prompt } from '@catalysisdev/core/node/terminal.js'
 
 vi.mock('@catalysisdev/core/node/terminal')
 

@@ -1,4 +1,4 @@
-import { Project } from '@catalysisdev/core/node/project'
+import { Project } from '@catalysisdev/core/node/project.js'
 
 export const GENERATE_MIDDLEWARE_LANGUAGES = ['javascript', 'typescript']
 export type GenerateMiddlewareLanguage =

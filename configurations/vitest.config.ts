@@ -10,12 +10,12 @@ export default function config() {
           find: new RegExp('^@catalysisdev/core/internal/(.+)$'),
           replacement: pathJoin(
             __dirname,
-            '../packages/core/src/internal/$1.ts'
+            '../packages/core/src/internal/$1'
           ),
         },
         {
           find: new RegExp('^@catalysisdev/core/(.+)$'),
-          replacement: pathJoin(__dirname, '../packages/core/src/public/$1.ts'),
+          replacement: pathJoin(__dirname, '../packages/core/src/public/$1'),
         },
         {
           find: new RegExp('^(\./.+\).js$'),
