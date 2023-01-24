@@ -43,7 +43,7 @@
   "dependencies": {
     "@oclif/core": "1.23.2",
     "@remix-run/web-fetch": "^4.2.0",
-    "acorn": "8.8.1",
+    "acorn": "8.8.2",
     "case-anything": "2.1.10",
     "commondir": "1.0.1",
     "esbuild": "0.16.16",
