@@ -121,7 +121,7 @@ importers:
       '@catalysisdev/info': 0.8.0
       '@catalysisdev/routes': 0.8.0
       '@catalysisdev/test': 0.8.0
-      '@oclif/plugin-help': 5.1.22
+      '@oclif/plugin-help': 5.2.1
     dependencies:
       '@catalysisdev/build': link:../build
       '@catalysisdev/check': link:../check
@@ -132,7 +132,7 @@ importers:
       '@catalysisdev/info': link:../info
       '@catalysisdev/routes': link:../routes
       '@catalysisdev/test': link:../test
-      '@oclif/plugin-help': 5.1.22
+      '@oclif/plugin-help': 5.2.1
 
   packages/check:
     specifiers:
@@ -3611,40 +3611,6 @@ packages:
       - typescript
     dev: true
 
-  /@oclif/core/1.23.2:
-    resolution: {integrity: sha512-NdaOaUDTRc6g1yTkOAKiEVOiQhc5CNcWNXa0QF4IS4yTjNqp4DOzgtF9Dwe585nPEKzSbTBiz1wyLOa4qIHSRQ==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@oclif/linewrap': 1.0.0
-      '@oclif/screen': 3.0.4
-      ansi-escapes: 4.3.2
-      ansi-styles: 4.3.0
-      cardinal: 2.1.1
-      chalk: 4.1.2
-      clean-stack: 3.0.1
-      cli-progress: 3.10.0
-      debug: 4.3.4_supports-color@8.1.1
-      ejs: 3.1.8
-      fs-extra: 9.1.0
-      get-package-type: 0.1.0
-      globby: 11.1.0
-      hyperlinker: 1.0.0
-      indent-string: 4.0.0
-      is-wsl: 2.2.0
-      js-yaml: 3.14.1
-      natural-orderby: 2.0.3
-      object-treeify: 1.1.33
-      password-prompt: 1.1.2
-      semver: 7.3.8
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      supports-color: 8.1.1
-      supports-hyperlinks: 2.3.0
-      tslib: 2.4.1
-      widest-line: 3.1.0
-      wrap-ansi: 7.0.0
-    dev: false
-
   /@oclif/core/1.26.1:
     resolution: {integrity: sha512-g+OWJcM7JOVI53caTEtq0BB1nPotWctRLUyFODPgvDqXhVR7QED+Qz3LwFAMD8dt7/Ar2ZNq15U3bnpnOv453A==}
     engines: {node: '>=14.0.0'}
@@ -3679,15 +3645,49 @@ packages:
       wrap-ansi: 7.0.0
     dev: false
 
+  /@oclif/core/2.0.3:
+    resolution: {integrity: sha512-Dr6tghg32KKEivcWYqrx9bgC8FDE4i47FLR1wjnLg3jNJWf+blTYorj6aHize2WF0wiwkvB28Cr5TUNBooB4AQ==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@types/cli-progress': 3.11.0
+      ansi-escapes: 4.3.2
+      ansi-styles: 4.3.0
+      cardinal: 2.1.1
+      chalk: 4.1.2
+      clean-stack: 3.0.1
+      cli-progress: 3.10.0
+      debug: 4.3.4_supports-color@8.1.1
+      ejs: 3.1.8
+      fs-extra: 9.1.0
+      get-package-type: 0.1.0
+      globby: 11.1.0
+      hyperlinker: 1.0.0
+      indent-string: 4.0.0
+      is-wsl: 2.2.0
+      js-yaml: 3.14.1
+      natural-orderby: 2.0.3
+      object-treeify: 1.1.33
+      password-prompt: 1.1.2
+      semver: 7.3.8
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      supports-color: 8.1.1
+      supports-hyperlinks: 2.3.0
+      tslib: 2.4.1
+      widest-line: 3.1.0
+      wordwrap: 1.0.0
+      wrap-ansi: 7.0.0
+    dev: false
+
   /@oclif/linewrap/1.0.0:
     resolution: {integrity: sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==}
     dev: false
 
-  /@oclif/plugin-help/5.1.22:
-    resolution: {integrity: sha512-gflrCqV3c7nd1UgknuZZTX6Th9CTkvVyTjL76UNHrea3kCZEpPzsMGhwP989R+j3KSGJGeZVrq2i9g2QXI9tZA==}
+  /@oclif/plugin-help/5.2.1:
+    resolution: {integrity: sha512-6z/ZholfRZ/k6XonAzV6p34A7LAhr2r2JUOlaCF2ZMrF6LjMN21dWXVK0Sxra+TQqZEm0B2oeSbTmHFtDkbIlw==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 1.23.2
+      '@oclif/core': 2.0.3
     dev: false
 
   /@oclif/screen/3.0.4:
@@ -4023,6 +4023,12 @@ packages:
   /@types/chai/4.3.4:
     resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
+
+  /@types/cli-progress/3.11.0:
+    resolution: {integrity: sha512-XhXhBv1R/q2ahF3BM7qT5HLzJNlIL0wbcGyZVjqOTqAybAnsLisd7gy1UCyIqpL+5Iv6XhlSyzjLCnI2sIdbCg==}
+    dependencies:
+      '@types/node': 18.11.18
+    dev: false
 
   /@types/connect-history-api-fallback/1.3.5:
     resolution: {integrity: sha512-h8QJa8xSb1WD4fpKBDcATDNGXghFj6/3GRWG6dhmRcu0RX1Ubasur2Uvx5aeEwlf0MwblEC2bMzzMQntxnw/Cw==}
