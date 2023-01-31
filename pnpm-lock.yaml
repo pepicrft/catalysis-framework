@@ -234,11 +234,11 @@ importers:
   packages/dev:
     specifiers:
       '@catalysisdev/core': 0.8.0
-      h3: 1.0.2
+      h3: 1.1.0
       listhen: 1.0.2
     dependencies:
       '@catalysisdev/core': link:../core
-      h3: 1.0.2
+      h3: 1.1.0
       listhen: 1.0.2
 
   packages/eslint-plugin:
@@ -8392,8 +8392,8 @@ packages:
       duplexer: 0.1.2
     dev: false
 
-  /h3/1.0.2:
-    resolution: {integrity: sha512-25QqjQMz8pX1NI2rZ/ziNT9B8Aog7jmu2a0o8Qm9kKoH3zOhE+2icVs069h6DEp0g1Dst1+zKfRdRYcK0MogJA==}
+  /h3/1.1.0:
+    resolution: {integrity: sha512-kx3u+RMzY963fU8NNT2ePWgsryAn9DNztPqbHia/M7HgA+rtXKjHjED9/uidcYPmImNwAfJsCachCzh2T3QH2A==}
     dependencies:
       cookie-es: 0.5.0
       destr: 1.2.2
