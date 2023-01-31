@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "h3": "1.0.2",
+    "h3": "1.1.0",
     "listhen": "1.0.2",
     "@catalysisdev/core": "0.8.0"
   },
