@@ -32,7 +32,7 @@ importers:
       fs-extra: 11.1.0
       install: 0.13.0
       nx: 15.4.5
-      pathe: 1.0.0
+      pathe: 1.1.0
       prettier: 2.8.3
       recursive-copy-cli: ^1.0.20
       rimraf: 4.0.4
@@ -72,7 +72,7 @@ importers:
       fs-extra: 11.1.0
       install: 0.13.0
       nx: 15.4.5
-      pathe: 1.0.0
+      pathe: 1.1.0
       prettier: 2.8.3
       recursive-copy-cli: 1.0.20
       rimraf: 4.0.4
@@ -162,7 +162,7 @@ importers:
       ohmyfetch: 0.4.21
       parse-json: 6.0.2
       path-equal: 1.2.5
-      pathe: 1.0.0
+      pathe: 1.1.0
       picocolors: 1.0.0
       plur: 5.1.0
       radix3: 1.0.0
@@ -198,7 +198,7 @@ importers:
       ohmyfetch: 0.4.21
       parse-json: 6.0.2
       path-equal: 1.2.5
-      pathe: 1.0.0
+      pathe: 1.1.0
       picocolors: 1.0.0
       plur: 5.1.0
       radix3: 1.0.0
@@ -9865,7 +9865,7 @@ packages:
     resolution: {integrity: sha512-QL108Hwt+u9bXdWgOI0dhzZfACovn5Aen4Xvc8Jasd9ouRH4NjnrXEiyP3nVvJo91zPlYjVRckta0Nt2zfoR6g==}
     dependencies:
       acorn: 8.8.2
-      pathe: 1.0.0
+      pathe: 1.1.0
       pkg-types: 1.0.1
       ufo: 1.0.1
     dev: true
@@ -10503,8 +10503,8 @@ packages:
     resolution: {integrity: sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==}
     dev: true
 
-  /pathe/1.0.0:
-    resolution: {integrity: sha512-nPdMG0Pd09HuSsr7QOKUXO2Jr9eqaDiZvDwdyIhNG5SHYujkQHYKDfGQkulBxvbDHz8oHLsTgKN86LSwYzSHAg==}
+  /pathe/1.1.0:
+    resolution: {integrity: sha512-ODbEPR0KKHqECXW1GoxdDb+AZvULmXjVPy4rt+pGo2+TnjJTIPJQSVS6N63n8T2Ip+syHhbn52OewKicV0373w==}
 
   /pathval/1.1.1:
     resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==}
@@ -10545,7 +10545,7 @@ packages:
     dependencies:
       jsonc-parser: 3.2.0
       mlly: 1.0.0
-      pathe: 1.0.0
+      pathe: 1.1.0
     dev: true
 
   /pkg-up/3.1.0:
@@ -13184,7 +13184,7 @@ packages:
   /typed-file-system-path/0.12.0:
     resolution: {integrity: sha512-sl9layN3zWXkURaKHqB9VCiRZKBnNe7MxAd62wp91Djofm+FzrrH8bdsy6LaqfoxPlfG8rmot/RCkHrYoVSpqg==}
     dependencies:
-      pathe: 1.0.0
+      pathe: 1.1.0
       shx: 0.3.4
       ts-error: 1.0.6
     dev: false
