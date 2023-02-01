@@ -33,7 +33,7 @@
     "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
-    "typescript": "4.9.4"
+    "typescript": "4.9.5"
   },
   "engine-strict": true,
   "engines": {
