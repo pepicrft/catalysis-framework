@@ -234,11 +234,11 @@ importers:
   packages/dev:
     specifiers:
       '@catalysisdev/core': 0.8.0
-      h3: 1.1.0
+      h3: 1.2.1
       listhen: 1.0.2
     dependencies:
       '@catalysisdev/core': link:../core
-      h3: 1.1.0
+      h3: 1.2.1
       listhen: 1.0.2
 
   packages/eslint-plugin:
@@ -8439,13 +8439,14 @@ packages:
       duplexer: 0.1.2
     dev: false
 
-  /h3/1.1.0:
-    resolution: {integrity: sha512-kx3u+RMzY963fU8NNT2ePWgsryAn9DNztPqbHia/M7HgA+rtXKjHjED9/uidcYPmImNwAfJsCachCzh2T3QH2A==}
+  /h3/1.2.1:
+    resolution: {integrity: sha512-uYRENV7pNd4kl4nGFDkVOZRZgDVmH4Ur4h64QAsqPsHj1jxI6MAU+7xT0JX9Tg3iKbmgMPpRf8QI6e4CJZ12MQ==}
     dependencies:
       cookie-es: 0.5.0
       destr: 1.2.2
       radix3: 1.0.0
       ufo: 1.0.1
+      uncrypto: 0.1.2
     dev: false
 
   /handle-thing/2.0.1:
@@ -13299,6 +13300,10 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+
+  /uncrypto/0.1.2:
+    resolution: {integrity: sha512-kuZwRKV615lEw/Xx3Iz56FKk3nOeOVGaVmw0eg+x4Mne28lCotNFbBhDW7dEBCBKyKbRQiCadEZeNAFPVC5cgw==}
+    dev: false
 
   /undici/5.12.0:
     resolution: {integrity: sha512-zMLamCG62PGjd9HHMpo05bSLvvwWOZgGeiWlN/vlqu3+lRo3elxktVGEyLMX+IO7c2eflLjcW74AlkhEZm15mg==}
