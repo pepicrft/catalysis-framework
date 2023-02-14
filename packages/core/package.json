@@ -74,7 +74,7 @@
     "username": "6.0.0",
     "vite": "4.1.1",
     "yargs": "17.6.2",
-    "zod": "3.20.2"
+    "zod": "3.20.6"
   },
   "devDependencies": {
     "@types/inquirer": "9.0.3",
