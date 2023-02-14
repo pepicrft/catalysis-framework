@@ -157,7 +157,7 @@ importers:
       handlebars: 4.7.7
       inquirer: 9.1.4
       listr2: 5.0.7
-      magic-string: 0.27.0
+      magic-string: 0.29.0
       noop-stream: 1.0.0
       ohmyfetch: 0.4.21
       parse-json: 6.0.2
@@ -193,7 +193,7 @@ importers:
       handlebars: 4.7.7
       inquirer: 9.1.4
       listr2: 5.0.7
-      magic-string: 0.27.0
+      magic-string: 0.29.0
       noop-stream: 1.0.0
       ohmyfetch: 0.4.21
       parse-json: 6.0.2
@@ -9627,8 +9627,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /magic-string/0.27.0:
-    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+  /magic-string/0.29.0:
+    resolution: {integrity: sha512-WcfidHrDjMY+eLjlU+8OvwREqHwpgCeKVBUpQ3OhYYuvfaYCUgcbuBzappNzZvg/v8onU3oQj+BYpkOJe9Iw4Q==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
