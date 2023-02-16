@@ -174,7 +174,7 @@ importers:
       tempy: 3.0.0
       terminal-link: 3.0.0
       typed-file-system-path: 0.12.0
-      unplugin: 1.0.1
+      unplugin: 1.1.0
       username: 6.0.0
       vite: 4.1.1
       yargs: 17.6.2
@@ -209,7 +209,7 @@ importers:
       tempy: 3.0.0
       terminal-link: 3.0.0
       typed-file-system-path: 0.12.0
-      unplugin: 1.0.1
+      unplugin: 1.1.0
       username: 6.0.0
       vite: 4.1.1
       yargs: 17.6.2
@@ -13113,8 +13113,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /unplugin/1.0.1:
-    resolution: {integrity: sha512-aqrHaVBWW1JVKBHmGo33T5TxeL0qWzfvjWokObHA9bYmN7eNDkwOxmLjhioHl9878qDFMAaT51XNroRyuz7WxA==}
+  /unplugin/1.1.0:
+    resolution: {integrity: sha512-I8obQ8Rs/hnkxokRV6g8JKOQFgYNnTd9DL58vcSt5IJ9AkK8wbrtsnzD5hi4BJlvcY536JzfEXj9L6h7j559/A==}
     dependencies:
       acorn: 8.8.2
       chokidar: 3.5.3
