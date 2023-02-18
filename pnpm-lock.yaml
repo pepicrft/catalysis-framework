@@ -142,7 +142,7 @@ importers:
 
   packages/core:
     specifiers:
-      '@oclif/core': 1.26.1
+      '@oclif/core': 1.26.2
       '@remix-run/web-fetch': ^4.2.0
       '@types/inquirer': 9.0.3
       '@types/yargs': 17.0.22
@@ -180,7 +180,7 @@ importers:
       yargs: 17.6.2
       zod: 3.20.6
     dependencies:
-      '@oclif/core': 1.26.1
+      '@oclif/core': 1.26.2
       '@remix-run/web-fetch': 4.2.0
       acorn: 8.8.2
       case-anything: 2.1.10
@@ -3882,8 +3882,8 @@ packages:
       - typescript
     dev: true
 
-  /@oclif/core/1.26.1:
-    resolution: {integrity: sha512-g+OWJcM7JOVI53caTEtq0BB1nPotWctRLUyFODPgvDqXhVR7QED+Qz3LwFAMD8dt7/Ar2ZNq15U3bnpnOv453A==}
+  /@oclif/core/1.26.2:
+    resolution: {integrity: sha512-6jYuZgXvHfOIc9GIaS4T3CIKGTjPmfAxuMcbCbMRKJJl4aq/4xeRlEz0E8/hz8HxvxZBGvN2GwAUHlrGWQVrVw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@oclif/linewrap': 1.0.0
@@ -3964,6 +3964,7 @@ packages:
   /@oclif/screen/3.0.4:
     resolution: {integrity: sha512-IMsTN1dXEXaOSre27j/ywGbBjrzx0FNd1XmuhCWCB9NTPrhWI1Ifbz+YLSEcstfQfocYsrbrIessxXb2oon4lA==}
     engines: {node: '>=12.0.0'}
+    deprecated: Deprecated in favor of @oclif/core
     dev: false
 
   /@parcel/watcher/2.0.4:
