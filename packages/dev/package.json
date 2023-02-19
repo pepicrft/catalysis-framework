@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "h3": "1.4.0",
-    "listhen": "1.0.2",
+    "listhen": "1.0.3",
     "@catalysisdev/core": "0.8.0"
   },
   "oclif": {
