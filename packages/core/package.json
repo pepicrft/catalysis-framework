@@ -73,7 +73,7 @@
     "unplugin": "1.1.0",
     "username": "6.0.0",
     "vite": "4.1.4",
-    "yargs": "17.6.2",
+    "yargs": "17.7.1",
     "zod": "3.20.6"
   },
   "devDependencies": {
