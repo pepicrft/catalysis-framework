@@ -121,7 +121,7 @@ importers:
       '@catalysisdev/info': 0.8.0
       '@catalysisdev/routes': 0.8.0
       '@catalysisdev/test': 0.8.0
-      '@oclif/plugin-help': 5.2.5
+      '@oclif/plugin-help': 5.2.6
     dependencies:
       '@catalysisdev/build': link:../build
       '@catalysisdev/check': link:../check
@@ -132,7 +132,7 @@ importers:
       '@catalysisdev/info': link:../info
       '@catalysisdev/routes': link:../routes
       '@catalysisdev/test': link:../test
-      '@oclif/plugin-help': 5.2.5
+      '@oclif/plugin-help': 5.2.6
 
   packages/check:
     specifiers:
@@ -4768,7 +4768,7 @@ packages:
       ignore: 5.2.0
       nx: 15.7.2
       semver: 7.3.4
-      tslib: 2.4.1
+      tslib: 2.5.0
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -4785,7 +4785,7 @@ packages:
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.9.5
       eslint: 8.34.0
       tmp: 0.2.1
-      tslib: 2.4.1
+      tslib: 2.5.0
     transitivePeerDependencies:
       - nx
       - typescript
@@ -4956,8 +4956,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: false
 
-  /@oclif/core/2.1.7:
-    resolution: {integrity: sha512-6QZvUmKHLqrESIW4mu8azE0sQ7I9LVC3iM9O4ipp53Pqe5pQhIyxv8tB/zvagmPxJXXiCbfPsBazeqjCcM3/tg==}
+  /@oclif/core/2.3.1:
+    resolution: {integrity: sha512-18CkjjF16hwhBd/42z+0CHAwvZlBfpyCmdZxpasN/od8c/hdm0oDEJvVB33/xD0LDYg8glKoQ5zVNVvPM/uJ/Q==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@types/cli-progress': 3.11.0
@@ -4994,11 +4994,11 @@ packages:
     resolution: {integrity: sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==}
     dev: false
 
-  /@oclif/plugin-help/5.2.5:
-    resolution: {integrity: sha512-iIN6PNtGrqAH1j+FP5X4aNu24+4BlwbXueFSO7/lM/DDrin42hXoxMlnSNZcrQjFE3myznn+fOu3zlcedV2Y8Q==}
+  /@oclif/plugin-help/5.2.6:
+    resolution: {integrity: sha512-nvpSbIOGtPIct3+OqXca3OIu5liyIynascncAXZy4JDD7z8rIGZ3NYJH2M4JhMVyGxCDZxQuLVsdALyIt67G5g==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 2.1.7
+      '@oclif/core': 2.3.1
     dev: false
 
   /@oclif/screen/3.0.4:
@@ -6118,7 +6118,7 @@ packages:
     engines: {node: '>=14.15.0'}
     dependencies:
       js-yaml: 3.14.1
-      tslib: 2.4.1
+      tslib: 2.5.0
     dev: true
 
   /@zkochan/js-yaml/0.0.6:
