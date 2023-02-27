@@ -29,7 +29,7 @@
     "@nrwl/workspace": "15.7.2",
     "@shopify/prettier-config": "1.1.2",
     "@types/fs-extra": "11.0.1",
-    "@types/node": "18.14.1",
+    "@types/node": "18.14.2",
     "@types/rimraf": "3.0.2",
     "@types/tmp": "0.2.3",
     "@typescript-eslint/eslint-plugin": "5.52.0",
