@@ -9,7 +9,7 @@
     "clean": "nx clean"
   },
   "dependencies": {
-    "@algolia/client-search": "4.14.3",
+    "@algolia/client-search": "4.15.0",
     "@docusaurus/core": "2.3.1",
     "@docusaurus/preset-classic": "2.3.1",
     "@mdx-js/react": "1.6.22",
