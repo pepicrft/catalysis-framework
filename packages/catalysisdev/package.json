@@ -65,7 +65,7 @@
     "@catalysisdev/info": "0.8.0",
     "@catalysisdev/routes": "0.8.0",
     "@catalysisdev/core": "0.8.0",
-    "@oclif/plugin-help": "5.2.6"
+    "@oclif/plugin-help": "5.2.7"
   },
   "engine-strict": true,
   "engines": {
