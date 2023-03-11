@@ -79,7 +79,7 @@
   "devDependencies": {
     "@types/inquirer": "9.0.3",
     "@types/yargs": "17.0.22",
-    "rimraf": "4.1.2"
+    "rimraf": "4.4.0"
   },
   "engine-strict": true,
   "engines": {
