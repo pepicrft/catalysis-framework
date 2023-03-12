@@ -53,7 +53,7 @@
     "fs-extra": "11.1.0",
     "handlebars": "4.7.7",
     "inquirer": "9.1.4",
-    "listr2": "5.0.7",
+    "listr2": "5.0.8",
     "magic-string": "0.30.0",
     "noop-stream": "1.0.0",
     "ohmyfetch": "0.4.21",
