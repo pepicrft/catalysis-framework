@@ -234,11 +234,11 @@ importers:
   packages/dev:
     specifiers:
       '@catalysisdev/core': 0.8.0
-      h3: 1.5.0
+      h3: 1.6.2
       listhen: 1.0.4
     dependencies:
       '@catalysisdev/core': link:../core
-      h3: 1.5.0
+      h3: 1.6.2
       listhen: 1.0.4
 
   packages/eslint-plugin:
@@ -9541,15 +9541,15 @@ packages:
       duplexer: 0.1.2
     dev: false
 
-  /h3/1.5.0:
-    resolution: {integrity: sha512-M+T6P4iOB0ipkC/ZCdw2w8iTF7yY6phmkILOwlrtcPuVv+KW9BilOspYlvnblpKx1nnNl+3iBsZIvZ8pvKM8Nw==}
+  /h3/1.6.2:
+    resolution: {integrity: sha512-1v/clj/qCzWbuiG+DbpViuOVO789sEYNjlwRjekkmyLGsezIJk30gazbnjcWvF8L/ffUdRz2SwxE5HNgNx+Yjg==}
     dependencies:
       cookie-es: 0.5.0
       defu: 6.1.2
       destr: 1.2.2
-      iron-webcrypto: 0.5.0
+      iron-webcrypto: 0.6.0
       radix3: 1.0.0
-      ufo: 1.1.0
+      ufo: 1.1.1
       uncrypto: 0.1.2
     dev: false
 
@@ -10015,8 +10015,8 @@ packages:
     engines: {node: '>= 10'}
     dev: false
 
-  /iron-webcrypto/0.5.0:
-    resolution: {integrity: sha512-9m0tDUIo+GPwDYi1CNlAW3ToIFTS9y88lf41KsEwbBsL4PKNjhrNDGoA0WlB6WWaJ6pgp+FOP1+6ls0YftivyA==}
+  /iron-webcrypto/0.6.0:
+    resolution: {integrity: sha512-WYgEQttulX/+JTv1BTJFYY3OsAb+ZnCuA53IjppZMyiRsVdGeEuZ/k4fJrg77Rzn0pp9/PgWtXUF+5HndDA5SQ==}
     dev: false
 
   /irregular-plurals/3.3.0:
@@ -14132,10 +14132,6 @@ packages:
 
   /ufo/0.8.6:
     resolution: {integrity: sha512-fk6CmUgwKCfX79EzcDQQpSCMxrHstvbLswFChHS0Vump+kFkw7nJBfTZoC1j0bOGoY9I7R3n2DGek5ajbcYnOw==}
-    dev: false
-
-  /ufo/1.1.0:
-    resolution: {integrity: sha512-LQc2s/ZDMaCN3QLpa+uzHUOQ7SdV0qgv3VBXOolQGXTaaZpIur6PwUclF5nN2hNkiTRcUugXd1zFOW3FLJ135Q==}
     dev: false
 
   /ufo/1.1.1:
