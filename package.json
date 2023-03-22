@@ -22,7 +22,7 @@
   "devDependencies": {
     "recursive-copy-cli": "^1.0.20",
     "@babel/core": "7.21.3",
-    "@changesets/cli": "2.26.0",
+    "@changesets/cli": "2.26.1",
     "@shopify/eslint-plugin": "42.0.3",
     "@nrwl/cli": "15.8.7",
     "@nrwl/tao": "15.8.7",
