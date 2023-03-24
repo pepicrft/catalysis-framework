@@ -145,7 +145,7 @@ importers:
       '@oclif/core': 1.26.2
       '@remix-run/web-fetch': ^4.2.0
       '@types/inquirer': 9.0.3
-      '@types/yargs': 17.0.22
+      '@types/yargs': 17.0.23
       acorn: 8.8.2
       case-anything: 2.1.10
       commondir: 1.0.1
@@ -216,7 +216,7 @@ importers:
       zod: 3.21.4
     devDependencies:
       '@types/inquirer': 9.0.3
-      '@types/yargs': 17.0.22
+      '@types/yargs': 17.0.23
       rimraf: 4.4.0
 
   packages/create-project:
@@ -5487,8 +5487,8 @@ packages:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
     dev: true
 
-  /@types/yargs/17.0.22:
-    resolution: {integrity: sha512-pet5WJ9U8yPVRhkwuEIp5ktAeAqRZOq4UdAyWLWzxbtpyXnzbtLdKiXAjJzi/KLmPGS9wk86lUFWZFN6sISo4g==}
+  /@types/yargs/17.0.23:
+    resolution: {integrity: sha512-yuogunc04OnzGQCrfHx+Kk883Q4X0aSwmYZhKjI21m+SVYzjIbrWl8dOOwSv5hf2Um2pdCOXWo9isteZTNXUZQ==}
     dependencies:
       '@types/yargs-parser': 21.0.0
     dev: true
