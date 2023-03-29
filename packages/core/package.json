@@ -46,7 +46,7 @@
     "acorn": "8.8.2",
     "case-anything": "2.1.10",
     "commondir": "1.0.1",
-    "esbuild": "0.17.12",
+    "esbuild": "0.17.14",
     "execa": "6.1.0",
     "fast-glob": "3.2.12",
     "find-up": "6.3.0",
