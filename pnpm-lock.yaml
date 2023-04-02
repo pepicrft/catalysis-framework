@@ -185,8 +185,8 @@ importers:
         specifier: 0.8.0
         version: link:../test
       '@oclif/plugin-help':
-        specifier: 5.2.8
-        version: 5.2.8(@types/node@18.15.11)(typescript@4.9.5)
+        specifier: 5.2.9
+        version: 5.2.9(@types/node@18.15.11)(typescript@4.9.5)
 
   packages/check:
     dependencies:
@@ -4723,8 +4723,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: false
 
-  /@oclif/core@2.6.2(@types/node@18.15.11)(typescript@4.9.5):
-    resolution: {integrity: sha512-roxcBLr4BuoOEDEkMQk4Yy0Tolr39n6i+A63qPLa19vrgxjZZJygh2HpThsn69/UPuEzMq051FnvJ9tNln3Y5g==}
+  /@oclif/core@2.8.0(@types/node@18.15.11)(typescript@4.9.5):
+    resolution: {integrity: sha512-A2wHItFrD/WOw5bJ6Mtv9MD7If0bsKNR0pwEY0me+fo4HSXlJOtgYGqmzb8t8akX3DUUT7XsjPajsoHLkIJyvg==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@types/cli-progress': 3.11.0
@@ -4767,11 +4767,11 @@ packages:
     resolution: {integrity: sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==}
     dev: false
 
-  /@oclif/plugin-help@5.2.8(@types/node@18.15.11)(typescript@4.9.5):
-    resolution: {integrity: sha512-Fl1DD6Hm7USG/BYqcUmc/hMXK6Bnd3HvkZsRG+qi0dbYaNtY9zJ58C5b3lgPn69bXJlyi1eWX4S8djSUWD8VYg==}
+  /@oclif/plugin-help@5.2.9(@types/node@18.15.11)(typescript@4.9.5):
+    resolution: {integrity: sha512-0J3oowPURZJ4Dn1p1WpQ46E4+CoV20KTn1cvsNiDl6Hmbw+qoljKQnArJJzNFeZQxWo4R7/S42PrzKJTVYh68Q==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 2.6.2(@types/node@18.15.11)(typescript@4.9.5)
+      '@oclif/core': 2.8.0(@types/node@18.15.11)(typescript@4.9.5)
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
