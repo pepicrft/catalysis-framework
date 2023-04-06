@@ -20,8 +20,8 @@ importers:
         specifier: 15.8.7
         version: 15.8.7(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5)
       '@shopify/eslint-plugin':
-        specifier: 42.0.3
-        version: 42.0.3(@babel/core@7.21.4)(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5)
+        specifier: 42.1.0
+        version: 42.1.0(@babel/core@7.21.4)(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5)
       '@shopify/prettier-config':
         specifier: 1.1.2
         version: 1.1.2
@@ -4838,8 +4838,8 @@ packages:
       web-streams-polyfill: 3.2.1
     dev: false
 
-  /@shopify/eslint-plugin@42.0.3(@babel/core@7.21.4)(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5):
-    resolution: {integrity: sha512-Vve7bpv3qeiDSIViHx1v0oJ6jDSiwqFzUlJZXIcgU/AcQTMEVYHozhxnNO02XTVeN1CJS3hiMjq2ruZdBiKWPw==}
+  /@shopify/eslint-plugin@42.1.0(@babel/core@7.21.4)(eslint@8.36.0)(prettier@2.8.7)(typescript@4.9.5):
+    resolution: {integrity: sha512-b45SXfXoE9+BvQjHrhInWlOMhsXrqIzts+setaXecR5WW6NcEKeeSfHvTvLVk231NHnrE5h+MuHp1Ci1pR5nfA==}
     peerDependencies:
       eslint: ^8.3.0
     dependencies:
