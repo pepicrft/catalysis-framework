@@ -19,7 +19,7 @@
     "@cucumber/cucumber": "8.11.1",
     "@cucumber/messages": "21.0.1",
     "@cucumber/pretty-formatter": "1.0.0",
-    "execa": "6.1.0",
+    "execa": "7.2.0",
     "picocolors": "1.0.0",
     "ts-node": "10.9.1",
     "@types/node": "*",
