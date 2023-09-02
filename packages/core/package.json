@@ -41,7 +41,7 @@
     }
   },
   "dependencies": {
-    "@oclif/core": "1.26.2",
+    "@oclif/core": "2.15.0",
     "@remix-run/web-fetch": "^4.2.0",
     "acorn": "8.8.2",
     "case-anything": "2.1.10",

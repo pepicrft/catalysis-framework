@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -197,8 +201,8 @@ importers:
   packages/core:
     dependencies:
       '@oclif/core':
-        specifier: 1.26.2
-        version: 1.26.2
+        specifier: 2.15.0
+        version: 2.15.0(@types/node@18.15.11)(typescript@4.9.5)
       '@remix-run/web-fetch':
         specifier: ^4.2.0
         version: 4.2.0
@@ -4622,21 +4626,19 @@ packages:
       - debug
     dev: true
 
-  /@oclif/core@1.26.2:
-    resolution: {integrity: sha512-6jYuZgXvHfOIc9GIaS4T3CIKGTjPmfAxuMcbCbMRKJJl4aq/4xeRlEz0E8/hz8HxvxZBGvN2GwAUHlrGWQVrVw==}
+  /@oclif/core@2.15.0(@types/node@18.15.11)(typescript@4.9.5):
+    resolution: {integrity: sha512-fNEMG5DzJHhYmI3MgpByTvltBOMyFcnRIUMxbiz2ai8rhaYgaTHMG3Q38HcosfIvtw9nCjxpcQtC8MN8QtVCcA==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@oclif/linewrap': 1.0.0
-      '@oclif/screen': 3.0.4
+      '@types/cli-progress': 3.11.0
       ansi-escapes: 4.3.2
       ansi-styles: 4.3.0
       cardinal: 2.1.1
       chalk: 4.1.2
       clean-stack: 3.0.1
-      cli-progress: 3.10.0
+      cli-progress: 3.12.0
       debug: 4.3.4(supports-color@8.1.1)
       ejs: 3.1.8
-      fs-extra: 9.1.0
       get-package-type: 0.1.0
       globby: 11.1.0
       hyperlinker: 1.0.0
@@ -4646,14 +4648,21 @@ packages:
       natural-orderby: 2.0.3
       object-treeify: 1.1.33
       password-prompt: 1.1.2
-      semver: 7.3.8
+      slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       supports-hyperlinks: 2.3.0
-      tslib: 2.4.1
+      ts-node: 10.9.1(@types/node@18.15.11)(typescript@4.9.5)
+      tslib: 2.5.0
       widest-line: 3.1.0
+      wordwrap: 1.0.0
       wrap-ansi: 7.0.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - typescript
     dev: false
 
   /@oclif/core@2.8.0(@types/node@18.15.11)(typescript@4.9.5):
@@ -4696,10 +4705,6 @@ packages:
       - typescript
     dev: false
 
-  /@oclif/linewrap@1.0.0:
-    resolution: {integrity: sha512-Ups2dShK52xXa8w6iBWLgcjPJWjais6KPJQq3gQ/88AY6BXoTX+MIGFPrWQO1KLMiQfoTpcLnUwloN4brrVUHw==}
-    dev: false
-
   /@oclif/plugin-help@5.2.9(@types/node@18.15.11)(typescript@4.9.5):
     resolution: {integrity: sha512-0J3oowPURZJ4Dn1p1WpQ46E4+CoV20KTn1cvsNiDl6Hmbw+qoljKQnArJJzNFeZQxWo4R7/S42PrzKJTVYh68Q==}
     engines: {node: '>=12.0.0'}
@@ -4710,12 +4715,6 @@ packages:
       - '@swc/wasm'
       - '@types/node'
       - typescript
-    dev: false
-
-  /@oclif/screen@3.0.4:
-    resolution: {integrity: sha512-IMsTN1dXEXaOSre27j/ywGbBjrzx0FNd1XmuhCWCB9NTPrhWI1Ifbz+YLSEcstfQfocYsrbrIessxXb2oon4lA==}
-    engines: {node: '>=12.0.0'}
-    deprecated: Deprecated in favor of @oclif/core
     dev: false
 
   /@parcel/watcher@2.0.4:
@@ -6800,13 +6799,6 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       restore-cursor: 4.0.0
-    dev: false
-
-  /cli-progress@3.10.0:
-    resolution: {integrity: sha512-kLORQrhYCAtUPLZxqsAt2YJGOvRdt34+O6jl5cQGb7iF3dM55FQZlTR+rQyIK9JUcO9bBMwZsTlND+3dmFU2Cw==}
-    engines: {node: '>=4'}
-    dependencies:
-      string-width: 4.2.3
     dev: false
 
   /cli-progress@3.12.0:
@@ -13634,6 +13626,7 @@ packages:
 
   /tslib@2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
+    dev: true
 
   /tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
