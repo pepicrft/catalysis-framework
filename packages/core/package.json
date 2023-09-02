@@ -57,7 +57,7 @@
     "magic-string": "0.30.0",
     "noop-stream": "1.0.0",
     "ohmyfetch": "0.4.21",
-    "parse-json": "6.0.2",
+    "parse-json": "7.1.0",
     "path-equal": "1.2.5",
     "pathe": "1.1.0",
     "picocolors": "1.0.0",
