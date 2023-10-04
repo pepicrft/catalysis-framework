@@ -28,7 +28,7 @@
     "@nrwl/tao": "15.9.2",
     "@nrwl/workspace": "15.9.2",
     "@shopify/prettier-config": "1.1.2",
-    "@types/fs-extra": "11.0.1",
+    "@types/fs-extra": "11.0.2",
     "@types/node": "18.15.11",
     "@types/rimraf": "3.0.2",
     "@types/tmp": "0.2.3",
